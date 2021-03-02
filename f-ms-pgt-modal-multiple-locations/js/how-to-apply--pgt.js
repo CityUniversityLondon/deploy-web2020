@@ -294,14 +294,14 @@ function HowToApply(props) {
   [progressQualification, setProgressQualification] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
         [progressRoute, setProgressRoute] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
         [progressDate, setProgressDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
-        [furtherStepsPendingIndicator, setFurtherStepsPendingIndicator] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
         [progressMethod, setProgressMethod] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+        [furtherStepsPendingIndicator, setFurtherStepsPendingIndicator] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
         [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])('Choose the qualification you wish to apply for:'),
         promptQualification = 'Choose the qualification you wish to apply for:',
         promptRoute = 'Choose the route you wish to apply for:',
         promptEntryPoint = 'Choose the entry point you wish to apply for:',
         promptMethod = 'Apply online now:',
-        furtherStepsPendingIndicatorMarkup = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+        furtherStepsPending = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__next"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
@@ -311,15 +311,18 @@ function HowToApply(props) {
     className: "fas fa-circle icon",
     "aria-hidden": "true"
   }))));
-  let furtherStepsPending,
-      locationHeading,
-      modalStepsCounter = 1,
-      [selectionButtonQualification, setSelectionButtonQualification] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+  let [selectionButtonQualification, setSelectionButtonQualification] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
       [selectionLinkQualification, setSelectionLinkQualification] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
       [selectionButtonRoute, setSelectionButtonRoute] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
       [selectionLinkRoute, setSelectionLinkRoute] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
       [selectionButtonDate, setSelectionButtonDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
       [selectionLinkDate, setSelectionLinkDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      [selectionHeadingLocationOne, setSelectionHeadingLocationOne] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      [selectionButtonLocationOneDate, setSelectionButtonLocationOneDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      [selectionLinkLocationOneDate, setSelectionLinkLocationOneDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      [selectionHeadingLocationTwo, setSelectionHeadingLocationTwo] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      [selectionButtonLocationTwoDate, setSelectionButtonLocationTwoDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      [selectionLinkLocationTwoDate, setSelectionLinkLocationTwoDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
       [selectionLinkMethod, setSelectionLinkMethod] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
       selectedQualificationData,
       selectedQualificationValue,
@@ -336,6 +339,12 @@ function HowToApply(props) {
     setSelectionLinkQualification();
     setSelectionButtonRoute();
     setSelectionLinkRoute();
+    setSelectionHeadingLocationOne();
+    setSelectionButtonLocationOneDate();
+    setSelectionLinkLocationOneDate();
+    setSelectionHeadingLocationTwo();
+    setSelectionButtonLocationTwoDate();
+    setSelectionLinkLocationTwoDate();
     setSelectionButtonDate();
     setSelectionLinkDate();
     setSelectionLinkMethod();
@@ -433,7 +442,7 @@ function HowToApply(props) {
       "aria-label": "Back to choose route"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
       className: "how-to-apply--pgt--js__modal__progress__text"
-    }, "Entry point"))) : dateNav = null;
+    }, selectedDateValue))) : dateNav = null;
     setProgressDate(dateNav); // Method loads apply links and, if present, will always be the last step, therefore progress icon does nothing on click
 
     methodNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
@@ -450,17 +459,6 @@ function HowToApply(props) {
     setProgressMethod(methodNav); // Final modal step; remove further steps pending indicator
 
     setFurtherStepsPendingIndicator();
-    furtherStepsPending = false; // Calculate number of progress bar steps currently visible and set as data attribute on wrapper
-
-    modalStepsCounter = 1;
-    selectedQualificationData ? modalStepsCounter += 1 : null;
-    selectedRouteData ? modalStepsCounter += 1 : null;
-    selectedDateData ? modalStepsCounter += 1 : null;
-    furtherStepsPending ? modalStepsCounter += 1 : null; // Modify JSX of progress bar wrapper to indicate no further steps are pending
-
-    let wrapper = document.querySelector('.how-to-apply--pgt--js__modal__progress');
-    wrapper.setAttribute('data-further-steps-pending', 'false');
-    wrapper.setAttribute('data-total-steps', modalStepsCounter);
     let methodLinks = [];
     let linkOptions;
     methods.map(m => {
@@ -483,7 +481,6 @@ function HowToApply(props) {
 
 
   function filterDatesData(data) {
-    // console.log('dates function');
     // Date pre-selection prompt text
     setWindowPrompt(promptEntryPoint); // Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
 
@@ -497,26 +494,15 @@ function HowToApply(props) {
         linkOptions,
         dateButtons = [],
         dateLinks = [],
-        // locationOneDateLinks = [],
-    // locationTwoDateLinks = [],
-    // locationOptions = [],
+        locationOneDateLinks = [],
+        locationTwoDateLinks = [],
+        locationOptions = [],
+        locationsAll = [],
+        // londonData,
     qualNav,
         routeNav,
         dateNav,
-        dateLink;
-
-    for (const d of data) {
-      if (d['options'].length > 1) {
-        for (const loc of d['options']) {
-          // console.log(loc);
-          // console.log(loc['header']);
-          setSelectionLinkDate(loc['header']);
-          locationHeading = loc['header'];
-        }
-      } else {//console.log('single location');
-      }
-    } // Progress indicator; display selected qualification and route values
-
+        dateLink; // Progress indicator; display selected qualification and route values
 
     selectedQualificationData ? qualNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
       className: "how-to-apply--pgt--js__modal__progress__previous"
@@ -574,7 +560,7 @@ function HowToApply(props) {
         let methods = l['options'];
         methods.map(() => {
           // Multiple dates; print buttons
-          if (data.length > 1) {
+          if (data.length > 1 || data[0]['options'].length > 1) {
             // Date selection required: set progress indicator to route and remove methods
             selectedDateValue = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
               className: "how-to-apply--pgt--js__modal__progress__current"
@@ -589,68 +575,166 @@ function HowToApply(props) {
             }, "Entry point")));
             setProgressDate(selectedDateValue);
             setProgressMethod(); // Calculate number of locations
-            // locations.map((lo) => {
-            //     // console.log(lo);
-            //     locationOptions.push(lo.header);
-            // });
-            // locationOptions = locationOptions.reduce(function (
-            //     a,
-            //     i
-            // ) {
-            //     a.indexOf(i) === -1 ? a.push(i) : null;
-            //     return a;
-            // },
-            // []);
-            // Single location, multiple dates
 
-            if (locations.length > 1 || methods.length > 1) {
-              // Single location, multiple dates, multiple methods => Dates as standard button; further options to follow
-              dateButtons.push(d.header);
-              dateButtons = dateButtons.reduce(function (a, i) {
-                a.indexOf(i) === -1 ? a.push(i) : null;
-                return a;
-              }, []); // console.log(dateButtons);
+            locations.map(lo => {
+              locationOptions.push(lo.header);
+            });
+            locationOptions = locationOptions.reduce(function (a, i) {
+              a.indexOf(i) === -1 ? a.push(i) : null;
+              return a;
+            }, []); // Multiple locations, multiple dates => create array of objects per location
 
-              buttonOptions = dateButtons.map(db => {
-                return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
-                  key: db
-                }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-                  "data-date-src": db,
-                  onClick: e => {
-                    let dateSrc = e.target.getAttribute('data-date-src');
-                    selectedDateValue = formatDate(dateSrc);
-                    selectedDateData = data.filter(fd => fd.header === dateSrc);
-                    filterMethodsData(selectedDateData[0]['options'][0]['options']);
-                    setFirstStep(false);
-                  }
-                }, formatDate(db))));
-              }); // Modal journey incomplete; display further steps pending indicator
+            if (locationOptions.length > 1) {
+              locationOptions.map(lo => {
+                let filteredData = data.filter(fd => fd['options'][0]['header'] === lo);
+                locationsAll.push(filteredData);
+              }); // Create re-mapped data
+              // 1. Loop through unique locations
+              // console.log(l);
+              // console.log(d['header']);
+              // londonData;
+              // console.log(d);
+              // for (const lo of locationOptions) {
+              // londonData = data.filter(
+              //     (d) => d['header'] = 'London'
+              // );
+              // }
+              // console.log(filteredLocationData);
+              // 2. For each unique location, create new array and store data (e.g. London array, Dubai array)
+              // 3. Inside each array, create new structure
+              //      header: [location value],
+              //      options: [{
+              //          type: [date 1 value],
+              //          options: [{
+              //              type: [method of study value],
+              //              options: {
+              //                  apply: [apply ID]
+              //                  assetid: [asset ID]
+              //              }
+              //         }];
+              //     }];
+              // Location 1 output
 
-              setFurtherStepsPendingIndicator(furtherStepsPendingIndicatorMarkup);
-              furtherStepsPending = true;
-            } else {
-              // Single location, multiple dates, single method => Dates as links
-              dateLinks.push(d.header);
-              dateLinks = dateLinks.reduce(function (a, i) {
-                a.indexOf(i) === -1 ? a.push(i) : null;
-                return a;
-              }, []); // Map each unique date and filter data to extract correct apply links
+              locationsAll[0].map(fd => {
+                let methods = fd['options'][0]['options']; // console.log(methods);
 
-              const dateLinksData = [];
-              dateLinks.map(lq => {
-                let filteredDateData = data.filter(q => q.header === lq);
-                dateLink = {
-                  text: formatDate(lq),
-                  link: filteredDateData[0]['options'][0]['options'][0]['options']['apply']
-                };
-                dateLinksData.push(dateLink);
+                if (methods.length > 1) {
+                  // Dates as buttons
+                  selectionButtonLocationOneDate = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+                    key: fd
+                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+                    "data-date-src": fd['header'],
+                    onClick: e => {
+                      let dateSrc = e.target.getAttribute('data-date-src');
+                      selectedDateValue = formatDate(dateSrc);
+                      selectedDateData = data.filter(fd => fd.header === dateSrc);
+                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
+                      setFirstStep(false);
+                    }
+                  }, formatDate(fd['header']))));
+                } else {
+                  // Dates as links
+                  // console.log('dates as links');
+                  const dateLink = {
+                    text: formatDate(fd.header),
+                    link: fd['options'][0]['options'][0]['options']['apply']
+                  };
+                  locationOneDateLinks.push(dateLink);
+                  locationOneDateLinks = Array.from(new Set(locationOneDateLinks.map(a => a.text))).map(text => {
+                    return locationOneDateLinks.find(a => a.text === text);
+                  });
+                  selectionLinkLocationOneDate = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                    data: locationOneDateLinks
+                  });
+                }
+              }); // Location 2 output
+
+              locationsAll[1].map(fd => {
+                let methods = fd['options'][0]['options'];
+
+                if (methods.length > 1) {
+                  // Dates as buttons
+                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+                    key: fd
+                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+                    "data-date-src": fd,
+                    onClick: e => {
+                      let dateSrc = e.target.getAttribute('data-date-src');
+                      selectedDateValue = formatDate(dateSrc);
+                      selectedDateData = data.filter(fd => fd.header === dateSrc);
+                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
+                      setFirstStep(false);
+                    }
+                  }, formatDate(fd))));
+                } else {
+                  // Dates as links
+                  const dateLink = {
+                    text: formatDate(fd.header),
+                    link: fd['options'][0]['options'][0]['options']['apply']
+                  };
+                  locationTwoDateLinks.push(dateLink);
+                  locationTwoDateLinks = Array.from(new Set(locationTwoDateLinks.map(a => a.text))).map(text => {
+                    return locationTwoDateLinks.find(a => a.text === text);
+                  });
+                  selectionLinkLocationTwoDate = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                    data: locationTwoDateLinks
+                  });
+                }
               });
-              linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_5__["default"], {
-                data: dateLinksData
-              }); // Final modal step; remove further steps indicator
+              setSelectionHeadingLocationOne( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", null, locationsAll[0][0]['options'][0]['header']));
+              setSelectionButtonLocationOneDate(selectionButtonLocationOneDate);
+              setSelectionLinkLocationOneDate(selectionLinkLocationOneDate);
+              setSelectionHeadingLocationTwo( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", null, locationsAll[1][0]['options'][0]['header']));
+              setSelectionButtonLocationTwoDate(selectionButtonLocationTwoDate);
+              setSelectionLinkLocationTwoDate(selectionLinkLocationTwoDate); // End multiple locations
+            } else {
+              // Single location, multiple dates
+              if (locations.length > 1 || methods.length > 1) {
+                // Single location, multiple dates, multiple methods => Dates as standard button; further options to follow
+                dateButtons.push(d.header);
+                dateButtons = dateButtons.reduce(function (a, i) {
+                  a.indexOf(i) === -1 ? a.push(i) : null;
+                  return a;
+                }, []);
+                buttonOptions = dateButtons.map(db => {
+                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+                    key: db
+                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+                    "data-date-src": db,
+                    onClick: e => {
+                      let dateSrc = e.target.getAttribute('data-date-src');
+                      selectedDateValue = formatDate(dateSrc);
+                      selectedDateData = data.filter(fd => fd.header === dateSrc);
+                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
+                      setFirstStep(false);
+                    }
+                  }, formatDate(db))));
+                }); // Modal journey incomplete; display further steps pending indicator
 
-              setFurtherStepsPendingIndicator();
-              furtherStepsPending = false;
+                setFurtherStepsPendingIndicator(furtherStepsPending);
+              } else {
+                // Single location, multiple dates, single method => Dates as links
+                dateLinks.push(d.header);
+                dateLinks = dateLinks.reduce(function (a, i) {
+                  a.indexOf(i) === -1 ? a.push(i) : null;
+                  return a;
+                }, []); // Map each unique date and filter data to extract correct apply links
+
+                const dateLinksData = [];
+                dateLinks.map(lq => {
+                  let filteredDateData = data.filter(q => q.header === lq);
+                  dateLink = {
+                    text: formatDate(lq),
+                    link: filteredDateData[0]['options'][0]['options'][0]['options']['apply']
+                  };
+                  dateLinksData.push(dateLink);
+                });
+                linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                  data: dateLinksData
+                }); // Final modal step; remove further steps indicator
+
+                setFurtherStepsPendingIndicator();
+              }
             }
           } else {
             // Single date; move to methods function
@@ -658,16 +742,11 @@ function HowToApply(props) {
           }
         });
       });
-    }); // Calculate number of progress bar steps currently visible and set as data attribute on wrapper
-
-    modalStepsCounter = 1;
-    selectedQualificationData ? modalStepsCounter += 1 : null;
-    selectedRouteData ? modalStepsCounter += 1 : null;
-    furtherStepsPending ? modalStepsCounter += 1 : null; // Modify JSX of progress bar wrapper to indicate whether further steps are pending
-
-    let wrapper = document.querySelector('.how-to-apply--pgt--js__modal__progress');
-    furtherStepsPending ? wrapper.setAttribute('data-further-steps-pending', 'true') : wrapper.setAttribute('data-further-steps-pending', 'false');
-    wrapper.setAttribute('data-total-steps', modalStepsCounter); // Update buttons/links state values (as required)
+    }); // Display London data
+    // londonData = data.map((e) => {
+    //     return {...e, options: e.options.filter((option) => option.header === 'London')};
+    // });
+    // console.log(londonData);
 
     linkOptions ? setSelectionLinkDate(linkOptions) : null;
     buttonOptions ? setSelectionButtonDate(buttonOptions) : null;
@@ -694,6 +773,7 @@ function HowToApply(props) {
         routeLink,
         buttonOptions,
         linkOptions,
+        locationOptions = [],
         qualNav; // Progress indicator; display selected qualification value
 
     selectedQualificationData ? qualNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
@@ -721,6 +801,15 @@ function HowToApply(props) {
         locations.map(l => {
           let methods = l['options'];
           methods.map(() => {
+            // Store each unique location value in an array
+            locations.map(lo => {
+              locationOptions.push(lo.header);
+            });
+            locationOptions = locationOptions.reduce(function (a, i) {
+              a.indexOf(i) === -1 ? a.push(i) : null;
+              return a;
+            }, []);
+
             if (data.length > 1) {
               // Route selection required: set progress indicator to route and remove dates/methods
               selectedRouteValue = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
@@ -738,7 +827,7 @@ function HowToApply(props) {
               setProgressDate();
               setProgressMethod();
 
-              if (dates.length > 1 || methods.length > 1) {
+              if (dates.length > 1 || locationOptions.length > 1 || methods.length > 1) {
                 // Standard route button
                 buttonQuals.push(s.header);
                 buttonQuals = buttonQuals.reduce(function (a, i) {
@@ -758,8 +847,7 @@ function HowToApply(props) {
                   }, bq)));
                 }); // Modal journey incomplete; display further steps pending indicator
 
-                setFurtherStepsPendingIndicator(furtherStepsPendingIndicatorMarkup);
-                furtherStepsPending = true;
+                setFurtherStepsPendingIndicator(furtherStepsPending);
               } else {
                 // Route as link
                 linkRoutes.push(s.header);
@@ -782,7 +870,6 @@ function HowToApply(props) {
                 }); // Final modal step; remove further steps indicator
 
                 setFurtherStepsPendingIndicator();
-                furtherStepsPending = false;
               }
             } else {
               // Move to dates function
@@ -791,15 +878,7 @@ function HowToApply(props) {
           });
         });
       });
-    }); // Calculate number of progress bar steps currently visible and set as data attribute on wrapper
-
-    modalStepsCounter = 1;
-    selectedQualificationData ? modalStepsCounter += 1 : null;
-    furtherStepsPending ? modalStepsCounter += 1 : null; // Modify JSX of progress bar wrapper to indicate whether further steps are pending
-
-    let wrapper = document.querySelector('.how-to-apply--pgt--js__modal__progress');
-    furtherStepsPending ? wrapper.setAttribute('data-further-steps-pending', 'true') : wrapper.setAttribute('data-further-steps-pending', 'false');
-    wrapper.setAttribute('data-total-steps', modalStepsCounter); // Update buttons/links state values (as required)
+    }); // If route options and/or links exist, update state to render relevant JSX
 
     buttonOptions ? setSelectionButtonRoute(buttonOptions) : null;
     linkOptions ? setSelectionLinkRoute(linkOptions) : null;
@@ -830,7 +909,8 @@ function HowToApply(props) {
     let buttonQuals = [],
         linkQuals = [],
         buttonOptions,
-        linkOptions;
+        linkOptions,
+        locationOptions = [];
 
     if (data.length > 1) {
       // Qualification selection required: set progress indicator to qualification and remove routes/dates/methods
@@ -857,8 +937,17 @@ function HowToApply(props) {
           locations.map(l => {
             let methods = l['options'];
             methods.map(() => {
+              // Store each unique location value in an array
+              locations.map(lo => {
+                locationOptions.push(lo.header);
+              });
+              locationOptions = locationOptions.reduce(function (a, i) {
+                a.indexOf(i) === -1 ? a.push(i) : null;
+                return a;
+              }, []);
+
               if (data.length > 1) {
-                if (routeNames.length > 1 || dates.length > 1 || methods.length > 1) {
+                if (routeNames.length > 1 || dates.length > 1 || locationOptions.length > 1 || methods.length > 1) {
                   buttonQuals.push(e.header);
                   buttonQuals = buttonQuals.reduce(function (a, i) {
                     a.indexOf(i) === -1 ? a.push(i) : null;
@@ -877,8 +966,7 @@ function HowToApply(props) {
                     }, bq)));
                   }); // Modal journey incomplete; display further steps pending indicator
 
-                  setFurtherStepsPendingIndicator(furtherStepsPendingIndicatorMarkup);
-                  furtherStepsPending = true;
+                  setFurtherStepsPendingIndicator(furtherStepsPending);
                 } else {
                   linkQuals.push(e.header);
                   linkQuals = linkQuals.reduce(function (a, i) {
@@ -905,15 +993,7 @@ function HowToApply(props) {
         });
       });
     }) : // One qualification; move to routes function
-    filterRouteData(entryPoints[0]['options']); // Calculate number of progress bar steps currently visible and set as data attribute on wrapper
-
-    modalStepsCounter = 1;
-    furtherStepsPending ? modalStepsCounter += 1 : null; // Modify JSX of progress bar wrapper to indicate whether further steps are pending
-
-    let wrapper = document.querySelector('.how-to-apply--pgt--js__modal__progress');
-    furtherStepsPending ? wrapper.setAttribute('data-further-steps-pending', 'true') : wrapper.setAttribute('data-further-steps-pending', 'false');
-    wrapper.setAttribute('data-total-steps', modalStepsCounter); // Update buttons/links state values (as required)
-
+    filterRouteData(entryPoints[0]['options']);
     buttonOptions ? setSelectionButtonQualification(buttonOptions) : null;
     linkOptions ? setSelectionLinkQualification(linkOptions) : null;
   } // Modal wrapper render
@@ -922,9 +1002,13 @@ function HowToApply(props) {
   const question = 'qualification',
         qualificationQuestion = question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, windowPrompt), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, windowPrompt), !(selectionHeadingLocationOne || selectionButtonLocationOneDate || selectionLinkLocationOneDate || selectionHeadingLocationTwo || selectionButtonLocationTwoDate || selectionLinkLocationTwoDate) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
-  }, selectionButtonQualification, selectionLinkQualification, selectionButtonRoute, selectionLinkRoute, locationHeading, selectionButtonDate, selectionLinkDate, selectionLinkMethod))),
+  }, selectionButtonQualification, selectionLinkQualification, selectionButtonRoute, selectionLinkRoute, selectionButtonDate, selectionLinkDate, selectionLinkMethod) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", null, selectionHeadingLocationOne), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+    className: "how-to-apply--pgt--js__options"
+  }, selectionButtonLocationOneDate, selectionLinkLocationOneDate), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", null, selectionHeadingLocationTwo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+    className: "how-to-apply--pgt--js__options"
+  }, selectionButtonLocationTwoDate, selectionLinkLocationTwoDate)))),
         alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "how-to-apply--pgt--js__modal__alternative"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
@@ -990,7 +1074,8 @@ function HowToApply(props) {
     className: "fas fa-times icon",
     "aria-label": "Close"
   })), !firstStep ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__reset"
+    className: "how-to-apply--pgt--js__modal__reset" // style={{ display: 'block' }}
+
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
     onClick: () => {
       // Clear options display and render what user would see when modal is first opened
