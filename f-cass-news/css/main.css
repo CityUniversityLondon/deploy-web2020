@@ -62238,7 +62238,8 @@ main > .news {
 
 @media (max-width: 1023px) {
     main > .news .banner__standfirst h1,
-    main > .news .banner__standfirst .labels {
+    main > .news .banner__standfirst .labels,
+    main > .news .banner__standfirst .standfirst {
         grid-column: 3 / 21;
     }
     main > .news .news__summary,
@@ -62286,7 +62287,8 @@ main > .news {
 
 @media (max-width: 767px) {
     main > .news .banner__standfirst h1,
-    main > .news .banner__standfirst .labels {
+    main > .news .banner__standfirst .labels,
+    main > .news .banner__standfirst .standfirst {
         grid-column: 3 / 23;
     }
     main > .news .news__summary,
@@ -62386,7 +62388,8 @@ main > .news {
 }
 
 .news .banner__standfirst h1,
-.news .banner__standfirst .labels {
+.news .banner__standfirst .labels,
+.news .banner__standfirst .standfirst {
     grid-column: 3 / 19;
 }
 
