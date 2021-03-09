@@ -265,6 +265,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 /**
  * How to apply for postgraduate taught degrees
  *
@@ -473,6 +479,66 @@ function HowToApply(props) {
       setSelectionLinkMethod(linkOptions);
     });
   }
+
+  function filterLocation(data, location, heading, buttons) {
+    buttons;
+    let uniqueLocationDataArray = [];
+    data.map(d => {
+      let uniqueLocationData = _objectSpread(_objectSpread({}, d), {}, {
+        options: d.options.filter(e => e.header === location)
+      });
+
+      uniqueLocationDataArray.push(uniqueLocationData);
+    }); // console.log(uniqueLocationDataArray);
+    // Create heading
+    // let headingVal = uniqueLocationDataArray[0]['options'][0]['header'];
+
+    let headingVal = 'Location heading'; // Create buttons
+
+    let buttonVal = uniqueLocationDataArray.map(fd => {
+      if (fd['options'].length > 0) {
+        if (fd['options'][0]['options'].length > 1) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+            key: fd
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+            "data-date-src": fd['header'],
+            onClick: e => {
+              let dateSrc = e.target.getAttribute('data-date-src');
+              selectedDateValue = formatDate(dateSrc);
+              selectedDateData = data.filter(fd => fd.header === dateSrc);
+              filterMethodsData(selectedDateData[0]['options'][0]['options']);
+              setFirstStep(false);
+            }
+          }, formatDate(fd['header'])))) // <p key={u}>Button: {u.header}</p>
+          ;
+        } else {
+          const dateLink = {
+            text: formatDate(fd.header),
+            link: fd['options'][0]['options'][0]['options']['apply']
+          };
+          let locationDateLinks = [];
+          locationDateLinks.push(dateLink);
+          locationDateLinks = Array.from(new Set(locationDateLinks.map(a => a.text))).map(text => {
+            return locationDateLinks.find(a => a.text === text);
+          });
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            data: locationDateLinks
+          }); // return (
+          //     <p key={fd}>Link: {fd.header}</p>
+          // );
+        }
+      }
+    });
+    uniqueLocationDataArray.map(() => {
+      if (heading === '#location-1') {
+        setSelectionHeadingLocationOne(headingVal);
+        setSelectionButtonLocationOneDate(buttonVal);
+      } else if (heading === '#location-2') {
+        setSelectionHeadingLocationTwo(headingVal);
+        setSelectionButtonLocationTwoDate(buttonVal);
+      }
+    });
+  }
   /**
    * Completed programme and route filter. Analyse dates data.
    *
@@ -613,7 +679,21 @@ function HowToApply(props) {
               //              }
               //         }];
               //     }];
-              // Location 1 output
+
+              let uniqueLocations = [];
+              data.map(d => {
+                let dates = d['options'];
+                dates.map(date => {
+                  uniqueLocations.push(date.header);
+                });
+              }); // Remove duplicate locations
+
+              uniqueLocations = uniqueLocations.filter((v, i, a) => a.indexOf(v) === i);
+
+              for (let i = 1; i <= uniqueLocations.length; i++) {
+                filterLocation(data, uniqueLocations[i - 1], "#location-".concat(i), "#location-".concat(i, "__buttons"));
+              } // Location 1 output
+
 
               locationsAll[0].map(fd => {
                 let methods = fd['options'][0]['options']; // console.log(methods);
@@ -680,13 +760,7 @@ function HowToApply(props) {
                     data: locationTwoDateLinks
                   });
                 }
-              });
-              setSelectionHeadingLocationOne( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", null, locationsAll[0][0]['options'][0]['header']));
-              setSelectionButtonLocationOneDate(selectionButtonLocationOneDate);
-              setSelectionLinkLocationOneDate(selectionLinkLocationOneDate);
-              setSelectionHeadingLocationTwo( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", null, locationsAll[1][0]['options'][0]['header']));
-              setSelectionButtonLocationTwoDate(selectionButtonLocationTwoDate);
-              setSelectionLinkLocationTwoDate(selectionLinkLocationTwoDate); // End multiple locations
+              }); // End multiple locations
             } else {
               // Single location, multiple dates
               if (locations.length > 1 || methods.length > 1) {
@@ -742,12 +816,7 @@ function HowToApply(props) {
           }
         });
       });
-    }); // Display London data
-    // londonData = data.map((e) => {
-    //     return {...e, options: e.options.filter((option) => option.header === 'London')};
-    // });
-    // console.log(londonData);
-
+    });
     linkOptions ? setSelectionLinkDate(linkOptions) : null;
     buttonOptions ? setSelectionButtonDate(buttonOptions) : null;
   }
