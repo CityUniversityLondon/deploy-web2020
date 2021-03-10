@@ -480,8 +480,7 @@ function HowToApply(props) {
     });
   }
 
-  function filterLocation(data, location, heading, buttons) {
-    buttons;
+  function filterLocation(data, location, heading) {
     let uniqueLocationDataArray = [];
     data.map(d => {
       let uniqueLocationData = _objectSpread(_objectSpread({}, d), {}, {
@@ -489,11 +488,18 @@ function HowToApply(props) {
       });
 
       uniqueLocationDataArray.push(uniqueLocationData);
-    }); // console.log(uniqueLocationDataArray);
-    // Create heading
-    // let headingVal = uniqueLocationDataArray[0]['options'][0]['header'];
+    }); // Gather location information for header
 
-    let headingVal = 'Location heading'; // Create buttons
+    let locations = [];
+    uniqueLocationDataArray.map(fd => {
+      fd['options'][0] ? locations.push(fd['options'][0]['header']) : null;
+    }); // Remove duplicate locations
+
+    locations = locations.filter((v, i, a) => a.indexOf(v) === i); // Create heading
+
+    let headingVal = locations.map(l => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
+      key: l
+    }, l)); // Create buttons
 
     let buttonVal = uniqueLocationDataArray.map(fd => {
       if (fd['options'].length > 0) {
@@ -509,8 +515,7 @@ function HowToApply(props) {
               filterMethodsData(selectedDateData[0]['options'][0]['options']);
               setFirstStep(false);
             }
-          }, formatDate(fd['header'])))) // <p key={u}>Button: {u.header}</p>
-          ;
+          }, formatDate(fd['header']))));
         } else {
           const dateLink = {
             text: formatDate(fd.header),
@@ -523,9 +528,7 @@ function HowToApply(props) {
           });
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_5__["default"], {
             data: locationDateLinks
-          }); // return (
-          //     <p key={fd}>Link: {fd.header}</p>
-          // );
+          });
         }
       }
     });
@@ -564,8 +567,7 @@ function HowToApply(props) {
         locationTwoDateLinks = [],
         locationOptions = [],
         locationsAll = [],
-        // londonData,
-    qualNav,
+        qualNav,
         routeNav,
         dateNav,
         dateLink; // Progress indicator; display selected qualification and route values
@@ -654,32 +656,7 @@ function HowToApply(props) {
               locationOptions.map(lo => {
                 let filteredData = data.filter(fd => fd['options'][0]['header'] === lo);
                 locationsAll.push(filteredData);
-              }); // Create re-mapped data
-              // 1. Loop through unique locations
-              // console.log(l);
-              // console.log(d['header']);
-              // londonData;
-              // console.log(d);
-              // for (const lo of locationOptions) {
-              // londonData = data.filter(
-              //     (d) => d['header'] = 'London'
-              // );
-              // }
-              // console.log(filteredLocationData);
-              // 2. For each unique location, create new array and store data (e.g. London array, Dubai array)
-              // 3. Inside each array, create new structure
-              //      header: [location value],
-              //      options: [{
-              //          type: [date 1 value],
-              //          options: [{
-              //              type: [method of study value],
-              //              options: {
-              //                  apply: [apply ID]
-              //                  assetid: [asset ID]
-              //              }
-              //         }];
-              //     }];
-
+              });
               let uniqueLocations = [];
               data.map(d => {
                 let dates = d['options'];
