@@ -448,7 +448,7 @@ function HowToApply(props) {
       "aria-label": "Back to choose route"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
       className: "how-to-apply--pgt--js__modal__progress__text"
-    }, selectedDateValue))) : dateNav = null;
+    }, "Entry point"))) : dateNav = null;
     setProgressDate(dateNav); // Method loads apply links and, if present, will always be the last step, therefore progress icon does nothing on click
 
     methodNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
@@ -563,8 +563,6 @@ function HowToApply(props) {
         linkOptions,
         dateButtons = [],
         dateLinks = [],
-        locationOneDateLinks = [],
-        locationTwoDateLinks = [],
         locationOptions = [],
         locationsAll = [],
         qualNav,
@@ -669,75 +667,8 @@ function HowToApply(props) {
 
               for (let i = 1; i <= uniqueLocations.length; i++) {
                 filterLocation(data, uniqueLocations[i - 1], "#location-".concat(i), "#location-".concat(i, "__buttons"));
-              } // Location 1 output
+              } // End multiple locations
 
-
-              locationsAll[0].map(fd => {
-                let methods = fd['options'][0]['options']; // console.log(methods);
-
-                if (methods.length > 1) {
-                  // Dates as buttons
-                  selectionButtonLocationOneDate = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
-                    key: fd
-                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-                    "data-date-src": fd['header'],
-                    onClick: e => {
-                      let dateSrc = e.target.getAttribute('data-date-src');
-                      selectedDateValue = formatDate(dateSrc);
-                      selectedDateData = data.filter(fd => fd.header === dateSrc);
-                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
-                      setFirstStep(false);
-                    }
-                  }, formatDate(fd['header']))));
-                } else {
-                  // Dates as links
-                  // console.log('dates as links');
-                  const dateLink = {
-                    text: formatDate(fd.header),
-                    link: fd['options'][0]['options'][0]['options']['apply']
-                  };
-                  locationOneDateLinks.push(dateLink);
-                  locationOneDateLinks = Array.from(new Set(locationOneDateLinks.map(a => a.text))).map(text => {
-                    return locationOneDateLinks.find(a => a.text === text);
-                  });
-                  selectionLinkLocationOneDate = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_5__["default"], {
-                    data: locationOneDateLinks
-                  });
-                }
-              }); // Location 2 output
-
-              locationsAll[1].map(fd => {
-                let methods = fd['options'][0]['options'];
-
-                if (methods.length > 1) {
-                  // Dates as buttons
-                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
-                    key: fd
-                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-                    "data-date-src": fd,
-                    onClick: e => {
-                      let dateSrc = e.target.getAttribute('data-date-src');
-                      selectedDateValue = formatDate(dateSrc);
-                      selectedDateData = data.filter(fd => fd.header === dateSrc);
-                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
-                      setFirstStep(false);
-                    }
-                  }, formatDate(fd))));
-                } else {
-                  // Dates as links
-                  const dateLink = {
-                    text: formatDate(fd.header),
-                    link: fd['options'][0]['options'][0]['options']['apply']
-                  };
-                  locationTwoDateLinks.push(dateLink);
-                  locationTwoDateLinks = Array.from(new Set(locationTwoDateLinks.map(a => a.text))).map(text => {
-                    return locationTwoDateLinks.find(a => a.text === text);
-                  });
-                  selectionLinkLocationTwoDate = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_5__["default"], {
-                    data: locationTwoDateLinks
-                  });
-                }
-              }); // End multiple locations
             } else {
               // Single location, multiple dates
               if (locations.length > 1 || methods.length > 1) {
