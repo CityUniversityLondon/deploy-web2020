@@ -32038,6 +32038,10 @@ figure figcaption a:active,
     max-width: unset;
 }
 
+.how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options.how-to-apply--pgt--js__options--multiple-locations {
+    margin-top: 0;
+}
+
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options li {
     margin-bottom: 0.5rem;
     margin-right: 0.5rem;

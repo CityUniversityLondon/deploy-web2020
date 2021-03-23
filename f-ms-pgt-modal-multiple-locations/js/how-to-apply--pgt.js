@@ -982,9 +982,9 @@ function HowToApply(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, windowPrompt), !(selectionHeadingLocationOne || selectionButtonLocationOneDate || selectionLinkLocationOneDate || selectionHeadingLocationTwo || selectionButtonLocationTwoDate || selectionLinkLocationTwoDate) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
     className: "how-to-apply--pgt--js__options"
   }, selectionButtonQualification, selectionLinkQualification, selectionButtonRoute, selectionLinkRoute, selectionButtonDate, selectionLinkDate, selectionLinkMethod) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", null, selectionHeadingLocationOne), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
-    className: "how-to-apply--pgt--js__options"
+    className: "how-to-apply--pgt--js__options how-to-apply--pgt--js__options--multiple-locations"
   }, selectionButtonLocationOneDate, selectionLinkLocationOneDate), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", null, selectionHeadingLocationTwo), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
-    className: "how-to-apply--pgt--js__options"
+    className: "how-to-apply--pgt--js__options how-to-apply--pgt--js__options--multiple-locations"
   }, selectionButtonLocationTwoDate, selectionLinkLocationTwoDate)))),
         alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "how-to-apply--pgt--js__modal__alternative"
