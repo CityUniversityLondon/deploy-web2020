@@ -1969,6 +1969,7 @@ function find(collection, fixedFacets, query, sortType, startRank, numRank, face
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
     fixedFacetParams["meta_".concat(facet.meta, "_sand")] = facet.value;
+    console.log("Facet value:");
   });
   const facetParams = {},
         facetKeys = Object.keys(facets);
@@ -1983,15 +1984,25 @@ function find(collection, fixedFacets, query, sortType, startRank, numRank, face
     }),
     url: findRootUrl,
     timeout: timeout,
+    temp: 1,
     params: _objectSpread(_objectSpread(_objectSpread({}, fixedFacetParams), facetParams), {}, {
       collection: collection,
       num_ranks: numRank,
       query: query,
       sort: sortType || '',
-      start_rank: startRank,
-      "f.date|d": "d>13Apr2021"
+      start_rank: startRank //"f.date|d" : "d>13Apr2021",
+
     })
   };
+
+  if (true) {
+    //"f.date|d"
+    const temp = "f.date|d";
+    config.params[temp] = "d>13Apr2021";
+    console.log("hi");
+  }
+
+  ;
   return [Object(_util_js__WEBPACK_IMPORTED_MODULE_2__["axiosRequest"])(config), call];
 }
 /**
