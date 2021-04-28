@@ -56251,6 +56251,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-right: 0;
 }
 
+.case-study--research .case-study--research__content .case-study__hashtags__title {
+    color: #696969;
+    font-weight: 600;
+    margin-top: 1.5rem;
+}
+
 .case-study--research .case-study__related-case-studies {
     margin-left: 1rem;
     margin-right: 1rem;
