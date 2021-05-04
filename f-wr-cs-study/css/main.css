@@ -55707,6 +55707,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-top: 1.5rem;
 }
 
+.case-study--business .case-study--business__content .case-study__hashtags__title {
+    color: #696969;
+    font-weight: 600;
+    margin-top: 1.5rem;
+}
+
 .case-study--business .case-study--business__content__share-icons__wrap {
     margin-bottom: 2rem;
     margin-left: 0;
@@ -55782,6 +55788,18 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 @media (max-width: 767px) {
     .case-study--business .case-study--business__global-details__container .contact-cards .related-content .card--contact:nth-child(2) {
         margin-top: 1rem;
+    }
+}
+
+.case-study--business .case-study--business__related-events {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .case-study--business .case-study--business__related-events {
+        padding-bottom: 1.5rem;
     }
 }
 
@@ -56255,6 +56273,18 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     color: #696969;
     font-weight: 600;
     margin-top: 1.5rem;
+}
+
+.case-study--research .case-study--research__related-events {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .case-study--research .case-study--research__related-events {
+        padding-bottom: 1.5rem;
+    }
 }
 
 .case-study--research .case-study__related-case-studies {
