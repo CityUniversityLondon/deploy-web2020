@@ -1993,7 +1993,7 @@ function find(collection, fixedFacets, query, sortType, startRank, numRank, face
       start_rank: startRank //"f.date|d" : "d>13Apr2021",
 
     })
-  };
+  }; // Events override for upcoming events
 
   if (true) {
     //"f.date|d"
@@ -2253,8 +2253,7 @@ function numberFromString(string) {
  *
  */
 
-function isMobile() {
-  let screen = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 432;
+function isMobile(screen = 432) {
   const viewPortWidth = window.innerWidth;
   const mobileScreen = screen;
 
