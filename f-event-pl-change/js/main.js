@@ -176,12 +176,9 @@ __webpack_require__.r(__webpack_exports__);
  * @param {Boolean} defualt false - pass true if you want the function to run every time element is Intersecting
  * @param {Object} Object - Pass options to customise IntersectionObserver see docs
  */
-function actionOnScroll(element, action) {
-  let repeat = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-  let options = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {
-    threshold: [0, 0.1, 1]
-  };
-
+function actionOnScroll(element, action, repeat = false, options = {
+  threshold: [0, 0.1, 1]
+}) {
   if (element && typeof element !== 'undefined' && element !== null) {
     let actionOnScrollAction = function actionOnScrollAction(entries) {
       entries.forEach(entry => {
@@ -7510,8 +7507,7 @@ function numberFromString(string) {
  *
  */
 
-function isMobile() {
-  let screen = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 432;
+function isMobile(screen = 432) {
   const viewPortWidth = window.innerWidth;
   const mobileScreen = screen;
 

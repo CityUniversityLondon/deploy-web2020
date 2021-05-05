@@ -58479,10 +58479,9 @@ div.widget-123_test_ {
     }
 }
 
-@media (min-width: 769px) {
+@media (max-width: 1023px) {
     .event__info__cta__top--twocta ul {
         display: flex;
-        justify-content: space-between;
     }
 }
 
