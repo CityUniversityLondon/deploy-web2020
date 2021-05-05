@@ -72461,8 +72461,7 @@ button
     main .navigation--secondary + .school .school__content .promo-area__wrap,
     main .navigation--secondary + .school .school__content .school__content__pathway,
     main .navigation--secondary + .school .school__content .school__content__video,
-    main .navigation--secondary + .school .school__content .school__content__news,
-    main .navigation--secondary + .school .school__content .school__content__events,
+    main .navigation--secondary + .school .school__content .school__content__whats-happening,
     main .navigation--secondary + .school .school__content .school__content__middle-wrapper {
         grid-column: 1 / span18;
     }
@@ -72568,22 +72567,19 @@ button
         margin: 0 0.5rem;
         width: calc(33.3333% - 1rem);
     }
-    .school__content__news .related-content,
-    .school__content__events .related-content {
+    .school__content__whats-happening .related-content {
         align-items: flex-start;
         flex-direction: row;
         justify-content: flex-start;
     }
-    .school__content__news .related-content .card,
-    .school__content__events .related-content .card {
+    .school__content__whats-happening .related-content .card {
         margin: 0 0.5rem;
         width: calc(33.3333% - 1rem);
     }
 }
 
 @media (max-width: 1023px) {
-    .school__content__news,
-    .school__content__events,
+    .school__content__whats-happening,
     .school__content__cta,
     .school__content__links,
     .school__content .promo-area__wrap,
@@ -72595,8 +72591,7 @@ button
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    .school__content__news,
-    .school__content__events,
+    .school__content__whats-happening,
     .school__content__cta,
     .school__content__links,
     .school__content .promo-area__wrap,
@@ -73958,8 +73953,7 @@ button
     .department__multimedia,
     .department__additional-info,
     .department__facilities,
-    .department__news,
-    .department__events,
+    .department__whats-happening,
     .department__social-media,
     .department__contact-us {
         margin-left: 1rem;
@@ -73973,8 +73967,7 @@ button
     .department__multimedia,
     .department__additional-info,
     .department__facilities,
-    .department__news,
-    .department__events,
+    .department__whats-happening,
     .department__social-media,
     .department__contact-us {
         margin-left: 1.5rem;
