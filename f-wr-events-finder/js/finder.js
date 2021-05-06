@@ -2858,7 +2858,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 const oneSecond = 1000,
       scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_18__["reduceMotion"])() ? 0 : oneSecond,
       screenOffsetRatio = 10;
@@ -3058,7 +3057,7 @@ function Finder(props) {
     response: funnelbackResponse,
     update: updater,
     clear: clear
-  })),  true ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_funnelback__WEBPACK_IMPORTED_MODULE_12__["default"], null) : undefined), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_results_finder_results__WEBPACK_IMPORTED_MODULE_16__["default"], {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_components_results_finder_results__WEBPACK_IMPORTED_MODULE_16__["default"], {
     clear: clear,
     config: props.config,
     query: query,
@@ -3082,7 +3081,7 @@ Finder.propTypes = {
 /*!*******************************************!*\
   !*** ./src/patterns/finder/funnelback.js ***!
   \*******************************************/
-/*! exports provided: find, default, suggest, finderConfig */
+/*! exports provided: find, suggest, finderConfig */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3095,8 +3094,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var https__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! https */ "./node_modules/https-browserify/index.js");
 /* harmony import */ var https__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(https__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util.js */ "./src/util.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -3112,7 +3109,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  * @author Web Development
  * @copyright City, University of London 2019
  */
-
 
 
 
@@ -3137,7 +3133,6 @@ const baseUrl = 'https://www.city.ac.uk/web-services',
  * @return {Promise} - A promise of search results.
  */
 
-const tempw = 1;
 function find(collection, fixedFacets, query, sortType, startRank, numRank, facets) {
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
@@ -3169,46 +3164,15 @@ function find(collection, fixedFacets, query, sortType, startRank, numRank, face
   }; // Events override for upcoming events
 
   if (collection === 'web2020-events') {
-    //"f.date|d"
-    const temp = "f.date|d";
-    config.params[temp] = "d>13Apr2021";
-    tempw = 0;
+    console.log("events!"); //"f.date|d"
+
+    const temp = "meta_upcomming_sand";
+    config.params[temp] = "yes";
   }
 
   ;
   return [Object(_util_js__WEBPACK_IMPORTED_MODULE_2__["axiosRequest"])(config), call];
 }
-console.log("tempw is ".concat(tempw));
-
-function Walt(show) {
-  if (true) {
-    //console.log(`show...${show}`);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      className: "finder__filter finder__checkbox"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("input", {
-      onClick: butClick,
-      type: "checkbox",
-      id: "meta_ensuite_sand--63a1",
-      value: "Yes"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-      className: "finder__checkbox__indicator finder__checkbox__indicator",
-      "aria-hidden": "true"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("label", {
-      className: "finder__filters__label--always",
-      for: "meta_ensuite_sand--63a1"
-    }, "show past events"));
-  } else {} //return <button onClick={butClick}>clickme </button>;
-
-}
-
-;
-/* harmony default export */ __webpack_exports__["default"] = (Walt);
-
-function butClick() {
-  console.log("but cliked");
-}
-
-;
 /**
  * Funnelback suggestion query.
  *
