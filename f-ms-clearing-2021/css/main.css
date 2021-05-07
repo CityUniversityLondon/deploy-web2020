@@ -21127,12 +21127,18 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card--course .wrapper--card__label__details {
-    display: flex;
-    flex-direction: row-reverse;
+    float: right;
+}
+
+@media (max-width: 767px) {
+    .card--course .wrapper--card__label__details {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .card--course .wrapper--card__label__details .card--course__label--clearing {
-    margin-bottom: 2.25rem;
+    float: right;
 }
 
 .card--course .wrapper--card__label__details .card--course__label--clearing p {
@@ -21141,8 +21147,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     letter-spacing: 0em;
     background-color: #f1c70b;
     font-weight: 700;
-    margin-top: 0;
     padding: 0.75rem;
+    margin: 1rem;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -21169,15 +21175,25 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .card--course .wrapper--card__label__details .card--course__label--clearing p {
-        position: absolute;
-        left: 0;
-        top: 0;
+        margin: 1rem 0 1rem 1rem;
     }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 431px) {
+    .card--course .wrapper--card__label__details .card--course__label--clearing p {
+        margin: 0;
+    }
+}
+
+@media (max-width: 431px) {
+    .card--course .wrapper--card__label__details .card--course__label--clearing p {
+        position: absolute;
+    }
+}
+
+@media (max-width: 431px) {
     .card--course .card--course__label--clearing + .card__details__text {
         margin-top: 3rem;
     }
