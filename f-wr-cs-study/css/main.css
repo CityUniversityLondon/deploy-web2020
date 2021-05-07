@@ -55707,12 +55707,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-top: 1.5rem;
 }
 
-.case-study--business .case-study--business__content .case-study__hashtags__title {
-    color: #696969;
-    font-weight: 600;
-    margin-top: 1.5rem;
-}
-
 .case-study--business .case-study--business__content__share-icons__wrap {
     margin-bottom: 2rem;
     margin-left: 0;
@@ -56267,12 +56261,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .case-study--research .case-study--research__content .case-study--research__content__share-icons__icons li.copyLink {
     margin-right: 0;
-}
-
-.case-study--research .case-study--research__content .case-study__hashtags__title {
-    color: #696969;
-    font-weight: 600;
-    margin-top: 1.5rem;
 }
 
 .case-study--research .case-study--research__related-events {
