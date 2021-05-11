@@ -50072,31 +50072,39 @@ button
     stroke: #0194c7;
 }
 
-.chart--blue path:nth-child(1).segment-empty--first {
+.chart--blue path:nth-child(1)[segment-empty-first='true'] {
     stroke: #001323;
 }
 
-.chart--blue path:nth-child(1).segment-empty--second {
+.chart--blue path:nth-child(1)[segment-empty-second='true'] {
     stroke: #0194c7;
 }
 
-.chart--blue .chart__legend__item:nth-child(1) .fa.fa-circle {
+.chart--blue .chart__legend__item:nth-child(1):not([segment-full]) .fa.fa-circle {
     color: #0194c7;
+}
+
+.chart--blue .chart__legend__item:nth-child(1)[segment-full='second'] .fa.fa-circle {
+    color: #001323;
 }
 
 .chart--blue path:nth-child(2):not(.segment-empty) {
     stroke: #001323;
 }
 
-.chart--blue path:nth-child(2).segment-empty--first {
+.chart--blue path:nth-child(2)[segment-empty-first='true'] {
     stroke: #001323;
 }
 
-.chart--blue path:nth-child(2).segment-empty--second {
+.chart--blue path:nth-child(2)[segment-empty-second='true'] {
     stroke: #0194c7;
 }
 
-.chart--blue .chart__legend__item:nth-child(2) .fa.fa-circle {
+.chart--blue .chart__legend__item:nth-child(2):not([segment-full]) .fa.fa-circle {
+    color: #001323;
+}
+
+.chart--blue .chart__legend__item:nth-child(2)[segment-full='second'] .fa.fa-circle {
     color: #001323;
 }
 
@@ -50104,63 +50112,79 @@ button
     stroke: url(#striped);
 }
 
-.chart--blue path:nth-child(3).segment-empty--first {
+.chart--blue path:nth-child(3)[segment-empty-first='true'] {
     stroke: #001323;
 }
 
-.chart--blue path:nth-child(3).segment-empty--second {
+.chart--blue path:nth-child(3)[segment-empty-second='true'] {
     stroke: #0194c7;
 }
 
-.chart--blue .chart__legend__item:nth-child(3) .fa.fa-circle {
+.chart--blue .chart__legend__item:nth-child(3):not([segment-full]) .fa.fa-circle {
     color: url(#striped);
+}
+
+.chart--blue .chart__legend__item:nth-child(3)[segment-full='second'] .fa.fa-circle {
+    color: #001323;
 }
 
 .chart--blue path:nth-child(4):not(.segment-empty) {
     stroke: #213d50;
 }
 
-.chart--blue path:nth-child(4).segment-empty--first {
+.chart--blue path:nth-child(4)[segment-empty-first='true'] {
     stroke: #001323;
 }
 
-.chart--blue path:nth-child(4).segment-empty--second {
+.chart--blue path:nth-child(4)[segment-empty-second='true'] {
     stroke: #0194c7;
 }
 
-.chart--blue .chart__legend__item:nth-child(4) .fa.fa-circle {
+.chart--blue .chart__legend__item:nth-child(4):not([segment-full]) .fa.fa-circle {
     color: #213d50;
+}
+
+.chart--blue .chart__legend__item:nth-child(4)[segment-full='second'] .fa.fa-circle {
+    color: #001323;
 }
 
 .chart--red path:nth-child(1):not(.segment-empty) {
     stroke: #e93745;
 }
 
-.chart--red path:nth-child(1).segment-empty--first {
+.chart--red path:nth-child(1)[segment-empty-first='true'] {
     stroke: #370612;
 }
 
-.chart--red path:nth-child(1).segment-empty--second {
+.chart--red path:nth-child(1)[segment-empty-second='true'] {
     stroke: #e93745;
 }
 
-.chart--red .chart__legend__item:nth-child(1) .fa.fa-circle {
+.chart--red .chart__legend__item:nth-child(1):not([segment-full]) .fa.fa-circle {
     color: #e93745;
+}
+
+.chart--red .chart__legend__item:nth-child(1)[segment-full='second'] .fa.fa-circle {
+    color: #370612;
 }
 
 .chart--red path:nth-child(2):not(.segment-empty) {
     stroke: #370612;
 }
 
-.chart--red path:nth-child(2).segment-empty--first {
+.chart--red path:nth-child(2)[segment-empty-first='true'] {
     stroke: #370612;
 }
 
-.chart--red path:nth-child(2).segment-empty--second {
+.chart--red path:nth-child(2)[segment-empty-second='true'] {
     stroke: #e93745;
 }
 
-.chart--red .chart__legend__item:nth-child(2) .fa.fa-circle {
+.chart--red .chart__legend__item:nth-child(2):not([segment-full]) .fa.fa-circle {
+    color: #370612;
+}
+
+.chart--red .chart__legend__item:nth-child(2)[segment-full='second'] .fa.fa-circle {
     color: #370612;
 }
 
@@ -50168,63 +50192,79 @@ button
     stroke: url(#striped);
 }
 
-.chart--red path:nth-child(3).segment-empty--first {
+.chart--red path:nth-child(3)[segment-empty-first='true'] {
     stroke: #370612;
 }
 
-.chart--red path:nth-child(3).segment-empty--second {
+.chart--red path:nth-child(3)[segment-empty-second='true'] {
     stroke: #e93745;
 }
 
-.chart--red .chart__legend__item:nth-child(3) .fa.fa-circle {
+.chart--red .chart__legend__item:nth-child(3):not([segment-full]) .fa.fa-circle {
     color: url(#striped);
+}
+
+.chart--red .chart__legend__item:nth-child(3)[segment-full='second'] .fa.fa-circle {
+    color: #370612;
 }
 
 .chart--red path:nth-child(4):not(.segment-empty) {
     stroke: #9e111c;
 }
 
-.chart--red path:nth-child(4).segment-empty--first {
+.chart--red path:nth-child(4)[segment-empty-first='true'] {
     stroke: #370612;
 }
 
-.chart--red path:nth-child(4).segment-empty--second {
+.chart--red path:nth-child(4)[segment-empty-second='true'] {
     stroke: #e93745;
 }
 
-.chart--red .chart__legend__item:nth-child(4) .fa.fa-circle {
+.chart--red .chart__legend__item:nth-child(4):not([segment-full]) .fa.fa-circle {
     color: #9e111c;
+}
+
+.chart--red .chart__legend__item:nth-child(4)[segment-full='second'] .fa.fa-circle {
+    color: #370612;
 }
 
 .chart--pink path:nth-child(1):not(.segment-empty) {
     stroke: #bb3094;
 }
 
-.chart--pink path:nth-child(1).segment-empty--first {
+.chart--pink path:nth-child(1)[segment-empty-first='true'] {
     stroke: #250020;
 }
 
-.chart--pink path:nth-child(1).segment-empty--second {
+.chart--pink path:nth-child(1)[segment-empty-second='true'] {
     stroke: #bb3094;
 }
 
-.chart--pink .chart__legend__item:nth-child(1) .fa.fa-circle {
+.chart--pink .chart__legend__item:nth-child(1):not([segment-full]) .fa.fa-circle {
     color: #bb3094;
+}
+
+.chart--pink .chart__legend__item:nth-child(1)[segment-full='second'] .fa.fa-circle {
+    color: #250020;
 }
 
 .chart--pink path:nth-child(2):not(.segment-empty) {
     stroke: #250020;
 }
 
-.chart--pink path:nth-child(2).segment-empty--first {
+.chart--pink path:nth-child(2)[segment-empty-first='true'] {
     stroke: #250020;
 }
 
-.chart--pink path:nth-child(2).segment-empty--second {
+.chart--pink path:nth-child(2)[segment-empty-second='true'] {
     stroke: #bb3094;
 }
 
-.chart--pink .chart__legend__item:nth-child(2) .fa.fa-circle {
+.chart--pink .chart__legend__item:nth-child(2):not([segment-full]) .fa.fa-circle {
+    color: #250020;
+}
+
+.chart--pink .chart__legend__item:nth-child(2)[segment-full='second'] .fa.fa-circle {
     color: #250020;
 }
 
@@ -50232,32 +50272,40 @@ button
     stroke: url(#striped);
 }
 
-.chart--pink path:nth-child(3).segment-empty--first {
+.chart--pink path:nth-child(3)[segment-empty-first='true'] {
     stroke: #250020;
 }
 
-.chart--pink path:nth-child(3).segment-empty--second {
+.chart--pink path:nth-child(3)[segment-empty-second='true'] {
     stroke: #bb3094;
 }
 
-.chart--pink .chart__legend__item:nth-child(3) .fa.fa-circle {
+.chart--pink .chart__legend__item:nth-child(3):not([segment-full]) .fa.fa-circle {
     color: url(#striped);
+}
+
+.chart--pink .chart__legend__item:nth-child(3)[segment-full='second'] .fa.fa-circle {
+    color: #250020;
 }
 
 .chart--pink path:nth-child(4):not(.segment-empty) {
     stroke: #7c2062;
 }
 
-.chart--pink path:nth-child(4).segment-empty--first {
+.chart--pink path:nth-child(4)[segment-empty-first='true'] {
     stroke: #250020;
 }
 
-.chart--pink path:nth-child(4).segment-empty--second {
+.chart--pink path:nth-child(4)[segment-empty-second='true'] {
     stroke: #bb3094;
 }
 
-.chart--pink .chart__legend__item:nth-child(4) .fa.fa-circle {
+.chart--pink .chart__legend__item:nth-child(4):not([segment-full]) .fa.fa-circle {
     color: #7c2062;
+}
+
+.chart--pink .chart__legend__item:nth-child(4)[segment-full='second'] .fa.fa-circle {
+    color: #250020;
 }
 
 .pie-chart-block .chart__legend__item:nth-child(3) .fa.fa-circle::before {
