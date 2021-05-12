@@ -58443,10 +58443,12 @@ div.widget-123_test_ {
     .event__info__cta__top {
         grid-column: 4/ -1;
     }
-    .event__info__cta__top li a {
+    .event__info__cta__top li a,
+    .event__info__cta__top li button {
         width: 100%;
     }
-    .event__info__cta__top li a span {
+    .event__info__cta__top li a span,
+    .event__info__cta__top li button span {
         width: 100%;
         text-align: center;
     }
