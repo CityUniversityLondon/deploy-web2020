@@ -58460,6 +58460,12 @@ div.widget-123_test_ {
     }
 }
 
+@media (max-width: 432px) {
+    .event__info__cta__top li button {
+        width: 100%;
+    }
+}
+
 .event__info__cta__top a:first-child {
     margin-bottom: 0.5rem;
 }
