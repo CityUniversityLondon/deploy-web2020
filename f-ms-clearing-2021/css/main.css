@@ -42525,6 +42525,11 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
+.promo-box a {
+    border-bottom-color: #ffffff !important;
+    color: #ffffff !important;
+}
+
 .promo-box__wrapper {
     display: block;
     padding-top: 1.25rem;
