@@ -55557,9 +55557,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
-.case-study--business .case-study--business__overview__main .case-study--business__overview__main__details .case-study--business__overview__main__details__result {
-    display: flex;
-    flex-direction: row;
+.case-study--business .case-study--business__overview__main .case-study--business__overview__main__details .case-study--business__overview__main__details__result p {
+    display: inline;
 }
 
 .case-study--business .case-study--business__company-card {
