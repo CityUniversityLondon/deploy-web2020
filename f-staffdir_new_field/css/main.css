@@ -55701,9 +55701,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
-.case-study--business .case-study--business__overview__main .case-study--business__overview__main__details .case-study--business__overview__main__details__result {
-    display: flex;
-    flex-direction: row;
+.case-study--business .case-study--business__overview__main .case-study--business__overview__main__details .case-study--business__overview__main__details__result p {
+    display: inline;
 }
 
 .case-study--business .case-study--business__company-card {
@@ -55764,7 +55763,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     overflow: hidden;
 }
 
-.case-study--business .case-study--business__company-card .figure--image {
+.case-study--business .case-study--business__company-card .figure--image, .case-study--business .case-study--business__company-card .figure--svg {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -55773,25 +55772,38 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     width: 5rem;
 }
 
-.case-study--business .case-study--business__company-card .figure--image picture {
+.case-study--business .case-study--business__company-card .figure--image picture, .case-study--business .case-study--business__company-card .figure--svg picture {
     height: 100%;
     text-align: center;
 }
 
-.case-study--business .case-study--business__company-card .figure--image picture img {
+.case-study--business .case-study--business__company-card .figure--image picture img, .case-study--business .case-study--business__company-card .figure--svg picture img {
     height: auto;
     max-height: 100%;
     max-width: 100%;
     width: auto;
 }
 
+.case-study--business .case-study--business__company-card .figure--image img, .case-study--business .case-study--business__company-card .figure--svg img {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}
+
+@media (max-width: 432px) {
+    .case-study--business .case-study--business__company-card .figure--image img, .case-study--business .case-study--business__company-card .figure--svg img {
+        padding-bottom: 0;
+    }
+}
+
 @media (min-width: 769px) {
-    .case-study--business .case-study--business__company-card .figure--image {
+    .case-study--business .case-study--business__company-card .figure--image, .case-study--business .case-study--business__company-card .figure--svg {
         width: 7rem;
     }
 }
 
-.case-study--business .case-study--business__company-card .figure--image:after {
+.case-study--business .case-study--business__company-card .figure--image:after, .case-study--business .case-study--business__company-card .figure--svg:after {
     background-color: #e5e5e5;
     content: '';
     height: 4.5rem;
@@ -55913,6 +55925,18 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 @media (max-width: 767px) {
     .case-study--business .case-study--business__global-details__container .contact-cards .related-content .card--contact:nth-child(2) {
         margin-top: 1rem;
+    }
+}
+
+.case-study--business .case-study--business__related-events {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .case-study--business .case-study--business__related-events {
+        padding-bottom: 1.5rem;
     }
 }
 
@@ -56380,6 +56404,18 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .case-study--research .case-study--research__content .case-study--research__content__share-icons__icons li.copyLink {
     margin-right: 0;
+}
+
+.case-study--research .case-study--research__related-events {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .case-study--research .case-study--research__related-events {
+        padding-bottom: 1.5rem;
+    }
 }
 
 .case-study--research .case-study__related-case-studies {
