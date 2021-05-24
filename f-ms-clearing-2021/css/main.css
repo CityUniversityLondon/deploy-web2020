@@ -70731,6 +70731,24 @@ button
     display: inline;
 }
 
+.course--ug__announcement.course--ug__announcement--clearing {
+    margin: 0 0 1rem 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.course--ug__announcement.course--ug__announcement--clearing .promo-box__card__body__text h3 {
+    display: inline;
+}
+
+.course--ug__announcement.course--ug__announcement--clearing .promo-box__card__body__text .promo-box__card__body__text__route--wrapper {
+    display: flex;
+}
+
+.course--ug__announcement.course--ug__announcement--clearing .promo-box__card__body__text .promo-box__card__body__text__route--wrapper .promo-box__card__body__text__route {
+    margin-right: 2rem;
+}
+
 .course--ug__keyinfo__cta {
     border-top: 0.125rem solid #d8d8d8;
 }
