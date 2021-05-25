@@ -42526,8 +42526,8 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .promo-box a {
-    border-bottom-color: #ffffff !important;
-    color: #ffffff !important;
+    border-bottom-color: #ffffff;
+    color: #ffffff;
 }
 
 .promo-box__wrapper {
@@ -70731,21 +70731,140 @@ button
     display: inline;
 }
 
-.course--ug__announcement.course--ug__announcement--clearing {
+.course--ug__announcement.course--ug__announcement--clearing.promo-box {
+    background-image: none;
+    background-color: #f1c70b;
+    color: #0c0c0e;
     margin: 0 0 1rem 0;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-.course--ug__announcement.course--ug__announcement--clearing .promo-box__card__body__text h3 {
+.course--ug__announcement.course--ug__announcement--clearing.promo-box a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #0c0c0e 0%, #0c0c0e 100%);
+    border-bottom-color: #0c0c0e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
+}
+
+@media (hover: hover) {
+    .course--ug__announcement.course--ug__announcement--clearing.promo-box a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.course--ug__announcement.course--ug__announcement--clearing.promo-box a:focus, .course--ug__announcement.course--ug__announcement--clearing.promo-box a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .course--ug__announcement.course--ug__announcement--clearing.promo-box a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .course--ug__announcement.course--ug__announcement--clearing.promo-box a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #0c0c0e 0%, #0c0c0e 100%);
+    }
+}
+
+.course--ug__announcement.course--ug__announcement--clearing.promo-box a:focus, .course--ug__announcement.course--ug__announcement--clearing.promo-box a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.course--ug__announcement.course--ug__announcement--clearing.promo-box a:visited {
+    border-bottom-color: #0c0c0e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
+}
+
+.course--ug__announcement.course--ug__announcement--clearing.promo-box a:focus {
+    border-bottom-color: #0c0c0e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
+}
+
+@media (hover: hover) {
+    .course--ug__announcement.course--ug__announcement--clearing.promo-box a:hover {
+        border-bottom-color: #0c0c0e;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.course--ug__announcement.course--ug__announcement--clearing.promo-box a:active {
+    background-color: #0c0c0e;
+    border-bottom-color: #0c0c0e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card:first-of-type {
+    margin-right: 0;
+}
+
+.course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card .promo-box__card__body__text h3 {
     display: inline;
 }
 
-.course--ug__announcement.course--ug__announcement--clearing .promo-box__card__body__text .promo-box__card__body__text__route--wrapper {
-    display: flex;
+@media (min-width: 768px) {
+    .course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card .promo-box__card__body__text .promo-box__card__body__text__route--wrapper {
+        display: flex;
+    }
 }
 
-.course--ug__announcement.course--ug__announcement--clearing .promo-box__card__body__text .promo-box__card__body__text__route--wrapper .promo-box__card__body__text__route {
+.course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card .promo-box__card__body__text .promo-box__card__body__text__route--wrapper .promo-box__card__body__text__route {
     margin-right: 2rem;
 }
 
