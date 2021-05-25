@@ -70736,8 +70736,13 @@ button
     background-color: #f1c70b;
     color: #0c0c0e;
     margin: 0 0 1rem 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
+}
+
+@media (max-width: 767px) {
+    .course--ug__announcement.course--ug__announcement--clearing.promo-box {
+        margin-top: 0.75rem;
+    }
 }
 
 .course--ug__announcement.course--ug__announcement--clearing.promo-box a {
