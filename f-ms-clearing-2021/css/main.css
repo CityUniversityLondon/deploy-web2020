@@ -70735,8 +70735,21 @@ button
     background-image: none;
     background-color: #f1c70b;
     color: #0c0c0e;
-    margin: 1rem 0 1rem 0;
-    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: -2rem;
+    padding: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+    .course--ug__announcement.course--ug__announcement--clearing.promo-box {
+        padding: 1.5rem 3rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .course--ug__announcement.course--ug__announcement--clearing.promo-box {
+        padding: 1.5rem 2rem;
+    }
 }
 
 @media (max-width: 767px) {
