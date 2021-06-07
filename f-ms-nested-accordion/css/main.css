@@ -48573,7 +48573,7 @@ article .link-copy {
         text-decoration: underline;
     }
     .js .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
-        background: transparent;
+        background: #3e1031;
         color: #ffffff;
         text-decoration: underline;
     }
@@ -48582,6 +48582,14 @@ article .link-copy {
     }
     .js .tabs--accordion > .accordion .accordion__heading[data-open='false']:focus button {
         outline-color: #0c0c0e;
+    }
+    .js .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__text {
+        background: transparent;
+        color: #1e1e1e;
+    }
+    .js .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__indicator {
+        background: #3e1031;
+        color: #ffffff;
     }
     .js .tabs--accordion > .accordion .accordion__heading button {
         padding: 0;
@@ -48603,27 +48611,31 @@ article .link-copy {
 .accordion__heading
 button
 .accordion__heading__text {
-        color: #1e1e1e;
         padding: 1rem;
     }
-    .js .tabs--accordion > .accordion :not(> .accordion) {
-        background: #3e1031;
-        color: #ffffff;
-    }
-    .accordion__heading button .accordion__heading__indicator {
+    .js
+.tabs--accordion
+> .accordion
+.accordion__heading
+button
+.accordion__heading__indicator {
         align-self: normal;
         padding: 1rem;
         text-align: center;
         text-decoration: underline;
+        background: #3e1031;
+        color: #ffffff;
     }
-    .accordion__heading button .accordion__heading__indicator:before {
+    .js
+.tabs--accordion
+> .accordion
+.accordion__heading
+button
+.accordion__heading__indicator:before {
         vertical-align: sub;
     }
-    .js .tabs--accordion > .accordion .accordion {
-        background: yellow;
-        color: #0c0c0e;
-    }
-    .js .tabs--accordion > .accordion .accordion .accordion__heading__indicator {
+    .js .tabs--accordion > .accordion .accordion .accordion__heading button .accordion__heading__text,
+    .js .tabs--accordion > .accordion .accordion .accordion__heading button .accordion__heading__indicator {
         background: transparent;
         color: #006bbd;
     }
