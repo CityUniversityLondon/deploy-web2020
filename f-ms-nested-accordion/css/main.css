@@ -48634,6 +48634,11 @@ button
 .accordion__heading__indicator:before {
         vertical-align: sub;
     }
+    .js .tabs--accordion > .accordion .accordion .accordion__heading {
+        border-bottom-color: #e5e5e5;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
     .js .tabs--accordion > .accordion .accordion .accordion__heading button .accordion__heading__text,
     .js .tabs--accordion > .accordion .accordion .accordion__heading button .accordion__heading__indicator {
         background: transparent;
