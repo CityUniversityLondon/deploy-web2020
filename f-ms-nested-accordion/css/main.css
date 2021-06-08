@@ -48644,6 +48644,18 @@ button
         border-bottom-style: solid;
         border-bottom-width: 0.0625rem;
     }
+    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__indicator,
+    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
+        background: #3e1031;
+        color: #ffffff;
+    }
+    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__indicator {
+        background: #3e1031;
+        color: #ffffff;
+    }
+    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__text {
+        color: #1e1e1e;
+    }
     .js .tabs--accordion > .tabs {
         display: none;
     }
