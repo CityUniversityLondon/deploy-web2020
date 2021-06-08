@@ -65664,8 +65664,7 @@ main > .news {
 > .accordion
 .accordion__heading
 button
-.accordion__heading__indicator .accordion__heading[data-open='true'] button .accordion__heading__text,
-.tabs--accordion > .accordion .profile:first-of-type .accordion__heading[data-open='true'] button .accordion__heading__text {
+.accordion__heading__text {
     background: #1e1e1e;
 }
 
