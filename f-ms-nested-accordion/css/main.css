@@ -48554,12 +48554,6 @@ article .link-copy {
     .js .tabs--accordion > .accordion {
         display: block;
     }
-    .js .tabs--accordion > .accordion .accordion__heading:first-child {
-        border-top: 0.125rem solid #f2f2f2;
-    }
-    .js .tabs--accordion > .accordion .accordion__heading:first-child:focus {
-        border-top: 0.125rem dotted transparent;
-    }
     .js .tabs--accordion > .accordion .accordion__heading {
         border-bottom-color: #f2f2f2;
         border-bottom-style: solid;
