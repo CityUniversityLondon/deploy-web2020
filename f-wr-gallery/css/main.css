@@ -33371,6 +33371,10 @@ figure figcaption a:active,
     }
 }
 
+.carousel-gallery .swiper-slide__image-wrapper picture {
+    display: flex;
+}
+
 .carousel-gallery .swiper-slide__image-wrapper img {
     object-fit: contain;
 }
@@ -49724,6 +49728,10 @@ button
     .carousel-gallery .swiper-slide__image-wrapper {
         height: 10rem;
     }
+}
+
+.carousel-gallery .swiper-slide__image-wrapper picture {
+    display: flex;
 }
 
 .carousel-gallery .swiper-slide__image-wrapper img {

@@ -3546,7 +3546,9 @@ class Carousel {
    *          <ul class="swiper-wrapper">
    *              <li class="swiper-slide">
    *                  <div class="swiper-slide__image-wrapper">
-   *                      <img src="https://web2020.city.ac.uk/documentation/patterns/carousel/_DP57645_1920x1080.jpg" alt="Image">
+   *                      <picture>
+   *                          <img src="https://web2020.city.ac.uk/documentation/patterns/carousel/_DP57645_1920x1080.jpg" alt="Image">
+   *                      </picture>
    *                  </div>
    *                  <div class="swiper-slide__text">
    *                      <p>We are a leading provider of healthcare .....</p>
@@ -3584,11 +3586,11 @@ class Carousel {
       let lazyImageObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry, i) {
           if (i === 0) {
-            entry.target.firstElementChild.classList.remove('lazy');
+            entry.target.querySelector('img').classList.remove('lazy');
           }
 
           if (entry.isIntersecting) {
-            let lazyImage = entry.target.parentNode.nextSibling.firstElementChild.firstElementChild;
+            let lazyImage = entry.target.parentNode.parentNode.nextSibling.firstElementChild.querySelector('img');
             lazyImage.src = lazyImage.dataset.src;
             lazyImage.classList.remove('lazy');
             lazyImageObserver.unobserve(entry.target);
