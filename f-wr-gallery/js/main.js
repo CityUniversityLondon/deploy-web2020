@@ -3591,6 +3591,10 @@ class Carousel {
 
           if (entry.isIntersecting) {
             let lazyImage = entry.target.parentNode.parentNode.nextSibling.firstElementChild.querySelector('img');
+            let sourceSet = entry.target.parentNode.parentNode.nextSibling.firstElementChild.querySelectorAll('source');
+            sourceSet.forEach(item => {
+              item.srcset = item.dataset.srcset;
+            });
             lazyImage.src = lazyImage.dataset.src;
             lazyImage.classList.remove('lazy');
             lazyImageObserver.unobserve(entry.target);
