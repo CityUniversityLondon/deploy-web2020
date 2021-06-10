@@ -2639,13 +2639,27 @@ function Finder__Results(props) {
           className: resultsClass
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
           bestBet: false,
-          details: firstItemData // key={firstItemData.docNum}
-          ,
+          details: firstItemData,
           type: props.type,
           query: props.query
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
-          className: "card card--course"
-        }, "Promo card"), secondItemOnwardsData.map(s => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          className: "card card--finder-promo promo-area__wrap"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "promo-area  layout__left--split"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "promo-area__content background--pink90"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h2", {
+          className: "promo-area__heading"
+        }, "Bespoke training for health professionals"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "promo-area__container"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          className: "promo-area__text"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", null, "Our City Health team offers tailored bespoke courses, alongside our open courses for the private and public health sectors."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+          className: "cta-block__cta"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+          href: "../",
+          className: "outline-cta-arrow--bright"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", null, "Bespoke training")))))))), secondItemOnwardsData.map(s => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
           bestBet: false,
           details: s,
           key: s.docNum,
