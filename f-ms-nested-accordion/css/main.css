@@ -71167,7 +71167,7 @@ button
     background-image: linear-gradient(to bottom, rgba(242, 242, 242, 0), #f2f2f2 90%);
 }
 
-.js .course--ug .accordion > .accordion__heading {
+.js .course--ug :not(.tabs--accordion) > .accordion > .accordion__heading {
     border-bottom-color: #ffffff;
 }
 
