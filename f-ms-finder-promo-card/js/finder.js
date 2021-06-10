@@ -2574,7 +2574,6 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Finder__Results(props) {
-  // const [promoFacetsMatch, setPromoFacetsMatch] = useState(false);
   const updating = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
     className: "finder__results__updating",
     "aria-live": "polite"
@@ -2589,18 +2588,7 @@ function Finder__Results(props) {
     subject: 'health',
     type: 'city health course'
   };
-  const queryFacets = props.query.facets; // const searchKeyValue = (data, key, value) => {
-  //     //  if falsy or not an object/array return false
-  //     if(!data || typeof data !== 'object') return false;
-  //     //  if the value of the key equals value return true
-  //     // if(data[key] === value) return true;
-  //     if(data[key] === value) {
-  //         setPromoFacetsMatch(true);
-  //     }
-  //     // return the results of using searchKeyValue on all values of the object/array
-  //     return Object.values(data).some((data) => searchKeyValue(data, key, value));
-  // };
-
+  const queryFacets = props.query.facets;
   let test = false;
 
   for (const key in promotedHealthConditions) {
@@ -2639,53 +2627,43 @@ function Finder__Results(props) {
       totalMatching: props.response.summary.totalMatching,
       update: props.update
     });
-    let firstItem, // promoCard,
-    // secondResultOnwards,
-    results, test1, test2, test4; // console.log(props.response.results);
-
+    let results;
     let secondItemOnwards = props.response.results; // if (props.response.results && test) {
 
     if (test && (props.response.bestBets.length > 0 || props.response.results.length > 0)) {
-      const firstItemData = props.response.results[0]; // console.log(secondItemOnwards);
-
-      const secondItemOnwardsData = Array.from(secondItemOnwards.slice(1)); // console.log(secondItemOnwardsData);
-      // secondItemOnwards.map(s => console.log(s));
-
-      const test1Data = [1, 2, 3];
-      const test2Data = ['a', 'b', 'c'];
-      test1 = test1Data.map(t => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        key: t
-      }, t));
-      test2 = test2Data.map(t => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        key: t
-      }, t));
-      test4 = secondItemOnwardsData.map(s => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        bestBet: false,
-        details: s,
-        key: s.docNum,
-        type: props.type,
-        query: props.query
-      })); // firstItem =
-
-      /*#__PURE__*/
-      react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ol", {
-        start: props.response.summary.currStart,
-        className: resultsClass
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        bestBet: false,
-        details: firstItemData // key={firstItemData.docNum}
-        ,
-        type: props.type,
-        query: props.query
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
-        className: "card card--course"
-      }, "Promo"), secondItemOnwards.map(s => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
-        bestBet: false,
-        details: s,
-        key: s.docNum,
-        type: props.type,
-        query: props.query
-      })));
+      if (props.query.startRank === 1) {
+        const firstItemData = props.response.results[0];
+        const secondItemOnwardsData = Array.from(secondItemOnwards.slice(1));
+        results = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ol", {
+          start: props.response.summary.currStart,
+          className: resultsClass
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          bestBet: false,
+          details: firstItemData // key={firstItemData.docNum}
+          ,
+          type: props.type,
+          query: props.query
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
+          className: "card card--course"
+        }, "Promo card"), secondItemOnwardsData.map(s => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          bestBet: false,
+          details: s,
+          key: s.docNum,
+          type: props.type,
+          query: props.query
+        })));
+      } else {
+        results = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ol", {
+          start: props.response.summary.currStart,
+          className: resultsClass
+        }, props.response.results.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          bestBet: false,
+          details: card,
+          key: card.docNum,
+          type: props.type,
+          query: props.query
+        })));
+      }
     }
 
     if (props.response.results && !test) {
@@ -2705,7 +2683,7 @@ function Finder__Results(props) {
     } // render either the results, or a spinner while we wait for Funnelback
 
 
-    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, didYouMean, summary, firstItem, test1, test2, "s ", test4, results, pagination);
+    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, didYouMean, summary, results, pagination);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
       className: "finder__results"
     }, resultsContent);
