@@ -21408,15 +21408,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 .card--finder-promo .promo-area {
     background: linear-gradient(20deg, #9a4ddb 20%, #a1a1a1, #790b21);
-    position: relative;
-    bottom: 1.5rem;
-    margin-top: 0;
-}
-
-.card--finder-promo .promo-area .promo-area__content {
-    position: relative;
-    top: 3rem;
-    left: 2rem;
 }
 
 .card--findus a {

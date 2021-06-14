@@ -1323,7 +1323,7 @@ function Finder__Results__Promo(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "card card--finder-promo promo-area__wrap"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "promo-area  layout__left--split"
+    className: "promo-area layout__left--full"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "promo-area__content background--pink90"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
@@ -2040,6 +2040,60 @@ Finder__Tag.propTypes = {
 
 /***/ }),
 
+/***/ "./src/patterns/finder/components/promo/promo__conditions.js":
+/*!*******************************************************************!*\
+  !*** ./src/patterns/finder/components/promo/promo__conditions.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+let conditions = [{
+  level: 'short courses and professional development',
+  related: 'health and social care',
+  school: 'school of health sciences',
+  subject: 'health',
+  type: 'city health course',
+  promoGroup: 'health'
+}, {
+  level: 'undergraduate degree',
+  promoGroup: 'law'
+}];
+/* harmony default export */ __webpack_exports__["default"] = (conditions);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/components/promo/promo__details.js":
+/*!****************************************************************!*\
+  !*** ./src/patterns/finder/components/promo/promo__details.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+let promoDetails = [{
+  heading: 'Bespoke training for health professionals',
+  body: 'Our City Health team offers tailored bespoke courses, alongside our open courses for the private and public health sectors.',
+  linkRef: '../test',
+  linkText: 'Bespoke training',
+  promoGroup: 'health'
+}, {
+  heading: 'Bespoke training for law professionals',
+  body: 'Our Law team offers tailored bespoke courses, alongside our open courses for the private and public health sectors.',
+  linkRef: '../law',
+  linkText: 'Bespoke training',
+  promoGroup: 'law'
+}];
+/* harmony default export */ __webpack_exports__["default"] = (promoDetails);
+
+/***/ }),
+
 /***/ "./src/patterns/finder/components/query/finder__clear.js":
 /*!***************************************************************!*\
   !*** ./src/patterns/finder/components/query/finder__clear.js ***!
@@ -2593,18 +2647,26 @@ Finder__Pagination.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.includes.js */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../cards/finder__results__bestbet */ "./src/patterns/finder/components/cards/finder__results__bestbet.js");
-/* harmony import */ var _cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../cards/finder__results__card */ "./src/patterns/finder/components/cards/finder__results__card.js");
-/* harmony import */ var _finder_didyoumean__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./finder__didyoumean */ "./src/patterns/finder/components/results/finder__didyoumean.js");
-/* harmony import */ var _finder_pagination__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__pagination */ "./src/patterns/finder/components/results/finder__pagination.js");
-/* harmony import */ var _cards_finder_results_promo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../cards/finder__results__promo */ "./src/patterns/finder/components/cards/finder__results__promo.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _finder_results_summary__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./finder__results__summary */ "./src/patterns/finder/components/results/finder__results__summary.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.includes.js */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../cards/finder__results__bestbet */ "./src/patterns/finder/components/cards/finder__results__bestbet.js");
+/* harmony import */ var _cards_finder_results_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../cards/finder__results__card */ "./src/patterns/finder/components/cards/finder__results__card.js");
+/* harmony import */ var _finder_didyoumean__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__didyoumean */ "./src/patterns/finder/components/results/finder__didyoumean.js");
+/* harmony import */ var _finder_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__pagination */ "./src/patterns/finder/components/results/finder__pagination.js");
+/* harmony import */ var _cards_finder_results_promo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../cards/finder__results__promo */ "./src/patterns/finder/components/cards/finder__results__promo.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _finder_results_summary__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./finder__results__summary */ "./src/patterns/finder/components/results/finder__results__summary.js");
+/* harmony import */ var _promo_promo_conditions__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../promo/promo__conditions */ "./src/patterns/finder/components/promo/promo__conditions.js");
+/* harmony import */ var _promo_promo_details__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../promo/promo__details */ "./src/patterns/finder/components/promo/promo__details.js");
+
+
 
 
 
@@ -2622,6 +2684,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 /**
  * Render Funnelback results.
  *
@@ -2630,31 +2694,32 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Finder__Results(props) {
-  const updating = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+  const updating = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
     className: "finder__results__updating",
     "aria-live": "polite"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
     "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, "Updating ", props.summariseAs.plural, "\u2026"));
-  const promotedHealthConditions = {
-    level: 'short courses and professional development',
-    related: 'health and social care',
-    school: 'school of health sciences',
-    subject: 'health',
-    type: 'city health course'
-  };
-  const queryFacets = props.query.facets;
-  let promoCardConditionMet = false;
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, "Updating ", props.summariseAs.plural, "\u2026"));
+  const queryFacets = props.query.facets; // User-defined filter selection
 
-  for (const key in promotedHealthConditions) {
-    Object.values(queryFacets).includes(promotedHealthConditions[key]) ? promoCardConditionMet = true : null;
-  }
+  let promoCardConditionMet = false,
+      // Filter selection matches condition(s) for promo card render
+  promoCardConditionGroup; // Group-specific data to render in promo card
+  // Promo condition check and define group
 
+  for (const promoCondition of _promo_promo_conditions__WEBPACK_IMPORTED_MODULE_11__["default"]) {
+    for (const key in promoCondition) {
+      Object.values(queryFacets).includes(promoCondition[key]) ? (promoCardConditionMet = true) && (promoCardConditionGroup = promoCondition.promoGroup) : null;
+    }
+  } // Filter promo card details to match correct group of data
+
+
+  let filteredArray = _promo_promo_details__WEBPACK_IMPORTED_MODULE_12__["default"].filter(el => el.promoGroup === promoCardConditionGroup);
   const resultsClass = 'resultsVariant' in props.config ? "finder__results__list finder__results__list--".concat(props.config.resultsVariant) : 'finder__results__list';
 
   if (props.response) {
-    const summary = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_finder_results_summary__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    const summary = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_finder_results_summary__WEBPACK_IMPORTED_MODULE_10__["default"], {
       clear: props.clear,
       config: props.config,
       currEnd: props.response.summary.currEnd,
@@ -2665,7 +2730,7 @@ function Finder__Results(props) {
       totalMatching: props.response.summary.totalMatching,
       update: props.update
     });
-    const didYouMean = (props.query.misspelling || props.response.spell) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_finder_didyoumean__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    const didYouMean = (props.query.misspelling || props.response.spell) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_finder_didyoumean__WEBPACK_IMPORTED_MODULE_5__["default"], {
       query: props.query,
       summariseAs: props.summariseAs,
       response: props.response,
@@ -2673,7 +2738,7 @@ function Finder__Results(props) {
     }); // if we have more results than will fit on a single page, we need
     // pagination
 
-    const pagination = props.response.summary.totalMatching > props.response.summary.numRanks && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_finder_pagination__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    const pagination = props.response.summary.totalMatching > props.response.summary.numRanks && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_finder_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], {
       currStart: props.response.summary.currStart,
       numRanks: props.response.summary.numRanks,
       query: props.query,
@@ -2687,20 +2752,20 @@ function Finder__Results(props) {
       if (props.query.startRank === 1) {
         const firstItemData = props.response.results[0];
         const secondItemOnwardsData = Array.from(secondItemOnwards.slice(1));
-        results = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ol", {
+        results = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("ol", {
           start: props.response.summary.currStart,
           className: resultsClass
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
           bestBet: false,
           details: firstItemData,
           type: props.type,
           query: props.query
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_cards_finder_results_promo__WEBPACK_IMPORTED_MODULE_5__["default"], {
-          heading: "Bespoke training for health professionals",
-          body: "Our City Health team offers tailored bespoke courses, alongside our open courses for the private and public health sectors.",
-          linkRef: "../",
-          linkText: "Bespoke training"
-        }), secondItemOnwardsData.map(s => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_cards_finder_results_promo__WEBPACK_IMPORTED_MODULE_7__["default"], {
+          heading: filteredArray[0]['heading'],
+          body: filteredArray[0]['body'],
+          linkRef: filteredArray[0]['linkRef'],
+          linkText: filteredArray[0]['linkText']
+        }), secondItemOnwardsData.map(s => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
           bestBet: false,
           details: s,
           key: s.docNum,
@@ -2708,10 +2773,10 @@ function Finder__Results(props) {
           query: props.query
         })));
       } else {
-        results = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ol", {
+        results = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("ol", {
           start: props.response.summary.currStart,
           className: resultsClass
-        }, props.response.results.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        }, props.response.results.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
           bestBet: false,
           details: card,
           key: card.docNum,
@@ -2722,13 +2787,13 @@ function Finder__Results(props) {
     }
 
     if (props.response.results && !promoCardConditionMet) {
-      results = props.response.bestBets.length > 0 || props.response.results.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("ol", {
+      results = props.response.bestBets.length > 0 || props.response.results.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("ol", {
         start: props.response.summary.currStart,
         className: resultsClass
-      }, props.response.bestBets.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, props.response.bestBets.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_3__["default"], {
         details: card,
         key: card.docNum
-      })), props.response.results.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      })), props.response.results.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
         bestBet: false,
         details: card,
         key: card.docNum,
@@ -2738,25 +2803,25 @@ function Finder__Results(props) {
     } // render either the results, or a spinner while we wait for Funnelback
 
 
-    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, null, didYouMean, summary, results, pagination);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, didYouMean, summary, results, pagination);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
       className: "finder__results"
     }, resultsContent);
   } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
       className: "finder__results"
     }, updating);
   }
 }
 
 Finder__Results.propTypes = {
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.func,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
-  response: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
-  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
-  type: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.string,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.bool
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.func,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object,
+  response: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object,
+  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object,
+  type: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.string,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object,
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Results);
 
