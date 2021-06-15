@@ -21406,8 +21406,16 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.card--finder-promo .promo-area {
+.card--finder-promo.promo-area__wrap {
+    padding: 0;
+}
+
+.card--finder-promo.promo-area__wrap .promo-area.layout__left--full {
     background: linear-gradient(20deg, #9a4ddb 20%, #a1a1a1, #790b21);
+}
+
+.card--finder-promo.promo-area__wrap .promo-area.layout__left--full .promo-area__content {
+    grid-column: 3/-3;
 }
 
 .card--findus a {

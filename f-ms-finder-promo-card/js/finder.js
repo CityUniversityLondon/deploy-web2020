@@ -2058,9 +2058,6 @@ let conditions = [{
   subject: 'health',
   type: 'city health course',
   promoGroup: 'health'
-}, {
-  level: 'undergraduate degree',
-  promoGroup: 'law'
 }];
 /* harmony default export */ __webpack_exports__["default"] = (conditions);
 
