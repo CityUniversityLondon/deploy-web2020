@@ -2040,57 +2040,6 @@ Finder__Tag.propTypes = {
 
 /***/ }),
 
-/***/ "./src/patterns/finder/components/promo/promo__conditions.js":
-/*!*******************************************************************!*\
-  !*** ./src/patterns/finder/components/promo/promo__conditions.js ***!
-  \*******************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-
-let conditions = [{
-  level: 'short courses and professional development',
-  related: 'health and social care',
-  school: 'school of health sciences',
-  subject: 'health',
-  type: 'city health course',
-  promoGroup: 'health'
-}];
-/* harmony default export */ __webpack_exports__["default"] = (conditions);
-
-/***/ }),
-
-/***/ "./src/patterns/finder/components/promo/promo__details.js":
-/*!****************************************************************!*\
-  !*** ./src/patterns/finder/components/promo/promo__details.js ***!
-  \****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-
-let promoDetails = [{
-  heading: 'Bespoke training for health professionals',
-  body: 'Our City Health team offers tailored bespoke courses, alongside our open courses for the private and public health sectors.',
-  linkRef: '../test',
-  linkText: 'Bespoke training',
-  promoGroup: 'health'
-}, {
-  heading: 'Bespoke training for law professionals',
-  body: 'Our Law team offers tailored bespoke courses, alongside our open courses for the private and public health sectors.',
-  linkRef: '../law',
-  linkText: 'Bespoke training',
-  promoGroup: 'law'
-}];
-/* harmony default export */ __webpack_exports__["default"] = (promoDetails);
-
-/***/ }),
-
 /***/ "./src/patterns/finder/components/query/finder__clear.js":
 /*!***************************************************************!*\
   !*** ./src/patterns/finder/components/query/finder__clear.js ***!
@@ -2660,21 +2609,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _finder_results_summary__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./finder__results__summary */ "./src/patterns/finder/components/results/finder__results__summary.js");
-/* harmony import */ var _promo_promo_conditions__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../promo/promo__conditions */ "./src/patterns/finder/components/promo/promo__conditions.js");
-/* harmony import */ var _promo_promo_details__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../promo/promo__details */ "./src/patterns/finder/components/promo/promo__details.js");
 
 
 
 
 
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /**
  * @module patterns/finder/components/finder__results
  * @author Web Development
  * @copyright City, University of London 2019
  */
-
-
 
 
 
@@ -2698,21 +2649,39 @@ function Finder__Results(props) {
     className: "fas fa-spinner fa-pulse icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, "Updating ", props.summariseAs.plural, "\u2026"));
-  const queryFacets = props.query.facets; // User-defined filter selection
+  /**
+   * Display promo card based on user search/filter input.
+   *
+   * Props passed from finder. If conditions are met, promo card will display between first
+   * result card and the rest of the returned results.
+   */
 
-  let promoCardConditionMet = false,
-      // Filter selection matches condition(s) for promo card render
-  promoCardConditionGroup; // Group-specific data to render in promo card
+  let promoConditions = props.promo[0]['conditions'],
+      // Conditions to render promo card
+  promoDetails = props.promo[1]['details'],
+      // Details rendered to promo card
+  filterFacets = props.query.facets,
+      // User-defined filter/search values
+  searchFacets = props.query.query.toLowerCase(),
+      // User-input search value
+  promoCardConditionMet = false,
+      // Are conditions met to render promo card?
+  promoCardConditionGroup,
+      // Group-specific data to render in promo card
+  queryFacetsAll = _objectSpread(_objectSpread({}, filterFacets), {}, {
+    searchFacets
+  }); // Combine filter and search inputs
   // Promo condition check and define group
 
-  for (const promoCondition of _promo_promo_conditions__WEBPACK_IMPORTED_MODULE_11__["default"]) {
+
+  for (const promoCondition of promoConditions) {
     for (const key in promoCondition) {
-      Object.values(queryFacets).includes(promoCondition[key]) ? (promoCardConditionMet = true) && (promoCardConditionGroup = promoCondition.promoGroup) : null;
+      Object.values(queryFacetsAll).includes(promoCondition[key]) ? (promoCardConditionMet = true) && (promoCardConditionGroup = promoCondition.promoGroup) : null;
     }
   } // Filter promo card details to match correct group of data
 
 
-  let filteredArray = _promo_promo_details__WEBPACK_IMPORTED_MODULE_12__["default"].filter(el => el.promoGroup === promoCardConditionGroup);
+  let filteredArray = promoDetails.filter(el => el.promoGroup === promoCardConditionGroup);
   const resultsClass = 'resultsVariant' in props.config ? "finder__results__list finder__results__list--".concat(props.config.resultsVariant) : 'finder__results__list';
 
   if (props.response) {
@@ -2985,16 +2954,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_url_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_url_js__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _components_query_finder_query__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/query/finder__query */ "./src/patterns/finder/components/query/finder__query.js");
-/* harmony import */ var _components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/filters/finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
-/* harmony import */ var _components_filters_finder_filtersmobile__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/filters/finder__filtersmobile */ "./src/patterns/finder/components/filters/finder__filtersmobile.js");
-/* harmony import */ var _components_results_finder_results__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/results/finder__results */ "./src/patterns/finder/components/results/finder__results.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/filters/finder__filters */ "./src/patterns/finder/components/filters/finder__filters.js");
+/* harmony import */ var _components_filters_finder_filtersmobile__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/filters/finder__filtersmobile */ "./src/patterns/finder/components/filters/finder__filtersmobile.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _components_query_finder_query__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/query/finder__query */ "./src/patterns/finder/components/query/finder__query.js");
+/* harmony import */ var _components_results_finder_results__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/results/finder__results */ "./src/patterns/finder/components/results/finder__results.js");
+/* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_17__);
 
 
 
@@ -3026,7 +2995,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_17__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_16__["reduceMotion"])() ? 0 : oneSecond,
       screenOffsetRatio = 10;
 /**
  * Retrieve current values for facets from the URL parameters.
@@ -3137,7 +3106,7 @@ function Finder(props) {
     replaceHistory(query.query, query.startRank, query.facets, query.sortType, props.config.facetLabels, props.config.sort[0].type); // indicate a request is in progress
 
     setUpdating(true);
-    query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_16___default.a.center(props.element.querySelector('.finder__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
+    query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_17___default.a.center(props.element.querySelector('.finder__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
     /**
      * cancel any request already in progress
      *
@@ -3146,7 +3115,7 @@ function Finder(props) {
 
     call.cancel(); // make a new, asynchronous request to Funnelback
 
-    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_11__["find"])(query.collection, query.fixedFacets, query.query, query.sortType, query.startRank, query.numRanks, query.facets); // save the requestToken
+    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_15__["find"])(query.collection, query.fixedFacets, query.query, query.sortType, query.startRank, query.numRanks, query.facets); // save the requestToken
 
     setCall({
       cancel: () => {
@@ -3169,7 +3138,7 @@ function Finder(props) {
         setUpdate(!update);
       }
     }).then(() => {
-      query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_16___default.a.center(props.element.querySelector('.finder__results h2'), scrollDuration);
+      query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_17___default.a.center(props.element.querySelector('.finder__results h2'), scrollDuration);
     }).catch(() => {
       setResponse(initialResponse);
       setUpdating(false);
@@ -3197,7 +3166,7 @@ function Finder(props) {
     setUpdate(!update);
   };
 
-  const queryElement = props.config.noQuery && props.config.noQuery === true ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  const queryElement = props.config.noQuery && props.config.noQuery === true ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_query_finder_query__WEBPACK_IMPORTED_MODULE_13__["default"], {
     config: props.config,
     query: query,
     update: updater,
@@ -3208,7 +3177,7 @@ function Finder(props) {
     onSubmit: e => {
       e.preventDefault();
     }
-  }, queryElement, props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_filters_finder_filtersmobile__WEBPACK_IMPORTED_MODULE_14__["default"], {
+  }, queryElement, props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_filters_finder_filtersmobile__WEBPACK_IMPORTED_MODULE_11__["default"], {
     config: props.config,
     query: query,
     response: funnelbackResponse,
@@ -3218,13 +3187,13 @@ function Finder(props) {
     clear: clear
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
     className: "wrapper--finder__filters--desktop"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_filters_finder_filters__WEBPACK_IMPORTED_MODULE_10__["default"], {
     config: props.config,
     query: query,
     response: funnelbackResponse,
     update: updater,
     clear: clear
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_results_finder_results__WEBPACK_IMPORTED_MODULE_15__["default"], {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_results_finder_results__WEBPACK_IMPORTED_MODULE_14__["default"], {
     clear: clear,
     config: props.config,
     query: query,
@@ -3232,13 +3201,14 @@ function Finder(props) {
     summariseAs: props.config.summariseAs,
     type: props.config.resultCard,
     update: updater,
-    updating: updating
+    updating: updating,
+    promo: props.config.promo
   }));
 }
 
 Finder.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_10___default.a.object,
-  element: prop_types__WEBPACK_IMPORTED_MODULE_10___default.a.object
+  config: prop_types__WEBPACK_IMPORTED_MODULE_12___default.a.object,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_12___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder);
 
