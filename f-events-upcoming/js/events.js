@@ -358,7 +358,9 @@ function dependencyMet(facet, facetMap) {
 
 
 function Finder__Filters(props) {
-  const pastEventsFullyMatching = props.pastEventsResponse && props.pastEventsResponse.summary.fullyMatching || props.pastEventsResponse.summary.partiallyMatching ? props.pastEventsResponse.summary.fullyMatching || props.pastEventsResponse.summary.partiallyMatching : false;
+  const pastEventsFullyMatching = props.pastEventsResponse && props.pastEventsResponse.summary && props.pastEventsResponse.summary.fullyMatching ? props.pastEventsResponse.summary.fullyMatching : false;
+  const pastEventsPartiallyMatching = props.pastEventsResponse && props.pastEventsResponse.summary && props.pastEventsResponse.summary.partiallyMatching ? props.pastEventsResponse.summary.partiallyMatching : false;
+  const pastFullyOrPartiallyMatching = pastEventsFullyMatching ? pastEventsFullyMatching : pastEventsPartiallyMatching ? pastEventsPartiallyMatching : false;
   const clearFiltersDesktop = Object.keys(props.query.facets).length > 0 || props.query.events !== '' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__reset finder__filters__reset--desktop"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_filters_finder_reset__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -377,7 +379,7 @@ function Finder__Filters(props) {
     update: props.update,
     pastEventsUpdate: props.pastEventsUpdate
   })) : null;
-  const pastEventsCheckBox = pastEventsFullyMatching ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_events_checkbox_allevents__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  const pastEventsCheckBox = pastFullyOrPartiallyMatching ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_events_checkbox_allevents__WEBPACK_IMPORTED_MODULE_7__["default"], {
     query: props.query,
     update: props.update,
     responseParameter: props.response.inputParameters,
