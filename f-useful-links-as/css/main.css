@@ -29488,16 +29488,6 @@ figure figcaption a:active,
     color: #ffffff;
 }
 
-.course-footer .useful-links {
-    flex-basis: 33%;
-}
-
-@media (max-width: 899px) {
-    .course-footer .useful-links {
-        margin-top: 1rem;
-    }
-}
-
 .global-footer .global-footer__campuses a,
 .global-footer .global-footer__content__section--contact__content__text a,
 .global-footer .global-footer__useful-links a,
