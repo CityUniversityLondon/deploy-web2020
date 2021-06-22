@@ -29372,6 +29372,7 @@ figure figcaption a:active,
 
 .course-footer.background--pink80 h2 {
     border-bottom: 0.0625rem solid #7c2062;
+    padding-bottom: 1rem;
 }
 
 .course-footer.background--pink80 a {
@@ -29486,6 +29487,33 @@ figure figcaption a:active,
 
 .course-footer.background--pink80 .card .card__details .card__tag .icon {
     color: #ffffff;
+}
+
+@media (min-width: 769px) {
+    .course-footer .related-content:not(.slider),
+    .course-footer .related-content {
+        flex-wrap: nowrap;
+    }
+}
+
+.course-footer .card--contact .wrapper--card--contact__content {
+    flex-direction: column;
+}
+
+.course-footer .related-content .card.card--contact {
+    margin-top: 1rem;
+}
+
+@media (min-width: 769px) {
+    .course-footer .related-content .card.card--contact {
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .course-footer .card .card__details .card__details__text {
+        padding-top: 0;
+    }
 }
 
 .global-footer .global-footer__campuses a,
