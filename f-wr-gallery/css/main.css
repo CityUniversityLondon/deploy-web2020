@@ -70099,6 +70099,10 @@ button
     }
 }
 
+main .standard-content .content {
+    overflow: hidden;
+}
+
 @media (min-width: 1024px) {
     main > .standard-content {
         grid-template-columns: repeat(24, 1fr);
@@ -70165,6 +70169,7 @@ button
     }
     main .navigation--secondary + .standard-content .content {
         grid-column: 4 / span 12;
+        overflow: hidden;
     }
 }
 
