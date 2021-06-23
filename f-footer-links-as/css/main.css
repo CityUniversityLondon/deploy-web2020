@@ -29319,10 +29319,20 @@ figure figcaption a:active,
 }
 
 .course-footer {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1.5rem;
+}
+
+@media (min-width: 901px) {
+    .course-footer {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 @media (min-width: 901px) {
@@ -29332,12 +29342,24 @@ figure figcaption a:active,
     }
 }
 
+@media (min-width: 1441px) {
+    .course-footer {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .course-footer h2 {
     border-bottom: 0.0625rem solid #cbcbcb;
+    padding-bottom: 1rem;
 }
 
 .course-footer h2:not(:first-child) {
     margin-top: 2rem;
+}
+
+.course-footer h2:not(:first-child) {
+    margin-top: 3rem;
 }
 
 .course-footer .related-content {
@@ -29347,6 +29369,7 @@ figure figcaption a:active,
 .course-footer .related-content .card.card--contact {
     padding-top: 0;
     padding-bottom: 0;
+    margin-top: 1rem;
 }
 
 .course-footer .related-content .card.card--contact:not(:first-child) .card__details .card__details__text {
@@ -29362,6 +29385,10 @@ figure figcaption a:active,
     border-top: 0;
 }
 
+.course-footer ul:first-child {
+    margin-top: 1rem;
+}
+
 .course-footer .related-content .card.card--contact + .card--contact {
     border-top: none;
 }
@@ -29372,7 +29399,6 @@ figure figcaption a:active,
 
 .course-footer.background--pink80 h2 {
     border-bottom: 0.0625rem solid #7c2062;
-    padding-bottom: 1rem;
 }
 
 .course-footer.background--pink80 a {
@@ -29490,29 +29516,20 @@ figure figcaption a:active,
 }
 
 @media (min-width: 769px) {
-    .course-footer .related-content:not(.slider),
-    .course-footer .related-content {
+    .course-footer .card .card__details .card__details__text {
+        padding-top: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .course-footer .related-content:not(.slider) {
         flex-wrap: nowrap;
     }
 }
 
-.course-footer .card--contact .wrapper--card--contact__content {
-    flex-direction: column;
-}
-
-.course-footer .related-content .card.card--contact {
-    margin-top: 1rem;
-}
-
 @media (min-width: 769px) {
-    .course-footer .related-content .card.card--contact {
-        margin-top: 2rem;
-    }
-}
-
-@media (min-width: 769px) {
-    .course-footer .card .card__details .card__details__text {
-        padding-top: 0;
+    .course-footer .card--contact .wrapper--card--contact__content {
+        flex-direction: column;
     }
 }
 
