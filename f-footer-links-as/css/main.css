@@ -29319,9 +29319,6 @@ figure figcaption a:active,
 }
 
 .course-footer {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-top: 1rem;
@@ -29330,22 +29327,8 @@ figure figcaption a:active,
 
 @media (min-width: 901px) {
     .course-footer {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .course-footer {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (min-width: 1441px) {
-    .course-footer {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
