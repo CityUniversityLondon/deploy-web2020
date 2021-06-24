@@ -29335,9 +29335,6 @@ figure figcaption a:active,
 .course-footer h2 {
     border-bottom: 0.0625rem solid #cbcbcb;
     padding-bottom: 1rem;
-}
-
-.course-footer h2:not(:first-child) {
     margin-top: 2rem;
 }
 
@@ -29368,7 +29365,7 @@ figure figcaption a:active,
     border-top: 0;
 }
 
-.course-footer ul:first-child {
+.course-footer .related-content {
     margin-top: 1rem;
 }
 
