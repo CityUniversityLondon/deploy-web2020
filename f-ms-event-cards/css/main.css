@@ -21347,7 +21347,35 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card--event .card__anchor .card__type {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
     margin-top: 0.75rem;
+    color: #696969;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--event .card__anchor .card__type {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--event .card__anchor .card__type {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--event .card__anchor .card__type {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--event .card__anchor .card__type {
+        letter-spacing: -0.017em;
+    }
 }
 
 .card--event .card__anchor .card--event__divider {
