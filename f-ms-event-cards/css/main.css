@@ -43729,7 +43729,7 @@ blockquote footer cite {
 @media (max-width: 767px) {
     .js .slider[data-small='true'] {
         overflow: hidden;
-        margin: 1rem;
+        margin: 1rem 0;
         position: relative;
     }
     .js .slider[data-small='true'] .slide {
@@ -43742,6 +43742,12 @@ blockquote footer cite {
 @media (max-width: 767px) and (prefers-reduced-motion: reduce) {
     .js .slider[data-small='true'] .slide {
         transition: none;
+    }
+}
+
+@media (max-width: 767px) and (max-width: 767px) {
+    .js .slider[data-small='true'] .slide .card__anchor {
+        margin: 1rem;
     }
 }
 
@@ -43757,7 +43763,7 @@ blockquote footer cite {
 @media (max-width: 767px) {
     .js .slider:not([data-small='true']) {
         overflow: hidden;
-        margin: 1rem;
+        margin: 1rem 0;
         position: relative;
     }
     .js .slider:not([data-small='true']) .slide {
@@ -43773,10 +43779,16 @@ blockquote footer cite {
     }
 }
 
+@media (max-width: 767px) and (max-width: 767px) {
+    .js .slider:not([data-small='true']) .slide .card__anchor {
+        margin: 1rem;
+    }
+}
+
 @media (min-width: 768px) {
     .js .slider:not([data-small='true']) {
         overflow: hidden;
-        margin: 1rem;
+        margin: 1rem 0;
         position: relative;
     }
     .js .slider:not([data-small='true']) .slide {
@@ -43789,6 +43801,12 @@ blockquote footer cite {
 @media (min-width: 768px) and (prefers-reduced-motion: reduce) {
     .js .slider:not([data-small='true']) .slide {
         transition: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 767px) {
+    .js .slider:not([data-small='true']) .slide .card__anchor {
+        margin: 1rem;
     }
 }
 
@@ -44106,6 +44124,13 @@ blockquote footer cite {
     padding: 0.1875rem;
 }
 
+@media (max-width: 767px) {
+    .js .slider[data-style='arrows'] + .slider__controls,
+    .js .slider[data-style='responsive'] + .slider__controls {
+        margin-right: 1rem;
+    }
+}
+
 .js .slider[data-style='arrows'] + .slider__controls .slider__indicator,
 .js .slider[data-style='responsive'] + .slider__controls .slider__indicator {
     font-size: 0.889rem;
@@ -44318,6 +44343,12 @@ blockquote footer cite {
     display: flex;
     max-width: 100%;
     margin: 0;
+}
+
+@media (max-width: 767px) {
+    .js .slider[data-style='responsive'] .slide ul {
+        margin: 1rem 0;
+    }
 }
 
 .js .slider[data-style='responsive'] .slide ul li {
@@ -61403,11 +61434,17 @@ main .home .home__whats-happening .related-content {
 
 @media (max-width: 767px) {
     .landing--latest .wrapper--landing--latest__latest-content--news .related-content,
-    .landing--latest .wrapper--landing--latest__latest-content--news .related-content + .slider__controls,
-    .landing--latest .wrapper--landing--latest__latest-content--events .related-content,
-    .landing--latest .wrapper--landing--latest__latest-content--events .related-content + .slider__controls {
+    .landing--latest .wrapper--landing--latest__latest-content--events .related-content {
         margin-left: 0;
         margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .landing--latest .wrapper--landing--latest__latest-content--news .related-content + .slider__controls,
+    .landing--latest .wrapper--landing--latest__latest-content--events .related-content + .slider__controls {
+        margin-left: 0;
+        margin-right: 1rem;
     }
 }
 
