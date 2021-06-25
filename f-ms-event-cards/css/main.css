@@ -43750,7 +43750,7 @@ blockquote footer cite {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin: 1rem;
+        margin: 0;
     }
 }
 
@@ -43964,14 +43964,13 @@ blockquote footer cite {
 
 @media (min-width: 768px) {
     .js .slider[data-cardsperrow='3'][data-small='true'] {
-        justify-content: center;
+        justify-content: space-between;
+        margin: 1rem 0;
     }
     .js .slider[data-cardsperrow='3'][data-small='true'] .slide {
-        margin-right: 1.25rem;
         width: calc(33% - 1.25rem);
-    }
-    .js .slider[data-cardsperrow='3'][data-small='true'] .slide:last-of-type {
-        margin-right: 0;
+        padding: 0;
+        margin: 0;
     }
 }
 
