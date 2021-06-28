@@ -29334,10 +29334,12 @@ figure figcaption a:active,
 
 .course-footer h2 {
     border-bottom: 0.0625rem solid #cbcbcb;
+    padding-bottom: 1rem;
+    margin-top: 2rem;
 }
 
-.course-footer h2:not(:first-child) {
-    margin-top: 2rem;
+.course-footer h2:nth-child(2) {
+    margin-top: 3rem;
 }
 
 .course-footer .related-content {
@@ -29347,6 +29349,7 @@ figure figcaption a:active,
 .course-footer .related-content .card.card--contact {
     padding-top: 0;
     padding-bottom: 0;
+    margin-top: 1rem;
 }
 
 .course-footer .related-content .card.card--contact:not(:first-child) .card__details .card__details__text {
@@ -29360,6 +29363,10 @@ figure figcaption a:active,
 .course-footer .related-content .card.card--contact + .card--contact {
     padding-top: 0;
     border-top: 0;
+}
+
+.course-footer .ul:first-of-type {
+    margin-top: 1rem;
 }
 
 .course-footer .related-content .card.card--contact + .card--contact {
@@ -29488,13 +29495,21 @@ figure figcaption a:active,
     color: #ffffff;
 }
 
-.course-footer .useful-links {
-    flex-basis: 33%;
+@media (min-width: 769px) {
+    .course-footer .card .card__details .card__details__text {
+        padding-top: 0;
+    }
 }
 
-@media (max-width: 899px) {
-    .course-footer .useful-links {
-        margin-top: 1rem;
+@media (min-width: 769px) {
+    .course-footer .related-content:not(.slider) {
+        flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 769px) {
+    .course-footer .card--contact .wrapper--card--contact__content {
+        flex-direction: column;
     }
 }
 
@@ -48559,12 +48574,6 @@ article .link-copy {
     .js .tabs--accordion > .accordion {
         display: block;
     }
-    .js .tabs--accordion > .accordion .accordion__heading:first-child {
-        border-top: 0.125rem solid #f2f2f2;
-    }
-    .js .tabs--accordion > .accordion .accordion__heading:first-child:focus {
-        border-top: 0.125rem dotted transparent;
-    }
     .js .tabs--accordion > .accordion .accordion__heading {
         border-bottom-color: #f2f2f2;
         border-bottom-style: solid;
@@ -48588,6 +48597,14 @@ article .link-copy {
     .js .tabs--accordion > .accordion .accordion__heading[data-open='false']:focus button {
         outline-color: #0c0c0e;
     }
+    .js .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__text {
+        background: transparent;
+        color: #1e1e1e;
+    }
+    .js .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__indicator {
+        background: #3e1031;
+        color: #ffffff;
+    }
     .js .tabs--accordion > .accordion .accordion__heading button {
         padding: 0;
         display: block;
@@ -48608,7 +48625,6 @@ article .link-copy {
 .accordion__heading
 button
 .accordion__heading__text {
-        color: #1e1e1e;
         padding: 1rem;
     }
     .js
@@ -48618,11 +48634,11 @@ button
 button
 .accordion__heading__indicator {
         align-self: normal;
-        background: #3e1031;
-        color: #ffffff;
         padding: 1rem;
         text-align: center;
         text-decoration: underline;
+        background: #3e1031;
+        color: #ffffff;
     }
     .js
 .tabs--accordion
@@ -48631,6 +48647,28 @@ button
 button
 .accordion__heading__indicator:before {
         vertical-align: sub;
+    }
+    .js .tabs--accordion > .accordion .accordion .accordion__heading button .accordion__heading__text,
+    .js .tabs--accordion > .accordion .accordion .accordion__heading button .accordion__heading__indicator {
+        background: transparent;
+        color: #006bbd;
+    }
+    .js .tabs--accordion > .accordion .accordion .accordion__heading[data-open='false'] {
+        border-bottom-color: #e5e5e5;
+        border-bottom-style: solid;
+        border-bottom-width: 0.0625rem;
+    }
+    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__indicator,
+    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
+        background: #3e1031;
+        color: #ffffff;
+    }
+    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__indicator {
+        background: #3e1031;
+        color: #ffffff;
+    }
+    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__text {
+        color: #1e1e1e;
     }
     .js .tabs--accordion > .tabs {
         display: none;
@@ -64150,151 +64188,6 @@ main > .news {
     }
 }
 
-.course--pgt__contact-cards .footer-cards {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    color: #ffffff;
-    padding-top: 1rem;
-}
-
-@media (min-width: 901px) {
-    .course--pgt__contact-cards .footer-cards {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-.course--pgt__contact-cards .footer-cards h2 {
-    border-bottom: 0.0625rem solid #7c2062;
-}
-
-.course--pgt__contact-cards .footer-cards a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    transition: background-size 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #cbcbcb;
-}
-
-@media (hover: hover) {
-    .course--pgt__contact-cards .footer-cards a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.course--pgt__contact-cards .footer-cards a:focus, .course--pgt__contact-cards .footer-cards a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .course--pgt__contact-cards .footer-cards a {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .course--pgt__contact-cards .footer-cards a:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
-    }
-}
-
-.course--pgt__contact-cards .footer-cards a:focus, .course--pgt__contact-cards .footer-cards a:active {
-    outline-color: #ffffff;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.course--pgt__contact-cards .footer-cards a:visited {
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #cbcbcb;
-}
-
-.course--pgt__contact-cards .footer-cards a:focus {
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #cbcbcb;
-}
-
-@media (hover: hover) {
-    .course--pgt__contact-cards .footer-cards a:hover {
-        border-bottom-color: #cbcbcb;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #0c0c0e;
-    }
-}
-
-.course--pgt__contact-cards .footer-cards a:active {
-    background-color: #cbcbcb;
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #0c0c0e;
-}
-
-.course--pgt__contact-cards .footer-cards .card .card__details .card__tag .icon {
-    color: #ffffff;
-}
-
-.course--pgt__contact-cards .footer-cards .related-content {
-    justify-content: left;
-}
-
-.course--pgt__contact-cards .footer-cards .related-content .card.card--contact .card__details__text {
-    padding-left: 0;
-}
-
-.course--pgt__contact-cards .footer-cards .related-content .card.card--contact + .card--contact {
-    padding-top: 0;
-    border-top: 0;
-}
-
 .course--pgt__related-courses {
     padding: 1rem 0 1rem;
 }
@@ -65656,11 +65549,6 @@ main > .news {
 .profile .tabs--accordion
 > .accordion
 .accordion__heading
-button
-.accordion__heading__indicator,
-.profile .tabs--accordion
-> .accordion
-.accordion__heading[data-open='true']
 button
 .accordion__heading__text {
     background: #1e1e1e;
@@ -71164,7 +71052,7 @@ main .standard-content .content {
     background-image: linear-gradient(to bottom, rgba(242, 242, 242, 0), #f2f2f2 90%);
 }
 
-.js .course--ug .accordion > .accordion__heading {
+.js .course--ug :not(.tabs--accordion) > .accordion > .accordion__heading {
     border-bottom-color: #ffffff;
 }
 
@@ -72680,151 +72568,6 @@ main .standard-content .content {
 
 .course--ug__related-links .related-links--with-images__links a:hover {
     color: #0c0c0e;
-}
-
-.course--ug__contact-cards.footer-cards {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    color: #ffffff;
-    padding-top: 1rem;
-}
-
-@media (min-width: 901px) {
-    .course--ug__contact-cards.footer-cards {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-.course--ug__contact-cards.footer-cards h2 {
-    border-bottom: 0.0625rem solid #7c2062;
-}
-
-.course--ug__contact-cards.footer-cards a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    transition: background-size 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #cbcbcb;
-}
-
-@media (hover: hover) {
-    .course--ug__contact-cards.footer-cards a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.course--ug__contact-cards.footer-cards a:focus, .course--ug__contact-cards.footer-cards a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .course--ug__contact-cards.footer-cards a {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .course--ug__contact-cards.footer-cards a:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
-    }
-}
-
-.course--ug__contact-cards.footer-cards a:focus, .course--ug__contact-cards.footer-cards a:active {
-    outline-color: #ffffff;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.course--ug__contact-cards.footer-cards a:visited {
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #cbcbcb;
-}
-
-.course--ug__contact-cards.footer-cards a:focus {
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #cbcbcb;
-}
-
-@media (hover: hover) {
-    .course--ug__contact-cards.footer-cards a:hover {
-        border-bottom-color: #cbcbcb;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #0c0c0e;
-    }
-}
-
-.course--ug__contact-cards.footer-cards a:active {
-    background-color: #cbcbcb;
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #0c0c0e;
-}
-
-.course--ug__contact-cards.footer-cards .card .card__details .card__tag .icon {
-    color: #ffffff;
-}
-
-.course--ug__contact-cards.footer-cards .related-content {
-    justify-content: left;
-}
-
-.course--ug__contact-cards.footer-cards .related-content .card.card--contact .card__details__text {
-    padding-left: 0;
-}
-
-.course--ug__contact-cards.footer-cards .related-content .card.card--contact + .card--contact {
-    padding-top: 0;
-    border-top: 0;
 }
 
 @media (min-width: 1024px) {
