@@ -32819,6 +32819,12 @@ figure figcaption a:active,
     }
 }
 
+.swiper-slide picture {
+    display: flex;
+    width: 100%;
+    border: thin solid red;
+}
+
 .js .swiper-slide {
     opacity: 0.7;
 }
