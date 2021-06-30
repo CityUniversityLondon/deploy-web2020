@@ -43982,12 +43982,17 @@ blockquote footer cite {
 
 @media (min-width: 768px) {
     .js .slider[data-cardsperrow='3'][data-small='true'] {
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
+        grid-gap: 1.5rem;
+        list-style-type: none;
         margin: 1rem 0;
     }
     .js .slider[data-cardsperrow='3'][data-small='true'] .slide {
-        width: calc(33% - 1.25rem);
         padding: 0;
+        margin: 0 1.5rem 0 0;
+    }
+    .js .slider[data-cardsperrow='3'][data-small='true'] .slide:nth-of-type(3n) {
         margin: 0;
     }
 }
@@ -44340,9 +44345,12 @@ blockquote footer cite {
 }
 
 .js .slider[data-style='responsive'] .slide ul {
-    display: flex;
-    max-width: 100%;
-    margin: 0;
+    max-width: unset;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
+    grid-gap: 1.5rem;
+    list-style-type: none;
+    margin: 1rem 0;
 }
 
 @media (max-width: 767px) {
