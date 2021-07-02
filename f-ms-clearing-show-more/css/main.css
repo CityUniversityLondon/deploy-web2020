@@ -70984,11 +70984,25 @@ main .standard-content .content {
     max-width: unset;
 }
 
+.course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card .show-more .show-more__content[data-hidden='true'] {
+    max-height: 16rem;
+}
+
+@media (max-width: 767px) {
+    .course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card .show-more .show-more__content[data-hidden='true'] {
+        max-height: 14rem;
+    }
+}
+
+.course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card .show-more .show-more__content[data-hidden='true']::after {
+    background-image: none;
+}
+
 .course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card .show-more .show-more__content .promo-box__card__body__text__route {
     flex-basis: 40%;
 }
 
-@media (max-width: 431px) {
+@media (max-width: 767px) {
     .course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card .show-more .show-more__content .promo-box__card__body__text__route {
         flex-basis: 100%;
     }
