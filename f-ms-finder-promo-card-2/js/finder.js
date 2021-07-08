@@ -1340,13 +1340,13 @@ function Finder__Results__Promo(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.linkText))))))));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Promo);
 Finder__Results__Promo.propTypes = {
   heading: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   body: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   linkRef: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
   linkText: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string
 };
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Promo);
 
 /***/ }),
 
