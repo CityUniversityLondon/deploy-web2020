@@ -2595,21 +2595,18 @@ Finder__Pagination.propTypes = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.includes.js */ "./node_modules/core-js/modules/es.string.includes.js");
-/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../cards/finder__results__bestbet */ "./src/patterns/finder/components/cards/finder__results__bestbet.js");
-/* harmony import */ var _cards_finder_results_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../cards/finder__results__card */ "./src/patterns/finder/components/cards/finder__results__card.js");
-/* harmony import */ var _finder_didyoumean__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__didyoumean */ "./src/patterns/finder/components/results/finder__didyoumean.js");
-/* harmony import */ var _finder_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./finder__pagination */ "./src/patterns/finder/components/results/finder__pagination.js");
-/* harmony import */ var _cards_finder_results_promo__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../cards/finder__results__promo */ "./src/patterns/finder/components/cards/finder__results__promo.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _finder_results_summary__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./finder__results__summary */ "./src/patterns/finder/components/results/finder__results__summary.js");
-
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../cards/finder__results__bestbet */ "./src/patterns/finder/components/cards/finder__results__bestbet.js");
+/* harmony import */ var _cards_finder_results_card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../cards/finder__results__card */ "./src/patterns/finder/components/cards/finder__results__card.js");
+/* harmony import */ var _finder_didyoumean__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./finder__didyoumean */ "./src/patterns/finder/components/results/finder__didyoumean.js");
+/* harmony import */ var _finder_pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./finder__pagination */ "./src/patterns/finder/components/results/finder__pagination.js");
+/* harmony import */ var _cards_finder_results_promo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../cards/finder__results__promo */ "./src/patterns/finder/components/cards/finder__results__promo.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _finder_results_summary__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./finder__results__summary */ "./src/patterns/finder/components/results/finder__results__summary.js");
 
 
 
@@ -2624,7 +2621,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 /**
  * @module patterns/finder/components/finder__results
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City, University of London 2021
  */
 
 
@@ -2642,13 +2639,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
  */
 
 function Finder__Results(props) {
-  const updating = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", {
+  const updating = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
     className: "finder__results__updating",
     "aria-live": "polite"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
     "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("span", null, "Updating ", props.summariseAs.plural, "\u2026"));
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", null, "Updating ", props.summariseAs.plural, "\u2026"));
   /**
    * Display promo card based on user search/filter input.
    *
@@ -2656,36 +2653,53 @@ function Finder__Results(props) {
    * result card and the rest of the returned results.
    */
 
-  let promoConditions = props.promo[0]['conditions'],
-      // Conditions to render promo card
-  promoDetails = props.promo[1]['details'],
-      // Details rendered to promo card
-  filterFacets = props.query.facets,
-      // User-defined filter/search values
-  searchFacets = props.query.query.toLowerCase(),
-      // User-input search value
-  promoCardConditionMet = false,
+  let promoCardConditionMet = false,
       // Are conditions met to render promo card?
-  promoCardConditionGroup,
-      // Group-specific data to render in promo card
-  queryFacetsAll = _objectSpread(_objectSpread({}, filterFacets), {}, {
-    searchFacets
-  }); // Combine filter and search inputs
-  // Promo condition check and define group
+  matchedPromoGroup = [],
+      // Matching promo group based on query parameters
+  matchedPromoGroupDetails; // Matched promo group data to render to card
+
+  if (props.promo) {
+    let promoConditions = props.promo[0]['conditions'],
+        // Conditions to render promo card
+    promoDetails = props.promo[0]['details'],
+        // Details rendered to promo card
+    filterFacets = props.query.facets,
+        // User-defined filter/search values
+    searchFacets = props.query.query.toLowerCase(),
+        // User-input search value
+    promoCardConditionGroup,
+        // Group-specific data to render in promo card
+    queryFacetsAll = _objectSpread(_objectSpread({}, filterFacets), {}, {
+      searchFacets
+    }); // Combine filter and search inputs
+    // Promo condition check and define group
 
 
-  for (const promoCondition of promoConditions) {
-    for (const key in promoCondition) {
-      Object.values(queryFacetsAll).includes(promoCondition[key]) ? (promoCardConditionMet = true) && (promoCardConditionGroup = promoCondition.promoGroup) : null;
-    }
-  } // Filter promo card details to match correct group of data
+    let queryFacetsArray = [];
+    let queries = Object.values(queryFacetsAll);
+
+    for (const query of queries) {
+      queryFacetsArray.push(query);
+    } // Remove empty array items
 
 
-  let filteredArray = promoDetails.filter(el => el.promoGroup === promoCardConditionGroup);
+    queries = queries.filter(item => item); // Loop query parameters and check if they match any of the promo card conditions
+
+    for (const q of queries) {
+      matchedPromoGroup = promoConditions.filter(el => el.school === q || el.level === q || el.related === q || el.subject === q || el.type === q || el.searchQuery1 === q);
+    } // Assign promo group value and define if promo card conditions are met
+
+
+    matchedPromoGroup.length > 0 ? (promoCardConditionGroup = matchedPromoGroup[0]['promoGroup']) && (promoCardConditionMet = true) : promoCardConditionMet = false; // Filter promo card details to match correct group of data
+
+    matchedPromoGroupDetails = promoDetails.filter(el => el.promoGroup === promoCardConditionGroup);
+  }
+
   const resultsClass = 'resultsVariant' in props.config ? "finder__results__list finder__results__list--".concat(props.config.resultsVariant) : 'finder__results__list';
 
   if (props.response) {
-    const summary = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_finder_results_summary__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    const summary = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_finder_results_summary__WEBPACK_IMPORTED_MODULE_9__["default"], {
       clear: props.clear,
       config: props.config,
       currEnd: props.response.summary.currEnd,
@@ -2696,7 +2710,7 @@ function Finder__Results(props) {
       totalMatching: props.response.summary.totalMatching,
       update: props.update
     });
-    const didYouMean = (props.query.misspelling || props.response.spell) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_finder_didyoumean__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    const didYouMean = (props.query.misspelling || props.response.spell) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_finder_didyoumean__WEBPACK_IMPORTED_MODULE_4__["default"], {
       query: props.query,
       summariseAs: props.summariseAs,
       response: props.response,
@@ -2704,7 +2718,7 @@ function Finder__Results(props) {
     }); // if we have more results than will fit on a single page, we need
     // pagination
 
-    const pagination = props.response.summary.totalMatching > props.response.summary.numRanks && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_finder_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    const pagination = props.response.summary.totalMatching > props.response.summary.numRanks && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_finder_pagination__WEBPACK_IMPORTED_MODULE_5__["default"], {
       currStart: props.response.summary.currStart,
       numRanks: props.response.summary.numRanks,
       query: props.query,
@@ -2718,20 +2732,20 @@ function Finder__Results(props) {
       if (props.query.startRank === 1) {
         const firstItemData = props.response.results[0];
         const secondItemOnwardsData = Array.from(secondItemOnwards.slice(1));
-        results = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("ol", {
+        results = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("ol", {
           start: props.response.summary.currStart,
           className: resultsClass
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
           bestBet: false,
           details: firstItemData,
           type: props.type,
           query: props.query
-        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_cards_finder_results_promo__WEBPACK_IMPORTED_MODULE_7__["default"], {
-          heading: filteredArray[0]['heading'],
-          body: filteredArray[0]['body'],
-          linkRef: filteredArray[0]['linkRef'],
-          linkText: filteredArray[0]['linkText']
-        }), secondItemOnwardsData.map(s => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_cards_finder_results_promo__WEBPACK_IMPORTED_MODULE_6__["default"], {
+          heading: matchedPromoGroupDetails[0]['heading'],
+          body: matchedPromoGroupDetails[0]['body'],
+          linkRef: matchedPromoGroupDetails[0]['linkRef'],
+          linkText: matchedPromoGroupDetails[0]['linkText']
+        }), secondItemOnwardsData.map(s => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
           bestBet: false,
           details: s,
           key: s.docNum,
@@ -2739,10 +2753,10 @@ function Finder__Results(props) {
           query: props.query
         })));
       } else {
-        results = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("ol", {
+        results = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("ol", {
           start: props.response.summary.currStart,
           className: resultsClass
-        }, props.response.results.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        }, props.response.results.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
           bestBet: false,
           details: card,
           key: card.docNum,
@@ -2753,13 +2767,13 @@ function Finder__Results(props) {
     }
 
     if (props.response.results && !promoCardConditionMet) {
-      results = props.response.bestBets.length > 0 || props.response.results.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("ol", {
+      results = props.response.bestBets.length > 0 || props.response.results.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("ol", {
         start: props.response.summary.currStart,
         className: resultsClass
-      }, props.response.bestBets.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_3__["default"], {
+      }, props.response.bestBets.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_cards_finder_results_bestbet__WEBPACK_IMPORTED_MODULE_2__["default"], {
         details: card,
         key: card.docNum
-      })), props.response.results.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      })), props.response.results.map(card => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_3__["default"], {
         bestBet: false,
         details: card,
         key: card.docNum,
@@ -2769,25 +2783,25 @@ function Finder__Results(props) {
     } // render either the results, or a spinner while we wait for Funnelback
 
 
-    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, didYouMean, summary, results, pagination);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, didYouMean, summary, results, pagination);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
       className: "finder__results"
     }, resultsContent);
   } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
       className: "finder__results"
     }, updating);
   }
 }
 
 Finder__Results.propTypes = {
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.func,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object,
-  response: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object,
-  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object,
-  type: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.string,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.bool
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.func,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  response: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  type: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.string,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Results);
 
