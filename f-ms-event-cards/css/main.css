@@ -44351,10 +44351,14 @@ blockquote footer cite {
 }
 
 @media (min-width: 768px) {
-    .js .related-content[data-style='responsive']:not(.slider) {
+    .js .related-content[data-style='responsive']:not(.slider),
+    .js .related-content[data-style='arrows']:not(.slider) {
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
         justify-content: initial;
     }
-    .js .related-content[data-style='responsive']:not(.slider) .card {
+    .js .related-content[data-style='responsive']:not(.slider) .card,
+    .js .related-content[data-style='arrows']:not(.slider) .card {
         flex-basis: 50%;
     }
 }
