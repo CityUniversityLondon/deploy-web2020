@@ -43745,12 +43745,6 @@ blockquote footer cite {
     }
 }
 
-@media (max-width: 767px) and (max-width: 767px) {
-    .js .slider[data-small='true'] .slide .card__anchor {
-        margin: 1rem;
-    }
-}
-
 @media (min-width: 768px) {
     .js .slider[data-small='true'] {
         display: flex;
@@ -43779,12 +43773,6 @@ blockquote footer cite {
     }
 }
 
-@media (max-width: 767px) and (max-width: 767px) {
-    .js .slider:not([data-small='true']) .slide .card__anchor {
-        margin: 1rem;
-    }
-}
-
 @media (min-width: 768px) {
     .js .slider:not([data-small='true']) {
         overflow: hidden;
@@ -43801,12 +43789,6 @@ blockquote footer cite {
 @media (min-width: 768px) and (prefers-reduced-motion: reduce) {
     .js .slider:not([data-small='true']) .slide {
         transition: none;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 767px) {
-    .js .slider:not([data-small='true']) .slide .card__anchor {
-        margin: 1rem;
     }
 }
 
@@ -44129,13 +44111,6 @@ blockquote footer cite {
     padding: 0.1875rem;
 }
 
-@media (max-width: 767px) {
-    .js .slider[data-style='arrows'] + .slider__controls,
-    .js .slider[data-style='responsive'] + .slider__controls {
-        margin-right: 1rem;
-    }
-}
-
 .js .slider[data-style='arrows'] + .slider__controls .slider__indicator,
 .js .slider[data-style='responsive'] + .slider__controls .slider__indicator {
     font-size: 0.889rem;
@@ -44313,7 +44288,6 @@ blockquote footer cite {
 
 .js .slider[data-style='arrows'] + .slider__controls {
     max-width: 44.4rem;
-    margin-right: 1rem;
     margin-left: 1rem;
 }
 
@@ -44344,9 +44318,13 @@ blockquote footer cite {
     height: 100%;
 }
 
+.js .slider[data-style='responsive'] .slide .card__anchor {
+    margin: 0;
+}
+
 .js .slider[data-style='responsive'] .slide ul {
-    max-width: unset;
-    display: grid;
+    display: flex;
+    max-width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
     grid-gap: 1.5rem;
     list-style-type: none;
@@ -57802,6 +57780,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .content-hub__block-three .news-events .content-hub__block-three__happening .slider__controls {
     grid-column: 1 / -1;
+    margin-right: 1rem;
 }
 
 .content-hub__block-three .news-events:before {
@@ -61445,14 +61424,6 @@ main .home .home__whats-happening .related-content {
     .landing--latest .wrapper--landing--latest__latest-content--events .related-content {
         margin-left: 0;
         margin-right: 0;
-    }
-}
-
-@media (max-width: 767px) {
-    .landing--latest .wrapper--landing--latest__latest-content--news .related-content + .slider__controls,
-    .landing--latest .wrapper--landing--latest__latest-content--events .related-content + .slider__controls {
-        margin-left: 0;
-        margin-right: 1rem;
     }
 }
 
