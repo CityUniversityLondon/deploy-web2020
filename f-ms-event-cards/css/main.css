@@ -43759,6 +43759,7 @@ blockquote footer cite {
         overflow: hidden;
         margin: 1rem 0;
         position: relative;
+        margin: 1rem;
     }
     .js .slider:not([data-small='true']) .slide {
         top: 0;
@@ -44288,6 +44289,7 @@ blockquote footer cite {
 
 .js .slider[data-style='arrows'] + .slider__controls {
     max-width: 44.4rem;
+    margin-right: 1rem;
     margin-left: 1rem;
 }
 
