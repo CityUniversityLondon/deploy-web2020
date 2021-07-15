@@ -44289,7 +44289,7 @@ blockquote footer cite {
 
 .js .slider[data-style='arrows'] + .slider__controls {
     max-width: 44.4rem;
-    margin-right: 1rem;
+    margin-right: 0;
     margin-left: 1rem;
 }
 
@@ -59567,10 +59567,10 @@ div.widget-123_test_ {
     border-top-color: #9e111c;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
     .js .event .slider[data-style='arrows'] + .slider__controls,
     .js .event .slider[data-style='responsive'] + .slider__controls {
-        margin-right: 0;
+        margin-right: 1rem;
     }
 }
 
@@ -60524,16 +60524,6 @@ main .home .home__whats-happening .related-content {
 
 .landing .wrapper--landing__contact .landing__contact__location .card--findus .card--findus__content__header {
     display: none;
-}
-
-.js .landing--functional .slider[data-style='arrows'] + .slider__controls,
-.js .landing--functional .slider[data-style='responsive'] + .slider__controls,
-.js .landing--informational .slider[data-style='arrows'] + .slider__controls,
-.js
-.landing--informational
-.slider[data-style='responsive']
-+ .slider__controls {
-    margin-right: 0;
 }
 
 @media (max-width: 1023px) {
@@ -74307,9 +74297,4 @@ button
         background-color: #ffffff;
         border-color: #ffffff;
     }
-}
-
-.js .department .slider[data-style='arrows'] + .slider__controls,
-.js .department .slider[data-style='responsive'] + .slider__controls {
-    margin-right: 0;
 }
