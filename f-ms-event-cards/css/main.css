@@ -64193,30 +64193,6 @@ main > .news {
     }
 }
 
-@media (min-width: 768px) {
-    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content li:nth-child(1) {
-        grid-column: 1 / 10;
-    }
-    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content li:nth-child(2) {
-        grid-column: 10 / -1;
-    }
-    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content li:nth-child(3) {
-        grid-column: 1 / 10;
-    }
-}
-
-@media (min-width: 1280px) {
-    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content li:nth-child(1) {
-        grid-column: 1 / 7;
-    }
-    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content li:nth-child(2) {
-        grid-column: 7 / 13;
-    }
-    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content li:nth-child(3) {
-        grid-column: 13 / -1;
-    }
-}
-
 .wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content__heading {
     grid-column: 1/-1;
 }
@@ -69989,6 +69965,12 @@ button
 }
 
 @media (max-width: 767px) {
+    .js .lifelong-learning .slider[data-style='arrows'] + .slider__controls {
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
     main > .standard-content .banner .banner__block-color {
         display: none;
     }
@@ -70828,14 +70810,14 @@ button
     padding: 0 0 1rem 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .course--ug .featured-profiles-block {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
-@media (max-width: 768px) and (min-width: 901px) {
+@media (max-width: 1024px) and (min-width: 901px) {
     .course--ug .featured-profiles-block {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -71116,20 +71098,44 @@ button
 
 .course--ug__whats-happening {
     background: #f2f2f2;
+    grid-template-columns: repeat(18, 1fr);
+    display: grid;
+    grid-column-gap: 1.25rem;
+}
+
+@media (max-width: 1023px) {
+    .course--ug__whats-happening {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .course--ug__whats-happening {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .course--ug__whats-happening h2 {
     grid-column: 2/-2;
     padding-top: 1rem;
     margin-top: 0;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
 }
 
-@media (min-width: 901px) {
+@media (max-width: 1023px) {
     .course--ug__whats-happening h2 {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        grid-column: 1/-1;
+    }
+}
+
+.course--ug__whats-happening .related-content {
+    grid-column: 2/-2;
+}
+
+@media (max-width: 1023px) {
+    .course--ug__whats-happening .related-content {
+        grid-column: 1/-1;
     }
 }
 
@@ -71141,6 +71147,7 @@ button
 .js .course--ug__whats-happening .slider[data-style='arrows'] + .slider__controls {
     padding-bottom: 1rem;
     margin-bottom: 0;
+    grid-column: 1/-1;
 }
 
 .course--ug__related-courses__wrapper {
@@ -71575,6 +71582,14 @@ button
 
 .js .course--ug .course--ug__keyinfo__accordion .accordion .dropdown-filter .wrapper--dropdown-filter__select select:focus {
     outline-color: #ffffff;
+}
+
+@media (max-width: 1023px) {
+    .js .course--ug .featured-profiles__heading,
+    .js .course--ug .wrapper--featured-profiles__heading-intro,
+    .js .course--ug .wrapper--featured-profiles__profile {
+        grid-column: 1/-1;
+    }
 }
 
 .course--ug__section-wrapper--grey {
