@@ -60519,6 +60519,16 @@ main .home .home__whats-happening .related-content {
     display: none;
 }
 
+.js .landing--functional .slider[data-style='arrows'] + .slider__controls,
+.js .landing--functional .slider[data-style='responsive'] + .slider__controls,
+.js .landing--informational .slider[data-style='arrows'] + .slider__controls,
+.js
+.landing--informational
+.slider[data-style='responsive']
++ .slider__controls {
+    margin-right: 0;
+}
+
 @media (max-width: 1023px) {
     main > .landing--informational .landing__standfirst,
     main > .landing--informational .landing__promotional {
