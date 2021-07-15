@@ -59567,6 +59567,13 @@ div.widget-123_test_ {
     border-top-color: #9e111c;
 }
 
+@media (min-width: 768px) {
+    .js .event .slider[data-style='arrows'] + .slider__controls,
+    .js .event .slider[data-style='responsive'] + .slider__controls {
+        margin-right: 0;
+    }
+}
+
 .event-calendar {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
@@ -74300,4 +74307,9 @@ button
         background-color: #ffffff;
         border-color: #ffffff;
     }
+}
+
+.js .department .slider[data-style='arrows'] + .slider__controls,
+.js .department .slider[data-style='responsive'] + .slider__controls {
+    margin-right: 0;
 }
