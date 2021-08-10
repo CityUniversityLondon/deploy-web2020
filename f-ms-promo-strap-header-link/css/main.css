@@ -31873,9 +31873,7 @@ figure figcaption a:active,
     text-decoration: none;
     color: #ffffff;
     padding-bottom: 0.125rem;
-    border-bottom-color: #ffffff;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
+    text-decoration: underline;
 }
 
 @media (hover: hover) {
@@ -31925,17 +31923,13 @@ figure figcaption a:active,
 
 .promo-strap .promo-strap__content a:focus {
     color: #ffffff;
-    border-bottom-color: #ffffff;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
+    text-decoration: underline;
 }
 
 @media (hover: hover) {
     .promo-strap .promo-strap__content a:hover {
         color: #ffffff;
-        border-bottom-color: #ffffff;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
+        text-decoration: underline;
     }
 }
 
