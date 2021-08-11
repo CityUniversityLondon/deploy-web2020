@@ -43589,7 +43589,8 @@ blockquote footer cite {
     border-bottom: 0.125rem solid #006bbd;
 }
 
-.tabs .show-more .show-more__content[data-hidden='true']:after {
+.tabs .show-more .show-more__content[data-hidden='true']:after,
+.accordion .show-more .show-more__content[data-hidden='true']:after {
     background-image: linear-gradient(to bottom, rgba(242, 242, 242, 0), #f2f2f2 90%);
 }
 
@@ -64627,8 +64628,6 @@ main > .news {
 
 .js .course--pgt .tabs {
     padding-bottom: 1rem;
-    /* new start styles WR */
-    /* new end styles WR */
 }
 
 .js .course--pgt .tabs .tabs__panel__content {
@@ -64726,6 +64725,11 @@ main > .news {
 .js .course--pgt .tabs .tabs__panel {
     background-color: #ffffff;
     border: 0;
+}
+
+.js .course--pgt .tabs .show-more__content[data-hidden='true']:after,
+.js .course--pgt .accordion .show-more__content[data-hidden='true']:after {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 90%);
 }
 
 .js .wrapper--alumni-testimonials .card--testimonial .card__details .card--testimonial__quote {
@@ -72848,6 +72852,10 @@ main .standard-content .content {
 
 .course--ug__related-links .related-links--with-images__links a:hover {
     color: #0c0c0e;
+}
+
+.js .course--ug .accordion .show-more__content[data-hidden='true']:after {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 90%);
 }
 
 @media (min-width: 1024px) {
