@@ -51678,8 +51678,8 @@ button
     font-weight: 900;
 }
 
-.tabs__panel__body > .embedded-video,
-.wrapper--accordion__body__content > .embedded-video {
+.tabs__panel__body > .embedded-video:first-child,
+.wrapper--accordion__body__content > .embedded-video:first-child {
     padding-top: 0;
 }
 
