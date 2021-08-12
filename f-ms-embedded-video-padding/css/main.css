@@ -51678,6 +51678,11 @@ button
     font-weight: 900;
 }
 
+.tabs__panel__body > .embedded-video,
+.wrapper--accordion__body__content > .embedded-video {
+    padding-top: 0;
+}
+
 @media (min-width: 768px) {
     .finder__reset {
         font-size: 1rem;
