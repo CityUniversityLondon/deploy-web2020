@@ -60997,11 +60997,31 @@ main .home .home__whats-happening .related-content {
     text-align: center;
 }
 
+@media (max-width: 1024px) {
+    .landing--functional .wrapper--landing--functional--pathway {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 901px) {
+    .landing--functional .wrapper--landing--functional--pathway {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.landing--functional .wrapper--landing--functional--pathway .pathway__heading {
+    padding: 0;
+}
+
 .landing--functional .wrapper--landing--functional--pathway .pathway__cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
     grid-gap: 1.5rem;
     list-style-type: none;
+    padding: 0;
 }
 
 @media (max-width: 432px) {
