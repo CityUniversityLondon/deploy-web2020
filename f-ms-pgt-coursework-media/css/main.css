@@ -64009,36 +64009,29 @@ main > .news {
     grid-column: 1/-1;
 }
 
+.course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__heading {
+    margin-bottom: 0.75rem;
+}
+
+.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video:nth-of-type(2) {
+    margin-top: 1rem;
+}
+
 @media (min-width: 769px) {
     .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video {
         display: flex;
-    }
-    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video .embedded-video {
-        padding-left: 0;
-        flex: 1;
-    }
-    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video .embedded-video:last-of-type {
-        padding-right: 0;
     }
     .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video:nth-of-type(1) {
         grid-column: 1/10;
     }
     .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video:nth-of-type(2) {
         grid-column: 10/-1;
+        margin-top: 0;
     }
 }
 
-.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video .embedded-video {
-    padding-top: 0;
-}
-
-@media (max-width: 768px) {
-    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video .embedded-video {
-        padding-left: 0;
-        padding-right: 0;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
+.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video figure.youtube-video {
+    margin: 0;
 }
 
 .course--pgt__our-students .course--pgt__student-work .imageColLayout {
