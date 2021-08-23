@@ -3546,7 +3546,9 @@ class Carousel {
    *          <ul class="swiper-wrapper">
    *              <li class="swiper-slide">
    *                  <div class="swiper-slide__image-wrapper">
-   *                      <img src="https://web2020.city.ac.uk/documentation/patterns/carousel/_DP57645_1920x1080.jpg" alt="Image">
+   *                      <picture>
+   *                          <img src="https://web2020.city.ac.uk/documentation/patterns/carousel/_DP57645_1920x1080.jpg" alt="Image">
+   *                      </picture>
    *                  </div>
    *                  <div class="swiper-slide__text">
    *                      <p>We are a leading provider of healthcare .....</p>
@@ -3584,11 +3586,15 @@ class Carousel {
       let lazyImageObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry, i) {
           if (i === 0) {
-            entry.target.firstElementChild.classList.remove('lazy');
+            entry.target.querySelector('img').classList.remove('lazy');
           }
 
           if (entry.isIntersecting) {
-            let lazyImage = entry.target.parentNode.nextSibling.firstElementChild.firstElementChild;
+            let lazyImage = entry.target.parentNode.parentNode.nextSibling.firstElementChild.querySelector('img');
+            let sourceSet = entry.target.parentNode.parentNode.nextSibling.firstElementChild.querySelectorAll('source');
+            sourceSet.forEach(item => {
+              item.srcset = item.dataset.srcset;
+            });
             lazyImage.src = lazyImage.dataset.src;
             lazyImage.classList.remove('lazy');
             lazyImageObserver.unobserve(entry.target);
@@ -4602,7 +4608,7 @@ function createMenuToggle(label, button, setMenu, veil) {
 
 function launchMenu(menu) {
   // During testing only: remove 'under construction' indicators globally
-  // menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
+  //     menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
   const label = menu.querySelector(".".concat(buttonDisplayClassName)),
         button = document.createElement('button'),
         veil = document.createElement('div'),
@@ -5252,9 +5258,9 @@ function addCloseButtons(navigation, closeAll) {
 
 function launchPrimaryNavigation(navigation) {
   // During testing only: remove 'under construction' indicators globally
-  // navigation.innerHTML = navigation.innerHTML
-  //     .replace(/\(\( /g, '')
-  //     .replace(/ \)\)/g, '');
+  //     navigation.innerHTML = navigation.innerHTML
+  //         .replace(/\(\( /g, '')
+  //         .replace(/ \)\)/g, '');
   const veil = document.createElement('div'),
         closeAll = createCloseAll(navigation, veil);
   veil.className = veilClassName;
@@ -5320,9 +5326,9 @@ const className = 'navigation',
 
 function launchSecondaryNavigation(navigation) {
   // During testing only: remove 'under construction' indicators globally
-  // navigation.innerHTML = navigation.innerHTML
-  //     .replace(/\(\( /g, '')
-  //     .replace(/ \)\)/g, '');
+  //     navigation.innerHTML = navigation.innerHTML
+  //         .replace(/\(\( /g, '')
+  //         .replace(/ \)\)/g, '');
   Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__["prepareNavigation"])(navigation, className);
   Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__["listenForNavigationToggles"])(navigation, className);
 }
@@ -5824,10 +5830,12 @@ function addPagination(elem, itemCount) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 /* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 
 /**
@@ -5839,10 +5847,9 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-
 const className = 'show-more',
       oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_0__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = true;
 /**
  * Open or close the show-more element.
@@ -5854,7 +5861,7 @@ function toggleShowMore(showMore) {
   const firstHeadingElement = showMore.querySelector('.show-more__heading, h2, h3, h4, h5, h6'),
         contentElement = showMore.querySelector('.show-more__content'),
         showMoreAnchorLinkText = showMore.querySelector('.show-more__link-text'),
-        hiddenElement = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(contentElement.dataset.hidden);
+        hiddenElement = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(contentElement.dataset.hidden);
 
   if (hiddenElement) {
     showMore.dataset.open = true;
@@ -5866,8 +5873,8 @@ function toggleShowMore(showMore) {
     showMoreAnchorLinkText.textContent = 'Show more';
   }
 
-  if (firstHeadingElement && !Object(_util__WEBPACK_IMPORTED_MODULE_2__["verticallyInWindow"])(firstHeadingElement)) {
-    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.to(firstHeadingElement, scrollDuration);
+  if (firstHeadingElement && !Object(_util__WEBPACK_IMPORTED_MODULE_0__["verticallyInWindow"])(firstHeadingElement)) {
+    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(firstHeadingElement, scrollDuration);
   }
 }
 /**
