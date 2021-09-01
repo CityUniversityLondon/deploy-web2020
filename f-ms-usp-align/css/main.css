@@ -44028,7 +44028,6 @@ blockquote footer cite {
         margin: 1rem 0;
     }
     .js .slider[data-cardsperrow='3'][data-small='true'] .slide {
-        padding: 0;
         margin: 0 1.5rem 0 0;
     }
     .js .slider[data-cardsperrow='3'][data-small='true'] .slide:nth-of-type(3n) {
@@ -48259,6 +48258,7 @@ article .link-copy {
     }
     .statistics-block .ksp__items.ksp__items--3 .ksp__item {
         width: 33%;
+        padding: 0 1rem;
     }
 }
 
@@ -72967,15 +72967,6 @@ main .standard-content .content {
     main .navigation--secondary + .school .school__content .school__statistic .statistics-block {
         grid-column: 3/17;
     }
-}
-
-@media (min-width: 1024px) and (min-width: 1024px) {
-    main .navigation--secondary + .school .school__content .school__statistic h2 {
-        margin-bottom: 1rem;
-    }
-}
-
-@media (min-width: 1024px) {
     main .navigation--secondary + .school .school__content .school__statistic .school__statistic--wrapper {
         grid-column: 1/-1;
         grid-template-columns: repeat(18, 1fr);
@@ -72993,12 +72984,6 @@ main .standard-content .content {
 @media (min-width: 1024px) and (min-width: 901px) {
     main .navigation--secondary + .school .school__content .school__statistic .school__statistic--wrapper {
         grid-column-gap: 1.5rem;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1024px) {
-    main .navigation--secondary + .school .school__content .school__statistic .school__statistic--wrapper {
-        padding-top: 2rem;
     }
 }
 
