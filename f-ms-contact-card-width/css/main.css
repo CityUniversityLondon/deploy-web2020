@@ -21561,16 +21561,26 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     border-style: solid;
     border-width: 0.0625rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
 }
 
-.card--findus .card__details .card__thumbnail img {
-    width: 100%;
+@media (max-width: 767px) {
+    .card--findus .card__details {
+        display: block;
+    }
+    .card--findus .card__details .card__thumbnail img {
+        width: 100%;
+    }
+}
+
+.card--findus .card__details .wrapper--card__thumbnail {
+    flex: 1;
 }
 
 .card--findus .card__details .card__details__text {
     padding-bottom: 1rem;
+    flex: 1;
 }
 
 .card--findus .card__details .card--findus__label--findus {
@@ -44414,11 +44424,6 @@ blockquote footer cite {
     margin-bottom: 0;
 }
 
-.js .related-content[data-style='responsive']:not(.slider),
-.js .related-content[data-style='arrows']:not(.slider) {
-    display: block;
-}
-
 @media (min-width: 768px) {
     .js .related-content[data-style='responsive']:not(.slider),
     .js .related-content[data-style='arrows']:not(.slider) {
@@ -44426,6 +44431,11 @@ blockquote footer cite {
         margin-left: 1.5rem;
         justify-content: initial;
     }
+}
+
+.js .related-content:not(.slider) {
+    display: block;
+    max-width: calc(55ch - 2.5rem);
 }
 
 @media (min-width: 768px) {
@@ -74538,6 +74548,10 @@ main .standard-content .content {
 
 .department .department__contact-us .department__contact-us__footer__find-us {
     flex: 1;
+}
+
+.department .department__contact-us .department__contact-us__footer__find-us .card--findus .card__details {
+    display: block;
 }
 
 .department .tabs__panel:not([hidden]) {
