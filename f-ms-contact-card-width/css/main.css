@@ -44427,15 +44427,14 @@ blockquote footer cite {
 @media (min-width: 768px) {
     .js .related-content[data-style='responsive']:not(.slider),
     .js .related-content[data-style='arrows']:not(.slider) {
-        margin-right: 1.5rem;
-        margin-left: 1.5rem;
         justify-content: initial;
     }
 }
 
 .js .related-content:not(.slider) {
-    display: block;
     max-width: calc(55ch - 2.5rem);
+    margin-left: 0;
+    margin-right: 0;
 }
 
 @media (min-width: 768px) {
@@ -74517,12 +74516,7 @@ main .standard-content .content {
 
 .department .department__contact-us .department__contact-us__contacts .related-content {
     display: flex;
-}
-
-@media (max-width: 767px) {
-    .department .department__contact-us .department__contact-us__contacts .related-content {
-        flex-direction: column;
-    }
+    flex-direction: column;
 }
 
 .department .department__contact-us .department__contact-us__contacts .related-content .card.card--contact {
