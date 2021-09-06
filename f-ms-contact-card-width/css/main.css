@@ -74521,6 +74521,7 @@ main .standard-content .content {
 
 .department .department__contact-us .department__contact-us__contacts .related-content .card.card--contact {
     flex: 1;
+    padding-bottom: 0;
 }
 
 .department .department__contact-us .department__contact-us__contacts .related-content .card.card--contact .card__details__text {
