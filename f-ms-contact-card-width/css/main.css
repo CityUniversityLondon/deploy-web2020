@@ -71515,6 +71515,28 @@ main .standard-content .content {
     }
 }
 
+.course--ug__student-testimonials__wrapper .card {
+    margin-top: 0;
+}
+
+.course--ug__student-testimonials__wrapper .card .card__thumbnail {
+    margin: 1rem 0 0;
+}
+
+.course--ug__student-testimonials__wrapper .card .card__details .card__details__text {
+    padding-top: 0;
+}
+
+@media (max-width: 768px) {
+    .course--ug__student-testimonials__wrapper .card .card__details .card__details__text {
+        padding: 0;
+    }
+}
+
+.course--ug__student-testimonials__wrapper .card .card--testimonial__quote {
+    margin-top: 1rem;
+}
+
 .course--ug__student-testimonials {
     grid-column: 8/-1;
 }
