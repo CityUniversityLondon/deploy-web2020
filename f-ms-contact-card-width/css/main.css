@@ -44432,9 +44432,12 @@ blockquote footer cite {
 }
 
 .js .related-content:not(.slider) {
-    max-width: calc(55ch - 2.5rem);
     margin-left: 0;
     margin-right: 0;
+}
+
+.js .related-content:not(.slider) li:only-child {
+    max-width: calc(55ch - 2.5rem);
 }
 
 @media (min-width: 768px) {
