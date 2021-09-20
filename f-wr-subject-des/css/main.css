@@ -56975,7 +56975,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 @media (max-width: 768px) {
     .content-hub__block-one .subject-finder {
-        padding: 1.5rem 0;
+        padding: 0 0;
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -57022,6 +57022,14 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .subject-finder .subject-finder__columns-1 .subject-finder__subject-description > * {
     margin-left: auto;
     margin-right: auto;
+}
+
+.subject-finder .subject-description--image picture {
+    display: flex;
+}
+
+.subject-finder .subject-description--image picture img {
+    flex-basis: 100%;
 }
 
 .content-hub__block-one .embedded-video {
