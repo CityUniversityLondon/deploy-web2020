@@ -57055,7 +57055,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 @media (max-width: 768px) {
     .content-hub__block-one .explore {
         grid-column: 1/-1;
-        padding: 2rem 0;
+        padding: 0 0 2rem 0;
     }
 }
 
