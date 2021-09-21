@@ -57037,7 +57037,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .subject-finder.subject-finder--columns-1 .subject-finder__subject-description {
-    grid-column: 3/-3;
+    grid-column: 7/19;
 }
 
 @media (max-width: 768px) {
