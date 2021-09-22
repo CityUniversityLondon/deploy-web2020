@@ -2476,6 +2476,58 @@ Search__OtherSites.propTypes = {
 
 /***/ }),
 
+/***/ "./src/patterns/search/components/main/results/search__peopletypes.js":
+/*!****************************************************************************!*\
+  !*** ./src/patterns/search/components/main/results/search__peopletypes.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+/**
+ * @module patterns/search/components/main/results/search__peopletypes
+ * @author Web Development
+ * @copyright City, University of London 2021
+ */
+
+/**
+ * Render Funnelback results.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+let peopleTypes = [{
+  type: 'academics',
+  path: 'academics'
+}, {
+  type: 'research students',
+  path: 'research-students'
+}, {
+  type: 'students',
+  path: 'students'
+}, {
+  type: 'honorary graduates',
+  path: 'honorary-graduates'
+}, {
+  type: 'past students',
+  path: 'past-students'
+}, {
+  type: 'professional services staff',
+  path: 'professional-services-staff'
+}, {
+  type: 'international',
+  path: 'international'
+}, {
+  type: 'senior people',
+  path: 'senior-people'
+}];
+/* harmony default export */ __webpack_exports__["default"] = (peopleTypes);
+
+/***/ }),
+
 /***/ "./src/patterns/search/components/main/results/search__results.js":
 /*!************************************************************************!*\
   !*** ./src/patterns/search/components/main/results/search__results.js ***!
@@ -2496,8 +2548,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _results_search_results_browsepeople__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../results/search__results__browsepeople */ "./src/patterns/search/components/main/results/search__results__browsepeople.js");
 /* harmony import */ var _finder_components_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../finder/components/cards/finder__results__card */ "./src/patterns/finder/components/cards/finder__results__card.js");
 /* harmony import */ var _finder_components_results_finder_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../finder/components/results/finder__pagination */ "./src/patterns/finder/components/results/finder__pagination.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _search_peopletypes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./search__peopletypes */ "./src/patterns/search/components/main/results/search__peopletypes.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -2509,6 +2562,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2020
  */
+
 
 
 
@@ -2546,7 +2600,14 @@ function genericResult(result, type, i) {
   }, result.metaData.c), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "card__url"
   }, result.liveUrl))));
-}
+} // console.log(PeopleTypes);
+// for (const p of PeopleTypes) {
+//     console.log(p.label);
+// }
+// PeopleTypes.map((people, i) => {
+//     console.log(people);
+// });
+
 /**
  * Render Funnelback results.
  *
@@ -2761,14 +2822,13 @@ function Search__Results(props) {
     }, "Browse more", ' ', finder.summariseAs.plural, ' '), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
       className: "fas fa-arrow-right icon",
       "aria-hidden": "true"
-    })), finder.response && finder.response.summary.totalMatching > finder.response.summary.currEnd && finder.summariseAs.plural === 'people' && finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_results_search_results_browsepeople__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      query: finder.response.query,
-      path: "academics",
-      type: "academics"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_results_search_results_browsepeople__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      query: finder.response.query,
-      path: "research-students",
-      type: "research students"
+    })), finder.response && finder.response.summary.totalMatching > finder.response.summary.currEnd && finder.summariseAs.plural === 'people' && finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, _search_peopletypes__WEBPACK_IMPORTED_MODULE_7__["default"].map((people, i) => {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_results_search_results_browsepeople__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        key: i,
+        query: finder.response.query,
+        path: people.path,
+        type: people.type
+      });
     }))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
       className: "search__summary__noresults"
     }, "No matching ", finder.summariseAs.plural, ".", ' ', finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
@@ -2785,12 +2845,12 @@ function Search__Results(props) {
 }
 
 Search__Results.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
-  element: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
-  finders: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object),
-  primary: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object),
-  query: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object
+  config: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object,
+  finders: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object),
+  primary: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object),
+  query: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_8___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (Search__Results);
 
