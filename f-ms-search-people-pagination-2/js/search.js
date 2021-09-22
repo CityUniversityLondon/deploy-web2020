@@ -2493,10 +2493,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _finder_components_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../finder/components/cards/finder__results__card */ "./src/patterns/finder/components/cards/finder__results__card.js");
-/* harmony import */ var _finder_components_results_finder_pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../finder/components/results/finder__pagination */ "./src/patterns/finder/components/results/finder__pagination.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _results_search_results_browsepeople__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../results/search__results__browsepeople */ "./src/patterns/search/components/main/results/search__results__browsepeople.js");
+/* harmony import */ var _finder_components_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../finder/components/cards/finder__results__card */ "./src/patterns/finder/components/cards/finder__results__card.js");
+/* harmony import */ var _finder_components_results_finder_pagination__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../../finder/components/results/finder__pagination */ "./src/patterns/finder/components/results/finder__pagination.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -2508,6 +2509,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2020
  */
+
 
 
 
@@ -2649,7 +2651,7 @@ function Search__Results(props) {
   })); // if we have more results than will fit on a single page, we need
   // pagination
 
-  const primaryPagination = props.primary[0].response && props.primary[0].response.summary.totalMatching > props.primary[0].response.summary.numRanks && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_finder_components_results_finder_pagination__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  const primaryPagination = props.primary[0].response && props.primary[0].response.summary.totalMatching > props.primary[0].response.summary.numRanks && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_finder_components_results_finder_pagination__WEBPACK_IMPORTED_MODULE_6__["default"], {
     currStart: props.primary[0].response.summary.currStart,
     numRanks: props.primary[0].response.summary.numRanks,
     query: props.query,
@@ -2746,7 +2748,7 @@ function Search__Results(props) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "(showing", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, finder.response && finder.response.summary.currStart), "\u2013", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, finder.response && finder.response.summary.currEnd), ' ', "of", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, finder.response && finder.response.summary.totalMatching), ' ', finder.response && finder.response.summary.totalMatching === 0 ? finder.summariseAs.plural : finder.response && finder.response.summary.totalMatching === 1 ? finder.summariseAs.singular : finder.summariseAs.plural, ")"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ol", {
       className: "search__results__list",
       start: finder.response && finder.response.summary.currStart
-    }, finder.response && finder.response.results.map((result, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_finder_components_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, finder.response && finder.response.results.map((result, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_finder_components_cards_finder_results_card__WEBPACK_IMPORTED_MODULE_5__["default"], {
       bestBet: false,
       details: result,
       key: finder.collection + i,
@@ -2759,21 +2761,15 @@ function Search__Results(props) {
     }, "Browse more", ' ', finder.summariseAs.plural, ' '), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
       className: "fas fa-arrow-right icon",
       "aria-hidden": "true"
-    })), finder.response && finder.response.summary.totalMatching > finder.response.summary.currEnd && finder.summariseAs.plural === 'people' && finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-      className: "search__results__more"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
-      href: 'https://www.city.ac.uk/about/people/academics' + '?query=' + props.query.query
-    }, "Browse all", ' ', props.query.query, ' ', "academics"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-      className: "fas fa-arrow-right icon",
-      "aria-hidden": "true"
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-      className: "search__results__more"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
-      href: 'https://www.city.ac.uk/about/people/research-students' + '?query=' + props.query.query
-    }, "Browse all", ' ', props.query.query, ' ', "research students"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
-      className: "fas fa-arrow-right icon",
-      "aria-hidden": "true"
-    })))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+    })), finder.response && finder.response.summary.totalMatching > finder.response.summary.currEnd && finder.summariseAs.plural === 'people' && finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_results_search_results_browsepeople__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      query: finder.response.query,
+      path: "academics",
+      type: "academics"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_results_search_results_browsepeople__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      query: finder.response.query,
+      path: "research-students",
+      type: "research students"
+    }))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
       className: "search__summary__noresults"
     }, "No matching ", finder.summariseAs.plural, ".", ' ', finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
       href: finder.search
@@ -2789,14 +2785,63 @@ function Search__Results(props) {
 }
 
 Search__Results.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
-  element: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
-  finders: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object),
-  primary: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object),
-  query: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object
+  config: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  finders: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object),
+  primary: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object),
+  query: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object,
+  update: prop_types__WEBPACK_IMPORTED_MODULE_7___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (Search__Results);
+
+/***/ }),
+
+/***/ "./src/patterns/search/components/main/results/search__results__browsepeople.js":
+/*!**************************************************************************************!*\
+  !*** ./src/patterns/search/components/main/results/search__results__browsepeople.js ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/search/components/main/results/search__results__browsepeople
+ * @author Web Development
+ * @copyright City, University of London 2021
+ */
+
+
+/**
+ * Render browse people.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function Search__Results__BrowsePeople(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    className: "search__results__more"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: 'https://www.city.ac.uk/about/people/' + props.path + '?query=' + props.query
+  }, "Browse all ", props.query, " ", props.type), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "fas fa-arrow-right icon",
+    "aria-hidden": "true"
+  }));
+}
+
+Search__Results__BrowsePeople.propTypes = {
+  query: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
+  type: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string,
+  path: prop_types__WEBPACK_IMPORTED_MODULE_0___default.a.string
+};
+/* harmony default export */ __webpack_exports__["default"] = (Search__Results__BrowsePeople);
 
 /***/ }),
 
