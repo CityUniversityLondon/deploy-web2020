@@ -2501,28 +2501,36 @@ __webpack_require__.r(__webpack_exports__);
  */
 let peopleTypes = [{
   type: 'academics',
-  path: 'academics'
+  path: 'academics',
+  fbRef: 'academic'
 }, {
   type: 'research students',
-  path: 'research-students'
+  path: 'research-students',
+  fbRef: 'research student'
 }, {
   type: 'students',
-  path: 'students'
+  path: 'students',
+  fbRef: 'student'
 }, {
   type: 'honorary graduates',
-  path: 'honorary-graduates'
+  path: 'honorary-graduates',
+  fbRef: 'honorary'
 }, {
   type: 'past students',
-  path: 'past-students'
+  path: 'past-students',
+  fbRef: 'alumni'
 }, {
   type: 'professional services staff',
-  path: 'professional-services-staff'
+  path: 'professional-services-staff',
+  fbRef: 'professional'
+}, {
+  type: 'research students',
+  path: 'research-students',
+  fbRef: 'research'
 }, {
   type: 'international',
-  path: 'international'
-}, {
-  type: 'senior people',
-  path: 'senior-people'
+  path: 'international',
+  fbRef: 'agent'
 }];
 /* harmony default export */ __webpack_exports__["default"] = (peopleTypes);
 
@@ -2567,7 +2575,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
- // FIXME for go live
 
 const siteUrl = 'city.ac.uk';
 const endKey = 'End',
@@ -2600,14 +2607,7 @@ function genericResult(result, type, i) {
   }, result.metaData.c), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
     className: "card__url"
   }, result.liveUrl))));
-} // console.log(PeopleTypes);
-// for (const p of PeopleTypes) {
-//     console.log(p.label);
-// }
-// PeopleTypes.map((people, i) => {
-//     console.log(people);
-// });
-
+}
 /**
  * Render Funnelback results.
  *
@@ -2617,6 +2617,17 @@ function genericResult(result, type, i) {
 
 
 function Search__Results(props) {
+  const fbLabels = [];
+  const peopleCollection = props['finders'].filter(f => f.label === 'People');
+
+  if (peopleCollection[0]['response']['facets'][0]) {
+    let fbLabelsSrc = peopleCollection[0]['response']['facets'][0]['allValues'];
+
+    for (const f of fbLabelsSrc) {
+      fbLabels.push(f.data);
+    }
+  }
+
   const [currentTab, setCurrentTab] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(0);
 
   const updating = results => {
@@ -2823,12 +2834,14 @@ function Search__Results(props) {
       className: "fas fa-arrow-right icon",
       "aria-hidden": "true"
     })), finder.response && finder.response.summary.totalMatching > finder.response.summary.currEnd && finder.summariseAs.plural === 'people' && finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, _search_peopletypes__WEBPACK_IMPORTED_MODULE_7__["default"].map((people, i) => {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_results_search_results_browsepeople__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        key: i,
-        query: finder.response.query,
-        path: people.path,
-        type: people.type
-      });
+      if (fbLabels.includes(people.fbRef)) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_results_search_results_browsepeople__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          key: i,
+          query: finder.response.query,
+          path: people.path,
+          type: people.type
+        });
+      }
     }))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
       className: "search__summary__noresults"
     }, "No matching ", finder.summariseAs.plural, ".", ' ', finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
