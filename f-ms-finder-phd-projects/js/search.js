@@ -1235,7 +1235,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Render a Funnelback result as a case study card.
+ * Render a Funnelback result as a research card.
  *
  * @param {object} props React props.
  * @return {object} - React component.
@@ -1268,12 +1268,14 @@ function Finder__Results__Research(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "card card--research"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "card__details"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
     className: "card--research__title-link"
   }, props.details.title), subtitle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "card__description"
-  }, props.details.metaData.c && props.details.metaData.c), school, department, centre));
+  }, props.details.metaData.c && props.details.metaData.c), school, department, centre)));
 }
 
 Finder__Results__Research.propTypes = {

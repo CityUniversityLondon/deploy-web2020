@@ -21014,23 +21014,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     color: #d61726;
 }
 
-.related-content .card.card--contact {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 1.5rem;
-}
-
-.related-content .card.card--contact + .card--contact {
-    border-top-style: solid;
-    border-top-color: #0c0c0e;
-    border-top-width: 0.0625rem;
-    padding-top: 1.5rem;
-}
-
-.related-content .card.card--contact .card__details .card__details__text {
-    padding-bottom: 1rem;
-}
-
 .card--contact .card__details .card__tag .icon {
     color: #d61726;
 }
@@ -21124,6 +21107,23 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card--contact .wrapper--card--contact__address .icon {
     line-height: 1.625;
     padding-top: 0.25rem;
+}
+
+.related-content .card.card--contact {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 1.5rem;
+}
+
+.related-content .card.card--contact + .card--contact {
+    border-top-style: solid;
+    border-top-color: #0c0c0e;
+    border-top-width: 0.0625rem;
+    padding-top: 1.5rem;
+}
+
+.related-content .card.card--contact .card__details .card__details__text {
+    padding-bottom: 1rem;
 }
 
 .card--course .wrapper--card__label__details {
@@ -21910,9 +21910,124 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     color: #d61726;
 }
 
-.card--research {
-    background-color: #ffffff;
-    padding: 1rem;
+.finder__results__list .card--research .card__details,
+.search__results .card--research .card__details {
+    border-color: #f2f2f2;
+    border-style: solid;
+    border-width: 0.0625rem;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .finder__results__list .card--research .card__details,
+    .search__results .card--research .card__details {
+        background-color: #f2f2f2;
+    }
+}
+
+.finder__results__list .card--research .card__details .card__details__text,
+.search__results .card--research .card__details .card__details__text {
+    padding-bottom: 1rem;
+}
+
+.finder__results__list .card--research .card__details .card__type,
+.search__results .card--research .card__details .card__type {
+    color: #d61726;
+}
+
+.card--research .card__details .card__tag .icon {
+    color: #d61726;
+}
+
+.card--research .wrapper--card--contact__content {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 1023px) {
+    .card--research .wrapper--card--contact__content {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card--research .wrapper--card--contact__content {
+        flex-direction: row;
+    }
+    .card--research .wrapper--card--contact__content .card--contact__content {
+        margin-right: 1.5rem;
+    }
+}
+
+.card--research .wrapper--card--contact__address {
+    font-family: "Plex Sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 0.75rem;
+}
+
+.card--research .wrapper--card--contact__address i,
+.card--research .wrapper--card--contact__address em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--research .wrapper--card--contact__address {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--research .wrapper--card--contact__address {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--research .wrapper--card--contact__address {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--research .wrapper--card--contact__address {
+        letter-spacing: -0.017em;
+    }
+}
+
+.card--research .wrapper--card--contact__address b,
+.card--research .wrapper--card--contact__address strong {
+    font-weight: 700;
+}
+
+.card--research .wrapper--card--contact__address i,
+.card--research .wrapper--card--contact__address em {
+    font-style: italic;
+}
+
+.card--research .wrapper--card--contact__address address .card--contact__addressline {
+    display: block;
+}
+
+.card--research .wrapper--card--contact__address .icon {
+    line-height: 1.625;
+    padding-top: 0.25rem;
 }
 
 .card--socialmedia .card__anchor {
