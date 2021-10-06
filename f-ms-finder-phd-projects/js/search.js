@@ -1237,14 +1237,53 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Render a Funnelback result as a research card.
+ * Render a Funnelback result as a PhD research project card.
  *
  * @param {object} props React props.
  * @return {object} - React component.
  */
 
 function Finder__Results__Research(props) {
-  const status = props.details.metaData.status && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+  const school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+    className: "card__tag"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-fw fa-university icon",
+    "aria-hidden": "true"
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ' and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(' and '))),
+        department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+    className: "card__tag"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-fw fa-building icon",
+    "aria-hidden": "true"
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Department:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ' and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(' and '))),
+        centre = props.details.metaData.researchcentre && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+    className: "card__tag"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-fw fa-vial icon",
+    "aria-hidden": "true"
+  }), ' ', props.details.metaData.researchcentre.split('|').length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Reseearch centres: ") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Reseearch centre: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.researchcentre.split('|').length > 2 ? Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.researchcentre).split('|').slice(0, -1).join(', ') + ' and ' + Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.researchcentre.split('|').slice(-1)) : Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.researchcentre.split('|').join(' and ')))),
+        academic = props.details.metaData.academic && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+    className: "card__tag"
+  }, props.details.metaData.student ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-fw fa-chalkboard-teacher icon",
+    "aria-hidden": "true"
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-fw fa-users icon",
+    "aria-hidden": "true"
+  }), ' ', props.details.metaData.academic.split('|').length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Academics: ") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Academic: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.academic.split('|').length > 2 ? Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.academic.split('|').slice(0, -1).join(', ') + ' and ' + props.details.metaData.academic.split('|').slice(-1)) : Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.academic.split('|').join(' and ')))),
+        student = props.details.metaData.student && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+    className: "card__tag"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "fas fa-fw fa-users icon",
+    "aria-hidden": "true"
+  }), ' ', props.details.metaData.student.split('|').length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Students: ") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Student: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.student.split('|').length > 2 ? Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.student.split('|').slice(0, -1).join(', ') + ' and ' + props.details.metaData.student.split('|').slice(-1)) : Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.student.split('|').join(' and ')))),
+        degree = props.details.metaData.relatedDegree && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
+    className: "card__tag"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "far fa-fw fa-diploma icon",
+    "aria-hidden": "true"
+  }), ' ', props.details.metaData.relatedDegree.split('|').length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Related degrees: ") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Related degree: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.relatedDegree.split('|').length > 2 ? Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.relatedDegree.split('|').slice(0, -1).join(', ') + ' and ' + props.details.metaData.relatedDegree.split('|').slice(-1)) : Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.relatedDegree.split('|').join(' and ')))),
+        status = props.details.metaData.status && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "far fa-fw fa-hourglass icon",
@@ -1252,37 +1291,7 @@ function Finder__Results__Research(props) {
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Status:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.status, " "), props.details.metaData.status === 'Completed project' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
     className: "far fa-fw fa-check-circle icon",
     "aria-hidden": "true"
-  }) : null),
-        school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-fw fa-university icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "School:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.school.split('|').length > 2 ? props.details.metaData.school.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.school.split('|').slice(-1) : props.details.metaData.school.split('|').join(', and '))),
-        department = props.details.metaData.department && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-fw fa-building icon",
-    "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Department:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.department.split('|').length > 2 ? props.details.metaData.department.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.department.split('|').slice(-1) : props.details.metaData.department.split('|').join(', and '))),
-        centre = props.details.metaData.researchcentre && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-fw fa-vial icon",
-    "aria-hidden": "true"
-  }), ' ', props.details.metaData.researchcentre.split('|').length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Reseearch centres: ") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Reseearch centre: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.researchcentre.split('|').length > 2 ? Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.researchcentre).split('|').slice(0, -1).join(', ') + ', and ' + Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.researchcentre.split('|').slice(-1)) : Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.researchcentre.split('|').join(' and ')))),
-        academics = props.details.metaData.academic && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-fw fa-users icon",
-    "aria-hidden": "true"
-  }), ' ', props.details.metaData.academic.split('|').length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Academics: ") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Academic: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.academic.split('|').length > 2 ? Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.academic.split('|').slice(0, -1).join(', ') + ', and ' + props.details.metaData.academic.split('|').slice(-1)) : Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.academic.split('|').join(' and ')))),
-        degree = props.details.metaData.relateddegree && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "card__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-fw fa- icon",
-    "aria-hidden": "true"
-  }), ' ', props.details.metaData.relateddegree.split('|').length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Related degrees: ") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Related degree: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, props.details.metaData.relateddegree.split('|').length > 2 ? Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.relateddegree).split('|').slice(0, -1).join(', ') + ', and ' + Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.relateddegree.split('|').slice(-1)) : Object(html_react_parser__WEBPACK_IMPORTED_MODULE_3__["default"])(props.details.metaData.relateddegree.split('|').join(' and '))));
+  }) : null);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
     className: "card card--research"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
@@ -1293,7 +1302,7 @@ function Finder__Results__Research(props) {
     className: "card--research__title-link"
   }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     className: "card__description"
-  }, props.details.metaData.c && props.details.metaData.c), school, department, centre, degree, academics, status)));
+  }, props.details.metaData.c && props.details.metaData.c), school, department, centre, degree, academic, student, status)));
 }
 
 Finder__Results__Research.propTypes = {
