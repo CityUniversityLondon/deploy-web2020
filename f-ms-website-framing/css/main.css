@@ -41067,7 +41067,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-width: 0.125rem;
     }
     .navigation--secondary .navigation__level3 {
-        background-color: #ffffff;
+        background-color: #f2f2f2;
         color: #0c0c0e;
     }
     .navigation--secondary .navigation__level3 > li {
@@ -41090,7 +41090,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-color: #ffffff;
+        background-color: #f2f2f2;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
     }
@@ -41163,7 +41163,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-color: #ffffff;
+        background-color: #f2f2f2;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
     }
@@ -41849,6 +41849,9 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-offset: 0.1875rem;
         outline-style: dotted;
         outline-width: 0.125rem;
+    }
+    .navigation--secondary > .navigation--secondary__header.navigation--secondary__header--current > a {
+        background-color: #f2f2f2;
     }
     .navigation--secondary > .navigation--secondary__header.navigation--secondary__header--current > a > span {
         border-bottom: 0.125rem solid #d61726;
