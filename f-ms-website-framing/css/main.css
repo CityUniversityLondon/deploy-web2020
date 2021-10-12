@@ -19145,6 +19145,11 @@ main article {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
     display: grid;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -19158,6 +19163,31 @@ main article {
     main article {
         grid-column-gap: 1.5rem;
     }
+}
+
+@media (min-width: 901px) {
+    main article {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 901px) {
+    main article {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    main article {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+main article .content-wrapper {
+    grid-column: 1/-1;
 }
 
 @media (min-width: 1024px) {
@@ -19182,6 +19212,13 @@ main .navigation--secondary {
 
 main .navigation--secondary + article {
     grid-column: 7 / span 18;
+}
+
+@media (min-width: 1024px) {
+    main .navigation--secondary + article {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 html {
@@ -54355,6 +54392,13 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     list-style-type: none;
 }
 
+.find-us__header,
+.campus-map,
+.campus-map__controls,
+.find-us__content {
+    grid-column: 1/-1;
+}
+
 .find-us__header {
     background: #5d184a;
     text-align: center;
@@ -70560,6 +70604,11 @@ main .standard-content .content {
     }
 }
 
+main > .documentation {
+    grid-column: 1/-1;
+    margin: 0;
+}
+
 @media (max-width: 1023px) {
     main > .documentation {
         margin-left: 1rem;
@@ -70575,35 +70624,8 @@ main .standard-content .content {
     }
 }
 
-@media (min-width: 1024px) {
-    main > .documentation {
-        grid-column: 6 / span 14;
-    }
-    main > .documentation.documentation--fullwidth {
-        grid-column: 1 / span 24;
-    }
-}
-
-@media (min-width: 1024px) {
-    main .navigation--secondary {
-        grid-column: 1 / span 6;
-    }
-    main .navigation--secondary + .documentation {
-        grid-column: 7 / span 18;
-    }
-    main .navigation--secondary + .documentation.documentation--fullwidth {
-        grid-column: 7 / span 18;
-    }
-}
-
-@media (min-width: 1024px) {
-    .article--fullwidth main .navigation--secondary + .documentation {
-        grid-column: 7 / -1;
-    }
-}
-
 .documentation .content {
-    margin-top: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 .slider.doc-slider {
