@@ -55724,7 +55724,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 #CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineAll,
 #CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection {
-    border: 0.25rem solid transparent;
+    border: 1px solid transparent;
     color: #d61726;
     background-color: transparent;
     transition: border 0.4s;
@@ -55733,14 +55733,14 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 @media (hover: hover) {
     #CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineAll:hover,
     #CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection:hover {
-        border: 0.25rem solid #d61726;
+        border: 1px solid #d61726;
     }
 }
 
 #CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineAll:focus, #CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonLevelOptinDeclineAll:active,
 #CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection:focus,
 #CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection:active {
-    border: 0.25rem solid #d61726;
+    border: 1px solid #d61726;
 }
 
 #CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll {
@@ -55757,7 +55757,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 #CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:focus, #CybotCookiebotDialog #CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll:active {
-    border: 2px dotted #d61726;
+    border: 2px dotted #ffffff;
 }
 
 .generic {
