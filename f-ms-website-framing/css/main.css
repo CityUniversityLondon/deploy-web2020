@@ -19142,12 +19142,7 @@ body {
 main article {
     background-color: #ffffff;
     grid-column: 1/-1;
-}
-
-@media (min-width: 1024px) {
-    main article {
-        box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    }
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
 main article .content-wrapper {
@@ -19169,7 +19164,6 @@ main article .content-wrapper {
 }
 
 main article .content {
-    margin: 2rem 0;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     grid-column: 1/-1;
@@ -67998,6 +67992,10 @@ button
     }
 }
 
+.search .content {
+    padding: 0;
+}
+
 .search .banner--search {
     background: linear-gradient(90deg, #b91924 0%, #5d184a 70%, #3e1031 100%);
     color: #ffffff;
@@ -68014,6 +68012,18 @@ button
     margin-top: -2.5rem;
     padding-bottom: 2rem;
     position: relative;
+}
+
+.search .search-form {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 901px) {
+    .search .search-form {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .search .search-form__query {
