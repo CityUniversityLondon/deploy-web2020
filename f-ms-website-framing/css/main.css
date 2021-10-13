@@ -28690,19 +28690,6 @@ form:not([class]) .form__required-note--marker,
     flex-basis: calc(65% - 1rem);
 }
 
-.wrapper--feedback {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
-}
-
-@media (min-width: 901px) {
-    .wrapper--feedback {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
 @media (min-width: 1024px) {
     .wrapper--feedback {
         margin-left: 1rem;
@@ -28738,13 +28725,10 @@ form:not([class]) .form__required-note--marker,
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    box-shadow: none;
+    margin: 0;
     background-color: #ffffff;
     display: block;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
-    margin-left: 0;
-    margin-right: 0;
     padding-bottom: 0.5rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -28781,6 +28765,13 @@ form:not([class]) .form__required-note--marker,
 @media (min-width: 7680px) {
     .feedback {
         letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .feedback {
+        box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+        margin: 1.5rem 0;
     }
 }
 
