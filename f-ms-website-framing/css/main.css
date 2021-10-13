@@ -40885,6 +40885,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         display: block;
         margin-top: 1.5rem;
     }
+    .navigation--secondary .navigation__level2,
+    .navigation--secondary .navigation__level3 {
+        background-color: #f2f2f2;
+    }
     .navigation--secondary .navigation__level3,
     .navigation--secondary .navigation__level4,
     .navigation--secondary .navigation__level5,
@@ -41151,7 +41155,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-width: 0.125rem;
     }
     .navigation--secondary .navigation__level3 {
-        background-color: #f2f2f2;
         color: #0c0c0e;
     }
     .navigation--secondary .navigation__level3 > li {
@@ -41311,7 +41314,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         padding-left: 0.5rem;
     }
     .navigation--secondary .navigation__level4 {
-        background-color: #f2f2f2;
+        background-color: #e5e5e5;
         color: #0c0c0e;
     }
     .navigation--secondary .navigation__level4 > li {
@@ -41331,7 +41334,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-color: #f2f2f2;
+        background-color: #e5e5e5;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
     }
@@ -41384,7 +41387,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 @media (min-width: 1024px) and (hover: hover) {
     .navigation--secondary .navigation__level4 > li > .navigation__controls > a:hover {
-        background-color: #d8d8d8;
+        background-color: #cbcbcb;
         color: #0c0c0e;
     }
 }
@@ -41404,7 +41407,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-color: #f2f2f2;
+        background-color: #e5e5e5;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
     }
@@ -41457,7 +41460,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 @media (min-width: 1024px) and (hover: hover) {
     .navigation--secondary .navigation__level4 > li > .navigation__controls > button:hover {
-        background-color: #d8d8d8;
+        background-color: #cbcbcb;
         color: #0c0c0e;
     }
 }
@@ -41468,7 +41471,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         padding-left: 1rem;
     }
     .navigation--secondary .navigation__level5 {
-        background-color: #e5e5e5;
+        background-color: #d8d8d8;
         color: #0c0c0e;
     }
     .navigation--secondary .navigation__level5 > li > .navigation__controls > a {
@@ -41485,7 +41488,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-color: #e5e5e5;
+        background-color: #d8d8d8;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
     }
@@ -41538,7 +41541,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 @media (min-width: 1024px) and (hover: hover) {
     .navigation--secondary .navigation__level5 > li > .navigation__controls > a:hover {
-        background-color: #cbcbcb;
+        background-color: #bebebe;
         color: #0c0c0e;
     }
 }
@@ -41558,7 +41561,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-color: #e5e5e5;
+        background-color: #d8d8d8;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
     }
@@ -41611,7 +41614,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 @media (min-width: 1024px) and (hover: hover) {
     .navigation--secondary .navigation__level5 > li > .navigation__controls > button:hover {
-        background-color: #cbcbcb;
+        background-color: #bebebe;
         color: #0c0c0e;
     }
 }
@@ -41622,7 +41625,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         padding-left: 1.5rem;
     }
     .navigation--secondary .navigation__level6 {
-        background-color: #d8d8d8;
+        background-color: #cbcbcb;
         color: #0c0c0e;
     }
     .navigation--secondary .navigation__level6 > li > .navigation__controls > a {
@@ -41639,7 +41642,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-color: #d8d8d8;
+        background-color: #cbcbcb;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
     }
@@ -41692,7 +41695,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 @media (min-width: 1024px) and (hover: hover) {
     .navigation--secondary .navigation__level6 > li > .navigation__controls > a:hover {
-        background-color: #bebebe;
+        background-color: #a1a1a1;
         color: #0c0c0e;
     }
 }
@@ -41712,7 +41715,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-color: #d8d8d8;
+        background-color: #cbcbcb;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
     }
@@ -41765,7 +41768,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 @media (min-width: 1024px) and (hover: hover) {
     .navigation--secondary .navigation__level6 > li > .navigation__controls > button:hover {
-        background-color: #bebebe;
+        background-color: #a1a1a1;
         color: #0c0c0e;
     }
 }
@@ -41774,6 +41777,164 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary .navigation__level6 > li > .navigation__controls > a,
     .navigation--secondary .navigation__level6 > li > .navigation__controls > span {
         padding-left: 2rem;
+    }
+    .navigation--secondary .navigation__level7 {
+        background-color: #bebebe;
+        color: #0c0c0e;
+    }
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > a {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #bebebe;
+        color: #0c0c0e;
+        transition: background-color ease-out 0.2s;
+    }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > a:focus, .navigation--secondary .navigation__level7 > li > .navigation__controls > a:active {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > a:focus, .navigation--secondary .navigation__level7 > li > .navigation__controls > a:active {
+        color: #0c0c0e;
+    }
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > a:focus span, .navigation--secondary .navigation__level7 > li > .navigation__controls > a:active span {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > a:hover {
+        background-color: #696969;
+        color: #0c0c0e;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > button {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-color: #bebebe;
+        color: #0c0c0e;
+        transition: background-color ease-out 0.2s;
+    }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > button:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > button:focus, .navigation--secondary .navigation__level7 > li > .navigation__controls > button:active {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > button:focus, .navigation--secondary .navigation__level7 > li > .navigation__controls > button:active {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > button:focus span {
+        color: #0c0c0e;
+    }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > button:hover {
+        background-color: #696969;
+        color: #0c0c0e;
+    }
+}
+
+@media (min-width: 1024px) {
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > a,
+    .navigation--secondary .navigation__level7 > li > .navigation__controls > span {
+        padding-left: 2.5rem;
+    }
+    .navigation--secondary .navigation__level7 > li > .navigation__controls a > span {
+        display: inline;
+        border-bottom: 0.125rem solid #b91924;
     }
     .navigation--secondary > .navigation--secondary__header {
         font-family: "Meta Sans", sans-serif;
@@ -41785,7 +41946,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         font-weight: 600;
         line-height: 1.33333;
         margin-top: 1rem;
-        background-color: #ffffff;
+        background-color: #f2f2f2;
         color: #0c0c0e;
         display: block;
         line-height: 1.625;
@@ -41851,7 +42012,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-style: none;
         outline-width: 0;
         text-decoration: none;
-        background-color: #ffffff;
+        background-color: #f2f2f2;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
     }
@@ -63037,7 +63198,7 @@ main > .news {
     main > .news .news__related-centres,
     main > .news .news__related-events,
     main > .news .news__related-people {
-        grid-column: 2 / 24;
+        grid-column: 1 / 24;
     }
 }
 
@@ -63097,6 +63258,10 @@ main > .news {
     }
 }
 
+.news .content {
+    padding: 0;
+}
+
 .news .banner__standfirst {
     display: grid;
     padding-left: 0;
@@ -63124,6 +63289,20 @@ main > .news {
 @media (min-width: 901px) {
     .news .news__container {
         grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .news .news__container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .news .news__container {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
