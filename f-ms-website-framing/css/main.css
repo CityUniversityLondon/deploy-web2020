@@ -74895,43 +74895,64 @@ main .standard-content .content {
     }
 }
 
-@media (min-width: 1024px) {
-    main .navigation--secondary + .department .department__additional-info,
-    main .navigation--secondary + .department .tabs__panel:not([hidden]) .tabs__panel__content {
+@media (min-width: 768px) {
+    main .wrapper--department__tabs {
         grid-template-columns: repeat(18, 1fr);
         grid-column-gap: 0;
         display: grid;
     }
 }
 
-@media (min-width: 1024px) and (min-width: 768px) {
-    main .navigation--secondary + .department .department__additional-info,
-    main .navigation--secondary + .department .tabs__panel:not([hidden]) .tabs__panel__content {
+@media (min-width: 768px) and (min-width: 768px) {
+    main .wrapper--department__tabs {
         grid-column-gap: 1rem;
     }
 }
 
-@media (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + .department .department__additional-info,
-    main .navigation--secondary + .department .tabs__panel:not([hidden]) .tabs__panel__content {
+@media (min-width: 768px) and (min-width: 901px) {
+    main .wrapper--department__tabs {
         grid-column-gap: 1.5rem;
     }
 }
 
-@media (min-width: 1024px) {
-    main .navigation--secondary + .department .department__additional-info h2,
-    main .navigation--secondary + .department .department__additional-info .department__additional-info__content,
-    main .navigation--secondary + .department .department__additional-info .tabs__panel__heading,
-    main .navigation--secondary + .department .department__additional-info .tabs__panel__body,
-    main .navigation--secondary + .department .tabs__panel:not([hidden]) .tabs__panel__content h2,
-    main .navigation--secondary + .department .tabs__panel:not([hidden]) .tabs__panel__content .department__additional-info__content,
-    main .navigation--secondary + .department .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading,
-    main .navigation--secondary + .department .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
+@media (min-width: 768px) {
+    main .wrapper--department__tabs .department__tabs {
+        grid-column: 1/-1;
+    }
+    main .wrapper--department__tabs .department__tabs .tabs__panel:not([hidden]) .tabs__panel__content {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+    main .wrapper--department__tabs .department__tabs .tabs__panel:not([hidden]) .tabs__panel__content {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 768px) and (min-width: 901px) {
+    main .wrapper--department__tabs .department__tabs .tabs__panel:not([hidden]) .tabs__panel__content {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    main .wrapper--department__tabs .department__tabs .tabs__panel:not([hidden]) .tabs__panel__content h2,
+    main .wrapper--department__tabs .department__tabs .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading,
+    main .wrapper--department__tabs .department__tabs .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
         grid-column: 4 / span 12;
     }
-    main .navigation--secondary + .department .wrapper--department__tabs,
+}
+
+@media (min-width: 1024px) {
+    main .navigation--secondary + .department .department__additional-info .department__additional-info__content {
+        grid-column: 4 / span 12;
+    }
     main .navigation--secondary + .department .department__whats-happening,
-    main .navigation--secondary + .department .department__contact-us {
+    main .navigation--secondary + .department .department__contact-us,
+    main .navigation--secondary + .department .department__multimedia {
         grid-template-columns: repeat(18, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -74939,25 +74960,29 @@ main .standard-content .content {
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
-    main .navigation--secondary + .department .wrapper--department__tabs,
     main .navigation--secondary + .department .department__whats-happening,
-    main .navigation--secondary + .department .department__contact-us {
+    main .navigation--secondary + .department .department__contact-us,
+    main .navigation--secondary + .department .department__multimedia {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + .department .wrapper--department__tabs,
     main .navigation--secondary + .department .department__whats-happening,
-    main .navigation--secondary + .department .department__contact-us {
+    main .navigation--secondary + .department .department__contact-us,
+    main .navigation--secondary + .department .department__multimedia {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
+    main .navigation--secondary + .department .department__multimedia .swiper-viewport {
+        grid-column: 1/-1;
+    }
     main .navigation--secondary + .department .department__tabs,
     main .navigation--secondary + .department .department__whats-happening h2,
-    main .navigation--secondary + .department .department__whats-happening .related-content {
+    main .navigation--secondary + .department .department__whats-happening .related-content,
+    main .navigation--secondary + .department .department__multimedia .department__heading--underlined {
         grid-column: 2/-2;
     }
     main .navigation--secondary + .department .department__contact-us__contacts {
@@ -75044,8 +75069,13 @@ main .standard-content .content {
     }
 }
 
-.department__additional-info h2 {
+.department__additional-info h2,
+.department__tabs h2 {
     text-align: center;
+}
+
+.promo-area__wrap {
+    grid-column: 1/-1;
 }
 
 .department__usp {
