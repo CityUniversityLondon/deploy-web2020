@@ -74045,6 +74045,10 @@ main .standard-content .content {
     color: #d61726;
 }
 
+.school__content__whats-happening {
+    padding-bottom: 1rem;
+}
+
 .shs .banner__standfirst h1 {
     color: #11334c;
 }
@@ -74924,6 +74928,43 @@ main .standard-content .content {
     main .navigation--secondary + .department .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading,
     main .navigation--secondary + .department .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
         grid-column: 4 / span 12;
+    }
+    main .navigation--secondary + .department .wrapper--department__tabs,
+    main .navigation--secondary + .department .department__whats-happening,
+    main .navigation--secondary + .department .department__contact-us {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main .navigation--secondary + .department .wrapper--department__tabs,
+    main .navigation--secondary + .department .department__whats-happening,
+    main .navigation--secondary + .department .department__contact-us {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .navigation--secondary + .department .wrapper--department__tabs,
+    main .navigation--secondary + .department .department__whats-happening,
+    main .navigation--secondary + .department .department__contact-us {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .navigation--secondary + .department .department__tabs,
+    main .navigation--secondary + .department .department__whats-happening h2,
+    main .navigation--secondary + .department .department__whats-happening .related-content {
+        grid-column: 2/-2;
+    }
+    main .navigation--secondary + .department .department__contact-us__contacts {
+        grid-column: 2/10;
+    }
+    main .navigation--secondary + .department .department__contact-us__footer__find-us {
+        grid-column: 10/-2;
     }
 }
 
