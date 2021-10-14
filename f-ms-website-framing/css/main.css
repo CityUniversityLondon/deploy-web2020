@@ -55614,7 +55614,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     overflow: hidden;
     position: absolute;
     width: 100%;
-    z-index: -1;
+    z-index: 0;
 }
 
 .promo-area__wrap .promo-area .promo-area__image figure {
