@@ -58609,7 +58609,6 @@ div.widget-123_test_ {
 
 @media (max-width: 1023px) {
     main > .event .wrapper--event__content,
-    main > .event .wrapper--event__contact,
     main > .event .event__formassembly__form {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -58619,7 +58618,6 @@ div.widget-123_test_ {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     main > .event .wrapper--event__content,
-    main > .event .wrapper--event__contact,
     main > .event .event__formassembly__form {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -68020,15 +68018,34 @@ button
     position: relative;
 }
 
-.search .search-form {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+@media (min-width: 1024px) {
+    .search .search-form {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1024px) and (min-width: 901px) {
+    .search .search-form {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
     .search .search-form {
         padding-left: 2rem;
         padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1441px) {
+    .search .search-form {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
