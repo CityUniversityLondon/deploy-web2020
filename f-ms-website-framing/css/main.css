@@ -60865,10 +60865,6 @@ main .home .home__whats-happening .related-content {
     }
 }
 
-.landing {
-    padding-bottom: 2rem;
-}
-
 .landing .banner .banner__image {
     position: relative;
     overflow: hidden;
@@ -60938,6 +60934,12 @@ main .home .home__whats-happening .related-content {
     .landing .banner .banner__label {
         letter-spacing: -0.017em;
     }
+}
+
+.landing .landing__pathway .pathway__heading,
+.landing .landing__pathway .pathway__cards {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 @media (min-width: 901px) {
@@ -61033,7 +61035,8 @@ main .home .home__whats-happening .related-content {
     main > .landing--informational .landing__promotional__content,
     main > .landing--informational .landing__promotional__cta,
     main > .landing--informational .landing__pathway__content,
-    main > .landing--informational .landing__profiles__flexible {
+    main > .landing--informational .landing__profiles__flexible,
+    main > .landing--informational .landing__related__content {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -61046,7 +61049,8 @@ main .home .home__whats-happening .related-content {
     main > .landing--informational .landing__promotional__content,
     main > .landing--informational .landing__promotional__cta,
     main > .landing--informational .landing__pathway__content,
-    main > .landing--informational .landing__profiles__flexible {
+    main > .landing--informational .landing__profiles__flexible,
+    main > .landing--informational .landing__related__content {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
@@ -61057,26 +61061,6 @@ main .home .home__whats-happening .related-content {
         padding-left: 1rem;
         padding-right: 1rem;
     }
-    main > .landing--informational .landing__pathway .pathway .pathway__heading,
-    main > .landing--informational .landing__pathway .pathway .pathway__cards {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    main > .landing--informational .landing__related {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    main > .landing--informational .landing__related {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) {
     main > .landing--informational .landing__related .related-content li + li {
         margin-top: 1.5rem;
     }
@@ -61123,10 +61107,7 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 1024px) {
-    main > .landing--informational .landing__standfirst,
-    main > .landing--informational .landing__promotional,
-    main > .landing--informational .landing__related,
-    main > .landing--informational .landing__pathway {
+    main {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -61134,24 +61115,24 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
-    main > .landing--informational .landing__standfirst,
-    main > .landing--informational .landing__promotional,
-    main > .landing--informational .landing__related,
-    main > .landing--informational .landing__pathway {
+    main {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main > .landing--informational .landing__standfirst,
-    main > .landing--informational .landing__promotional,
-    main > .landing--informational .landing__related,
-    main > .landing--informational .landing__pathway {
+    main {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
+    main > .landing--informational .landing__standfirst,
+    main > .landing--informational .landing__promotional,
+    main > .landing--informational .landing__related,
+    main > .landing--informational .landing__pathway .pathway {
+        grid-column: 1/-1;
+    }
     main > .landing--informational .landing__standfirst > .standfirst,
     main > .landing--informational .landing__promotional__flexible,
     main > .landing--informational .landing__promotional__heading,
@@ -61171,26 +61152,11 @@ main .home .home__whats-happening .related-content {
     main > .landing--informational .landing__promotional__cta .cta-block li:not(:last-of-type) {
         margin-right: 1.5rem;
     }
-    main > .landing--informational .landing__pathway .pathway {
+    main > .landing--informational .landing__related .landing__related__latest {
         grid-column: span 24;
     }
-    main > .landing--informational .landing__related .landing__related__content,
-    main > .landing--informational .landing__related .landing__related__latest,
     main > .landing--informational .landing__related .wrapper--landing__contact {
-        grid-column: span 24;
-    }
-    main > .landing--informational .landing__related .landing__related__content,
-    main > .landing--informational .landing__related .landing__related__latest {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 901px) {
-    main > .landing--informational .landing__related .landing__related__content,
-    main > .landing--informational .landing__related .landing__related__latest {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        grid-column: 1/-1;
     }
 }
 
@@ -61240,16 +61206,11 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 1024px) {
-    main .navigation--secondary + .landing--informational .landing__related .landing__related__latest,
-    main .navigation--secondary + .landing--informational .landing__related .landing__related__content,
-    main .navigation--secondary + .landing--informational .landing__related .wrapper--landing__contact {
-        grid-column: span 18;
-    }
-    main .navigation--secondary + .landing--informational .landing__profiles__flexible {
-        grid-column: 4/-4;
+    main .navigation--secondary + .landing--informational .landing__related__content {
+        grid-column: 2/-2;
     }
     main .navigation--secondary + .landing--informational .landing__pathway .pathway {
-        grid-column: span 18;
+        grid-column: 2/-2;
     }
     main .navigation--secondary + .landing--informational .landing__standfirst > .standfirst,
     main .navigation--secondary + .landing--informational .landing__promotional__flexible,
@@ -61361,7 +61322,8 @@ main .home .home__whats-happening .related-content {
 @media (min-width: 1024px) {
     main > .landing--functional .wrapper--landing--functional__content,
     main > .landing--functional .landing--functional__video,
-    main > .landing--functional .landing__contact {
+    main > .landing--functional .landing__contact,
+    main > .landing--functional .wrapper--landing--functional--pathway {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -61371,7 +61333,8 @@ main .home .home__whats-happening .related-content {
 @media (min-width: 1024px) and (min-width: 768px) {
     main > .landing--functional .wrapper--landing--functional__content,
     main > .landing--functional .landing--functional__video,
-    main > .landing--functional .landing__contact {
+    main > .landing--functional .landing__contact,
+    main > .landing--functional .wrapper--landing--functional--pathway {
         grid-column-gap: 1rem;
     }
 }
@@ -61379,7 +61342,8 @@ main .home .home__whats-happening .related-content {
 @media (min-width: 1024px) and (min-width: 901px) {
     main > .landing--functional .wrapper--landing--functional__content,
     main > .landing--functional .landing--functional__video,
-    main > .landing--functional .landing__contact {
+    main > .landing--functional .landing__contact,
+    main > .landing--functional .wrapper--landing--functional--pathway {
         grid-column-gap: 1.5rem;
     }
 }
@@ -61387,6 +61351,9 @@ main .home .home__whats-happening .related-content {
 @media (min-width: 1024px) {
     main > .landing--functional .landing--functional__content {
         grid-column: 6 / span 14;
+    }
+    main > .landing--functional .pathway {
+        grid-column: 2/-2;
     }
     main > .landing--functional .wrapper--finder--mini,
     main > .landing--functional .landing--functional__finder__links__content {
