@@ -65618,40 +65618,18 @@ main > .news {
 
 @media (max-width: 1023px) {
     main > .profile .standfirst,
-    main > .profile .profile--global__about,
     main > .profile .profile--global__date {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
     }
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
     main > .profile .standfirst,
-    main > .profile .profile--global__about,
     main > .profile .profile--global__date {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    main > .profile .standfirst,
-    main > .profile .profile--global__about,
-    main > .profile .profile--global__date {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    main > .profile .standfirst,
-    main > .profile .profile--global__about,
-    main > .profile .profile--global__date {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -65871,44 +65849,8 @@ main > .news {
     }
 }
 
-@media (max-width: 1023px) {
-    .profile--global__about-heading {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .profile--global__about-heading {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .profile--global__about-heading {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .profile--global__about-heading {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (min-width: 1024px) {
-    .profile--global__about-heading {
-        grid-column: 4 / span 12;
-    }
-}
-
 .profile {
+    padding-bottom: 2rem;
     /* --- GLOBAL PROFILE STYLES --- */
     /* --- END GLOBAL PROFILE STYLES --- */
     /* --- ACADEMIC STYLES --- */
@@ -65923,6 +65865,72 @@ main > .news {
 
 .profile .standfirst {
     margin-top: 1rem;
+}
+
+.profile .profile--global__about {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 901px) {
+    .profile .profile--global__about {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .profile .profile--global__about {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    .profile .profile--global__about {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1023px) {
+    .profile .profile--global__about-heading {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .profile .profile--global__about-heading {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .profile .profile--global__about-heading {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1441px) {
+    .profile .profile--global__about-heading {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .profile .profile--global__about-heading {
+        grid-column: 4 / span 12;
+    }
 }
 
 .profile .wrapper--profile__contact {
@@ -66915,7 +66923,38 @@ button
 }
 
 .profile .tabs--profile {
-    grid-column: 3 / -3;
+    grid-column: 3/-3;
+}
+
+@media (max-width: 1023px) {
+    .profile .tabs--profile {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .profile .tabs--profile {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .profile .tabs--profile {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1441px) {
+    .profile .tabs--profile {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .profile :not(.tabs) > .tabs__links {
@@ -67306,27 +67345,6 @@ button
     flex-direction: row;
 }
 
-@media (max-width: 1279px) {
-    .profile--staff,
-    .profile--academic {
-        flex-direction: column;
-    }
-}
-
-@media (min-width: 768px) {
-    .profile--staff,
-    .profile--academic {
-        margin-top: -4rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .profile--staff,
-    .profile--academic {
-        grid-column: 2 / span 16;
-    }
-}
-
 @media (max-width: 1023px) {
     .profile--staff,
     .profile--academic {
@@ -67359,6 +67377,27 @@ button
     .profile--academic {
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (max-width: 1279px) {
+    .profile--staff,
+    .profile--academic {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile--staff,
+    .profile--academic {
+        margin-top: -4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .profile--staff,
+    .profile--academic {
+        grid-column: 2 / span 16;
     }
 }
 
