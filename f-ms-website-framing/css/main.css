@@ -63389,20 +63389,6 @@ main > .news {
     }
 }
 
-@media (max-width: 1023px) {
-    .news .news__container {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .news .news__container {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
 .news .news__summary {
     padding-bottom: 1.5rem;
 }
@@ -63626,16 +63612,18 @@ main > .news {
 }
 
 .news .news__related-news {
-    background: #f2f2f2;
+    background: #ffffff;
 }
 
-.news .news__related-news .news__related-news__container {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
+@media (max-width: 1023px) {
+    .news .news__related-news .news__related-news__container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
 }
 
-@media (min-width: 901px) {
+@media (max-width: 1023px) and (min-width: 901px) {
     .news .news__related-news .news__related-news__container {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -63787,6 +63775,21 @@ main > .news {
 
 .news .news__contact .card--contact .card__details .card__tag .icon {
     color: #ffffff;
+}
+
+@media (min-width: 1024px) {
+    .js .news__related-news .news__related-news__container .slider__controls {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .js .news__related-news .news__related-news__container .slider__controls {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .course--pgt__our-students_heading,
