@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([6,"vendor-dependencies","core","react","axios","vendor-direct"]);
+/******/ 	deferredModules.push([6,"vendor-dependencies","core","react","vendor-direct","axios"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const howToApplyCTAs = document.querySelectorAll('.how-to-apply--pgt--js');
     howToApplyCTAs && Array.from(howToApplyCTAs).forEach(howToApply => {
       Object(_patterns_how_to_apply_pgt_data__WEBPACK_IMPORTED_MODULE_3__["howToApplyConfig"])(howToApply.dataset.config).then(config => {
-        Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patterns_how_to_apply_how_to_apply_pgt__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patterns_how_to_apply_how_to_apply_pgt__WEBPACK_IMPORTED_MODULE_2__["default"], {
           config: edn_to_js__WEBPACK_IMPORTED_MODULE_4___default()(config),
           element: howToApply
         }), howToApply);
@@ -200,6 +200,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/***/ }),
+
+/***/ "./src/patterns/how-to-apply/buttons/apply.js":
+/*!****************************************************!*\
+  !*** ./src/patterns/how-to-apply/buttons/apply.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ApplyLinks; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+
+function ApplyLinks(props) {
+  if (props.data) {
+    return props.data.map((d, index) => {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        key: index,
+        className: "apply"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: d['link']
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, d.text), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "far fa-external-link",
+        "aria-label": "(external link)"
+      })));
+    });
+  }
+}
 
 /***/ }),
 
@@ -212,22 +245,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.min.js");
-/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.reduce.js */ "./node_modules/core-js/modules/es.array.reduce.js");
+/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var body_scroll_lock__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! body-scroll-lock */ "./node_modules/body-scroll-lock/lib/bodyScrollLock.esm.js");
+/* harmony import */ var _buttons_apply__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./buttons/apply */ "./src/patterns/how-to-apply/buttons/apply.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
 
+
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 /**
  * How to apply for postgraduate taught degrees
@@ -242,355 +284,725 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
 /**
- * Launch the how to apply modal.
+ * Launch the How to apply modal.
  *
  * @param {object} props The JSON configuration file for the modal.
  * @return {object} The React component to render.
  */
 
 function HowToApply(props) {
-  const entryPoints = distilConfiguration(props.config),
-        initialPreferences = {
-    qualification: Object.keys(entryPoints).length === 1 ? Object.keys(entryPoints[0])[0] : null,
-    subject: null,
-    entry: null,
-    location: null
-  },
-        [modalVisible, setModalVisible] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(false),
-        [preferences, setPreferences] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(initialPreferences),
-        [question, setQuestion] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(nextQuestion(preferences, entryPoints)),
-        [multipleSubjects, setMultipleSubjects] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
-        [multipleEntryPoints, setMultipleEntryPoints] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
-        [multipleLocations, setMultipleLocations] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(true),
-        qualificationQuestion = question === 'qualification' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the qualification you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "how-to-apply--pgt--js__options"
-  }, entryPoints.map((qualification, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    key: 'qualification' + i
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    onClick: () => {
-      const newPreferences = preferences;
-      newPreferences.qualification = Object.keys(qualification)[0];
-      const subjectOptions = qualification[newPreferences.qualification];
-
-      if (subjectOptions.length === 1) {
-        newPreferences.subject = 'UNIQUE';
-        setMultipleSubjects(false);
-      } else {
-        newPreferences.subject = null;
-        setMultipleSubjects(true);
-      }
-
-      setPreferences(newPreferences);
-      setQuestion(nextQuestion(newPreferences, entryPoints));
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(qualification)[0])))))),
-        subjectQuestion = question === 'subject' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the route you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "how-to-apply--pgt--js__options"
-  }, nextLevel(entryPoints, preferences.qualification).map((subject, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    key: 'subject' + i
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    onClick: () => {
-      const newPreferences = preferences;
-      newPreferences.subject = Object.keys(subject)[0];
-      const entryOptions = subject[newPreferences.subject];
-
-      if (entryOptions.length === 1) {
-        newPreferences.entry = Object.keys(entryOptions[0])[0];
-        setMultipleEntryPoints(false);
-      } else {
-        newPreferences.entry = null;
-        setMultipleEntryPoints(true);
-      }
-
-      setPreferences(newPreferences);
-      setQuestion(nextQuestion(newPreferences, entryPoints));
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(subject)[0])))))),
-        entryQuestion = question === 'entry' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose the entry point you wish to apply for:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "how-to-apply--pgt--js__options"
-  }, nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject).map((entryPoint, i) => {
-    const formattedDate = new Date(Object.keys(entryPoint)[0]);
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-      key: 'entry-point' + i
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-      onClick: () => {
-        const newPreferences = preferences;
-        newPreferences.entry = Object.keys(entryPoint)[0];
-        const locationOptions = entryPoint[newPreferences.entry];
-
-        if (locationOptions.length === 1) {
-          newPreferences.location = Object.keys(locationOptions[0])[0];
-          setMultipleLocations(false);
-        } else {
-          newPreferences.location = null;
-          setMultipleLocations(true);
-        }
-
-        setPreferences(newPreferences);
-        setQuestion(nextQuestion(newPreferences, entryPoints));
-      }
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, months[formattedDate.getUTCMonth()], ' ', formattedDate.getUTCFullYear())));
-  }))),
-        locationQuestion = question === 'location' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Choose where you wish to study:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "how-to-apply--pgt--js__options"
-  }, nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry).map((location, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    key: 'location' + i
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    onClick: () => {
-      const newPreferences = preferences;
-      newPreferences.entry = Object.keys(location)[0];
-      setPreferences(newPreferences);
-      setQuestion(nextQuestion(newPreferences, entryPoints));
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(location)[0])))))),
-        applyQuestion = question === 'apply' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Apply online now:")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
-    className: "how-to-apply--pgt--js__options"
-  }, nextLevel(nextLevel(nextLevel(nextLevel(entryPoints, preferences.qualification), preferences.subject), preferences.entry), preferences.location).map((method, i) => react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    key: 'method' + i
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    href: method[Object.keys(method)[0]]
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, Object.keys(method)[0], ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "far fa-external-link",
-    "aria-label": "(external link)"
-  }))))))),
-        qualificationsProgress = Object.keys(entryPoints).length > 1 ? question === 'qualification' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__current"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Qualification"))) : preferences.qualification ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper",
-    onClick: () => {
-      const newPreferences = preferences;
-      newPreferences.qualification = null;
-      newPreferences.subject = null;
-      newPreferences.entry = null;
-      newPreferences.location = null;
-      setPreferences(newPreferences);
-      setQuestion(nextQuestion(newPreferences, entryPoints));
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-check icon",
-    "aria-label": "Back to choose qualification"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, preferences.qualification))) : null : null,
-        subjectsProgress = multipleSubjects ? question === 'subject' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__current"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Route"))) : preferences.subject ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper",
-    onClick: () => {
-      const newPreferences = preferences;
-      newPreferences.subject = null;
-      newPreferences.entry = null;
-      newPreferences.location = null;
-      setPreferences(newPreferences);
-      setQuestion(nextQuestion(newPreferences, entryPoints));
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-check icon",
-    "aria-label": "Back to choose study route"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, preferences.subject))) : null : null,
-        entryPointsProgress = multipleEntryPoints ? question === 'entry' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__current"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Entry point"))) : preferences.entry ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper",
-    onClick: () => {
-      const newPreferences = preferences;
-      newPreferences.entry = null;
-      newPreferences.location = null;
-      setPreferences(newPreferences);
-      setQuestion(nextQuestion(newPreferences, entryPoints));
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-check icon",
-    "aria-label": "Back to choose entry point"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, months[new Date(preferences.entry).getUTCMonth()], ' ', new Date(preferences.entry).getUTCFullYear()))) : null : null,
-        locationsProgress = multipleLocations ? question === 'location' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__current"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Location"))) : preferences.location ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__previous"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper",
-    onClick: () => {
-      const newPreferences = preferences;
-      newPreferences.location = null;
-      setPreferences(newPreferences);
-      setQuestion(nextQuestion(newPreferences, entryPoints));
-    }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-check icon",
-    "aria-label": "Back to choose location"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, preferences.location))) : null : null,
-        nextStep = question !== 'apply' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  let entryPoints = props.config;
+  const [modalVisible, setModalVisible] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+        [firstStep, setFirstStep] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+        // Controls 'Start again' visibility
+  [progressQualification, setProgressQualification] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+        [progressRoute, setProgressRoute] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+        [progressDate, setProgressDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+        [progressMethod, setProgressMethod] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+        [furtherStepsPendingIndicator, setFurtherStepsPendingIndicator] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+        [windowPrompt, setWindowPrompt] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])('Choose the qualification you wish to apply for:'),
+        promptQualification = 'Choose the qualification you wish to apply for:',
+        promptRoute = 'Choose the route you wish to apply for:',
+        promptEntryPoint = 'Choose the entry point you wish to apply for:',
+        promptMethod = 'Apply online now:',
+        furtherStepsPending = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__next"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-circle icon",
     "aria-hidden": "true"
-  })))) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__current how-to-apply--pgt--js__modal__progress__last"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Method of study"))),
-        qualificationsProgressMobile = Object.keys(entryPoints).length > 1 && (question === 'qualification' || preferences.qualification) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: question === 'qualification' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: question === 'qualification' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'qualification' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Qualification"))) : null,
-        subjectsProgressMobile = multipleSubjects && (question === 'subject' || preferences.subject) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: question === 'subject' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: question === 'subject' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'subject' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Subject"))) : null,
-        entryPointsProgressMobile = multipleEntryPoints && (question === 'entry' || preferences.entry) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: question === 'entry' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: question === 'entry' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'entry' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Entry point"))) : null,
-        locationsProgressMobile = multipleLocations && (question === 'location' || preferences.location) ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: question === 'location' ? 'how-to-apply--pgt--js__modal__progress__current' : 'how-to-apply--pgt--js__modal__progress__previous'
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: question === 'location' ? 'fas fa-circle icon' : 'fas fa-check icon'
-  })), question === 'location' && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Location"))) : null,
-        nextStepMobile = question !== 'apply' ? react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__next"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
-  })))) : react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
-    className: "how-to-apply--pgt--js__modal__progress__current how-to-apply--pgt--js__modal__progress__last"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__circle"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-circle icon"
-  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "how-to-apply--pgt--js__modal__progress__text"
-  }, "Method of study"))),
-        alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    className: "how-to-apply--pgt--js__modal__alternative"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    href: props.element.dataset.otherurl
-  }, "Apply to start in ", props.element.dataset.otheryear, ".")),
-        reset = JSON.stringify(preferences) !== JSON.stringify(initialPreferences) && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__reset"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
-    onClick: () => {
-      setPreferences(initialPreferences);
-      setQuestion(nextQuestion(initialPreferences, entryPoints));
+  }))));
+  let [selectionButtonQualification, setSelectionButtonQualification] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      [selectionLinkQualification, setSelectionLinkQualification] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      [selectionButtonRoute, setSelectionButtonRoute] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      [selectionLinkRoute, setSelectionLinkRoute] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      [selectionButtonDate, setSelectionButtonDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      [selectionLinkDate, setSelectionLinkDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      [selectionHeadingLocationOne, setSelectionHeadingLocationOne] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      [selectionButtonLocationOneDate, setSelectionButtonLocationOneDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      [selectionLinkLocationOneDate, setSelectionLinkLocationOneDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      [selectionHeadingLocationTwo, setSelectionHeadingLocationTwo] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      [selectionButtonLocationTwoDate, setSelectionButtonLocationTwoDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      [selectionLinkLocationTwoDate, setSelectionLinkLocationTwoDate] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(false),
+      [selectionLinkMethod, setSelectionLinkMethod] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])(),
+      selectedQualificationData,
+      selectedQualificationValue,
+      selectedRouteData,
+      selectedRouteValue,
+      selectedDateData,
+      selectedDateValue;
+  /**
+   * Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
+   */
+
+  function clearSelectionOptions() {
+    setSelectionButtonQualification();
+    setSelectionLinkQualification();
+    setSelectionButtonRoute();
+    setSelectionLinkRoute();
+    setSelectionHeadingLocationOne();
+    setSelectionButtonLocationOneDate();
+    setSelectionLinkLocationOneDate();
+    setSelectionHeadingLocationTwo();
+    setSelectionButtonLocationTwoDate();
+    setSelectionLinkLocationTwoDate();
+    setSelectionButtonDate();
+    setSelectionLinkDate();
+    setSelectionLinkMethod();
+  }
+  /**
+   * Convert raw date values to full month/year for rendering to buttons.
+   *
+   * @param {string} sourceDate The unformatted date string.
+   */
+
+
+  function formatDate(sourceDate) {
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    let formattedDate = new Date(sourceDate);
+    return "".concat(months[formattedDate.getUTCMonth()], " ").concat(formattedDate.getUTCFullYear());
+  }
+  /**
+   * Completed programme, route and dates filter. Analyse methods data.
+   *
+   * @param {object} data The filtered data record data, where methods are at the top level.
+   */
+
+
+  function filterMethodsData(methods) {
+    // Methods of study pre-selection prompt text
+    setWindowPrompt(promptMethod); // Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
+
+    clearSelectionOptions(); // Variables scoped to this function
+
+    let qualNav, routeNav, dateNav, methodNav;
+    selectedQualificationData ? qualNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      className: "how-to-apply--pgt--js__modal__progress__previous"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+      className: "how-to-apply--pgt--js__modal__progress__wrapper",
+      onClick: () => {
+        // Load qualification select; clear route, date and method from progress navigation
+        filterQualificationData(entryPoints);
+        setProgressRoute();
+        setProgressDate();
+        setProgressMethod();
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__circle"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "fas fa-check icon",
+      "aria-label": "Back to choose qualification"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__text"
+    }, "Qualification"))) : qualNav = null;
+    setProgressQualification(qualNav);
+    selectedRouteData ? routeNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      className: "how-to-apply--pgt--js__modal__progress__previous"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+      className: "how-to-apply--pgt--js__modal__progress__wrapper",
+      onClick: () => {
+        // Load route select; clear date and method from progress navigation
+        setProgressDate();
+        setProgressMethod();
+
+        if (selectedQualificationData) {
+          filterRouteData(selectedQualificationData[0]['options']);
+        } else {
+          filterQualificationData(entryPoints);
+        }
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__circle"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "fas fa-check icon",
+      "aria-label": "Back to choose route"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__text"
+    }, "Route"))) : routeNav = null;
+    setProgressRoute(routeNav);
+    selectedDateData ? dateNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      className: "how-to-apply--pgt--js__modal__progress__previous"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+      className: "how-to-apply--pgt--js__modal__progress__wrapper",
+      onClick: () => {
+        // Load date select; clear method from progress navigation
+        setProgressMethod();
+
+        if (selectedRouteData) {
+          filterDatesData(selectedRouteData[0]['options']);
+        } else if (selectedQualificationData) {
+          filterRouteData(selectedQualificationData[0]['options']);
+        } else {
+          filterQualificationData(entryPoints);
+        }
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__circle"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "fas fa-check icon",
+      "aria-label": "Back to choose route"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__text"
+    }, "Entry point"))) : dateNav = null;
+    setProgressDate(dateNav); // Method loads apply links and, if present, will always be the last step, therefore progress icon does nothing on click
+
+    methodNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      className: "how-to-apply--pgt--js__modal__progress__current"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__wrapper"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__circle"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "fas fa-circle icon"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__text"
+    }, "Method of study")));
+    setProgressMethod(methodNav); // Final modal step; remove further steps pending indicator
+
+    setFurtherStepsPendingIndicator();
+    let methodLinks = [];
+    let linkOptions;
+    methods.map(m => {
+      const methodLink = {
+        text: m.header,
+        link: m.options.apply
+      };
+      methodLinks.push(methodLink);
+      linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        data: methodLinks
+      });
+      setSelectionLinkMethod(linkOptions);
+    });
+  }
+
+  function filterLocation(data, location, heading) {
+    let uniqueLocationDataArray = [];
+    data.map(d => {
+      let uniqueLocationData = _objectSpread(_objectSpread({}, d), {}, {
+        options: d.options.filter(e => e.header === location)
+      });
+
+      uniqueLocationDataArray.push(uniqueLocationData);
+    }); // Gather location information for header
+
+    let locations = [];
+    uniqueLocationDataArray.map(fd => {
+      fd['options'][0] ? locations.push(fd['options'][0]['header']) : null;
+    }); // Remove duplicate locations
+
+    locations = locations.filter((v, i, a) => a.indexOf(v) === i); // Create heading
+
+    let headingVal = locations.map(l => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
+      key: l
+    }, l)); // Create buttons
+
+    let buttonVal = uniqueLocationDataArray.map(fd => {
+      if (fd['options'].length > 0) {
+        if (fd['options'][0]['options'].length > 1) {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+            key: fd
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+            "data-date-src": fd['header'],
+            onClick: e => {
+              let dateSrc = e.target.getAttribute('data-date-src');
+              selectedDateValue = formatDate(dateSrc);
+              selectedDateData = data.filter(fd => fd.header === dateSrc);
+              filterMethodsData(selectedDateData[0]['options'][0]['options']);
+              setFirstStep(false);
+            }
+          }, formatDate(fd['header']))));
+        } else {
+          const dateLink = {
+            text: formatDate(fd.header),
+            link: fd['options'][0]['options'][0]['options']['apply']
+          };
+          let locationDateLinks = [];
+          locationDateLinks.push(dateLink);
+          locationDateLinks = Array.from(new Set(locationDateLinks.map(a => a.text))).map(text => {
+            return locationDateLinks.find(a => a.text === text);
+          });
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_5__["default"], {
+            data: locationDateLinks
+          });
+        }
+      }
+    });
+    uniqueLocationDataArray.map(() => {
+      if (heading === '#location-1') {
+        setSelectionHeadingLocationOne(headingVal);
+        setSelectionButtonLocationOneDate(buttonVal);
+      } else if (heading === '#location-2') {
+        setSelectionHeadingLocationTwo(headingVal);
+        setSelectionButtonLocationTwoDate(buttonVal);
+      }
+    });
+  }
+  /**
+   * Completed programme and route filter. Analyse dates data.
+   *
+   * @param {object} data The filtered data record data, where dates are at the top level.
+   */
+
+
+  function filterDatesData(data) {
+    // Date pre-selection prompt text
+    setWindowPrompt(promptEntryPoint); // Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
+
+    clearSelectionOptions(); // Empty relevant state variables to remove superfluous progress navigation rendering
+
+    setProgressMethod(); // Clear data stored from previous selections
+
+    selectedDateData = null; // Variables scoped to this function
+
+    let buttonOptions,
+        linkOptions,
+        dateButtons = [],
+        dateLinks = [],
+        locationOptions = [],
+        locationsAll = [],
+        qualNav,
+        routeNav,
+        dateNav,
+        dateLink; // Progress indicator; display selected qualification and route values
+
+    selectedQualificationData ? qualNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      className: "how-to-apply--pgt--js__modal__progress__previous"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+      className: "how-to-apply--pgt--js__modal__progress__wrapper",
+      onClick: () => {
+        filterQualificationData(entryPoints);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__circle"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "fas fa-check icon",
+      "aria-label": "Back to choose qualification"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__text"
+    }, "Qualification"))) : qualNav = null;
+    setProgressQualification(qualNav);
+    selectedRouteData ? routeNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      className: "how-to-apply--pgt--js__modal__progress__previous"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+      className: "how-to-apply--pgt--js__modal__progress__wrapper",
+      onClick: () => {
+        filterRouteData(selectedQualificationData[0]['options']);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__circle"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "fas fa-check icon",
+      "aria-label": "Back to choose route"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__text"
+    }, "Route"))) : routeNav = null;
+    setProgressRoute(routeNav); // Method loads apply links and, if present, will always be the last step, therefore progress icon does nothing on click
+
+    if (selectedDateData) {
+      dateNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+        className: "how-to-apply--pgt--js__modal__progress__current"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+        className: "how-to-apply--pgt--js__modal__progress__wrapper"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+        className: "how-to-apply--pgt--js__modal__progress__circle"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+        className: "fas fa-circle icon"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+        className: "how-to-apply--pgt--js__modal__progress__text"
+      }, "Entry point")));
+    } else {
+      dateNav = null;
     }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-redo"
-  }), ' ', react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Start again")));
-  const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])({});
+
+    setProgressDate(dateNav);
+    data.map(d => {
+      let locations = d['options'];
+      locations.map(l => {
+        let methods = l['options'];
+        methods.map(() => {
+          // Multiple dates; print buttons
+          if (data.length > 1 || data[0]['options'].length > 1) {
+            // Date selection required: set progress indicator to route and remove methods
+            selectedDateValue = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+              className: "how-to-apply--pgt--js__modal__progress__current"
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+              className: "how-to-apply--pgt--js__modal__progress__wrapper"
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+              className: "how-to-apply--pgt--js__modal__progress__circle"
+            }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+              className: "fas fa-circle icon"
+            })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+              className: "how-to-apply--pgt--js__modal__progress__text"
+            }, "Entry point")));
+            setProgressDate(selectedDateValue);
+            setProgressMethod(); // Calculate number of locations
+
+            locations.map(lo => {
+              locationOptions.push(lo.header);
+            });
+            locationOptions = locationOptions.reduce(function (a, i) {
+              a.indexOf(i) === -1 ? a.push(i) : null;
+              return a;
+            }, []); // Multiple locations, multiple dates => create array of objects per location
+
+            if (locationOptions.length > 1) {
+              locationOptions.map(lo => {
+                let filteredData = data.filter(fd => fd['options'][0]['header'] === lo);
+                locationsAll.push(filteredData);
+              });
+              let uniqueLocations = [];
+              data.map(d => {
+                let dates = d['options'];
+                dates.map(date => {
+                  uniqueLocations.push(date.header);
+                });
+              }); // Remove duplicate locations
+
+              uniqueLocations = uniqueLocations.filter((v, i, a) => a.indexOf(v) === i);
+
+              for (let i = 1; i <= uniqueLocations.length; i++) {
+                filterLocation(data, uniqueLocations[i - 1], "#location-".concat(i), "#location-".concat(i, "__buttons"));
+              } // End multiple locations
+
+            } else {
+              // Single location, multiple dates
+              if (locations.length > 1 || methods.length > 1) {
+                // Single location, multiple dates, multiple methods => Dates as standard button; further options to follow
+                dateButtons.push(d.header);
+                dateButtons = dateButtons.reduce(function (a, i) {
+                  a.indexOf(i) === -1 ? a.push(i) : null;
+                  return a;
+                }, []);
+                buttonOptions = dateButtons.map(db => {
+                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+                    key: db
+                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+                    "data-date-src": db,
+                    onClick: e => {
+                      let dateSrc = e.target.getAttribute('data-date-src');
+                      selectedDateValue = formatDate(dateSrc);
+                      selectedDateData = data.filter(fd => fd.header === dateSrc);
+                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
+                      setFirstStep(false);
+                    }
+                  }, formatDate(db))));
+                }); // Modal journey incomplete; display further steps pending indicator
+
+                setFurtherStepsPendingIndicator(furtherStepsPending);
+              } else {
+                // Single location, multiple dates, single method => Dates as links
+                dateLinks.push(d.header);
+                dateLinks = dateLinks.reduce(function (a, i) {
+                  a.indexOf(i) === -1 ? a.push(i) : null;
+                  return a;
+                }, []); // Map each unique date and filter data to extract correct apply links
+
+                const dateLinksData = [];
+                dateLinks.map(lq => {
+                  let filteredDateData = data.filter(q => q.header === lq);
+                  dateLink = {
+                    text: formatDate(lq),
+                    link: filteredDateData[0]['options'][0]['options'][0]['options']['apply']
+                  };
+                  dateLinksData.push(dateLink);
+                });
+                linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                  data: dateLinksData
+                }); // Final modal step; remove further steps indicator
+
+                setFurtherStepsPendingIndicator();
+              }
+            }
+          } else {
+            // Single date; move to methods function
+            filterMethodsData(data[0]['options'][0]['options']);
+          }
+        });
+      });
+    });
+    linkOptions ? setSelectionLinkDate(linkOptions) : null;
+    buttonOptions ? setSelectionButtonDate(buttonOptions) : null;
+  }
+  /**
+   * Completed programme filter. Analyse routes data.
+   *
+   * @param {object} data The filtered data record data, where routes are at the top level.
+   */
+
+
+  function filterRouteData(data) {
+    // Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
+    clearSelectionOptions(); // Empty relevant state variables to remove superfluous progress navigation rendering
+
+    setProgressDate();
+    setProgressMethod(); // Clear data stored from previous selections
+
+    selectedRouteData = null;
+    selectedDateData = null; // Variables scoped to this function
+
+    let buttonQuals = [],
+        linkRoutes = [],
+        routeLink,
+        buttonOptions,
+        linkOptions,
+        locationOptions = [],
+        qualNav; // Progress indicator; display selected qualification value
+
+    selectedQualificationData ? qualNav = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+      className: "how-to-apply--pgt--js__modal__progress__previous"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+      className: "how-to-apply--pgt--js__modal__progress__wrapper",
+      onClick: () => {
+        filterQualificationData(entryPoints);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__circle"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "fas fa-check icon",
+      "aria-label": "Back to choose qualification"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+      className: "how-to-apply--pgt--js__modal__progress__text"
+    }, "Qualification"))) : qualNav = null;
+    setProgressQualification(qualNav);
+    data.map(s => {
+      // Routes pre-selection prompt text
+      setWindowPrompt(promptRoute);
+      let dates = s['options'];
+      dates.map(d => {
+        let locations = d['options'];
+        locations.map(l => {
+          let methods = l['options'];
+          methods.map(() => {
+            // Store each unique location value in an array
+            locations.map(lo => {
+              locationOptions.push(lo.header);
+            });
+            locationOptions = locationOptions.reduce(function (a, i) {
+              a.indexOf(i) === -1 ? a.push(i) : null;
+              return a;
+            }, []);
+
+            if (data.length > 1) {
+              // Route selection required: set progress indicator to route and remove dates/methods
+              selectedRouteValue = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+                className: "how-to-apply--pgt--js__modal__progress__current"
+              }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+                className: "how-to-apply--pgt--js__modal__progress__wrapper"
+              }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+                className: "how-to-apply--pgt--js__modal__progress__circle"
+              }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+                className: "fas fa-circle icon"
+              })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+                className: "how-to-apply--pgt--js__modal__progress__text"
+              }, "Route")));
+              setProgressRoute(selectedRouteValue);
+              setProgressDate();
+              setProgressMethod();
+
+              if (dates.length > 1 || locationOptions.length > 1 || methods.length > 1) {
+                // Standard route button
+                buttonQuals.push(s.header);
+                buttonQuals = buttonQuals.reduce(function (a, i) {
+                  a.indexOf(i) === -1 ? a.push(i) : null;
+                  return a;
+                }, []);
+                buttonOptions = buttonQuals.map(bq => {
+                  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+                    key: bq
+                  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+                    onClick: e => {
+                      selectedRouteValue = e.target.textContent;
+                      selectedRouteData = data.filter(sr => sr.header === selectedRouteValue);
+                      filterDatesData(selectedRouteData[0]['options']);
+                      setFirstStep(false);
+                    }
+                  }, bq)));
+                }); // Modal journey incomplete; display further steps pending indicator
+
+                setFurtherStepsPendingIndicator(furtherStepsPending);
+              } else {
+                // Route as link
+                linkRoutes.push(s.header);
+                linkRoutes = linkRoutes.reduce(function (a, i) {
+                  a.indexOf(i) === -1 ? a.push(i) : null;
+                  return a;
+                }, []); // Map each unique route and filter data to extract correct apply links
+
+                const routeLinksData = [];
+                linkRoutes.map(lr => {
+                  let filteredRouteData = data.filter(q => q.header === lr);
+                  routeLink = {
+                    text: lr,
+                    link: filteredRouteData[0]['options'][0]['options'][0]['options'][0]['options']['apply']
+                  };
+                  routeLinksData.push(routeLink);
+                });
+                linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                  data: routeLinksData
+                }); // Final modal step; remove further steps indicator
+
+                setFurtherStepsPendingIndicator();
+              }
+            } else {
+              // Move to dates function
+              filterDatesData(data[0]['options']);
+            }
+          });
+        });
+      });
+    }); // If route options and/or links exist, update state to render relevant JSX
+
+    buttonOptions ? setSelectionButtonRoute(buttonOptions) : null;
+    linkOptions ? setSelectionLinkRoute(linkOptions) : null;
+  }
+  /**
+   * Analyse programme data record data.
+   *
+   * @param {object} data The original data record data, where programmes are at the top level.
+   */
+
+
+  function filterQualificationData(data) {
+    // If qualification select exists, it will be the first step in the modal; disable 'Start again' option
+    setFirstStep(true); // Qualification pre-selection prompt text
+
+    setWindowPrompt(promptQualification); // Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
+
+    clearSelectionOptions(); // Empty relevant state variables to remove superfluous progress navigation rendering
+
+    setProgressRoute();
+    setProgressDate();
+    setProgressMethod(); // Clear data stored from previous selections
+
+    selectedQualificationData = null;
+    selectedRouteData = null;
+    selectedDateData = null; // Variables scoped to this function
+
+    let buttonQuals = [],
+        linkQuals = [],
+        buttonOptions,
+        linkOptions,
+        locationOptions = [];
+
+    if (data.length > 1) {
+      // Qualification selection required: set progress indicator to qualification and remove routes/dates/methods
+      selectedQualificationValue = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+        className: "how-to-apply--pgt--js__modal__progress__current"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+        className: "how-to-apply--pgt--js__modal__progress__wrapper"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+        className: "how-to-apply--pgt--js__modal__progress__circle"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+        className: "fas fa-circle icon"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+        className: "how-to-apply--pgt--js__modal__progress__text"
+      }, "Qualification")));
+      setProgressQualification(selectedQualificationValue);
+    }
+
+    data.length > 1 ? data.map(e => {
+      let routeNames = e['options'];
+      routeNames.map(s => {
+        let dates = s['options'];
+        dates.map(d => {
+          let locations = d['options'];
+          locations.map(l => {
+            let methods = l['options'];
+            methods.map(() => {
+              // Store each unique location value in an array
+              locations.map(lo => {
+                locationOptions.push(lo.header);
+              });
+              locationOptions = locationOptions.reduce(function (a, i) {
+                a.indexOf(i) === -1 ? a.push(i) : null;
+                return a;
+              }, []);
+
+              if (data.length > 1) {
+                if (routeNames.length > 1 || dates.length > 1 || locationOptions.length > 1 || methods.length > 1) {
+                  buttonQuals.push(e.header);
+                  buttonQuals = buttonQuals.reduce(function (a, i) {
+                    a.indexOf(i) === -1 ? a.push(i) : null;
+                    return a;
+                  }, []);
+                  buttonOptions = buttonQuals.map(bq => {
+                    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
+                      key: bq
+                    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+                      onClick: e => {
+                        selectedQualificationValue = e.target.innerText;
+                        selectedQualificationData = data.filter(qual => qual.header === selectedQualificationValue);
+                        filterRouteData(selectedQualificationData[0]['options']);
+                        setFirstStep(false);
+                      }
+                    }, bq)));
+                  }); // Modal journey incomplete; display further steps pending indicator
+
+                  setFurtherStepsPendingIndicator(furtherStepsPending);
+                } else {
+                  linkQuals.push(e.header);
+                  linkQuals = linkQuals.reduce(function (a, i) {
+                    a.indexOf(i) === -1 ? a.push(i) : null;
+                    return a;
+                  }, []); // Map each unique qualification and filter data to extract correct apply links
+
+                  const methodLinks = [];
+                  linkQuals.map(lq => {
+                    let filteredQualData = data.filter(q => q.header === lq);
+                    const methodLink = {
+                      text: lq,
+                      link: filteredQualData[0]['options'][0]['options'][0]['options'][0]['options'][0]['options']['apply']
+                    };
+                    methodLinks.push(methodLink);
+                  });
+                  linkOptions = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_buttons_apply__WEBPACK_IMPORTED_MODULE_5__["default"], {
+                    data: methodLinks
+                  }); // Move to end of function and use qualification variable? Similar approach to ternary operator used at end of dates function
+                }
+              }
+            });
+          });
+        });
+      });
+    }) : // One qualification; move to routes function
+    filterRouteData(entryPoints[0]['options']);
+    buttonOptions ? setSelectionButtonQualification(buttonOptions) : null;
+    linkOptions ? setSelectionLinkQualification(linkOptions) : null;
+  } // Modal wrapper render
+
+
+  const question = 'qualification',
+        qualificationQuestion = question === 'qualification' && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__content-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, windowPrompt), !(selectionHeadingLocationOne || selectionButtonLocationOneDate || selectionLinkLocationOneDate || selectionHeadingLocationTwo || selectionButtonLocationTwoDate || selectionLinkLocationTwoDate) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+    className: "how-to-apply--pgt--js__options"
+  }, selectionButtonQualification, selectionLinkQualification, selectionButtonRoute, selectionLinkRoute, selectionButtonDate, selectionLinkDate, selectionLinkMethod) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, selectionHeadingLocationOne, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+    className: "how-to-apply--pgt--js__options how-to-apply--pgt--js__options--multiple-locations"
+  }, selectionButtonLocationOneDate, selectionLinkLocationOneDate), selectionHeadingLocationTwo, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+    className: "how-to-apply--pgt--js__options how-to-apply--pgt--js__options--multiple-locations"
+  }, selectionButtonLocationTwoDate, selectionLinkLocationTwoDate)))),
+        alternative = props.element.dataset.otheryear && props.element.dataset.otherurl && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+    className: "how-to-apply--pgt--js__modal__alternative"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
+    href: props.element.dataset.otherurl
+  }, props.element.dataset.otheryear, " entry is also available.")); // End modal wrapper render
+  // Focus trap
+
+  const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])({});
   let modalRef = null,
       modalContentRef = null;
 
   const getModal = () => modalRef,
         getModalContent = () => modalContentRef;
 
-  Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
+  Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(() => {
     if (!focusTrap.activate) {
-      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_4___default()(getModalContent(), {
+      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_7___default()(getModalContent(), {
         initialFocus: getModalContent().querySelector('.how-to-apply--pgt--js__options button, .how-to-apply--pgt--js__options a'),
         onDeactivate: () => setModalVisible(false),
         clickOutsideDeactivates: true
@@ -599,126 +1011,68 @@ function HowToApply(props) {
 
     if (modalVisible) {
       focusTrap.activate && focusTrap.activate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__["disableBodyScroll"])(getModal());
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_4__["disableBodyScroll"])(getModal());
     } else {
       focusTrap.deactivate && focusTrap.deactivate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__["enableBodyScroll"])(getModal());
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_4__["enableBodyScroll"])(getModal());
     }
-  }, [modalVisible]);
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+  }, [modalVisible]); // End focus trap
+  // Render the 'Apply now' CTA which launches the modal
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
     className: "cta-block"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     className: "cta-block__cta"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
     className: "primary-cta-arrow--bright",
-    onClick: () => setModalVisible(true)
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Apply now")))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    onClick: () => {
+      setModalVisible(true);
+      setFirstStep(true); // Don't show 'Start again' option on initial modal load
+
+      clearSelectionOptions(); // Clear any previously rendered selection buttons/links from the state
+
+      filterQualificationData(entryPoints);
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Apply now")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal",
     "data-open": modalVisible,
     ref: modal => modalRef = modal
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content",
     ref: modalContent => modalContentRef = modalContent
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("button", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
     className: "how-to-apply--pgt--js__close",
     onClick: () => {
       focusTrap.deactivate && focusTrap.deactivate();
-      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_5__["enableBodyScroll"])(getModal());
+      Object(body_scroll_lock__WEBPACK_IMPORTED_MODULE_4__["enableBodyScroll"])(getModal());
       setModalVisible(false);
     }
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-times icon",
     "aria-label": "Close"
-  })), reset, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
-    className: "how-to-apply--pgt--js__modal__progress"
-  }, qualificationsProgress, subjectsProgress, entryPointsProgress, locationsProgress, nextStep), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ol", {
-    className: "how-to-apply--pgt--js__modal__progress--mobile"
-  }, qualificationsProgressMobile, subjectsProgressMobile, entryPointsProgressMobile, locationsProgressMobile, nextStepMobile), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "how-to-apply--pgt--js__modal__content-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, "Applying to start in ", props.element.dataset.year), alternative), qualificationQuestion, subjectQuestion, entryQuestion, locationQuestion, applyQuestion)));
-}
+  })), !firstStep ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__reset" // style={{ display: 'block' }}
 
-const nextLevel = (arr, k) => arr.filter(i => Object.keys(i)[0] === k)[0][k];
-/**
- * Condense the configuration options for easier access.
- *
- * @param {Object[]} config The JSONified entry points configuration.
- * @return {Object[]} - The simplified configuration
- */
-
-
-function distilConfiguration(config) {
-  return config.map(qualification => {
-    const qualificationHeader = qualification.header,
-          subjects = qualification.options.map(subject => {
-      const subjectHeader = subject.header,
-            entries = subject.options.map(entry => {
-        const entryHeader = entry.header,
-              locations = entry.options.map(location => {
-          const locationHeader = location.header,
-                methods = location.options.map(method => {
-            const methodHeader = method.header,
-                  applyLink = method.options.apply,
-                  methodObj = new Object();
-
-            if (methodHeader) {
-              methodObj[methodHeader] = applyLink;
-            } else {
-              methodObj['UNIQUE'] = applyLink;
-            }
-
-            return methodObj;
-          }),
-                locationObject = new Object();
-
-          if (locationHeader) {
-            locationObject[locationHeader] = methods;
-          } else {
-            locationObject['UNIQUE'] = methods;
-          }
-
-          return locationObject;
-        }),
-              entryObj = new Object();
-
-        if (entryHeader) {
-          entryObj[entryHeader] = locations;
-        } else {
-          entryObj['UNIQUE'] = locations;
-        }
-
-        return entryObj;
-      }),
-            subjectObj = new Object();
-
-      if (subjectHeader) {
-        subjectObj[subjectHeader] = entries;
-      } else {
-        subjectObj['UNIQUE'] = entries;
-      }
-
-      return subjectObj;
-    }),
-          qualificationObj = new Object();
-
-    if (qualificationHeader) {
-      qualificationObj[qualificationHeader] = subjects;
-    } else {
-      qualificationObj['UNIQUE'] = subjects;
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("button", {
+    onClick: () => {
+      // Clear options display and render what user would see when modal is first opened
+      setFirstStep(true);
+      filterQualificationData(entryPoints);
     }
-
-    return qualificationObj;
-  });
-}
-
-function nextQuestion(preferences) {
-  const question = preferences.qualification === null ? 'qualification' : preferences.subject === null ? 'subject' : preferences.entry === null ? 'entry' : preferences.location === null ? 'location' : 'apply';
-  return question;
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
+    className: "fas fa-redo"
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", null, "Start again"))) : null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ol", {
+    className: "how-to-apply--pgt--js__modal__progress"
+  }, progressQualification, progressRoute, progressDate, progressMethod, furtherStepsPendingIndicator), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__content-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", null, "Start in ", props.element.dataset.year)), qualificationQuestion, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+    className: "how-to-apply--pgt--js__modal__content-wrapper"
+  }, alternative))));
 }
 
 HowToApply.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.array,
-  element: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object
+  config: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.array,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_6___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (HowToApply);
 
@@ -767,7 +1121,7 @@ function howToApplyConfig(url) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatReactDate, arraySlicer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -789,16 +1143,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createHTMLElement", function() { return createHTMLElement; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uppercaseFirstLetterLowercaseRest", function() { return uppercaseFirstLetterLowercaseRest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "axiosRequest", function() { return axiosRequest; });
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.split */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatReactDate", function() { return formatReactDate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arraySlicer", function() { return arraySlicer; });
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -811,8 +1172,9 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module util
  * @author Web Development
- * @copyright City, University of London 2018
+ * @copyright City, University of London 2018-2020
  */
+
 
 /**
  * Turns string boolean into real boolean.
@@ -1044,7 +1406,7 @@ function checkIntersectionObserver() {
 function createHTMLElement(type, attributes) {
   let el = document.createElement(type);
   attributes.map(function (att) {
-    att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : el.setAttribute(att.label, att.val);
+    att.label === 'content' ? el.appendChild(document.createTextNode(att.val)) : att.label === 'html' ? el.innerHTML = att.val : el.setAttribute(att.label, att.val);
   });
   return el;
 }
@@ -1060,17 +1422,63 @@ function uppercaseFirstLetterLowercaseRest(s) {
 
 function axiosRequest(config) {
   const httpOK = 200;
-  return axios__WEBPACK_IMPORTED_MODULE_4___default()(config).then(response => {
+  return axios__WEBPACK_IMPORTED_MODULE_5___default()(config).then(response => {
     if (httpOK === response.status) {
       return response.data;
     } else {
       throw "Bad response: ".concat(response.status);
     }
   }).catch(e => {
-    if (!axios__WEBPACK_IMPORTED_MODULE_4___default.a.isCancel(e)) {
+    if (!axios__WEBPACK_IMPORTED_MODULE_5___default.a.isCancel(e)) {
       gaEvent('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "axiosRequest ".concat(e.fileName, " (").concat(window.location, ")"), true);
     }
   });
+}
+/**
+ * Returns the correct English suffix for a number.
+ *
+ * @param  {number} day - The day of the month.
+ * @returns {string} The correct suffix.
+ */
+
+function daySuffix(day) {
+  const eleventh = 11,
+        thirteenth = 13,
+        lastDigit = day.toString().slice(-1);
+  return day >= eleventh || day <= thirteenth ? 'th' : lastDigit === '1' ? 'st' : lastDigit === '2' ? 'nd' : lastDigit === '3' ? 'rd' : 'th';
+}
+/**
+ * Format a date for React.
+ *
+ * @param {Date} date - A date object.
+ * @returns {ReactFragment} The formatted date.
+ */
+
+
+function formatReactDate(date) {
+  const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("time", {
+    dateTime: date.toISOString().split('T')[0]
+  }, days[date.getUTCDay()], ", ", date.getUTCDate(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("sup", null, daySuffix(date.getUTCDate())), ' ', months[date.getUTCMonth()], " ", date.getUTCFullYear());
+}
+/**
+ * Array slicer
+ *
+ * @param {array} arr - array to be split up into subarrays
+ * @param {number} len - max number items that goes into each subarray
+ */
+
+function arraySlicer(arr, len) {
+  let newArray = [],
+      i = 0,
+      n = arr.length;
+
+  while (i < n) {
+    newArray.push(arr.slice(i, i += len));
+  }
+
+  return newArray;
 }
 
 /***/ }),
