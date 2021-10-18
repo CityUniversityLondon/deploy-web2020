@@ -69040,6 +69040,19 @@ button
     main > .lifelong-learning .lifelong-learning__testimonials .slider__controls {
         grid-column: 1 / -1;
     }
+    main > .lifelong-learning header,
+    main > .lifelong-learning .wrapper--lifelong-learning__introduction,
+    main > .lifelong-learning .lifelong-learning__content,
+    main > .lifelong-learning .wrapper--key-information--lifelong-learning,
+    main > .lifelong-learning .lifelong-learning__tutors__wrap,
+    main > .lifelong-learning .lifelong-learning__video,
+    main > .lifelong-learning .lifelong-learning__contact,
+    main > .lifelong-learning .related-content__heading,
+    main > .lifelong-learning .lifelong-learning__testimonials,
+    main > .lifelong-learning .related-content,
+    main > .lifelong-learning .banner-text__content {
+        grid-column: 1/-1;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -69048,7 +69061,49 @@ button
     }
     main .navigation--secondary + .lifelong-learning {
         grid-column: 7 / span 18;
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
     }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main .navigation--secondary + .lifelong-learning {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .navigation--secondary + .lifelong-learning {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .navigation--secondary + .lifelong-learning .lifelong-learning__related-courses,
+    main .navigation--secondary + .lifelong-learning .related-content {
+        grid-column: 2/-2;
+    }
+    main .navigation--secondary + .lifelong-learning header {
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main .navigation--secondary + .lifelong-learning header {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .navigation--secondary + .lifelong-learning header {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
     main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning--bespoke .key-information--lifelong-learning--bespoke__contact {
         grid-template-columns: repeat(18, 1fr);
         grid-column-gap: 0;
@@ -69169,6 +69224,15 @@ button
     }
 }
 
+@media (min-width: 1280px) {
+    main .navigation--secondary + .lifelong-learning header {
+        display: block;
+    }
+    main .navigation--secondary + .lifelong-learning header .banner-text__content {
+        margin: 0 auto;
+    }
+}
+
 .lifelong-learning .banner__image {
     position: relative;
     overflow: hidden;
@@ -69242,6 +69306,7 @@ button
 
 .lifelong-learning .banner-text {
     color: #ffffff;
+    grid-column: 1/-1;
 }
 
 @media print {
@@ -70343,8 +70408,6 @@ button
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
     }
 }
 
@@ -70352,20 +70415,6 @@ button
     .js .lifelong-learning__content .accordion {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
-    }
-}
-
-@media screen and (min-width: 901px) {
-    .js .lifelong-learning__content .accordion {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media screen and (min-width: 1441px) {
-    .js .lifelong-learning__content .accordion {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -70744,6 +70793,36 @@ button
 @media (max-width: 767px) {
     .js .lifelong-learning .slider[data-style='arrows'] + .slider__controls {
         margin-right: 1rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .js .lifelong-learning .slider {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .js .lifelong-learning .slider {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .js .lifelong-learning .slider[data-cardsperrow='3'][data-small='true'] {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .js .lifelong-learning .slider[data-cardsperrow='3'][data-small='true'] {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
