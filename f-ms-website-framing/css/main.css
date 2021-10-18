@@ -61087,18 +61087,23 @@ main .home .home__whats-happening .related-content {
     display: none;
 }
 
-@media (max-width: 1023px) {
-    main > .landing--informational .landing__standfirst {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
+@media (min-width: 1024px) {
+    main > .landing--informational {
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+        display: grid;
     }
 }
 
-@media (max-width: 1023px) and (min-width: 901px) {
-    main > .landing--informational .landing__standfirst {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+@media (min-width: 1024px) and (min-width: 768px) {
+    main > .landing--informational {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main > .landing--informational {
+        grid-column-gap: 1.5rem;
     }
 }
 
@@ -61202,16 +61207,35 @@ main .home .home__whats-happening .related-content {
 @media (min-width: 1024px) {
     main > .landing--informational .landing__standfirst,
     main > .landing--informational .landing__promotional,
-    main > .landing--informational .landing__related,
+    main > .landing--informational .landing__related {
+        grid-column: 7 / span 12;
+    }
+    main > .landing--informational .landing__pathway {
+        grid-column: 2/-2;
+        display: grid;
+        grid-template-columns: repeat(22, 1fr);
+        grid-column-gap: 0;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main > .landing--informational .landing__pathway {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main > .landing--informational .landing__pathway {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
     main > .landing--informational .landing__pathway .pathway {
         grid-column: 1/-1;
     }
-    main > .landing--informational .landing__standfirst > .standfirst,
-    main > .landing--informational .landing__promotional__flexible,
-    main > .landing--informational .landing__promotional__heading,
-    main > .landing--informational .landing__promotional__content,
-    main > .landing--informational .landing__pathway__content {
-        grid-column: 4 / span 18;
+    main > .landing--informational .landing__pathway .landing__pathway__content {
+        grid-column: 5/-5;
     }
     main > .landing--informational .landing__promotional__cta {
         grid-column: 4 / span 18;
@@ -61237,8 +61261,7 @@ main .home .home__whats-happening .related-content {
     main > .landing--informational .landing__standfirst > .standfirst,
     main > .landing--informational .landing__promotional__flexible,
     main > .landing--informational .landing__promotional__heading,
-    main > .landing--informational .landing__promotional__content,
-    main > .landing--informational .landing__pathway__content {
+    main > .landing--informational .landing__promotional__content {
         grid-column: 7 / span 12;
     }
     main > .landing--informational .landing__promotional__cta {
@@ -61312,10 +61335,13 @@ main .home .home__whats-happening .related-content {
     main .navigation--secondary + .landing--informational .landing__promotional__flexible,
     main .navigation--secondary + .landing--informational .landing__promotional__heading,
     main .navigation--secondary + .landing--informational .landing__promotional__content,
-    main .navigation--secondary + .landing--informational .landing__promotional__cta,
-    main .navigation--secondary + .landing--informational .landing__pathway__content {
+    main .navigation--secondary + .landing--informational .landing__promotional__cta {
         grid-column: 4 / span 12;
     }
+}
+
+.landing--informational {
+    padding-bottom: 1.5rem;
 }
 
 .landing--informational .landing__standfirst,
