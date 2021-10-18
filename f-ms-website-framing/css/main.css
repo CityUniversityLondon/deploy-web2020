@@ -56811,7 +56811,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper,
     main .navigation--secondary + .case-study--research .case-study--research__video__wrapper,
     main .navigation--secondary + .case-study--research .case-study--research__content__wrapper,
-    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper {
+    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper,
+    main .navigation--secondary + .case-study--research .case-study--research__related-events {
         grid-template-columns: repeat(18, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -56822,7 +56823,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper,
     main .navigation--secondary + .case-study--research .case-study--research__video__wrapper,
     main .navigation--secondary + .case-study--research .case-study--research__content__wrapper,
-    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper {
+    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper,
+    main .navigation--secondary + .case-study--research .case-study--research__related-events {
         grid-column-gap: 1rem;
     }
 }
@@ -56831,7 +56833,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper,
     main .navigation--secondary + .case-study--research .case-study--research__video__wrapper,
     main .navigation--secondary + .case-study--research .case-study--research__content__wrapper,
-    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper {
+    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper,
+    main .navigation--secondary + .case-study--research .case-study--research__related-events {
         grid-column-gap: 1.5rem;
     }
 }
@@ -56840,7 +56843,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper .case-study--research__overview,
     main .navigation--secondary + .case-study--research .case-study--research__video__wrapper .case-study--research__overview,
     main .navigation--secondary + .case-study--research .case-study--research__content__wrapper .case-study--research__overview,
-    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__overview {
+    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__overview,
+    main .navigation--secondary + .case-study--research .case-study--research__related-events .case-study--research__overview {
         grid-template-columns: repeat(16, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -56852,7 +56856,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper .case-study--research__overview,
     main .navigation--secondary + .case-study--research .case-study--research__video__wrapper .case-study--research__overview,
     main .navigation--secondary + .case-study--research .case-study--research__content__wrapper .case-study--research__overview,
-    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__overview {
+    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__overview,
+    main .navigation--secondary + .case-study--research .case-study--research__related-events .case-study--research__overview {
         grid-column-gap: 1rem;
     }
 }
@@ -56861,7 +56866,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper .case-study--research__overview,
     main .navigation--secondary + .case-study--research .case-study--research__video__wrapper .case-study--research__overview,
     main .navigation--secondary + .case-study--research .case-study--research__content__wrapper .case-study--research__overview,
-    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__overview {
+    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__overview,
+    main .navigation--secondary + .case-study--research .case-study--research__related-events .case-study--research__overview {
         grid-column-gap: 1.5rem;
     }
 }
@@ -56870,19 +56876,31 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper .case-study--research__overview .case-study--research__overview__researchers,
     main .navigation--secondary + .case-study--research .case-study--research__video__wrapper .case-study--research__overview .case-study--research__overview__researchers,
     main .navigation--secondary + .case-study--research .case-study--research__content__wrapper .case-study--research__overview .case-study--research__overview__researchers,
-    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__overview .case-study--research__overview__researchers {
+    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__overview .case-study--research__overview__researchers,
+    main .navigation--secondary + .case-study--research .case-study--research__related-events .case-study--research__overview .case-study--research__overview__researchers {
         grid-column: 3 / -3;
+    }
+    main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper .case-study--research__related-events,
+    main .navigation--secondary + .case-study--research .case-study--research__video__wrapper .case-study--research__related-events,
+    main .navigation--secondary + .case-study--research .case-study--research__content__wrapper .case-study--research__related-events,
+    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__related-events,
+    main .navigation--secondary + .case-study--research .case-study--research__related-events .case-study--research__related-events {
+        grid-column: 2/-2;
+        margin-left: 0;
+        margin-right: 0;
     }
     main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper .case-study--research__video,
     main .navigation--secondary + .case-study--research .case-study--research__video__wrapper .case-study--research__video,
     main .navigation--secondary + .case-study--research .case-study--research__content__wrapper .case-study--research__video,
-    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__video {
+    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__video,
+    main .navigation--secondary + .case-study--research .case-study--research__related-events .case-study--research__video {
         grid-column: 3 / -3;
     }
     main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper .case-study--research__video .embedded-video,
     main .navigation--secondary + .case-study--research .case-study--research__video__wrapper .case-study--research__video .embedded-video,
     main .navigation--secondary + .case-study--research .case-study--research__content__wrapper .case-study--research__video .embedded-video,
-    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__video .embedded-video {
+    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__video .embedded-video,
+    main .navigation--secondary + .case-study--research .case-study--research__related-events .case-study--research__video .embedded-video {
         margin-top: 1.5rem;
         padding-bottom: 0;
         padding-left: 0;
@@ -56892,7 +56910,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper .case-study--research__video .youtube-video,
     main .navigation--secondary + .case-study--research .case-study--research__video__wrapper .case-study--research__video .youtube-video,
     main .navigation--secondary + .case-study--research .case-study--research__content__wrapper .case-study--research__video .youtube-video,
-    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__video .youtube-video {
+    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__video .youtube-video,
+    main .navigation--secondary + .case-study--research .case-study--research__related-events .case-study--research__video .youtube-video {
         width: 100%;
     }
     main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper .case-study--research__content,
@@ -56902,7 +56921,9 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     main .navigation--secondary + .case-study--research .case-study--research__content__wrapper .case-study--research__content,
     main .navigation--secondary + .case-study--research .case-study--research__content__wrapper .case-study--research__details,
     main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__content,
-    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__details {
+    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__details,
+    main .navigation--secondary + .case-study--research .case-study--research__related-events .case-study--research__content,
+    main .navigation--secondary + .case-study--research .case-study--research__related-events .case-study--research__details {
         grid-column: 4 / span 12;
     }
 }
@@ -56932,6 +56953,23 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .case-study--research .case-study--research__content {
     margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+    .case-study--research .case-study--research__content .content-fade-in,
+    .case-study--research .case-study--research__content .case-study--research__content__share-icons {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 901px) {
+    .case-study--research .case-study--research__content .content-fade-in,
+    .case-study--research .case-study--research__content .case-study--research__content__share-icons {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .case-study--research .case-study--research__content h2 {
@@ -56969,13 +57007,30 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .case-study--research .case-study--research__related-events {
     margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
+    padding-bottom: 1.5rem;
 }
 
-@media (min-width: 768px) {
-    .case-study--research .case-study--research__related-events {
-        padding-bottom: 1.5rem;
+.case-study--research .case-study--research__related-events .related-content__heading {
+    grid-column: 1/-1;
+}
+
+@media (max-width: 1023px) {
+    .case-study--research .case-study--research__related-events .related-content__heading {
+        padding-top: 1rem;
+    }
+}
+
+.case-study--research .case-study--research__related-events .related-content {
+    grid-column: 1/-1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+}
+
+@media (min-width: 901px) {
+    .case-study--research .case-study--research__related-events .related-content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
