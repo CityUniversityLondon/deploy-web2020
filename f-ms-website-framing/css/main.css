@@ -19178,7 +19178,7 @@ main article .content {
 
 @media (min-width: 1024px) {
     main article .content {
-        grid-column: 6/-6;
+        grid-column: 2/-2;
     }
 }
 
@@ -58680,6 +58680,33 @@ div.widget-123_test_ {
     display: block;
 }
 
+@media (min-width: 1024px) {
+    main > .error .content {
+        grid-column: 4/-4;
+        padding: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    main > .error {
+        grid-column: 1/-1;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    main > .error {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+main > .error {
+    padding: 1.5rem 0;
+}
+
 @media (max-width: 1023px) {
     main > .event .wrapper--event__content,
     main > .event .event__formassembly__form {
@@ -67801,16 +67828,17 @@ button
 @media (max-width: 1023px) {
     .wrapper--research-degree__pre-overview,
     .wrapper--research-degree__overview {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
     }
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
     .wrapper--research-degree__pre-overview,
     .wrapper--research-degree__overview {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
@@ -71062,21 +71090,45 @@ main .standard-content .content {
 }
 
 @media (min-width: 1024px) {
-    main > .documentation .content-wrapper {
-        grid-column: 6/-6;
+    main > .documentation .content {
+        grid-column: 4/-4;
+    }
+}
+
+@media (min-width: 1024px) {
+    main .navigation--secondary + .documentation .content {
+        grid-column: 2/-2;
+    }
+}
+
+@media (max-width: 1023px) {
+    .documentation .content {
+        grid-column: 1/-1;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .documentation .content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
 .documentation .content {
-    margin: 1.5rem 0;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
 }
 
-.slider.doc-slider {
+.documentation .slider.doc-slider {
     list-style: none;
     margin: 0 auto;
 }
 
-.slider.doc-slider li {
+.documentation .slider.doc-slider li {
     height: 6rem;
     width: 100%;
     border: 0.125rem solid #0c0c0e;
@@ -71371,6 +71423,40 @@ main .standard-content .content {
 }
 
 @media (min-width: 1024px) {
+    main > .course--ug {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main > .course--ug {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main > .course--ug {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main > .course--ug header,
+    main > .course--ug .course-info__wrapper,
+    main > .course--ug .course--ug__keyinfo__wrapper,
+    main > .course--ug .featured-profiles-block__wrap,
+    main > .course--ug .course-footer,
+    main > .course--ug .course--ug__whats-happening,
+    main > .course--ug .course--ug__related-courses__wrapper {
+        grid-column: 1/-1;
+    }
+    main > .course--ug .course--ug__tabs__wrap,
+    main > .course--ug .courses--ug__facilities,
+    main > .course--ug .course--ug__student {
+        grid-column: 2/-2;
+    }
     main > .course--ug .promo-box__wrapper {
         grid-template-columns: repeat(18, 1fr);
         grid-column-gap: 0;
@@ -71448,14 +71534,48 @@ main .standard-content .content {
 }
 
 @media (max-width: 1023px) {
-    main > .course--ug .course--ug__tabs__wrap {
+    main > .course--ug header,
+    main > .course--ug .course-info__wrapper,
+    main > .course--ug .course--ug__keyinfo__wrapper,
+    main > .course--ug .course-footer,
+    main > .course--ug .course--ug__whats-happening,
+    main > .course--ug .course--ug__related-courses__wrapper,
+    main > .course--ug .course--ug__tabs__wrap,
+    main > .course--ug .courses--ug__facilities,
+    main > .course--ug .course--ug__student {
+        grid-column: 1/-1;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    main > .course--ug .course--ug__tabs__wrap {
+    main > .course--ug header,
+    main > .course--ug .course-info__wrapper,
+    main > .course--ug .course--ug__keyinfo__wrapper,
+    main > .course--ug .course-footer,
+    main > .course--ug .course--ug__whats-happening,
+    main > .course--ug .course--ug__related-courses__wrapper,
+    main > .course--ug .course--ug__tabs__wrap,
+    main > .course--ug .courses--ug__facilities,
+    main > .course--ug .course--ug__student {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    main > .course--ug .featured-profiles-block__wrap {
+        grid-column: 1/-1;
+    }
+    main > .course--ug .featured-profiles-block {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    main > .course--ug .featured-profiles-block {
         padding-left: 2rem;
         padding-right: 2rem;
     }
@@ -73421,6 +73541,10 @@ main .standard-content .content {
 
 .course--ug__student-testimonials__half--unibuddy .unibuddy-card {
     margin-top: 1rem;
+}
+
+.course--ug__related-links {
+    grid-column: 1/-1;
 }
 
 @media (max-width: 1023px) {
