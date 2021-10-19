@@ -66047,36 +66047,9 @@ main > .news {
     margin-top: 1rem;
 }
 
-.profile .profile--global__about {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-
-@media (min-width: 901px) {
-    .profile .profile--global__about {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .profile .profile--global__about {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (min-width: 1441px) {
-    .profile .profile--global__about {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 @media (max-width: 1023px) {
+    .profile .standfirst,
+    .profile .profile--global__about,
     .profile .profile--global__about-heading {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -66087,6 +66060,8 @@ main > .news {
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
+    .profile .standfirst,
+    .profile .profile--global__about,
     .profile .profile--global__about-heading {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -66094,6 +66069,8 @@ main > .news {
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
+    .profile .standfirst,
+    .profile .profile--global__about,
     .profile .profile--global__about-heading {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -66101,6 +66078,8 @@ main > .news {
 }
 
 @media (max-width: 1023px) and (min-width: 1441px) {
+    .profile .standfirst,
+    .profile .profile--global__about,
     .profile .profile--global__about-heading {
         margin-left: auto;
         margin-right: auto;
@@ -66108,6 +66087,8 @@ main > .news {
 }
 
 @media (min-width: 1024px) {
+    .profile .standfirst,
+    .profile .profile--global__about,
     .profile .profile--global__about-heading {
         grid-column: 4 / span 12;
     }
@@ -66727,6 +66708,11 @@ button
     margin-top: 3rem;
     padding-bottom: 1rem;
     padding-top: 1rem;
+}
+
+.profile .profile--global__tags .content {
+    grid-column: 1/-1;
+    padding: 0;
 }
 
 @media (max-width: 1023px) {
