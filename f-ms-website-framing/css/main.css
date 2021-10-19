@@ -61134,6 +61134,27 @@ main .home .home__whats-happening .related-content {
     }
 }
 
+@media (min-width: 1024px) {
+    main > .landing--informational .landing__standfirst {
+        grid-column: 1/-1;
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 768px) {
+    main > .landing--informational .landing__standfirst {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main > .landing--informational .landing__standfirst {
+        grid-column-gap: 1.5rem;
+    }
+}
+
 @media (max-width: 1023px) {
     main > .landing--informational .landing__promotional__flexible,
     main > .landing--informational .landing__promotional__heading,
@@ -61232,10 +61253,9 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 1024px) {
-    main > .landing--informational .landing__standfirst,
     main > .landing--informational .landing__promotional,
     main > .landing--informational .landing__related {
-        grid-column: 7 / span 12;
+        grid-column: 1/-1;
     }
     main > .landing--informational .landing__pathway {
         grid-column: 2/-2;
@@ -61333,8 +61353,11 @@ main .home .home__whats-happening .related-content {
     main .navigation--secondary + .landing--informational .landing__profiles__flexible {
         grid-column: 2/-2;
     }
+    main .navigation--secondary + .landing--informational .landing__pathway {
+        grid-column: 1/-1;
+    }
     main .navigation--secondary + .landing--informational .landing__pathway .pathway {
-        grid-column: 2/-2;
+        grid-column: 1/-1;
         grid-template-columns: repeat(16, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -61373,7 +61396,8 @@ main .home .home__whats-happening .related-content {
 
 .landing--informational .landing__standfirst,
 .landing--informational .landing__promotional,
-.landing--informational .landing__pathway {
+.landing--informational .landing__pathway,
+.landing--informational .landing__profiles {
     grid-column: 1/-1;
 }
 
@@ -71505,20 +71529,8 @@ main .standard-content .content {
 
 @media (max-width: 1023px) {
     main > .course--ug .course--ug__keyinfo__wrapper .course--ug__keyinfo {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
         margin-top: 1.5rem;
     }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    main > .course--ug .course--ug__keyinfo__wrapper .course--ug__keyinfo {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) {
     main > .course--ug .promo-box__wrapper {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
