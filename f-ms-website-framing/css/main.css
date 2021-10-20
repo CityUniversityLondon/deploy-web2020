@@ -61135,8 +61135,9 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 1024px) {
-    main > .landing--informational .landing__standfirst {
-        grid-column: 1/-1;
+    main > .landing--informational .landing__standfirst,
+    main > .landing--informational .landing__promotional,
+    main > .landing--informational .landing__related {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -61144,14 +61145,31 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
-    main > .landing--informational .landing__standfirst {
+    main > .landing--informational .landing__standfirst,
+    main > .landing--informational .landing__promotional,
+    main > .landing--informational .landing__related {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main > .landing--informational .landing__standfirst {
+    main > .landing--informational .landing__standfirst,
+    main > .landing--informational .landing__promotional,
+    main > .landing--informational .landing__related {
         grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main > .landing--informational .landing__standfirst,
+    main > .landing--informational .landing__related {
+        grid-column: 1/-1;
+    }
+    main > .landing--informational .landing__promotional,
+    main > .landing--informational .landing__related__content,
+    main > .landing--informational .landing__related__latest,
+    main > .landing--informational .landing__profiles__flexible {
+        grid-column: 2/-2;
     }
 }
 
@@ -61162,10 +61180,14 @@ main .home .home__whats-happening .related-content {
     main > .landing--informational .landing__promotional__cta,
     main > .landing--informational .landing__pathway__content,
     main > .landing--informational .landing__profiles__flexible,
-    main > .landing--informational .landing__related__content {
+    main > .landing--informational .landing__related__content,
+    main > .landing--informational .landing__related__latest {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
+        grid-column: 1/-1;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -61176,7 +61198,8 @@ main .home .home__whats-happening .related-content {
     main > .landing--informational .landing__promotional__cta,
     main > .landing--informational .landing__pathway__content,
     main > .landing--informational .landing__profiles__flexible,
-    main > .landing--informational .landing__related__content {
+    main > .landing--informational .landing__related__content,
+    main > .landing--informational .landing__related__latest {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
@@ -61229,6 +61252,8 @@ main .home .home__whats-happening .related-content {
         grid-column: 6 / span 14;
         margin-left: 0;
         margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -61253,8 +61278,7 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 1024px) {
-    main > .landing--informational .landing__promotional,
-    main > .landing--informational .landing__related {
+    main > .landing--informational .landing__promotional {
         grid-column: 1/-1;
     }
     main > .landing--informational .landing__pathway {
@@ -61296,15 +61320,12 @@ main .home .home__whats-happening .related-content {
     main > .landing--informational .landing__promotional__cta .cta-block li:not(:last-of-type) {
         margin-right: 1.5rem;
     }
-    main > .landing--informational .landing__related .landing__related__latest {
-        grid-column: span 24;
-    }
     main > .landing--informational .landing__related .wrapper--landing__contact {
         grid-column: 1/-1;
     }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1024px) {
     main > .landing--informational .landing__standfirst > .standfirst,
     main > .landing--informational .landing__promotional__flexible,
     main > .landing--informational .landing__promotional__heading,
