@@ -61616,9 +61616,6 @@ main .home .home__whats-happening .related-content {
     main > .landing--functional .landing--functional__finder__links__content {
         grid-column: 5 / span 16;
     }
-    main > .landing--functional .landing--functional__video .embedded-video {
-        grid-column: 2/-2;
-    }
 }
 
 @media (min-width: 1280px) {
@@ -61657,9 +61654,6 @@ main .home .home__whats-happening .related-content {
     main .navigation--secondary + .landing--functional .wrapper--finder--mini,
     main .navigation--secondary + .landing--functional .landing--functional__finder__links__content {
         grid-column: 3 / span 14;
-    }
-    main .navigation--secondary + .landing--functional .landing--functional__video .embedded-video {
-        grid-column: span 18;
     }
 }
 
@@ -61714,6 +61708,12 @@ main .home .home__whats-happening .related-content {
 .landing--functional .wrapper--landing--functional--pathway .pathway__cards .card--pathway {
     width: auto;
     margin-right: 0;
+}
+
+@media (min-width: 1025px) {
+    .landing--functional .landing--functional__video .embedded-video {
+        grid-column: 2/-2;
+    }
 }
 
 @media (max-width: 768px) {
@@ -63051,6 +63051,23 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
     padding-bottom: 1.5rem;
 }
 
+.listing .content {
+    margin: 0;
+}
+
+.listing .finder__query {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+}
+
+@media (min-width: 901px) {
+    .listing .finder__query {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 .listing .banner-text {
     background-color: #f2f2f2;
     background: linear-gradient(180deg, #d8d8d8 0%, #ffffff 100%);
@@ -63059,8 +63076,24 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
     padding-top: 1.5rem;
 }
 
-.listing .finder__query {
-    margin-top: -4rem;
+@media (max-width: 1023px) {
+    .listing .finder__query {
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .listing .finder__results {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 901px) {
+    .listing .finder__results {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .listing .wrapper--listing__content {
@@ -69306,7 +69339,7 @@ button
         grid-column: 2/-2;
     }
     main .navigation--secondary + .lifelong-learning header {
-        grid-template-columns: repeat(24, 1fr);
+        grid-template-columns: repeat(18, 1fr);
         grid-column-gap: 0;
         display: grid;
     }
@@ -69446,9 +69479,6 @@ button
 }
 
 @media (min-width: 1280px) {
-    main .navigation--secondary + .lifelong-learning header {
-        display: block;
-    }
     main .navigation--secondary + .lifelong-learning header .banner-text__content {
         margin: 0 auto;
     }
@@ -70830,24 +70860,6 @@ button
     .js main > .lifelong-learning .lifelong-learning__content .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
         grid-row: 2;
     }
-    .js main > .lifelong-learning .lifelong-learning__content .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading,
-    .js main > .lifelong-learning .lifelong-learning__content .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
-        grid-column: 1 / span 24;
-    }
-}
-
-@media screen and (min-width: 433px) and (max-width: 900px) {
-    .js main > .lifelong-learning .lifelong-learning__content .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading,
-    .js main > .lifelong-learning .lifelong-learning__content .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
-        grid-column: 5 / span 16;
-    }
-}
-
-@media screen and (min-width: 901px) {
-    .js main > .lifelong-learning .lifelong-learning__content .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__heading,
-    .js main > .lifelong-learning .lifelong-learning__content .tabs__panel:not([hidden]) .tabs__panel__content .tabs__panel__body {
-        grid-column: 7 / span 12;
-    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -70867,13 +70879,6 @@ button
 @media screen and (min-width: 1024px) and (min-width: 901px) {
     .js main > .navigation--secondary + .lifelong-learning .lifelong-learning__content .tabs__panel:not([hidden]) > .tabs__panel__content {
         grid-column-gap: 1.5rem;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .js main > .navigation--secondary + .lifelong-learning .lifelong-learning__content .tabs__panel:not([hidden]) > .tabs__panel__content .tabs__panel__heading,
-    .js main > .navigation--secondary + .lifelong-learning .lifelong-learning__content .tabs__panel:not([hidden]) > .tabs__panel__content .tabs__panel__body {
-        grid-column: 4 / span 12;
     }
 }
 
@@ -70972,6 +70977,46 @@ button
 
 .lifelong-learning .slide__controls__progress__active {
     color: #3e1031;
+}
+
+.lifelong-learning .tabs__panel__content {
+    grid-column: 1/-1;
+    margin: 0;
+    max-width: unset;
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .lifelong-learning .tabs__panel__content {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .lifelong-learning .tabs__panel__content {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.lifelong-learning .tabs__panel__content .tabs__panel__heading,
+.lifelong-learning .tabs__panel__content .tabs__panel__body {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .lifelong-learning .tabs__panel__content .tabs__panel__heading,
+    .lifelong-learning .tabs__panel__content .tabs__panel__body {
+        grid-column: 5 / span 16;
+    }
+}
+
+@media (min-width: 901px) {
+    .lifelong-learning .tabs__panel__content .tabs__panel__heading,
+    .lifelong-learning .tabs__panel__content .tabs__panel__body {
+        grid-column: 4 / span 12;
+    }
 }
 
 .lifelong-learning .slide__controls__progress__active {
