@@ -19164,15 +19164,16 @@ main article .content-wrapper {
 }
 
 main article .content {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
     grid-column: 1/-1;
 }
 
 @media (min-width: 901px) {
     main article .content {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
@@ -63994,21 +63995,18 @@ main > .news {
     }
 }
 
-.course--pgt__our-students_heading,
-.course--pgt__facilities__heading {
+.course--pgt__our-students_heading {
     grid-column: 1/-1;
     border-bottom: 0.0625rem solid #cbcbcb;
     padding-bottom: 0.5rem;
 }
 
-.course--pgt__our-students_heading .full-width-heading,
-.course--pgt__facilities__heading .full-width-heading {
+.course--pgt__our-students_heading .full-width-heading {
     grid-column: 1/-1;
 }
 
 @media (min-width: 769px) {
-    .course--pgt__our-students_heading .full-width-heading:first-child,
-    .course--pgt__facilities__heading .full-width-heading:first-child {
+    .course--pgt__our-students_heading .full-width-heading:first-child {
         grid-column: 2/-2;
     }
 }
@@ -65741,6 +65739,7 @@ main > .news {
 }
 
 .course--pgt__facilities {
+    grid-column: 1/-1;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -65831,13 +65830,51 @@ main > .news {
     padding-right: 0;
 }
 
+.course--pgt__facilities .course--pgt__facilities__heading {
+    margin: 1rem 0 0;
+    border-bottom: 0.0625rem solid #cbcbcb;
+    padding-bottom: 0.5rem;
+    grid-column: 1/-1;
+}
+
+.course--pgt__facilities .course--pgt__facilities__heading .full-width-heading {
+    grid-column: 1/-1;
+}
+
+@media (min-width: 769px) {
+    .course--pgt__facilities .course--pgt__facilities__heading .full-width-heading:first-child {
+        grid-column: 2/-2;
+    }
+}
+
+@media (min-width: 1025px) {
+    .course--pgt__facilities .course--pgt__facilities__heading {
+        grid-column: 2/-2;
+    }
+}
+
 .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
     grid-column: 1/-1;
 }
 
-.course--pgt__facilities .wrapper--course--pgt__facilities__gallery .wrapper--course--pgt__facilities__heading {
-    margin: 0;
-    grid-column: 1/-1;
+@media (min-width: 1025px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
+        grid-template-columns: repeat(18, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+    }
+}
+
+@media (min-width: 1025px) and (min-width: 768px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 1025px) and (min-width: 901px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery {
+        grid-column-gap: 1.5rem;
+    }
 }
 
 .course--pgt__facilities .wrapper--course--pgt__facilities__gallery .course--pgt__facilities__gallery__introduction {
@@ -65867,6 +65904,10 @@ main > .news {
     .course--pgt__facilities .wrapper--course--pgt__facilities__gallery .swiper-viewport {
         grid-column-gap: 1.5rem;
     }
+}
+
+.course--pgt__facilities .wrapper--course--pgt__facilities__gallery .swiper-viewport .swiper-container {
+    grid-column: 1/-1;
 }
 
 .course--pgt__tabs #structure-content .wrapper--course--pgt__awards__content__duration__qualification-type {
@@ -67935,17 +67976,8 @@ button
 @media (max-width: 1023px) {
     .wrapper--research-degree__pre-overview,
     .wrapper--research-degree__overview {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .wrapper--research-degree__pre-overview,
-    .wrapper--research-degree__overview {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
