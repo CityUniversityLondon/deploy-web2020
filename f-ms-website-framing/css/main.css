@@ -61230,8 +61230,7 @@ main .home .home__whats-happening .related-content {
     }
     main > .landing--informational .landing__promotional,
     main > .landing--informational .landing__related__content,
-    main > .landing--informational .landing__related__latest,
-    main > .landing--informational .landing__profiles__flexible {
+    main > .landing--informational .landing__related__latest {
         grid-column: 2/-2;
     }
 }
@@ -61469,7 +61468,8 @@ main .home .home__whats-happening .related-content {
     main .navigation--secondary + .landing--informational .landing__promotional__flexible,
     main .navigation--secondary + .landing--informational .landing__promotional__heading,
     main .navigation--secondary + .landing--informational .landing__promotional__content,
-    main .navigation--secondary + .landing--informational .landing__promotional__cta {
+    main .navigation--secondary + .landing--informational .landing__promotional__cta,
+    main .navigation--secondary + .landing--informational .landing__profiles__flexible {
         grid-column: 4 / span 12;
     }
 }
@@ -61617,7 +61617,7 @@ main .home .home__whats-happening .related-content {
         grid-column: 5 / span 16;
     }
     main > .landing--functional .landing--functional__video .embedded-video {
-        grid-column: span 24;
+        grid-column: 2/-2;
     }
 }
 
