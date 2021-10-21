@@ -633,10 +633,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -657,7 +660,7 @@ const className = 'accordion',
       bodyClassName = className + '__body',
       oneSecond = 1000,
       tenthOfASecond = 100,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_0__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = true;
 /**
  * Sets a heading and the button nested within to be open or closed.
@@ -668,7 +671,7 @@ const className = 'accordion',
 
 function setSection(heading, open) {
   heading.dataset.open = open;
-  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, open);
+  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, open);
 }
 /**
  * Open a section, calculate its height, then close it again.
@@ -710,7 +713,7 @@ function setupTransition(element, initialHeight) {
 
 
 function cleanupTransition(section) {
-  const open = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(section.previousElementSibling.dataset.open);
+  const open = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(section.previousElementSibling.dataset.open);
   section.style.height = null;
   section.dataset.closed = open ? 'false' : 'true';
 }
@@ -729,8 +732,9 @@ function cleanupTransition(section) {
 
 function buttonClick(button, headings, toggleOpen) {
   const heading = button.parentNode,
-        accordionSection = heading.nextElementSibling;
-  console.log('heading clicked');
+        accordionSection = heading.nextElementSibling; // updates URL hash with clicked accordion heading
+
+  window.location.hash = event.currentTarget.parentElement.id;
   /**
    * After we've transitioned the opening/closing, we want to revert to
    * letting the CSS size the element. Add a listener to do this that will
@@ -742,7 +746,7 @@ function buttonClick(button, headings, toggleOpen) {
     once: true
   });
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded))) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded))) {
     // Starting height is the current height
     setupTransition(accordionSection, accordionSection.offsetHeight + 'px'); // setTimeout lets the DOM recalculate before we continue, so the transition will fire
 
@@ -770,8 +774,8 @@ function buttonClick(button, headings, toggleOpen) {
 
     setSection(heading, true);
 
-    if (scrollTo && !(Object(_util__WEBPACK_IMPORTED_MODULE_0__["verticallyInWindow"])(heading) && Object(_util__WEBPACK_IMPORTED_MODULE_0__["verticallyInWindow"])(accordionSection))) {
-      zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
+    if (scrollTo && !(Object(_util__WEBPACK_IMPORTED_MODULE_1__["verticallyInWindow"])(heading) && Object(_util__WEBPACK_IMPORTED_MODULE_1__["verticallyInWindow"])(accordionSection))) {
+      zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(heading, scrollDuration);
     }
   }
 }
@@ -791,10 +795,10 @@ function buttonFromHeading(heading) {
         iconSpan = document.createElement('span');
   textSpan.className = headingTextClassName;
   iconSpan.className = headingIconClassName;
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, true);
   button.setAttribute('type', 'button');
   textSpan.appendChild(document.createTextNode(heading.textContent));
-  Object(_util__WEBPACK_IMPORTED_MODULE_0__["appendAll"])(wrapper, [textSpan, iconSpan]);
+  Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(wrapper, [textSpan, iconSpan]);
   button.appendChild(wrapper);
   return button;
 }
@@ -820,9 +824,9 @@ function buttonFromHeading(heading) {
 
 
 function launchAccordion(accordion) {
-  const toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(accordion.dataset.toggleopen),
-        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(accordion.dataset.defaultopen),
-        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(accordion.dataset.allowsingle),
+  const toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(accordion.dataset.toggleopen),
+        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(accordion.dataset.defaultopen),
+        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(accordion.dataset.allowsingle),
         headings = Array.from(accordion.parentNode.querySelectorAll("#".concat(accordion.id, " > .").concat(headingClassName)));
   let idLinked = false;
 
@@ -830,14 +834,14 @@ function launchAccordion(accordion) {
     /**
      * not enough content to accordion
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_0__["removeClass"])(accordion, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(accordion, className, false);
     return;
   }
 
   headings.forEach(heading => {
     const content = heading.nextElementSibling,
           button = buttonFromHeading(heading);
-    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].labelledBy, heading.id);
+    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].labelledBy, heading.id);
     content.setAttribute('role', 'region');
     heading.replaceChild(button, heading.firstChild);
     setSection(heading, false);
@@ -850,6 +854,20 @@ function launchAccordion(accordion) {
   if (defaultOpen && !idLinked) {
     setSection(headings[0], true);
     headings[0].nextElementSibling.dataset.closed = 'false';
+  }
+  /**
+   * Checks if hash ID is present in the URL then on page load it will open the corresponding tab
+   */
+  // hash use to find heading then button inside and execute below...
+
+
+  if (window.location.hash) {
+    var urlHash = window.location.hash.replace('#', '');
+    var heading = document.getElementById('' + urlHash + ''); // add code to cycle and close other accordion headings
+
+    setSection(heading, true);
+    heading.nextElementSibling.dataset.closed = 'false';
+    zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(heading, scrollDuration);
   }
 }
 
