@@ -856,14 +856,14 @@ function launchAccordion(accordion) {
     headings[0].nextElementSibling.dataset.closed = 'false';
   }
   /**
-   * Checks if hash ID is present in the URL then on page load it will open the corresponding tab
+   * Checks if hash ID is present in the URL then on page load it will open the corresponding accordordion
    */
-  // hash use to find heading then button inside and execute below...
 
 
   if (window.location.hash) {
+    //finds accordion heading in URL
     var urlHash = window.location.hash.replace('#', '');
-    var heading = document.getElementById('' + urlHash + ''); // add code to cycle and close other accordion headings
+    var heading = document.getElementById('' + urlHash + ''); //opens accordion heading + section and scroll to
 
     setSection(heading, true);
     heading.nextElementSibling.dataset.closed = 'false';
