@@ -28148,9 +28148,6 @@ form:not([class]) .form__required-note--marker,
 
 @media (max-width: 899px) {
     .featured-profiles-block {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -28158,22 +28155,8 @@ form:not([class]) .form__required-note--marker,
 
 @media (max-width: 899px) and (min-width: 901px) {
     .featured-profiles-block {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 901px) {
-    .featured-profiles-block {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 1441px) {
-    .featured-profiles-block {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -39746,6 +39729,24 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
+@media (max-width: 767px) {
+    .module-selector {
+        margin: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .module-selector {
+        margin: 0 1rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .module-selector {
+        margin: 0;
+    }
+}
+
 @media (min-width: 900px) {
     .module-selector {
         display: flex;
@@ -49468,9 +49469,6 @@ button
 
 @media (max-width: 899px) {
     .featured-profiles-block {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
@@ -49478,22 +49476,8 @@ button
 
 @media (max-width: 899px) and (min-width: 901px) {
     .featured-profiles-block {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 901px) {
-    .featured-profiles-block {
         padding-left: 2rem;
         padding-right: 2rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 1441px) {
-    .featured-profiles-block {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -53238,7 +53222,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     height: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     .finder__query {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
