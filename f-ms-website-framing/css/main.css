@@ -69053,8 +69053,7 @@ button
     main > .lifelong-learning .related-content--profiles .card {
         grid-column: 4 / -4;
     }
-    main > .lifelong-learning .lifelong-learning__video,
-    main > .lifelong-learning .lifelong-learning__related-courses {
+    main > .lifelong-learning .lifelong-learning__video {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -69062,8 +69061,22 @@ button
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    main > .lifelong-learning .lifelong-learning__video,
-    main > .lifelong-learning .lifelong-learning__related-courses {
+    main > .lifelong-learning .lifelong-learning__video {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    main > .lifelong-learning .module-selector-wrapper {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    main > .lifelong-learning .module-selector-wrapper {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
@@ -69299,6 +69312,7 @@ button
 }
 
 @media (min-width: 1024px) {
+    main .navigation--secondary + .lifelong-learning .module-selector-wrapper,
     main .navigation--secondary + .lifelong-learning .lifelong-learning__related-courses,
     main .navigation--secondary + .lifelong-learning .related-content {
         grid-column: 2/-2;
@@ -71063,10 +71077,15 @@ button
     opacity: 0.7;
 }
 
-@media (max-width: 767px) {
-    .js .lifelong-learning .slider[data-style='arrows'] + .slider__controls {
+@media (max-width: 1023px) {
+    .js .lifelong-learning .slider + .slider__controls {
         margin-right: 1rem;
     }
+}
+
+.js .lifelong-learning .slider {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 @media (max-width: 1023px) {
