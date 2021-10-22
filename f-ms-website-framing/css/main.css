@@ -54568,7 +54568,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     grid-column: 1/-1;
 }
 
-.tabs__panel__content {
+.find-us .tabs__panel__content {
     margin: 0 auto;
     max-width: 55ch;
 }
@@ -61481,7 +61481,8 @@ main .home .home__whats-happening .related-content {
 .landing--informational .landing__standfirst,
 .landing--informational .landing__promotional,
 .landing--informational .landing__pathway,
-.landing--informational .landing__profiles {
+.landing--informational .landing__profiles,
+.landing--informational .landing__profiles__profiles {
     grid-column: 1/-1;
 }
 
@@ -70953,10 +70954,6 @@ button
 
 .lifelong-learning .slide__controls__progress__active {
     color: #3e1031;
-}
-
-.lifelong-learning .tabs__panel__content {
-    max-width: unset;
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
