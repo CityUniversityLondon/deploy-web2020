@@ -1345,24 +1345,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
 /* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var core_js_modules_web_url_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/web.url.js */ "./node_modules/core-js/modules/web.url.js");
-/* harmony import */ var core_js_modules_web_url_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_url_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _finder_funnelback__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../finder/funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _components_filters_filters__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/filters/filters */ "./src/patterns/destination-leavers-higher-ed/components/filters/filters.js");
-/* harmony import */ var _components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/filters/filtersmobile */ "./src/patterns/destination-leavers-higher-ed/components/filters/filtersmobile.js");
-/* harmony import */ var _components_results_results__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/results/results */ "./src/patterns/destination-leavers-higher-ed/components/results/results.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_web_url_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.url.js */ "./node_modules/core-js/modules/web.url.js");
+/* harmony import */ var core_js_modules_web_url_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_url_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _finder_funnelback__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../finder/funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var _components_filters_filters__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/filters/filters */ "./src/patterns/destination-leavers-higher-ed/components/filters/filters.js");
+/* harmony import */ var _components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/filters/filtersmobile */ "./src/patterns/destination-leavers-higher-ed/components/filters/filtersmobile.js");
+/* harmony import */ var _components_results_results__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/results/results */ "./src/patterns/destination-leavers-higher-ed/components/results/results.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -1392,7 +1389,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_16__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_15__["reduceMotion"])() ? 0 : oneSecond,
       screenOffsetRatio = 10;
 /**
  * Retrieve current values for facets from the URL parameters.
@@ -1483,27 +1480,27 @@ function DestinationLeaversHE(props) {
     }
   }); // State objects for the Funnelback query and response
 
-  const [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_9__["useState"])(initialQuery);
-  const [funnelbackResponse, setResponse] = Object(react__WEBPACK_IMPORTED_MODULE_9__["useState"])(initialResponse); // Boolean to indicate when a query is in progress
+  const [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(initialQuery);
+  const [funnelbackResponse, setResponse] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(initialResponse); // Boolean to indicate when a query is in progress
 
-  const [updating, setUpdating] = Object(react__WEBPACK_IMPORTED_MODULE_9__["useState"])(true); // Request token from the Funnelback request object, so we can cancel if
+  const [updating, setUpdating] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(true); // Request token from the Funnelback request object, so we can cancel if
   // another request is triggered by the user
 
-  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_9__["useState"])({
+  const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])({
     cancel: () => {}
   }); // useEffect doesn't deep inspect objects, so we need an additional, plain
   // state variable to indicate that the query state has changed and the
   // component should render
   // the value isn't important, it's just easy to toggle a bool back and forth
 
-  const [update, setUpdate] = Object(react__WEBPACK_IMPORTED_MODULE_9__["useState"])(false); // Retrieve Funnelback results
+  const [update, setUpdate] = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])(false); // Retrieve Funnelback results
 
-  Object(react__WEBPACK_IMPORTED_MODULE_9__["useEffect"])(() => {
+  Object(react__WEBPACK_IMPORTED_MODULE_8__["useEffect"])(() => {
     // preserve the state
     replaceHistory(query.query, query.startRank, query.facets, query.sortType, props.config.facetLabels, props.config.sort[0].type); // indicate a request is in progress
 
     setUpdating(true);
-    query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_15___default.a.center(props.element.querySelector('.finder__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
+    query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_14___default.a.center(props.element.querySelector('.finder__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
     /**
      * cancel any request already in progress
      *
@@ -1512,7 +1509,7 @@ function DestinationLeaversHE(props) {
 
     call.cancel(); // make a new, asynchronous request to Funnelback
 
-    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_11__["find"])(query.collection, query.fixedFacets, query.query, query.sortType, query.startRank, query.numRanks, query.facets); // save the requestToken
+    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_10__["find"])(query.collection, query.fixedFacets, query.query, query.sortType, query.startRank, query.numRanks, query.facets); // save the requestToken
 
     setCall({
       cancel: () => {
@@ -1561,12 +1558,12 @@ function DestinationLeaversHE(props) {
     setUpdate(!update);
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("form", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("form", {
     className: props.config.facetLabels.length > 0 ? 'finder' : 'finder finder--nofilters',
     onSubmit: e => {
       e.preventDefault();
     }
-  }, props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_9___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_13__["default"], {
+  }, props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_12__["default"], {
     config: props.config,
     query: query,
     response: funnelbackResponse,
@@ -1574,19 +1571,19 @@ function DestinationLeaversHE(props) {
     updating: updating,
     summariseAs: props.config.summariseAs,
     clear: clear
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
     className: "wrapper--finder__filters--desktop"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_filters_filters__WEBPACK_IMPORTED_MODULE_12__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_filters_filters__WEBPACK_IMPORTED_MODULE_11__["default"], {
     config: props.config,
     query: query,
     response: funnelbackResponse,
     update: updater,
     clear: clear
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("div", {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
     className: "wrapper--destination-leavers-HE__info-text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("p", null, "If you do not see the course you are interested in, please contact the", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", null, "If you do not see the course you are interested in, please contact the", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
     href: "/prospective-students/career-development/careers-team"
-  }, "careers department"), ' ', "at City for full details")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(_components_results_results__WEBPACK_IMPORTED_MODULE_14__["default"], {
+  }, "careers department"), ' ', "at City for full details")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_results_results__WEBPACK_IMPORTED_MODULE_13__["default"], {
     clear: clear,
     config: props.config,
     query: query,
@@ -1599,8 +1596,8 @@ function DestinationLeaversHE(props) {
 }
 
 DestinationLeaversHE.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_10___default.a.object,
-  element: prop_types__WEBPACK_IMPORTED_MODULE_10___default.a.object
+  config: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_9___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (DestinationLeaversHE);
 

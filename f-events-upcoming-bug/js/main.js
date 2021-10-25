@@ -437,13 +437,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tryCatch", function() { return tryCatch; });
 /* harmony import */ var core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.search.js */ "./node_modules/core-js/modules/es.string.search.js");
 /* harmony import */ var core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns */ "./src/patterns.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./util */ "./src/util.js");
-/* harmony import */ var _patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/devcorate/devcorate */ "./src/patterns/devcorate/devcorate.js");
-/* harmony import */ var _patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./patterns/tabs/prepareAccordionTabs */ "./src/patterns/tabs/prepareAccordionTabs.js");
-
+/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns */ "./src/patterns.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util */ "./src/util.js");
+/* harmony import */ var _patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/devcorate/devcorate */ "./src/patterns/devcorate/devcorate.js");
+/* harmony import */ var _patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/tabs/prepareAccordionTabs */ "./src/patterns/tabs/prepareAccordionTabs.js");
 
 
 
@@ -470,7 +467,7 @@ function tryCatch(f) {
     return f();
   } catch (e) {
     // console.log(e);
-    Object(_util__WEBPACK_IMPORTED_MODULE_3__["gaEvent"])('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "Pattern launch ".concat(e.fileName, " (").concat(window.location, ")"), true);
+    Object(_util__WEBPACK_IMPORTED_MODULE_2__["gaEvent"])('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "Pattern launch ".concat(e.fileName, " (").concat(window.location, ")"), true);
   }
 }
 /**
@@ -502,7 +499,7 @@ function launchPattern(pattern) {
 
 function accordionizeTabs(root) {
   Array.from(root.querySelectorAll('.tabs')).filter(elem => elem.className.indexOf('.tabs-no-js')).forEach(elem => {
-    const potential = tryCatch(() => Object(_patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_5__["default"])(elem));
+    const potential = tryCatch(() => Object(_patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_4__["default"])(elem));
     potential && accordionizeTabs(potential);
   });
 }
@@ -520,8 +517,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }, false);
     // }
     Array.from(document.getElementsByTagName('html')).forEach(html => {
-      let ie = Object(_util__WEBPACK_IMPORTED_MODULE_3__["detectIE"])();
-      Object(_util__WEBPACK_IMPORTED_MODULE_3__["removeClass"])(html, 'no-js', false);
+      let ie = Object(_util__WEBPACK_IMPORTED_MODULE_2__["detectIE"])();
+      Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(html, 'no-js', false);
 
       if (ie >= edgeVersion) {
         html.className = (html.className + ' js ' + 'edge').trim();
@@ -530,10 +527,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     accordionizeTabs(document);
-    _patterns__WEBPACK_IMPORTED_MODULE_2__["default"].forEach(launchPattern);
-    const parameters = Object(_util__WEBPACK_IMPORTED_MODULE_3__["parametersToObject"])(location.search);
-    parameters['dev'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_4__["devcorate"])(document.querySelector('body'), 'dev', parameters['dev']);
-    parameters['rel'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_4__["devcorate"])(document.querySelector('body'), 'rel', parameters['rel']);
+    _patterns__WEBPACK_IMPORTED_MODULE_1__["default"].forEach(launchPattern);
+    const parameters = Object(_util__WEBPACK_IMPORTED_MODULE_2__["parametersToObject"])(location.search);
+    parameters['dev'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_3__["devcorate"])(document.querySelector('body'), 'dev', parameters['dev']);
+    parameters['rel'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_3__["devcorate"])(document.querySelector('body'), 'rel', parameters['rel']);
   }
 }, false);
 
@@ -1098,11 +1095,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_match_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_match_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
 /* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _action_on_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../action-on-scroll */ "./src/action-on-scroll.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
-
+/* harmony import */ var _action_on_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../action-on-scroll */ "./src/action-on-scroll.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
 
@@ -1244,7 +1238,7 @@ function init(elm) {
    * check if browser support IntersectionObserver api
    */
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_4__["checkIntersectionObserver"])()) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["checkIntersectionObserver"])()) {
     lazyNumbers.forEach(function (lazyUnit) {
       initNumberAnimation(lazyUnit);
       /**
@@ -1252,7 +1246,7 @@ function init(elm) {
        * to animate when element is intersecting
        */
 
-      Object(_action_on_scroll__WEBPACK_IMPORTED_MODULE_3__["actionOnScroll"])(lazyUnit, runNumberAnimation);
+      Object(_action_on_scroll__WEBPACK_IMPORTED_MODULE_2__["actionOnScroll"])(lazyUnit, runNumberAnimation);
     });
   }
 }
@@ -2329,10 +2323,7 @@ function launchFeedback(elem) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
 /* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
@@ -2606,6 +2597,15 @@ function createMap(mapContainer) {
       } else {
         html = '<div id="info-window" style="min-height: 60px;"><h3>' + markerConfig.name + '</h3>';
       }
+    } // calculates minutes label as singular or plurar
+
+
+    function minutesFormat(mins) {
+      if (parseInt(markerConfig.walkingDistance) > 1) {
+        return ' minutes';
+      } else {
+        return ' minute';
+      }
     } // add description and close div element
     //html += markerConfig.description.replace(/\<h2/g, '<h4').replace(/\h2>/g, 'h4>')  + '</div>';
 
@@ -2615,6 +2615,7 @@ function createMap(mapContainer) {
     markerConfig.roomNumber ? html += 'Room ' + markerConfig.roomNumber + '</br>' : null;
     markerConfig.floor ? html += 'Floor ' + markerConfig.floor + '</br>' : null;
     markerConfig.building ? html += markerConfig.building + '</br>' : null;
+    markerConfig.buildingAdditionalInfo ? html += markerConfig.buildingAdditionalInfo + '</br>' : null;
     markerConfig.street1 ? html += markerConfig.street1 + '</br>' : null;
     markerConfig.street2 ? html += markerConfig.street2 + '</br>' : null;
     markerConfig.city ? html += markerConfig.city + '</br>' : null;
@@ -2624,7 +2625,7 @@ function createMap(mapContainer) {
     markerConfig.campus ? html += markerConfig.campus + '</br>' : null;
     html += '</p>';
     markerConfig.supports ? html += '<p>' + markerConfig.supports + '</p>' : null;
-    markerConfig.walkingDistance ? html += '<p>Walking distance to campus: ' + markerConfig.walkingDistance + '</p>' : null;
+    markerConfig.walkingDistance ? html += '<p>Walking distance to campus: </br>' + markerConfig.walkingDistance + minutesFormat(markerConfig.walkingDistance) + '</p>' : null;
     markerConfig.entrance ? html += '<p>' + markerConfig.entrance + '</p>' : null;
     markerConfig.accessibility ? html += '<p>' + markerConfig.accessibility + '</p>' : null; // Build opening hours from arrays
 
@@ -2685,7 +2686,7 @@ function createMap(mapContainer) {
       return updateHash(marker);
     }); // create list element
 
-    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', [{
+    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('li', [{
       label: 'id',
       val: 'building-' + markerConfig.id
     }, {
@@ -2693,7 +2694,7 @@ function createMap(mapContainer) {
       val: 'building'
     }]); // create a element with click handler to open infoWindow
 
-    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('a', [{
       label: 'html',
       val: '<span>' + markerConfig.name + '</span>'
     }, {
@@ -2779,6 +2780,7 @@ function createMap(mapContainer) {
       markerConfig.entrance = $self.getElementsByTagName('entrance')[0].textContent;
       markerConfig.floor = $self.getElementsByTagName('floor')[0].textContent;
       markerConfig.building = $self.getElementsByTagName('building')[0].textContent;
+      markerConfig.buildingAdditionalInfo = $self.getElementsByTagName('buildingAdditionalInfo')[0].textContent;
       markerConfig.campus = $self.getElementsByTagName('campus')[0].textContent;
       markerConfig.street1 = $self.getElementsByTagName('street1')[0].textContent;
       markerConfig.street2 = $self.getElementsByTagName('street2')[0].textContent;
@@ -2813,7 +2815,7 @@ function createMap(mapContainer) {
 
 
       cityLayers.buildingsObj[marker.id] = marker;
-      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('a', [{
         label: 'content',
         val: markerConfig.name
       }, {
@@ -2847,11 +2849,11 @@ function createMap(mapContainer) {
 
         if (searchString.length > 0) {
           // creates HTML structure for suggestion list
-          let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+          let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('div', [{
             label: 'class',
             val: 'query__suggestions__wrapper'
           }]);
-          let createList = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
+          let createList = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('ul', [{
             label: 'id',
             val: 'query__suggestions'
           }, {
@@ -2864,7 +2866,7 @@ function createMap(mapContainer) {
           searchBox.parentElement.appendChild(createListWrapper).appendChild(createList);
           let list = document.getElementById('query__suggestions'); // adds search clear button
 
-          let clearSearchButton = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
+          let clearSearchButton = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('button', [{
             label: 'class',
             val: 'campus-map__controls__search__clear'
           }, {
@@ -2889,8 +2891,8 @@ function createMap(mapContainer) {
           Array.from(searchTags).forEach(function (tag) {
             if (tag.textContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1) {
               if (counter < maxNumberSuggestions) {
-                let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
-                let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+                let item = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('li', []);
+                let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('a', [{
                   label: 'tabindex',
                   val: -1
                 }, {
@@ -3015,7 +3017,7 @@ function createMap(mapContainer) {
 
   function init() {
     mapContainer.classList.add('loading');
-    mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('i', [{
+    mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_1__["createHTMLElement"])('i', [{
       label: 'class',
       val: 'fa fa-refresh fa-spin loading-fa-icon'
     }]));
@@ -5010,12 +5012,8 @@ function trapFocus(modal) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
-
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 /**
@@ -5052,7 +5050,7 @@ function createCloseAll(navigation, veil) {
   return () => {
     const buttons = Array.from(navigation.querySelectorAll('.navigation--primary__level1 > .navigation__button'));
     buttons.forEach(button => {
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, 'false');
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'false');
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(openText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     });
     veil.dataset.on = 'false';
@@ -5069,13 +5067,13 @@ function createCloseAll(navigation, veil) {
 
 function createSectionToggle(button, closeAll, veil) {
   return () => {
-    const open = !Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded));
+    const open = !Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded));
     closeAll();
 
     if (open) {
       button.closest(".".concat(classNameSpecific)).dataset.open = 'true';
       veil.dataset.on = 'true';
-      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, open);
+      button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, open);
       button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(closeText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
     }
   };
@@ -5100,8 +5098,8 @@ function prepareTopLevel(navigation, veil, closeAll) {
           toggleSection = createSectionToggle(button, closeAll, veil); // LIs have tabindex so they're accessible with no JS, remove it
 
     el.removeAttribute('tabindex');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, 'false');
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].owns, el.nextElementSibling.id);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'false');
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].owns, el.nextElementSibling.id);
     button.setAttribute('type', 'button');
     button.id = el.nextElementSibling.id + '-button';
     button.className = buttonClassName;
@@ -5110,7 +5108,7 @@ function prepareTopLevel(navigation, veil, closeAll) {
     srNavigationSpan.className = navigationTextClassName;
     srNavigationSpan.appendChild(document.createTextNode(navigationText));
     button.addEventListener('click', () => toggleSection(), true);
-    Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_0__["appendAll"])(buttonDiv, [srOpenCloseSpan, document.createTextNode(' '), el, document.createTextNode(' '), srNavigationSpan]);
     button.append(buttonDiv);
     listItem.prepend(button);
   });
@@ -5130,7 +5128,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
         restButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:first-of-type) > .navigation__button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   firstButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(firstButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
       closeAll();
     }
   });
@@ -5140,7 +5138,7 @@ function setupTabPrevious(navigation, closeAll, veil) {
           lastNavigationAnchor = previousSection.querySelector('.navigation__level2 > li:last-of-type > a') ? previousSection.querySelector('.navigation__level2 > li:last-of-type > a') : previousSection.querySelector('.navigation__level2 > li:last-of-type').previousElementSibling.querySelector('a'),
           togglePreviousSection = createSectionToggle(previousSectionButton, closeAll, veil);
     thisSectionButton.addEventListener('keydown', e => {
-      if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
+      if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(thisSectionButton.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded)) && tabKey === e.key && e.shiftKey) {
         e.preventDefault();
         togglePreviousSection();
         lastNavigationAnchor.focus();
@@ -5163,7 +5161,7 @@ function setupTabNext(navigation, closeAll, veil) {
         restSectionsCloseButtons = Array.from(navigation.querySelectorAll('.navigation--primary__level1:not(:last-of-type) .wrapper--navigation--primary__menu__close button')); // If we tab out of the open, first menu into the other header content, close the menu.
 
   closeButton.addEventListener('keydown', e => {
-    if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded)) && tabKey === e.key && !e.shiftKey) {
+    if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(closeButton.closest('.navigation--primary__level1').querySelector('button').getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded)) && tabKey === e.key && !e.shiftKey) {
       closeAll();
     }
   });
@@ -5236,11 +5234,11 @@ function addCloseButtons(navigation, closeAll) {
           text = 'Close ' + header.innerText.trim() + ' menu';
     closeButtonText.appendChild(document.createTextNode(text));
     closeButtonText.className = 'navigation--primary__menu__close__text';
-    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
+    closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, 'true');
     closeButtonIcon.className = 'fas fa-fw fa-times navigation--primary__menu__close__icon';
     closeButtonWrapper.className = 'wrapper--navigation--primary__menu__close';
     closeButton.className = 'navigation--primary__menu__close';
-    Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_0__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
     closeButton.appendChild(closeButtonDiv);
     closeButton.setAttribute('type', 'button');
     closeButton.title = text;
@@ -5264,7 +5262,7 @@ function launchPrimaryNavigation(navigation) {
   const veil = document.createElement('div'),
         closeAll = createCloseAll(navigation, veil);
   veil.className = veilClassName;
-  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
+  veil.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, 'true');
   document.querySelector('body').insertBefore(veil, document.querySelector('main'));
   prepareTopLevel(navigation, veil, closeAll);
   prepareLowerLevels(navigation, veil);
@@ -6662,12 +6660,8 @@ function launchSlider(slider) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 /**
@@ -6707,14 +6701,14 @@ function accordionize(tabs) {
           accordionWrapper = document.createElement('div');
     accordionHeading.className = 'accordion__heading';
     accordionHeading.id = "accordion".concat(tabs.dataset.assetid, "-header").concat(panel.dataset.assetid);
-    accordionHeading.dataset.tabid = panel.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].labelledBy);
+    accordionHeading.dataset.tabid = panel.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].labelledBy);
     accordionHeading.innerText = heading.innerText.trim();
     accordionSection.className = 'accordion__body';
     accordionSection.id = "accordion".concat(tabs.dataset.assetid, "-body").concat(panel.dataset.assetid);
     accordionWrapper.className = 'wrapper--accordion__body__content';
     accordionWrapper.innerHTML = body.innerHTML;
     accordionSection.appendChild(accordionWrapper);
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(accordion, [accordionHeading, accordionSection]);
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(accordion, [accordionHeading, accordionSection]);
   });
   tabs.parentNode.insertBefore(wrapper, tabs);
   wrapper.appendChild(tabs);

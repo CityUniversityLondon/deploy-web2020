@@ -306,7 +306,6 @@ function HowToApply(props) {
         promptQualification = 'Choose the qualification you wish to apply for:',
         promptRoute = 'Choose the route you wish to apply for:',
         promptEntryPoint = 'Choose the entry point you wish to apply for:',
-        promptMethod = 'Apply online now:',
         furtherStepsPending = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", {
     className: "how-to-apply--pgt--js__modal__progress__next"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
@@ -374,9 +373,9 @@ function HowToApply(props) {
    */
 
 
-  function filterMethodsData(methods) {
-    // Methods of study pre-selection prompt text
-    setWindowPrompt(promptMethod); // Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
+  function filterMethodsData(methods, dateSpecificPrompt) {
+    // Methods of study pre-selection prompt text. If one date exist, this will display in the prompt text; if multiple dates these will render as buttons
+    dateSpecificPrompt ? setWindowPrompt(dateSpecificPrompt) : null; // Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
 
     clearSelectionOptions(); // Variables scoped to this function
 
@@ -512,7 +511,7 @@ function HowToApply(props) {
               let dateSrc = e.target.getAttribute('data-date-src');
               selectedDateValue = formatDate(dateSrc);
               selectedDateData = data.filter(fd => fd.header === dateSrc);
-              filterMethodsData(selectedDateData[0]['options'][0]['options']);
+              filterMethodsData(selectedDateData[0]['options'][0]['options'], 'Apply online now:');
               setFirstStep(false);
             }
           }, formatDate(fd['header']))));
@@ -551,7 +550,9 @@ function HowToApply(props) {
 
   function filterDatesData(data) {
     // Date pre-selection prompt text
-    setWindowPrompt(promptEntryPoint); // Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
+    setWindowPrompt(promptEntryPoint); // data.length === 1 ? setPromptMethod('single') : setPromptMethod('multiple');
+    // setDatesData(data[0]['header']);
+    // Clear any previously rendered selection buttons/links from the state to prevent superfluous button/link rendering
 
     clearSelectionOptions(); // Empty relevant state variables to remove superfluous progress navigation rendering
 
@@ -687,7 +688,7 @@ function HowToApply(props) {
                       let dateSrc = e.target.getAttribute('data-date-src');
                       selectedDateValue = formatDate(dateSrc);
                       selectedDateData = data.filter(fd => fd.header === dateSrc);
-                      filterMethodsData(selectedDateData[0]['options'][0]['options']);
+                      filterMethodsData(selectedDateData[0]['options'][0]['options'], 'Apply now for ' + formatDate(selectedDateData[0]['header']) + ' entry:');
                       setFirstStep(false);
                     }
                   }, formatDate(db))));
@@ -719,8 +720,8 @@ function HowToApply(props) {
               }
             }
           } else {
-            // Single date; move to methods function
-            filterMethodsData(data[0]['options'][0]['options']);
+            // Single date; pass date value to methods function
+            filterMethodsData(data[0]['options'][0]['options'], 'Apply for ' + formatDate(data[0]['header']) + ' entry:');
           }
         });
       });
