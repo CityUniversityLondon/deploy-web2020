@@ -55940,15 +55940,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     opacity: 1;
 }
 
-#particles-js canvas {
-    display: block;
-    vertical-align: bottom;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    left: 0;
-}
-
 @media (max-width: 1023px) {
     main > .case-study--business .case-study--business__overview__main__wrapper,
     main > .case-study--business .case-study--business__cta {
@@ -61185,6 +61176,7 @@ main .home .home__whats-happening .related-content {
 @media (min-width: 1024px) {
     main > .landing--informational .landing__standfirst,
     main > .landing--informational .landing__promotional,
+    main > .landing--informational .landing__profiles,
     main > .landing--informational .landing__related {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
@@ -61195,6 +61187,7 @@ main .home .home__whats-happening .related-content {
 @media (min-width: 1024px) and (min-width: 768px) {
     main > .landing--informational .landing__standfirst,
     main > .landing--informational .landing__promotional,
+    main > .landing--informational .landing__profiles,
     main > .landing--informational .landing__related {
         grid-column-gap: 1rem;
     }
@@ -61203,6 +61196,7 @@ main .home .home__whats-happening .related-content {
 @media (min-width: 1024px) and (min-width: 901px) {
     main > .landing--informational .landing__standfirst,
     main > .landing--informational .landing__promotional,
+    main > .landing--informational .landing__profiles,
     main > .landing--informational .landing__related {
         grid-column-gap: 1.5rem;
     }
@@ -61215,7 +61209,9 @@ main .home .home__whats-happening .related-content {
     }
     main > .landing--informational .landing__promotional,
     main > .landing--informational .landing__related__content,
-    main > .landing--informational .landing__related__latest {
+    main > .landing--informational .landing__related__latest,
+    main > .landing--informational .landing__profiles__flexible,
+    main > .landing--informational .landing__pathway__content {
         grid-column: 2/-2;
     }
 }
