@@ -19180,6 +19180,7 @@ main article .content {
 @media (min-width: 1024px) {
     main article .content {
         grid-column: 2/-2;
+        margin: 0;
     }
 }
 
@@ -61351,9 +61352,6 @@ main .home .home__whats-happening .related-content {
     main > .landing--informational .landing__pathway .pathway {
         grid-column: 1/-1;
     }
-    main > .landing--informational .landing__pathway .landing__pathway__content {
-        grid-column: 6/-6;
-    }
     main > .landing--informational .landing__promotional__cta {
         grid-column: 4 / span 18;
     }
@@ -61453,7 +61451,8 @@ main .home .home__whats-happening .related-content {
     main .navigation--secondary + .landing--informational .landing__promotional__heading,
     main .navigation--secondary + .landing--informational .landing__promotional__content,
     main .navigation--secondary + .landing--informational .landing__promotional__cta,
-    main .navigation--secondary + .landing--informational .landing__profiles__flexible {
+    main .navigation--secondary + .landing--informational .landing__profiles__flexible,
+    main .navigation--secondary + .landing--informational .landing__pathway__content {
         grid-column: 4 / span 12;
     }
 }
@@ -61497,7 +61496,6 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (max-width: 1023px) {
-    main > .landing--functional .wrapper--landing--functional__content,
     main > .landing--functional .landing--functional__video {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -61506,7 +61504,6 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    main > .landing--functional .wrapper--landing--functional__content,
     main > .landing--functional .landing--functional__video {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -61514,7 +61511,6 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (max-width: 1023px) {
-    main > .landing--functional .landing--functional__content,
     main > .landing--functional .landing__contact {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
@@ -61522,7 +61518,6 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    main > .landing--functional .landing--functional__content,
     main > .landing--functional .landing__contact {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -61642,8 +61637,19 @@ main .home .home__whats-happening .related-content {
     }
 }
 
-.landing--functional .landing--functional__gradient {
-    background-image: linear-gradient(to top, #ffffff, #f2f2f2);
+@media (max-width: 768px) {
+    .landing--functional .landing--functional__content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 901px) {
+    .landing--functional .landing--functional__content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .landing--functional .landing--functional__content > h2:first-of-type {
@@ -71229,6 +71235,12 @@ main .standard-content .content {
     padding-bottom: 1.5rem;
 }
 
+@media (min-width: 768px) {
+    .standard-content .content {
+        margin: 0;
+    }
+}
+
 .visit-us {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
@@ -74220,10 +74232,6 @@ main .standard-content .content {
     .school__content__links--left {
         margin-bottom: 1rem;
     }
-}
-
-.school__top-gradient {
-    background-image: linear-gradient(to top, #ffffff, #f2f2f2);
 }
 
 .school__top-gradient .cta-block {
