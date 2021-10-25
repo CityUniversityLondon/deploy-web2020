@@ -60866,6 +60866,17 @@ main .home .home__whats-happening .related-content {
     }
 }
 
+@media (min-width: 1024px) and (max-width: 1279px) {
+    main .home .promo-area__wrap .layout__right--split .promo-area__image,
+    main .home .promo-area__wrap .layout__left--split .promo-area__image {
+        grid-column: 2/15;
+    }
+    main .home .promo-area__wrap .layout__right--split .promo-area__content,
+    main .home .promo-area__wrap .layout__left--split .promo-area__content {
+        grid-column: 14/-2;
+    }
+}
+
 @media (max-width: 1023px) {
     main > .landing--informational .landing__contact {
         padding-left: 1.5rem;
@@ -61203,48 +61214,11 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 1024px) {
-    main > .landing--informational .landing__standfirst,
-    main > .landing--informational .landing__related {
-        grid-column: 1/-1;
-    }
     main > .landing--informational .landing__promotional,
     main > .landing--informational .landing__related__content,
     main > .landing--informational .landing__related__latest,
-    main > .landing--informational .landing__profiles__flexible,
-    main > .landing--informational .landing__pathway__content {
+    main > .landing--informational .landing__profiles__flexible {
         grid-column: 2/-2;
-    }
-}
-
-@media (max-width: 1023px) {
-    main > .landing--informational .landing__promotional__flexible,
-    main > .landing--informational .landing__promotional__heading,
-    main > .landing--informational .landing__promotional__content,
-    main > .landing--informational .landing__promotional__cta,
-    main > .landing--informational .landing__pathway__content,
-    main > .landing--informational .landing__profiles__flexible,
-    main > .landing--informational .landing__related__content,
-    main > .landing--informational .landing__related__latest {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-        grid-column: 1/-1;
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    main > .landing--informational .landing__promotional__flexible,
-    main > .landing--informational .landing__promotional__heading,
-    main > .landing--informational .landing__promotional__content,
-    main > .landing--informational .landing__promotional__cta,
-    main > .landing--informational .landing__pathway__content,
-    main > .landing--informational .landing__profiles__flexible,
-    main > .landing--informational .landing__related__content,
-    main > .landing--informational .landing__related__latest {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
     }
 }
 
@@ -61321,9 +61295,6 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 1024px) {
-    main > .landing--informational .landing__promotional {
-        grid-column: 1/-1;
-    }
     main > .landing--informational .landing__pathway {
         grid-column: 2/-2;
         display: grid;
@@ -61348,8 +61319,17 @@ main .home .home__whats-happening .related-content {
     main > .landing--informational .landing__pathway .pathway {
         grid-column: 1/-1;
     }
+    main > .landing--informational .landing__standfirst > .standfirst,
+    main > .landing--informational .landing__promotional__flexible,
+    main > .landing--informational .landing__promotional__heading,
+    main > .landing--informational .landing__promotional__content {
+        grid-column: 7 / span 12;
+    }
+    main > .landing--informational .landing__pathway__content {
+        grid-column: 6 / span 13;
+    }
     main > .landing--informational .landing__promotional__cta {
-        grid-column: 4 / span 18;
+        grid-column: 5 / span 16;
     }
     main > .landing--informational .landing__promotional__cta .cta-block {
         display: flex;
@@ -61362,18 +61342,6 @@ main .home .home__whats-happening .related-content {
     }
     main > .landing--informational .landing__related .wrapper--landing__contact {
         grid-column: 1/-1;
-    }
-}
-
-@media (min-width: 1024px) {
-    main > .landing--informational .landing__standfirst > .standfirst,
-    main > .landing--informational .landing__promotional__flexible,
-    main > .landing--informational .landing__promotional__heading,
-    main > .landing--informational .landing__promotional__content {
-        grid-column: 7 / span 12;
-    }
-    main > .landing--informational .landing__promotional__cta {
-        grid-column: 5 / span 16;
     }
 }
 
@@ -61461,8 +61429,41 @@ main .home .home__whats-happening .related-content {
 .landing--informational .landing__promotional,
 .landing--informational .landing__pathway,
 .landing--informational .landing__profiles,
-.landing--informational .landing__profiles__profiles {
+.landing--informational .landing__profiles__profiles,
+.landing--informational .landing__related {
     grid-column: 1/-1;
+}
+
+@media (max-width: 1023px) {
+    .landing--informational .landing__promotional__flexible,
+    .landing--informational .landing__promotional__heading,
+    .landing--informational .landing__promotional__content,
+    .landing--informational .landing__promotional__cta,
+    .landing--informational .landing__pathway__content,
+    .landing--informational .landing__profiles__flexible,
+    .landing--informational .landing__related__content,
+    .landing--informational .landing__related__latest {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        grid-column: 1/-1;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .landing--informational .landing__promotional__flexible,
+    .landing--informational .landing__promotional__heading,
+    .landing--informational .landing__promotional__content,
+    .landing--informational .landing__promotional__cta,
+    .landing--informational .landing__pathway__content,
+    .landing--informational .landing__profiles__flexible,
+    .landing--informational .landing__related__content,
+    .landing--informational .landing__related__latest {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 .landing--informational .landing__promotional__flexible {
@@ -74086,8 +74087,7 @@ main .standard-content .content {
         grid-column: 10/-2;
     }
     main .navigation--secondary + .school .school__content .promo-area,
-    main .navigation--secondary + .school .school__content .swiper-viewport,
-    main .navigation--secondary + .school .school__content .school__content__pathway {
+    main .navigation--secondary + .school .school__content .swiper-viewport {
         grid-column: 1/-1;
     }
     main .navigation--secondary + .school .school__content .school__content__middle-wrapper,
@@ -74163,9 +74163,15 @@ main .standard-content .content {
 }
 
 @media (min-width: 1024px) {
+    .school__content__pathway {
+        grid-column: 2/-2;
+    }
     .school__content__pathway .pathway {
         margin-top: 0;
         padding-top: 0;
+    }
+    .school__content__pathway .pathway .pathway__cards {
+        padding: 0;
     }
     .school__content__pathway .pathway-image-cards__blocks {
         display: grid;
@@ -74206,10 +74212,13 @@ main .standard-content .content {
     .school__content__cta,
     .school__content__links,
     .school__content__facilities h2,
-    .school__content__video {
+    .school__content__video,
+    .school__content__pathway {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -74218,7 +74227,8 @@ main .standard-content .content {
     .school__content__cta,
     .school__content__links,
     .school__content__facilities h2,
-    .school__content__video {
+    .school__content__video,
+    .school__content__pathway {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
@@ -74228,6 +74238,11 @@ main .standard-content .content {
     .school__content__links--left {
         margin-bottom: 1rem;
     }
+}
+
+.pathway .pathway__cards {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .school__top-gradient .cta-block {
