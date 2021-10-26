@@ -6781,14 +6781,10 @@ function prepareAccordionTabs(tabs) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
-
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 /**
@@ -6812,7 +6808,7 @@ const className = 'tabs',
       arrowRight = 'ArrowRight',
       arrowDown = 'ArrowDown',
       oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = false;
 /**
  * Set the attributes of a tab to be selected or not selected.
@@ -6824,12 +6820,12 @@ const className = 'tabs',
  */
 
 function toggleButton(button, selected) {
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].selected, selected);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].selected, selected);
 
   if (selected) {
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].current, true);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].current, true);
   } else {
-    button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].current);
+    button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].current);
   }
 }
 /**
@@ -6863,7 +6859,7 @@ function selectTab(newTab) {
    */
 
   newTab.focus();
-  scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(tabs, scrollDuration);
+  scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.to(tabs, scrollDuration);
   /**
    * Updates URL to include selected tab's ID address
    */
@@ -6892,7 +6888,7 @@ function selectTabEvent(e, newTab) {
 
 
 function keyEvents(e, tabs) {
-  const currentTab = tabs.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].selected, "=\"true\"]")),
+  const currentTab = tabs.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].selected, "=\"true\"]")),
         currentTabLI = currentTab.parentNode;
   let newTab = null;
 
@@ -7017,7 +7013,7 @@ function launchTabs(tabs) {
     /**
      * don't make one tab into a tabbed section, makes no sense
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(tabs, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(tabs, className, false);
     return;
   }
 
@@ -7036,21 +7032,23 @@ function launchTabs(tabs) {
    */
 
   if (window.location.hash) {
-    var urlHash = window.location.hash.replace('#', '');
-    var button = document.getElementById('' + urlHash + '');
-    var isTabAccordion = document.querySelector('.tabs--accordion #' + urlHash + '');
-    var isTab = document.querySelector('.tabs #' + urlHash + '');
-    var viewportWidth = window.innerWidth;
+    let urlHash = window.location.hash; // checks if button in Hash is found inside this tabs pattern
 
-    if (isTabAccordion && 768 < viewportWidth) {
-      // condition when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
+    let button = tabs.querySelector('' + urlHash + ''); // determins if the tabs pattern is 'tabs only' or tabs turning into accordions on smaller viewports
+
+    let isTabAccordion;
+    tabs.parentElement.className == 'tabs--accordion' ? isTabAccordion = true : isTabAccordion = false;
+    let viewportWidth = window.innerWidth;
+
+    if (isTabAccordion && button && 768 < viewportWidth) {
+      // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
       console.log("tabs accordion in big viewport executed");
       selectTab(button);
-    } else if (isTabAccordion && viewportWidth < 769) {
-      // condition when hash in URL is of a 'tab /accordion'. On smaller viewports accordions are present, 
+    } else if (isTabAccordion && button && viewportWidth < 769) {
+      // condition 2, when hash in URL is of a 'tab /accordion'. On smaller viewports accordions are present, 
       // so no tab behaviour will be triggered.
       console.log("tabs NOT executed");
-    } else if (isTab) {
+    } else if (button) {
       // condition when hash in URL is of a 'always' tabs, regardless of viewport width
       console.log("tabs always executed");
       selectTab(button);
