@@ -7038,18 +7038,19 @@ function launchTabs(tabs) {
   if (window.location.hash) {
     var urlHash = window.location.hash.replace('#', '');
     var button = document.getElementById('' + urlHash + '');
-    var tabAccordion = document.querySelector('.tabs--accordion #' + urlHash + '');
+    var isTabAccordion = document.querySelector('.tabs--accordion #' + urlHash + '');
+    var isTab = document.querySelector('.tabs #' + urlHash + '');
     var viewportWidth = window.innerWidth;
 
-    if (tabAccordion && 768 < viewportWidth) {
+    if (isTabAccordion && 768 < viewportWidth) {
       // condition when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
       console.log("tabs accordion in big viewport executed");
       selectTab(button);
-    } else if (tabAccordion && viewportWidth < 769) {
+    } else if (isTabAccordion && viewportWidth < 769) {
       // condition when hash in URL is of a 'tab /accordion'. On smaller viewports accordions are present, 
       // so no tab behaviour will be triggered.
       console.log("tabs NOT executed");
-    } else {
+    } else if (isTab) {
       // condition when hash in URL is of a 'always' tabs, regardless of viewport width
       console.log("tabs always executed");
       selectTab(button);
