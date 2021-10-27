@@ -870,19 +870,24 @@ function launchAccordion(accordion) {
       // condition when hash in URL is of a 'always' accordion, regardless of viewport width
       console.log("accordions ALWAYS executed"); //opens accordion heading + section and scroll to
 
-      setSection(heading, true);
-      heading.nextElementSibling.dataset.closed = 'false';
-      zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(heading, scrollDuration);
+      window.onload = function () {
+        setSection(heading, true);
+        heading.nextElementSibling.dataset.closed = 'false';
+        zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(heading, scrollDuration);
+      };
     } // determines if the hash is perhaps of an accordion which kicks in on smaller viewports, as part of a tabs / accordion pattern
 
 
     if (accordion.parentElement.className == 'tabs--accordion' && accordion.parentElement.querySelector('' + urlHash + '') && viewportWidth < 769) {
       console.log("tabs accordion activated");
       let hashConvert = urlHash.replace('tabs', 'accordion').replace('link', 'header');
-      heading = accordion.parentElement.querySelector('' + hashConvert + '');
-      setSection(heading, true);
-      heading.nextElementSibling.dataset.closed = 'false';
-      zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(heading, scrollDuration);
+
+      window.onload = function () {
+        heading = accordion.parentElement.querySelector('' + hashConvert + '');
+        setSection(heading, true);
+        heading.nextElementSibling.dataset.closed = 'false';
+        zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(heading, scrollDuration);
+      };
     }
   }
 }
@@ -7040,15 +7045,17 @@ function launchTabs(tabs) {
       if (isTabAccordion && 768 < viewportWidth) {
         // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
         console.log("tabs accordion in big viewport executed");
-        selectTab(button);
-      } else if (isTabAccordion && viewportWidth < 769) {
-        // condition 2, when hash in URL is of a 'tab /accordion'. On smaller viewports accordions are present, 
-        // so no tab behaviour will be triggered.
-        console.log("tabs NOT executed");
-      } else {
+
+        window.onload = function () {
+          selectTab(button);
+        };
+      } else if (!isTabAccordion) {
         // condition when hash in URL is of a 'always' tabs, regardless of viewport width
         console.log("tabs always executed");
-        selectTab(button);
+
+        window.onload = function () {
+          selectTab(button);
+        };
       }
     }
   }
