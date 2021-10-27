@@ -862,29 +862,24 @@ function launchAccordion(accordion) {
 
   if (window.location.hash) {
     //finds accordion heading in URL
-    var urlHash = window.location.hash.replace('#', '');
-    var heading = document.getElementById('' + urlHash + '');
-    var tabAccordion = document.querySelector('.tabs--accordion #' + urlHash + '');
-    var viewportWidth = window.innerWidth;
+    let urlHash = window.location.hash;
+    let heading = accordion.querySelector('' + urlHash + '');
+    let viewportWidth = window.innerWidth;
 
-    if (tabAccordion && 768 < viewportWidth) {
-      // condition when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present, 
-      // so no accordion behaviour will be triggered
-      console.log("accordions NOT executed");
-    } else if (tabAccordion && viewportWidth < 769) {
-      // condition when hash in URL is of a 'tab /accordion'. On smaller viewports accordions are present,
-      // so hash of tab gets converted to accordion hash
-      var hashConvert = urlHash.replace('#', '').replace('tabs', 'accordion').replace('link', 'header');
-      heading = document.getElementById('' + hashConvert + '');
-      console.log("accordions small viewport executed");
-      console.log("hashConvert is: ".concat(hashConvert));
-      setSection(heading, true);
-      heading.nextElementSibling.dataset.closed = 'false';
-      zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(heading, scrollDuration);
-    } else {
+    if (heading) {
       // condition when hash in URL is of a 'always' accordion, regardless of viewport width
       console.log("accordions ALWAYS executed"); //opens accordion heading + section and scroll to
 
+      setSection(heading, true);
+      heading.nextElementSibling.dataset.closed = 'false';
+      zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(heading, scrollDuration);
+    } // determines if the hash is perhaps of an accordion which kicks in on smaller viewports, as part of a tabs / accordion pattern
+
+
+    if (accordion.parentElement.className == 'tabs--accordion' && accordion.parentElement.querySelector('' + urlHash + '') && viewportWidth < 769) {
+      console.log("tabs accordion activated");
+      let hashConvert = urlHash.replace('tabs', 'accordion').replace('link', 'header');
+      heading = accordion.parentElement.querySelector('' + hashConvert + '');
       setSection(heading, true);
       heading.nextElementSibling.dataset.closed = 'false';
       zenscroll__WEBPACK_IMPORTED_MODULE_3___default.a.to(heading, scrollDuration);
@@ -7034,24 +7029,27 @@ function launchTabs(tabs) {
   if (window.location.hash) {
     let urlHash = window.location.hash; // checks if button in Hash is found inside this tabs pattern
 
-    let button = tabs.querySelector('' + urlHash + ''); // determins if the tabs pattern is 'tabs only' or tabs turning into accordions on smaller viewports
+    let button = tabs.querySelector('' + urlHash + '');
 
-    let isTabAccordion;
-    tabs.parentElement.className == 'tabs--accordion' ? isTabAccordion = true : isTabAccordion = false;
-    let viewportWidth = window.innerWidth;
+    if (button) {
+      // determines if the tabs pattern is 'tabs only' or tabs turning into accordions on smaller viewports
+      let isTabAccordion;
+      tabs.parentElement.className == 'tabs--accordion' ? isTabAccordion = true : isTabAccordion = false;
+      let viewportWidth = window.innerWidth;
 
-    if (isTabAccordion && button && 768 < viewportWidth) {
-      // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
-      console.log("tabs accordion in big viewport executed");
-      selectTab(button);
-    } else if (isTabAccordion && button && viewportWidth < 769) {
-      // condition 2, when hash in URL is of a 'tab /accordion'. On smaller viewports accordions are present, 
-      // so no tab behaviour will be triggered.
-      console.log("tabs NOT executed");
-    } else if (button) {
-      // condition when hash in URL is of a 'always' tabs, regardless of viewport width
-      console.log("tabs always executed");
-      selectTab(button);
+      if (isTabAccordion && 768 < viewportWidth) {
+        // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
+        console.log("tabs accordion in big viewport executed");
+        selectTab(button);
+      } else if (isTabAccordion && viewportWidth < 769) {
+        // condition 2, when hash in URL is of a 'tab /accordion'. On smaller viewports accordions are present, 
+        // so no tab behaviour will be triggered.
+        console.log("tabs NOT executed");
+      } else {
+        // condition when hash in URL is of a 'always' tabs, regardless of viewport width
+        console.log("tabs always executed");
+        selectTab(button);
+      }
     }
   }
 }
