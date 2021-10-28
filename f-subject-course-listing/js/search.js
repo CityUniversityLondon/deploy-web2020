@@ -575,6 +575,12 @@ function Finder__Results__Contact(props) {
     className: "fas fa-fw fa-building icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Department:"), " ", props.details.metaData.department),
+        school = props.details.metaData.school && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "card__tag"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fas fa-fw fa-university icon",
+    "aria-hidden": "true"
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "School:"), " ", props.details.metaData.school),
         jobtitle = props.details.metaData.jobtitle && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "card__type"
   }, props.details.metaData.jobtitle),
@@ -605,7 +611,7 @@ function Finder__Results__Contact(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-edit icon",
     "aria-hidden": "true"
-  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Enquiries:"), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Enquiries:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: props.details.metaData.enquiryurl
   }, props.details.metaData.enquirylabel));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -616,7 +622,7 @@ function Finder__Results__Contact(props) {
     className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "card__heading"
-  }, props.details.title), jobtitle, department, room, email, telephone, enquiry)));
+  }, props.details.title), jobtitle, school, department, room, email, telephone, enquiry)));
 }
 
 Finder__Results__Contact.propTypes = {
@@ -1533,7 +1539,11 @@ const baseUrl = 'https://www.city.ac.uk/web-services',
  * @return {Promise} - A promise of search results.
  */
 
-function find(collection, fixedFacets, query, sortType, startRank, numRank, facets) {
+function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, events) {
+  const fixedParams = {};
+  fixedParameters.forEach(param => {
+    fixedParams["".concat(param.name)] = param.value;
+  });
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
     fixedFacetParams["meta_".concat(facet.meta, "_sand")] = facet.value;
@@ -1551,12 +1561,13 @@ function find(collection, fixedFacets, query, sortType, startRank, numRank, face
     }),
     url: findRootUrl,
     timeout: timeout,
-    params: _objectSpread(_objectSpread(_objectSpread({}, fixedFacetParams), facetParams), {}, {
+    params: _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, fixedParams), fixedFacetParams), facetParams), {}, {
       collection: collection,
       num_ranks: numRank,
       query: query,
       sort: sortType || '',
-      start_rank: startRank
+      start_rank: startRank,
+      events: events || ''
     })
   };
   return [Object(_util_js__WEBPACK_IMPORTED_MODULE_2__["axiosRequest"])(config), call];
@@ -2964,7 +2975,8 @@ function InlineSearch(props) {
     query: '',
     startRank: 1,
     facets: [],
-    fixedFacets: []
+    fixedFacets: [],
+    fixedParameters: []
   };
   /**
    * Dummy, empty Funnelback response object for initial state.
@@ -3020,7 +3032,7 @@ function InlineSearch(props) {
     call.cancel();
     suggestionsCall.cancel(); // make new, asynchronous requests to Funnelback
 
-    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_5__["find"])(query.collection, query.fixedFacets, query.query, query.sortType, query.startRank, query.numRanks, query.facets);
+    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_5__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets);
     const [suggestionsRequest, suggestionsRequestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_5__["suggest"])(query.collection, query.query); // save the requestTokens
 
     setCall({
@@ -3333,7 +3345,7 @@ function Search(props) {
       query.interacted && props.element.querySelector('.search__results') && zenscroll__WEBPACK_IMPORTED_MODULE_13___default.a.center(props.element.querySelector('.search__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
       props.config.primary.collections.forEach((collection, i) => {
         fbResponses.primary[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_6__["find"])(collection.collection, [], query.query, '', query.startRank, query.numRanks, []),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_6__["find"])(collection.collection, [], [], query.query, '', query.startRank, query.numRanks, []),
               newResponses = fbResponses;
         newResponses.primary[i].call = {
           cancel: () => {
@@ -3370,7 +3382,7 @@ function Search(props) {
       });
       props.config.finders.forEach((finder, i) => {
         fbResponses.finders[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_6__["find"])(finder.collection, [], query.query, '', 1, finder.numRanks, []),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_6__["find"])(finder.collection, [], [], query.query, '', 1, finder.numRanks, []),
               newResponses = fbResponses;
         newResponses.finders[i].call = {
           cancel: () => {
@@ -3398,7 +3410,7 @@ function Search(props) {
       });
       props.config.nonpublic.forEach((nonpublic, i) => {
         fbResponses.nonpublic[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_6__["find"])(nonpublic.collection, [], query.query, '', 1, 0, []),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_6__["find"])(nonpublic.collection, [], [], query.query, '', 1, 0, []),
               newResponses = fbResponses;
         newResponses.nonpublic[i].call = {
           cancel: () => {

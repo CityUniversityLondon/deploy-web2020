@@ -1945,7 +1945,11 @@ const baseUrl = 'https://www.city.ac.uk/web-services',
  * @return {Promise} - A promise of search results.
  */
 
-function find(collection, fixedFacets, query, sortType, startRank, numRank, facets) {
+function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, events) {
+  const fixedParams = {};
+  fixedParameters.forEach(param => {
+    fixedParams["".concat(param.name)] = param.value;
+  });
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
     fixedFacetParams["meta_".concat(facet.meta, "_sand")] = facet.value;
@@ -1963,12 +1967,13 @@ function find(collection, fixedFacets, query, sortType, startRank, numRank, face
     }),
     url: findRootUrl,
     timeout: timeout,
-    params: _objectSpread(_objectSpread(_objectSpread({}, fixedFacetParams), facetParams), {}, {
+    params: _objectSpread(_objectSpread(_objectSpread(_objectSpread({}, fixedParams), fixedFacetParams), facetParams), {}, {
       collection: collection,
       num_ranks: numRank,
       query: query,
       sort: sortType || '',
-      start_rank: startRank
+      start_rank: startRank,
+      events: events || ''
     })
   };
   return [Object(_util_js__WEBPACK_IMPORTED_MODULE_2__["axiosRequest"])(config), call];
