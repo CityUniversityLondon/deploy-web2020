@@ -864,11 +864,10 @@ function launchAccordion(accordion) {
     //finds accordion heading in URL
     let urlHash = window.location.hash;
     let heading = accordion.querySelector('' + urlHash + '');
-    let viewportWidth = window.innerWidth;
+    let viewportWidth = window.innerWidth; // condition when hash in URL is of a 'always' accordion, regardless of viewport width
 
     if (heading) {
-      // condition when hash in URL is of a 'always' accordion, regardless of viewport width
-      console.log("accordions ALWAYS executed"); //opens accordion heading + section and scroll to
+      console.log("accordions ALWAYS executed"); // Wait for DOM to load before accessing selected accordion
 
       window.onload = function () {
         setSection(heading, true);
@@ -880,7 +879,7 @@ function launchAccordion(accordion) {
 
     if (accordion.parentElement.className == 'tabs--accordion' && accordion.parentElement.querySelector('' + urlHash + '') && viewportWidth < 769) {
       console.log("tabs accordion activated");
-      let hashConvert = urlHash.replace('tabs', 'accordion').replace('link', 'header');
+      let hashConvert = urlHash.replace('tabs', 'accordion').replace('link', 'header'); // Wait for DOM to load before accessing selected accordion
 
       window.onload = function () {
         heading = accordion.parentElement.querySelector('' + hashConvert + '');
@@ -7040,18 +7039,17 @@ function launchTabs(tabs) {
       // determines if the tabs pattern is 'tabs only' or tabs turning into accordions on smaller viewports
       let isTabAccordion;
       tabs.parentElement.className == 'tabs--accordion' ? isTabAccordion = true : isTabAccordion = false;
-      let viewportWidth = window.innerWidth;
+      let viewportWidth = window.innerWidth; // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
 
       if (isTabAccordion && 768 < viewportWidth) {
-        // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
-        console.log("tabs accordion in big viewport executed");
+        console.log("tabs accordion in big viewport executed"); // Wait for DOM to load before accessing selected tab
 
         window.onload = function () {
           selectTab(button);
         };
       } else if (!isTabAccordion) {
         // condition when hash in URL is of a 'always' tabs, regardless of viewport width
-        console.log("tabs always executed");
+        console.log("tabs always executed"); // Wait for DOM to load before accessing selected tab
 
         window.onload = function () {
           selectTab(button);
