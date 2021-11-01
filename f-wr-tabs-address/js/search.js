@@ -3528,7 +3528,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatReactDate, arraySlicer */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatReactDate, arraySlicer, screenWidth */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3552,6 +3552,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "axiosRequest", function() { return axiosRequest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatReactDate", function() { return formatReactDate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arraySlicer", function() { return arraySlicer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "screenWidth", function() { return screenWidth; });
 /* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
 /* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ "./node_modules/core-js/modules/es.regexp.to-string.js");
@@ -3886,6 +3887,59 @@ function arraySlicer(arr, len) {
   }
 
   return newArray;
+}
+/**
+ * Screen width
+ *
+ * @param {size} string - variable name for sreensize value. To be consistent with values stored in _variables.scss
+ */
+
+function screenWidth(size) {
+  switch (size) {
+    case 'tiny':
+      return 375;
+      break;
+
+    case 'mobile':
+      return 432;
+      break;
+
+    case 'tablet':
+      return 768;
+      break;
+
+    case 'between':
+      return 900;
+      break;
+
+    case 'small':
+      return 1024;
+      break;
+
+    case 'desktop':
+      return 1280;
+      break;
+
+    case 'large':
+      return 1440;
+      break;
+
+    case '1080':
+      return 1920;
+      break;
+
+    case '4k':
+      return 3840;
+      break;
+
+    case '8k':
+      return 7680;
+      break;
+
+    default:
+      return 1280;
+      break;
+  }
 }
 
 /***/ }),
