@@ -65893,7 +65893,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
-    grid-column: 1/-1;
+    grid-column: 2/-1;
 }
 
 @media (min-width: 768px) {
@@ -71665,10 +71665,10 @@ main .standard-content .content {
     main > .course--ug .featured-profiles-block__wrap,
     main > .course--ug .course-footer,
     main > .course--ug .course--ug__whats-happening,
+    main > .course--ug .course--ug__tabs__wrap,
     main > .course--ug .course--ug__related-courses__wrapper {
         grid-column: 1/-1;
     }
-    main > .course--ug .course--ug__tabs__wrap,
     main > .course--ug .courses--ug__facilities,
     main > .course--ug .course--ug__student {
         grid-column: 2/-2;
