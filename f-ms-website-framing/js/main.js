@@ -1325,7 +1325,7 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'particle-animation';
 
 function initParticles() {
-  _node_modules_particles_js_particles_js__WEBPACK_IMPORTED_MODULE_0___default()('particles-js', {
+  Object(_node_modules_particles_js_particles_js__WEBPACK_IMPORTED_MODULE_0__["particlesJS"])('particles-js', {
     particles: {
       number: {
         value: 80
