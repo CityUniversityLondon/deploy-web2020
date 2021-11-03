@@ -60921,7 +60921,7 @@ main .home .home__research__wrap {
 
 main .home .home__research__wrap h2 {
     grid-column: 4 / 22;
-    z-index: 0;
+    z-index: 1;
 }
 
 main .home .home__research__wrap .home__research__content {
