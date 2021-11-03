@@ -24283,7 +24283,7 @@ form:not([class]) .form__required-note--marker,
 }
 
 .banner-standfirst-label .banner__block-color {
-    background-color: #e5e5e5;
+    background-color: #cdc8c7;
     grid-column: 1 / -1;
     height: 8rem;
 }
@@ -54537,7 +54537,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
     .finder .finder__results .finder__results__summary,
     .finder .finder__results .finder__results__updating,
     .finder .finder__results .finder__results__didyoumean,
@@ -61614,7 +61614,6 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 1024px) {
-    main > .landing--informational .landing__promotional,
     main > .landing--informational .landing__related__content,
     main > .landing--informational .landing__related__latest,
     main > .landing--informational .landing__profiles__flexible {
@@ -63429,9 +63428,14 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
     padding-top: 1.5rem;
 }
 
+.listing .finder__query {
+    margin-top: -4rem;
+}
+
 @media (max-width: 767px) {
     .listing .finder__query {
-        margin: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
