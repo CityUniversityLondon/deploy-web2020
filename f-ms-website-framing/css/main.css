@@ -61820,10 +61820,6 @@ main .home .home__whats-happening .related-content {
     }
 }
 
-.landing--informational {
-    padding-bottom: 1.5rem;
-}
-
 .landing--informational .landing__standfirst,
 .landing--informational .landing__promotional,
 .landing--informational .landing__pathway,
@@ -62031,6 +62027,10 @@ main .home .home__whats-happening .related-content {
     main .navigation--secondary + .landing--functional .landing--functional__finder__links__content {
         grid-column: 3 / span 14;
     }
+}
+
+.landing--functional .landing--functional__content {
+    padding-bottom: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -76023,7 +76023,7 @@ main .standard-content .content {
     main .navigation--secondary + .department .department__tabs,
     main .navigation--secondary + .department .department__whats-happening h2,
     main .navigation--secondary + .department .department__whats-happening .related-content,
-    main .navigation--secondary + .department .department__multimedia .department__heading--underlined {
+    main .navigation--secondary + .department .department__multimedia .embedded-video {
         grid-column: 2/-2;
     }
     main .navigation--secondary + .department .department__contact-us__contacts {
