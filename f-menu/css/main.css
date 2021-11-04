@@ -34950,6 +34950,116 @@ h3 .linked-heading__icons {
     color: #0c0c0e;
 }
 
+.anchor-inline--dark {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #0c0c0e 0%, #0c0c0e 100%);
+    border-bottom-color: #0c0c0e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
+}
+
+@media (hover: hover) {
+    .anchor-inline--dark:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.anchor-inline--dark:focus, .anchor-inline--dark:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .anchor-inline--dark {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .anchor-inline--dark:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #0c0c0e 0%, #0c0c0e 100%);
+    }
+}
+
+.anchor-inline--dark:focus, .anchor-inline--dark:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.anchor-inline--dark:visited {
+    border-bottom-color: #0c0c0e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
+}
+
+.anchor-inline--dark:focus {
+    border-bottom-color: #0c0c0e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
+}
+
+@media (hover: hover) {
+    .anchor-inline--dark:hover {
+        border-bottom-color: #0c0c0e;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.anchor-inline--dark:active {
+    background-color: #0c0c0e;
+    border-bottom-color: #0c0c0e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
 .anchor-discreet {
     background-color: initial;
     background-image: initial;
@@ -59059,6 +59169,58 @@ h2.section-title,
 h2.related-content__heading {
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.js .subject__course-list {
+    padding: 2rem;
+    background-color: #b2e6eb;
+    border-top: 1rem solid #19b5c5;
+}
+
+.js .subject__course-list .paginated-list {
+    max-width: initial;
+}
+
+.js .subject__course-list .paginated-list .page {
+    max-width: initial;
+}
+
+@media (max-width: 767px) {
+    .js .subject__course-list .paginated-list .page {
+        margin-top: 0.5rem;
+    }
+}
+
+.subject__course-list h3 {
+    margin-top: initial;
+}
+
+.subject__course-list .paginated-list {
+    padding-bottom: 1rem;
+}
+
+.subject__course-list .pagination__controls {
+    padding-top: 1rem;
+}
+
+.subject__course-list .pagination__controls button {
+    background-color: #ffffff;
+}
+
+.subject__course-list .pagination__controls button:hover, .subject__course-list .pagination__controls button:active, .subject__course-list .pagination__controls button:focus {
+    background-color: #ffffff;
+}
+
+@media (min-width: 769px) {
+    .subject__course-list ul:not(.paginated-list) {
+        max-width: initial;
+        columns: 2;
+        column-gap: 4rem;
+    }
+}
+
+.subject__course-list ul:not(.paginated-list) li:first-child {
+    margin-top: initial;
 }
 
 /*
