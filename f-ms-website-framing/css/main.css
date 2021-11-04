@@ -68723,6 +68723,28 @@ button
     grid-column: 7/-1;
 }
 
+.js .research-degree .related-content {
+    padding-bottom: 1.5rem;
+}
+
+.js .research-degree .related-content[data-style='arrows']:not(.slider) {
+    padding-bottom: 1.5rem;
+}
+
+@media (max-width: 1023px) {
+    .js .research-degree .related-content[data-style='arrows']:not(.slider) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .js .research-degree .related-content[data-style='arrows']:not(.slider) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 @media (max-width: 1023px) {
     main > .search .wrapper--search {
         margin-left: 1rem;
@@ -69944,6 +69966,10 @@ button
     .lifelong-learning .banner__label {
         letter-spacing: -0.017em;
     }
+}
+
+.lifelong-learning .related-content--profiles .card {
+    grid-column: 4 / -4;
 }
 
 .lifelong-learning .banner-text {
@@ -71526,6 +71552,29 @@ button
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
+}
+
+.js .lifelong-learning .related-content:not(.slider) {
+    padding-bottom: 1.5rem;
+}
+
+@media (max-width: 1023px) {
+    .js .lifelong-learning .related-content:not(.slider) {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .js .lifelong-learning .related-content:not(.slider) {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.js .lifelong-learning .related-content:not(.slider) li:only-child {
+    grid-column: 4/-4;
 }
 
 @media (max-width: 767px) {
