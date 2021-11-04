@@ -63416,6 +63416,12 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
     padding-bottom: 1.5rem;
 }
 
+.listing[data-theme-id='494808'] .banner-text {
+    background-color: #3e1031;
+    background: linear-gradient(90deg, #b91924 0%, #5d184a 70%, #3e1031 100%);
+    color: #ffffff;
+}
+
 .listing .content {
     margin: 0;
 }
