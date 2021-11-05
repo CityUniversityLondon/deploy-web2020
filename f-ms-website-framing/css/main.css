@@ -63413,6 +63413,11 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 }
 
 .listing {
+    /*** BANNER COLOURS
+     *
+     * Each listing has a unique theme ID attribute for banner colour styling
+     ***/
+    /*** END BANNER COLOURS ***/
     padding-bottom: 1.5rem;
 }
 
@@ -63422,16 +63427,19 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
     color: #ffffff;
 }
 
-.listing .content {
-    margin: 0;
+.listing[data-theme-id='531052'] .banner-text {
+    background: linear-gradient(180deg, #cdc8c7 0%, #ffffff 100%);
 }
 
 .listing .banner-text {
-    background-color: #f2f2f2;
-    background: linear-gradient(180deg, #d8d8d8 0%, #ffffff 100%);
-    color: #0c0c0e;
+    background: linear-gradient(180deg, #3e1031 0%, #ffffff 100%);
+    color: #ffffff;
     padding-bottom: 5.5rem;
     padding-top: 1.5rem;
+}
+
+.listing .content {
+    margin: 0;
 }
 
 .listing .finder__query {
