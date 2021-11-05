@@ -2833,7 +2833,11 @@ function Search__Results(props) {
     }, "Browse more", ' ', finder.summariseAs.plural, ' '), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
       className: "fas fa-arrow-right icon",
       "aria-hidden": "true"
-    })), finder.response && finder.response.summary.totalMatching > finder.response.summary.currEnd && finder.summariseAs.plural === 'people' && finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, _search_peopletypes__WEBPACK_IMPORTED_MODULE_7__["default"].map((people, i) => {
+    })), finder.response && finder.response.summary.totalMatching > finder.response.summary.currEnd && finder.summariseAs.plural === 'people' && finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
+      className: "search__results__browse-more"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", null, "Tags"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+      className: "cta-block cta-block--inline"
+    }, _search_peopletypes__WEBPACK_IMPORTED_MODULE_7__["default"].map((people, i) => {
       if (fbLabels.includes(people.fbRef)) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_results_search_results_browsepeople__WEBPACK_IMPORTED_MODULE_4__["default"], {
           key: i,
@@ -2842,7 +2846,7 @@ function Search__Results(props) {
           type: people.type
         });
       }
-    }))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
+    }))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
       className: "search__summary__noresults"
     }, "No matching ", finder.summariseAs.plural, ".", ' ', finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
       href: finder.search
@@ -2899,14 +2903,12 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Search__Results__BrowsePeople(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    className: "search__results__more"
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    className: "cta-block__cta"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    className: "outline-cta--bright",
     href: 'https://www.city.ac.uk/about/people/' + props.path + '?query=' + props.query
-  }, "Browse all ", props.query, " ", props.type), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-arrow-right icon",
-    "aria-hidden": "true"
-  }));
+  }, props.type.charAt(0).toUpperCase() + props.type.slice(1)));
 }
 
 Search__Results__BrowsePeople.propTypes = {
