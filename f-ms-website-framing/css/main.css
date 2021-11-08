@@ -63428,11 +63428,33 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 }
 
 .listing[data-theme-id='531052'] .banner-text {
+    background: #cdc8c7;
     background: linear-gradient(180deg, #cdc8c7 0%, #ffffff 100%);
+    color: #0c0c0e;
+}
+
+.listing[data-theme-id='497680'] .banner-text {
+    background: linear-gradient(180deg, #cdc8c7 0%, #ffffff 100%);
+    color: #0c0c0e;
+}
+
+.listing[data-theme-id='497680'] .finder__query {
+    background: #f25d21;
+}
+
+.listing[data-theme-id='497680'] .finder__query .finder__query__submit {
+    background: #ffef2b;
+    color: #0c0c0e;
+}
+
+@media (hover: hover) {
+    .listing[data-theme-id='497680'] .finder__query .finder__query__submit:hover {
+        background: #efdd00;
+    }
 }
 
 .listing .banner-text {
-    background: linear-gradient(180deg, #3e1031 0%, #ffffff 100%);
+    background: #3e1031;
     color: #ffffff;
     padding-bottom: 5.5rem;
     padding-top: 1.5rem;
