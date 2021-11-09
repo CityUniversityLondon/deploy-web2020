@@ -2504,13 +2504,13 @@ let peopleTypes = [{
   path: 'academics',
   fbRef: 'academic'
 }, {
-  type: 'research students',
-  path: 'research-students',
-  fbRef: 'research student'
-}, {
   type: 'students',
   path: 'students',
   fbRef: 'student'
+}, {
+  type: 'research students',
+  path: 'research-students',
+  fbRef: 'research'
 }, {
   type: 'honorary graduates',
   path: 'honorary-graduates',
@@ -2523,10 +2523,6 @@ let peopleTypes = [{
   type: 'professional services staff',
   path: 'professional-services-staff',
   fbRef: 'professional'
-}, {
-  type: 'research students',
-  path: 'research-students',
-  fbRef: 'research'
 }, {
   type: 'international',
   path: 'international',
