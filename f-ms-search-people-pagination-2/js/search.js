@@ -2835,7 +2835,7 @@ function Search__Results(props) {
       "aria-hidden": "true"
     })), finder.response && finder.response.summary.totalMatching > finder.response.summary.currEnd && finder.summariseAs.plural === 'people' && finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
       className: "search__results__browse-more"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", null, "Tags"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", null, "Browse more people"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", {
       className: "cta-block cta-block--inline"
     }, _search_peopletypes__WEBPACK_IMPORTED_MODULE_7__["default"].map((people, i) => {
       if (fbLabels.includes(people.fbRef)) {
@@ -2906,7 +2906,7 @@ function Search__Results__BrowsePeople(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "cta-block__cta"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    className: "outline-cta--bright",
+    className: "outline-cta--bright-square",
     href: 'https://www.city.ac.uk/about/people/' + props.path + '?query=' + props.query
   }, props.type.charAt(0).toUpperCase() + props.type.slice(1)));
 }
