@@ -49688,75 +49688,6 @@ button
     background: #f2f2f2;
 }
 
-@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li {
-        margin-right: 0.5rem;
-    }
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
-        font-size: 0.79rem;
-        line-height: 1.625;
-        letter-spacing: 0.005em;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 1280px) and (max-width: 1919px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
-        letter-spacing: 0em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 1920px) and (max-width: 3839px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
-        letter-spacing: -0.007em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 3840px) and (max-width: 7679px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 7680px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
-        font-size: 0.889rem;
-        line-height: 1.625;
-        letter-spacing: 0em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 1280px) and (max-width: 1919px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 1920px) and (max-width: 3839px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 3840px) and (max-width: 7679px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 7680px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
-        letter-spacing: -0.017em;
-    }
-}
-
 .timetable {
     padding-bottom: 1.5rem;
     margin-top: 1.5rem;
@@ -52595,6 +52526,7 @@ button
     position: absolute;
     top: 0;
     width: 100%;
+    border: none;
 }
 
 .youtube-video__caption-element--text,
@@ -71982,6 +71914,7 @@ main .standard-content .content {
 
 .course--ug .course-info__wrapper .course-info .course-info__video .cta-block li {
     margin-right: 0;
+    margin-left: 1rem;
 }
 
 .course--ug .promo-box__wrapper {
@@ -72594,6 +72527,10 @@ main .standard-content .content {
     .course--ug__student h2 {
         grid-column: 1 / -1;
     }
+}
+
+.course--ug__student .course--ug__student__intro {
+    grid-column: 1 / -1;
 }
 
 @media (min-width: 901px) {
