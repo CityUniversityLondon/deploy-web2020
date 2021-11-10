@@ -71676,6 +71676,9 @@ main .standard-content .content {
     main > .standard-content .banner {
         grid-column: span 24;
     }
+    main > .standard-content .banner .banner__standfirst {
+        grid-column: 2/-2;
+    }
     main > .standard-content .content {
         grid-column: 6 / span 14;
     }
@@ -71715,8 +71718,11 @@ main .standard-content .content {
     main .navigation--secondary + .standard-content .banner {
         grid-column: 1 / span 18;
     }
+    main .navigation--secondary + .standard-content .banner .banner__standfirst {
+        grid-column: 2/-2;
+    }
     main .navigation--secondary + .standard-content .content {
-        grid-column: 4 / span 12;
+        grid-column: 2/-2;
         overflow: hidden;
     }
 }
