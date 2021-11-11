@@ -71737,6 +71737,25 @@ main .standard-content .content {
     }
 }
 
+@media (min-width: 1024px) {
+    .standard-content .content :not(.tabs--accordion),
+    .standard-content .content :not(.banner) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .standard-content .content .tabs--accordion {
+        grid-column: 2/-2;
+    }
+    .standard-content .content .tabs--accordion p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .standard-content .content .tabs--accordion ul {
+        margin-left: 2.5rem;
+        margin-right: 0;
+    }
+}
+
 .visit-us {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
