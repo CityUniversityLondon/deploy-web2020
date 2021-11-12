@@ -29200,6 +29200,10 @@ form:not([class]) .form__required-note--marker,
     transform: none;
 }
 
+.feedback .feedback__direct button:active, .feedback .feedback__direct button:focus {
+    border-color: #d8d8d8;
+}
+
 @media (max-width: 432px) {
     .feedback .feedback__direct button {
         display: inline-block;
@@ -63438,7 +63442,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 }
 
 .listing[data-theme-id='497680'] .banner-text {
-    background: linear-gradient(180deg, #cdc8c7 0%, #ffffff 100%);
+    background-color: #cdc8c7;
     color: #0c0c0e;
 }
 
