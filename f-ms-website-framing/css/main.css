@@ -63435,28 +63435,28 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
     color: #ffffff;
 }
 
-.listing[data-theme-id='531052'] .banner-text {
+.listing[data-theme-id='531052'] .banner-text, .listing[data-theme-id='592970'] .banner-text {
     background: #cdc8c7;
     background: linear-gradient(180deg, #cdc8c7 0%, #ffffff 100%);
     color: #0c0c0e;
 }
 
-.listing[data-theme-id='497680'] .banner-text {
+.listing[data-theme-id='497680'] .banner-text, .listing[data-theme-id='497812'] .banner-text {
     background-color: #cdc8c7;
     color: #0c0c0e;
 }
 
-.listing[data-theme-id='497680'] .finder__query {
+.listing[data-theme-id='497680'] .finder__query, .listing[data-theme-id='497812'] .finder__query {
     background: #f25d21;
 }
 
-.listing[data-theme-id='497680'] .finder__query .finder__query__submit {
+.listing[data-theme-id='497680'] .finder__query .finder__query__submit, .listing[data-theme-id='497812'] .finder__query .finder__query__submit {
     background: #ffef2b;
     color: #0c0c0e;
 }
 
 @media (hover: hover) {
-    .listing[data-theme-id='497680'] .finder__query .finder__query__submit:hover {
+    .listing[data-theme-id='497680'] .finder__query .finder__query__submit:hover, .listing[data-theme-id='497812'] .finder__query .finder__query__submit:hover {
         background: #efdd00;
     }
 }
