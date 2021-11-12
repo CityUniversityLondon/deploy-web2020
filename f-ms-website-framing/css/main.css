@@ -76085,12 +76085,14 @@ main .standard-content .content {
 }
 
 @media (min-width: 1024px) {
+    main .navigation--secondary + .department .department__additional-info h2,
     main .navigation--secondary + .department .department__additional-info .department__additional-info__content {
-        grid-column: 4 / span 12;
+        grid-column: 2/-2;
     }
     main .navigation--secondary + .department .department__whats-happening,
     main .navigation--secondary + .department .department__contact-us,
-    main .navigation--secondary + .department .department__multimedia {
+    main .navigation--secondary + .department .department__multimedia,
+    main .navigation--secondary + .department .department__additional-info {
         grid-template-columns: repeat(18, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -76100,7 +76102,8 @@ main .standard-content .content {
 @media (min-width: 1024px) and (min-width: 768px) {
     main .navigation--secondary + .department .department__whats-happening,
     main .navigation--secondary + .department .department__contact-us,
-    main .navigation--secondary + .department .department__multimedia {
+    main .navigation--secondary + .department .department__multimedia,
+    main .navigation--secondary + .department .department__additional-info {
         grid-column-gap: 1rem;
     }
 }
@@ -76108,7 +76111,8 @@ main .standard-content .content {
 @media (min-width: 1024px) and (min-width: 901px) {
     main .navigation--secondary + .department .department__whats-happening,
     main .navigation--secondary + .department .department__contact-us,
-    main .navigation--secondary + .department .department__multimedia {
+    main .navigation--secondary + .department .department__multimedia,
+    main .navigation--secondary + .department .department__additional-info {
         grid-column-gap: 1.5rem;
     }
 }
@@ -76184,20 +76188,6 @@ main .standard-content .content {
     .department__contact-us {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .department__additional-info {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 768px) and (min-width: 901px) {
-    .department__additional-info {
-        padding-left: 2rem;
-        padding-right: 2rem;
     }
 }
 
