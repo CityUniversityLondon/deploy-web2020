@@ -47570,6 +47570,8 @@ article .link-copy {
 }
 
 .search .search__results__list,
+.search .search__results__browse-more,
+.search .search__results__browse-more ul,
 .search .search__bestbets__list {
     list-style: none;
     margin-left: auto;
@@ -47578,17 +47580,23 @@ article .link-copy {
 }
 
 .search .search__results__list .card--search,
+.search .search__results__browse-more .card--search,
+.search .search__results__browse-more ul .card--search,
 .search .search__bestbets__list .card--search {
     padding-bottom: 1rem;
 }
 
 .search .search__results__list .card--search .card__heading .icon,
+.search .search__results__browse-more .card--search .card__heading .icon,
+.search .search__results__browse-more ul .card--search .card__heading .icon,
 .search .search__bestbets__list .card--search .card__heading .icon {
     color: #006bbd;
     margin-left: 0.5rem;
 }
 
 .search .search__results__list .card--search a,
+.search .search__results__browse-more .card--search a,
+.search .search__results__browse-more ul .card--search a,
 .search .search__bestbets__list .card--search a {
     background-color: initial;
     background-image: initial;
@@ -47609,6 +47617,8 @@ article .link-copy {
 
 @media (hover: hover) {
     .search .search__results__list .card--search a:hover,
+    .search .search__results__browse-more .card--search a:hover,
+    .search .search__results__browse-more ul .card--search a:hover,
     .search .search__bestbets__list .card--search a:hover {
         background-color: initial;
         background-image: initial;
@@ -47627,6 +47637,10 @@ article .link-copy {
 }
 
 .search .search__results__list .card--search a:focus, .search .search__results__list .card--search a:active,
+.search .search__results__browse-more .card--search a:focus,
+.search .search__results__browse-more .card--search a:active,
+.search .search__results__browse-more ul .card--search a:focus,
+.search .search__results__browse-more ul .card--search a:active,
 .search .search__bestbets__list .card--search a:focus,
 .search .search__bestbets__list .card--search a:active {
     background-color: initial;
@@ -47646,12 +47660,18 @@ article .link-copy {
 
 @media (hover: hover) {
     .search .search__results__list .card--search a:hover,
+    .search .search__results__browse-more .card--search a:hover,
+    .search .search__results__browse-more ul .card--search a:hover,
     .search .search__bestbets__list .card--search a:hover {
         color: #0c0c0e;
     }
 }
 
 .search .search__results__list .card--search a:active, .search .search__results__list .card--search a:focus,
+.search .search__results__browse-more .card--search a:active,
+.search .search__results__browse-more .card--search a:focus,
+.search .search__results__browse-more ul .card--search a:active,
+.search .search__results__browse-more ul .card--search a:focus,
 .search .search__bestbets__list .card--search a:active,
 .search .search__bestbets__list .card--search a:focus {
     outline-color: #0c0c0e;
@@ -47662,6 +47682,8 @@ article .link-copy {
 }
 
 .search .search__results__list .card--search a .card__heading,
+.search .search__results__browse-more .card--search a .card__heading,
+.search .search__results__browse-more ul .card--search a .card__heading,
 .search .search__bestbets__list .card--search a .card__heading {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -47686,6 +47708,10 @@ article .link-copy {
 
 .search .search__results__list .card--search a .card__heading i,
 .search .search__results__list .card--search a .card__heading em,
+.search .search__results__browse-more .card--search a .card__heading i,
+.search .search__results__browse-more .card--search a .card__heading em,
+.search .search__results__browse-more ul .card--search a .card__heading i,
+.search .search__results__browse-more ul .card--search a .card__heading em,
 .search .search__bestbets__list .card--search a .card__heading i,
 .search .search__bestbets__list .card--search a .card__heading em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -47693,6 +47719,10 @@ article .link-copy {
 
 .search .search__results__list .card--search a .card__heading b,
 .search .search__results__list .card--search a .card__heading strong,
+.search .search__results__browse-more .card--search a .card__heading b,
+.search .search__results__browse-more .card--search a .card__heading strong,
+.search .search__results__browse-more ul .card--search a .card__heading b,
+.search .search__results__browse-more ul .card--search a .card__heading strong,
 .search .search__bestbets__list .card--search a .card__heading b,
 .search .search__bestbets__list .card--search a .card__heading strong {
     font-weight: inherit;
@@ -47700,18 +47730,26 @@ article .link-copy {
 
 .search .search__results__list .card--search a .card__heading i,
 .search .search__results__list .card--search a .card__heading em,
+.search .search__results__browse-more .card--search a .card__heading i,
+.search .search__results__browse-more .card--search a .card__heading em,
+.search .search__results__browse-more ul .card--search a .card__heading i,
+.search .search__results__browse-more ul .card--search a .card__heading em,
 .search .search__bestbets__list .card--search a .card__heading i,
 .search .search__bestbets__list .card--search a .card__heading em {
     font-style: italic;
 }
 
 .search .search__results__list .card--search a .card__heading u,
+.search .search__results__browse-more .card--search a .card__heading u,
+.search .search__results__browse-more ul .card--search a .card__heading u,
 .search .search__bestbets__list .card--search a .card__heading u {
     text-decoration: none;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
     .search .search__results__list .card--search a .card__heading,
+    .search .search__results__browse-more .card--search a .card__heading,
+    .search .search__results__browse-more ul .card--search a .card__heading,
     .search .search__bestbets__list .card--search a .card__heading {
         letter-spacing: -0.013em;
     }
@@ -47719,6 +47757,8 @@ article .link-copy {
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .search .search__results__list .card--search a .card__heading,
+    .search .search__results__browse-more .card--search a .card__heading,
+    .search .search__results__browse-more ul .card--search a .card__heading,
     .search .search__bestbets__list .card--search a .card__heading {
         letter-spacing: -0.015em;
     }
@@ -47726,6 +47766,8 @@ article .link-copy {
 
 @media (min-width: 3840px) and (max-width: 7679px) {
     .search .search__results__list .card--search a .card__heading,
+    .search .search__results__browse-more .card--search a .card__heading,
+    .search .search__results__browse-more ul .card--search a .card__heading,
     .search .search__bestbets__list .card--search a .card__heading {
         letter-spacing: -0.017em;
     }
@@ -47733,6 +47775,8 @@ article .link-copy {
 
 @media (min-width: 7680px) {
     .search .search__results__list .card--search a .card__heading,
+    .search .search__results__browse-more .card--search a .card__heading,
+    .search .search__results__browse-more ul .card--search a .card__heading,
     .search .search__bestbets__list .card--search a .card__heading {
         letter-spacing: -0.017em;
     }
@@ -47740,6 +47784,10 @@ article .link-copy {
 
 .search .search__results__list .card--search a .card__heading b,
 .search .search__results__list .card--search a .card__heading strong,
+.search .search__results__browse-more .card--search a .card__heading b,
+.search .search__results__browse-more .card--search a .card__heading strong,
+.search .search__results__browse-more ul .card--search a .card__heading b,
+.search .search__results__browse-more ul .card--search a .card__heading strong,
 .search .search__bestbets__list .card--search a .card__heading b,
 .search .search__bestbets__list .card--search a .card__heading strong {
     font-weight: 600;
@@ -47747,6 +47795,8 @@ article .link-copy {
 
 @media (prefers-reduced-motion: reduce) {
     .search .search__results__list .card--search a .card__heading,
+    .search .search__results__browse-more .card--search a .card__heading,
+    .search .search__results__browse-more ul .card--search a .card__heading,
     .search .search__bestbets__list .card--search a .card__heading {
         transition: none;
     }
@@ -47754,10 +47804,14 @@ article .link-copy {
 
 @media (hover: hover) {
     .search .search__results__list .card--search a:hover .card__thumbnail,
+    .search .search__results__browse-more .card--search a:hover .card__thumbnail,
+    .search .search__results__browse-more ul .card--search a:hover .card__thumbnail,
     .search .search__bestbets__list .card--search a:hover .card__thumbnail {
         transform: scale(1.02);
     }
     .search .search__results__list .card--search a:hover .card__heading,
+    .search .search__results__browse-more .card--search a:hover .card__heading,
+    .search .search__results__browse-more ul .card--search a:hover .card__heading,
     .search .search__bestbets__list .card--search a:hover .card__heading {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
@@ -47766,6 +47820,8 @@ article .link-copy {
 }
 
 .search .search__results__list .card--search .card__label,
+.search .search__results__browse-more .card--search .card__label,
+.search .search__results__browse-more ul .card--search .card__label,
 .search .search__bestbets__list .card--search .card__label {
     font-size: 0.889rem;
     line-height: 1.625;
@@ -47776,6 +47832,8 @@ article .link-copy {
 
 @media (min-width: 1280px) and (max-width: 1919px) {
     .search .search__results__list .card--search .card__label,
+    .search .search__results__browse-more .card--search .card__label,
+    .search .search__results__browse-more ul .card--search .card__label,
     .search .search__bestbets__list .card--search .card__label {
         letter-spacing: -0.005em;
     }
@@ -47783,6 +47841,8 @@ article .link-copy {
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .search .search__results__list .card--search .card__label,
+    .search .search__results__browse-more .card--search .card__label,
+    .search .search__results__browse-more ul .card--search .card__label,
     .search .search__bestbets__list .card--search .card__label {
         letter-spacing: -0.01em;
     }
@@ -47790,6 +47850,8 @@ article .link-copy {
 
 @media (min-width: 3840px) and (max-width: 7679px) {
     .search .search__results__list .card--search .card__label,
+    .search .search__results__browse-more .card--search .card__label,
+    .search .search__results__browse-more ul .card--search .card__label,
     .search .search__bestbets__list .card--search .card__label {
         letter-spacing: -0.017em;
     }
@@ -47797,12 +47859,16 @@ article .link-copy {
 
 @media (min-width: 7680px) {
     .search .search__results__list .card--search .card__label,
+    .search .search__results__browse-more .card--search .card__label,
+    .search .search__results__browse-more ul .card--search .card__label,
     .search .search__bestbets__list .card--search .card__label {
         letter-spacing: -0.017em;
     }
 }
 
 .search .search__results__list .card--search .card__details,
+.search .search__results__browse-more .card--search .card__details,
+.search .search__results__browse-more ul .card--search .card__details,
 .search .search__bestbets__list .card--search .card__details {
     display: flex;
     flex-wrap: nowrap;
@@ -47810,6 +47876,8 @@ article .link-copy {
 
 @media (max-width: 1023px) {
     .search .search__results__list .card--search .card__details,
+    .search .search__results__browse-more .card--search .card__details,
+    .search .search__results__browse-more ul .card--search .card__details,
     .search .search__bestbets__list .card--search .card__details {
         flex-direction: column;
     }
@@ -47817,6 +47885,8 @@ article .link-copy {
 
 @media (min-width: 1024px) {
     .search .search__results__list .card--search .card__details,
+    .search .search__results__browse-more .card--search .card__details,
+    .search .search__results__browse-more ul .card--search .card__details,
     .search .search__bestbets__list .card--search .card__details {
         flex-direction: row;
     }
@@ -47824,6 +47894,8 @@ article .link-copy {
 
 @media (max-width: 1023px) {
     .search .search__results__list .card--search .card__thumbnail + .card__details__text,
+    .search .search__results__browse-more .card--search .card__thumbnail + .card__details__text,
+    .search .search__results__browse-more ul .card--search .card__thumbnail + .card__details__text,
     .search .search__bestbets__list .card--search .card__thumbnail + .card__details__text {
         padding-left: 0;
         padding-top: 1rem;
@@ -47832,6 +47904,8 @@ article .link-copy {
 
 @media (min-width: 1024px) {
     .search .search__results__list .card--search .card__thumbnail + .card__details__text,
+    .search .search__results__browse-more .card--search .card__thumbnail + .card__details__text,
+    .search .search__results__browse-more ul .card--search .card__thumbnail + .card__details__text,
     .search .search__bestbets__list .card--search .card__thumbnail + .card__details__text {
         padding-left: 1rem;
         padding-top: 0;
@@ -47839,11 +47913,15 @@ article .link-copy {
 }
 
 .search .search__results__list .card--search .card__details__text,
+.search .search__results__browse-more .card--search .card__details__text,
+.search .search__results__browse-more ul .card--search .card__details__text,
 .search .search__bestbets__list .card--search .card__details__text {
     width: 100%;
 }
 
 .search .search__results__list .card--search .card__description,
+.search .search__results__browse-more .card--search .card__description,
+.search .search__results__browse-more ul .card--search .card__description,
 .search .search__bestbets__list .card--search .card__description {
     font-family: "Plex Sans", sans-serif;
     /**
@@ -47867,6 +47945,10 @@ article .link-copy {
 
 .search .search__results__list .card--search .card__description i,
 .search .search__results__list .card--search .card__description em,
+.search .search__results__browse-more .card--search .card__description i,
+.search .search__results__browse-more .card--search .card__description em,
+.search .search__results__browse-more ul .card--search .card__description i,
+.search .search__results__browse-more ul .card--search .card__description em,
 .search .search__bestbets__list .card--search .card__description i,
 .search .search__bestbets__list .card--search .card__description em {
     font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
@@ -47874,6 +47956,8 @@ article .link-copy {
 
 @media (min-width: 1280px) and (max-width: 1919px) {
     .search .search__results__list .card--search .card__description,
+    .search .search__results__browse-more .card--search .card__description,
+    .search .search__results__browse-more ul .card--search .card__description,
     .search .search__bestbets__list .card--search .card__description {
         letter-spacing: -0.008em;
     }
@@ -47881,6 +47965,8 @@ article .link-copy {
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .search .search__results__list .card--search .card__description,
+    .search .search__results__browse-more .card--search .card__description,
+    .search .search__results__browse-more ul .card--search .card__description,
     .search .search__bestbets__list .card--search .card__description {
         letter-spacing: -0.013em;
     }
@@ -47888,6 +47974,8 @@ article .link-copy {
 
 @media (min-width: 3840px) and (max-width: 7679px) {
     .search .search__results__list .card--search .card__description,
+    .search .search__results__browse-more .card--search .card__description,
+    .search .search__results__browse-more ul .card--search .card__description,
     .search .search__bestbets__list .card--search .card__description {
         letter-spacing: -0.017em;
     }
@@ -47895,6 +47983,8 @@ article .link-copy {
 
 @media (min-width: 7680px) {
     .search .search__results__list .card--search .card__description,
+    .search .search__results__browse-more .card--search .card__description,
+    .search .search__results__browse-more ul .card--search .card__description,
     .search .search__bestbets__list .card--search .card__description {
         letter-spacing: -0.017em;
     }
@@ -47902,6 +47992,10 @@ article .link-copy {
 
 .search .search__results__list .card--search .card__description b,
 .search .search__results__list .card--search .card__description strong,
+.search .search__results__browse-more .card--search .card__description b,
+.search .search__results__browse-more .card--search .card__description strong,
+.search .search__results__browse-more ul .card--search .card__description b,
+.search .search__results__browse-more ul .card--search .card__description strong,
 .search .search__bestbets__list .card--search .card__description b,
 .search .search__bestbets__list .card--search .card__description strong {
     font-weight: 700;
@@ -47909,12 +48003,18 @@ article .link-copy {
 
 .search .search__results__list .card--search .card__description i,
 .search .search__results__list .card--search .card__description em,
+.search .search__results__browse-more .card--search .card__description i,
+.search .search__results__browse-more .card--search .card__description em,
+.search .search__results__browse-more ul .card--search .card__description i,
+.search .search__results__browse-more ul .card--search .card__description em,
 .search .search__bestbets__list .card--search .card__description i,
 .search .search__bestbets__list .card--search .card__description em {
     font-style: italic;
 }
 
 .search .search__results__list .card--search .card__url,
+.search .search__results__browse-more .card--search .card__url,
+.search .search__results__browse-more ul .card--search .card__url,
 .search .search__bestbets__list .card--search .card__url {
     font-size: 0.889rem;
     line-height: 1.625;
@@ -47927,6 +48027,8 @@ article .link-copy {
 
 @media (min-width: 1280px) and (max-width: 1919px) {
     .search .search__results__list .card--search .card__url,
+    .search .search__results__browse-more .card--search .card__url,
+    .search .search__results__browse-more ul .card--search .card__url,
     .search .search__bestbets__list .card--search .card__url {
         letter-spacing: -0.005em;
     }
@@ -47934,6 +48036,8 @@ article .link-copy {
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .search .search__results__list .card--search .card__url,
+    .search .search__results__browse-more .card--search .card__url,
+    .search .search__results__browse-more ul .card--search .card__url,
     .search .search__bestbets__list .card--search .card__url {
         letter-spacing: -0.01em;
     }
@@ -47941,6 +48045,8 @@ article .link-copy {
 
 @media (min-width: 3840px) and (max-width: 7679px) {
     .search .search__results__list .card--search .card__url,
+    .search .search__results__browse-more .card--search .card__url,
+    .search .search__results__browse-more ul .card--search .card__url,
     .search .search__bestbets__list .card--search .card__url {
         letter-spacing: -0.017em;
     }
@@ -47948,12 +48054,16 @@ article .link-copy {
 
 @media (min-width: 7680px) {
     .search .search__results__list .card--search .card__url,
+    .search .search__results__browse-more .card--search .card__url,
+    .search .search__results__browse-more ul .card--search .card__url,
     .search .search__bestbets__list .card--search .card__url {
         letter-spacing: -0.017em;
     }
 }
 
 .search .search__results__list .card--search .card__thumbnail,
+.search .search__results__browse-more .card--search .card__thumbnail,
+.search .search__results__browse-more ul .card--search .card__thumbnail,
 .search .search__bestbets__list .card--search .card__thumbnail {
     align-self: flex-start;
     flex-shrink: 0;
@@ -47964,24 +48074,32 @@ article .link-copy {
 
 @media (prefers-reduced-motion: reduce) {
     .search .search__results__list .card--search .card__thumbnail,
+    .search .search__results__browse-more .card--search .card__thumbnail,
+    .search .search__results__browse-more ul .card--search .card__thumbnail,
     .search .search__bestbets__list .card--search .card__thumbnail {
         transition: none;
     }
 }
 
 .search .search__results__list .card--search + .card--search,
+.search .search__results__browse-more .card--search + .card--search,
+.search .search__results__browse-more ul .card--search + .card--search,
 .search .search__bestbets__list .card--search + .card--search {
     border-top: 0.0625rem solid #d8d8d8;
     padding-top: 1rem;
 }
 
 .search .search__results__list .card .card__anchor .card__type,
+.search .search__results__browse-more .card .card__anchor .card__type,
+.search .search__results__browse-more ul .card .card__anchor .card__type,
 .search .search__bestbets__list .card .card__anchor .card__type {
     color: #0c0c0e;
     font-size: 1rem;
 }
 
 .search .search__results__list .card .card__anchor .card__heading,
+.search .search__results__browse-more .card .card__anchor .card__heading,
+.search .search__results__browse-more ul .card .card__anchor .card__heading,
 .search .search__bestbets__list .card .card__anchor .card__heading {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -48006,6 +48124,10 @@ article .link-copy {
 
 .search .search__results__list .card .card__anchor .card__heading i,
 .search .search__results__list .card .card__anchor .card__heading em,
+.search .search__results__browse-more .card .card__anchor .card__heading i,
+.search .search__results__browse-more .card .card__anchor .card__heading em,
+.search .search__results__browse-more ul .card .card__anchor .card__heading i,
+.search .search__results__browse-more ul .card .card__anchor .card__heading em,
 .search .search__bestbets__list .card .card__anchor .card__heading i,
 .search .search__bestbets__list .card .card__anchor .card__heading em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -48013,6 +48135,10 @@ article .link-copy {
 
 .search .search__results__list .card .card__anchor .card__heading b,
 .search .search__results__list .card .card__anchor .card__heading strong,
+.search .search__results__browse-more .card .card__anchor .card__heading b,
+.search .search__results__browse-more .card .card__anchor .card__heading strong,
+.search .search__results__browse-more ul .card .card__anchor .card__heading b,
+.search .search__results__browse-more ul .card .card__anchor .card__heading strong,
 .search .search__bestbets__list .card .card__anchor .card__heading b,
 .search .search__bestbets__list .card .card__anchor .card__heading strong {
     font-weight: inherit;
@@ -48020,18 +48146,26 @@ article .link-copy {
 
 .search .search__results__list .card .card__anchor .card__heading i,
 .search .search__results__list .card .card__anchor .card__heading em,
+.search .search__results__browse-more .card .card__anchor .card__heading i,
+.search .search__results__browse-more .card .card__anchor .card__heading em,
+.search .search__results__browse-more ul .card .card__anchor .card__heading i,
+.search .search__results__browse-more ul .card .card__anchor .card__heading em,
 .search .search__bestbets__list .card .card__anchor .card__heading i,
 .search .search__bestbets__list .card .card__anchor .card__heading em {
     font-style: italic;
 }
 
 .search .search__results__list .card .card__anchor .card__heading u,
+.search .search__results__browse-more .card .card__anchor .card__heading u,
+.search .search__results__browse-more ul .card .card__anchor .card__heading u,
 .search .search__bestbets__list .card .card__anchor .card__heading u {
     text-decoration: none;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
     .search .search__results__list .card .card__anchor .card__heading,
+    .search .search__results__browse-more .card .card__anchor .card__heading,
+    .search .search__results__browse-more ul .card .card__anchor .card__heading,
     .search .search__bestbets__list .card .card__anchor .card__heading {
         letter-spacing: -0.013em;
     }
@@ -48039,6 +48173,8 @@ article .link-copy {
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .search .search__results__list .card .card__anchor .card__heading,
+    .search .search__results__browse-more .card .card__anchor .card__heading,
+    .search .search__results__browse-more ul .card .card__anchor .card__heading,
     .search .search__bestbets__list .card .card__anchor .card__heading {
         letter-spacing: -0.015em;
     }
@@ -48046,6 +48182,8 @@ article .link-copy {
 
 @media (min-width: 3840px) and (max-width: 7679px) {
     .search .search__results__list .card .card__anchor .card__heading,
+    .search .search__results__browse-more .card .card__anchor .card__heading,
+    .search .search__results__browse-more ul .card .card__anchor .card__heading,
     .search .search__bestbets__list .card .card__anchor .card__heading {
         letter-spacing: -0.017em;
     }
@@ -48053,6 +48191,8 @@ article .link-copy {
 
 @media (min-width: 7680px) {
     .search .search__results__list .card .card__anchor .card__heading,
+    .search .search__results__browse-more .card .card__anchor .card__heading,
+    .search .search__results__browse-more ul .card .card__anchor .card__heading,
     .search .search__bestbets__list .card .card__anchor .card__heading {
         letter-spacing: -0.017em;
     }
@@ -48060,6 +48200,10 @@ article .link-copy {
 
 .search .search__results__list .card .card__anchor .card__heading b,
 .search .search__results__list .card .card__anchor .card__heading strong,
+.search .search__results__browse-more .card .card__anchor .card__heading b,
+.search .search__results__browse-more .card .card__anchor .card__heading strong,
+.search .search__results__browse-more ul .card .card__anchor .card__heading b,
+.search .search__results__browse-more ul .card .card__anchor .card__heading strong,
 .search .search__bestbets__list .card .card__anchor .card__heading b,
 .search .search__bestbets__list .card .card__anchor .card__heading strong {
     font-weight: 600;
@@ -48067,12 +48211,16 @@ article .link-copy {
 
 @media (prefers-reduced-motion: reduce) {
     .search .search__results__list .card .card__anchor .card__heading,
+    .search .search__results__browse-more .card .card__anchor .card__heading,
+    .search .search__results__browse-more ul .card .card__anchor .card__heading,
     .search .search__bestbets__list .card .card__anchor .card__heading {
         transition: none;
     }
 }
 
 .search .search__results__list .card .card__anchor .card__details__text,
+.search .search__results__browse-more .card .card__anchor .card__details__text,
+.search .search__results__browse-more ul .card .card__anchor .card__details__text,
 .search .search__bestbets__list .card .card__anchor .card__details__text {
     padding: initial;
     padding-bottom: 1rem;
@@ -48080,6 +48228,8 @@ article .link-copy {
 
 @media (hover: hover) {
     .search .search__results__list .card .card__anchor:hover .card__heading,
+    .search .search__results__browse-more .card .card__anchor:hover .card__heading,
+    .search .search__results__browse-more ul .card .card__anchor:hover .card__heading,
     .search .search__bestbets__list .card .card__anchor:hover .card__heading {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
@@ -48088,12 +48238,16 @@ article .link-copy {
 }
 
 .search .search__results__list .card + .card,
+.search .search__results__browse-more .card + .card,
+.search .search__results__browse-more ul .card + .card,
 .search .search__bestbets__list .card + .card {
     border-top: 0.0625rem solid #d8d8d8;
     padding-top: 1rem;
 }
 
 .search .search__results__list .card .card--profile--thumbnailAvailable,
+.search .search__results__browse-more .card .card--profile--thumbnailAvailable,
+.search .search__results__browse-more ul .card .card--profile--thumbnailAvailable,
 .search .search__bestbets__list .card .card--profile--thumbnailAvailable {
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -48102,6 +48256,8 @@ article .link-copy {
 
 @media (max-width: 432px) {
     .search .search__results__list .card .card--profile--thumbnailAvailable,
+    .search .search__results__browse-more .card .card--profile--thumbnailAvailable,
+    .search .search__results__browse-more ul .card .card--profile--thumbnailAvailable,
     .search .search__bestbets__list .card .card--profile--thumbnailAvailable {
         flex-direction: column-reverse;
     }
