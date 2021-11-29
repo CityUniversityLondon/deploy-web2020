@@ -1146,76 +1146,6 @@
     margin: 0.25rem auto 1rem auto;
 }
 
-/**
-Applies a flex display value to a wrapping element. Additionally, add how many columns you want your flex 
-wrapper to have, e.g. 'flex-wrapper--three-columns'. Ensure 'flex-wrapper__content' class is applied to
-to first-level child elements for flex-basis rules to be correctly applied.
-Example HTML:
-    <ul class="cta-block flex-wrapper flex-wrapper--three-columns">
-        <li class="flex-wrapper__content">
-            First list item content
-        </li>
-        <li class="flex-wrapper__content">
-            Second list item content
-        </li>
-        <li class="flex-wrapper__content">
-            Third list item content
-        </li>
-    </ul>
-*/
-@media (min-width: 769px) {
-    .flex-wrapper {
-        display: flex;
-    }
-    .flex-wrapper.flex-wrapper--two-columns > .flex-wrapper__content {
-        flex-basis: 50%;
-    }
-    .flex-wrapper.flex-wrapper--three-columns > .flex-wrapper__content {
-        flex-basis: 33%;
-    }
-    .flex-wrapper.flex-wrapper--four-columns > .flex-wrapper__content {
-        flex-basis: 25%;
-    }
-    .flex-wrapper .flex-wrapper__content:not(:last-of-type) {
-        margin-right: 0.5rem;
-    }
-}
-
-.standard-grid-wrapper {
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-}
-
-@media (min-width: 768px) {
-    .standard-grid-wrapper {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .standard-grid-wrapper {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-/* Provide a full-width heading area, where the bottom border is applied to give
-the impression for a full-width underline on larger screens. As this extends beyond the regular grid,
-the standard grid wrapper mixin is applied to the child element with class
-'full-width-heading'.
-
-Example HTML:
-<div class="wrapper--course--pgt__profiles__heading">
-    <div class="course--pgt__profiles__heading full-width-heading">
-        <h2>Our academics</h2>
-    </div>
-</div>
-
-Assign mixin:
-.wrapper--course--pgt__profiles__heading {
-    @include full-width-heading();
-}
-*/
 html {
     text-size-adjust: 100%;
 }
@@ -19095,6 +19025,76 @@ readers do not read off random characters that represent icons */
     }
 }
 
+/**
+Applies a flex display value to a wrapping element. Additionally, add how many columns you want your flex 
+wrapper to have, e.g. 'flex-wrapper--three-columns'. Ensure 'flex-wrapper__content' class is applied to
+to first-level child elements for flex-basis rules to be correctly applied.
+Example HTML:
+    <ul class="cta-block flex-wrapper flex-wrapper--three-columns">
+        <li class="flex-wrapper__content">
+            First list item content
+        </li>
+        <li class="flex-wrapper__content">
+            Second list item content
+        </li>
+        <li class="flex-wrapper__content">
+            Third list item content
+        </li>
+    </ul>
+*/
+@media (min-width: 769px) {
+    .flex-wrapper {
+        display: flex;
+    }
+    .flex-wrapper.flex-wrapper--two-columns > .flex-wrapper__content {
+        flex-basis: 50%;
+    }
+    .flex-wrapper.flex-wrapper--three-columns > .flex-wrapper__content {
+        flex-basis: 33%;
+    }
+    .flex-wrapper.flex-wrapper--four-columns > .flex-wrapper__content {
+        flex-basis: 25%;
+    }
+    .flex-wrapper .flex-wrapper__content:not(:last-of-type) {
+        margin-right: 0.5rem;
+    }
+}
+
+.standard-grid-wrapper {
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .standard-grid-wrapper {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .standard-grid-wrapper {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+/* Provide a full-width heading area, where the bottom border is applied to give
+the impression for a full-width underline on larger screens. As this extends beyond the regular grid,
+the standard grid wrapper mixin is applied to the child element with class
+'full-width-heading'.
+
+Example HTML:
+<div class="wrapper--course--pgt__profiles__heading">
+    <div class="course--pgt__profiles__heading full-width-heading">
+        <h2>Our academics</h2>
+    </div>
+</div>
+
+Assign mixin:
+.wrapper--course--pgt__profiles__heading {
+    @include full-width-heading();
+}
+*/
 html {
     background-color: #f2f2f2;
     color: #1e1e1e;
