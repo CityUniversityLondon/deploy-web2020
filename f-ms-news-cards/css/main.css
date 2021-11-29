@@ -72080,6 +72080,10 @@ main .standard-content .content {
     }
 }
 
+.js .course--ug__whats-happening .slider[data-style='arrows'] + .slider__controls {
+    grid-column: 1/-1;
+}
+
 .course--ug__related-courses__wrapper {
     background: linear-gradient(360deg, white 0%, #f2f2f2 100%);
 }
