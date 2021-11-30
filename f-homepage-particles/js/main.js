@@ -1313,7 +1313,7 @@ __webpack_require__.r(__webpack_exports__);
  * The function applies the particle animation to a div with the ID 'particles-js'.
  */
 
-const className = 'particle-animation';
+const className = 'particle-animation'; // Initialise particles
 
 function initParticles() {
   _node_modules_particles_js_particles_js__WEBPACK_IMPORTED_MODULE_0___default()('particles-js', {
