@@ -1306,8 +1306,6 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2019
  */
 
-/* global particlesJS */
-
 /**
  * This pattern loads the particle.js NPM module. The function below executes the animation with given parameters below.
  * For full documentation please refer to https://github.com/VincentGarreau/particles.js
