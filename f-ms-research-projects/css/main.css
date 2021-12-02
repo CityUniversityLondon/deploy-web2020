@@ -22105,8 +22105,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .related-content .card.card--research .card__details__text {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 1rem;
 }
 
 .related-content .card.card--research .card__details__text .card__tag {
@@ -68953,13 +68952,8 @@ button
     background-color: #f2f2f2;
 }
 
-.js .research-degree .research-degree__research-projects .related-content > li ul:has(li:only-child) {
-    display: block;
-}
-
 .js .research-degree .research-degree__research-projects .related-content > li ul li {
     background-color: #ffffff;
-    padding: 1rem 0;
 }
 
 @media (max-width: 1023px) {
