@@ -22104,13 +22104,14 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     padding-top: 0.25rem;
 }
 
-.related-content .card--research .card__details__text {
-    padding: 0;
-}
-
-.related-content .card--research .card__tag {
+.related-content .card .card--research .card__tag {
     display: flex;
     align-items: baseline;
+}
+
+.related-content .card .card__details__text {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .card--socialmedia .card__anchor {
@@ -68631,6 +68632,10 @@ button
     .wrapper--research-degree__research-projects .research-degree__research-projects {
         grid-column: 2/-2;
     }
+}
+
+.wrapper--research-degree__research-projects .research-degree__research-projects .slider {
+    padding: 0;
 }
 
 @media (min-width: 768px) {
