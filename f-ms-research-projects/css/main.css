@@ -22104,6 +22104,15 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     padding-top: 0.25rem;
 }
 
+.related-content .card--research .card__details__text {
+    padding: 0;
+}
+
+.related-content .card--research .card__tag {
+    display: flex;
+    align-items: baseline;
+}
+
 .card--socialmedia .card__anchor {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
@@ -68626,10 +68635,6 @@ button
 
 @media (min-width: 768px) {
     .wrapper--research-degree__research-projects .research-degree__research-projects .slider {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
-        grid-gap: 1.5rem;
-        list-style-type: none;
         margin: 1rem 0;
     }
 }
@@ -68640,6 +68645,63 @@ button
 
 .wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link {
     margin-top: 0;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1.266rem;
+    line-height: 1.33333;
+    letter-spacing: -0.011em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-top: 0;
+}
+
+.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link i,
+.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link b,
+.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link strong {
+    font-weight: inherit;
+}
+
+.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link i,
+.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link em {
+    font-style: italic;
+}
+
+.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link u {
+    text-decoration: none;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link {
+        letter-spacing: -0.017em;
+    }
+}
+
+.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link b,
+.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link strong {
+    font-weight: 600;
 }
 
 .wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide:nth-of-type(3n) {
