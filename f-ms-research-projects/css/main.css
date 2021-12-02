@@ -22104,14 +22104,14 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     padding-top: 0.25rem;
 }
 
-.related-content .card .card--research .card__tag {
-    display: flex;
-    align-items: baseline;
-}
-
-.related-content .card .card__details__text {
+.related-content .card.card--research .card__details__text {
     padding-top: 0;
     padding-bottom: 0;
+}
+
+.related-content .card.card--research .card__details__text .card__tag {
+    display: flex;
+    align-items: baseline;
 }
 
 .card--socialmedia .card__anchor {
@@ -68644,6 +68644,10 @@ button
     }
 }
 
+.wrapper--research-degree__research-projects .research-degree__research-projects .slider > .slide {
+    background: transparent;
+}
+
 .wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide {
     background-color: #ffffff;
 }
@@ -68938,6 +68942,24 @@ button
 
 .js .research-degree .research-degree__research-projects .related-content {
     padding-bottom: 0;
+}
+
+.js .research-degree .research-degree__research-projects .related-content > li {
+    padding: 0;
+}
+
+.js .research-degree .research-degree__research-projects .related-content > li ul {
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+.js .research-degree .research-degree__research-projects .related-content > li ul:has(li:only-child) {
+    display: block;
+}
+
+.js .research-degree .research-degree__research-projects .related-content > li ul li {
+    background-color: #ffffff;
+    padding: 1rem 0;
 }
 
 @media (max-width: 1023px) {
