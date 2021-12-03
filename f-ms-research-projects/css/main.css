@@ -22104,13 +22104,81 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     padding-top: 0.25rem;
 }
 
+.related-content .card.card--research {
+    background-color: #ffffff;
+}
+
 .related-content .card.card--research .card__details__text {
     padding: 1rem;
+}
+
+.related-content .card.card--research .card__details__text .card--research__title-link {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1.266rem;
+    line-height: 1.33333;
+    letter-spacing: -0.011em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-top: 0;
+}
+
+.related-content .card.card--research .card__details__text .card--research__title-link i,
+.related-content .card.card--research .card__details__text .card--research__title-link em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.related-content .card.card--research .card__details__text .card--research__title-link b,
+.related-content .card.card--research .card__details__text .card--research__title-link strong {
+    font-weight: inherit;
+}
+
+.related-content .card.card--research .card__details__text .card--research__title-link i,
+.related-content .card.card--research .card__details__text .card--research__title-link em {
+    font-style: italic;
+}
+
+.related-content .card.card--research .card__details__text .card--research__title-link u {
+    text-decoration: none;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .related-content .card.card--research .card__details__text .card--research__title-link {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .related-content .card.card--research .card__details__text .card--research__title-link {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .related-content .card.card--research .card__details__text .card--research__title-link {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .related-content .card.card--research .card__details__text .card--research__title-link {
+        letter-spacing: -0.017em;
+    }
+}
+
+.related-content .card.card--research .card__details__text .card--research__title-link b,
+.related-content .card.card--research .card__details__text .card--research__title-link strong {
+    font-weight: 600;
 }
 
 .related-content .card.card--research .card__details__text .card__tag {
     display: flex;
     align-items: baseline;
+}
+
+.related-content .card.card--research .card__details__text .card__tag .icon {
+    min-width: 1.5rem;
 }
 
 .card--socialmedia .card__anchor {
@@ -68647,75 +68715,6 @@ button
     background: transparent;
 }
 
-.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide {
-    background-color: #ffffff;
-}
-
-.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link {
-    margin-top: 0;
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-    font-size: 1.266rem;
-    line-height: 1.33333;
-    letter-spacing: -0.011em;
-    font-style: normal;
-    font-weight: 600;
-    margin-top: 1rem;
-    margin-top: 0;
-}
-
-.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link i,
-.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link b,
-.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link strong {
-    font-weight: inherit;
-}
-
-.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link i,
-.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link em {
-    font-style: italic;
-}
-
-.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link u {
-    text-decoration: none;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link {
-        letter-spacing: -0.015em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link {
-        letter-spacing: -0.017em;
-    }
-}
-
-.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link b,
-.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide .card--research__title-link strong {
-    font-weight: 600;
-}
-
-.wrapper--research-degree__research-projects .research-degree__research-projects .slider .slide:nth-of-type(3n) {
-    margin: 0;
-}
-
 .research-degree__org-units-research-centres ul.research-centres {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -68950,10 +68949,6 @@ button
 .js .research-degree .research-degree__research-projects .related-content > li ul {
     margin: 0;
     background-color: #f2f2f2;
-}
-
-.js .research-degree .research-degree__research-projects .related-content > li ul li {
-    background-color: #ffffff;
 }
 
 @media (max-width: 1023px) {
