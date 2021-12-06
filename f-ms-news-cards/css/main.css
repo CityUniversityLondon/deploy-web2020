@@ -64913,6 +64913,29 @@ main > .news {
 
 .wrapper--course--pgt__whats-happening .course--pgt__whats-happening {
     grid-column: 1/-1;
+    display: grid;
+    grid-row-gap: 0;
+}
+
+@media (max-width: 432px) {
+    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(16, 1fr);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -64951,7 +64974,7 @@ main > .news {
     }
 }
 
-.wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content__heading {
+.wrapper--course--pgt__whats-happening .course--pgt__whats-happening h2 {
     grid-column: 1/-1;
 }
 
@@ -65448,13 +65471,8 @@ main > .news {
     margin-top: 1rem;
 }
 
-@media (min-width: 768px) {
-    .js .course--pgt__whats-happening .slider[data-cardsperrow='3'][data-small='true'] {
-        margin: 1rem 0;
-    }
-    .js .course--pgt__whats-happening .slider[data-cardsperrow='3'][data-small='true'] .slide {
-        width: auto;
-    }
+.js .course--pgt__whats-happening .slider + .slider__controls {
+    grid-column: 1/-1;
 }
 
 .chart--bar--horizontal__collection[data-label='course--pgt__msc'] {
