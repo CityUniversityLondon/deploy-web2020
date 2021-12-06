@@ -49221,9 +49221,15 @@ article .link-copy {
         text-decoration: none;
     }
     .js .tabs .tabs__links li button > span {
-        font-size: 0.889rem;
+        font-family: "Meta Sans", sans-serif;
+        font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+        font-size: 1rem;
         line-height: 1.625;
-        letter-spacing: 0em;
+        letter-spacing: -0.005em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.33333;
+        margin-top: 1rem;
         align-items: flex-end;
         border-bottom-color: transparent;
         border-bottom-style: solid;
@@ -49237,17 +49243,32 @@ article .link-copy {
         padding-right: 0.5rem;
         padding-top: 0.5rem;
     }
+    .js .tabs .tabs__links li button > span i,
+    .js .tabs .tabs__links li button > span em {
+        font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    }
+    .js .tabs .tabs__links li button > span b,
+    .js .tabs .tabs__links li button > span strong {
+        font-weight: inherit;
+    }
+    .js .tabs .tabs__links li button > span i,
+    .js .tabs .tabs__links li button > span em {
+        font-style: italic;
+    }
+    .js .tabs .tabs__links li button > span u {
+        text-decoration: none;
+    }
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
     .js .tabs .tabs__links li button > span {
-        letter-spacing: -0.005em;
+        letter-spacing: -0.008em;
     }
 }
 
 @media screen and (min-width: 1920px) and (max-width: 3839px) {
     .js .tabs .tabs__links li button > span {
-        letter-spacing: -0.01em;
+        letter-spacing: -0.013em;
     }
 }
 
@@ -49260,6 +49281,13 @@ article .link-copy {
 @media screen and (min-width: 7680px) {
     .js .tabs .tabs__links li button > span {
         letter-spacing: -0.017em;
+    }
+}
+
+@media screen {
+    .js .tabs .tabs__links li button > span b,
+    .js .tabs .tabs__links li button > span strong {
+        font-weight: 600;
     }
 }
 
@@ -49538,6 +49566,75 @@ button
 
 .js .tabs--grey-underline .tabs__panel__body .tabs .tabs__panel {
     background: #f2f2f2;
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li {
+        margin-right: 0.5rem;
+    }
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        font-size: 0.79rem;
+        line-height: 1.625;
+        letter-spacing: 0.005em;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 1280px) and (max-width: 1919px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 1920px) and (max-width: 3839px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.007em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 3840px) and (max-width: 7679px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 7680px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        font-size: 0.889rem;
+        line-height: 1.625;
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 1280px) and (max-width: 1919px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 1920px) and (max-width: 3839px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 3840px) and (max-width: 7679px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 7680px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
 }
 
 .timetable {
