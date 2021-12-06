@@ -64974,7 +64974,7 @@ main > .news {
     }
 }
 
-.wrapper--course--pgt__whats-happening .course--pgt__whats-happening h2 {
+.wrapper--course--pgt__whats-happening .course--pgt__whats-happening .related-content__heading {
     grid-column: 1/-1;
 }
 
