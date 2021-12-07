@@ -71988,6 +71988,11 @@ main .standard-content .content {
     }
 }
 
+.js .standard-content .related-content:not(.slider) li:only-child {
+    grid-column: 1/-1;
+    max-width: unset;
+}
+
 .visit-us {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
