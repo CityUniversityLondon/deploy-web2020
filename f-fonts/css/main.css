@@ -18202,7 +18202,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local("Meta Sans Normal"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-normal.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-normal.woff) format("woff");
+    src: local("Meta Sans Normal"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-normal.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-normal.woff) format("woff");
 }
 
 @font-face {
@@ -18210,7 +18210,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: local("Meta Sans Book"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-book.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-book.woff) format("woff");
+    src: local("Meta Sans Book"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-book.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-book.woff) format("woff");
 }
 
 @font-face {
@@ -18218,7 +18218,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: local("Meta Sans Medium"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-medium.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-medium.woff) format("woff");
+    src: local("Meta Sans Medium"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-medium.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-medium.woff) format("woff");
 }
 
 @font-face {
@@ -18226,7 +18226,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: local("Meta Sans Bold"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-bold.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-bold.woff) format("woff");
+    src: local("Meta Sans Bold"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-bold.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-bold.woff) format("woff");
 }
 
 @font-face {
@@ -18234,7 +18234,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 800;
     font-display: swap;
-    src: local("Meta Sans Black"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-black.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-black.woff) format("woff");
+    src: local("Meta Sans Black"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-black.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-black.woff) format("woff");
 }
 
 @font-face {
@@ -18274,7 +18274,7 @@ readers do not read off random characters that represent icons */
     font-style: italic;
     font-weight: 500;
     font-display: swap;
-    src: local("Meta Sans Book Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-book-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-book-italic.woff) format("woff");
+    src: local("Meta Sans Book Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-book-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-book-italic.woff) format("woff");
 }
 
 @font-face {
@@ -18290,7 +18290,7 @@ readers do not read off random characters that represent icons */
     font-style: italic;
     font-weight: 700;
     font-display: swap;
-    src: local("Meta Sans Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-bold-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-bold-italic.woff) format("woff");
+    src: local("Meta Sans Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-bold-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w04-condensed-bold-italic.woff) format("woff");
 }
 
 @font-face {
