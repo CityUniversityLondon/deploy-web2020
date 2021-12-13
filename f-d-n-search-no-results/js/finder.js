@@ -3253,16 +3253,6 @@ function Finder(props) {
     request.then(data => {
       setResponse(data);
       setUpdating(false);
-
-      if (data.spell && data.summary.totalMatching === 0) {
-        const newQueryText = data.spell.text.split(/\|/)[0].trim(),
-              newQuery = query;
-        newQuery.misspelling = query.query;
-        newQuery.query = newQueryText;
-        newQuery.startRank = 1;
-        setQuery(newQuery);
-        setUpdate(!update);
-      }
     }).then(() => {
       query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_13___default.a.center(props.element.querySelector('.finder__results h2'), scrollDuration);
     }).catch(() => {

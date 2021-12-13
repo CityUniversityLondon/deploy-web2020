@@ -2847,6 +2847,9 @@ function Search__Results(props) {
     totalMatching: props.primary[0].response.summary.totalMatching,
     update: props.update
   });
+  const spell = props.primary[0] && props.primary[0].response && props.primary[0].response.spell && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Did you mean", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
+    href: "search?".concat(props.primary[0].response.spell.url)
+  }, props.primary[0].response.spell.text), "?");
   const panels = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("section", {
     className: "tabs__panel",
     id: 'search443531__tabs__' + props.primary[0].collection,
@@ -2914,7 +2917,7 @@ function Search__Results(props) {
     className: "search__results__summary search__results__summary--noresults"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h3", {
     className: "search__results__summary__heading"
-  }, "Your search did not match any results."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Suggestions:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Try different keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Try more general keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Try fewer keywords"))))), props.finders.map((finder, i) => {
+  }, "Your search did not match any results."), spell, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, "Suggestions:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Make sure that all words are spelled correctly"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Try different keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Try more general keywords"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("li", null, "Try fewer keywords"))))), props.finders.map((finder, i) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("section", {
       className: "tabs__panel",
       id: 'search443531__tabs__' + finder.collection,
@@ -3487,17 +3490,6 @@ function Search(props) {
           const responses = fbResponses;
           responses.primary[i].response = data;
           responses.primary[i].updating = false;
-
-          if (newResponses.primary[i].collection === query.collection && data.spell && data.summary.totalMatching === 0) {
-            const newQueryText = data.spell.text.split(/\|/)[0].trim(),
-                  newQuery = query;
-            newQuery.misspelling = query.query;
-            newQuery.query = newQueryText;
-            newQuery.startRank = 1;
-            setQuery(newQuery);
-            setUpdate(!update);
-          }
-
           setFbResponses(responses);
           setResponse(Math.random());
         }).catch(() => {
