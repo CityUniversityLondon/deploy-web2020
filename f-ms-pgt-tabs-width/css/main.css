@@ -66201,13 +66201,15 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     background-image: linear-gradient(to bottom, rgba(242, 242, 242, 0), #f2f2f2 90%);
 }
 
-.js .course--pgt .tabs--accordion .accordion {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+@media (max-width: 767px) {
+    .js .course--pgt .tabs--accordion .accordion:not(.accordion--nested) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
 
-@media (min-width: 901px) {
-    .js .course--pgt .tabs--accordion .accordion {
+@media (max-width: 767px) and (min-width: 901px) {
+    .js .course--pgt .tabs--accordion .accordion:not(.accordion--nested) {
         padding-left: 2rem;
         padding-right: 2rem;
     }
