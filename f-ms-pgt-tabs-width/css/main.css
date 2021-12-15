@@ -66085,11 +66085,15 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .js .course--pgt .accordion > .accordion__heading + .accordion__body {
-    background-color: #ffffff;
+    background-color: #f2f2f2;
 }
 
 .js .course--pgt .accordion.accordion--nested {
     padding-bottom: 0;
+}
+
+.js .course--pgt .accordion.accordion--nested .accordion__body {
+    background-color: #ffffff;
 }
 
 .js .course--pgt .accordion > .accordion__heading {
@@ -66201,14 +66205,14 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     background-image: linear-gradient(to bottom, rgba(242, 242, 242, 0), #f2f2f2 90%);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .js .course--pgt .tabs--accordion .accordion:not(.accordion--nested) {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
-@media (max-width: 767px) and (min-width: 901px) {
+@media (max-width: 768px) and (min-width: 901px) {
     .js .course--pgt .tabs--accordion .accordion:not(.accordion--nested) {
         padding-left: 2rem;
         padding-right: 2rem;
