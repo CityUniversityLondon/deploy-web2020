@@ -66219,10 +66219,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
-.js .course--pgt .tabs--accordion .accordion .show-more__content[data-hidden='true']:after {
-    background-image: none;
-}
-
 .js .wrapper--alumni-testimonials .card--testimonial .card__details .card--testimonial__quote {
     margin-top: 1rem;
 }
