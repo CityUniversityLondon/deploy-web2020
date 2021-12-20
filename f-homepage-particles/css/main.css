@@ -18178,7 +18178,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 100;
     font-display: swap;
-    src: local("Meta Sans Hairline"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-hairline.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-hairline.woff) format("woff");
+    src: local("Meta Sans Hairline"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-hairline.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-hairline.woff) format("woff");
 }
 
 @font-face {
@@ -18186,7 +18186,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 200;
     font-display: swap;
-    src: local("Meta Sans Thin"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-thin.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-thin.woff) format("woff");
+    src: local("Meta Sans Thin"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-thin.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-thin.woff) format("woff");
 }
 
 @font-face {
@@ -18194,7 +18194,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: local("Meta Sans Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-light.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-light.woff) format("woff");
+    src: local("Meta Sans Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-light.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-light.woff) format("woff");
 }
 
 @font-face {
@@ -18202,7 +18202,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local("Meta Sans Normal"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-normal.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-normal.woff) format("woff");
+    src: local("Meta Sans Normal"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-normal.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-normal.woff) format("woff");
 }
 
 @font-face {
@@ -18210,7 +18210,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: local("Meta Sans Book"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-book.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-book.woff) format("woff");
+    src: local("Meta Sans Book"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-book.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-book.woff) format("woff");
 }
 
 @font-face {
@@ -18218,7 +18218,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: local("Meta Sans Medium"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-medium.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-medium.woff) format("woff");
+    src: local("Meta Sans Medium"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-medium.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-medium.woff) format("woff");
 }
 
 @font-face {
@@ -18226,7 +18226,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: local("Meta Sans Bold"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-bold.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-bold.woff) format("woff");
+    src: local("Meta Sans Bold"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-bold.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-bold.woff) format("woff");
 }
 
 @font-face {
@@ -18234,7 +18234,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 800;
     font-display: swap;
-    src: local("Meta Sans Black"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-black.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-black.woff) format("woff");
+    src: local("Meta Sans Black"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-black.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-black.woff) format("woff");
 }
 
 @font-face {
@@ -18242,7 +18242,7 @@ readers do not read off random characters that represent icons */
     font-style: italic;
     font-weight: 100;
     font-display: swap;
-    src: local("Meta Sans Hairline Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-hairline-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-hairline-italic.woff) format("woff");
+    src: local("Meta Sans Hairline Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-hairline-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-hairline-italic.woff) format("woff");
 }
 
 @font-face {
@@ -18250,7 +18250,7 @@ readers do not read off random characters that represent icons */
     font-style: italic;
     font-weight: 200;
     font-display: swap;
-    src: local("Meta Sans Thin Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-thin-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-thin-italic.woff) format("woff");
+    src: local("Meta Sans Thin Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-thin-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-thin-italic.woff) format("woff");
 }
 
 @font-face {
@@ -18258,7 +18258,7 @@ readers do not read off random characters that represent icons */
     font-style: italic;
     font-weight: 300;
     font-display: swap;
-    src: local("Meta Sans Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-light-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-light-italic.woff) format("woff");
+    src: local("Meta Sans Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-light-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-light-italic.woff) format("woff");
 }
 
 @font-face {
@@ -18266,7 +18266,7 @@ readers do not read off random characters that represent icons */
     font-style: italic;
     font-weight: 400;
     font-display: swap;
-    src: local("Meta Sans Normal Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-normal-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-normal-italic.woff) format("woff");
+    src: local("Meta Sans Normal Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-normal-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-normal-italic.woff) format("woff");
 }
 
 @font-face {
@@ -18274,7 +18274,7 @@ readers do not read off random characters that represent icons */
     font-style: italic;
     font-weight: 500;
     font-display: swap;
-    src: local("Meta Sans Book Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-book-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-book-italic.woff) format("woff");
+    src: local("Meta Sans Book Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-book-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-book-italic.woff) format("woff");
 }
 
 @font-face {
@@ -18282,7 +18282,7 @@ readers do not read off random characters that represent icons */
     font-style: italic;
     font-weight: 600;
     font-display: swap;
-    src: local("Meta Sans Medium Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-medium-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-medium-italic.woff) format("woff");
+    src: local("Meta Sans Medium Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-medium-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-medium-italic.woff) format("woff");
 }
 
 @font-face {
@@ -18290,7 +18290,7 @@ readers do not read off random characters that represent icons */
     font-style: italic;
     font-weight: 700;
     font-display: swap;
-    src: local("Meta Sans Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-bold-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-bold-italic.woff) format("woff");
+    src: local("Meta Sans Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-bold-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-bold-italic.woff) format("woff");
 }
 
 @font-face {
@@ -18298,7 +18298,7 @@ readers do not read off random characters that represent icons */
     font-style: italic;
     font-weight: 800;
     font-display: swap;
-    src: local("Meta Sans Black Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-black-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w03-black-italic.woff) format("woff");
+    src: local("Meta Sans Black Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-black-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-black-italic.woff) format("woff");
 }
 
 @font-face {
@@ -19319,24 +19319,27 @@ u {
     font-style: italic;
 }
 
-.meta {
+.meta, .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-weight: 400;
 }
 
-.meta i,
-.meta em {
+.meta i, .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * i,
+.meta em,
+.course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.meta b,
-.meta strong {
+.meta b, .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * b,
+.meta strong,
+.course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * strong {
     font-weight: 700;
 }
 
-.meta i,
-.meta em {
+.meta i, .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * i,
+.meta em,
+.course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * em {
     font-style: italic;
 }
 
@@ -21404,15 +21407,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     padding-top: 1rem;
 }
 
-.card--event .card__anchor .card--event__label--shortdate
-.card--event__label--event
-+ .card--event__label--shortdate {
+.card--event .card__anchor .card--event__label--shortdate .card--event__label--event + .card--event__label--shortdate {
     top: 2.5rem;
 }
 
-.card--event .card__anchor .card--event__label--event
-+ .card__thumbnail
-+ .card--event__label--shortdate {
+.card--event .card__anchor .card--event__label--event + .card__thumbnail + .card--event__label--shortdate {
     top: 4rem;
 }
 
@@ -21485,9 +21484,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     padding-top: 0;
 }
 
-.card--event.card--landscape .card--event__label--event
-+ .card--event__label--shortdate
-+ .card__details__text {
+.card--event.card--landscape .card--event__label--event + .card--event__label--shortdate + .card__details__text {
     margin-top: 7rem;
 }
 
@@ -21511,9 +21508,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
         margin-top: 3rem;
         padding-top: 0;
     }
-    .card--event .card--event__label--event
-+ .card--event__label--shortdate
-+ .card__details__text {
+    .card--event .card--event__label--event + .card--event__label--shortdate + .card__details__text {
         margin-top: 7rem;
     }
 }
@@ -22104,6 +22099,83 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     padding-top: 0.25rem;
 }
 
+.related-content .card.card--research {
+    background-color: #ffffff;
+}
+
+.related-content .card.card--research .card__details__text {
+    padding: 1rem;
+}
+
+.related-content .card.card--research .card__details__text .card--research__title-link {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1.266rem;
+    line-height: 1.33333;
+    letter-spacing: -0.011em;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-top: 0;
+}
+
+.related-content .card.card--research .card__details__text .card--research__title-link i,
+.related-content .card.card--research .card__details__text .card--research__title-link em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.related-content .card.card--research .card__details__text .card--research__title-link b,
+.related-content .card.card--research .card__details__text .card--research__title-link strong {
+    font-weight: inherit;
+}
+
+.related-content .card.card--research .card__details__text .card--research__title-link i,
+.related-content .card.card--research .card__details__text .card--research__title-link em {
+    font-style: italic;
+}
+
+.related-content .card.card--research .card__details__text .card--research__title-link u {
+    text-decoration: none;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .related-content .card.card--research .card__details__text .card--research__title-link {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .related-content .card.card--research .card__details__text .card--research__title-link {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .related-content .card.card--research .card__details__text .card--research__title-link {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .related-content .card.card--research .card__details__text .card--research__title-link {
+        letter-spacing: -0.017em;
+    }
+}
+
+.related-content .card.card--research .card__details__text .card--research__title-link b,
+.related-content .card.card--research .card__details__text .card--research__title-link strong {
+    font-weight: 600;
+}
+
+.related-content .card.card--research .card__details__text .card__tag {
+    display: flex;
+    align-items: baseline;
+}
+
+.related-content .card.card--research .card__details__text .card__tag .icon {
+    min-width: 1.5rem;
+}
+
 .card--socialmedia .card__anchor {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
@@ -22255,24 +22327,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card--socialmedia .card__anchor .card--socialmedia__footer .card--socialmedia__time {
     color: #696969;
     font-style: italic;
-}
-
-.card--socialmedia.card--socialmedia--instagram .card__anchor {
-    position: relative;
-}
-
-.card--socialmedia.card--socialmedia--instagram .card__details__text {
-    position: absolute;
-    top: 1rem;
-    left: 0;
-}
-
-.card--socialmedia.card--socialmedia--instagram .card--socialmedia__label--socialmedia ~ .card__details__text {
-    top: 3.25rem;
-}
-
-.card--socialmedia.card--socialmedia--instagram .card__thumbnail {
-    display: block;
 }
 
 .card--testimonial .card__details {
@@ -23408,20 +23462,12 @@ form:not([class]) .form__required-note--marker,
     }
 }
 
-.js
-.accordion
-> .accordion__heading[data-open='true']
-+ .accordion__body
-> .timeline__content.expanded {
+.js .accordion > .accordion__heading[data-open='true'] + .accordion__body > .timeline__content.expanded {
     top: 0.25rem;
 }
 
 @media (min-width: 1024px) {
-    .js
-.accordion
-> .accordion__heading[data-open='true']
-+ .accordion__body
-> .timeline__content.expanded {
+    .js .accordion > .accordion__heading[data-open='true'] + .accordion__body > .timeline__content.expanded {
         top: 2.25rem;
         margin-bottom: 3.25rem;
     }
@@ -28419,8 +28465,7 @@ form:not([class]) .form__required-note--marker,
     margin-top: 0.25rem;
 }
 
-.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile .featured-profiles__profile__image
-+ .featured-profiles__profile__label {
+.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile .featured-profiles__profile__image + .featured-profiles__profile__label {
     flex-basis: calc(65% - 1rem);
 }
 
@@ -28508,8 +28553,7 @@ form:not([class]) .form__required-note--marker,
     margin-top: 0.25rem;
 }
 
-.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile .featured-profiles__profile__image
-+ .featured-profiles__profile__label {
+.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile .featured-profiles__profile__image + .featured-profiles__profile__label {
     flex-basis: calc(65% - 1rem);
 }
 
@@ -28597,8 +28641,7 @@ form:not([class]) .form__required-note--marker,
     margin-top: 0.25rem;
 }
 
-.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile .featured-profiles__profile__image
-+ .featured-profiles__profile__label {
+.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile .featured-profiles__profile__image + .featured-profiles__profile__label {
     flex-basis: calc(65% - 1rem);
 }
 
@@ -28686,8 +28729,7 @@ form:not([class]) .form__required-note--marker,
     margin-top: 0.25rem;
 }
 
-.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile .featured-profiles__profile__image
-+ .featured-profiles__profile__label {
+.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile .featured-profiles__profile__image + .featured-profiles__profile__label {
     flex-basis: calc(65% - 1rem);
 }
 
@@ -28775,8 +28817,7 @@ form:not([class]) .form__required-note--marker,
     margin-top: 0.25rem;
 }
 
-.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile .featured-profiles__profile__image
-+ .featured-profiles__profile__label {
+.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile .featured-profiles__profile__image + .featured-profiles__profile__label {
     flex-basis: calc(65% - 1rem);
 }
 
@@ -30994,8 +31035,7 @@ figure figcaption a:active,
     }
 }
 
-.global-footer .global-footer__content__section--location
-.global-footer__content__section--location__cta {
+.global-footer .global-footer__content__section--location .global-footer__content__section--location__cta {
     display: inline-flex;
 }
 
@@ -43192,24 +43232,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     background-color: #d61726;
     background-image: linear-gradient(to right, #d61726, #5d184a);
     color: #ffffff;
-    padding-top: 0.75rem;
-    padding-bottom: 2rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-
-@media (min-width: 901px) {
-    .promo-box {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .promo-box {
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
+    padding: 0 1.5rem 1rem;
 }
 
 .promo-box a {
@@ -43230,6 +43253,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .promo-box__wrapper {
         display: flex;
     }
+}
+
+.promo-box__card {
+    flex: 1;
 }
 
 .promo-box__card:nth-of-type(2) {
@@ -45000,6 +45027,9 @@ blockquote footer cite {
     .js .related-content[data-style='responsive']:not(.slider),
     .js .related-content[data-style='arrows']:not(.slider) {
         justify-content: initial;
+        grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
+        grid-gap: 1.5rem;
+        display: grid;
     }
 }
 
@@ -45008,8 +45038,6 @@ blockquote footer cite {
 }
 
 .js .related-content:not(.slider) li:only-child {
-    max-width: calc(55ch - 2.5rem);
-    grid-column: 1/7;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -49482,20 +49510,10 @@ article .link-copy {
 }
 
 @media screen and (max-width: 768px) {
-    .js
-.tabs--accordion
-> .accordion
-.accordion__heading
-button
-.accordion__heading__text {
+    .js .tabs--accordion > .accordion .accordion__heading button .accordion__heading__text {
         padding: 1rem;
     }
-    .js
-.tabs--accordion
-> .accordion
-.accordion__heading
-button
-.accordion__heading__indicator {
+    .js .tabs--accordion > .accordion .accordion__heading button .accordion__heading__indicator {
         align-self: normal;
         padding: 1rem;
         text-align: center;
@@ -49503,12 +49521,7 @@ button
         background: #3e1031;
         color: #ffffff;
     }
-    .js
-.tabs--accordion
-> .accordion
-.accordion__heading
-button
-.accordion__heading__indicator:before {
+    .js .tabs--accordion > .accordion .accordion__heading button .accordion__heading__indicator:before {
         vertical-align: sub;
     }
     .js .tabs--accordion > .accordion .accordion .accordion__heading button .accordion__heading__text,
@@ -49579,6 +49592,75 @@ button
 
 .js .tabs--grey-underline .tabs__panel__body .tabs .tabs__panel {
     background: #f2f2f2;
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li {
+        margin-right: 0.5rem;
+    }
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        font-size: 0.79rem;
+        line-height: 1.625;
+        letter-spacing: 0.005em;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 1280px) and (max-width: 1919px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 1920px) and (max-width: 3839px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.007em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 3840px) and (max-width: 7679px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 7680px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        font-size: 0.889rem;
+        line-height: 1.625;
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 1280px) and (max-width: 1919px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 1920px) and (max-width: 3839px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 3840px) and (max-width: 7679px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 7680px) {
+    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
 }
 
 .timetable {
@@ -50012,8 +50094,7 @@ button
     margin-top: 0.25rem;
 }
 
-.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile .featured-profiles__profile__image
-+ .featured-profiles__profile__label {
+.featured-profiles-block.background--purple80 .wrapper--featured-profiles__profile .featured-profiles__profile__image + .featured-profiles__profile__label {
     flex-basis: calc(65% - 1rem);
 }
 
@@ -50101,8 +50182,7 @@ button
     margin-top: 0.25rem;
 }
 
-.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile .featured-profiles__profile__image
-+ .featured-profiles__profile__label {
+.featured-profiles-block.background--gray9 .wrapper--featured-profiles__profile .featured-profiles__profile__image + .featured-profiles__profile__label {
     flex-basis: calc(65% - 1rem);
 }
 
@@ -50190,8 +50270,7 @@ button
     margin-top: 0.25rem;
 }
 
-.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile .featured-profiles__profile__image
-+ .featured-profiles__profile__label {
+.featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile .featured-profiles__profile__image + .featured-profiles__profile__label {
     flex-basis: calc(65% - 1rem);
 }
 
@@ -50279,8 +50358,7 @@ button
     margin-top: 0.25rem;
 }
 
-.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile .featured-profiles__profile__image
-+ .featured-profiles__profile__label {
+.featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile .featured-profiles__profile__image + .featured-profiles__profile__label {
     flex-basis: calc(65% - 1rem);
 }
 
@@ -50368,8 +50446,7 @@ button
     margin-top: 0.25rem;
 }
 
-.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile .featured-profiles__profile__image
-+ .featured-profiles__profile__label {
+.featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile .featured-profiles__profile__image + .featured-profiles__profile__label {
     flex-basis: calc(65% - 1rem);
 }
 
@@ -53010,9 +53087,7 @@ button
     margin-top: 0.25rem;
 }
 
-.wrapper--finder__filters--desktop
-.finder__filters
-label:not(.finder__filters__label--always) {
+.wrapper--finder__filters--desktop .finder__filters label:not(.finder__filters__label--always) {
     border: 0;
     clip: rect(0, 0, 0, 0);
     height: 1px;
@@ -57503,10 +57578,14 @@ main > .case-study--business .case-study--business__content {
 }
 
 .case-study--research .case-study--research__related-events .related-content {
-    grid-column: 1/-1;
+    grid-column: 2/-2;
     margin-left: 1rem;
     margin-right: 1rem;
     max-width: 80rem;
+}
+
+.case-study--research .case-study--research__related-events .related-content li {
+    width: auto;
 }
 
 @media (min-width: 901px) {
@@ -59109,20 +59188,12 @@ main > .case-study--business .case-study--business__content {
     }
 }
 
-.content-hub__block-three
-.news-events
-.content-hub__block-three__research__centres__title {
+.content-hub__block-three .news-events .content-hub__block-three__research__centres__title {
     text-align: left;
 }
 
-.content-hub__block-three
-.news-events
-.content-hub__block-three__happening
-h2.section-title,
-.content-hub__block-three
-.news-events
-.content-hub__block-three__happening
-h2.related-content__heading {
+.content-hub__block-three .news-events .content-hub__block-three__happening h2.section-title,
+.content-hub__block-three .news-events .content-hub__block-three__happening h2.related-content__heading {
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -59549,6 +59620,10 @@ main > .error {
 .event .embedded-video,
 .event .carousel-gallery-default {
     margin: 0.75rem 0;
+}
+
+.event .related-content li:only-child {
+    grid-column: 1/-1;
 }
 
 .event .footer-cards {
@@ -62462,6 +62537,10 @@ main .home .home__whats-happening .related-content {
     color: #ffffff;
 }
 
+.js .landing--functional .related-content:not(.slider) li:only-child {
+    grid-column: 1/-1;
+}
+
 main > .landing--latest {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
@@ -63394,8 +63473,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
         padding-left: 0;
         padding-right: 0;
     }
-    main > .listing .finder .wrapper--finder__filters--desktop
-.wrapper--finder_filters--filters {
+    main > .listing .finder .wrapper--finder__filters--desktop .wrapper--finder_filters--filters {
         margin: 0;
     }
     main > .listing .finder .finder__results__list {
@@ -63439,8 +63517,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
     main .navigation--secondary + .listing .finder {
         display: block;
     }
-    main .navigation--secondary + .listing .finder .wrapper--finder__filters--desktop
-.finder__filters__heading,
+    main .navigation--secondary + .listing .finder .wrapper--finder__filters--desktop .finder__filters__heading,
     main .navigation--secondary + .listing .finder .finder__results__summary {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -63449,8 +63526,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + .listing .finder .wrapper--finder__filters--desktop
-.finder__filters__heading,
+    main .navigation--secondary + .listing .finder .wrapper--finder__filters--desktop .finder__filters__heading,
     main .navigation--secondary + .listing .finder .finder__results__summary {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -63458,8 +63534,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 }
 
 @media (min-width: 1024px) {
-    main .navigation--secondary + .listing .finder .wrapper--finder__filters--desktop
-.wrapper--finder_filters--filters {
+    main .navigation--secondary + .listing .finder .wrapper--finder__filters--desktop .wrapper--finder_filters--filters {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -63467,8 +63542,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + .listing .finder .wrapper--finder__filters--desktop
-.wrapper--finder_filters--filters {
+    main .navigation--secondary + .listing .finder .wrapper--finder__filters--desktop .wrapper--finder_filters--filters {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
@@ -63521,7 +63595,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
     color: #ffffff;
 }
 
-.listing[data-theme-id='531052'] .banner-text, .listing[data-theme-id='592970'] .banner-text {
+.listing[data-theme-id='531052'] .banner-text, .listing[data-theme-id='592970'] .banner-text, .listing[data-theme-id='495139'] .banner-text {
     background: #cdc8c7;
     background: linear-gradient(180deg, #cdc8c7 0%, #ffffff 100%);
     color: #0c0c0e;
@@ -63966,7 +64040,7 @@ main > .news {
     main > .news .banner__standfirst h1,
     main > .news .banner__standfirst .labels,
     main > .news .banner__standfirst .standfirst {
-        grid-column: 3 / 23;
+        grid-column: 1/-1;
     }
     main > .news .news__summary,
     main > .news .news__wrap,
@@ -64065,14 +64139,12 @@ main > .news .content {
 
 main > .news .banner__standfirst {
     display: grid;
-    padding-left: 0;
-    padding-right: 0;
 }
 
 main > .news .banner__standfirst h1,
 main > .news .banner__standfirst .labels,
 main > .news .banner__standfirst .standfirst {
-    grid-column: 3 / 23;
+    grid-column: 1/-1;
 }
 
 main > .news .news__container {
@@ -64295,7 +64367,11 @@ main > .news .news__related-academics {
     border-bottom: 0.0625rem solid #cbcbcb;
 }
 
-main > .news .news__related-academics .card--profile {
+main > .news .news__related-academics .related-content li:only-child {
+    grid-column: 1/-1;
+}
+
+main > .news .news__related-academics .related-content.card--profile {
     padding: 0;
     margin-bottom: 1rem;
 }
@@ -64332,6 +64408,10 @@ main > .news .news__schools li:before {
 
 main > .news .news__related-news {
     background: #ffffff;
+}
+
+main > .news .news__related-news .news__related-news__container {
+    margin: 0 1.5rem;
 }
 
 @media (max-width: 1023px) {
@@ -64990,7 +65070,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
-    padding: 0 1.5rem;
+    grid-column: 2/-2;
 }
 
 @media (min-width: 768px) {
@@ -65002,20 +65082,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 @media (min-width: 901px) {
     .course--pgt__promo__content {
         grid-column-gap: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) {
-    .course--pgt__promo__content {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__promo__content {
-        padding-left: 2rem;
-        padding-right: 2rem;
     }
 }
 
@@ -65134,7 +65200,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item :not(span) {
-    font-family: "Meta Sans", sans-serif;
     font-weight: 600;
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -65571,6 +65636,29 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 
 .wrapper--course--pgt__whats-happening .course--pgt__whats-happening {
     grid-column: 1/-1;
+    display: grid;
+    grid-row-gap: 0;
+}
+
+@media (max-width: 432px) {
+    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 433px) and (max-width: 900px) {
+    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening {
+        grid-column-gap: 1rem;
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+@media (min-width: 901px) {
+    .wrapper--course--pgt__whats-happening .course--pgt__whats-happening {
+        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(16, 1fr);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -66075,13 +66163,8 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     margin-top: 1rem;
 }
 
-@media (min-width: 768px) {
-    .js .course--pgt__whats-happening .slider[data-cardsperrow='3'][data-small='true'] {
-        margin: 1rem 0;
-    }
-    .js .course--pgt__whats-happening .slider[data-cardsperrow='3'][data-small='true'] .slide {
-        width: auto;
-    }
+.js .course--pgt__whats-happening .slider + .slider__controls {
+    grid-column: 1/-1;
 }
 
 .chart--bar--horizontal__collection[data-label='course--pgt__msc'] {
@@ -67000,11 +67083,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     max-width: 55ch;
 }
 
-.profile .tabs--accordion
-> .accordion
-.accordion__heading
-button
-.accordion__heading__text {
+.profile .tabs--accordion > .accordion .accordion__heading button .accordion__heading__text {
     background: #1e1e1e;
 }
 
@@ -68517,28 +68596,28 @@ button
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1023px) {
     .wrapper--research-degree__research-projects {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
-@media (max-width: 900px) and (min-width: 901px) {
+@media (max-width: 1023px) and (min-width: 901px) {
     .wrapper--research-degree__research-projects {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     .wrapper--research-degree__promo-box {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
-@media (max-width: 1024px) and (min-width: 901px) {
+@media (max-width: 1023px) and (min-width: 901px) {
     .wrapper--research-degree__promo-box {
         padding-left: 2rem;
         padding-right: 2rem;
@@ -68602,28 +68681,40 @@ button
     }
 }
 
-.wrapper--research-degree__research-projects {
-    padding-top: 1rem;
+@media (max-width: 767px) {
+    .wrapper--research-degree__research-projects {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 }
 
 .wrapper--research-degree__research-projects h2.research-degree__research-projects__heading {
     margin-top: 2.5rem;
+    grid-column: 2/-2;
 }
 
-@media (min-width: 768px) {
-    .wrapper--research-degree__research-projects .research-degree__research-projects {
-        grid-column: 1/-1;
-    }
+.wrapper--research-degree__research-projects .research-degree__research-projects {
+    grid-column: 1/-1;
 }
 
-@media (min-width: 901px) {
+@media (min-width: 1024px) {
     .wrapper--research-degree__research-projects .research-degree__research-projects {
         grid-column: 2/-2;
     }
 }
 
 .wrapper--research-degree__research-projects .research-degree__research-projects .slider {
-    display: flex;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .wrapper--research-degree__research-projects .research-degree__research-projects .slider {
+        margin: 1rem 0;
+    }
+}
+
+.wrapper--research-degree__research-projects .research-degree__research-projects .slider > .slide {
+    background: transparent;
 }
 
 .research-degree__org-units-research-centres ul.research-centres {
@@ -68847,6 +68938,19 @@ button
         padding-left: 2rem;
         padding-right: 2rem;
     }
+}
+
+.js .research-degree .research-degree__research-projects .related-content {
+    padding-bottom: 0;
+}
+
+.js .research-degree .research-degree__research-projects .related-content > li {
+    padding: 0;
+}
+
+.js .research-degree .research-degree__research-projects .related-content > li ul {
+    margin: 0;
+    background-color: #f2f2f2;
 }
 
 @media (max-width: 1023px) {
@@ -70079,6 +70183,10 @@ button
 
 .lifelong-learning .related-content--profiles .card {
     grid-column: 4 / -4;
+}
+
+.lifelong-learning .related-content--profiles .card .card__details {
+    justify-content: center;
 }
 
 .lifelong-learning .banner-text {
@@ -71797,7 +71905,7 @@ main .standard-content .content {
         grid-column: 2/-2;
     }
     main .navigation--secondary + .standard-content .content {
-        grid-column: 2/-2;
+        grid-column: 4/-4;
         overflow: hidden;
     }
 }
@@ -71810,6 +71918,11 @@ main .standard-content .content {
     .standard-content .content {
         margin: 0;
     }
+}
+
+.js .standard-content .related-content:not(.slider) li:only-child {
+    grid-column: 1/-1;
+    max-width: unset;
 }
 
 .visit-us {
@@ -73050,33 +73163,37 @@ main .standard-content .content {
     }
 }
 
-.js .course--ug__whats-happening .related-content[data-cardsperrow='3'][data-small='true'] {
-    margin-bottom: 0;
-    padding-bottom: 1rem;
-}
-
 .js .course--ug__whats-happening .slider[data-style='arrows'] + .slider__controls {
-    padding-bottom: 1rem;
-    margin-bottom: 0;
     grid-column: 1/-1;
 }
 
 .course--ug__related-courses__wrapper {
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+    grid-column-gap: 1.25rem;
     background: linear-gradient(360deg, white 0%, #f2f2f2 100%);
+}
+
+@media (min-width: 768px) {
+    .course--ug__related-courses__wrapper {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .course--ug__related-courses__wrapper {
+        grid-column-gap: 1.5rem;
+    }
 }
 
 .course--ug__related-courses {
     padding: 1rem 0;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    max-width: 80rem;
+    grid-column: 2/-2;
 }
 
-@media (min-width: 901px) {
-    .course--ug__related-courses {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
+.course--ug__related-courses .related-content {
+    grid-column: 2/-2;
 }
 
 .course--ug__related-courses .related-content .card a:not(:hover) {
@@ -73089,6 +73206,7 @@ main .standard-content .content {
 
 .course--ug__related-courses h2 {
     text-align: center;
+    grid-column: 1/-1;
 }
 
 .course--ug__related-courses h2:after {
@@ -76377,4 +76495,8 @@ main .standard-content .content {
         background-color: #ffffff;
         border-color: #ffffff;
     }
+}
+
+.js .department .department__contact-us__footer__find-us .related-content:not(.slider) li:only-child {
+    grid-column: 1/-1;
 }
