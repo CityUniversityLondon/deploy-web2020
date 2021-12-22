@@ -76360,10 +76360,6 @@ main .standard-content .content {
     flex: 1;
 }
 
-.department .department__contact-us .department__contact-us__footer__find-us .card--findus .card__details {
-    display: block;
-}
-
 .department .tabs__panel:not([hidden]) {
     padding: 0;
 }
