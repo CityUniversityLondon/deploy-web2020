@@ -71966,7 +71966,7 @@ main .standard-content .content {
 }
 
 .standard-content .pathway[data-fullwidth='yes'] .pathway__cards {
-    grid-column: 1/-1;
+    grid-column: 2/-2;
 }
 
 @media (max-width: 767px) {
