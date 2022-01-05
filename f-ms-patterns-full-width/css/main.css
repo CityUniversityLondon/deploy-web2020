@@ -49663,6 +49663,26 @@ article .link-copy {
     }
 }
 
+main .wrapper--tabs-accordion-full-width {
+    grid-column: 2/-2;
+}
+
+@media (max-width: 767px) {
+    main .wrapper--tabs-accordion-full-width {
+        grid-column: 1/-1;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 901px) {
+    main .wrapper--tabs-accordion-full-width {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
 .timetable {
     padding-bottom: 1.5rem;
     margin-top: 1.5rem;
