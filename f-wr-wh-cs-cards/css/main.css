@@ -62077,6 +62077,10 @@ main .home .home__whats-happening .related-content {
     text-align: left;
 }
 
+.landing--informational .landing__related .landing__related__content__heading {
+    margin-bottom: 1rem;
+}
+
 .landing--informational .landing__pathway {
     margin-top: 1.5rem;
 }
