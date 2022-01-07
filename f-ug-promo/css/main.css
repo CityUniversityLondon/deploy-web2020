@@ -43259,6 +43259,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .promo-box__card {
+    grid-column: 1/-1;
     flex: 1;
 }
 
@@ -72922,10 +72923,6 @@ main .standard-content .content {
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
-}
-
-.course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card {
-    grid-column: 1/-1;
 }
 
 .course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card:first-of-type {
