@@ -19319,38 +19319,30 @@ u {
     font-style: italic;
 }
 
-.meta, .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item *, .course--ug__keyinfo__details p,
-.course--ug__keyinfo__details span,
-.course--ug__keyinfo__details time {
+.meta, .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item *, .course--ug__keyinfo__details * {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-weight: 400;
 }
 
-.meta i, .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * i, .course--ug__keyinfo__details p i, .course--ug__keyinfo__details span i, .course--ug__keyinfo__details time i,
+.meta i, .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * i, .course--ug__keyinfo__details * i,
 .meta em,
 .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * em,
-.course--ug__keyinfo__details p em,
-.course--ug__keyinfo__details span em,
-.course--ug__keyinfo__details time em {
+.course--ug__keyinfo__details * em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.meta b, .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * b, .course--ug__keyinfo__details p b, .course--ug__keyinfo__details span b, .course--ug__keyinfo__details time b,
+.meta b, .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * b, .course--ug__keyinfo__details * b,
 .meta strong,
 .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * strong,
-.course--ug__keyinfo__details p strong,
-.course--ug__keyinfo__details span strong,
-.course--ug__keyinfo__details time strong {
+.course--ug__keyinfo__details * strong {
     font-weight: 700;
 }
 
-.meta i, .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * i, .course--ug__keyinfo__details p i, .course--ug__keyinfo__details span i, .course--ug__keyinfo__details time i,
+.meta i, .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * i, .course--ug__keyinfo__details * i,
 .meta em,
 .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item * em,
-.course--ug__keyinfo__details p em,
-.course--ug__keyinfo__details span em,
-.course--ug__keyinfo__details time em {
+.course--ug__keyinfo__details * em {
     font-style: italic;
 }
 
