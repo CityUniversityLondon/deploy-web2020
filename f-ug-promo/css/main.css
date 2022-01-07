@@ -73488,21 +73488,55 @@ main .standard-content .content {
 .course--ug__keyinfo__details p,
 .course--ug__keyinfo__details span,
 .course--ug__keyinfo__details time {
+    font-family: "Meta Sans", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    letter-spacing: -0.008em;
     font-weight: 600;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .course--ug__keyinfo__details p,
+    .course--ug__keyinfo__details span,
+    .course--ug__keyinfo__details time {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .course--ug__keyinfo__details p,
+    .course--ug__keyinfo__details span,
+    .course--ug__keyinfo__details time {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .course--ug__keyinfo__details p,
+    .course--ug__keyinfo__details span,
+    .course--ug__keyinfo__details time {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .course--ug__keyinfo__details p,
+    .course--ug__keyinfo__details span,
+    .course--ug__keyinfo__details time {
+        letter-spacing: -0.017em;
+    }
 }
 
 .course--ug__keyinfo__details span:not(.label) {
     display: block;
     color: #303030;
     font-weight: 500;
-    font-family: "Plex Sans", sans-serif;
     margin-bottom: 0.25rem;
 }
 
 .course--ug__keyinfo__details ul,
 .course--ug__keyinfo__details p:not(.label) {
     font-weight: 500;
-    font-family: "Plex Sans", sans-serif;
     font-size: 1.125rem;
     line-height: 1.33333;
     letter-spacing: -0.008em;
