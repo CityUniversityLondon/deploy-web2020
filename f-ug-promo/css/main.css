@@ -73255,7 +73255,6 @@ main .standard-content .content {
 }
 
 .course--ug__related-courses .course--ug__related-courses__kis-widget {
-    grid-column: 1/-1;
     margin: 1.5rem 0 1rem;
 }
 
@@ -73273,6 +73272,10 @@ main .standard-content .content {
     margin-right: auto;
     margin-top: 0.5rem;
     width: 6rem;
+}
+
+.course--ug__related-courses__kis-widget {
+    grid-column: 1/-1;
 }
 
 .course--ug__pathway-image-cards {
