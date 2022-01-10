@@ -1121,24 +1121,9 @@ function Finder__Results__News(props) {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("source", {
     srcSet: props.details.metaData.thumbnailMobile,
     media: "(max-width: 432px)"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("source", {
-    srcSet: props.details.metaData.thumbnailTablet,
-    media: "(max-width: 768px)"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("source", {
-    srcSet: props.details.metaData.thumbnailBetween,
-    media: "(max-width: 900px)"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("source", {
-    srcSet: props.details.metaData.thumbnailSmall,
-    media: "(max-width: 1024px)"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("source", {
-    srcSet: props.details.metaData.thumbnailDesktop,
-    media: "(max-width: 1280px)"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("source", {
-    srcSet: props.details.metaData.thumbnailMax,
-    media: "(max-width: 1440px)"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-    src: props.details.metaData.thumbnail,
-    alt: ""
+    src: props.details.metaData.thumbnailMobile,
+    alt: props.details.title
   })));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "card card--news"
