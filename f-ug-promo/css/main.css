@@ -73243,10 +73243,6 @@ main .standard-content .content {
     background-color: #ffffff;
 }
 
-.course--ug__related-courses .course--ug__related-courses__kis-widget {
-    margin: 1.5rem 0 1rem;
-}
-
 .course--ug__related-courses h2 {
     text-align: center;
     grid-column: 1/-1;
@@ -73264,7 +73260,7 @@ main .standard-content .content {
 }
 
 .course--ug__related-courses__kis-widget {
-    grid-column: 1/-1;
+    grid-column: 2/-2;
 }
 
 .course--ug__pathway-image-cards {
