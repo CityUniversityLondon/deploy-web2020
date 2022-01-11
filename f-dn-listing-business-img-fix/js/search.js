@@ -1121,8 +1121,8 @@ function Finder__Results__News(props) {
     srcSet: props.details.metaData.thumbnailTiny,
     media: "(max-width: 375px)"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("source", {
-    srcSet: props.details.metaData.thumbnailMobile,
-    media: "(max-width: 432px)"
+    srcSet: props.details.metaData.thumbnailMax,
+    media: "(min-width: 3840px)"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     src: props.details.metaData.thumbnailMobile,
     alt: props.details.title
