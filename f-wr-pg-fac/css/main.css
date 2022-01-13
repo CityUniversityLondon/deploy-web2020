@@ -66433,20 +66433,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
-@media (max-width: 767px) {
-    .course--pgt__facilities .wrapper--course--pgt__facilities__video {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 767px) and (min-width: 901px) {
-    .course--pgt__facilities .wrapper--course--pgt__facilities__video {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
 .course--pgt__facilities .wrapper--course--pgt__facilities__video .course--pgt__facilities__video__introduction {
     grid-column: 1/-1;
 }
