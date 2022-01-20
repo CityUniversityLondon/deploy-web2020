@@ -42832,17 +42832,12 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         display: grid;
         grid-column: 2/-2;
         grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1.5rem;
     }
 }
 
 .pathway .pathway__cards .card--pathway {
     margin-top: 1rem;
-}
-
-@media (min-width: 901px) {
-    .pathway .pathway__cards .card--pathway {
-        margin-right: 1rem;
-    }
 }
 
 .pathway .pathway__cards .card--pathway a {
@@ -43006,7 +43001,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     width: 100%;
 }
 
-@media (min-width: 433px) and (max-width: 900px) {
+@media (min-width: 433px) and (max-width: 768px) {
     .pathway .pathway__cards .card--pathway .card--pathway__content {
         display: flex;
         flex-direction: row;
@@ -72004,7 +71999,7 @@ main .standard-content .content {
 
 @media (min-width: 768px) {
     .standard-content .pathway[data-fullwidth='yes'] .pathway__heading {
-        grid-column: 4/-4;
+        grid-column: 2/-2;
     }
 }
 
