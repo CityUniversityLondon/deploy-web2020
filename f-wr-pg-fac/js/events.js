@@ -2394,11 +2394,20 @@ function Finder__Results__News(props) {
     className: "fad fa-fw fa-hashtag icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Hashtag", props.details.metaData.hashtagtext.split('|').length > 1 && 's', ":"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.details.metaData.hashtagtext.split('|').join(', '))),
-        thumbnail = props.details.metaData.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+        thumbnail = props.details.metaData.subject && props.details.metaData.thumbnail ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     src: props.details.metaData.thumbnail,
     alt: "",
     className: "card__thumbnail"
-  });
+  }) : props.details.metaData.thumbnail ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("picture", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("source", {
+    srcSet: props.details.metaData.thumbnailTiny,
+    media: "(max-width: 375px)"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("source", {
+    srcSet: props.details.metaData.thumbnailMax,
+    media: "(min-width: 3840px)"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: props.details.metaData.thumbnailMobile,
+    alt: props.details.title
+  })) : null;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "card card--news"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {

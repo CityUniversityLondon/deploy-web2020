@@ -21528,106 +21528,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     grid-column: 3/-3;
 }
 
-.card--findus a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (hover: hover) {
-    .card--findus a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.card--findus a:focus, .card--findus a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.card--findus a:visited {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (hover: hover) {
-    .card--findus a:visited:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.card--findus a:visited:focus, .card--findus a:visited:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
 .card--findus .card__details {
     border-color: #f2f2f2;
     border-style: solid;
@@ -64684,6 +64584,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 
 @media (min-width: 1024px) {
     main > .course--pgt .section--wrapper--course--pgt_introduction,
+    main > .course--pgt .course--pgt__tabs,
     main > .course--pgt .course--pgt__section-wrapper--gray,
     main > .course--pgt .course--pgt__profiles,
     main > .course--pgt .course--pgt__our-students,
@@ -64696,7 +64597,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     main > .course--pgt .course--pgt__profiles_heading,
     main > .course--pgt .course--pgt__keyinfo,
     main > .course--pgt .wrapper--course--pgt__usp,
-    main > .course--pgt .course--pgt__tabs,
     main > .course--pgt .featured-profiles-block,
     main > .course--pgt .course--pgt__our-students,
     main > .course--pgt .course--pgt__student-life,
@@ -65107,6 +65007,10 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block .cta-block__cta {
         margin: 1.5rem auto;
     }
+}
+
+.course--pgt__section-wrapper--gray {
+    padding-bottom: 1rem;
 }
 
 .course--pgt__promo__content {
@@ -65578,6 +65482,21 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     margin-left: 0;
 }
 
+.course--pgt__our-students .course--pgt__testimonials .card--testimonial__photo {
+    margin-top: 0.75rem;
+    margin-left: 0;
+}
+
+.course--pgt__our-students .course--pgt__testimonials .card--testimonial__quote {
+    margin-top: 1rem;
+}
+
+@media (min-width: 769px) {
+    .course--pgt__our-students .course--pgt__testimonials .card--testimonial .card__details .card__thumbnail {
+        margin-left: 0;
+    }
+}
+
 .course--pgt__our-students .course--pgt__unibuddy {
     grid-column: 1/-1;
     margin-bottom: 1rem;
@@ -65594,13 +65513,9 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     margin-top: 0.75rem;
 }
 
-.course--pgt__our-students .course--pgt__testimonials .card--testimonial__photo {
-    margin-top: 0.75rem;
-    margin-left: 0;
-}
-
-.course--pgt__our-students .course--pgt__testimonials .card--testimonial__quote {
-    margin-top: 1rem;
+.js .course--pgt__testimonials .related-content[data-style='arrows']:not(.slider),
+.js .course--ug__student-testimonials .related-content[data-style='arrows']:not(.slider) {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 }
 
 .wrapper--course--pgt__student-life {
@@ -66060,15 +65975,15 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .js .course--pgt .accordion > .accordion__heading + .accordion__body {
-    background-color: #ffffff;
+    background-color: #f2f2f2;
 }
 
 .js .course--pgt .accordion.accordion--nested {
     padding-bottom: 0;
 }
 
-.js .course--pgt .accordion.accordion--nested .accordion__heading + .accordion__body {
-    background-color: #f2f2f2;
+.js .course--pgt .accordion.accordion--nested .accordion__body {
+    background-color: #ffffff;
 }
 
 .js .course--pgt .accordion > .accordion__heading {
@@ -66080,7 +65995,11 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     padding-bottom: 1rem;
 }
 
-.js .course--pgt .tabs .tabs__panel__content {
+.js .course--pgt .tabs .tabs__panel {
+    padding: 1.25rem 0;
+}
+
+.js .course--pgt .tabs .tabs__panel .tabs__panel__content {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -66088,46 +66007,46 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (min-width: 768px) {
-    .js .course--pgt .tabs .tabs__panel__content {
+    .js .course--pgt .tabs .tabs__panel .tabs__panel__content {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 901px) {
-    .js .course--pgt .tabs .tabs__panel__content {
+    .js .course--pgt .tabs .tabs__panel .tabs__panel__content {
         grid-column-gap: 1.5rem;
     }
 }
 
-.js .course--pgt .tabs .tabs__panel__content .tabs__panel__heading {
+.js .course--pgt .tabs .tabs__panel .tabs__panel__content .tabs__panel__heading {
     grid-row: 1;
 }
 
-.js .course--pgt .tabs .tabs__panel__content .tabs__panel__body {
+.js .course--pgt .tabs .tabs__panel .tabs__panel__content .tabs__panel__body {
     grid-row: 2;
 }
 
-.js .course--pgt .tabs .tabs__panel__content .tabs__panel__heading,
-.js .course--pgt .tabs .tabs__panel__content .tabs__panel__body {
+.js .course--pgt .tabs .tabs__panel .tabs__panel__content .tabs__panel__heading,
+.js .course--pgt .tabs .tabs__panel .tabs__panel__content .tabs__panel__body {
     grid-column: 1 / span 24;
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
-    .js .course--pgt .tabs .tabs__panel__content .tabs__panel__heading,
-    .js .course--pgt .tabs .tabs__panel__content .tabs__panel__body {
+    .js .course--pgt .tabs .tabs__panel .tabs__panel__content .tabs__panel__heading,
+    .js .course--pgt .tabs .tabs__panel .tabs__panel__content .tabs__panel__body {
         grid-column: 5 / span 16;
     }
 }
 
 @media (min-width: 901px) {
-    .js .course--pgt .tabs .tabs__panel__content .tabs__panel__heading,
-    .js .course--pgt .tabs .tabs__panel__content .tabs__panel__body {
+    .js .course--pgt .tabs .tabs__panel .tabs__panel__content .tabs__panel__heading,
+    .js .course--pgt .tabs .tabs__panel .tabs__panel__content .tabs__panel__body {
         grid-column: 7 / span 12;
     }
 }
 
 @media (min-width: 1024px) {
-    .js .course--pgt .tabs .tabs__panel__content {
+    .js .course--pgt .tabs .tabs__panel .tabs__panel__content {
         grid-template-columns: repeat(18, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -66135,55 +66054,65 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
-    .js .course--pgt .tabs .tabs__panel__content {
+    .js .course--pgt .tabs .tabs__panel .tabs__panel__content {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    .js .course--pgt .tabs .tabs__panel__content {
+    .js .course--pgt .tabs .tabs__panel .tabs__panel__content {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
-    .js .course--pgt .tabs .tabs__panel__content .tabs__panel__heading,
-    .js .course--pgt .tabs .tabs__panel__content .tabs__panel__body {
+    .js .course--pgt .tabs .tabs__panel .tabs__panel__content .tabs__panel__heading,
+    .js .course--pgt .tabs .tabs__panel .tabs__panel__content .tabs__panel__body {
         grid-column: 4 / span 12;
     }
 }
 
 @media (max-width: 432px) {
-    .js .course--pgt .tabs .tabs__panel__content {
+    .js .course--pgt .tabs .tabs__panel .tabs__panel__content {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 }
 
 @media (max-width: 432px) and (min-width: 901px) {
-    .js .course--pgt .tabs .tabs__panel__content {
+    .js .course--pgt .tabs .tabs__panel .tabs__panel__content {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 .js .course--pgt .tabs .tabs__links {
-    background-color: #ffffff;
-    margin-top: 0.75rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
 
-.js .course--pgt .tabs .tabs__panel {
-    background-color: #ffffff;
-    border: 0;
+.js .course--pgt .tabs .show-more__content[data-hidden='true']:after {
+    background-image: linear-gradient(to bottom, rgba(242, 242, 242, 0), #f2f2f2 90%);
 }
 
-.js .course--pgt .tabs .show-more__content[data-hidden='true']:after,
-.js .course--pgt .accordion .show-more__content[data-hidden='true']:after {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 90%);
+@media (max-width: 768px) {
+    .js .course--pgt .tabs--accordion .accordion:not(.accordion--nested) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
 
-.js .wrapper--alumni-testimonials .card--testimonial .card__details .card--testimonial__quote {
-    margin-top: 1rem;
+@media (max-width: 768px) and (min-width: 901px) {
+    .js .course--pgt .tabs--accordion .accordion:not(.accordion--nested) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .js .wrapper--alumni-testimonials .card--testimonial .card__details .card--testimonial__quote {
+        margin-top: 1rem;
+    }
 }
 
 .js .wrapper--alumni-testimonials .slider {
@@ -66387,6 +66316,12 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     display: grid;
 }
 
+@media (min-width: 1025px) {
+    .course--pgt__facilities {
+        grid-column: 2/-2;
+    }
+}
+
 @media (min-width: 768px) {
     .course--pgt__facilities {
         grid-column-gap: 1rem;
@@ -66531,7 +66466,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
-    grid-column: 2/-1;
+    grid-column: 1/-1;
 }
 
 @media (min-width: 768px) {
@@ -66552,9 +66487,14 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 
 .course--pgt__tabs #structure-content .wrapper--course--pgt__awards__content__duration__qualification-type {
     border: 0.0625rem solid #d8d8d8;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     padding: 0.5rem 1rem;
-    margin: 0.75rem 0;
+}
+
+@media (min-width: 768px) {
+    .course--pgt__tabs #structure-content .wrapper--course--pgt__awards__content__duration__qualification-type {
+        margin: 0.75rem 0;
+    }
 }
 
 .course--pgt__tabs #structure-content .course--pgt__awards__content__duration__qualification-type,
@@ -73241,10 +73181,6 @@ main .standard-content .content {
     background-color: #ffffff;
 }
 
-.course--ug__related-courses .course--ug__related-courses__kis-widget {
-    margin: 1.5rem 0 1rem;
-}
-
 .course--ug__related-courses h2 {
     text-align: center;
     grid-column: 1/-1;
@@ -73262,7 +73198,7 @@ main .standard-content .content {
 }
 
 .course--ug__related-courses__kis-widget {
-    grid-column: 1/-1;
+    grid-column: 2/-2;
 }
 
 .course--ug__pathway-image-cards {
@@ -73797,8 +73733,19 @@ main .standard-content .content {
     }
 }
 
-.course--ug__facilities__video__intro {
-    padding: 2rem 0;
+@media (min-width: 769px) {
+    .course--ug__facilities__video__intro {
+        padding: 2rem 0;
+    }
+    .course--ug__facilities__video__intro p {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .embedded-video {
+        padding-top: 0;
+    }
 }
 
 .course--ug__student-coursework {
@@ -76503,10 +76450,6 @@ main .standard-content .content {
     flex: 1;
 }
 
-.department .department__contact-us .department__contact-us__footer__find-us .card--findus .card__details {
-    display: block;
-}
-
 .department .tabs__panel:not([hidden]) {
     padding: 0;
 }
@@ -76538,6 +76481,10 @@ main .standard-content .content {
         background-color: #ffffff;
         border-color: #ffffff;
     }
+}
+
+.department__featured-staff .related-content[data-style='arrows']:not(.slider) {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 }
 
 .js .department .department__contact-us__footer__find-us .related-content:not(.slider) li:only-child {
