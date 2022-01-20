@@ -66316,12 +66316,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     display: grid;
 }
 
-@media (min-width: 1025px) {
-    .course--pgt__facilities {
-        grid-column: 2/-2;
-    }
-}
-
 @media (min-width: 768px) {
     .course--pgt__facilities {
         grid-column-gap: 1rem;
@@ -66478,6 +66472,12 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 @media (min-width: 901px) {
     .course--pgt__facilities .wrapper--course--pgt__facilities__gallery .swiper-viewport {
         grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .course--pgt__facilities .wrapper--course--pgt__facilities__gallery .swiper-viewport {
+        grid-column: 2/-2;
     }
 }
 
