@@ -70260,6 +70260,164 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     margin-top: 0;
 }
 
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a {
+    background: initial;
+    border-radius: 0.25rem;
+    border: none;
+    color: initial;
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    transition: background-color 0.6s, transform 0.6s;
+    background: transparent;
+    border: 0.125rem solid #3e1031;
+    color: #3e1031;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:disabled {
+    cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a {
+        transition: none;
+    }
+}
+
+@media (max-width: 432px) {
+    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a span {
+    transition: transform 0.6s;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:after {
+    content: "";
+    font-family: 'Font Awesome';
+    font-style: normal;
+    font-weight: normal;
+    opacity: 0;
+    position: absolute;
+    right: 1.5rem;
+    text-decoration: inherit;
+    transform: translateX(-0.75rem);
+    transition: background-color 0.6s, transform 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:after {
+        transition: none;
+    }
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:focus, .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:active {
+    background-color: transparent;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:focus span, .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:active span {
+    transform: translateX(-0.75rem);
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:focus:after, .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:active:after {
+    opacity: 1;
+    transform: translateX(0.75rem);
+}
+
+@media (hover: hover) {
+    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:hover {
+        background-color: transparent;
+        border: 0.125rem solid #d61726;
+        color: #ffffff;
+    }
+    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:hover span {
+        transform: translateX(-0.75rem);
+    }
+    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:hover:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
+    }
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:disabled {
+    opacity: 0.7;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:disabled span {
+    transform: none;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:disabled:after {
+    opacity: 0;
+    transform: none;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:visited {
+    border-color: #3e1031;
+    color: #3e1031;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:active {
+    background: #3e1031;
+    border-color: #3e1031;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:hover {
+        background: #3e1031;
+        border-color: #3e1031;
+        color: #ffffff;
+    }
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:focus {
+    border-color: #3e1031;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:focus:focus, .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:focus:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:active {
+    border-color: #3e1031;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:active:focus, .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:active:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:disabled {
+    color: #3e1031;
+    background: transparent;
+    border: 0.125rem solid #3e1031;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a span {
+    transition: none;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:after {
+    content: '';
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:active span, .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:focus span, .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:hover span {
+    transform: none;
+}
+
 .lifelong-learning .lifelong-learning__introduction {
     margin-left: 1rem;
     margin-right: 1rem;
