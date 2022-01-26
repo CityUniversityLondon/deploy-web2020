@@ -4015,10 +4015,12 @@ function init(elem) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 
 /**
@@ -4030,13 +4032,12 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-
 const className = 'key-information--lifelong-learning',
       loadMoreBatch = 3,
       arrowLeft = 'ArrowLeft',
       arrowRight = 'ArrowRight',
       oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_0__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = true;
 /**
  * Initialise data atributes on the start dates.
@@ -4047,7 +4048,7 @@ const className = 'key-information--lifelong-learning',
 function prepareStartDates(startDates) {
   startDates.forEach((startDate, i) => {
     startDate.setAttribute('tabindex', -1);
-    startDate.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, "Start date ".concat(i + 1, " of ").concat(startDates.length));
+    startDate.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].label, "Start date ".concat(i + 1, " of ").concat(startDates.length));
 
     if (i < 1) {
       startDate.dataset.sliderposition = 0;
@@ -4151,6 +4152,17 @@ function handleLoadMoreClick(keyInformation) {
 
   if (loadMoreBatch >= hiddenDates.length) {
     loadMoreButton.parentNode.removeChild(loadMoreButton);
+    const keyInfoWrapper = document.querySelector('.wrapper--key-information--lifelong-learning'),
+          registerInterestWrapper = document.createElement('div'),
+          registerInterest = document.createElement('div'),
+          registerInterestPromptText = document.createElement('strong'),
+          registerInterestPromptParagraph = document.createElement('p'),
+          registerInterestCtaBlock = document.createElement('ul'),
+          registerInterestCta = document.createElement('li'),
+          registerInterestCtaAnchor = document.createElement('a'),
+          registerInterestCtaSpan = document.createElement('span');
+    registerInterestWrapper.className = 'wrapper--key-information--lifelong-learning__register-interest', registerInterest.className = 'key-information--lifelong-learning__register-interest', registerInterestCtaBlock.className = 'cta-block key-information--lifelong-learning__register-interest', registerInterestCta.className = 'cta-block__cta', registerInterestCtaAnchor.setAttribute('href', 'https://forms.student-crm.com/Forms/view/04e49433-ebf1-4fae-8122-e768c03d5b2c'), registerInterestCtaSpan.appendChild(document.createTextNode('Register your interest')), registerInterestPromptText.appendChild(document.createTextNode('Want to find out more?')), registerInterestPromptParagraph.appendChild(registerInterestPromptText), registerInterest.appendChild(registerInterestPromptParagraph), registerInterest.appendChild(registerInterestCtaBlock), registerInterestCtaBlock.appendChild(registerInterestCta), registerInterestCta.appendChild(registerInterestCtaAnchor), registerInterestCtaAnchor.appendChild(registerInterestCtaSpan), registerInterestWrapper.appendChild(registerInterest);
+    keyInfoWrapper.appendChild(registerInterestWrapper);
   }
 
   hiddenDates.slice(0, loadMoreBatch).forEach(date => {
@@ -4158,8 +4170,8 @@ function handleLoadMoreClick(keyInformation) {
   });
   const firstElement = hiddenDates.shift();
 
-  if (firstElement && scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_1__["verticallyInWindow"])(firstElement)) {
-    zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.to(firstElement, scrollDuration);
+  if (firstElement && scrollTo && !Object(_util__WEBPACK_IMPORTED_MODULE_0__["verticallyInWindow"])(firstElement)) {
+    zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(firstElement, scrollDuration);
   }
 
   firstElement && firstElement.focus();
@@ -4233,7 +4245,7 @@ function launchKeyInformation(keyInformation) {
   currentPage.className = className + '__indicator__current';
   dividerVisible.appendChild(document.createTextNode('/'));
   dividerVisible.className = className + '__indicator__divider--visible';
-  dividerVisible.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
+  dividerVisible.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, 'true');
   dividerScreenReader.appendChild(document.createTextNode(' of '));
   dividerScreenReader.className = className + '__indicator__divider--sr';
   divider.appendChild(dividerVisible);
@@ -4254,7 +4266,7 @@ function launchKeyInformation(keyInformation) {
   }
 
   controlsWrapper.className = className + '__controls';
-  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'Course start dates navigation');
+  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].label, 'Course start dates navigation');
   prepareStartDates(startDates);
   keyInformation.appendChild(controlsWrapper);
 }
