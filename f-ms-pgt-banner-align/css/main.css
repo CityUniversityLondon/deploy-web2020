@@ -64749,6 +64749,12 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     background-color: #ffffff;
 }
 
+@media (max-width: 768px) {
+    .course--pgt .wrapper--course--pgt__introduction button {
+        margin: 0 auto;
+    }
+}
+
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction {
     color: #ffffff;
     grid-column: 1/-1;
@@ -64910,6 +64916,9 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (max-width: 768px) {
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--apply > .cta-block > .cta-block__cta a {
+        display: block;
+    }
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--apply > .cta-block,
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--video > .cta-block {
         max-width: unset;
