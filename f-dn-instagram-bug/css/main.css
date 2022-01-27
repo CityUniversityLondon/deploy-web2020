@@ -22148,7 +22148,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     font-style: italic;
     margin-left: 1rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -22175,7 +22174,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.card--socialmedia .card__anchor .card--socialmedia__label--socialmedia + .card__thumbnail {
+.card--socialmedia .card__anchor .card--socialmedia__label--socialmedia + .card__thumbnail,
+.card--socialmedia .card__anchor .card--socialmedia__label--socialmedia + .card__thumbnail__wrapper {
     margin-top: 0.75rem;
 }
 
