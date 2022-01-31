@@ -50746,19 +50746,13 @@ article .link-copy {
 }
 
 .imageColLayout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.5rem;
     column-count: 4;
     column-gap: 1rem;
     grid-column: 1/-1;
     margin: 1rem 0;
-}
-
-@media (min-width: 901px) {
-    .imageColLayout.imageColLayout--2, .imageColLayout.imageColLayout--3, .imageColLayout.imageColLayout--4 {
-        display: flex;
-    }
-    .imageColLayout.imageColLayout--2 .imageColLayout--card:not(:last-of-type), .imageColLayout.imageColLayout--3 .imageColLayout--card:not(:last-of-type), .imageColLayout.imageColLayout--4 .imageColLayout--card:not(:last-of-type) {
-        padding-right: 1rem;
-    }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
@@ -65294,20 +65288,11 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     margin: auto;
 }
 
-.wrapper--course--pgt__student-work {
-    grid-column: 2/-2;
-}
-
-.wrapper--course--pgt__student-work .imageColLayout {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1.5rem;
-}
-
 .course--pgt__our-students {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
+    grid-column: 2/-2;
 }
 
 @media (min-width: 768px) {
@@ -65367,25 +65352,8 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
-@media (min-width: 769px) {
-    .course--pgt__our-students .course--pgt__student-work {
-        grid-template-columns: repeat(18, 1fr);
-        grid-column-gap: 0;
-        display: grid;
-        grid-column: 9/-1;
-    }
-}
-
-@media (min-width: 769px) and (min-width: 768px) {
-    .course--pgt__our-students .course--pgt__student-work {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 769px) and (min-width: 901px) {
-    .course--pgt__our-students .course--pgt__student-work {
-        grid-column-gap: 1.5rem;
-    }
+.course--pgt__our-students .course--pgt__student-work {
+    grid-column: 1/-1;
 }
 
 .course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__heading,
@@ -65393,6 +65361,15 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__introduction,
 .course--pgt__our-students .course--pgt__student-work .imageColLayout-wrap__section {
     grid-column: 1/-1;
+}
+
+@media (min-width: 901px) {
+    .course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__heading .imageColLayout--card,
+    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video .imageColLayout--card,
+    .course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__introduction .imageColLayout--card,
+    .course--pgt__our-students .course--pgt__student-work .imageColLayout-wrap__section .imageColLayout--card {
+        padding-right: 0;
+    }
 }
 
 .course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__heading {
