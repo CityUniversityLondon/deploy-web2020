@@ -65497,10 +65497,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
-.course--pgt__our-students .course--pgt__testimonials ul.related-content {
-    margin-top: 0;
-}
-
 .course--pgt__our-students .course--pgt__unibuddy {
     grid-column: 1/-1;
     margin-bottom: 1rem;
@@ -65526,6 +65522,10 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .js .course--pgt__testimonials .related-content[data-style='arrows']:not(.slider),
 .js .course--ug__student-testimonials .related-content[data-style='arrows']:not(.slider) {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+}
+
+.js .course--ug__student-testimonials .related-content:not(.slider) {
+    margin-top: 0;
 }
 
 .wrapper--course--pgt__student-life {
