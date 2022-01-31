@@ -65497,6 +65497,10 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
+.course--pgt__our-students .course--pgt__testimonials ul.related-content {
+    margin-top: 0;
+}
+
 .course--pgt__our-students .course--pgt__unibuddy {
     grid-column: 1/-1;
     margin-bottom: 1rem;
@@ -65519,13 +65523,8 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
-.js .course--pgt__testimonials .related-content[data-style='arrows']:not(.slider),
-.js .course--ug__student-testimonials .related-content[data-style='arrows']:not(.slider) {
+.js .course--pgt__testimonials .related-content[data-style='arrows']:not(.slider) {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
-}
-
-.js .course--ug__student-testimonials .related-content:not(.slider) {
-    margin-top: 0;
 }
 
 .wrapper--course--pgt__student-life {
@@ -73269,7 +73268,7 @@ main .standard-content .content {
 }
 
 .course--ug__student-testimonials__wrapper .card .card__thumbnail {
-    margin-left: 0;
+    margin: 1rem 0 0;
 }
 
 .course--ug__student-testimonials__wrapper .card .card__details .card__details__text {
@@ -73280,6 +73279,10 @@ main .standard-content .content {
     .course--ug__student-testimonials__wrapper .card .card__details .card__details__text {
         padding: 0;
     }
+}
+
+.course--ug__student-testimonials__wrapper .card .card--testimonial__quote {
+    margin-top: 1rem;
 }
 
 .course--ug__student-testimonials {
@@ -74683,6 +74686,14 @@ main .standard-content .content {
 
 .js .course--ug .accordion .show-more__content[data-hidden='true']:after {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 90%);
+}
+
+.js .course--ug__student-testimonials .related-content:not(.slider) {
+    margin-top: 0;
+}
+
+.js .course--ug__student-testimonials .related-content[data-style='arrows']:not(.slider) {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 }
 
 @media (min-width: 1024px) {
