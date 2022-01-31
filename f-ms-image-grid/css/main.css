@@ -64634,9 +64634,9 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     margin: 0;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
     .course--pgt .banner__overlay .banner__overlay__heading {
-        grid-column: 3/-3;
+        grid-column: 2/-2;
     }
 }
 
@@ -64693,14 +64693,25 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     outline-width: 0.125rem;
 }
 
+.course--pgt .wrapper--course--pgt__introduction a:active,
+.course--pgt .wrapper--course--pgt__introduction button:active {
+    background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .course--pgt .wrapper--course--pgt__introduction button {
+        margin: 0 auto;
+    }
+}
+
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction {
     color: #ffffff;
     grid-column: 1/-1;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction {
-        grid-column: 3/-3;
+        grid-column: 2/-2;
     }
 }
 
@@ -64711,7 +64722,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 @media (max-width: 768px) {
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__year-select {
         grid-column: 1 / -1;
-        text-align: center;
     }
 }
 
@@ -64855,6 +64865,9 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (max-width: 768px) {
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--apply > .cta-block > .cta-block__cta a {
+        display: block;
+    }
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--apply > .cta-block,
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas > .course--pgt__introduction__ctas--video > .cta-block {
         max-width: unset;
@@ -65429,6 +65442,10 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
+.course--pgt__our-students .course--pgt__testimonials ul.related-content {
+    margin-top: 0;
+}
+
 .course--pgt__our-students .course--pgt__unibuddy {
     grid-column: 1/-1;
     margin-bottom: 1rem;
@@ -65442,11 +65459,16 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .course--pgt__our-students .course--pgt__unibuddy .unibuddy-card {
-    margin-top: 0.75rem;
+    margin-top: 2rem;
 }
 
-.js .course--pgt__testimonials .related-content[data-style='arrows']:not(.slider),
-.js .course--ug__student-testimonials .related-content[data-style='arrows']:not(.slider) {
+@media (max-width: 767px) {
+    .course--pgt__our-students .course--pgt__unibuddy .unibuddy-card {
+        margin-top: 0.75rem;
+    }
+}
+
+.js .course--pgt__testimonials .related-content[data-style='arrows']:not(.slider) {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 }
 
@@ -74714,6 +74736,10 @@ main .standard-content .content {
 
 .js .course--ug .accordion .show-more__content[data-hidden='true']:after {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 90%);
+}
+
+.js .course--ug__student-testimonials .related-content[data-style='arrows']:not(.slider) {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 }
 
 @media (min-width: 1024px) {
