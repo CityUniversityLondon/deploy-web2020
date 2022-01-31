@@ -50746,13 +50746,18 @@ article .link-copy {
 }
 
 .imageColLayout {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1.5rem;
     column-count: 4;
     column-gap: 1rem;
     grid-column: 1/-1;
     margin: 1rem 0;
+}
+
+@media (min-width: 901px) {
+    .imageColLayout {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1.5rem;
+    }
 }
 
 @media (min-width: 433px) and (max-width: 900px) {
@@ -65416,20 +65421,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 @media (min-width: 901px) {
     .course--pgt__our-students {
         grid-column-gap: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) {
-    .course--pgt__our-students {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .course--pgt__our-students {
-        padding-left: 2rem;
-        padding-right: 2rem;
     }
 }
 
