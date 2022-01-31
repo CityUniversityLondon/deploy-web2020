@@ -50723,62 +50723,12 @@ article .link-copy {
     width: 1px;
 }
 
-.imageColLayout-wrap__section {
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-}
-
 @media (min-width: 768px) {
-    .imageColLayout-wrap__section {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .imageColLayout-wrap__section {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-.imageColLayout-wrap__section h2 {
-    grid-column: 1/-1;
-}
-
-.imageColLayout {
-    column-count: 4;
-    column-gap: 1rem;
-    grid-column: 1/-1;
-    margin: 1rem 0;
-}
-
-@media (min-width: 901px) {
     .imageColLayout {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
     }
-}
-
-@media (min-width: 433px) and (max-width: 900px) {
-    .imageColLayout {
-        column-count: 2;
-    }
-}
-
-@media (max-width: 432px) {
-    .imageColLayout {
-        column-count: 1;
-    }
-}
-
-.imageColLayout--card {
-    display: inline-block;
-    width: 100%;
-}
-
-.imageColLayout-card--image img {
-    min-width: 100%;
 }
 
 .wrapper--logo {
@@ -65361,6 +65311,35 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     grid-column: 1/-1;
 }
 
+.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__videos {
+    display: flex;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__videos {
+        flex-direction: column;
+    }
+}
+
+.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__videos .wrapper--course--pgt__student-work__video {
+    flex: 1;
+}
+
+.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__videos .wrapper--course--pgt__student-work__video:nth-of-type(2) {
+    margin: 0 0 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__videos .wrapper--course--pgt__student-work__video:nth-of-type(2) {
+        margin: 1rem 0 0 0;
+    }
+}
+
+.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__videos .wrapper--course--pgt__student-work__video figure.youtube-video {
+    margin: 0;
+}
+
 .course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__heading,
 .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video,
 .course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__introduction,
@@ -65379,27 +65358,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 
 .course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__heading {
     margin-bottom: 0.75rem;
-}
-
-.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video:nth-of-type(2) {
-    margin-top: 1rem;
-}
-
-@media (min-width: 769px) {
-    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video {
-        display: flex;
-    }
-    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video:nth-of-type(1) {
-        grid-column: 1/10;
-    }
-    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video:nth-of-type(2) {
-        grid-column: 10/-1;
-        margin-top: 0;
-    }
-}
-
-.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__video figure.youtube-video {
-    margin: 0;
 }
 
 .course--pgt__our-students .course--pgt__student-work .imageColLayout {
