@@ -74688,10 +74688,6 @@ main .standard-content .content {
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 90%);
 }
 
-.js .course--ug__student-testimonials .related-content:not(.slider) {
-    margin-top: 0;
-}
-
 .js .course--ug__student-testimonials .related-content[data-style='arrows']:not(.slider) {
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
 }
