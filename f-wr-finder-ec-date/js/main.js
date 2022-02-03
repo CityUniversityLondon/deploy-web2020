@@ -1294,8 +1294,8 @@ function init(elm) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_particles_js_particles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/particles.js/particles.js */ "./node_modules/particles.js/particles.js");
-/* harmony import */ var _node_modules_particles_js_particles_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_particles_js_particles_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var particles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! particles.js */ "./node_modules/particles.js/particles.js");
+/* harmony import */ var particles_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(particles_js__WEBPACK_IMPORTED_MODULE_0__);
 
 
 /**
@@ -1312,10 +1312,10 @@ __webpack_require__.r(__webpack_exports__);
  * The function applies the particle animation to a div with the ID 'particles-js'.
  */
 
-const className = 'particle-animation';
+const className = 'particle-animation'; // Initialise particles
 
 function initParticles() {
-  Object(_node_modules_particles_js_particles_js__WEBPACK_IMPORTED_MODULE_0__["particlesJS"])('particles-js', {
+  particlesJS('particles-js', {
     particles: {
       number: {
         value: 80
