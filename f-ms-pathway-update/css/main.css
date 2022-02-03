@@ -42752,7 +42752,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .pathway .pathway__cards {
         display: grid;
         grid-column: 2/-2;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 1.5rem;
     }
 }
@@ -71957,7 +71957,6 @@ main .standard-content .content {
 
 .standard-content {
     padding-bottom: 1.5rem;
-    /** Start: full-width patterns **/
     /** End: full-width patterns **/
 }
 
@@ -71965,6 +71964,14 @@ main .standard-content .content {
     .standard-content .content {
         margin: 0;
     }
+}
+
+.standard-content .pathway {
+    /** Start: full-width patterns **/
+}
+
+.standard-content .pathway .pathway__cards {
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .standard-content .pathway[data-fullwidth='yes'] {
