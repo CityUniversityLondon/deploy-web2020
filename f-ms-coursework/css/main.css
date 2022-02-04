@@ -50790,6 +50790,12 @@ article .link-copy {
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .imageColLayout--card img {
+        width: 100%;
+    }
+}
+
 .imageColLayout-card--image img {
     min-width: 100%;
 }
