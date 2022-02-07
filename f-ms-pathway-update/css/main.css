@@ -61771,6 +61771,12 @@ main .home .home__whats-happening .related-content {
     }
 }
 
+@media (min-width: 768px) {
+    main > .landing--informational .landing__pathway .pathway .pathway__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (min-width: 1024px) {
     main {
         grid-template-columns: repeat(24, 1fr);
@@ -66335,6 +66341,12 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     margin-top: 1rem;
 }
 
+@media (min-width: 768px) {
+    .course--pgt .pathway .pathway__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .course--pgt__facilities {
     grid-column: 1/-1;
     grid-template-columns: repeat(18, 1fr);
@@ -66392,7 +66404,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     grid-column: 1/-1;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .course--pgt__facilities .wrapper--course--pgt__facilities__video .course--pgt__facilities__video__introduction {
         grid-column: 1/8;
     }
@@ -74986,7 +74998,7 @@ main .standard-content .content {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .school__content__pathway {
         grid-column: 2/-2;
     }
@@ -74995,31 +75007,11 @@ main .standard-content .content {
         padding-top: 0;
     }
     .school__content__pathway .pathway .pathway__cards {
-        padding: 0;
-    }
-    .school__content__pathway .pathway-image-cards__blocks {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 0;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 768px) {
-    .school__content__pathway .pathway-image-cards__blocks {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 901px) {
-    .school__content__pathway .pathway-image-cards__blocks {
-        grid-column-gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (min-width: 900px) {
-    .school__content__pathway .pathway .pathway__cards .card--pathway {
-        margin: 0 0.5rem;
-    }
     .school__content__whats-happening .related-content {
         align-items: flex-start;
         flex-direction: row;
