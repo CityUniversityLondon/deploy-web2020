@@ -62135,8 +62135,8 @@ main .home .home__whats-happening .related-content {
     }
 }
 
-@media (min-width: 1024px) and (min-width: 769px) {
-    main .navigation--secondary + .landing--functional .pathway .pathway__cards {
+@media (min-width: 768px) {
+    main .pathway .pathway__cards {
         grid-template-columns: repeat(2, 1fr);
     }
 }
