@@ -58052,6 +58052,7 @@ main > .case-study--business .case-study--business__content {
 .content-hub__block-two .careers .pathway-cards .pathway .pathway__cards {
     padding-left: 0;
     padding-right: 0;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 @media (min-width: 769px) and (hover: hover) {
@@ -62189,30 +62190,12 @@ main .home .home__whats-happening .related-content {
     padding: 0;
 }
 
-.landing--functional .wrapper--landing--functional--pathway .pathway__cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
-    grid-gap: 1.5rem;
-    list-style-type: none;
-    padding: 0;
-}
-
-@media (max-width: 900px) {
+@media (min-width: 769px) {
     .landing--functional .wrapper--landing--functional--pathway .pathway__cards {
-        display: block;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1.5rem;
     }
-}
-
-@media (max-width: 432px) {
-    .landing--functional .wrapper--landing--functional--pathway .pathway__cards {
-        display: flex;
-        grid-gap: 0;
-    }
-}
-
-.landing--functional .wrapper--landing--functional--pathway .pathway__cards .card--pathway {
-    width: auto;
-    margin-right: 0;
 }
 
 @media (min-width: 1025px) {
