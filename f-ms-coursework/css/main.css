@@ -29360,6 +29360,7 @@ figure figcaption,
     color: #696969;
     font-weight: 500;
     line-height: 1.25rem;
+    margin-top: 0.25rem;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
