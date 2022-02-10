@@ -65394,6 +65394,10 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     grid-column: 1/-1;
 }
 
+.course--pgt__our-students .course--pgt__student-work .imageColLayout {
+    margin: 0;
+}
+
 .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__videos {
     display: flex;
     margin-top: 1rem;
@@ -65419,8 +65423,14 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
-.course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__videos .wrapper--course--pgt__student-work__video figure.youtube-video {
-    margin: 0;
+@media (min-width: 901px) {
+    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__videos .wrapper--course--pgt__student-work__video .embedded-video {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .course--pgt__our-students .course--pgt__student-work .wrapper--course--pgt__student-work__videos .wrapper--course--pgt__student-work__video .embedded-video figure.youtube-video {
+        margin: 0;
+    }
 }
 
 .course--pgt__our-students .course--pgt__student-work .course--pgt__student-work__heading,
@@ -65458,6 +65468,20 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 @media (min-width: 901px) {
     .course--pgt__our-students {
         grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) {
+    .course--pgt__our-students {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .course--pgt__our-students {
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
 }
 
