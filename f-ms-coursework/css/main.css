@@ -65438,6 +65438,24 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     margin-bottom: 0.75rem;
 }
 
+.course--pgt__our-students {
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .course--pgt__our-students {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .course--pgt__our-students {
+        grid-column-gap: 1.5rem;
+    }
+}
+
 @media (max-width: 1023px) {
     .course--pgt__our-students {
         padding-left: 1.5rem;
