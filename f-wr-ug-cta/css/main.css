@@ -73867,6 +73867,16 @@ main .standard-content .content {
     margin: 0;
 }
 
+.course--ug__keyinfo__cta p button,
+.course--ug__keyinfo__cta ul button {
+    width: 100%;
+}
+
+.course--ug__keyinfo__cta p button span,
+.course--ug__keyinfo__cta ul button span {
+    width: 100%;
+}
+
 .course--ug__keyinfo__cta p:last-of-type {
     margin-right: 0;
 }
