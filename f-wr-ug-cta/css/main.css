@@ -74902,7 +74902,7 @@ main .standard-content .content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     list-style: none;
     margin-left: 0;
     max-width: unset;
