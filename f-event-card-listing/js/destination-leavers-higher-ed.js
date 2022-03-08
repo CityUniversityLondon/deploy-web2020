@@ -2011,7 +2011,7 @@ function finderConfig(url) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatReactDate, arraySlicer, screenWidth */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatTime, formatReactDate, arraySlicer, screenWidth */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2033,6 +2033,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createHTMLElement", function() { return createHTMLElement; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uppercaseFirstLetterLowercaseRest", function() { return uppercaseFirstLetterLowercaseRest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "axiosRequest", function() { return axiosRequest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatTime", function() { return formatTime; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatReactDate", function() { return formatReactDate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arraySlicer", function() { return arraySlicer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "screenWidth", function() { return screenWidth; });
@@ -2319,6 +2320,18 @@ function axiosRequest(config) {
       gaEvent('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "axiosRequest ".concat(e.fileName, " (").concat(window.location, ")"), true);
     }
   });
+}
+/**
+ * Returns a react fragment formatted time
+ * @param {Date} date - A date object.
+ * @returns {ReactFragment} The formatted time.
+ */
+
+function formatTime(timeString) {
+  const time = new Date(timeString);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("time", {
+    dateTime: "".concat(time.getUTCHours() ? time.getUTCHours() : '00', ":").concat(time.getUTCMinutes() ? time.getUTCMinutes() : '00')
+  }, time.getUTCHours() ? time.getUTCHours() : '00', ":", time.getUTCMinutes() ? time.getUTCMinutes() : '00');
 }
 /**
  * Returns the correct English suffix for a number.

@@ -2042,6 +2042,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
 
@@ -2052,7 +2053,8 @@ __webpack_require__.r(__webpack_exports__);
  * @copyright City, University of London 2020
  */
 
- // import { formatReactDate } from '../../../../util';
+
+
 
 function formatShortDate(dateString) {
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -2063,55 +2065,17 @@ function formatShortDate(dateString) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, date.getUTCDate()), " ", month);
 }
 
-function nth(d) {
-  // eslint-disable-next-line no-magic-numbers
-  if (d > 3 && d < 21) return 'th'; // eslint-disable-next-line no-magic-numbers
-
-  switch (d % 10) {
-    case 1:
-      return 'st';
-
-    case 2:
-      return 'nd';
-
-    case 3:
-      return 'rd';
-
-    default:
-      return 'th';
-  }
-}
-
-function formatTime(timeString) {
-  const time = new Date(timeString);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, time.getUTCHours() ? time.getUTCHours() : '00', ":", time.getUTCMinutes() ? time.getUTCMinutes() : '00');
-}
-
-function formatDate(dateString) {
-  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-        date = new Date(dateString),
-        day = days[date.getUTCDay()],
-        daySuffix = nth(date.getUTCDate()),
-        month = months[date.getUTCMonth()],
-        year = date.getFullYear();
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, day, ", ", date.getUTCDate(), " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("sup", null, daySuffix), " ", month, " ", year);
-}
-
-function compareDates(startDate, endDate) {
+function compareDates(startDate, endDate, showTime) {
   const sDate = new Date(startDate),
         eDate = new Date(endDate),
         noTimeSDate = new Date(sDate.setHours(0, 0, 0)),
-        noTimeEDate = new Date(eDate.setHours(0, 0, 0));
+        noTimeEDate = new Date(eDate.setHours(0, 0, 0)),
+        time = showTime ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, ", ", Object(_util__WEBPACK_IMPORTED_MODULE_3__["formatTime"])(startDate), " - ", Object(_util__WEBPACK_IMPORTED_MODULE_3__["formatTime"])(endDate)) : null;
   const eventDate = noTimeSDate.getTime() === noTimeEDate.getTime() ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__type true"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("time", {
-    dateTime: "".concat(sDate.getFullYear(), "-").concat(sDate.getUTCMonth(), "-").concat(sDate.getUTCDay())
-  }, formatDate(startDate), ", ", formatTime(startDate), " - ", formatTime(endDate))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, Object(_util__WEBPACK_IMPORTED_MODULE_3__["formatReactDate"])(sDate), time) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__type false"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("time", {
-    dateTime: "".concat(sDate.getFullYear(), "-").concat(sDate.getUTCMonth(), "-").concat(sDate.getUTCDay())
-  }, formatDate(startDate), " - ", formatDate(endDate)));
+  }, Object(_util__WEBPACK_IMPORTED_MODULE_3__["formatReactDate"])(sDate), " - ", Object(_util__WEBPACK_IMPORTED_MODULE_3__["formatReactDate"])(eDate), time);
   return eventDate;
 }
 /**
@@ -2143,7 +2107,7 @@ function Finder__Results__Event(props) {
   }),
         eventStartDate = props.details.metaData.d && props.details.metaData.d.split('|')[0],
         eventEndDate = props.details.metaData.d && props.details.metaData.d.split('|')[1],
-        eventLabel = compareDates(eventStartDate, eventEndDate);
+        eventLabel = compareDates(eventStartDate, eventEndDate, parseInt(props.details.metaData.displayTime));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "card card--event card--landscape"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
@@ -3718,7 +3682,7 @@ function finderConfig(url) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatReactDate, arraySlicer, screenWidth */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatTime, formatReactDate, arraySlicer, screenWidth */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3740,6 +3704,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createHTMLElement", function() { return createHTMLElement; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uppercaseFirstLetterLowercaseRest", function() { return uppercaseFirstLetterLowercaseRest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "axiosRequest", function() { return axiosRequest; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatTime", function() { return formatTime; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatReactDate", function() { return formatReactDate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arraySlicer", function() { return arraySlicer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "screenWidth", function() { return screenWidth; });
@@ -4026,6 +3991,18 @@ function axiosRequest(config) {
       gaEvent('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "axiosRequest ".concat(e.fileName, " (").concat(window.location, ")"), true);
     }
   });
+}
+/**
+ * Returns a react fragment formatted time
+ * @param {Date} date - A date object.
+ * @returns {ReactFragment} The formatted time.
+ */
+
+function formatTime(timeString) {
+  const time = new Date(timeString);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("time", {
+    dateTime: "".concat(time.getUTCHours() ? time.getUTCHours() : '00', ":").concat(time.getUTCMinutes() ? time.getUTCMinutes() : '00')
+  }, time.getUTCHours() ? time.getUTCHours() : '00', ":", time.getUTCMinutes() ? time.getUTCMinutes() : '00');
 }
 /**
  * Returns the correct English suffix for a number.
