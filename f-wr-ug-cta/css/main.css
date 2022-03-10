@@ -73855,6 +73855,11 @@ main .standard-content .content {
     padding-bottom: 2.75rem;
 }
 
+.course--ug .tabs--accordion .how-to-apply--ug--js__modal {
+    list-style-type: none;
+    margin-left: 0;
+}
+
 .course--ug__usp__stats {
     background-color: #ffffff;
 }
