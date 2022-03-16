@@ -22079,6 +22079,1631 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     min-width: 1.5rem;
 }
 
+.background--blue50 .card__side-image__text {
+    color: #ffffff;
+}
+
+.background--blue50 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .background--blue50 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.background--blue50 a:focus, .background--blue50 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.background--blue50 a:focus, .background--blue50 a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.background--blue50 a:before {
+    background: #ffffff;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background--blue50 a:before {
+        transition: none;
+    }
+}
+
+.background--blue50 a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.background--blue50 a:focus {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.background--blue50 a:visited {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .background--blue50 a:hover {
+        background-image: none;
+        border-bottom-color: #ffffff;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+    .background--blue50 a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.background--blue50 a:active {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.background--blue70 .card__side-image__text {
+    color: #ffffff;
+}
+
+.background--blue70 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .background--blue70 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.background--blue70 a:focus, .background--blue70 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.background--blue70 a:focus, .background--blue70 a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.background--blue70 a:before {
+    background: #ffffff;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background--blue70 a:before {
+        transition: none;
+    }
+}
+
+.background--blue70 a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.background--blue70 a:focus {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.background--blue70 a:visited {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .background--blue70 a:hover {
+        background-image: none;
+        border-bottom-color: #ffffff;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+    .background--blue70 a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.background--blue70 a:active {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.background--blue90 .card__side-image__text {
+    color: #ffffff;
+}
+
+.background--blue90 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .background--blue90 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.background--blue90 a:focus, .background--blue90 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.background--blue90 a:focus, .background--blue90 a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.background--blue90 a:before {
+    background: #ffffff;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background--blue90 a:before {
+        transition: none;
+    }
+}
+
+.background--blue90 a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.background--blue90 a:focus {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.background--blue90 a:visited {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .background--blue90 a:hover {
+        background-image: none;
+        border-bottom-color: #ffffff;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+    .background--blue90 a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.background--blue90 a:active {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.background--brown40 .card__side-image__text {
+    color: #1e1e1e;
+}
+
+.background--brown40 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #1e1e1e;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .background--brown40 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.background--brown40 a:focus, .background--brown40 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.background--brown40 a:focus, .background--brown40 a:active {
+    outline-color: #1e1e1e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.background--brown40 a:before {
+    background: #1e1e1e;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background--brown40 a:before {
+        transition: none;
+    }
+}
+
+.background--brown40 a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.background--brown40 a:focus {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #1e1e1e;
+}
+
+.background--brown40 a:visited {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #1e1e1e;
+}
+
+@media (hover: hover) {
+    .background--brown40 a:hover {
+        background-image: none;
+        border-bottom-color: #1e1e1e;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #1e1e1e;
+    }
+    .background--brown40 a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.background--brown40 a:active {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.background--green50 .card__side-image__text {
+    color: #1e1e1e;
+}
+
+.background--green50 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #1e1e1e;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .background--green50 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.background--green50 a:focus, .background--green50 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.background--green50 a:focus, .background--green50 a:active {
+    outline-color: #1e1e1e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.background--green50 a:before {
+    background: #1e1e1e;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background--green50 a:before {
+        transition: none;
+    }
+}
+
+.background--green50 a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.background--green50 a:focus {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #1e1e1e;
+}
+
+.background--green50 a:visited {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #1e1e1e;
+}
+
+@media (hover: hover) {
+    .background--green50 a:hover {
+        background-image: none;
+        border-bottom-color: #1e1e1e;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #1e1e1e;
+    }
+    .background--green50 a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.background--green50 a:active {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.background--orange50 .card__side-image__text {
+    color: #1e1e1e;
+}
+
+.background--orange50 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #1e1e1e;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .background--orange50 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.background--orange50 a:focus, .background--orange50 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.background--orange50 a:focus, .background--orange50 a:active {
+    outline-color: #1e1e1e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.background--orange50 a:before {
+    background: #1e1e1e;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background--orange50 a:before {
+        transition: none;
+    }
+}
+
+.background--orange50 a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.background--orange50 a:focus {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #1e1e1e;
+}
+
+.background--orange50 a:visited {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #1e1e1e;
+}
+
+@media (hover: hover) {
+    .background--orange50 a:hover {
+        background-image: none;
+        border-bottom-color: #1e1e1e;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #1e1e1e;
+    }
+    .background--orange50 a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.background--orange50 a:active {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.background--orange80 .card__side-image__text {
+    color: #ffffff;
+}
+
+.background--orange80 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .background--orange80 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.background--orange80 a:focus, .background--orange80 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.background--orange80 a:focus, .background--orange80 a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.background--orange80 a:before {
+    background: #ffffff;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background--orange80 a:before {
+        transition: none;
+    }
+}
+
+.background--orange80 a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.background--orange80 a:focus {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.background--orange80 a:visited {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .background--orange80 a:hover {
+        background-image: none;
+        border-bottom-color: #ffffff;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+    .background--orange80 a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.background--orange80 a:active {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.background--pink90 .card__side-image__text {
+    color: #ffffff;
+}
+
+.background--pink90 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .background--pink90 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.background--pink90 a:focus, .background--pink90 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.background--pink90 a:focus, .background--pink90 a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.background--pink90 a:before {
+    background: #ffffff;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background--pink90 a:before {
+        transition: none;
+    }
+}
+
+.background--pink90 a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.background--pink90 a:focus {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.background--pink90 a:visited {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .background--pink90 a:hover {
+        background-image: none;
+        border-bottom-color: #ffffff;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+    .background--pink90 a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.background--pink90 a:active {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.background--purple50 .card__side-image__text {
+    color: #ffffff;
+}
+
+.background--purple50 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .background--purple50 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.background--purple50 a:focus, .background--purple50 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.background--purple50 a:focus, .background--purple50 a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.background--purple50 a:before {
+    background: #ffffff;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background--purple50 a:before {
+        transition: none;
+    }
+}
+
+.background--purple50 a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.background--purple50 a:focus {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.background--purple50 a:visited {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .background--purple50 a:hover {
+        background-image: none;
+        border-bottom-color: #ffffff;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+    .background--purple50 a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.background--purple50 a:active {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.background--purple80 .card__side-image__text {
+    color: #ffffff;
+}
+
+.background--purple80 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .background--purple80 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.background--purple80 a:focus, .background--purple80 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.background--purple80 a:focus, .background--purple80 a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.background--purple80 a:before {
+    background: #ffffff;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background--purple80 a:before {
+        transition: none;
+    }
+}
+
+.background--purple80 a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.background--purple80 a:focus {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.background--purple80 a:visited {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .background--purple80 a:hover {
+        background-image: none;
+        border-bottom-color: #ffffff;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+    .background--purple80 a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.background--purple80 a:active {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.background--red50 .card__side-image__text {
+    color: #ffffff;
+}
+
+.background--red50 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .background--red50 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.background--red50 a:focus, .background--red50 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.background--red50 a:focus, .background--red50 a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.background--red50 a:before {
+    background: #ffffff;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background--red50 a:before {
+        transition: none;
+    }
+}
+
+.background--red50 a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.background--red50 a:focus {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.background--red50 a:visited {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .background--red50 a:hover {
+        background-image: none;
+        border-bottom-color: #ffffff;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+    .background--red50 a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.background--red50 a:active {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.background--teal90 .card__side-image__text {
+    color: #ffffff;
+}
+
+.background--teal90 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .background--teal90 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.background--teal90 a:focus, .background--teal90 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.background--teal90 a:focus, .background--teal90 a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.background--teal90 a:before {
+    background: #ffffff;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background--teal90 a:before {
+        transition: none;
+    }
+}
+
+.background--teal90 a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.background--teal90 a:focus {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.background--teal90 a:visited {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .background--teal90 a:hover {
+        background-image: none;
+        border-bottom-color: #ffffff;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+    .background--teal90 a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.background--teal90 a:active {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
+.background--yellow20 .card__side-image__text {
+    color: #1e1e1e;
+}
+
+.background--yellow20 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #1e1e1e;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .background--yellow20 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.background--yellow20 a:focus, .background--yellow20 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.background--yellow20 a:focus, .background--yellow20 a:active {
+    outline-color: #1e1e1e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.background--yellow20 a:before {
+    background: #1e1e1e;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .background--yellow20 a:before {
+        transition: none;
+    }
+}
+
+.background--yellow20 a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.background--yellow20 a:focus {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #1e1e1e;
+}
+
+.background--yellow20 a:visited {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #1e1e1e;
+}
+
+@media (hover: hover) {
+    .background--yellow20 a:hover {
+        background-image: none;
+        border-bottom-color: #1e1e1e;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #1e1e1e;
+    }
+    .background--yellow20 a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.background--yellow20 a:active {
+    border-bottom-color: #1e1e1e;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+}
+
 .card__side-image {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -22096,256 +23721,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .card__side-image {
         grid-column-gap: 1.5rem;
     }
-}
-
-.card__side-image[data-colour-theme='light'] .card__side-image__text {
-    color: #1e1e1e;
-}
-
-.card__side-image[data-colour-theme='light'] a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    background-image: none;
-    border-bottom-color: #1e1e1e;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #1e1e1e;
-    position: relative;
-}
-
-@media (hover: hover) {
-    .card__side-image[data-colour-theme='light'] a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.card__side-image[data-colour-theme='light'] a:focus, .card__side-image[data-colour-theme='light'] a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.card__side-image[data-colour-theme='light'] a:focus, .card__side-image[data-colour-theme='light'] a:active {
-    outline-color: #1e1e1e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.card__side-image[data-colour-theme='light'] a:before {
-    background: #1e1e1e;
-    bottom: -0.125rem;
-    content: '';
-    display: block;
-    height: 0.125rem;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
-    width: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card__side-image[data-colour-theme='light'] a:before {
-        transition: none;
-    }
-}
-
-.card__side-image[data-colour-theme='light'] a:before {
-    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
-}
-
-.card__side-image[data-colour-theme='light'] a:focus {
-    border-bottom-color: #1e1e1e;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #1e1e1e;
-}
-
-.card__side-image[data-colour-theme='light'] a:visited {
-    border-bottom-color: #1e1e1e;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #1e1e1e;
-}
-
-@media (hover: hover) {
-    .card__side-image[data-colour-theme='light'] a:hover {
-        background-image: none;
-        border-bottom-color: #1e1e1e;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #1e1e1e;
-    }
-    .card__side-image[data-colour-theme='light'] a:hover:before {
-        opacity: 1;
-        width: 100%;
-        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
-    }
-}
-
-.card__side-image[data-colour-theme='light'] a:active {
-    border-bottom-color: #1e1e1e;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-}
-
-.card__side-image[data-colour-theme='dark'] .card__side-image__text {
-    color: #ffffff;
-}
-
-.card__side-image[data-colour-theme='dark'] a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    background-image: none;
-    border-bottom-color: #ffffff;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #ffffff;
-    position: relative;
-}
-
-@media (hover: hover) {
-    .card__side-image[data-colour-theme='dark'] a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.card__side-image[data-colour-theme='dark'] a:focus, .card__side-image[data-colour-theme='dark'] a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.card__side-image[data-colour-theme='dark'] a:focus, .card__side-image[data-colour-theme='dark'] a:active {
-    outline-color: #ffffff;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.card__side-image[data-colour-theme='dark'] a:before {
-    background: #ffffff;
-    bottom: -0.125rem;
-    content: '';
-    display: block;
-    height: 0.125rem;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
-    width: 0;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card__side-image[data-colour-theme='dark'] a:before {
-        transition: none;
-    }
-}
-
-.card__side-image[data-colour-theme='dark'] a:before {
-    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
-}
-
-.card__side-image[data-colour-theme='dark'] a:focus {
-    border-bottom-color: #ffffff;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #ffffff;
-}
-
-.card__side-image[data-colour-theme='dark'] a:visited {
-    border-bottom-color: #ffffff;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #ffffff;
-}
-
-@media (hover: hover) {
-    .card__side-image[data-colour-theme='dark'] a:hover {
-        background-image: none;
-        border-bottom-color: #ffffff;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #ffffff;
-    }
-    .card__side-image[data-colour-theme='dark'] a:hover:before {
-        opacity: 1;
-        width: 100%;
-        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
-    }
-}
-
-.card__side-image[data-colour-theme='dark'] a:active {
-    border-bottom-color: #ffffff;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
 }
 
 .card__side-image figure[data-image-position='left'] {
