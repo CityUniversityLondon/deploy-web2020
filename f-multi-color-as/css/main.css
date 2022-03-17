@@ -56313,28 +56313,472 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .sc-content--grey {
-    background: #bab4b2;
     color: #1e1e1e;
+    border: 0.125rem solid #bab4b2;
+    background-color: #bab4b24d;
+}
+
+.sc-content--grey .sc-content__heading {
+    color: #1e1e1e;
+    background-color: #bab4b2;
+    border-bottom: 0.125rem solid #1e1e1e;
+}
+
+.sc-content--grey a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 0.75rem 0.75rem 0.75rem;
+    background-color: #bab4b2;
+}
+
+@media (hover: hover) {
+    .sc-content--grey a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.sc-content--grey a:focus, .sc-content--grey a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.sc-content--grey a:hover, .sc-content--grey a:focus, .sc-content--grey a:active {
+    background-image: linear-gradient(120deg, #bab4b2 0%, #bab4b2 100%);
+}
+
+.sc-content--grey a:focus .card-link, .sc-content--grey a:active .card-link {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.sc-content--grey .sc-content__icon {
+    color: #1e1e1e;
+    background-color: #bab4b2;
 }
 
 .sc-content--purple {
-    background: #832c9e;
+    color: #1e1e1e;
+    border: 0.125rem solid #832c9e;
+    background-color: #832c9e4d;
+}
+
+.sc-content--purple .sc-content__heading {
     color: #ffffff;
+    background-color: #832c9e;
+    border-bottom: 0.125rem solid #ffffff;
+}
+
+.sc-content--purple a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 0.75rem 0.75rem 0.75rem;
+    background-color: #832c9e;
+}
+
+@media (hover: hover) {
+    .sc-content--purple a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.sc-content--purple a:focus, .sc-content--purple a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.sc-content--purple a:hover, .sc-content--purple a:focus, .sc-content--purple a:active {
+    background-image: linear-gradient(120deg, #832c9e 0%, #832c9e 100%);
+}
+
+.sc-content--purple a:focus .card-link, .sc-content--purple a:active .card-link {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.sc-content--purple .sc-content__icon {
+    color: #ffffff;
+    background-color: #832c9e;
 }
 
 .sc-content--camel {
-    background: #ba9950;
     color: #1e1e1e;
+    border: 0.125rem solid #ba9950;
+    background-color: #ba99504d;
+}
+
+.sc-content--camel .sc-content__heading {
+    color: #1e1e1e;
+    background-color: #ba9950;
+    border-bottom: 0.125rem solid #1e1e1e;
+}
+
+.sc-content--camel a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 0.75rem 0.75rem 0.75rem;
+    background-color: #ba9950;
+}
+
+@media (hover: hover) {
+    .sc-content--camel a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.sc-content--camel a:focus, .sc-content--camel a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.sc-content--camel a:hover, .sc-content--camel a:focus, .sc-content--camel a:active {
+    background-image: linear-gradient(120deg, #ba9950 0%, #ba9950 100%);
+}
+
+.sc-content--camel a:focus .card-link, .sc-content--camel a:active .card-link {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.sc-content--camel .sc-content__icon {
+    color: #1e1e1e;
+    background-color: #ba9950;
 }
 
 .sc-content--teal {
-    background: #007e8b;
+    color: #1e1e1e;
+    border: 0.125rem solid #007e8b;
+    background-color: #007e8b4d;
+}
+
+.sc-content--teal .sc-content__heading {
     color: #ffffff;
+    background-color: #007e8b;
+    border-bottom: 0.125rem solid #ffffff;
+}
+
+.sc-content--teal a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 0.75rem 0.75rem 0.75rem;
+    background-color: #007e8b;
+}
+
+@media (hover: hover) {
+    .sc-content--teal a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.sc-content--teal a:focus, .sc-content--teal a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.sc-content--teal a:hover, .sc-content--teal a:focus, .sc-content--teal a:active {
+    background-image: linear-gradient(120deg, #007e8b 0%, #007e8b 100%);
+}
+
+.sc-content--teal a:focus .card-link, .sc-content--teal a:active .card-link {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.sc-content--teal .sc-content__icon {
+    color: #ffffff;
+    background-color: #007e8b;
 }
 
 .sc-content--green {
-    background: #6c953c;
+    color: #1e1e1e;
+    border: 0.125rem solid #6c953c;
+    background-color: #6c953c4d;
+}
+
+.sc-content--green .sc-content__heading {
     color: #ffffff;
+    background-color: #6c953c;
+    border-bottom: 0.125rem solid #ffffff;
+}
+
+.sc-content--green a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 0.75rem 0.75rem 0.75rem;
+    background-color: #6c953c;
+}
+
+@media (hover: hover) {
+    .sc-content--green a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.sc-content--green a:focus, .sc-content--green a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.sc-content--green a:hover, .sc-content--green a:focus, .sc-content--green a:active {
+    background-image: linear-gradient(120deg, #6c953c 0%, #6c953c 100%);
+}
+
+.sc-content--green a:focus .card-link, .sc-content--green a:active .card-link {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.sc-content--green .sc-content__icon {
+    color: #ffffff;
+    background-color: #6c953c;
+}
+
+.sc-content__text {
+    padding: 0 0.75rem 0.75rem 0.75rem;
+}
+
+.sc-content__heading {
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    letter-spacing: -0.008em;
+    display: inline-block;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    margin: 0;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .sc-content__heading {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .sc-content__heading {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .sc-content__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .sc-content__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+.sc-content--link {
+    position: relative;
+}
+
+.sc-content--link .card-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.sc-content--link .sc-content__heading {
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.sc-content--link .sc-content__icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.75rem;
+    font-weight: 400;
 }
 
 .generic {
