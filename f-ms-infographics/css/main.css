@@ -33740,6 +33740,12 @@ figure figcaption a:active,
     }
 }
 
+@media (max-width: 431px) {
+    .infographic .infographic__image {
+        padding: 2rem 2rem;
+    }
+}
+
 @media (min-width: 768px) {
     .infographic {
         display: flex;
