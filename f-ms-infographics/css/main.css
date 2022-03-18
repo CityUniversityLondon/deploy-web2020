@@ -33730,6 +33730,10 @@ figure figcaption a:active,
     width: 1px;
 }
 
+.infographic {
+    margin-top: 2rem;
+}
+
 @media (max-width: 767px) {
     .infographic .infographic__description__text {
         margin-top: 0;
@@ -33751,9 +33755,14 @@ figure figcaption a:active,
         display: flex;
         flex-wrap: wrap;
     }
+    .infographic .infographic__image {
+        flex-basis: 45%;
+    }
+    .infographic .infographic__description {
+        flex-basis: 55%;
+    }
     .infographic .infographic__image,
     .infographic .infographic__description {
-        flex-basis: 50%;
         padding: 0 2rem;
     }
     .infographic .infographic__image img,
@@ -33779,7 +33788,6 @@ figure figcaption a:active,
 }
 
 .infographic .infographic__description span:not(.infographic__description__text__highlight) {
-    display: block;
     font-size: 1.424rem;
     line-height: 1.33333;
     letter-spacing: -0.013em;
@@ -33814,7 +33822,10 @@ figure figcaption a:active,
     line-height: 1.33333;
     letter-spacing: -0.015em;
     background-color: #0177a0;
-    padding: 0 0.5rem;
+    line-height: 2.5rem;
+    padding: 0;
+    margin-right: 0.5rem;
+    box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -33846,7 +33857,17 @@ figure figcaption a:active,
 }
 
 .infographic .infographic__caption .figcaption__source {
-    display: block;
+    display: table;
+}
+
+.infographic .infographic__caption .figcaption__source .icon {
+    display: table-cell;
+    padding: 0.25rem 0.25rem 0 0;
+    margin: 0.25rem 0.25rem 0 0;
+}
+
+.infographic .infographic__caption .figcaption__source .figcaption__source__link {
+    display: inline;
 }
 
 .key-information--lifelong-learning .lifelong-learning__start-date__cta {
