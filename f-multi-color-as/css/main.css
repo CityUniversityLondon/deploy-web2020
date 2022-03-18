@@ -56555,6 +56555,34 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     background-color: #007e8b;
 }
 
+.sc-content--yellow {
+    color: #1e1e1e;
+    border: 0.125rem solid #ffef2b;
+    background-color: #ffef2b4d;
+}
+
+.sc-content--yellow .sc-content__heading {
+    color: #1e1e1e;
+    background-color: #ffef2b;
+}
+
+.sc-content--yellow a {
+    background-color: #ffef2b;
+}
+
+.sc-content--yellow a:hover, .sc-content--yellow a:focus, .sc-content--yellow a:active {
+    background-image: linear-gradient(120deg, #ffef2b 0%, #ffef2b 100%);
+}
+
+.sc-content--yellow a .sc-content__heading {
+    border-bottom: 0.125rem solid #1e1e1e;
+}
+
+.sc-content--yellow .sc-content__icon {
+    color: #1e1e1e;
+    background-color: #ffef2b;
+}
+
 .sc-content--green {
     color: #1e1e1e;
     border: 0.125rem solid #6c953c;
