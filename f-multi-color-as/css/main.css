@@ -56590,7 +56590,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .sc-content--green .sc-content__heading {
-    color: #ffffff;
+    color: #1e1e1e;
     background-color: #6c953c;
 }
 
@@ -56603,11 +56603,11 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .sc-content--green a .sc-content__heading {
-    border-bottom: 0.125rem solid #ffffff;
+    border-bottom: 0.125rem solid #1e1e1e;
 }
 
 .sc-content--green .sc-content__icon {
-    color: #ffffff;
+    color: #1e1e1e;
     background-color: #6c953c;
 }
 
