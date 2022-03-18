@@ -56312,409 +56312,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     border: 2px dotted #ffffff;
 }
 
-.sc-content--grey {
-    color: #1e1e1e;
-    border: 0.125rem solid #bab4b2;
-    background-color: #bab4b24d;
-}
-
-.sc-content--grey .sc-content__heading {
-    color: #1e1e1e;
-    background-color: #bab4b2;
-    border-bottom: 0.125rem solid #1e1e1e;
-}
-
-.sc-content--grey a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0 0.75rem 0.75rem 0.75rem;
-    background-color: #bab4b2;
-}
-
-@media (hover: hover) {
-    .sc-content--grey a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.sc-content--grey a:focus, .sc-content--grey a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.sc-content--grey a:hover, .sc-content--grey a:focus, .sc-content--grey a:active {
-    background-image: linear-gradient(120deg, #bab4b2 0%, #bab4b2 100%);
-}
-
-.sc-content--grey a:focus .card-link, .sc-content--grey a:active .card-link {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.sc-content--grey .sc-content__icon {
-    color: #1e1e1e;
-    background-color: #bab4b2;
-}
-
-.sc-content--purple {
-    color: #1e1e1e;
-    border: 0.125rem solid #832c9e;
-    background-color: #832c9e4d;
-}
-
-.sc-content--purple .sc-content__heading {
-    color: #ffffff;
-    background-color: #832c9e;
-    border-bottom: 0.125rem solid #ffffff;
-}
-
-.sc-content--purple a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0 0.75rem 0.75rem 0.75rem;
-    background-color: #832c9e;
-}
-
-@media (hover: hover) {
-    .sc-content--purple a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.sc-content--purple a:focus, .sc-content--purple a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.sc-content--purple a:hover, .sc-content--purple a:focus, .sc-content--purple a:active {
-    background-image: linear-gradient(120deg, #832c9e 0%, #832c9e 100%);
-}
-
-.sc-content--purple a:focus .card-link, .sc-content--purple a:active .card-link {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.sc-content--purple .sc-content__icon {
-    color: #ffffff;
-    background-color: #832c9e;
-}
-
-.sc-content--camel {
-    color: #1e1e1e;
-    border: 0.125rem solid #ba9950;
-    background-color: #ba99504d;
-}
-
-.sc-content--camel .sc-content__heading {
-    color: #1e1e1e;
-    background-color: #ba9950;
-    border-bottom: 0.125rem solid #1e1e1e;
-}
-
-.sc-content--camel a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0 0.75rem 0.75rem 0.75rem;
-    background-color: #ba9950;
-}
-
-@media (hover: hover) {
-    .sc-content--camel a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.sc-content--camel a:focus, .sc-content--camel a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.sc-content--camel a:hover, .sc-content--camel a:focus, .sc-content--camel a:active {
-    background-image: linear-gradient(120deg, #ba9950 0%, #ba9950 100%);
-}
-
-.sc-content--camel a:focus .card-link, .sc-content--camel a:active .card-link {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.sc-content--camel .sc-content__icon {
-    color: #1e1e1e;
-    background-color: #ba9950;
-}
-
-.sc-content--teal {
-    color: #1e1e1e;
-    border: 0.125rem solid #007e8b;
-    background-color: #007e8b4d;
-}
-
-.sc-content--teal .sc-content__heading {
-    color: #ffffff;
-    background-color: #007e8b;
-    border-bottom: 0.125rem solid #ffffff;
-}
-
-.sc-content--teal a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0 0.75rem 0.75rem 0.75rem;
-    background-color: #007e8b;
-}
-
-@media (hover: hover) {
-    .sc-content--teal a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.sc-content--teal a:focus, .sc-content--teal a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.sc-content--teal a:hover, .sc-content--teal a:focus, .sc-content--teal a:active {
-    background-image: linear-gradient(120deg, #007e8b 0%, #007e8b 100%);
-}
-
-.sc-content--teal a:focus .card-link, .sc-content--teal a:active .card-link {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.sc-content--teal .sc-content__icon {
-    color: #ffffff;
-    background-color: #007e8b;
-}
-
-.sc-content--green {
-    color: #1e1e1e;
-    border: 0.125rem solid #6c953c;
-    background-color: #6c953c4d;
-}
-
-.sc-content--green .sc-content__heading {
-    color: #ffffff;
-    background-color: #6c953c;
-    border-bottom: 0.125rem solid #ffffff;
-}
-
-.sc-content--green a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0 0.75rem 0.75rem 0.75rem;
-    background-color: #6c953c;
-}
-
-@media (hover: hover) {
-    .sc-content--green a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.sc-content--green a:focus, .sc-content--green a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.sc-content--green a:hover, .sc-content--green a:focus, .sc-content--green a:active {
-    background-image: linear-gradient(120deg, #6c953c 0%, #6c953c 100%);
-}
-
-.sc-content--green a:focus .card-link, .sc-content--green a:active .card-link {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.sc-content--green .sc-content__icon {
-    color: #ffffff;
-    background-color: #6c953c;
+.sc-content {
+    margin: 0.75rem 0;
 }
 
 .sc-content__text {
@@ -56779,6 +56378,209 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     right: 0;
     padding: 0.75rem;
     font-weight: 400;
+}
+
+.sc-content--link .sc-content__text {
+    margin-right: 2rem;
+}
+
+.sc-content--link a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 0.75rem 0.75rem 0.75rem;
+}
+
+@media (hover: hover) {
+    .sc-content--link a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.sc-content--link a:focus, .sc-content--link a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.sc-content--link a:focus .card-link, .sc-content--link a:active .card-link {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.sc-content--grey {
+    color: #1e1e1e;
+    border: 0.125rem solid #bab4b2;
+    background-color: #bab4b24d;
+}
+
+.sc-content--grey .sc-content__heading {
+    color: #1e1e1e;
+    background-color: #bab4b2;
+}
+
+.sc-content--grey a {
+    background-color: #bab4b2;
+}
+
+.sc-content--grey a:hover, .sc-content--grey a:focus, .sc-content--grey a:active {
+    background-image: linear-gradient(120deg, #bab4b2 0%, #bab4b2 100%);
+}
+
+.sc-content--grey a .sc-content__heading {
+    border-bottom: 0.125rem solid #1e1e1e;
+}
+
+.sc-content--grey .sc-content__icon {
+    color: #1e1e1e;
+    background-color: #bab4b2;
+}
+
+.sc-content--purple {
+    color: #1e1e1e;
+    border: 0.125rem solid #832c9e;
+    background-color: #832c9e4d;
+}
+
+.sc-content--purple .sc-content__heading {
+    color: #ffffff;
+    background-color: #832c9e;
+}
+
+.sc-content--purple a {
+    background-color: #832c9e;
+}
+
+.sc-content--purple a:hover, .sc-content--purple a:focus, .sc-content--purple a:active {
+    background-image: linear-gradient(120deg, #832c9e 0%, #832c9e 100%);
+}
+
+.sc-content--purple a .sc-content__heading {
+    border-bottom: 0.125rem solid #ffffff;
+}
+
+.sc-content--purple .sc-content__icon {
+    color: #ffffff;
+    background-color: #832c9e;
+}
+
+.sc-content--camel {
+    color: #1e1e1e;
+    border: 0.125rem solid #ba9950;
+    background-color: #ba99504d;
+}
+
+.sc-content--camel .sc-content__heading {
+    color: #1e1e1e;
+    background-color: #ba9950;
+}
+
+.sc-content--camel a {
+    background-color: #ba9950;
+}
+
+.sc-content--camel a:hover, .sc-content--camel a:focus, .sc-content--camel a:active {
+    background-image: linear-gradient(120deg, #ba9950 0%, #ba9950 100%);
+}
+
+.sc-content--camel a .sc-content__heading {
+    border-bottom: 0.125rem solid #1e1e1e;
+}
+
+.sc-content--camel .sc-content__icon {
+    color: #1e1e1e;
+    background-color: #ba9950;
+}
+
+.sc-content--teal {
+    color: #1e1e1e;
+    border: 0.125rem solid #007e8b;
+    background-color: #007e8b4d;
+}
+
+.sc-content--teal .sc-content__heading {
+    color: #ffffff;
+    background-color: #007e8b;
+}
+
+.sc-content--teal a {
+    background-color: #007e8b;
+}
+
+.sc-content--teal a:hover, .sc-content--teal a:focus, .sc-content--teal a:active {
+    background-image: linear-gradient(120deg, #007e8b 0%, #007e8b 100%);
+}
+
+.sc-content--teal a .sc-content__heading {
+    border-bottom: 0.125rem solid #ffffff;
+}
+
+.sc-content--teal .sc-content__icon {
+    color: #ffffff;
+    background-color: #007e8b;
+}
+
+.sc-content--green {
+    color: #1e1e1e;
+    border: 0.125rem solid #6c953c;
+    background-color: #6c953c4d;
+}
+
+.sc-content--green .sc-content__heading {
+    color: #ffffff;
+    background-color: #6c953c;
+}
+
+.sc-content--green a {
+    background-color: #6c953c;
+}
+
+.sc-content--green a:hover, .sc-content--green a:focus, .sc-content--green a:active {
+    background-image: linear-gradient(120deg, #6c953c 0%, #6c953c 100%);
+}
+
+.sc-content--green a .sc-content__heading {
+    border-bottom: 0.125rem solid #ffffff;
+}
+
+.sc-content--green .sc-content__icon {
+    color: #ffffff;
+    background-color: #6c953c;
 }
 
 .generic {
