@@ -33841,6 +33841,10 @@ figure figcaption a:active,
     }
 }
 
+.infographic .infographic__image {
+    text-align: center;
+}
+
 .infographic .infographic__caption .figcaption__source {
     display: block;
 }
