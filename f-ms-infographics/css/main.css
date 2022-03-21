@@ -33763,19 +33763,13 @@ figure figcaption a:active,
     }
     .infographic .infographic__image,
     .infographic .infographic__description {
-        padding: 0 2rem;
+        padding: 2rem;
     }
     .infographic .infographic__image img,
     .infographic .infographic__image .infographic__description__text,
     .infographic .infographic__description img,
     .infographic .infographic__description .infographic__description__text {
-        margin: 50% 0;
-    }
-    .infographic .infographic__description .infographic__description__text {
-        margin: 50% 0;
-    }
-    .infographic .infographic__caption {
-        flex-basis: 100%;
+        min-height: 100%;
     }
 }
 
@@ -33817,6 +33811,14 @@ figure figcaption a:active,
     }
 }
 
+.infographic .infographic__description span:not(.infographic__description__text__highlight):nth-of-type(1) {
+    margin-right: 0.75rem;
+}
+
+.infographic .infographic__description span:not(.infographic__description__text__highlight):not(:nth-of-type(1)):nth-of-type(2n + 1) {
+    margin: 0 0.75rem;
+}
+
 .infographic .infographic__description .infographic__description__text__highlight {
     font-size: 1.602rem;
     line-height: 1.33333;
@@ -33824,7 +33826,6 @@ figure figcaption a:active,
     background-color: #0177a0;
     line-height: 2.5rem;
     padding: 0;
-    margin-right: 0.5rem;
     box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
 }
 
