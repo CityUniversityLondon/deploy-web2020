@@ -22079,8 +22079,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     min-width: 1.5rem;
 }
 
-.background--blue50 figure:after {
-    background-color: #0177a0;
+@media (min-width: 768px) {
+    .background--blue50 figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--blue50 figure:after {
+        background-color: #0177a0;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--blue50 .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--blue50 figure {
+        background-color: #0177a0;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--blue50 a,
@@ -22102,8 +22126,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
-.background--blue70 figure:after {
-    background-color: #213d50;
+@media (min-width: 768px) {
+    .background--blue70 figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--blue70 figure:after {
+        background-color: #213d50;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--blue70 .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--blue70 figure {
+        background-color: #213d50;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--blue70 a,
@@ -22125,8 +22173,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
-.background--blue90 figure:after {
-    background-color: #00294a;
+@media (min-width: 768px) {
+    .background--blue90 figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--blue90 figure:after {
+        background-color: #00294a;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--blue90 .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--blue90 figure {
+        background-color: #00294a;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--blue90 a,
@@ -22148,8 +22220,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
-.background--brown40 figure:after {
-    background-color: #bab4b2;
+@media (min-width: 768px) {
+    .background--brown40 figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--brown40 figure:after {
+        background-color: #bab4b2;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--brown40 .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--brown40 figure {
+        background-color: #bab4b2;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--brown40 a,
@@ -22171,8 +22267,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #1e1e1e;
 }
 
-.background--green50 figure:after {
-    background-color: #6c953c;
+@media (min-width: 768px) {
+    .background--green50 figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--green50 figure:after {
+        background-color: #6c953c;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--green50 .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--green50 figure {
+        background-color: #6c953c;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--green50 a,
@@ -22194,8 +22314,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #1e1e1e;
 }
 
-.background--orange50 figure:after {
-    background-color: #f25d21;
+@media (min-width: 768px) {
+    .background--orange50 figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--orange50 figure:after {
+        background-color: #f25d21;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--orange50 .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--orange50 figure {
+        background-color: #f25d21;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--orange50 a,
@@ -22217,8 +22361,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #1e1e1e;
 }
 
-.background--orange80 figure:after {
-    background-color: #65322f;
+@media (min-width: 768px) {
+    .background--orange80 figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--orange80 figure:after {
+        background-color: #65322f;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--orange80 .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--orange80 figure {
+        background-color: #65322f;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--orange80 a,
@@ -22240,8 +22408,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
-.background--pink90 figure:after {
-    background-color: #3e1031;
+@media (min-width: 768px) {
+    .background--pink90 figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--pink90 figure:after {
+        background-color: #3e1031;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--pink90 .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--pink90 figure {
+        background-color: #3e1031;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--pink90 a,
@@ -22263,8 +22455,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
-.background--purewhite figure:after {
-    background-color: #ffffff;
+@media (min-width: 768px) {
+    .background--purewhite figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--purewhite figure:after {
+        background-color: #ffffff;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--purewhite .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--purewhite figure {
+        background-color: #ffffff;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--purewhite a,
@@ -22286,8 +22502,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #1e1e1e;
 }
 
-.background--purple50 figure:after {
-    background-color: #832c9e;
+@media (min-width: 768px) {
+    .background--purple50 figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--purple50 figure:after {
+        background-color: #832c9e;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--purple50 .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--purple50 figure {
+        background-color: #832c9e;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--purple50 a,
@@ -22309,8 +22549,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
-.background--purple80 figure:after {
-    background-color: #3f1464;
+@media (min-width: 768px) {
+    .background--purple80 figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--purple80 figure:after {
+        background-color: #3f1464;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--purple80 .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--purple80 figure {
+        background-color: #3f1464;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--purple80 a,
@@ -22332,8 +22596,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
-.background--red50 figure:after {
-    background-color: #d61726;
+@media (min-width: 768px) {
+    .background--red50 figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--red50 figure:after {
+        background-color: #d61726;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--red50 .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--red50 figure {
+        background-color: #d61726;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--red50 a,
@@ -22355,8 +22643,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
-.background--teal90 figure:after {
-    background-color: #00393f;
+@media (min-width: 768px) {
+    .background--teal90 figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--teal90 figure:after {
+        background-color: #00393f;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--teal90 .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--teal90 figure {
+        background-color: #00393f;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--teal90 a,
@@ -22378,8 +22690,32 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
-.background--yellow20 figure:after {
-    background-color: #ffef2b;
+@media (min-width: 768px) {
+    .background--yellow20 figure {
+        margin-top: 0;
+        padding-bottom: 2rem;
+    }
+    .background--yellow20 figure:after {
+        background-color: #ffef2b;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin-left: 2rem;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+    }
+    .background--yellow20 .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .background--yellow20 figure {
+        background-color: #ffef2b;
+        padding: 1.5rem 1.5rem 0;
+    }
 }
 
 .background--yellow20 a,
@@ -22427,7 +22763,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     align-self: stretch;
     flex-basis: 50%;
     overflow: hidden;
-    padding-bottom: 2rem;
     position: relative;
 }
 
@@ -22437,21 +22772,9 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     margin-left: 0;
 }
 
-.card__side-image figure:after {
-    content: '';
-    height: 100%;
-    left: 0;
-    margin-left: 2rem;
-    position: absolute;
-    width: 100%;
-    z-index: 0;
-}
-
 .card__side-image .card__side-image__text {
     flex-basis: 50%;
     overflow: hidden;
-    margin-top: 2rem;
-    padding-top: 2rem;
 }
 
 .card--socialmedia .card__anchor {
