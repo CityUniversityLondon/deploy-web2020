@@ -33753,11 +33753,8 @@ figure figcaption a:active,
     .infographic .infographic__panels {
         display: flex;
     }
-    .infographic .infographic__panels .infographic__panel.infographic__panel__panel1 {
-        flex-basis: 45%;
-    }
-    .infographic .infographic__panels .infographic__panel.infographic__panel__panel2 {
-        flex-basis: 55%;
+    .infographic .infographic__panels .infographic__panel {
+        flex-basis: 50%;
     }
     .infographic .infographic__panels .infographic__panel.infographic__panel__panel1, .infographic .infographic__panels .infographic__panel.infographic__panel__panel2 {
         padding: 2rem;
@@ -33769,6 +33766,10 @@ figure figcaption a:active,
     }
 }
 
+.infographic .infographic__description__heading {
+    margin: 0;
+}
+
 .infographic .infographic__panel.infographic__panel__panel1[data-type='image'] {
     text-align: center;
 }
@@ -33777,45 +33778,48 @@ figure figcaption a:active,
     outline: 0.0625rem solid #0177a0;
 }
 
+.infographic .infographic__panel.background--blue50 .infographic__description__text__highlight {
+    background-color: #832c9e;
+    box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
+}
+
 .infographic .infographic__panel.background--purple50 {
     outline: 0.0625rem solid #832c9e;
 }
 
-.infographic .infographic__panel .infographic__description__heading,
+.infographic .infographic__panel.background--purple50 .infographic__description__text__highlight {
+    background-color: #0177a0;
+    box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
+}
+
 .infographic .infographic__panel .infographic__description__text {
     margin: 0;
-}
-
-.infographic .infographic__panel .infographic__description__text {
     color: #ffffff;
-}
-
-.infographic .infographic__panel .infographic__description__text span:not(.infographic__description__text__highlight) {
-    font-size: 1.424rem;
+    font-size: 1.266rem;
     line-height: 1.33333;
-    letter-spacing: -0.013em;
+    letter-spacing: -0.011em;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .infographic .infographic__panel .infographic__description__text span:not(.infographic__description__text__highlight) {
-        letter-spacing: -0.015em;
+    .infographic .infographic__panel .infographic__description__text {
+        letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .infographic .infographic__panel .infographic__description__text span:not(.infographic__description__text__highlight) {
-        letter-spacing: -0.016em;
+    .infographic .infographic__panel .infographic__description__text {
+        letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .infographic .infographic__panel .infographic__description__text span:not(.infographic__description__text__highlight) {
+    .infographic .infographic__panel .infographic__description__text {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .infographic .infographic__panel .infographic__description__text span:not(.infographic__description__text__highlight) {
+    .infographic .infographic__panel .infographic__description__text {
         letter-spacing: -0.017em;
     }
 }
@@ -33829,37 +33833,9 @@ figure figcaption a:active,
 }
 
 .infographic .infographic__panel .infographic__description__text .infographic__description__text__highlight {
-    font-size: 1.602rem;
-    line-height: 1.33333;
-    letter-spacing: -0.015em;
-    background-color: #0177a0;
-    line-height: 2.5rem;
+    font-weight: 600;
+    line-height: calc( 2rem + 0.25rem/ 2);
     padding: 0;
-    box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .infographic .infographic__panel .infographic__description__text .infographic__description__text__highlight {
-        letter-spacing: -0.016em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .infographic .infographic__panel .infographic__description__text .infographic__description__text__highlight {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .infographic .infographic__panel .infographic__description__text .infographic__description__text__highlight {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .infographic .infographic__panel .infographic__description__text .infographic__description__text__highlight {
-        letter-spacing: -0.017em;
-    }
 }
 
 .infographic .infographic__caption .figcaption__source {
