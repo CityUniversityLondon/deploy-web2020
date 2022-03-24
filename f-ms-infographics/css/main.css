@@ -33823,15 +33823,15 @@ figure figcaption a:active,
     }
 }
 
-.infographic .infographic__panel .infographic__description__text span:not(.infographic__description__text__highlight):nth-of-type(1) {
+.infographic .infographic__panel .infographic__description__text span:not(.infographic__description__text__highlight):nth-of-type(odd) {
     margin-right: 0.75rem;
 }
 
-.infographic .infographic__panel .infographic__description__text span:not(.infographic__description__text__highlight):nth-of-type(2n + 1) {
+.infographic .infographic__panel .infographic__description__text span:not(.infographic__description__text__highlight):nth-of-type(even) {
     margin: 0 0.75rem 0 0;
 }
 
-.infographic .infographic__panel .infographic__description__text .infographic__description__text__highlight {
+.infographic .infographic__panel .infographic__description__text span.infographic__description__text__highlight {
     font-weight: 600;
     line-height: calc( 2rem + 0.25rem/ 2);
     padding: 0;
