@@ -33755,13 +33755,12 @@ figure figcaption a:active,
     }
     .infographic .infographic__panels .infographic__panel {
         flex-basis: 50%;
-    }
-    .infographic .infographic__panels .infographic__panel.infographic__panel__panel1, .infographic .infographic__panels .infographic__panel.infographic__panel__panel2 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         padding: 2rem;
     }
-    .infographic .infographic__panels .infographic__panel.infographic__panel__panel1 img,
-    .infographic .infographic__panels .infographic__panel.infographic__panel__panel1 .infographic__description__text, .infographic .infographic__panels .infographic__panel.infographic__panel__panel2 img,
-    .infographic .infographic__panels .infographic__panel.infographic__panel__panel2 .infographic__description__text {
+    .infographic .infographic__panels .infographic__panel img {
         min-height: 100%;
     }
 }
@@ -33828,14 +33827,15 @@ figure figcaption a:active,
     margin-right: 0.75rem;
 }
 
-.infographic .infographic__panel .infographic__description__text span:not(.infographic__description__text__highlight):not(:nth-of-type(1)):nth-of-type(2n + 1) {
-    margin: 0 0.75rem;
+.infographic .infographic__panel .infographic__description__text span:not(.infographic__description__text__highlight):nth-of-type(2n + 1) {
+    margin: 0 0.75rem 0 0;
 }
 
 .infographic .infographic__panel .infographic__description__text .infographic__description__text__highlight {
     font-weight: 600;
     line-height: calc( 2rem + 0.25rem/ 2);
     padding: 0;
+    margin: 0 0.75rem 0 0;
 }
 
 .infographic .infographic__caption .figcaption__source {
