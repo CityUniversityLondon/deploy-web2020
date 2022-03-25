@@ -1230,7 +1230,7 @@ function Finder__Results__Profile(props) {
     className: "card card--profile"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.clickTrackingUrl,
-    className: "card__anchor card__details ".concat(thumbnailExist)
+    className: `card__anchor card__details ${thumbnailExist}`
   }, headshot, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
@@ -1422,7 +1422,7 @@ function Finder__Pagination(props) {
     pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       "aria-current": page === currentPage ? 'page' : null,
       "aria-expanded": page === currentPage ? true : false,
-      "aria-label": "Open page ".concat(page),
+      "aria-label": `Open page ${page}`,
       className: className,
       "data-page": page,
       "data-proximity": Math.abs(page - currentPage),
@@ -1570,15 +1570,15 @@ const baseUrl = 'https://www.city.ac.uk/web-services',
 function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, events) {
   const fixedParams = {};
   fixedParameters.forEach(param => {
-    fixedParams["".concat(param.name)] = param.value;
+    fixedParams[`${param.name}`] = param.value;
   });
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
-    fixedFacetParams["meta_".concat(facet.meta, "_sand")] = facet.value;
+    fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value;
   });
   const facetParams = {},
         facetKeys = Object.keys(facets);
-  facetKeys.forEach(key => facetParams["meta_".concat(key, "_sand")] = facets[key]);
+  facetKeys.forEach(key => facetParams[`meta_${key}_sand`] = facets[key]);
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
@@ -1886,7 +1886,7 @@ function InlineSearch__Suggestions(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
       key: i
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-      href: "/search?query=".concat(urlString)
+      href: `/search?query=${urlString}`
     }, highlighted));
   })));
 }
@@ -2104,7 +2104,7 @@ function Search__Collection(props) {
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "search__filter search__select ".concat(currentValue !== props.config.primary.collections[0].collection && 'search__select--selected')
+    className: `search__filter search__select ${currentValue !== props.config.primary.collections[0].collection && 'search__select--selected'}`
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     htmlFor: "search__collection"
   }, props.config.primary.collections[0].label), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
@@ -2785,12 +2785,12 @@ function Search__Results(props) {
   function keyEvents(e) {
     switch (e.key) {
       case arrowLeft:
-        props.element.querySelector(".tabs__links li:nth-child(".concat(currentTab !== 0 ? currentTab : 1, ") button")).focus();
+        props.element.querySelector(`.tabs__links li:nth-child(${currentTab !== 0 ? currentTab : 1}) button`).focus();
         currentTab !== 0 && setCurrentTab(currentTab - 1);
         break;
 
       case arrowRight:
-        props.element.querySelector(".tabs__links li:nth-child(".concat(currentTab !== props.finders.length ? currentTab + 2 : currentTab + 1, ") button")).focus();
+        props.element.querySelector(`.tabs__links li:nth-child(${currentTab !== props.finders.length ? currentTab + 2 : currentTab + 1}) button`).focus();
         currentTab !== props.finders.length && setCurrentTab(currentTab + 1);
         break;
 
@@ -2867,7 +2867,7 @@ function Search__Results(props) {
     update: props.update
   });
   const spell = props.primary[0] && props.primary[0].response && props.primary[0].response.spell && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", null, "Did you mean", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    href: "search?".concat(props.primary[0].response.spell.url)
+    href: `search?${props.primary[0].response.spell.url}`
   }, props.primary[0].response.spell.text), "?");
   const panels = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", {
     className: "tabs__panel",
@@ -3223,7 +3223,7 @@ function InlineSearch(props) {
   };
 
   const updateIndicator = what => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", {
-    className: "search--inline__results__updating search--inline__results__updating--".concat(what.replace(/ /g, '')),
+    className: `search--inline__results__updating search--inline__results__updating--${what.replace(/ /g, '')}`,
     "aria-live": "polite"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("span", {
     className: "fas fa-spinner fa-pulse icon",
@@ -3246,7 +3246,7 @@ function InlineSearch(props) {
       focusTrap.deactivate && focusTrap.deactivate();
     }
   }, [display, focusTrap]);
-  const iconClass = "global-header__search__icon far fa-fw ".concat(display ? 'fa-times' : 'fa-search'),
+  const iconClass = `global-header__search__icon far fa-fw ${display ? 'fa-times' : 'fa-search'}`,
         veil = display && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "veil--search",
     "data-on": "true"
@@ -3386,7 +3386,7 @@ function replaceHistory(currQuery, currStartRank, currCollection, defaultCollect
     currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
     currCollection !== defaultCollection ? params.set('collection', currCollection) : params.delete('collection');
     const hasParams = params.toString().length ? '?' : '';
-    window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
+    window.history.replaceState({}, '', `${window.location.pathname}${hasParams}${params.toString()}`);
   }
 }
 /**
@@ -3979,11 +3979,11 @@ function axiosRequest(config) {
     if (httpOK === response.status) {
       return response.data;
     } else {
-      throw "Bad response: ".concat(response.status);
+      throw `Bad response: ${response.status}`;
     }
   }).catch(e => {
     if (!axios__WEBPACK_IMPORTED_MODULE_3___default.a.isCancel(e)) {
-      gaEvent('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "axiosRequest ".concat(e.fileName, " (").concat(window.location, ")"), true);
+      gaEvent('jsError', 'JavaScript error', `Line ${e.lineNumber} – ${e.message}`, `axiosRequest ${e.fileName} (${window.location})`, true);
     }
   });
 }
@@ -3996,7 +3996,7 @@ function axiosRequest(config) {
 function formatTime(timeString) {
   const time = new Date(timeString);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("time", {
-    dateTime: "".concat(time.getUTCHours() ? time.getUTCHours() : '00', ":").concat(time.getUTCMinutes() ? time.getUTCMinutes() : '00')
+    dateTime: `${time.getUTCHours() ? time.getUTCHours() : '00'}:${time.getUTCMinutes() ? time.getUTCMinutes() : '00'}`
   }, time.getUTCHours() ? time.getUTCHours() : '00', ":", time.getUTCMinutes() ? time.getUTCMinutes() : '00');
 }
 /**

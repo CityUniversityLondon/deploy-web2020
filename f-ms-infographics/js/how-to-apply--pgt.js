@@ -359,7 +359,7 @@ function HowToApply(props) {
   function formatDate(sourceDate) {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     let formattedDate = new Date(sourceDate);
-    return "".concat(months[formattedDate.getUTCMonth()], " ").concat(formattedDate.getUTCFullYear());
+    return `${months[formattedDate.getUTCMonth()]} ${formattedDate.getUTCFullYear()}`;
   }
   /**
    * Completed programme, route and dates filter. Analyse methods data.
@@ -661,7 +661,7 @@ function HowToApply(props) {
               uniqueLocations = uniqueLocations.filter((v, i, a) => a.indexOf(v) === i);
 
               for (let i = 1; i <= uniqueLocations.length; i++) {
-                filterLocation(data, uniqueLocations[i - 1], "#location-".concat(i), "#location-".concat(i, "__buttons"));
+                filterLocation(data, uniqueLocations[i - 1], `#location-${i}`, `#location-${i}__buttons`);
               } // End multiple locations
 
             } else {
@@ -1418,11 +1418,11 @@ function axiosRequest(config) {
     if (httpOK === response.status) {
       return response.data;
     } else {
-      throw "Bad response: ".concat(response.status);
+      throw `Bad response: ${response.status}`;
     }
   }).catch(e => {
     if (!axios__WEBPACK_IMPORTED_MODULE_3___default.a.isCancel(e)) {
-      gaEvent('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "axiosRequest ".concat(e.fileName, " (").concat(window.location, ")"), true);
+      gaEvent('jsError', 'JavaScript error', `Line ${e.lineNumber} – ${e.message}`, `axiosRequest ${e.fileName} (${window.location})`, true);
     }
   });
 }
@@ -1435,7 +1435,7 @@ function axiosRequest(config) {
 function formatTime(timeString) {
   const time = new Date(timeString);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("time", {
-    dateTime: "".concat(time.getUTCHours() ? time.getUTCHours() : '00', ":").concat(time.getUTCMinutes() ? time.getUTCMinutes() : '00')
+    dateTime: `${time.getUTCHours() ? time.getUTCHours() : '00'}:${time.getUTCMinutes() ? time.getUTCMinutes() : '00'}`
   }, time.getUTCHours() ? time.getUTCHours() : '00', ":", time.getUTCMinutes() ? time.getUTCMinutes() : '00');
 }
 /**

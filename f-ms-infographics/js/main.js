@@ -423,7 +423,7 @@ function launchResearchApplyCta(cta) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchResearchApplyCta,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -470,7 +470,7 @@ function tryCatch(f) {
     return f();
   } catch (e) {
     // console.log(e);
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["gaEvent"])('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "Pattern launch ".concat(e.fileName, " (").concat(window.location, ")"), true);
+    Object(_util__WEBPACK_IMPORTED_MODULE_2__["gaEvent"])('jsError', 'JavaScript error', `Line ${e.lineNumber} – ${e.message}`, `Pattern launch ${e.fileName} (${window.location})`, true);
   }
 }
 /**
@@ -490,7 +490,7 @@ function launchPattern(pattern) {
       launchFn,
       launchQuery
     } = pattern;
-    Array.from(document.querySelectorAll(launchQuery)).filter(elem => elem.className.indexOf("".concat(launchQuery, "-no-js"))).forEach(elem => tryCatch(() => launchFn(elem)));
+    Array.from(document.querySelectorAll(launchQuery)).filter(elem => elem.className.indexOf(`${launchQuery}-no-js`)).forEach(elem => tryCatch(() => launchFn(elem)));
   }
 }
 /**
@@ -771,7 +771,7 @@ function buttonClick(button, headings, toggleOpen) {
     }, tenthOfASecond);
 
     if (toggleOpen) {
-      const sections = Array.from(heading.parentNode.parentNode.querySelectorAll("#".concat(heading.parentElement.id, " > .").concat(bodyClassName)));
+      const sections = Array.from(heading.parentNode.parentNode.querySelectorAll(`#${heading.parentElement.id} > .${bodyClassName}`));
       headings.forEach(heading => setSection(heading, false));
       sections.filter(section => section.id !== accordionSection.id).forEach(section => {
         section.dataset.closed = 'true';
@@ -833,7 +833,7 @@ function launchAccordion(accordion) {
   const toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(accordion.dataset.toggleopen),
         defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(accordion.dataset.defaultopen),
         allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(accordion.dataset.allowsingle),
-        headings = Array.from(accordion.parentNode.querySelectorAll("#".concat(accordion.id, " > .").concat(headingClassName)));
+        headings = Array.from(accordion.parentNode.querySelectorAll(`#${accordion.id} > .${headingClassName}`));
   let idLinked = false;
 
   if (!(allowSingle || headings.length > 1)) {
@@ -897,7 +897,7 @@ function launchAccordion(accordion) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchAccordion,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -942,7 +942,7 @@ function contentFadeIn(contentFadein) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: contentFadeIn,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -1011,7 +1011,7 @@ function insertElement(contentSeparatorContainer) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: contentSeparator,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -1059,7 +1059,7 @@ function contentSlideUp(contentSlideup) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: contentSlideUp,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -1104,7 +1104,7 @@ function imageExpand(image) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: imageExpand,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -1280,7 +1280,7 @@ function init(elm) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: init,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -1425,7 +1425,7 @@ function initParticles() {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: initParticles,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -1466,7 +1466,7 @@ function initSvgPathAnimation(animateSvg) {
       let length = path.getTotalLength() + 'px';
       path.classList.add('animate--svg-path--jsinit');
       path.style.strokeDashoffset = length;
-      path.style.strokeDasharray = "".concat(length, ", ").concat(length);
+      path.style.strokeDasharray = `${length}, ${length}`;
     }); // starts animation when in scrolling view
 
     window.addEventListener('scroll', function () {
@@ -1487,7 +1487,7 @@ function initSvgPathAnimation(animateSvg) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: initSvgPathAnimation,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -1588,7 +1588,7 @@ function updateProgress(backToTopAnchor) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: initBacktoTop,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -1672,7 +1672,7 @@ function buildBars(chartCollection) {
 
     let barWidth = Math.round(singleBarTotal / collectionMaxValue * 100),
         segmentWidth = Math.round(singleBarSegment / singleBarTotal * 100);
-    chart.setAttribute('data-bar-width', "".concat(barWidth));
+    chart.setAttribute('data-bar-width', `${barWidth}`);
     /**
      * Create data attributes for:
      *   1. Segment width proportional to bar
@@ -1696,7 +1696,7 @@ function buildBars(chartCollection) {
      */
 
     let relativeWidth = Math.round(segmentWidth * barWidth / 100);
-    singleBarSegmentEls.setAttribute('data-relative-width', "".concat(relativeWidth));
+    singleBarSegmentEls.setAttribute('data-relative-width', `${relativeWidth}`);
     let segments = chart.querySelectorAll('[data-bar-segment]');
 
     for (const segment of segments) {
@@ -1704,7 +1704,7 @@ function buildBars(chartCollection) {
       segmentWidths.push(segmentRelativeWidths);
     }
 
-    singleBarSegmentEls.setAttribute('data-segment-width', "".concat(segmentWidth));
+    singleBarSegmentEls.setAttribute('data-segment-width', `${segmentWidth}`);
   }
   /**
    * Apply units label to segment with largest relative width, not just a segment's
@@ -1719,10 +1719,10 @@ function buildBars(chartCollection) {
 
 
   let largestSegmentWidth = Math.max(...segmentWidths),
-      widestSegment = chartCollection.querySelector("[data-relative-width=\"".concat(largestSegmentWidth, "\"]")),
+      widestSegment = chartCollection.querySelector(`[data-relative-width="${largestSegmentWidth}"]`),
       widestSegmentLabel = widestSegment.querySelectorAll('span'); // Only append units once, even if segment widths are equal on multiple bars
 
-  widestSegmentLabel[0].append(" ".concat(chartCollectionUnits));
+  widestSegmentLabel[0].append(` ${chartCollectionUnits}`);
 }
 
 function launchChart(chartCollection) {
@@ -1732,7 +1732,7 @@ function launchChart(chartCollection) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchChart,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -1787,7 +1787,7 @@ function createButton() {
 
 
 function launchRemover(elem) {
-  const warnings = Array.from(elem.querySelectorAll(".".concat(warningClass)));
+  const warnings = Array.from(elem.querySelectorAll(`.${warningClass}`));
 
   if (warnings.length) {
     const button = createButton(),
@@ -1805,7 +1805,7 @@ function launchRemover(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchRemover,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -1848,7 +1848,7 @@ function devcorate(elem, param, value) {
     if (anchor.origin === window.location.origin) {
       const parameters = anchor.search ? Object(_util__WEBPACK_IMPORTED_MODULE_1__["parametersToObject"])(anchor.search) : {};
       parameters[param] = value;
-      anchor.href = "".concat(anchor.origin).concat(anchor.pathname).concat(Object(_util__WEBPACK_IMPORTED_MODULE_1__["objectToParameters"])(parameters)).concat(anchor.hash);
+      anchor.href = `${anchor.origin}${anchor.pathname}${Object(_util__WEBPACK_IMPORTED_MODULE_1__["objectToParameters"])(parameters)}${anchor.hash}`;
     }
   });
 }
@@ -1990,7 +1990,7 @@ function insertSelect(items, parentElement, firstItemVisible) {
 
   if (parentElement.dataset.displayAll === 'true') {
     let showAllOption = document.createElement('li');
-    showAllOption.dataset.name = "All ".concat(parentElement.dataset.units);
+    showAllOption.dataset.name = `All ${parentElement.dataset.units}`;
     showAllOption.dataset.value = 'show-all';
     items.splice(0, 0, showAllOption);
   } // Remove item with dataset.first='true' from original position in array
@@ -2076,7 +2076,7 @@ function selectChange(e) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: prepareDropdown,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -2215,7 +2215,7 @@ function launchFormAssemblyForm(eventInfo) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchFormAssemblyForm,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -2327,7 +2327,7 @@ function launchFeedback(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchFeedback,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -3215,7 +3215,7 @@ function createMap(mapContainer) {
 ;
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: createMap,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -3443,7 +3443,7 @@ class Carousel {
   drag(e) {
     if (this.i !== e.target.children.length - 1 && this.i !== 0) {
       if (this.locked) {
-        e.target.style.setProperty('--tx', "".concat(Math.round(this.unify(e).clientX - this.x0), "px"));
+        e.target.style.setProperty('--tx', `${Math.round(this.unify(e).clientX - this.x0)}px`);
       }
     }
   }
@@ -3974,7 +3974,7 @@ function carouselGallery(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: carouselGallery,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -4001,7 +4001,7 @@ function init(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: init,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -4047,7 +4047,7 @@ const className = 'key-information--lifelong-learning',
 function prepareStartDates(startDates) {
   startDates.forEach((startDate, i) => {
     startDate.setAttribute('tabindex', -1);
-    startDate.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, "Start date ".concat(i + 1, " of ").concat(startDates.length));
+    startDate.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, `Start date ${i + 1} of ${startDates.length}`);
 
     if (i < 1) {
       startDate.dataset.sliderposition = 0;
@@ -4070,9 +4070,9 @@ function prepareStartDates(startDates) {
 
 
 function updateButtonState(keyInformation) {
-  const nextButton = keyInformation.querySelector(".".concat(className, "__controls__next")),
-        prevButton = keyInformation.querySelector(".".concat(className, "__controls__prev")),
-        loadMoreButton = keyInformation.querySelector(".".concat(className, "__controls__loadmore"));
+  const nextButton = keyInformation.querySelector(`.${className}__controls__next`),
+        prevButton = keyInformation.querySelector(`.${className}__controls__prev`),
+        loadMoreButton = keyInformation.querySelector(`.${className}__controls__loadmore`);
   keyInformation.querySelector('[data-sliderposition="-1"]') ? prevButton.removeAttribute('disabled') : prevButton.setAttribute('disabled', true);
   keyInformation.querySelector('[data-sliderposition="1"]') ? nextButton.removeAttribute('disabled') : nextButton.setAttribute('disabled', true);
 
@@ -4089,11 +4089,11 @@ function updateButtonState(keyInformation) {
 
 
 function handleNextPrevClick(keyInformation, direction) {
-  const startDates = Array.from(keyInformation.querySelectorAll(".".concat(className, "__dates > li"))),
+  const startDates = Array.from(keyInformation.querySelectorAll(`.${className}__dates > li`)),
         current = keyInformation.querySelector('[data-sliderposition="0"]'),
-        currentPage = keyInformation.querySelector(".".concat(className, "__indicator__current")),
-        nextButton = keyInformation.querySelector(".".concat(className, "__controls__next")),
-        prevButton = keyInformation.querySelector(".".concat(className, "__controls__prev"));
+        currentPage = keyInformation.querySelector(`.${className}__indicator__current`),
+        nextButton = keyInformation.querySelector(`.${className}__controls__next`),
+        prevButton = keyInformation.querySelector(`.${className}__controls__prev`);
 
   if (direction === 1) {
     const next = current.nextElementSibling;
@@ -4146,8 +4146,8 @@ function handleNextPrevClick(keyInformation, direction) {
 
 
 function handleLoadMoreClick(keyInformation) {
-  const hiddenDates = Array.from(keyInformation.querySelectorAll(".".concat(className, "__dates > [data-loadmorevisible=\"false\"]"))),
-        loadMoreButton = keyInformation.querySelector(".".concat(className, "__controls__loadmore"));
+  const hiddenDates = Array.from(keyInformation.querySelectorAll(`.${className}__dates > [data-loadmorevisible="false"]`)),
+        loadMoreButton = keyInformation.querySelector(`.${className}__controls__loadmore`);
 
   if (loadMoreBatch >= hiddenDates.length) {
     loadMoreButton.parentNode.removeChild(loadMoreButton);
@@ -4172,13 +4172,13 @@ function handleLoadMoreClick(keyInformation) {
 
 
 function launchKeyInformation(keyInformation) {
-  const startDates = Array.from(keyInformation.querySelectorAll(".".concat(className, "__dates > li"))),
-        startDateList = keyInformation.querySelector(".".concat(className, "__dates"));
+  const startDates = Array.from(keyInformation.querySelectorAll(`.${className}__dates > li`)),
+        startDateList = keyInformation.querySelector(`.${className}__dates`);
 
   if (startDates.length < 2) {
     return;
   } else {
-    keyInformation.classList.add("".concat(className, "__dates--controllable"));
+    keyInformation.classList.add(`${className}__dates--controllable`);
     startDateList.setAttribute('role', 'presentation');
   }
 
@@ -4261,7 +4261,7 @@ function launchKeyInformation(keyInformation) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchKeyInformation,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -4362,7 +4362,7 @@ function findLinks(e) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: findLinks,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -4409,7 +4409,7 @@ function setNavigationItemButtonDetails(button, open, rootClass) {
         sectionText = navigationItem.dataset.title + ' section',
         buttonClassName = rootClass + '__button',
         buttonTextClassName = buttonClassName + '__text',
-        textSpan = button.querySelector(".".concat(buttonTextClassName)),
+        textSpan = button.querySelector(`.${buttonTextClassName}`),
         text = open ? 'Close ' : 'Open ';
   open && Array.from(button.closest('ul').querySelectorAll('button')).forEach(button => setNavigationItemButtonDetails(button, false, rootClass));
   navigationItem.dataset.open = open;
@@ -4445,11 +4445,11 @@ function prepareSubNavigation(navigationItem, rootClass) {
         buttonIconClassName = buttonClassName + '__icon',
         currentClassName = rootClass + '__current',
         hierarchyClassName = rootClass + '__hierarchy',
-        controlsWrapper = navigationItem.querySelector(".".concat(controlsClassName));
+        controlsWrapper = navigationItem.querySelector(`.${controlsClassName}`);
   navigationItemBtn.setAttribute('type', 'button');
   iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
-  iconSpan.className = "".concat(buttonIconClassName, " fal fa-fw");
-  textSpan.className = "".concat(buttonTextClassName);
+  iconSpan.className = `${buttonIconClassName} fal fa-fw`;
+  textSpan.className = `${buttonTextClassName}`;
   Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(navigationItemBtn, [iconSpan, textSpan]);
   controlsWrapper.appendChild(navigationItemBtn);
 
@@ -4550,7 +4550,7 @@ function menuSetter(menu, button) {
    * @param {boolean} open - Set the menu to be open?
    */
   const setMenu = open => {
-    const buttonText = button.querySelector(".".concat(buttonTextClassName));
+    const buttonText = button.querySelector(`.${buttonTextClassName}`);
     menu.dataset.open = open;
     buttonText.innerText = open ? 'Close' : 'Menu';
     button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, open);
@@ -4598,7 +4598,7 @@ function toggleMenu(button, setMenu, trap, veil) {
 
 function createMenuToggle(label, button, setMenu, veil) {
   const buttonWrapper = document.createElement('div'),
-        menu = label.closest(".".concat(className));
+        menu = label.closest(`.${className}`);
   button.className = 'menu__display__button__button';
   buttonWrapper.className = 'menu__display__button__button__wrapper';
   button.setAttribute('type', 'button');
@@ -4612,7 +4612,7 @@ function createMenuToggle(label, button, setMenu, veil) {
      * last in the DOM and is visible.
      */
     initialFocus: () => {
-      const open = Array.from(menu.querySelectorAll([".".concat(contentHeaderClassName, " > span"), ".".concat(currentClassName, " > .").concat(controlsClassName, " > a"), ".".concat(hierarchyClassName, " > .").concat(controlsClassName, " > a"), ".".concat(level1ClassName, " > ul > li:first-of-type > .").concat(controlsClassName, " > a"), ".".concat(currentPage, " > a")].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_1__["isVisible"])(elem));
+      const open = Array.from(menu.querySelectorAll([`.${contentHeaderClassName} > span`, `.${currentClassName} > .${controlsClassName} > a`, `.${hierarchyClassName} > .${controlsClassName} > a`, `.${level1ClassName} > ul > li:first-of-type > .${controlsClassName} > a`, `.${currentPage} > a`].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_1__["isVisible"])(elem));
       return open[open.length - 1];
     },
     onDeactivate: () => toggleMenu(button, setMenu, trap, veil),
@@ -4630,7 +4630,7 @@ function createMenuToggle(label, button, setMenu, veil) {
 function launchMenu(menu) {
   // During testing only: remove 'under construction' indicators globally
   //     menu.innerHTML = menu.innerHTML.replace(/\(\( /g, '').replace(/ \)\)/g, '');
-  const label = menu.querySelector(".".concat(buttonDisplayClassName)),
+  const label = menu.querySelector(`.${buttonDisplayClassName}`),
         button = document.createElement('button'),
         veil = document.createElement('div'),
         setMenu = menuSetter(menu, button);
@@ -4640,13 +4640,13 @@ function launchMenu(menu) {
   createMenuToggle(label, button, setMenu, veil);
   label.appendChild(button);
   setMenu(false);
-  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_3__["prepareNavigation"])(menu.querySelector(".".concat(level1ClassName)), className);
-  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_3__["listenForNavigationToggles"])(menu.querySelector(".".concat(level1ClassName)), className);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_3__["prepareNavigation"])(menu.querySelector(`.${level1ClassName}`), className);
+  Object(_menu_formatters__WEBPACK_IMPORTED_MODULE_3__["listenForNavigationToggles"])(menu.querySelector(`.${level1ClassName}`), className);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchMenu,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -4716,7 +4716,7 @@ function launchModal(modal) {
       listButton.appendChild(listButtonSpan);
       list.appendChild(wrapper);
       Object(_util__WEBPACK_IMPORTED_MODULE_0__["appendAll"])(wrapper, listBody);
-      wrapper.classList.add("".concat(bodyClassName));
+      wrapper.classList.add(`${bodyClassName}`);
 
       if (customHeader) {
         title = customHeader;
@@ -4731,14 +4731,14 @@ function launchModal(modal) {
       if (keepFormat) {
         list.insertBefore(listHeader, wrapper);
         listHeader.addEventListener('click', function () {
-          createDialog(modal, "".concat(i), dialogArray);
+          createDialog(modal, `${i}`, dialogArray);
         });
       } else {
         listButtonSpan.textContent = listHeader.textContent;
         header.appendChild(listHeader);
         list.insertBefore(listButton, wrapper);
         listButton.addEventListener('click', function () {
-          createDialog(modal, "".concat(i), dialogArray);
+          createDialog(modal, `${i}`, dialogArray);
         });
       }
 
@@ -4776,10 +4776,10 @@ function createDialog(parent, position, dialogArray) {
     val: 'dialog'
   }, {
     label: 'data-position',
-    val: "".concat(position)
+    val: `${position}`
   }, {
     label: 'data-type',
-    val: "".concat(type)
+    val: `${type}`
   }]);
   const bodyWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
     label: 'class',
@@ -4896,20 +4896,20 @@ function addDialogEvent(dialog, dialogArray, nextState) {
   dialog.querySelector('.dialog__body-copy').innerHTML = dialogArray[nextState].body;
 
   if (nextState === 0) {
-    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(dialogArray.length - 1));
+    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', `${dialogArray.length - 1}`);
     dialog.querySelectorAll('.dialog__underline-transition')[0].innerText = dialogArray[dialogArray.length - 1].shortname;
     dialog.querySelectorAll('.dialog__underline-transition')[1].innerText = dialogArray[nextState + 1].shortname;
-    dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', "".concat(nextState + 1));
+    dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', `${nextState + 1}`);
   } else if (nextState === dialogArray.length - 1) {
     dialog.querySelectorAll('.dialog__underline-transition')[0].innerText = dialogArray[nextState - 1].shortname;
-    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(nextState - 1));
+    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', `${nextState - 1}`);
     dialog.querySelectorAll('.dialog__underline-transition')[1].innerText = dialogArray[0].shortname;
     dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', '0');
   } else {
     dialog.querySelectorAll('.dialog__underline-transition')[0].innerText = dialogArray[nextState - 1].shortname;
-    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', "".concat(nextState - 1));
+    dialog.querySelectorAll('button')[1].setAttribute('data-nextstate', `${nextState - 1}`);
     dialog.querySelectorAll('.dialog__underline-transition')[1].innerText = dialogArray[nextState + 1].shortname;
-    dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', "".concat(nextState + 1));
+    dialog.querySelectorAll('button')[2].setAttribute('data-nextstate', `${nextState + 1}`);
   }
 }
 /**
@@ -4927,7 +4927,7 @@ function controlButton(dialogArray, position, direction) {
   const buttonLabel = document.createElement('span');
   buttonLabel.classList.add('dialog__underline-transition');
   let nextState = checkNextState(dialogArray, position, direction);
-  button.setAttribute('data-nextstate', "".concat(nextState));
+  button.setAttribute('data-nextstate', `${nextState}`);
 
   if (dialogArray[nextState].shortname) {
     buttonLabel.innerText = dialogArray[nextState].shortname;
@@ -4937,7 +4937,7 @@ function controlButton(dialogArray, position, direction) {
 
   const buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
     label: 'class',
-    val: "icon far fa-long-arrow-".concat(direction)
+    val: `icon far fa-long-arrow-${direction}`
   }]);
 
   if (direction === 'left') {
@@ -4964,7 +4964,7 @@ function controlButton(dialogArray, position, direction) {
 
 
 function checkNextState(dialogArray, position, direction) {
-  const pos = parseInt("".concat(position));
+  const pos = parseInt(`${position}`);
   let nextState;
 
   if (pos === 0) {
@@ -5017,7 +5017,7 @@ function trapFocus(modal) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchModal,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -5070,7 +5070,7 @@ function createCloseAll(navigation, veil) {
     const buttons = Array.from(navigation.querySelectorAll('.navigation--primary__level1 > .navigation__button'));
     buttons.forEach(button => {
       button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'false');
-      button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(openText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
+      button.querySelector(`.${openCloseTextClassName}`).replaceChild(document.createTextNode(openText), button.querySelector(`.${openCloseTextClassName}`).firstChild);
     });
     veil.dataset.on = 'false';
   };
@@ -5090,10 +5090,10 @@ function createSectionToggle(button, closeAll, veil) {
     closeAll();
 
     if (open) {
-      button.closest(".".concat(classNameSpecific)).dataset.open = 'true';
+      button.closest(`.${classNameSpecific}`).dataset.open = 'true';
       veil.dataset.on = 'true';
       button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, open);
-      button.querySelector(".".concat(openCloseTextClassName)).replaceChild(document.createTextNode(closeText), button.querySelector(".".concat(openCloseTextClassName)).firstChild);
+      button.querySelector(`.${openCloseTextClassName}`).replaceChild(document.createTextNode(closeText), button.querySelector(`.${openCloseTextClassName}`).firstChild);
     }
   };
 }
@@ -5107,7 +5107,7 @@ function createSectionToggle(button, closeAll, veil) {
 
 
 function prepareTopLevel(navigation, veil, closeAll) {
-  const topLevels = Array.from(navigation.querySelectorAll(".".concat(topLevelClassName)));
+  const topLevels = Array.from(navigation.querySelectorAll(`.${topLevelClassName}`));
   topLevels.forEach(el => {
     const listItem = el.parentNode,
           button = document.createElement('button'),
@@ -5191,7 +5191,7 @@ function setupTabNext(navigation, closeAll, veil) {
       if (tabKey === e.key && !e.shiftKey) {
         e.preventDefault();
         toggleNextSection();
-        nextSectionButton.closest('.navigation--primary__level1').querySelector(".".concat(headerClassName, " a")).focus();
+        nextSectionButton.closest('.navigation--primary__level1').querySelector(`.${headerClassName} a`).focus();
       }
     }, true);
   });
@@ -5219,7 +5219,7 @@ function prepareLowerLevels(navigation) {
 
 
 function prepareHeaders(navigation) {
-  Array.from(navigation.querySelectorAll(".".concat(headerClassName))).forEach(header => {
+  Array.from(navigation.querySelectorAll(`.${headerClassName}`)).forEach(header => {
     const link = header.querySelector('a'),
           textWrapper = document.createElement('span');
 
@@ -5244,7 +5244,7 @@ function prepareHeaders(navigation) {
 
 function addCloseButtons(navigation, closeAll) {
   Array.from(navigation.querySelectorAll('.navigation--primary__menu__content')).forEach(menu => {
-    const header = menu.querySelector(".".concat(headerClassName)),
+    const header = menu.querySelector(`.${headerClassName}`),
           closeButtonWrapper = document.createElement('div'),
           closeButton = document.createElement('button'),
           closeButtonDiv = document.createElement('div'),
@@ -5293,14 +5293,14 @@ function launchPrimaryNavigation(navigation) {
   setupTabNext(navigation, closeAll, veil); // If the navigation is open, close on escape.
 
   navigation.addEventListener('keydown', e => {
-    if (navigation.querySelector(".".concat(buttonClassName, "[aria-expanded='true']")) && escapeKey === e.key) {
+    if (navigation.querySelector(`.${buttonClassName}[aria-expanded='true']`) && escapeKey === e.key) {
       e.preventDefault();
       closeAll();
     }
   }, true); // If the navigation is open, close it on click outside it.
 
   window.addEventListener('click', e => {
-    if (navigation.querySelector(".".concat(buttonClassName, "[aria-expanded='true']")) && !e.target.closest(".".concat(classNameSpecific))) {
+    if (navigation.querySelector(`.${buttonClassName}[aria-expanded='true']`) && !e.target.closest(`.${classNameSpecific}`)) {
       closeAll();
     }
   }, true);
@@ -5308,7 +5308,7 @@ function launchPrimaryNavigation(navigation) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchPrimaryNavigation,
-  launchQuery: ".".concat(classNameSpecific)
+  launchQuery: `.${classNameSpecific}`
 });
 
 /***/ }),
@@ -5352,7 +5352,7 @@ function launchSecondaryNavigation(navigation) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchSecondaryNavigation,
-  launchQuery: ".".concat(classNameSpecific)
+  launchQuery: `.${classNameSpecific}`
 });
 
 /***/ }),
@@ -5478,7 +5478,7 @@ function launchPaginatedList(list) {
     page.appendChild(newList);
     page.className = _pagination_pagination_js__WEBPACK_IMPORTED_MODULE_0__["pageClassName"];
     page.setAttribute('tabindex', -1);
-    page.setAttribute(_aria_attributes_js__WEBPACK_IMPORTED_MODULE_2__["default"].label, "Page ".concat(pageNumber + 1));
+    page.setAttribute(_aria_attributes_js__WEBPACK_IMPORTED_MODULE_2__["default"].label, `Page ${pageNumber + 1}`);
     pages.push(page);
     /* try to fetch another page */
 
@@ -5494,7 +5494,7 @@ function launchPaginatedList(list) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchPaginatedList,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -5635,11 +5635,11 @@ function createOpenPage(pages, controls, toggleNextPrev) {
    * @param {boolean} [scrollTo] - Scroll to the top of the newly-opened page? Defaults to false.
    */
   const openPage = (pageNumber, focus, scrollTo) => {
-    const pagesArray = Array.from(pages.querySelectorAll(".".concat(pageClassName))),
+    const pagesArray = Array.from(pages.querySelectorAll(`.${pageClassName}`)),
           controlsArray = Array.from(controls.querySelectorAll('button'));
     closeAll(pagesArray, controlsArray);
-    const page = pages.querySelector(".".concat(pageClassName, ":nth-of-type(").concat(pageNumber, ")")),
-          button = controls.querySelector("[data-page=\"".concat(pageNumber, "\"]"));
+    const page = pages.querySelector(`.${pageClassName}:nth-of-type(${pageNumber})`),
+          button = controls.querySelector(`[data-page="${pageNumber}"]`);
     setProximity(pagesArray.length, controlsArray, pageNumber);
     toggleNextPrev(pageNumber);
     page.dataset.open = true;
@@ -5665,7 +5665,7 @@ function createNextPrevOpenPage(controls, newPageFn, openPage) {
    * Returns a function that responds to next/previous button clicks.
    */
   const nextPrevOpenPage = () => {
-    const currentPage = Number.parseInt(controls.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, "=\"true\"]")).dataset.page);
+    const currentPage = Number.parseInt(controls.querySelector(`[${_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded}="true"]`).dataset.page);
     openPage(newPageFn(currentPage), true, false);
   };
 
@@ -5681,10 +5681,10 @@ function createNextPrevOpenPage(controls, newPageFn, openPage) {
 
 
 function setSummaryText(summary, pageCount, itemCount) {
-  let summaryText = "".concat(pageCount, " pages)");
+  let summaryText = `${pageCount} pages)`;
 
   if (itemCount && Number.parseInt(itemCount)) {
-    summaryText = "(".concat(itemCount, " items on ") + summaryText;
+    summaryText = `(${itemCount} items on ` + summaryText;
   } else {
     summaryText = '(' + summaryText;
   }
@@ -5738,14 +5738,14 @@ function createPageButton(pageNumber, totalPages) {
   buttonSpan.appendChild(document.createTextNode(pageNumber));
   button.dataset.page = pageNumber;
   button.setAttribute('type', 'button');
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, "Open page ".concat(pageNumber));
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, `Open page ${pageNumber}`);
 
   if (totalPages - pageNumber === 1) {
-    button.className = "".concat(controlsElementClassName, " ").concat(buttonClassName, " ").concat(buttonClassName, "--penultimate");
+    button.className = `${controlsElementClassName} ${buttonClassName} ${buttonClassName}--penultimate`;
   } else if (totalPages === pageNumber) {
-    button.className = "".concat(controlsElementClassName, " ").concat(buttonClassName, " ").concat(buttonClassName, "--last");
+    button.className = `${controlsElementClassName} ${buttonClassName} ${buttonClassName}--last`;
   } else {
-    button.className = "".concat(controlsElementClassName, " ").concat(buttonClassName);
+    button.className = `${controlsElementClassName} ${buttonClassName}`;
   }
 
   button.appendChild(buttonSpan);
@@ -5768,7 +5768,7 @@ function createPageButton(pageNumber, totalPages) {
 
 function addPagination(elem, itemCount) {
   const wrapper = document.createElement('div'),
-        pages = Array.from(elem.querySelectorAll(".".concat(pageClassName))),
+        pages = Array.from(elem.querySelectorAll(`.${pageClassName}`)),
         controls = document.createElement('nav'),
         next = document.createElement('button'),
         prev = document.createElement('button'),
@@ -5791,10 +5791,10 @@ function addPagination(elem, itemCount) {
     return;
   }
 
-  ellipsisFirst.className = "".concat(controlsElementClassName, " ").concat(ellipsisClassName, " ").concat(ellipsisClassName, "--first");
+  ellipsisFirst.className = `${controlsElementClassName} ${ellipsisClassName} ${ellipsisClassName}--first`;
   ellipsisFirstInner.innerText = '…';
   ellipsisFirst.appendChild(ellipsisFirstInner);
-  ellipsisLast.className = "".concat(controlsElementClassName, " ").concat(ellipsisClassName, " ").concat(ellipsisClassName, "--last");
+  ellipsisLast.className = `${controlsElementClassName} ${ellipsisClassName} ${ellipsisClassName}--last`;
   ellipsisLastInner.innerText = '…';
   ellipsisLast.appendChild(ellipsisLastInner);
   prepareNextPrev(next, prev, controls, pages.length, openPage);
@@ -5833,7 +5833,7 @@ function addPagination(elem, itemCount) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: addPagination,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -5955,7 +5955,7 @@ function showMore(showMoreElement) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: showMore,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -6147,8 +6147,8 @@ function reverseOptimisation(slider, controls, direction, click) {
 
 function updateButtonState(slider, controls) {
   // Disables "next" or "prev" buttons if on first or last slide
-  const nextButton = controls.querySelector(".".concat(className, "__controls__next")),
-        prevButton = controls.querySelector(".".concat(className, "__controls__prev"));
+  const nextButton = controls.querySelector(`.${className}__controls__next`),
+        prevButton = controls.querySelector(`.${className}__controls__prev`);
   slider.querySelector('[data-sliderposition="-1"]') ? prevButton.removeAttribute('disabled') : prevButton.setAttribute('disabled', true);
   slider.querySelector('[data-sliderposition="1"]') ? nextButton.removeAttribute('disabled') : nextButton.setAttribute('disabled', true);
   slider.removeAttribute('disabled'); // Responsive slider edge case for when 2 items to allow next arrow to be clicable to allow switch over
@@ -6180,9 +6180,9 @@ function handleNextPrevClick(slider, controls, direction) {
   }
 
   const current = slider.querySelector('[data-sliderposition="0"]'),
-        currentPage = controls.querySelector(".".concat(className, "__indicator__current")),
-        nextButton = controls.querySelector(".".concat(className, "__controls__next")),
-        prevButton = controls.querySelector(".".concat(className, "__controls__prev")); // Next arrow clicked
+        currentPage = controls.querySelector(`.${className}__indicator__current`),
+        nextButton = controls.querySelector(`.${className}__controls__next`),
+        prevButton = controls.querySelector(`.${className}__controls__prev`); // Next arrow clicked
 
   if (direction === 1) {
     const next = current.nextElementSibling;
@@ -6260,7 +6260,7 @@ function prepareSlides(slides, current) {
   slides.forEach((slide, i) => {
     slide.setAttribute('tabindex', -1); // Remove inactive
 
-    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length)); // Accesiblity
+    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, `Slide ${i + 1} of ${slides.length}`); // Accesiblity
 
     slide.classList.add('slide'); // Add slide class of slide
     // 0 = active / first slide
@@ -6410,7 +6410,7 @@ function launchDot(slider) {
   slides.forEach((slide, i) => {
     slide.setAttribute('tabindex', -1); // Remove inactive
 
-    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, "Slide ".concat(i + 1, " of ").concat(slides.length)); // Accesiblity
+    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].label, `Slide ${i + 1} of ${slides.length}`); // Accesiblity
 
     slide.classList.add('slide'); // Add slide class of slide
     // Sets data attributes for slides which controls their position within slide collection
@@ -6434,7 +6434,7 @@ function launchDot(slider) {
       val: i
     }, {
       label: 'aria-label',
-      val: "Open slide ".concat(i + 1)
+      val: `Open slide ${i + 1}`
     }, {
       label: 'type',
       val: 'button'
@@ -6665,7 +6665,7 @@ function launchSlider(slider) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchSlider,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -6706,24 +6706,24 @@ function accordionize(tabs) {
         accordion = document.createElement('div');
   wrapper.className = 'tabs--accordion';
   accordion.className = 'accordion';
-  accordion.id = "accordion".concat(tabs.dataset.assetid);
+  accordion.id = `accordion${tabs.dataset.assetid}`;
   accordion.dataset.allowsingle = 'false';
   accordion.dataset.defaultopen = 'true';
   accordion.dataset.level = tabs.dataset.level;
   accordion.dataset.tabs = tabs.dataset.tabs;
   accordion.dataset.toggleopen = 'true';
-  Array.from(tabs.parentNode.querySelectorAll("#".concat(tabs.id, " > .").concat(panelClassName))).forEach(panel => {
-    const heading = panel.querySelector(".".concat(panelClassName, "__heading")),
-          body = panel.querySelector(".".concat(panelClassName, "__body")),
-          accordionHeading = document.createElement("h".concat(accordion.dataset.level)),
+  Array.from(tabs.parentNode.querySelectorAll(`#${tabs.id} > .${panelClassName}`)).forEach(panel => {
+    const heading = panel.querySelector(`.${panelClassName}__heading`),
+          body = panel.querySelector(`.${panelClassName}__body`),
+          accordionHeading = document.createElement(`h${accordion.dataset.level}`),
           accordionSection = document.createElement('div'),
           accordionWrapper = document.createElement('div');
     accordionHeading.className = 'accordion__heading';
-    accordionHeading.id = "accordion".concat(tabs.dataset.assetid, "-header").concat(panel.dataset.assetid);
+    accordionHeading.id = `accordion${tabs.dataset.assetid}-header${panel.dataset.assetid}`;
     accordionHeading.dataset.tabid = panel.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].labelledBy);
     accordionHeading.innerText = heading.innerText.trim();
     accordionSection.className = 'accordion__body';
-    accordionSection.id = "accordion".concat(tabs.dataset.assetid, "-body").concat(panel.dataset.assetid);
+    accordionSection.id = `accordion${tabs.dataset.assetid}-body${panel.dataset.assetid}`;
     accordionWrapper.className = 'wrapper--accordion__body__content';
     accordionWrapper.innerHTML = body.innerHTML;
     accordionSection.appendChild(accordionWrapper);
@@ -6736,7 +6736,7 @@ function accordionize(tabs) {
 }
 
 function prepareAccordionTabs(tabs) {
-  const controls = tabs.querySelector(".".concat(linksClassName)),
+  const controls = tabs.querySelector(`.${linksClassName}`),
         linkItems = Array.from(controls.querySelectorAll('li')),
         numberOfTabs = Number.parseInt(tabs.dataset.mobiletabs);
 
@@ -6815,8 +6815,8 @@ function toggleButton(button, selected) {
 
 
 function selectTab(newTab) {
-  const tabs = newTab.closest(".".concat(className)),
-        controls = tabs.querySelector(".".concat(linksClassName)),
+  const tabs = newTab.closest(`.${className}`),
+        controls = tabs.querySelector(`.${linksClassName}`),
         linkItems = Array.from(controls.querySelectorAll('li')),
         panels = Array.from(tabs.childNodes).filter(node => node.className && node.className === panelClassName);
   /**
@@ -6867,7 +6867,7 @@ function selectTabEvent(e, newTab) {
 
 
 function keyEvents(e, tabs) {
-  const currentTab = tabs.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].selected, "=\"true\"]")),
+  const currentTab = tabs.querySelector(`[${_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].selected}="true"]`),
         currentTabLI = currentTab.parentNode;
   let newTab = null;
 
@@ -6984,7 +6984,7 @@ function preparePanels(panels) {
 
 
 function launchTabs(tabs) {
-  const controls = tabs.querySelector(".".concat(linksClassName)),
+  const controls = tabs.querySelector(`.${linksClassName}`),
         linkItems = Array.from(controls.querySelectorAll('li')),
         panels = Array.from(tabs.childNodes).filter(node => node.className && node.className === panelClassName);
 
@@ -7040,7 +7040,7 @@ function launchTabs(tabs) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchTabs,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -7169,7 +7169,7 @@ function launchImageCredit(picture) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchImageCredit,
-  launchQuery: "".concat(className)
+  launchQuery: `${className}`
 });
 
 /***/ }),
@@ -7233,7 +7233,7 @@ function copyIconToClipboard(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: copyIconToClipboard,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -7348,7 +7348,7 @@ function launchAutoplayVideo(video) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchAutoplayVideo,
-  launchQuery: ".".concat(className)
+  launchQuery: `.${className}`
 });
 
 /***/ }),
@@ -7659,11 +7659,11 @@ function axiosRequest(config) {
     if (httpOK === response.status) {
       return response.data;
     } else {
-      throw "Bad response: ".concat(response.status);
+      throw `Bad response: ${response.status}`;
     }
   }).catch(e => {
     if (!axios__WEBPACK_IMPORTED_MODULE_3___default.a.isCancel(e)) {
-      gaEvent('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "axiosRequest ".concat(e.fileName, " (").concat(window.location, ")"), true);
+      gaEvent('jsError', 'JavaScript error', `Line ${e.lineNumber} – ${e.message}`, `axiosRequest ${e.fileName} (${window.location})`, true);
     }
   });
 }
@@ -7676,7 +7676,7 @@ function axiosRequest(config) {
 function formatTime(timeString) {
   const time = new Date(timeString);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("time", {
-    dateTime: "".concat(time.getUTCHours() ? time.getUTCHours() : '00', ":").concat(time.getUTCMinutes() ? time.getUTCMinutes() : '00')
+    dateTime: `${time.getUTCHours() ? time.getUTCHours() : '00'}:${time.getUTCMinutes() ? time.getUTCMinutes() : '00'}`
   }, time.getUTCHours() ? time.getUTCHours() : '00', ":", time.getUTCMinutes() ? time.getUTCMinutes() : '00');
 }
 /**
