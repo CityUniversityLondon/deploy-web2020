@@ -33734,6 +33734,9 @@ figure figcaption a:active,
     .infographic .infographic__panel {
         padding: 2rem 1rem;
     }
+    .infographic .infographic__panel.infographic__panel__panel1.background--purple50 {
+        padding-bottom: 0;
+    }
 }
 
 @media (min-width: 768px) {
@@ -33742,7 +33745,7 @@ figure figcaption a:active,
         flex-wrap: wrap;
     }
     .infographic .infographic__panel {
-        flex-basis: 50%;
+        flex: 1;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -33754,12 +33757,20 @@ figure figcaption a:active,
     text-align: center;
 }
 
-.infographic .infographic__panel[data-type='text'].background--blue50 .infographic__description__text__highlight {
+.infographic .infographic__panel.background--blue50 {
+    outline: 0.0625rem solid #0177a0;
+}
+
+.infographic .infographic__panel.background--blue50[data-type='text'] .infographic__description__text__highlight {
     background-color: #832c9e;
     box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
 }
 
-.infographic .infographic__panel[data-type='text'].background--purple50 .infographic__description__text__highlight {
+.infographic .infographic__panel.background--purple50 {
+    outline: 0.0625rem solid #832c9e;
+}
+
+.infographic .infographic__panel.background--purple50[data-type='text'] .infographic__description__text__highlight {
     background-color: #0177a0;
     box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
 }
@@ -33779,17 +33790,21 @@ figure figcaption a:active,
     margin: 0 0.75rem 0 0;
 }
 
-.infographic .infographic__caption .figcaption__source {
+.infographic .infographic__caption {
+    flex-basis: 100%;
+}
+
+.infographic .infographic__caption .infographic__caption__source {
     display: table;
 }
 
-.infographic .infographic__caption .figcaption__source .icon {
+.infographic .infographic__caption .infographic__caption__source .icon {
     display: table-cell;
     padding: 0.25rem 0.25rem 0 0;
     margin: 0.25rem 0.25rem 0 0;
 }
 
-.infographic .infographic__caption .figcaption__source .figcaption__source__link {
+.infographic .infographic__caption .infographic__caption__source .infographic__caption__source__link {
     display: inline;
 }
 
