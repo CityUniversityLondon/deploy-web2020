@@ -4308,7 +4308,7 @@ function prependIcon(anchor, className) {
 
 
 function findExternalLink(anchor) {
-  if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && !anchor.parentElement.className.includes('cta-like-anchor') && anchor.className !== 'social-icon' && !anchor.className.includes('cta') && !anchor.parentElement.className.includes('cta-block') && !anchor.parentElement.className.includes('sc-content__heading') && !anchor.parentElement.className.includes('card') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.href.indexOf('javascript:') !== 0 && anchor.origin) {
+  if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && !anchor.parentElement.className.includes('cta-like-anchor') && anchor.className !== 'social-icon' && !anchor.className.includes('cta') && !anchor.parentElement.className.includes('cta-block') && !anchor.parentElement.className.includes('sc-content__link') && !anchor.parentElement.className.includes('card') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.href.indexOf('javascript:') !== 0 && anchor.origin) {
     let node = document.createElement('span');
     node.className = 'far fa-external-link inline-external-link';
     node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].label, '(external link)');
