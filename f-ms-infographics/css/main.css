@@ -33795,11 +33795,10 @@ figure figcaption a:active,
 }
 
 .infographic .infographic__caption .infographic__caption__source {
-    display: table;
+    display: flex;
 }
 
 .infographic .infographic__caption .infographic__caption__source .icon {
-    display: table-cell;
     padding: 0.25rem 0.25rem 0 0;
     margin: 0.25rem 0.25rem 0 0;
 }
