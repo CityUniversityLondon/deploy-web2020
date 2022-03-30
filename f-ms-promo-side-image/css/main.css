@@ -22079,6 +22079,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     min-width: 1.5rem;
 }
 
+@media (max-width: 767px) {
+    .background--blue50 {
+        background-color: #0177a0;
+    }
+}
+
 @media (min-width: 768px) {
     .background--blue50 figure {
         margin-top: 0;
@@ -22107,13 +22113,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--blue50 a,
 .background--blue50 .card__side-image__text {
     color: #ffffff;
     background-color: #0177a0;
 }
 
-.background--blue50 a {
+.background--blue50 a:link {
+    color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
@@ -22124,6 +22130,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .background--blue70 {
+        background-color: #213d50;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22154,13 +22166,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--blue70 a,
 .background--blue70 .card__side-image__text {
     color: #ffffff;
     background-color: #213d50;
 }
 
-.background--blue70 a {
+.background--blue70 a:link {
+    color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
@@ -22171,6 +22183,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .background--blue90 {
+        background-color: #00294a;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22201,13 +22219,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--blue90 a,
 .background--blue90 .card__side-image__text {
     color: #ffffff;
     background-color: #00294a;
 }
 
-.background--blue90 a {
+.background--blue90 a:link {
+    color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
@@ -22218,6 +22236,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .background--brown40 {
+        background-color: #bab4b2;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22248,13 +22272,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--brown40 a,
 .background--brown40 .card__side-image__text {
     color: #1e1e1e;
     background-color: #bab4b2;
 }
 
-.background--brown40 a {
+.background--brown40 a:link {
+    color: #1e1e1e;
     border-bottom-color: #1e1e1e;
     background-image: none;
 }
@@ -22265,6 +22289,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #1e1e1e;
     outline-color: #1e1e1e;
+}
+
+@media (max-width: 767px) {
+    .background--green50 {
+        background-color: #6c953c;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22295,13 +22325,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--green50 a,
 .background--green50 .card__side-image__text {
     color: #1e1e1e;
     background-color: #6c953c;
 }
 
-.background--green50 a {
+.background--green50 a:link {
+    color: #1e1e1e;
     border-bottom-color: #1e1e1e;
     background-image: none;
 }
@@ -22312,6 +22342,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #1e1e1e;
     outline-color: #1e1e1e;
+}
+
+@media (max-width: 767px) {
+    .background--orange50 {
+        background-color: #f25d21;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22342,13 +22378,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--orange50 a,
 .background--orange50 .card__side-image__text {
     color: #1e1e1e;
     background-color: #f25d21;
 }
 
-.background--orange50 a {
+.background--orange50 a:link {
+    color: #1e1e1e;
     border-bottom-color: #1e1e1e;
     background-image: none;
 }
@@ -22359,6 +22395,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #1e1e1e;
     outline-color: #1e1e1e;
+}
+
+@media (max-width: 767px) {
+    .background--orange80 {
+        background-color: #65322f;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22389,13 +22431,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--orange80 a,
 .background--orange80 .card__side-image__text {
     color: #ffffff;
     background-color: #65322f;
 }
 
-.background--orange80 a {
+.background--orange80 a:link {
+    color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
@@ -22406,6 +22448,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .background--pink90 {
+        background-color: #3e1031;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22436,13 +22484,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--pink90 a,
 .background--pink90 .card__side-image__text {
     color: #ffffff;
     background-color: #3e1031;
 }
 
-.background--pink90 a {
+.background--pink90 a:link {
+    color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
@@ -22453,6 +22501,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .background--purewhite {
+        background-color: #ffffff;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22483,13 +22537,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--purewhite a,
 .background--purewhite .card__side-image__text {
     color: #1e1e1e;
     background-color: #ffffff;
 }
 
-.background--purewhite a {
+.background--purewhite a:link {
+    color: #1e1e1e;
     border-bottom-color: #1e1e1e;
     background-image: none;
 }
@@ -22500,6 +22554,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #1e1e1e;
     outline-color: #1e1e1e;
+}
+
+@media (max-width: 767px) {
+    .background--purple50 {
+        background-color: #832c9e;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22530,13 +22590,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--purple50 a,
 .background--purple50 .card__side-image__text {
     color: #ffffff;
     background-color: #832c9e;
 }
 
-.background--purple50 a {
+.background--purple50 a:link {
+    color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
@@ -22547,6 +22607,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .background--purple80 {
+        background-color: #3f1464;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22577,13 +22643,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--purple80 a,
 .background--purple80 .card__side-image__text {
     color: #ffffff;
     background-color: #3f1464;
 }
 
-.background--purple80 a {
+.background--purple80 a:link {
+    color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
@@ -22594,6 +22660,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .background--red50 {
+        background-color: #d61726;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22624,13 +22696,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--red50 a,
 .background--red50 .card__side-image__text {
     color: #ffffff;
     background-color: #d61726;
 }
 
-.background--red50 a {
+.background--red50 a:link {
+    color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
@@ -22641,6 +22713,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .background--teal90 {
+        background-color: #00393f;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22671,13 +22749,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--teal90 a,
 .background--teal90 .card__side-image__text {
     color: #ffffff;
     background-color: #00393f;
 }
 
-.background--teal90 a {
+.background--teal90 a:link {
+    color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
@@ -22688,6 +22766,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .background--yellow20 {
+        background-color: #ffef2b;
+    }
 }
 
 @media (min-width: 768px) {
@@ -22718,13 +22802,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.background--yellow20 a,
 .background--yellow20 .card__side-image__text {
     color: #1e1e1e;
     background-color: #ffef2b;
 }
 
-.background--yellow20 a {
+.background--yellow20 a:link {
+    color: #1e1e1e;
     border-bottom-color: #1e1e1e;
     background-image: none;
 }
@@ -22738,7 +22822,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card__side-image {
-    background: #ffffff;
     display: flex;
     flex-direction: column;
 }
@@ -22755,6 +22838,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 @media (min-width: 768px) {
     .card__side-image {
+        background: #ffffff;
         flex-direction: row;
     }
 }
@@ -22764,6 +22848,14 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     flex-basis: 50%;
     overflow: hidden;
     position: relative;
+}
+
+@media (max-width: 767px) {
+    .card__side-image figure {
+        margin-top: -3rem;
+        background: none;
+        text-align: right;
+    }
 }
 
 .card__side-image figure img {

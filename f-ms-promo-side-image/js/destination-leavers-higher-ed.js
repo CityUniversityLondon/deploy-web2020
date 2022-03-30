@@ -570,7 +570,7 @@ function Finder__Filters(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "far fa-sliders-h icon",
     "aria-hidden": "true"
-  }), ' ', "Filter ".concat(props.config.summariseAs.plural)), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }), ' ', `Filter ${props.config.summariseAs.plural}`), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "wrapper--finder_filters--filters"
   }, props.config.facetLabels.map(facet => {
     if (dependencyMet(facet, props.query.facets)) {
@@ -697,18 +697,18 @@ function Finder__Select(props) {
 
   if (props.facet.values.length > hiddenFacets) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-      className: "finder__filter finder__select ".concat(currentValue && 'finder__select--selected')
+      className: `finder__filter finder__select ${currentValue && 'finder__select--selected'}`
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
-      htmlFor: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
+      htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
     }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("select", {
       name: props.facet.name,
-      id: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber),
+      id: `meta_${props.facet.meta}_sand--${randomNumber}`,
       onChange: e => setFacet(e.target.value),
       value: currentValue
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("option", {
       value: "",
-      id: "meta".concat(props.facet.meta, "all"),
-      name: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
+      id: `meta${props.facet.meta}all`,
+      name: `meta_${props.facet.meta}_sand--${randomNumber}`
     }, props.facet.noSelection), props.facet.values.map((value, i) => {
       const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.toLowerCase());
 
@@ -802,13 +802,13 @@ function Finder__Chart(props) {
     let arc = 2 * Math.PI * value;
     let largeAngle = arc > Math.PI ? 1 : 0;
     let sweep = 1;
-    let key = "".concat(props.title).concat(row[0].replace(/\s+/g, '')).concat(row[1]).concat(props.chartId);
+    let key = `${props.title}${row[0].replace(/\s+/g, '')}${row[1]}${props.chartId}`;
     let x0 = 100 * Math.sin(arcAcc);
     let y0 = -100 * Math.cos(arcAcc);
     arcAcc += arc;
     let x1 = 100 * Math.sin(arcAcc);
     let y1 = -100 * Math.cos(arcAcc);
-    let d = "M ".concat(x0, " ").concat(y0, " A 100 100  0 ").concat(largeAngle, " ").concat(sweep, " ").concat(x1, " ").concat(y1); // If not single segment, build segments proportionately
+    let d = `M ${x0} ${y0} A 100 100  0 ${largeAngle} ${sweep} ${x1} ${y1}`; // If not single segment, build segments proportionately
 
     if (!(firstSegmentFull || secondSegmentFull) && i < 7) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("path", {
@@ -860,8 +860,8 @@ function Finder__Chart(props) {
 
   let legend = data.map(function (e, i) {
     let val = Math.round((e[1] + Number.EPSILON) * 100) / 100;
-    let text = "".concat(e[0], ": ").concat(Math.round((100 * val / sum + Number.EPSILON) * 100) / 100, "%");
-    let randomNum = "legend-".concat(props.title).concat(e[0].replace(/\s+/g, '')).concat(e[1]).concat(props.chartId);
+    let text = `${e[0]}: ${Math.round((100 * val / sum + Number.EPSILON) * 100) / 100}%`;
+    let randomNum = `legend-${props.title}${e[0].replace(/\s+/g, '')}${e[1]}${props.chartId}`;
 
     if (i === 7) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
@@ -1047,7 +1047,7 @@ function Finder__Results__Generic(props) {
   }, props.details.metaData.c && props.details.metaData.c)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "chart-row chart-row--columns"
   }, data.map((c, i) => {
-    let k = "".concat(c[0].title).concat(i).concat(c[0].id);
+    let k = `${c[0].title}${i}${c[0].id}`;
     let chartsLength = data.length === 1 ? true : false;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_chart__WEBPACK_IMPORTED_MODULE_3__["default"], {
       key: k,
@@ -1246,7 +1246,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Finder__Results(props) {
-  const resultsClass = 'resultsVariant' in props.config ? "finder__results__list finder__results__list--".concat(props.config.resultsVariant) : 'finder__results__list';
+  const resultsClass = 'resultsVariant' in props.config ? `finder__results__list finder__results__list--${props.config.resultsVariant}` : 'finder__results__list';
 
   if (props.response && props.query.facets.level && props.query.facets.t) {
     const results = props.response.bestBets.length > 0 || props.response.results.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1403,8 +1403,8 @@ function getFacetParams(facets, params) {
   return facets.map(facet => {
     const param = {};
 
-    if (params.get("meta_".concat(facet.meta, "_sand"))) {
-      param[facet.meta] = params.get("meta_".concat(facet.meta, "_sand"));
+    if (params.get(`meta_${facet.meta}_sand`)) {
+      param[facet.meta] = params.get(`meta_${facet.meta}_sand`);
     }
 
     return param;
@@ -1428,13 +1428,13 @@ function replaceHistory(currQuery, currStartRank, currFacets, currSort, facetLab
     currSort !== defaultSort && currSort !== '' ? params.set('sort', currSort) : params.delete('sort');
     facetLabels.forEach(facet => {
       if (currFacets[facet.meta]) {
-        params.set("meta_".concat(facet.meta, "_sand"), currFacets[facet.meta]);
+        params.set(`meta_${facet.meta}_sand`, currFacets[facet.meta]);
       } else {
-        params.delete("meta_".concat(facet.meta, "_sand"));
+        params.delete(`meta_${facet.meta}_sand`);
       }
     });
     const hasParams = params.toString().length ? '?' : '';
-    window.history.replaceState({}, '', "".concat(window.location.pathname).concat(hasParams).concat(params.toString()));
+    window.history.replaceState({}, '', `${window.location.pathname}${hasParams}${params.toString()}`);
   }
 }
 /**
@@ -1656,8 +1656,8 @@ function Finder__Checkbox(props) {
       className: "finder__filter finder__checkbox"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
       type: "checkbox",
-      id: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber),
-      name: "meta_".concat(props.facet.meta, "_sand"),
+      id: `meta_${props.facet.meta}_sand--${randomNumber}`,
+      name: `meta_${props.facet.meta}_sand`,
       value: props.facet.checkedValue,
       onChange: () => toggleFacet(),
       checked: toggleChecked
@@ -1669,7 +1669,7 @@ function Finder__Checkbox(props) {
       className: "fa fa-fw fas fa-check icon"
     }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
       className: "finder__filters__label--always",
-      htmlFor: "meta_".concat(props.facet.meta, "_sand--").concat(randomNumber)
+      htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
     }, props.facet.name, !toggleChecked && responseFacetValue && ' (' + responseFacetValue[0].count + ')'));
   } else {
     return null;
@@ -1788,13 +1788,13 @@ function Finder__Sort(props) {
 
   const validSorts = props.config.sort.filter(sortType => sortType.type === '' ? props.query.query !== '' || Object.keys(props.query.facets).length > 0 || props.query.sortType === '' ? true : false : true);
   return validSorts.length > 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "finder__select--sort finder__select".concat(props.query.sortType !== props.config.sort[0].type ? ' finder__select--selected' : '')
+    className: `finder__select--sort finder__select${props.query.sortType !== props.config.sort[0].type ? ' finder__select--selected' : ''}`
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     className: "finder__select__overline",
-    htmlFor: "sort--".concat(randomNumber)
+    htmlFor: `sort--${randomNumber}`
   }, "Sort by"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("select", {
     name: "sort",
-    id: "sort--".concat(randomNumber),
+    id: `sort--${randomNumber}`,
     onChange: e => setSort(e.target.value),
     value: props.query.sortType
   }, validSorts.map((sortType, i) => {
@@ -1934,15 +1934,15 @@ const baseUrl = 'https://www.city.ac.uk/web-services',
 function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, events) {
   const fixedParams = {};
   fixedParameters.forEach(param => {
-    fixedParams["".concat(param.name)] = param.value;
+    fixedParams[`${param.name}`] = param.value;
   });
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
-    fixedFacetParams["meta_".concat(facet.meta, "_sand")] = facet.value;
+    fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value;
   });
   const facetParams = {},
         facetKeys = Object.keys(facets);
-  facetKeys.forEach(key => facetParams["meta_".concat(key, "_sand")] = facets[key]);
+  facetKeys.forEach(key => facetParams[`meta_${key}_sand`] = facets[key]);
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
@@ -2312,11 +2312,11 @@ function axiosRequest(config) {
     if (httpOK === response.status) {
       return response.data;
     } else {
-      throw "Bad response: ".concat(response.status);
+      throw `Bad response: ${response.status}`;
     }
   }).catch(e => {
     if (!axios__WEBPACK_IMPORTED_MODULE_3___default.a.isCancel(e)) {
-      gaEvent('jsError', 'JavaScript error', "Line ".concat(e.lineNumber, " \u2013 ").concat(e.message), "axiosRequest ".concat(e.fileName, " (").concat(window.location, ")"), true);
+      gaEvent('jsError', 'JavaScript error', `Line ${e.lineNumber} – ${e.message}`, `axiosRequest ${e.fileName} (${window.location})`, true);
     }
   });
 }
