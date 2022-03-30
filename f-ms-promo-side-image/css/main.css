@@ -22109,7 +22109,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--blue50 figure {
         background-color: #0177a0;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22162,7 +22162,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--blue70 figure {
         background-color: #213d50;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22215,7 +22215,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--blue90 figure {
         background-color: #00294a;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22268,7 +22268,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--brown40 figure {
         background-color: #bab4b2;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22321,7 +22321,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--green50 figure {
         background-color: #6c953c;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22374,7 +22374,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--orange50 figure {
         background-color: #f25d21;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22427,7 +22427,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--orange80 figure {
         background-color: #65322f;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22480,7 +22480,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--pink90 figure {
         background-color: #3e1031;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22533,7 +22533,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--purewhite figure {
         background-color: #ffffff;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22586,7 +22586,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--purple50 figure {
         background-color: #832c9e;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22639,7 +22639,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--purple80 figure {
         background-color: #3f1464;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22692,7 +22692,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--red50 figure {
         background-color: #d61726;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22745,7 +22745,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--teal90 figure {
         background-color: #00393f;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22798,7 +22798,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .background--yellow20 figure {
         background-color: #ffef2b;
-        padding: 1.5rem 1.5rem 0;
+        padding: 1.5rem 0 0;
     }
 }
 
@@ -22833,7 +22833,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card__side-image .card__side-image__text {
-    padding: 1.5rem;
+    padding: 0 1.5rem 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -22855,6 +22855,16 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
         margin-top: -3rem;
         background: none;
         text-align: right;
+    }
+    .card__side-image figure img {
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 431px) {
+    .card__side-image figure img {
+        max-width: 100%;
+        padding-left: 1.5rem;
     }
 }
 
