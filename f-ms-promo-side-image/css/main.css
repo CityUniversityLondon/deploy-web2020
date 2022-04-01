@@ -22089,16 +22089,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--blue50 figure:after {
         background-color: #0177a0;
     }
-    .background--blue50 .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--blue50 figure {
         background-color: #0177a0;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22131,16 +22126,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--blue70 figure:after {
         background-color: #213d50;
     }
-    .background--blue70 .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--blue70 figure {
         background-color: #213d50;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22173,16 +22163,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--blue90 figure:after {
         background-color: #00294a;
     }
-    .background--blue90 .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--blue90 figure {
         background-color: #00294a;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22215,16 +22200,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--brown40 figure:after {
         background-color: #bab4b2;
     }
-    .background--brown40 .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--brown40 figure {
         background-color: #bab4b2;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22257,16 +22237,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--green50 figure:after {
         background-color: #6c953c;
     }
-    .background--green50 .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--green50 figure {
         background-color: #6c953c;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22299,16 +22274,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--orange50 figure:after {
         background-color: #f25d21;
     }
-    .background--orange50 .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--orange50 figure {
         background-color: #f25d21;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22341,16 +22311,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--orange80 figure:after {
         background-color: #65322f;
     }
-    .background--orange80 .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--orange80 figure {
         background-color: #65322f;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22383,16 +22348,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--pink90 figure:after {
         background-color: #3e1031;
     }
-    .background--pink90 .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--pink90 figure {
         background-color: #3e1031;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22425,16 +22385,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--purewhite figure:after {
         background-color: #ffffff;
     }
-    .background--purewhite .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--purewhite figure {
         background-color: #ffffff;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22467,16 +22422,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--purple50 figure:after {
         background-color: #832c9e;
     }
-    .background--purple50 .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--purple50 figure {
         background-color: #832c9e;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22509,16 +22459,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--purple80 figure:after {
         background-color: #3f1464;
     }
-    .background--purple80 .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--purple80 figure {
         background-color: #3f1464;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22551,16 +22496,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--red50 figure:after {
         background-color: #d61726;
     }
-    .background--red50 .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--red50 figure {
         background-color: #d61726;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22593,16 +22533,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--teal90 figure:after {
         background-color: #00393f;
     }
-    .background--teal90 .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--teal90 figure {
         background-color: #00393f;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22635,16 +22570,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .background--yellow20 figure:after {
         background-color: #ffef2b;
     }
-    .background--yellow20 .card__side-image__text {
-        margin-top: 2rem;
-        padding-top: 2rem;
-    }
 }
 
 @media (max-width: 767px) {
     .background--yellow20 figure {
         background-color: #ffef2b;
-        padding: 1rem 0 0;
     }
 }
 
@@ -22669,20 +22599,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 .card__side-image {
     display: flex;
-    flex-direction: column;
-}
-
-.card__side-image.background--purewhite {
-    margin-top: 0;
+    margin-top: 0.75rem;
 }
 
 @media (min-width: 768px) {
     .card__side-image {
         background: #ffffff;
-        flex-direction: row;
-    }
-    .card__side-image[data-image-position='left'] figure {
-        text-align: left;
     }
     .card__side-image[data-image-position='left'] figure:after {
         left: 0;
@@ -22690,18 +22612,22 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .card__side-image[data-image-position='right'] {
         flex-direction: row-reverse;
     }
-    .card__side-image[data-image-position='right'] figure {
-        text-align: right;
-    }
     .card__side-image[data-image-position='right'] figure:after {
         right: 2rem;
     }
     .card__side-image figure {
         padding: 0 0 2rem 0;
     }
+    .card__side-image .card__side-image__text {
+        margin-top: 2rem;
+        padding-top: 2rem;
+    }
 }
 
 @media (max-width: 767px) {
+    .card__side-image {
+        flex-direction: column;
+    }
     .card__side-image figure {
         padding: 1.5rem 0 0;
     }
@@ -22714,7 +22640,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
         max-width: 50%;
     }
     .card__side-image.background--purewhite {
-        padding: 0;
+        padding: 0.75rem 0 0;
+        margin-top: 0;
     }
     .card__side-image.background--purewhite .card__side-image__text {
         padding: 0;
@@ -22732,9 +22659,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (max-width: 431px) {
-    .card__side-image figure {
-        padding: 2rem 0 0;
-    }
     .card__side-image figure[data-image-position='right'] {
         margin-right: 0;
     }
@@ -22753,7 +22677,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     margin-left: 2rem;
     position: absolute;
     width: 100%;
-    z-index: 0;
 }
 
 .card__side-image figure:after picture:after {
@@ -22767,7 +22690,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card__side-image figure {
-    align-self: stretch;
     flex-basis: 50%;
     overflow: hidden;
     position: relative;
@@ -22776,7 +22698,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image figure img {
     z-index: 1;
     position: relative;
-    margin-left: 0;
 }
 
 .card__side-image .card__side-image__text {
