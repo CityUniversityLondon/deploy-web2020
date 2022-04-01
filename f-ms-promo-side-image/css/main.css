@@ -22086,19 +22086,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--blue50 figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--blue50 figure:after {
         background-color: #0177a0;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--blue50 .card__side-image__text {
         margin-top: 2rem;
@@ -22139,19 +22128,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--blue70 figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--blue70 figure:after {
         background-color: #213d50;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--blue70 .card__side-image__text {
         margin-top: 2rem;
@@ -22192,19 +22170,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--blue90 figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--blue90 figure:after {
         background-color: #00294a;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--blue90 .card__side-image__text {
         margin-top: 2rem;
@@ -22245,19 +22212,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--brown40 figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--brown40 figure:after {
         background-color: #bab4b2;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--brown40 .card__side-image__text {
         margin-top: 2rem;
@@ -22298,19 +22254,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--green50 figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--green50 figure:after {
         background-color: #6c953c;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--green50 .card__side-image__text {
         margin-top: 2rem;
@@ -22351,19 +22296,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--orange50 figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--orange50 figure:after {
         background-color: #f25d21;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--orange50 .card__side-image__text {
         margin-top: 2rem;
@@ -22404,19 +22338,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--orange80 figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--orange80 figure:after {
         background-color: #65322f;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--orange80 .card__side-image__text {
         margin-top: 2rem;
@@ -22457,19 +22380,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--pink90 figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--pink90 figure:after {
         background-color: #3e1031;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--pink90 .card__side-image__text {
         margin-top: 2rem;
@@ -22510,19 +22422,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--purewhite figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--purewhite figure:after {
         background-color: #ffffff;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--purewhite .card__side-image__text {
         margin-top: 2rem;
@@ -22563,19 +22464,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--purple50 figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--purple50 figure:after {
         background-color: #832c9e;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--purple50 .card__side-image__text {
         margin-top: 2rem;
@@ -22616,19 +22506,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--purple80 figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--purple80 figure:after {
         background-color: #3f1464;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--purple80 .card__side-image__text {
         margin-top: 2rem;
@@ -22669,19 +22548,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--red50 figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--red50 figure:after {
         background-color: #d61726;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--red50 .card__side-image__text {
         margin-top: 2rem;
@@ -22722,19 +22590,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--teal90 figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--teal90 figure:after {
         background-color: #00393f;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--teal90 .card__side-image__text {
         margin-top: 2rem;
@@ -22775,19 +22632,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (min-width: 768px) {
-    .background--yellow20 figure {
-        margin-top: 0;
-        padding-bottom: 2rem;
-    }
     .background--yellow20 figure:after {
         background-color: #ffef2b;
-        content: '';
-        height: 100%;
-        left: 0;
-        margin-left: 2rem;
-        position: absolute;
-        width: 100%;
-        z-index: 0;
     }
     .background--yellow20 .card__side-image__text {
         margin-top: 2rem;
@@ -22830,9 +22676,39 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     margin-top: 0;
 }
 
+@media (min-width: 768px) {
+    .card__side-image {
+        background: #ffffff;
+        flex-direction: row;
+    }
+    .card__side-image[data-image-position='left'] figure {
+        text-align: left;
+    }
+    .card__side-image[data-image-position='left'] figure:after {
+        left: 0;
+    }
+    .card__side-image[data-image-position='right'] {
+        flex-direction: row-reverse;
+    }
+    .card__side-image[data-image-position='right'] figure {
+        text-align: right;
+    }
+    .card__side-image[data-image-position='right'] figure:after {
+        right: 2rem;
+    }
+    .card__side-image figure {
+        padding: 0 0 2rem 0;
+    }
+}
+
 @media (max-width: 767px) {
     .card__side-image figure {
         padding: 1.5rem 0 0;
+    }
+    .card__side-image figure[data-image-position='right'] {
+        flex-direction: row-reverse;
+        text-align: right;
+        margin-right: 1rem;
     }
     .card__side-image figure img {
         max-width: 50%;
@@ -22849,7 +22725,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .card__side-image:not(.background--purewhite) figure {
         margin-top: -3rem;
         background: none;
-        text-align: right;
     }
     .card__side-image:not(.background--purewhite) figure img {
         padding-left: 1rem;
@@ -22860,12 +22735,28 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .card__side-image figure {
         padding: 2rem 0 0;
     }
+    .card__side-image figure[data-image-position='right'] {
+        margin-right: 0;
+    }
     .card__side-image figure img {
         max-width: 100%;
     }
 }
 
-.card__side-image figure picture:after {
+.card__side-image figure {
+    margin-top: 0;
+}
+
+.card__side-image figure:after {
+    content: '';
+    height: 100%;
+    margin-left: 2rem;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+
+.card__side-image figure:after picture:after {
     margin-left: 0;
     margin-top: 1.75rem;
     top: 0;
@@ -22873,13 +22764,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 .card__side-image .card__side-image__text {
     padding: 0 1rem 1rem;
-}
-
-@media (min-width: 768px) {
-    .card__side-image {
-        background: #ffffff;
-        flex-direction: row;
-    }
 }
 
 .card__side-image figure {
