@@ -22116,6 +22116,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
+.background--blue50 img {
+    margin-bottom: calc( -0.125rem);
+}
+
 @media (max-width: 767px) {
     .background--blue70 {
         background-color: #213d50;
@@ -22151,6 +22155,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
+}
+
+.background--blue70 img {
+    margin-bottom: calc( -0.125rem);
 }
 
 @media (max-width: 767px) {
@@ -22190,6 +22198,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
+.background--blue90 img {
+    margin-bottom: calc( -0.125rem);
+}
+
 @media (max-width: 767px) {
     .background--brown40 {
         background-color: #bab4b2;
@@ -22225,6 +22237,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #1e1e1e;
     outline-color: #1e1e1e;
+}
+
+.background--brown40 img {
+    margin-bottom: calc( -0.125rem);
 }
 
 @media (max-width: 767px) {
@@ -22264,6 +22280,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #1e1e1e;
 }
 
+.background--green50 img {
+    margin-bottom: calc( -0.125rem);
+}
+
 @media (max-width: 767px) {
     .background--orange50 {
         background-color: #f25d21;
@@ -22299,6 +22319,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #1e1e1e;
     outline-color: #1e1e1e;
+}
+
+.background--orange50 img {
+    margin-bottom: calc( -0.125rem);
 }
 
 @media (max-width: 767px) {
@@ -22338,6 +22362,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
+.background--orange80 img {
+    margin-bottom: calc( -0.125rem);
+}
+
 @media (max-width: 767px) {
     .background--pink90 {
         background-color: #3e1031;
@@ -22373,6 +22401,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
+}
+
+.background--pink90 img {
+    margin-bottom: calc( -0.125rem);
 }
 
 @media (max-width: 767px) {
@@ -22412,6 +22444,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #1e1e1e;
 }
 
+.background--purewhite img {
+    margin-bottom: calc( -0.125rem);
+}
+
 @media (max-width: 767px) {
     .background--purple50 {
         background-color: #832c9e;
@@ -22447,6 +22483,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
+}
+
+.background--purple50 img {
+    margin-bottom: calc( -0.125rem);
 }
 
 @media (max-width: 767px) {
@@ -22486,6 +22526,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
+.background--purple80 img {
+    margin-bottom: calc( -0.125rem);
+}
+
 @media (max-width: 767px) {
     .background--red50 {
         background-color: #d61726;
@@ -22521,6 +22565,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
+}
+
+.background--red50 img {
+    margin-bottom: calc( -0.125rem);
 }
 
 @media (max-width: 767px) {
@@ -22560,6 +22608,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     outline-color: #ffffff;
 }
 
+.background--teal90 img {
+    margin-bottom: calc( -0.125rem);
+}
+
 @media (max-width: 767px) {
     .background--yellow20 {
         background-color: #ffef2b;
@@ -22595,6 +22647,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-image: none;
     border-bottom-color: #1e1e1e;
     outline-color: #1e1e1e;
+}
+
+.background--yellow20 img {
+    margin-bottom: calc( -0.125rem);
 }
 
 .card__side-image {
