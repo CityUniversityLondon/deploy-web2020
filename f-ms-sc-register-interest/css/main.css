@@ -70344,13 +70344,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-mobile-only] {
-    display: none;
-}
-
-@media (max-width: 899px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-mobile-only] {
-        display: grid;
-    }
+    display: grid;
 }
 
 .lifelong-learning .lifelong-learning__introduction {
