@@ -70337,12 +70337,16 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     color: #ffffff;
 }
 
-.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-mobile-only='yes'] {
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-onload-mobile-only='false'] {
+    display: grid;
+}
+
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-onload-mobile-only='true'] {
     display: none;
 }
 
 @media (max-width: 899px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-mobile-only='yes'] {
+    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-onload-mobile-only='true'] {
         display: grid;
     }
 }
