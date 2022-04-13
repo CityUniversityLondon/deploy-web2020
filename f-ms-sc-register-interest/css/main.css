@@ -70337,18 +70337,12 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     color: #ffffff;
 }
 
-@media (max-width: 899px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-desktop-only] {
-        display: none;
-    }
-}
-
-.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-mobile-only] {
+.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-mobile-only='yes'] {
     display: none;
 }
 
 @media (max-width: 899px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-mobile-only] {
+    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-mobile-only='yes'] {
         display: grid;
     }
 }
