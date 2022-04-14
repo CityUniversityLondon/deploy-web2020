@@ -22656,7 +22656,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image {
     display: flex;
     margin-top: 0.75rem;
-    min-width: 50%;
 }
 
 @media (min-width: 768px) {
@@ -22679,9 +22678,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
     .card__side-image:not(.background--purewhite) .card__side-image__text {
         margin-top: 2rem;
-    }
-    .card__side-image .card__side-image__text {
-        padding-top: 2rem;
     }
 }
 
@@ -22747,6 +22743,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card__side-image .card__side-image__text {
+    min-width: 50%;
     padding: 0 1rem 1rem;
 }
 
