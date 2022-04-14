@@ -22656,6 +22656,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image {
     display: flex;
     margin-top: 0.75rem;
+    min-width: 50%;
 }
 
 @media (min-width: 768px) {
