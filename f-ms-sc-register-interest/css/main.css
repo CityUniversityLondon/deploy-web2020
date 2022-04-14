@@ -70231,124 +70231,70 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     grid-column: 1/-1;
 }
 
-.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
-    grid-template-columns: repeat(18, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-}
-
-@media (min-width: 768px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-@media (max-width: 899px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
-        grid-template-columns: repeat(24, 1fr);
-        grid-column-gap: 0;
-        display: grid;
-        margin-top: 1rem;
-        display: none;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 768px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (max-width: 899px) and (min-width: 901px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest {
+.lifelong-learning .key-information--lifelong-learning__register-interest {
     grid-column: 1/-1;
 }
 
 @media (min-width: 1024px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest {
+    .lifelong-learning .key-information--lifelong-learning__register-interest {
         grid-column: 7/-2;
     }
 }
 
 @media (min-width: 900px) and (max-width: 1023px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest {
+    .lifelong-learning .key-information--lifelong-learning__register-interest {
         grid-column: 9/-2;
     }
 }
 
 @media (min-width: 768px) and (max-width: 899px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest {
+    .lifelong-learning .key-information--lifelong-learning__register-interest {
         grid-column: 11/-2;
     }
 }
 
 @media (min-width: 432px) and (max-width: 767px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest {
+    .lifelong-learning .key-information--lifelong-learning__register-interest {
         grid-column: 2/-2;
     }
 }
 
 @media (min-width: 432px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest {
+    .lifelong-learning .key-information--lifelong-learning__register-interest {
         display: flex;
         justify-content: flex-end;
     }
 }
 
-.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest p {
+.lifelong-learning .key-information--lifelong-learning__register-interest p {
     margin: auto 1rem;
 }
 
 @media (max-width: 431px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest p {
+    .lifelong-learning .key-information--lifelong-learning__register-interest p {
         text-align: center;
         margin: 1rem 0 1rem;
     }
 }
 
-.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta {
+.lifelong-learning .key-information--lifelong-learning__register-interest .cta-block__cta {
     margin-top: 0;
 }
 
 @media (max-width: 431px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta {
+    .lifelong-learning .key-information--lifelong-learning__register-interest .cta-block__cta {
         margin: 0 1rem;
     }
 }
 
-.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a {
+.lifelong-learning .key-information--lifelong-learning__register-interest .cta-block__cta a {
     border: 0.125rem solid #3e1031;
     color: #3e1031;
 }
 
-.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:hover {
+.lifelong-learning .key-information--lifelong-learning__register-interest .cta-block__cta a:hover {
     background: #3e1031;
     color: #ffffff;
-}
-
-.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-onload-mobile-only='false'] {
-    display: grid;
-}
-
-.lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-onload-mobile-only='true'] {
-    display: none;
-}
-
-@media (max-width: 899px) {
-    .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-onload-mobile-only='true'] {
-        display: grid;
-    }
 }
 
 .lifelong-learning .lifelong-learning__introduction {
@@ -71612,6 +71558,60 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 @media screen and (min-width: 1024px) and (min-width: 901px) {
     .js main > .navigation--secondary + .lifelong-learning .lifelong-learning__content .tabs__panel:not([hidden]) > .tabs__panel__content {
         grid-column-gap: 1.5rem;
+    }
+}
+
+.js .wrapper--key-information--lifelong-learning__register-interest {
+    grid-template-columns: repeat(18, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .js .wrapper--key-information--lifelong-learning__register-interest {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .js .wrapper--key-information--lifelong-learning__register-interest {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (max-width: 899px) {
+    .js .wrapper--key-information--lifelong-learning__register-interest {
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+        margin-top: 1rem;
+        display: none;
+    }
+}
+
+@media (max-width: 899px) and (min-width: 768px) {
+    .js .wrapper--key-information--lifelong-learning__register-interest {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (max-width: 899px) and (min-width: 901px) {
+    .js .wrapper--key-information--lifelong-learning__register-interest {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.js .wrapper--key-information--lifelong-learning__register-interest[data-onload-mobile-only='false'] {
+    display: grid;
+}
+
+.js .wrapper--key-information--lifelong-learning__register-interest[data-onload-mobile-only='true'] {
+    display: none;
+}
+
+@media (max-width: 899px) {
+    .js .wrapper--key-information--lifelong-learning__register-interest[data-onload-mobile-only='true'] {
+        display: grid;
     }
 }
 
