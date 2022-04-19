@@ -72424,6 +72424,31 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     grid-column: 4/-4;
 }
 
+@media (min-width: 900px) {
+    .no-js .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1023px) {
+    .no-js .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
+        grid-template-columns: repeat(24, 1fr);
+        grid-column-gap: 0;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1023px) and (min-width: 768px) {
+    .no-js .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1023px) and (min-width: 901px) {
+    .no-js .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
+        grid-column-gap: 1.5rem;
+    }
+}
+
 @media (min-width: 768px) {
     .no-js .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-onload-mobile-only='true'] {
         display: grid;
