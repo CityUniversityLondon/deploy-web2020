@@ -4020,6 +4020,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * Short courses/CPD key information
  *
@@ -4027,7 +4028,6 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2020
  */
-
 
 const className = 'key-information--lifelong-learning',
       loadMoreBatch = 3,
