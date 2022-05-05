@@ -1124,15 +1124,6 @@
     Used where card has two divs, one most likely
     being a thumbnail.
 **/
-/*
-    USAGE:
-
-    $pseudo: both / before / after
-    $background-color: any hex color
-    $skew: a degree value
-
-    Background color must match background color of element mixin is applied to
-*/
 .heading-centered {
     text-align: center;
 }
@@ -59180,8 +59171,6 @@ main > .case-study--business .case-study--business__content {
     background-color: #ece8e5;
     position: relative;
     overflow: hidden;
-    position: relative;
-    position: relative;
 }
 
 @media (min-width: 768px) {
@@ -59202,71 +59191,6 @@ main > .case-study--business .case-study--business__content {
     .content-hub__block-two .careers-accordions {
         grid-column-gap: 1.5rem;
     }
-}
-
-.content-hub__block-two .careers-accordions:before {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    content: '';
-    display: none;
-    background-color: #f2f2f2;
-    height: 5rem;
-    transform: skewY(-8.5deg);
-}
-
-.content-hub__block-two .careers-accordions:before {
-    top: -3rem;
-    display: block;
-}
-
-.content-hub__block-two .careers-accordions:after {
-    bottom: -3rem;
-}
-
-.content-hub__block-two .careers-accordions:after {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    content: '';
-    display: none;
-    background-color: #f2f2f2;
-    height: 5rem;
-    transform: skewY(8.5deg);
-}
-
-.content-hub__block-two .careers-accordions:before {
-    top: -3rem;
-}
-
-.content-hub__block-two .careers-accordions:after {
-    bottom: -3rem;
-    display: block;
-}
-
-.content-hub__block-two .careers-accordions:before {
-    content: '';
-    z-index: 0;
-    display: block;
-    grid-column: 1 / -1;
-    margin: 0 0 1rem 0;
-    top: initial;
-    bottom: -5rem;
-    height: 2rem;
-    background-image: linear-gradient(to left, #d61726, #9e111c);
-}
-
-.content-hub__block-two .careers-accordions:after {
-    content: '';
-    z-index: 0;
-    display: block;
-    grid-column: 1 / -1;
-    margin: 0 0 1rem 0;
-    bottom: -1rem;
-    height: 3rem;
-    background-image: linear-gradient(to right, #d61726, #9e111c);
 }
 
 @media (min-width: 768px) {
@@ -59822,11 +59746,6 @@ main > .case-study--business .case-study--business__content {
     padding-bottom: 2rem;
 }
 
-.content-hub__block-three .news-events {
-    position: relative;
-    position: relative;
-}
-
 @media (min-width: 769px) {
     .content-hub__block-three .news-events {
         grid-template-columns: repeat(24, 1fr);
@@ -59853,48 +59772,6 @@ main > .case-study--business .case-study--business__content {
     }
 }
 
-.content-hub__block-three .news-events:before {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    content: '';
-    display: none;
-    background-color: #f2f2f2;
-    height: 5rem;
-    transform: skewY(5.5deg);
-}
-
-.content-hub__block-three .news-events:before {
-    top: -3rem;
-    display: block;
-}
-
-.content-hub__block-three .news-events:after {
-    bottom: -3rem;
-}
-
-.content-hub__block-three .news-events:after {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    content: '';
-    display: none;
-    background-color: #f2f2f2;
-    height: 5rem;
-    transform: skewY(-5.5deg);
-}
-
-.content-hub__block-three .news-events:before {
-    top: -3rem;
-}
-
-.content-hub__block-three .news-events:after {
-    bottom: -3rem;
-    display: block;
-}
-
 .content-hub__block-three .news-events .content-hub__block-three__happening {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
@@ -59913,6 +59790,10 @@ main > .case-study--business .case-study--business__content {
     .content-hub__block-three .news-events .content-hub__block-three__happening {
         grid-column-gap: 1.5rem;
     }
+}
+
+.content-hub__block-three .news-events .content-hub__block-three__happening:not(:empty) {
+    padding-bottom: 2rem;
 }
 
 .content-hub__block-three .news-events .content-hub__block-three__happening .related-content__heading {
@@ -59964,24 +59845,6 @@ main > .case-study--business .case-study--business__content {
 .content-hub__block-three .news-events .content-hub__block-three__happening .slider__controls {
     grid-column: 1 / -1;
     margin-right: 1rem;
-}
-
-.content-hub__block-three .news-events:before {
-    content: '';
-    display: block;
-    grid-column: 1 / -1;
-    margin: 0 0 1rem 0;
-    top: -1rem;
-    background-image: linear-gradient(to right, #d61726, #9e111c);
-}
-
-.content-hub__block-three .news-events:after {
-    content: '';
-    display: block;
-    grid-column: 1 / -1;
-    margin: 0 0 1rem 0;
-    top: 0;
-    background-image: linear-gradient(to left, #d61726, #9e111c);
 }
 
 .content-hub__block-three .news-events .content-hub__block-three__research__centres {
