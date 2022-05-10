@@ -54141,7 +54141,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (min-width: 1024px) {
-    main > article .banner-text .banner-text__content {
+    main > article .finder .banner-text .banner-text__content {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -54151,27 +54151,27 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
-    main > article .banner-text .banner-text__content {
+    main > article .finder .banner-text .banner-text__content {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main > article .banner-text .banner-text__content {
+    main > article .finder .banner-text .banner-text__content {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
-    main > article .banner-text .banner-text__content h1,
-    main > article .banner-text .banner-text__content p {
+    main > article .finder .banner-text .banner-text__content h1,
+    main > article .finder .banner-text .banner-text__content p {
         grid-column: 3 / -3;
     }
 }
 
 @media (min-width: 1280px) {
-    main > article .banner-text .banner-text__content h1,
-    main > article .banner-text .banner-text__content p {
+    main > article .finder .banner-text .banner-text__content h1,
+    main > article .finder .banner-text .banner-text__content p {
         grid-column: 4 / -4;
     }
     main > article .finder .finder__query,
@@ -54213,7 +54213,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (min-width: 1024px) {
-    main .navigation--secondary + article .banner-text .banner-text__content {
+    main .navigation--secondary + article .finder .banner-text .banner-text__content {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -54224,21 +54224,21 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + article .banner-text .banner-text__content {
+    main .navigation--secondary + article .finder .banner-text .banner-text__content {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + article .banner-text .banner-text__content {
+    main .navigation--secondary + article .finder .banner-text .banner-text__content {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1441px) {
-    main .navigation--secondary + article .banner-text .banner-text__content {
+    main .navigation--secondary + article .finder .banner-text .banner-text__content {
         margin-left: auto;
         margin-right: auto;
     }
