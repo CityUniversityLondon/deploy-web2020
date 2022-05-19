@@ -46062,35 +46062,17 @@ blockquote footer cite {
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 a:link, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 a:visited {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
+    color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
     background-image: none;
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 a:active, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 a:focus, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 a:hover {
-    color: #ffffff;
+    color: #cbcbcb;
     background-color: transparent;
     background-image: none;
-    border-bottom-color: #ffffff;
-    outline-color: #ffffff;
-}
-
-.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--gray2 {
-    color: #ffffff;
-}
-
-.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--gray2 a:link, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--gray2 a:visited {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
-    background-image: none;
-}
-
-.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--gray2 a:active, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--gray2 a:focus, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--gray2 a:hover {
-    color: #ffffff;
-    background-color: transparent;
-    background-image: none;
-    border-bottom-color: #ffffff;
-    outline-color: #ffffff;
+    border-bottom-color: #cbcbcb;
+    outline-color: #cbcbcb;
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 {
@@ -46098,17 +46080,17 @@ blockquote footer cite {
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 a:link, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 a:visited {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
+    color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
     background-image: none;
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 a:active, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 a:focus, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 a:hover {
-    color: #ffffff;
+    color: #cbcbcb;
     background-color: transparent;
     background-image: none;
-    border-bottom-color: #ffffff;
-    outline-color: #ffffff;
+    border-bottom-color: #cbcbcb;
+    outline-color: #cbcbcb;
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 {
@@ -46116,35 +46098,17 @@ blockquote footer cite {
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 a:link, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 a:visited {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
+    color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
     background-image: none;
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 a:active, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 a:focus, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 a:hover {
-    color: #ffffff;
+    color: #cbcbcb;
     background-color: transparent;
     background-image: none;
-    border-bottom-color: #ffffff;
-    outline-color: #ffffff;
-}
-
-.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--purewhite {
-    color: #ffffff;
-}
-
-.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--purewhite a:link, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--purewhite a:visited {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
-    background-image: none;
-}
-
-.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--purewhite a:hover {
-    color: #ffffff;
-    background-color: transparent;
-    background-image: none;
-    border-bottom-color: #ffffff;
-    outline-color: #ffffff;
+    border-bottom-color: #cbcbcb;
+    outline-color: #cbcbcb;
 }
 
 .related-links--with-images__cards {
