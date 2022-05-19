@@ -46057,116 +46057,6 @@ blockquote footer cite {
     display: inline;
 }
 
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    transition: background-size 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:visited, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:visited {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #ffffff;
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    background-color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #ffffff;
-}
-
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 {
     color: #ffffff;
 }
@@ -46183,116 +46073,6 @@ blockquote footer cite {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    transition: background-size 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:visited, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:visited {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #ffffff;
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    background-color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #ffffff;
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--gray2 {
@@ -46313,116 +46093,6 @@ blockquote footer cite {
     outline-color: #ffffff;
 }
 
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    transition: background-size 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:visited, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:visited {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #ffffff;
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    background-color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #ffffff;
-}
-
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 {
     color: #ffffff;
 }
@@ -46441,116 +46111,6 @@ blockquote footer cite {
     outline-color: #ffffff;
 }
 
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    transition: background-size 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:visited, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:visited {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #ffffff;
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    background-color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #ffffff;
-}
-
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 {
     color: #ffffff;
 }
@@ -46567,116 +46127,6 @@ blockquote footer cite {
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    transition: background-size 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:visited, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:visited {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus {
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #006bbd;
-}
-
-@media (hover: hover) {
-    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
-        border-bottom-color: #006bbd;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #ffffff;
-    }
-}
-
-.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
-    background-color: #006bbd;
-    border-bottom-color: #006bbd;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #ffffff;
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--purewhite {
@@ -46702,15 +46152,13 @@ blockquote footer cite {
     margin: 0;
     max-width: unset;
     padding-bottom: 1.25rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
 }
 
 @media (min-width: 768px) {
     .related-links--with-images__cards {
         display: grid;
         grid-column: 2/-2;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 1.5rem;
     }
 }
@@ -46719,8 +46167,130 @@ blockquote footer cite {
     height: max-content;
 }
 
+.related-links--with-images__cards .card--related-links--with-images.background--purewhite:not([data-image='true']) {
+    border-top: 0.5rem solid #d61726;
+}
+
+.related-links--with-images__cards .card--related-links--with-images.background--purewhite, .related-links--with-images__cards .card--related-links--with-images.background--gray2 {
+    border: 0.0625rem solid #f2f2f2;
+}
+
+.related-links--with-images__cards .card--related-links--with-images.background--purewhite a, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:visited, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:visited {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:focus, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .related-links--with-images__cards .card--related-links--with-images.background--purewhite a:hover, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.related-links--with-images__cards .card--related-links--with-images.background--purewhite a:active, .related-links--with-images__cards .card--related-links--with-images.background--gray2 a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
 .related-links--with-images__cards .card--related-links--with-images .card--related-links--with-images__links__content {
     padding: 0 1rem 1rem 1rem;
+}
+
+.related-links--with-images__cards .card--related-links--with-images .card--related-links--with-images__links__content > .card--related-links--with-images__links {
+    padding-top: 0.25rem;
 }
 
 .related-links--with-images__cards .card--related-links--with-images .card--related-links--with-images__links__content .card--related-links--with-images__links p {
@@ -75346,7 +74916,8 @@ main .standard-content .content {
 }
 
 @media (min-width: 1024px) and (min-width: 1024px) {
-    main .navigation--secondary + .standard-content .pathway[data-fullwidth='yes'] {
+    main .navigation--secondary + .standard-content .pathway[data-fullwidth='yes'],
+    main .navigation--secondary + .standard-content .related-links--with-images[data-fullwidth='yes'] {
         grid-template-columns: repeat(18, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -75354,19 +74925,23 @@ main .standard-content .content {
 }
 
 @media (min-width: 1024px) and (min-width: 1024px) and (min-width: 768px) {
-    main .navigation--secondary + .standard-content .pathway[data-fullwidth='yes'] {
+    main .navigation--secondary + .standard-content .pathway[data-fullwidth='yes'],
+    main .navigation--secondary + .standard-content .related-links--with-images[data-fullwidth='yes'] {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + .standard-content .pathway[data-fullwidth='yes'] {
+    main .navigation--secondary + .standard-content .pathway[data-fullwidth='yes'],
+    main .navigation--secondary + .standard-content .related-links--with-images[data-fullwidth='yes'] {
         grid-column-gap: 1.5rem;
     }
 }
 
 .standard-content {
     padding-bottom: 1.5rem;
+    /** Start: SCP full-width pattern customisation **/
+    /** End: SCP full-width pattern customisation **/
     /** End: full-width patterns **/
 }
 
@@ -75374,10 +74949,6 @@ main .standard-content .content {
     .standard-content .content {
         margin: 0;
     }
-}
-
-.standard-content .pathway {
-    /** Start: full-width patterns **/
 }
 
 .standard-content .pathway .pathway__cards {
@@ -75410,6 +74981,36 @@ main .standard-content .content {
 
 @media (min-width: 768px) {
     .standard-content .pathway[data-fullwidth='yes'] .pathway__heading {
+        grid-column: 2/-2;
+    }
+}
+
+.standard-content .related-links--with-images[data-fullwidth='yes'] {
+    grid-column: 1/-1;
+}
+
+.standard-content .related-links--with-images[data-fullwidth='yes'] .related-links--with-images__cards {
+    grid-column: 2/-2;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 767px) {
+    .standard-content .related-links--with-images[data-fullwidth='yes'] {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 901px) {
+    .standard-content .related-links--with-images[data-fullwidth='yes'] {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .standard-content .related-links--with-images[data-fullwidth='yes'] .related-links--with-images__heading {
         grid-column: 2/-2;
     }
 }
