@@ -75146,7 +75146,7 @@ main .standard-content .content {
     grid-column: 1/-1;
 }
 
-.standard-content .related-links--with-images[data-fullwidth='yes'] .related-links--with-images__cards {
+.standard-content .related-links--with-images[data-fullwidth='yes'] .new--related-links--with-images__cards {
     grid-column: 2/-2;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -75167,7 +75167,7 @@ main .standard-content .content {
 }
 
 @media (min-width: 768px) {
-    .standard-content .related-links--with-images[data-fullwidth='yes'] .related-links--with-images__heading {
+    .standard-content .related-links--with-images[data-fullwidth='yes'] .new--related-links--with-images__heading {
         grid-column: 2/-2;
     }
 }
