@@ -6730,7 +6730,7 @@ function accordionize(tabs) {
     accordionHeading.className = 'accordion__heading';
     accordionHeading.id = `accordion${tabs.dataset.assetid}-header${panel.dataset.assetid}`;
     accordionHeading.dataset.tabid = panel.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].labelledBy);
-    accordionHeading.innerText = heading.innerText.trim();
+    accordionHeading.innerText = heading.childNodes[0].nodeValue.trim();
     accordionSection.className = 'accordion__body';
     accordionSection.id = `accordion${tabs.dataset.assetid}-body${panel.dataset.assetid}`;
     accordionWrapper.className = 'wrapper--accordion__body__content';

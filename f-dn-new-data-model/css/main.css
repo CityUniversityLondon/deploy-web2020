@@ -1124,15 +1124,6 @@
     Used where card has two divs, one most likely
     being a thumbnail.
 **/
-/*
-    USAGE:
-
-    $pseudo: both / before / after
-    $background-color: any hex color
-    $skew: a degree value
-
-    Background color must match background color of element mixin is applied to
-*/
 .heading-centered {
     text-align: center;
 }
@@ -22100,22 +22091,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #0177a0;
 }
 
-.card__side-image.background--blue50 a:link {
+.card__side-image.background--blue50 img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--blue50.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--blue50.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--blue50.background--purewhite a:focus, .card__side-image.background--blue50.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--blue50.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--blue50.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--blue50.background--purewhite a:focus, .card__side-image.background--blue50.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--blue50.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--blue50.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--blue50.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--blue50.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--blue50:not(.background--purewhite) a:link, .card__side-image.background--blue50:not(.background--purewhite) a:visited {
     color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
 
-.card__side-image.background--blue50 a:active, .card__side-image.background--blue50 a:focus, .card__side-image.background--blue50 a:hover {
+.card__side-image.background--blue50:not(.background--purewhite) a:active, .card__side-image.background--blue50:not(.background--purewhite) a:focus, .card__side-image.background--blue50:not(.background--purewhite) a:hover {
     color: #ffffff;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
-}
-
-.card__side-image.background--blue50 img {
-    margin-bottom: calc( -0.125rem);
 }
 
 @media (min-width: 768px) {
@@ -22135,22 +22236,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #213d50;
 }
 
-.card__side-image.background--blue70 a:link {
+.card__side-image.background--blue70 img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--blue70.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--blue70.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--blue70.background--purewhite a:focus, .card__side-image.background--blue70.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--blue70.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--blue70.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--blue70.background--purewhite a:focus, .card__side-image.background--blue70.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--blue70.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--blue70.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--blue70.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--blue70.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--blue70:not(.background--purewhite) a:link, .card__side-image.background--blue70:not(.background--purewhite) a:visited {
     color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
 
-.card__side-image.background--blue70 a:active, .card__side-image.background--blue70 a:focus, .card__side-image.background--blue70 a:hover {
+.card__side-image.background--blue70:not(.background--purewhite) a:active, .card__side-image.background--blue70:not(.background--purewhite) a:focus, .card__side-image.background--blue70:not(.background--purewhite) a:hover {
     color: #ffffff;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
-}
-
-.card__side-image.background--blue70 img {
-    margin-bottom: calc( -0.125rem);
 }
 
 @media (min-width: 768px) {
@@ -22170,22 +22381,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #00294a;
 }
 
-.card__side-image.background--blue90 a:link {
+.card__side-image.background--blue90 img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--blue90.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--blue90.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--blue90.background--purewhite a:focus, .card__side-image.background--blue90.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--blue90.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--blue90.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--blue90.background--purewhite a:focus, .card__side-image.background--blue90.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--blue90.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--blue90.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--blue90.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--blue90.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--blue90:not(.background--purewhite) a:link, .card__side-image.background--blue90:not(.background--purewhite) a:visited {
     color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
 
-.card__side-image.background--blue90 a:active, .card__side-image.background--blue90 a:focus, .card__side-image.background--blue90 a:hover {
+.card__side-image.background--blue90:not(.background--purewhite) a:active, .card__side-image.background--blue90:not(.background--purewhite) a:focus, .card__side-image.background--blue90:not(.background--purewhite) a:hover {
     color: #ffffff;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
-}
-
-.card__side-image.background--blue90 img {
-    margin-bottom: calc( -0.125rem);
 }
 
 @media (min-width: 768px) {
@@ -22205,22 +22526,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #bab4b2;
 }
 
-.card__side-image.background--brown40 a:link {
+.card__side-image.background--brown40 img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--brown40.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--brown40.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--brown40.background--purewhite a:focus, .card__side-image.background--brown40.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--brown40.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--brown40.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--brown40.background--purewhite a:focus, .card__side-image.background--brown40.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--brown40.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--brown40.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--brown40.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--brown40.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--brown40:not(.background--purewhite) a:link, .card__side-image.background--brown40:not(.background--purewhite) a:visited {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
     background-image: none;
 }
 
-.card__side-image.background--brown40 a:active, .card__side-image.background--brown40 a:focus, .card__side-image.background--brown40 a:hover {
+.card__side-image.background--brown40:not(.background--purewhite) a:active, .card__side-image.background--brown40:not(.background--purewhite) a:focus, .card__side-image.background--brown40:not(.background--purewhite) a:hover {
     color: #1e1e1e;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #1e1e1e;
     outline-color: #1e1e1e;
-}
-
-.card__side-image.background--brown40 img {
-    margin-bottom: calc( -0.125rem);
 }
 
 @media (min-width: 768px) {
@@ -22240,22 +22671,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #6c953c;
 }
 
-.card__side-image.background--green50 a:link {
+.card__side-image.background--green50 img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--green50.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--green50.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--green50.background--purewhite a:focus, .card__side-image.background--green50.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--green50.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--green50.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--green50.background--purewhite a:focus, .card__side-image.background--green50.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--green50.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--green50.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--green50.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--green50.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--green50:not(.background--purewhite) a:link, .card__side-image.background--green50:not(.background--purewhite) a:visited {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
     background-image: none;
 }
 
-.card__side-image.background--green50 a:active, .card__side-image.background--green50 a:focus, .card__side-image.background--green50 a:hover {
+.card__side-image.background--green50:not(.background--purewhite) a:active, .card__side-image.background--green50:not(.background--purewhite) a:focus, .card__side-image.background--green50:not(.background--purewhite) a:hover {
     color: #1e1e1e;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #1e1e1e;
     outline-color: #1e1e1e;
-}
-
-.card__side-image.background--green50 img {
-    margin-bottom: calc( -0.125rem);
 }
 
 @media (min-width: 768px) {
@@ -22275,22 +22816,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #f25d21;
 }
 
-.card__side-image.background--orange50 a:link {
+.card__side-image.background--orange50 img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--orange50.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--orange50.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--orange50.background--purewhite a:focus, .card__side-image.background--orange50.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--orange50.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--orange50.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--orange50.background--purewhite a:focus, .card__side-image.background--orange50.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--orange50.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--orange50.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--orange50.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--orange50.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--orange50:not(.background--purewhite) a:link, .card__side-image.background--orange50:not(.background--purewhite) a:visited {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
     background-image: none;
 }
 
-.card__side-image.background--orange50 a:active, .card__side-image.background--orange50 a:focus, .card__side-image.background--orange50 a:hover {
+.card__side-image.background--orange50:not(.background--purewhite) a:active, .card__side-image.background--orange50:not(.background--purewhite) a:focus, .card__side-image.background--orange50:not(.background--purewhite) a:hover {
     color: #1e1e1e;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #1e1e1e;
     outline-color: #1e1e1e;
-}
-
-.card__side-image.background--orange50 img {
-    margin-bottom: calc( -0.125rem);
 }
 
 @media (min-width: 768px) {
@@ -22310,22 +22961,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #65322f;
 }
 
-.card__side-image.background--orange80 a:link {
+.card__side-image.background--orange80 img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--orange80.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--orange80.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--orange80.background--purewhite a:focus, .card__side-image.background--orange80.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--orange80.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--orange80.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--orange80.background--purewhite a:focus, .card__side-image.background--orange80.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--orange80.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--orange80.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--orange80.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--orange80.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--orange80:not(.background--purewhite) a:link, .card__side-image.background--orange80:not(.background--purewhite) a:visited {
     color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
 
-.card__side-image.background--orange80 a:active, .card__side-image.background--orange80 a:focus, .card__side-image.background--orange80 a:hover {
+.card__side-image.background--orange80:not(.background--purewhite) a:active, .card__side-image.background--orange80:not(.background--purewhite) a:focus, .card__side-image.background--orange80:not(.background--purewhite) a:hover {
     color: #ffffff;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
-}
-
-.card__side-image.background--orange80 img {
-    margin-bottom: calc( -0.125rem);
 }
 
 @media (min-width: 768px) {
@@ -22345,22 +23106,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #3e1031;
 }
 
-.card__side-image.background--pink90 a:link {
+.card__side-image.background--pink90 img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--pink90.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--pink90.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--pink90.background--purewhite a:focus, .card__side-image.background--pink90.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--pink90.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--pink90.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--pink90.background--purewhite a:focus, .card__side-image.background--pink90.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--pink90.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--pink90.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--pink90.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--pink90.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--pink90:not(.background--purewhite) a:link, .card__side-image.background--pink90:not(.background--purewhite) a:visited {
     color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
 
-.card__side-image.background--pink90 a:active, .card__side-image.background--pink90 a:focus, .card__side-image.background--pink90 a:hover {
+.card__side-image.background--pink90:not(.background--purewhite) a:active, .card__side-image.background--pink90:not(.background--purewhite) a:focus, .card__side-image.background--pink90:not(.background--purewhite) a:hover {
     color: #ffffff;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
-}
-
-.card__side-image.background--pink90 img {
-    margin-bottom: calc( -0.125rem);
 }
 
 @media (min-width: 768px) {
@@ -22380,22 +23251,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #ffffff;
 }
 
-.card__side-image.background--purewhite a:link {
+.card__side-image.background--purewhite img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--purewhite.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--purewhite.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--purewhite.background--purewhite a:focus, .card__side-image.background--purewhite.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--purewhite.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--purewhite.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--purewhite.background--purewhite a:focus, .card__side-image.background--purewhite.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--purewhite.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--purewhite.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--purewhite.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--purewhite.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--purewhite:not(.background--purewhite) a:link, .card__side-image.background--purewhite:not(.background--purewhite) a:visited {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
     background-image: none;
 }
 
-.card__side-image.background--purewhite a:active, .card__side-image.background--purewhite a:focus, .card__side-image.background--purewhite a:hover {
+.card__side-image.background--purewhite:not(.background--purewhite) a:active, .card__side-image.background--purewhite:not(.background--purewhite) a:focus, .card__side-image.background--purewhite:not(.background--purewhite) a:hover {
     color: #1e1e1e;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #1e1e1e;
     outline-color: #1e1e1e;
-}
-
-.card__side-image.background--purewhite img {
-    margin-bottom: calc( -0.125rem);
 }
 
 @media (min-width: 768px) {
@@ -22415,22 +23396,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #832c9e;
 }
 
-.card__side-image.background--purple50 a:link {
+.card__side-image.background--purple50 img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--purple50.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--purple50.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--purple50.background--purewhite a:focus, .card__side-image.background--purple50.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--purple50.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--purple50.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--purple50.background--purewhite a:focus, .card__side-image.background--purple50.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--purple50.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--purple50.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--purple50.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--purple50.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--purple50:not(.background--purewhite) a:link, .card__side-image.background--purple50:not(.background--purewhite) a:visited {
     color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
 
-.card__side-image.background--purple50 a:active, .card__side-image.background--purple50 a:focus, .card__side-image.background--purple50 a:hover {
+.card__side-image.background--purple50:not(.background--purewhite) a:active, .card__side-image.background--purple50:not(.background--purewhite) a:focus, .card__side-image.background--purple50:not(.background--purewhite) a:hover {
     color: #ffffff;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
-}
-
-.card__side-image.background--purple50 img {
-    margin-bottom: calc( -0.125rem);
 }
 
 @media (min-width: 768px) {
@@ -22450,22 +23541,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #3f1464;
 }
 
-.card__side-image.background--purple80 a:link {
+.card__side-image.background--purple80 img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--purple80.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--purple80.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--purple80.background--purewhite a:focus, .card__side-image.background--purple80.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--purple80.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--purple80.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--purple80.background--purewhite a:focus, .card__side-image.background--purple80.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--purple80.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--purple80.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--purple80.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--purple80.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--purple80:not(.background--purewhite) a:link, .card__side-image.background--purple80:not(.background--purewhite) a:visited {
     color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
 
-.card__side-image.background--purple80 a:active, .card__side-image.background--purple80 a:focus, .card__side-image.background--purple80 a:hover {
+.card__side-image.background--purple80:not(.background--purewhite) a:active, .card__side-image.background--purple80:not(.background--purewhite) a:focus, .card__side-image.background--purple80:not(.background--purewhite) a:hover {
     color: #ffffff;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
-}
-
-.card__side-image.background--purple80 img {
-    margin-bottom: calc( -0.125rem);
 }
 
 @media (min-width: 768px) {
@@ -22485,22 +23686,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #d61726;
 }
 
-.card__side-image.background--red50 a:link {
+.card__side-image.background--red50 img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--red50.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--red50.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--red50.background--purewhite a:focus, .card__side-image.background--red50.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--red50.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--red50.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--red50.background--purewhite a:focus, .card__side-image.background--red50.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--red50.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--red50.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--red50.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--red50.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--red50:not(.background--purewhite) a:link, .card__side-image.background--red50:not(.background--purewhite) a:visited {
     color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
 
-.card__side-image.background--red50 a:active, .card__side-image.background--red50 a:focus, .card__side-image.background--red50 a:hover {
+.card__side-image.background--red50:not(.background--purewhite) a:active, .card__side-image.background--red50:not(.background--purewhite) a:focus, .card__side-image.background--red50:not(.background--purewhite) a:hover {
     color: #ffffff;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
-}
-
-.card__side-image.background--red50 img {
-    margin-bottom: calc( -0.125rem);
 }
 
 @media (min-width: 768px) {
@@ -22520,22 +23831,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #00393f;
 }
 
-.card__side-image.background--teal90 a:link {
+.card__side-image.background--teal90 img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--teal90.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--teal90.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--teal90.background--purewhite a:focus, .card__side-image.background--teal90.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--teal90.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--teal90.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--teal90.background--purewhite a:focus, .card__side-image.background--teal90.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--teal90.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--teal90.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--teal90.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--teal90.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--teal90:not(.background--purewhite) a:link, .card__side-image.background--teal90:not(.background--purewhite) a:visited {
     color: #ffffff;
     border-bottom-color: #ffffff;
     background-image: none;
 }
 
-.card__side-image.background--teal90 a:active, .card__side-image.background--teal90 a:focus, .card__side-image.background--teal90 a:hover {
+.card__side-image.background--teal90:not(.background--purewhite) a:active, .card__side-image.background--teal90:not(.background--purewhite) a:focus, .card__side-image.background--teal90:not(.background--purewhite) a:hover {
     color: #ffffff;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #ffffff;
     outline-color: #ffffff;
-}
-
-.card__side-image.background--teal90 img {
-    margin-bottom: calc( -0.125rem);
 }
 
 @media (min-width: 768px) {
@@ -22555,22 +23976,132 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #ffef2b;
 }
 
-.card__side-image.background--yellow20 a:link {
+.card__side-image.background--yellow20 img {
+    margin-bottom: calc( -0.125rem);
+}
+
+.card__side-image.background--yellow20.background--purewhite a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--yellow20.background--purewhite a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.card__side-image.background--yellow20.background--purewhite a:focus, .card__side-image.background--yellow20.background--purewhite a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card__side-image.background--yellow20.background--purewhite a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .card__side-image.background--yellow20.background--purewhite a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+.card__side-image.background--yellow20.background--purewhite a:focus, .card__side-image.background--yellow20.background--purewhite a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.card__side-image.background--yellow20.background--purewhite a:visited {
+    border-bottom-color: #4c2c92;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #4c2c92;
+}
+
+.card__side-image.background--yellow20.background--purewhite a:focus {
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #006bbd;
+}
+
+@media (hover: hover) {
+    .card__side-image.background--yellow20.background--purewhite a:hover {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+}
+
+.card__side-image.background--yellow20.background--purewhite a:active {
+    background-color: #006bbd;
+    border-bottom-color: #006bbd;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #ffffff;
+}
+
+.card__side-image.background--yellow20:not(.background--purewhite) a:link, .card__side-image.background--yellow20:not(.background--purewhite) a:visited {
     color: #1e1e1e;
     border-bottom-color: #1e1e1e;
     background-image: none;
 }
 
-.card__side-image.background--yellow20 a:active, .card__side-image.background--yellow20 a:focus, .card__side-image.background--yellow20 a:hover {
+.card__side-image.background--yellow20:not(.background--purewhite) a:active, .card__side-image.background--yellow20:not(.background--purewhite) a:focus, .card__side-image.background--yellow20:not(.background--purewhite) a:hover {
     color: #1e1e1e;
     background-color: transparent;
     background-image: none;
     border-bottom-color: #1e1e1e;
     outline-color: #1e1e1e;
-}
-
-.card__side-image.background--yellow20 img {
-    margin-bottom: calc( -0.125rem);
 }
 
 .card__side-image {
@@ -24691,6 +26222,7 @@ form:not([class]) .form__required-note--marker,
     color: #ffffff;
     padding-top: 4.5rem;
     padding-bottom: 3rem;
+    grid-column: 1/-1;
 }
 
 .banner-text .banner-text__content {
@@ -34356,26 +35888,56 @@ figure figcaption a:active,
     }
 }
 
-.infographic .infographic__panel[data-type='image'] {
-    text-align: center;
+.infographic[data-theme='blue50'] .infographic__panel .infographic__description__text__highlight {
+    background-color: #0177a0;
+    background-color: #0177a0;
+    box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
 }
 
-.infographic .infographic__panel.background--blue50 {
-    outline: 0.0625rem solid #0177a0;
-}
-
-.infographic .infographic__panel.background--blue50[data-type='text'] .infographic__description__text__highlight {
+.infographic[data-theme='blue50'] .infographic__panel[data-theme-background='true'] .infographic__description__text__highlight {
     background-color: #832c9e;
     box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
 }
 
-.infographic .infographic__panel.background--purple50 {
-    outline: 0.0625rem solid #832c9e;
-}
-
-.infographic .infographic__panel.background--purple50[data-type='text'] .infographic__description__text__highlight {
+.infographic[data-theme='blue50'] .infographic__panel[data-theme-background='false'] .infographic__description__text__highlight {
     background-color: #0177a0;
     box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
+}
+
+.infographic[data-theme='purple50'] .infographic__panel .infographic__description__text__highlight {
+    background-color: #832c9e;
+    background-color: #832c9e;
+    box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
+}
+
+.infographic[data-theme='purple50'] .infographic__panel[data-theme-background='true'] .infographic__description__text__highlight {
+    background-color: #0177a0;
+    box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
+}
+
+.infographic[data-theme='purple50'] .infographic__panel[data-theme-background='false'] .infographic__description__text__highlight {
+    background-color: #832c9e;
+    box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
+}
+
+.infographic[data-theme='red50'] .infographic__panel .infographic__description__text__highlight {
+    background-color: #d61726;
+    background-color: #d61726;
+    box-shadow: 0.5rem 0 0 #d61726, -0.5rem 0 0 #d61726;
+}
+
+.infographic[data-theme='red50'] .infographic__panel[data-theme-background='true'] .infographic__description__text__highlight {
+    background-color: #832c9e;
+    box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
+}
+
+.infographic[data-theme='red50'] .infographic__panel[data-theme-background='false'] .infographic__description__text__highlight {
+    background-color: #d61726;
+    box-shadow: 0.5rem 0 0 #d61726, -0.5rem 0 0 #d61726;
+}
+
+.infographic .infographic__panel[data-type='image'] {
+    text-align: center;
 }
 
 .infographic .infographic__panel[data-type='text'] .infographic__description__text {
@@ -54140,7 +55702,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (min-width: 1024px) {
-    main > article .banner-text .banner-text__content {
+    main > article .finder .banner-text .banner-text__content {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -54150,27 +55712,27 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
-    main > article .banner-text .banner-text__content {
+    main > article .finder .banner-text .banner-text__content {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main > article .banner-text .banner-text__content {
+    main > article .finder .banner-text .banner-text__content {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
-    main > article .banner-text .banner-text__content h1,
-    main > article .banner-text .banner-text__content p {
+    main > article .finder .banner-text .banner-text__content h1,
+    main > article .finder .banner-text .banner-text__content p {
         grid-column: 3 / -3;
     }
 }
 
 @media (min-width: 1280px) {
-    main > article .banner-text .banner-text__content h1,
-    main > article .banner-text .banner-text__content p {
+    main > article .finder .banner-text .banner-text__content h1,
+    main > article .finder .banner-text .banner-text__content p {
         grid-column: 4 / -4;
     }
     main > article .finder .finder__query,
@@ -54212,7 +55774,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (min-width: 1024px) {
-    main .navigation--secondary + article .banner-text .banner-text__content {
+    main .navigation--secondary + article .finder .banner-text .banner-text__content {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -54223,21 +55785,21 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + article .banner-text .banner-text__content {
+    main .navigation--secondary + article .finder .banner-text .banner-text__content {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + article .banner-text .banner-text__content {
+    main .navigation--secondary + article .finder .banner-text .banner-text__content {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1441px) {
-    main .navigation--secondary + article .banner-text .banner-text__content {
+    main .navigation--secondary + article .finder .banner-text .banner-text__content {
         margin-left: auto;
         margin-right: auto;
     }
@@ -59078,7 +60640,6 @@ main > .case-study--business .case-study--business__content {
 }
 
 .content-hub__block-two {
-    margin-bottom: 1rem;
     margin-left: 0;
     margin-right: 0;
 }
@@ -59086,7 +60647,7 @@ main > .case-study--business .case-study--business__content {
 .content-hub__block-two .careers {
     background-color: #ece8e5;
     padding: 1rem 0;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -59181,8 +60742,6 @@ main > .case-study--business .case-study--business__content {
     background-color: #ece8e5;
     position: relative;
     overflow: hidden;
-    position: relative;
-    position: relative;
 }
 
 @media (min-width: 768px) {
@@ -59203,71 +60762,6 @@ main > .case-study--business .case-study--business__content {
     .content-hub__block-two .careers-accordions {
         grid-column-gap: 1.5rem;
     }
-}
-
-.content-hub__block-two .careers-accordions:before {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    content: '';
-    display: none;
-    background-color: #f2f2f2;
-    height: 5rem;
-    transform: skewY(-8.5deg);
-}
-
-.content-hub__block-two .careers-accordions:before {
-    top: -3rem;
-    display: block;
-}
-
-.content-hub__block-two .careers-accordions:after {
-    bottom: -3rem;
-}
-
-.content-hub__block-two .careers-accordions:after {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    content: '';
-    display: none;
-    background-color: #f2f2f2;
-    height: 5rem;
-    transform: skewY(8.5deg);
-}
-
-.content-hub__block-two .careers-accordions:before {
-    top: -3rem;
-}
-
-.content-hub__block-two .careers-accordions:after {
-    bottom: -3rem;
-    display: block;
-}
-
-.content-hub__block-two .careers-accordions:before {
-    content: '';
-    z-index: 0;
-    display: block;
-    grid-column: 1 / -1;
-    margin: 0 0 1rem 0;
-    top: initial;
-    bottom: -5rem;
-    height: 2rem;
-    background-image: linear-gradient(to left, #d61726, #9e111c);
-}
-
-.content-hub__block-two .careers-accordions:after {
-    content: '';
-    z-index: 0;
-    display: block;
-    grid-column: 1 / -1;
-    margin: 0 0 1rem 0;
-    bottom: -1rem;
-    height: 3rem;
-    background-image: linear-gradient(to right, #d61726, #9e111c);
 }
 
 @media (min-width: 768px) {
@@ -59819,11 +61313,8 @@ main > .case-study--business .case-study--business__content {
     transition: none;
 }
 
-.content-hub__block-three .news-events {
-    margin-top: 5rem;
+.content-hub__block-three .news-events .content-hub__block-three__happening:not(:empty) {
     padding-bottom: 2rem;
-    position: relative;
-    position: relative;
 }
 
 @media (min-width: 769px) {
@@ -59852,48 +61343,6 @@ main > .case-study--business .case-study--business__content {
     }
 }
 
-.content-hub__block-three .news-events:before {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    content: '';
-    display: none;
-    background-color: #f2f2f2;
-    height: 5rem;
-    transform: skewY(5.5deg);
-}
-
-.content-hub__block-three .news-events:before {
-    top: -3rem;
-    display: block;
-}
-
-.content-hub__block-three .news-events:after {
-    bottom: -3rem;
-}
-
-.content-hub__block-three .news-events:after {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    content: '';
-    display: none;
-    background-color: #f2f2f2;
-    height: 5rem;
-    transform: skewY(-5.5deg);
-}
-
-.content-hub__block-three .news-events:before {
-    top: -3rem;
-}
-
-.content-hub__block-three .news-events:after {
-    bottom: -3rem;
-    display: block;
-}
-
 .content-hub__block-three .news-events .content-hub__block-three__happening {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
@@ -59912,6 +61361,10 @@ main > .case-study--business .case-study--business__content {
     .content-hub__block-three .news-events .content-hub__block-three__happening {
         grid-column-gap: 1.5rem;
     }
+}
+
+.content-hub__block-three .news-events .content-hub__block-three__happening:not(:empty) {
+    padding-bottom: 2rem;
 }
 
 .content-hub__block-three .news-events .content-hub__block-three__happening .related-content__heading {
@@ -59963,24 +61416,6 @@ main > .case-study--business .case-study--business__content {
 .content-hub__block-three .news-events .content-hub__block-three__happening .slider__controls {
     grid-column: 1 / -1;
     margin-right: 1rem;
-}
-
-.content-hub__block-three .news-events:before {
-    content: '';
-    display: block;
-    grid-column: 1 / -1;
-    margin: 0 0 1rem 0;
-    top: -1rem;
-    background-image: linear-gradient(to right, #d61726, #9e111c);
-}
-
-.content-hub__block-three .news-events:after {
-    content: '';
-    display: block;
-    grid-column: 1 / -1;
-    margin: 0 0 1rem 0;
-    top: 0;
-    background-image: linear-gradient(to left, #d61726, #9e111c);
 }
 
 .content-hub__block-three .news-events .content-hub__block-three__research__centres {
@@ -60119,6 +61554,10 @@ main > .case-study--business .case-study--business__content {
     color: #ffffff;
 }
 
+.content-hub__block-three .news-events .content-hub__block-three__research {
+    margin-bottom: 2rem;
+}
+
 @media (max-width: 767px) {
     .content-hub__block-three .news-events .content-hub__block-three__research h2 {
         margin-left: 1rem;
@@ -60147,12 +61586,6 @@ main > .case-study--business .case-study--business__content {
     .content-hub__block-three .news-events .content-hub__block-three__research h2 {
         margin-left: auto;
         margin-right: auto;
-    }
-}
-
-@media (min-width: 769px) {
-    .content-hub__block-three .news-events .content-hub__block-three__research {
-        margin-bottom: 1rem;
     }
 }
 
