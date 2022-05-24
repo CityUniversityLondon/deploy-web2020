@@ -45840,8 +45840,10 @@ blockquote footer cite {
     color: #cbcbcb;
 }
 
-.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 a:hover {
-    color: #0c0c0e;
+@media (hover: hover) {
+    .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 a:hover {
+        color: #0c0c0e;
+    }
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 {
@@ -45958,8 +45960,10 @@ blockquote footer cite {
     color: #cbcbcb;
 }
 
-.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 a:hover {
-    color: #0c0c0e;
+@media (hover: hover) {
+    .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 a:hover {
+        color: #0c0c0e;
+    }
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 {
@@ -46076,8 +46080,10 @@ blockquote footer cite {
     color: #cbcbcb;
 }
 
-.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 a:hover {
-    color: #0c0c0e;
+@media (hover: hover) {
+    .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 a:hover {
+        color: #0c0c0e;
+    }
 }
 
 .related-links--with-images__cards {
