@@ -26330,6 +26330,12 @@ form:not([class]) .form__required-note--marker,
     }
 }
 
+@media (max-width: 767px) {
+    .banner__standfirst {
+        padding: 2rem 1rem 2rem 1rem;
+    }
+}
+
 @media (min-width: 1280px) {
     .banner__standfirst {
         grid-column: 4 / 16;
@@ -26340,18 +26346,6 @@ form:not([class]) .form__required-note--marker,
 @media (max-width: 1023px) {
     main > .case-study .banner-standfirst-label .banner__image {
         grid-column: 1 / span 24;
-    }
-    main > .case-study .banner__standfirst {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    main > .case-study .banner__standfirst {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
     }
 }
 
