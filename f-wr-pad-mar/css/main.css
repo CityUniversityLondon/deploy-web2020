@@ -73039,6 +73039,13 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
+@media (max-width: 767px) {
+    .lifelong-learning .lifelong-learning__introduction {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 .lifelong-learning .lifelong-learning__selling-points__background {
     background: linear-gradient(180deg, #5d184a 50%, #f2f2f2 50%);
     background-repeat: no-repeat;
