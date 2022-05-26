@@ -971,19 +971,15 @@ Company__Container.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _chart__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chart */ "./src/patterns/destination-leavers-higher-ed/components/results/chart.js");
-/* harmony import */ var _companys__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./companys */ "./src/patterns/destination-leavers-higher-ed/components/results/companys.js");
-/* harmony import */ var _institutions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./institutions */ "./src/patterns/destination-leavers-higher-ed/components/results/institutions.js");
-/* harmony import */ var _job__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./job */ "./src/patterns/destination-leavers-higher-ed/components/results/job.js");
-/* harmony import */ var _salary__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./salary */ "./src/patterns/destination-leavers-higher-ed/components/results/salary.js");
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _chart__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chart */ "./src/patterns/destination-leavers-higher-ed/components/results/chart.js");
+/* harmony import */ var _companys__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./companys */ "./src/patterns/destination-leavers-higher-ed/components/results/companys.js");
+/* harmony import */ var _institutions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./institutions */ "./src/patterns/destination-leavers-higher-ed/components/results/institutions.js");
+/* harmony import */ var _job__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./job */ "./src/patterns/destination-leavers-higher-ed/components/results/job.js");
+/* harmony import */ var _salary__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./salary */ "./src/patterns/destination-leavers-higher-ed/components/results/salary.js");
 
 
 /**
@@ -1006,39 +1002,39 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Finder__Results__Generic(props) {
-  const company = props.details.metaData.companys ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_companys__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    text: props.details.metaData.companys
+  const company = props.details.listMetadata.companys ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_companys__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    text: props.details.listMetadata.companys[0]
   }) : null,
-        institutions = props.details.metaData.institutions ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_institutions__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    text: props.details.metaData.institutions
+        institutions = props.details.listMetadata.institutions ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_institutions__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    text: props.details.listMetadata.institutions[0]
   }) : null,
-        jobT = props.details.metaData.jobT ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_job__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    text: props.details.metaData.jobT
+        jobT = props.details.listMetadata.jobT ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_job__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    text: props.details.listMetadata.jobT[0]
   }) : null,
-        salary = props.details.metaData.salary ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_salary__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    text: props.details.metaData.salary
+        salary = props.details.listMetadata.salary ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_salary__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    text: props.details.listMetadata.salary[0]
   }) : null;
-  const charts = props.details.metaData.chart.split('|'),
+  const charts = props.details.listMetadata.chart,
         data = charts.map(d => JSON.parse(d));
   let count = 0;
-  props.details.metaData.companys && count++;
-  props.details.metaData.institutions && count++;
-  props.details.metaData.jobT && count++;
-  props.details.metaData.salary && count++;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  props.details.listMetadata.companys && count++;
+  props.details.listMetadata.institutions && count++;
+  props.details.listMetadata.jobT && count++;
+  props.details.listMetadata.salary && count++;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "destination-leaver"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "card__details__text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "card__heading"
-  }, "Showing data for ", props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, "Showing data for ", props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "card__description"
-  }, props.details.metaData.c && props.details.metaData.c)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, props.details.listMetadata.c && props.details.listMetadata.c[0])), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "chart-row chart-row--columns"
   }, data.map((c, i) => {
     let k = `${c[0].title}${i}${c[0].id}`;
     let chartsLength = data.length === 1 ? true : false;
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_chart__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_chart__WEBPACK_IMPORTED_MODULE_2__["default"], {
       key: k,
       data: c[0].chart,
       title: c[0].title,
@@ -1046,14 +1042,14 @@ function Finder__Results__Generic(props) {
       chartsLength: chartsLength,
       chartId: parseInt(c[0].id)
     });
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "destination-leaver-content",
     "data-length": count
   }, salary, company, institutions, jobT));
 }
 
 Finder__Results__Generic.propTypes = {
-  details: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object
+  details: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Generic);
 
