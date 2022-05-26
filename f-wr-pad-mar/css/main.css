@@ -26247,6 +26247,12 @@ form:not([class]) .form__required-note--marker,
     }
 }
 
+@media (max-width: 767px) {
+    .banner-text .banner-text__content {
+        padding: 0;
+    }
+}
+
 .banner-text.banner--center .banner-text__content {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
@@ -61920,6 +61926,12 @@ main > .error {
         grid-column: 4 / span 18;
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    main > .event .event__content {
+        padding: 0;
     }
 }
 
