@@ -59171,6 +59171,12 @@ main > .case-study--business .case-study--business__content {
     }
 }
 
+@media (max-width: 767px) {
+    main > .case-study--business .case-study--business__content {
+        margin: 0;
+    }
+}
+
 @media (min-width: 1024px) {
     main {
         margin-left: 1rem;
