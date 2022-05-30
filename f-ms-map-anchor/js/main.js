@@ -2371,7 +2371,7 @@ function createMap(mapContainer) {
    * Create a LatLng object containing the coordinate for the center of the map
    * @let {Object}
    */
-  latlng = new google.maps.LatLng(51.527761, -0.103283),
+  latlng = new google.maps.LatLng('51.527761', '-0.103283'),
 
   /**
    * an object literal containing the properties we want to pass to the map
@@ -2553,40 +2553,6 @@ function createMap(mapContainer) {
     hashChange(callerId);
   }
   /**
-   * Shows any overlays currently in the array
-   * @parameter {Array} markersArray: a collection of markers
-   * @return {Undefined}
-   */
-  // Doesn't return anything
-  // function showOverlays(markersArray) {
-  //     console.log('showOverlays function');
-  //     let i;
-  //     if (markersArray) {
-  //         for (i in markersArray) {
-  //             if (
-  //                 markersArray.hasOwnProperty(i) &&
-  //                 typeof markersArray[i] !== 'function'
-  //             ) {
-  //                 markersArray[i].setMap(map);
-  //             }
-  //         }
-  //     }
-  // };
-
-  /**
-   * creates a new category of place in CityLayers object
-   * @parameter {String} name: the new name of the category ?
-   * @return {Undefined}
-   */
-  // function newCategory(name) {
-  //     Doesn't return anything
-  //     console.log('newCategory function');
-  //     name.toggler = null; // walter replaced with name - was this
-  //     name.markersArray = [];
-  //     name.zoomLevel = 17;
-  // };
-
-  /**
    *  creates individual markers, builds a corresponding filter item, binds a infoWindow to marker with html
    * and populates accordions
    * @parameter {Object} markerConfig: an object containing letious marker configuration options
@@ -2622,7 +2588,7 @@ function createMap(mapContainer) {
         return ' minute';
       }
     } // add description and close div element
-    //html += markerConfig.description.replace(/\<h2/g, '<h4').replace(/\h2>/g, 'h4>')  + '</div>';
+    // html += markerConfig.description.replace(/\<h2/g, '<h4').replace(/\h2>/g, 'h4>')  + '</div>';
 
 
     markerConfig.buildingPrefix ? html += '<p>Rooms beginning: ' + markerConfig.buildingPrefix + '</p>' : null;
@@ -2651,8 +2617,8 @@ function createMap(mapContainer) {
 
       markerConfig.openingHours.forEach(function (item) {
         let string = item.trim();
-        let day = string.slice(0, 3);
-        let hours = string.slice(3);
+        let day = string.slice(0, '3');
+        let hours = string.slice('3');
         let match;
 
         for (let i = 0; i < timeSlot.length; i++) {
@@ -2697,7 +2663,6 @@ function createMap(mapContainer) {
     marker.set('infoHtml', html); // attach event listener for marker click to handle infoWindow
 
     google.maps.event.addListener(marker, 'click', function () {
-      //closure in a loop shizzle - I find this hard to get my head around - returning a closure seems to help
       return updateHash(marker);
     }); // create list element
 
@@ -2717,7 +2682,6 @@ function createMap(mapContainer) {
       val: '#'
     }]);
     anchor.addEventListener('click', function (e) {
-      //console.log('anchor click');
       e.preventDefault();
       updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', '')); // closes locations panel and any open accordions, clears search
 
@@ -2730,32 +2694,6 @@ function createMap(mapContainer) {
     listId ? listId.appendChild(listItem).appendChild(anchor) : null;
     return marker;
   } //end fn.createMarker
-  // Deletes all markers in the array by removing references to them
-  //commented out to keep JSLint happy as this function is not currently used
-  // function deleteOverlays(markersArray) {
-  //     Doesn't return anything
-  //     console.log('deleteOverlays function');
-  //     let i;
-  //     if (markersArray) {
-  //         for (i in markersArray) {
-  //             if (typeof markersArray[i] !== 'function') {
-  //                 markersArray[i].setMap(null);
-  //             }
-  //         }
-  //         markersArray.length = 0;
-  //     }
-  // };
-  // function findChildText(node, name) {
-  //     Doesn't return anything
-  //     console.log('findChildText function');
-  //     let value = '';
-  //     let children = node.getElementsByTagName(name);
-  //     let childrenLength = node.getElementsByTagName(name).length;
-  //     if (childrenLength > 0) {
-  //         value = children[0].textContent;
-  //     }
-  //     return value;
-  // };
 
   /**
    * parses locations xml and creates markers
@@ -2844,7 +2782,7 @@ function createMap(mapContainer) {
       // listens for search queries
       searchBox.addEventListener('keyup', function (e) {
         // if key press down arrow
-        if (e.keyCode === 40) {
+        if (e.keyCode === parseInt('40')) {
           searchItemFocus(e.keyCode);
         } else {
           // clears previous suggestions, and 'clear search button' if exists
@@ -2959,7 +2897,7 @@ function createMap(mapContainer) {
       function searchItemFocus(keyCode) {
         let collectionNum = document.getElementById('query__suggestions').querySelectorAll('li').length; // Down arrow pressed
 
-        if (keyCode === 40) {
+        if (keyCode === parseInt('40')) {
           let focusState = parseInt(document.getElementById('query__suggestions').getAttribute('data-focus'));
 
           if (focusState + 1 !== collectionNum) {
@@ -2967,7 +2905,7 @@ function createMap(mapContainer) {
             document.getElementById('query__suggestions').setAttribute('data-focus', focusState + 1);
           }
         } // Up arrow pressed
-        else if (keyCode === 38) {
+        else if (keyCode === parseInt('38')) {
           let focusState = parseInt(document.getElementById('query__suggestions').getAttribute('data-focus'));
 
           if (focusState - 1 !== -1) {
@@ -3004,7 +2942,7 @@ function createMap(mapContainer) {
     let xhttp = new XMLHttpRequest();
 
     xhttp.onreadystatechange = function () {
-      if (xhttp.readyState === 4 && xhttp.status === 200) {
+      if (xhttp.readyState === parseInt('4') && xhttp.status === parseInt('200')) {
         parseXml(xhttp.responseXML);
       }
     };
@@ -3108,7 +3046,6 @@ function createMap(mapContainer) {
   }); // Clears search string from location search
 
   function clearSearchString() {
-    // console.log('clearSearchString function');
     searchBox.value = '';
     let clearSearch = document.querySelector('.campus-map__controls__search__clear');
     clearSearch ? clearSearch.remove() : null;
@@ -3116,7 +3053,6 @@ function createMap(mapContainer) {
 
 
   function clearsSearchSuggestions() {
-    // console.log('clearsSearchSuggestions function');
     let listWrapper = searchBox.parentElement.querySelector('.query__suggestions__wrapper');
     let clearSearchButton = document.querySelector('.campus-map__controls__search__clear');
     listWrapper ? searchBox.parentElement.querySelector('.query__suggestions__wrapper').remove() : null;
