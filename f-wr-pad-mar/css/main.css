@@ -26356,6 +26356,20 @@ form:not([class]) .form__required-note--marker,
 }
 
 @media (min-width: 1024px) {
+    main > .listing .banner-text {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main > .listing .banner-text {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
     main > article .banner-standfirst-label {
         display: grid;
     }
