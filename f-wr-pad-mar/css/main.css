@@ -75304,7 +75304,8 @@ main .standard-content .content {
     main > .course--ug .course-footer,
     main > .course--ug .course--ug__whats-happening,
     main > .course--ug .course--ug__tabs__wrap,
-    main > .course--ug .course--ug__related-courses__wrapper {
+    main > .course--ug .course--ug__related-courses__wrapper,
+    main > .course--ug .course--ug__announcement--clearing {
         grid-column: 1/-1;
     }
     main > .course--ug .courses--ug__facilities,
