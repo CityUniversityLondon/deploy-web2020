@@ -26570,7 +26570,7 @@ form:not([class]) .form__required-note--marker,
 
 .banner-svg--wrapper__title h1,
 .banner-svg--wrapper__title p {
-    max-width: 80rem;
+    max-width: none;
 }
 
 .banner-svg--wrapper__title:after {
