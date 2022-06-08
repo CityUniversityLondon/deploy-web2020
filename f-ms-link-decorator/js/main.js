@@ -4304,10 +4304,12 @@ const className = 'link-finder';
  */
 
 function prependIcon(anchor, className) {
+  // let customEl = anchor.querySelector(position);
+  // console.log(customEl.innerText);
+  // customEl[0].insertBefore('<span>test</span>', customEl[0]);
   let node = document.createElement('span');
   node.className = 'fas ' + className + '  link-decorator';
-  node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].hidden, true);
-  anchor.parentNode.insertBefore(node, anchor);
+  node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].hidden, true); // position ? anchor.parentNode.insertAfter(node, anchor) : anchor.parentNode.insertBefore(node, anchor);
 }
 /**
  * Checks if anchor has to have external URL icon
@@ -4342,8 +4344,11 @@ function findDocumentLinks(anchor) {
   };
 
   for (let key in fileTypes) {
+    let anchorIsCta = anchor.parentElement.className.includes('cta-block');
+
     if (anchor.href.indexOf('.' + key) !== -1) {
-      prependIcon(anchor, 'fa-file-' + fileTypes[key]);
+      anchorIsCta ? prependIcon(anchor, 'fa-file-' + fileTypes[key], 'span') : prependIcon(anchor, 'fa-file-' + fileTypes[key]); // prependIcon(anchor, 'fa-file-' + fileTypes[key]);
+
       let anchorText = anchor.textContent;
       anchorText += ' [' + key.toUpperCase() + ']';
       anchor.textContent = null;
