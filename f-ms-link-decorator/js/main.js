@@ -4297,36 +4297,43 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'link-finder';
 /**
- * Function that prepends icon to anchor parameter
+ * Prepends icon to anchor element.
  *
  * @param {HTMLElement} anchor - HTML element to prepend icon to
  * @param {string} className - class name to specify FA icon
  */
 
 function prependIcon(anchor, className) {
-  // console.log('ppi');
-  // console.log(anchor);
   let node = document.createElement('span');
   node.className = 'fas ' + className + '  link-decorator';
   node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].hidden, true);
   anchor.parentNode.insertBefore(node, anchor);
 }
 /**
- * Function that adds an icon inside anchor element
+ * Adds icon inside anchor element.
  *
- * @param {HTMLElement} anchor - HTML element to prepend icon to
+ * 1. Capture CTA text
+ * 2. Clear CTA text
+ * 3. Add data-theme attribute to anchor for icon styling
+ * 4. Render CTA with sibling spans for icon type and CTA text
+ *
+ * @param {HTMLElement} anchor - HTML element to insert icon inside
  * @param {string} className - class name to specify FA icon
  */
-// function insertIconInside(anchor, className) {
-//     console.log('ppi');
-//     console.log(anchor);
-//     let node = document.createElement('span');
-//     node.className = 'fas ' + className + '  link-decorator';
-//     node.setAttribute(aria.hidden, true);
-//     let textContent = anchor.textContent;
-//     anchor.remove();
-// }
 
+
+function insertIcon(anchor, className) {
+  let ctaText = anchor.textContent;
+  anchor.textContent = '';
+  anchor.setAttribute('data-theme', 'color');
+  let spanNodeIcon = document.createElement('span');
+  spanNodeIcon.className = 'link-decorator fas ' + className;
+  let spanNodeText = document.createElement('span');
+  let spanNodeTextContent = document.createTextNode(ctaText);
+  spanNodeText.appendChild(spanNodeTextContent);
+  anchor.appendChild(spanNodeIcon);
+  anchor.appendChild(spanNodeText);
+}
 /**
  * Checks if anchor has to have external URL icon
  *
@@ -4361,22 +4368,17 @@ function findDocumentLinks(anchor) {
 
   for (let key in fileTypes) {
     if (anchor.href.indexOf('.' + key) !== -1) {
+      let anchorText = anchor.textContent;
+      anchorText += ' [' + key.toUpperCase() + ']';
+      anchor.textContent = null;
+      anchor.textContent = anchorText;
+
       if (anchor.parentElement.className.includes('cta-block')) {
-        let ctaText = anchor.textContent;
-        anchor.textContent = '';
-        anchor.setAttribute('data-theme', 'color');
-        let spanNodeIcon = document.createElement('span');
-        spanNodeIcon.className = 'link-decorator fas fa-file-' + fileTypes[key];
-        let spanNodeText = document.createElement('span');
-        let spanNodeTextChars = document.createTextNode(ctaText);
-        spanNodeText.appendChild(spanNodeTextChars);
-        anchor.appendChild(spanNodeIcon);
-        anchor.appendChild(spanNodeText); // insertIconInside(anchor, 'fa-file-' + fileTypes[key]);
+        insertIcon(anchor, 'fa-file-' + fileTypes[key]);
       } else {
         prependIcon(anchor, 'fa-file-' + fileTypes[key]);
+        break; // Ensures only one icon is prepended when duplicate file types exist, e.g. doc and docx
       }
-
-      break;
     }
   }
 }

@@ -36798,13 +36798,16 @@ figure figcaption a:active,
     }
 }
 
-[data-theme='color'] .link-decorator {
-    color: #ffffff;
+.link-decorator {
+    margin-right: 0.5rem;
 }
 
-.link-decorator {
+:not(a) > .link-decorator {
     color: #d61726;
-    margin-right: 0.5rem;
+}
+
+a .link-decorator {
+    margin-top: calc(0.25rem + (0.125rem));
 }
 
 .inline-external-link {
