@@ -45737,6 +45737,10 @@ blockquote footer cite {
     color: #ffffff;
 }
 
+.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 .link-decorator {
+    color: #ffffff;
+}
+
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 a {
     background-color: initial;
     background-image: initial;
@@ -45857,6 +45861,10 @@ blockquote footer cite {
     color: #ffffff;
 }
 
+.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 .link-decorator {
+    color: #ffffff;
+}
+
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 a {
     background-color: initial;
     background-image: initial;
@@ -45974,6 +45982,10 @@ blockquote footer cite {
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 {
+    color: #ffffff;
+}
+
+.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 .link-decorator {
     color: #ffffff;
 }
 
