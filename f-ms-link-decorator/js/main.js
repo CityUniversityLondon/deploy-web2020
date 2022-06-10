@@ -4297,20 +4297,36 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'link-finder';
 /**
- * Function that prepends icon to anchor paramater
+ * Function that prepends icon to anchor parameter
  *
  * @param {HTMLElement} anchor - HTML element to prepend icon to
  * @param {string} className - class name to specify FA icon
  */
 
 function prependIcon(anchor, className) {
-  // let customEl = anchor.querySelector(position);
-  // console.log(customEl.innerText);
-  // customEl[0].insertBefore('<span>test</span>', customEl[0]);
+  // console.log('ppi');
+  // console.log(anchor);
   let node = document.createElement('span');
   node.className = 'fas ' + className + '  link-decorator';
-  node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].hidden, true); // position ? anchor.parentNode.insertAfter(node, anchor) : anchor.parentNode.insertBefore(node, anchor);
+  node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].hidden, true);
+  anchor.parentNode.insertBefore(node, anchor);
 }
+/**
+ * Function that adds an icon inside anchor element
+ *
+ * @param {HTMLElement} anchor - HTML element to prepend icon to
+ * @param {string} className - class name to specify FA icon
+ */
+// function insertIconInside(anchor, className) {
+//     console.log('ppi');
+//     console.log(anchor);
+//     let node = document.createElement('span');
+//     node.className = 'fas ' + className + '  link-decorator';
+//     node.setAttribute(aria.hidden, true);
+//     let textContent = anchor.textContent;
+//     anchor.remove();
+// }
+
 /**
  * Checks if anchor has to have external URL icon
  *
@@ -4344,15 +4360,22 @@ function findDocumentLinks(anchor) {
   };
 
   for (let key in fileTypes) {
-    let anchorIsCta = anchor.parentElement.className.includes('cta-block');
-
     if (anchor.href.indexOf('.' + key) !== -1) {
-      anchorIsCta ? prependIcon(anchor, 'fa-file-' + fileTypes[key], 'span') : prependIcon(anchor, 'fa-file-' + fileTypes[key]); // prependIcon(anchor, 'fa-file-' + fileTypes[key]);
+      if (anchor.parentElement.className.includes('cta-block')) {
+        let ctaText = anchor.textContent;
+        anchor.textContent = '';
+        anchor.setAttribute('data-theme', 'color');
+        let spanNodeIcon = document.createElement('span');
+        spanNodeIcon.className = 'link-decorator fas fa-file-' + fileTypes[key];
+        let spanNodeText = document.createElement('span');
+        let spanNodeTextChars = document.createTextNode(ctaText);
+        spanNodeText.appendChild(spanNodeTextChars);
+        anchor.appendChild(spanNodeIcon);
+        anchor.appendChild(spanNodeText); // insertIconInside(anchor, 'fa-file-' + fileTypes[key]);
+      } else {
+        prependIcon(anchor, 'fa-file-' + fileTypes[key]);
+      }
 
-      let anchorText = anchor.textContent;
-      anchorText += ' [' + key.toUpperCase() + ']';
-      anchor.textContent = null;
-      anchor.textContent = anchorText;
       break;
     }
   }
