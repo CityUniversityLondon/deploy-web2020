@@ -1481,14 +1481,10 @@ Finder__Results__Research.propTypes = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 
 
 /**
@@ -1504,7 +1500,7 @@ function Finder__Checkbox(props) {
         stringOffset = -4,
         randomNumber = Math.random().toString(stringLength).slice(stringOffset),
         toggleChecked = (props.facet.meta in props.query.facets),
-        responseFacetValue = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(value => value.data.toLowerCase() === props.facet.checkedValue.toLowerCase());
+        responseFacetValue = props.responseFacet[0] && props.responseFacet[0].allValues && props.responseFacet[0].allValues.filter(value => value.data.toLowerCase() === props.facet.checkedValue.toLowerCase());
 
   if (responseFacetValue && responseFacetValue[0] && responseFacetValue[0].count > 0) {
     const toggleFacet = () => {
@@ -1520,22 +1516,22 @@ function Finder__Checkbox(props) {
       props.update.results(!props.update.updateState);
     };
 
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "finder__filter finder__checkbox"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "checkbox",
       id: `meta_${props.facet.meta}_sand--${randomNumber}`,
       name: `meta_${props.facet.meta}_sand`,
       value: props.facet.checkedValue,
       onChange: () => toggleFacet(),
       checked: toggleChecked
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "finder__checkbox__indicator finder__checkbox__indicator",
       "aria-hidden": "true",
       onClick: () => toggleFacet()
-    }, toggleChecked ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    }, toggleChecked ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "fa fa-fw fas fa-check icon"
-    }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+    }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       className: "finder__filters__label--always",
       htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
     }, props.facet.name, !toggleChecked && responseFacetValue && ' (' + responseFacetValue[0].count + ')'));
@@ -1545,11 +1541,11 @@ function Finder__Checkbox(props) {
 }
 
 Finder__Checkbox.propTypes = {
-  facet: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object),
-  update: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object,
-  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.object)
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object)
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Checkbox);
 
