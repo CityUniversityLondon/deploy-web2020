@@ -1933,7 +1933,7 @@ function Finder__Select(props) {
   }, []); // reduce the Funnelback response for the facet to an array of valid
   // values for the current query
 
-  const responseFacets = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values ? props.responseFacet[0].categories[0].values.reduce((acc, data) => {
+  const responseFacets = props.responseFacet[0] && props.responseFacet[0].allValues ? props.responseFacet[0].allValues.reduce((acc, data) => {
     return [...acc, data.data];
   }, []) : []; // count how many possible facets are not valid for the current query
   // and will be hidden
@@ -3318,8 +3318,8 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 const baseUrl = 'https://www.city.ac.uk/web-services',
-      findRootUrl = '/funnelback-find',
-      suggestRootUrl = '/funnelback-suggest',
+      findRootUrl = '/dn-new-data-model-funnelback-find',
+      suggestRootUrl = '/dn-new-data-model-funnelback-suggest',
       maximumSuggestions = 100,
       timeout = 30000;
 /**
