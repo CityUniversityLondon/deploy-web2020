@@ -308,7 +308,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _events_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./events__select */ "./src/patterns/events/components/filters/events__select.js");
-/* harmony import */ var _events_select__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_events_select__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _finder_components_filters_finder_checkbox__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../finder/components/filters/finder__checkbox */ "./src/patterns/finder/components/filters/finder__checkbox.js");
 /* harmony import */ var _finder_components_filters_finder_tag__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../finder/components/filters/finder__tag */ "./src/patterns/finder/components/filters/finder__tag.js");
 /* harmony import */ var _finder_components_filters_finder_reset__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../finder/components/filters/finder__reset */ "./src/patterns/finder/components/filters/finder__reset.js");
@@ -404,7 +403,7 @@ function Finder__Filters(props) {
     if (dependencyMet(facet, props.query.facets)) {
       switch (facet.type) {
         case 'select':
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_events_select__WEBPACK_IMPORTED_MODULE_2___default.a, {
+          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_events_select__WEBPACK_IMPORTED_MODULE_2__["default"], {
             key: facet.meta,
             facet: facet,
             query: props.query,
@@ -611,10 +610,117 @@ Finder__FiltersMobile.propTypes = {
 /*!******************************************************************!*\
   !*** ./src/patterns/events/components/filters/events__select.js ***!
   \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/rof/src/github.com/CityUniversityLondon/web2020/src/patterns/events/components/filters/events__select.js: Unexpected token (27:12)\n\n\u001b[0m \u001b[90m 25 |\u001b[39m         props\u001b[33m.\u001b[39mresponseFacet[\u001b[35m0\u001b[39m] \u001b[33m&&\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m         props\u001b[33m.\u001b[39mresponseFacet[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mallValues \u001b[33m&&\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m             \u001b[33m?\u001b[39m props\u001b[33m.\u001b[39mresponseFacet[\u001b[35m0\u001b[39m]\u001b[33m.\u001b[39mallValues\u001b[33m.\u001b[39mreduce(\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m                   (acc\u001b[33m,\u001b[39m data) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m \u001b[90m 29 |\u001b[39m                       \u001b[36mreturn\u001b[39m [\u001b[33m...\u001b[39macc\u001b[33m,\u001b[39m data\u001b[33m.\u001b[39mdata]\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 30 |\u001b[39m                   }\u001b[33m,\u001b[39m\u001b[0m\n    at Object._raise (/home/rof/src/github.com/CityUniversityLondon/web2020/node_modules/@babel/parser/src/parser/error.js:147:45)\n    at Object.raiseWithData (/home/rof/src/github.com/CityUniversityLondon/web2020/node_modules/@babel/parser/src/parser/error.js:142:17)\n    at Object.raise (/home/rof/src/github.com/CityUniversityLondon/web2020/node_modules/@babel/parser/src/parser/error.js:91:17)\n    at Object.unexpected (/home/rof/src/github.com/CityUniversityLondon/web2020/node_modules/@babel/parser/src/parser/util.js:174:16)\n    at Object.parseExprAtom (/home/rof/src/github.com/CityUniversityLondon/web2020/node_modules/@babel/parser/src/parser/expression.js:1296:22)\n    at Object.parseExprAtom (/home/rof/src/github.com/CityUniversityLondon/web2020/node_modules/@babel/parser/src/plugins/jsx/index.js:558:22)\n    at Object.parseExprSubscripts (/home/rof/src/github.com/CityUniversityLondon/web2020/node_modules/@babel/parser/src/parser/expression.js:668:23)\n    at Object.parseUpdate (/home/rof/src/github.com/CityUniversityLondon/web2020/node_modules/@babel/parser/src/parser/expression.js:648:21)\n    at Object.parseMaybeUnary (/home/rof/src/github.com/CityUniversityLondon/web2020/node_modules/@babel/parser/src/parser/expression.js:619:23)\n    at Object.parseMaybeUnaryOrPrivate (/home/rof/src/github.com/CityUniversityLondon/web2020/node_modules/@babel/parser/src/parser/expression.js:372:14)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.reduce.js */ "./node_modules/core-js/modules/es.array.reduce.js");
+/* harmony import */ var core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_reduce_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+/**<
+ * @module patterns/finder/components/finder__select
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+function Events__Select(props) {
+  const stringLength = 16,
+        stringOffset = -4,
+        randomNumber = Math.random().toString(stringLength).slice(stringOffset),
+        currentValue = props.query.facets[props.facet.meta] || ''; // reduce the facet configuration to an array of all possible values for
+  // the facet
+
+  const allFacets = props.facet.values.reduce((acc, data) => {
+    return [...acc, data];
+  }, []); // reduce the Funnelback response for the facet to an array of valid
+  // values for the current query
+
+  const responseFacets = props.responseFacet[0] && props.responseFacet[0].allValues ? props.responseFacet[0].allValues.reduce((acc, data) => {
+    return [...acc, data.data];
+  }, []) : []; // count how many possible facets are not valid for the current query
+  // and will be hidden
+
+  const hiddenFacets = allFacets.map(facet => facet.data).filter(facet => responseFacets.indexOf(facet.toLowerCase()) < 0).length;
+
+  const setFacet = value => {
+    const newQuery = props.query,
+          pastEventsNewQuery = props.pastEventsQuery;
+    props.dependencies.map(facet => {
+      delete newQuery.facets[facet.meta];
+    });
+
+    if (value) {
+      newQuery.facets[props.facet.meta] = value;
+      pastEventsNewQuery.facets[props.facet.meta] = value;
+    } else {
+      delete newQuery.facets[props.facet.meta];
+      delete pastEventsNewQuery.facets[props.facet.meta];
+    }
+
+    newQuery.startRank = 1;
+    newQuery.misspelling = null;
+    newQuery.interacted = true;
+    pastEventsNewQuery.startRank = 1;
+    pastEventsNewQuery.misspelling = null;
+    pastEventsNewQuery.interacted = true;
+    props.update.query(newQuery);
+    props.pastEventsUpdate.query(pastEventsNewQuery);
+    props.update.results(!props.update.updateState);
+  };
+
+  if (props.facet.values.length > hiddenFacets) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      className: `finder__filter finder__select ${currentValue && 'finder__select--selected'}`
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
+      htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
+    }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("select", {
+      name: props.facet.name,
+      id: `meta_${props.facet.meta}_sand--${randomNumber}`,
+      onChange: e => setFacet(e.target.value),
+      value: currentValue
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("option", {
+      value: "",
+      id: `meta${props.facet.meta}all`,
+      name: `meta_${props.facet.meta}_sand--${randomNumber}`
+    }, props.facet.noSelection), props.facet.values.map((value, i) => {
+      const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].categories[0] && props.responseFacet[0].categories[0].values.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.toLowerCase());
+
+      if (currentValue.toLowerCase() === value.data.toLowerCase() || responseFacetDetails && responseFacetDetails[0]) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("option", {
+          key: i,
+          value: value.data.toLowerCase()
+        }, value.label, currentValue !== value.data ? responseFacetDetails[0].count > 0 && ` (${responseFacetDetails[0].count})` : '');
+      } else {
+        return null;
+      }
+    })));
+  } else {
+    return null;
+  }
+}
+
+Events__Select.propTypes = {
+  facet: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  query: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object),
+  update: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  pastEventsUpdate: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object,
+  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.object)
+};
+/* harmony default export */ __webpack_exports__["default"] = (Events__Select);
 
 /***/ }),
 
