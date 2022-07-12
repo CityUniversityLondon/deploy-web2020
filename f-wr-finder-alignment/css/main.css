@@ -56996,12 +56996,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     color: #1e1e1e;
 }
 
-@-moz-document url-prefix() {
-    .finder__select select {
-        margin-left: -0.25rem;
-    }
-}
-
 .finder__input-text__wrapper {
     background-color: #ffffff;
     display: flex;
