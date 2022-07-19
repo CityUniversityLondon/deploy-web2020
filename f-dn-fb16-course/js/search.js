@@ -1530,8 +1530,8 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 const baseUrl = 'https://www.city.ac.uk/web-services',
-      findRootUrl = '/funnelback-find',
-      suggestRootUrl = '/funnelback-suggest',
+      findRootUrl = '/funnelback-16-find',
+      suggestRootUrl = '/funnelback-16-suggest',
       maximumSuggestions = 100,
       timeout = 30000;
 /**
