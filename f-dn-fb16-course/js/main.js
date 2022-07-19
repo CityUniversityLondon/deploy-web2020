@@ -738,14 +738,21 @@ function cleanupTransition(section) {
 
 function buttonClick(button, headings, toggleOpen) {
   const heading = button.parentNode,
-        accordionSection = heading.nextElementSibling; // updates URL hash with clicked accordion heading
+        accordionSection = heading.nextElementSibling;
 
-  window.location.hash = event.currentTarget.parentElement.id;
+  if (button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded) === 'true') {
+    // updates URL hash, by removing hash from URL when accordion closes
+    history.pushState({}, null, location.href.split('#')[0]);
+  } else {
+    // updates URL hash with accordion heading, when accordion opens
+    window.location.hash = event.currentTarget.parentElement.id;
+  }
   /**
    * After we've transitioned the opening/closing, we want to revert to
    * letting the CSS size the element. Add a listener to do this that will
    * self-destruct after running.
    */
+
 
   accordionSection.addEventListener('transitionend', () => cleanupTransition(accordionSection), {
     capture: true,
@@ -882,7 +889,7 @@ function launchAccordion(accordion) {
     } // determines if the hash is perhaps of an accordion which kicks in on smaller viewports, as part of a tabs / accordion pattern
 
 
-    if (accordion.parentElement.className == 'tabs--accordion' && accordion.parentElement.querySelector('' + urlHash + '') && viewportWidth <= Object(_util__WEBPACK_IMPORTED_MODULE_2__["screenWidth"])('tablet')) {
+    if (accordion.parentElement.className === 'tabs--accordion' && accordion.parentElement.querySelector('' + urlHash + '') && viewportWidth <= Object(_util__WEBPACK_IMPORTED_MODULE_2__["screenWidth"])('tablet')) {
       let hashConvert = urlHash.replace('tabs', 'accordion').replace('link', 'header'); // Wait for DOM to load before accessing selected accordion
 
       window.onload = function () {
