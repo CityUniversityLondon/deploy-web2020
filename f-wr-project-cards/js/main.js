@@ -738,14 +738,21 @@ function cleanupTransition(section) {
 
 function buttonClick(button, headings, toggleOpen) {
   const heading = button.parentNode,
-        accordionSection = heading.nextElementSibling; // updates URL hash with clicked accordion heading
+        accordionSection = heading.nextElementSibling;
 
-  window.location.hash = event.currentTarget.parentElement.id;
+  if (button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded) === 'true') {
+    // updates URL hash, by removing hash from URL when accordion closes
+    history.pushState({}, null, location.href.split('#')[0]);
+  } else {
+    // updates URL hash with accordion heading, when accordion opens
+    window.location.hash = event.currentTarget.parentElement.id;
+  }
   /**
    * After we've transitioned the opening/closing, we want to revert to
    * letting the CSS size the element. Add a listener to do this that will
    * self-destruct after running.
    */
+
 
   accordionSection.addEventListener('transitionend', () => cleanupTransition(accordionSection), {
     capture: true,
@@ -882,7 +889,7 @@ function launchAccordion(accordion) {
     } // determines if the hash is perhaps of an accordion which kicks in on smaller viewports, as part of a tabs / accordion pattern
 
 
-    if (accordion.parentElement.className == 'tabs--accordion' && accordion.parentElement.querySelector('' + urlHash + '') && viewportWidth <= Object(_util__WEBPACK_IMPORTED_MODULE_2__["screenWidth"])('tablet')) {
+    if (accordion.parentElement.className === 'tabs--accordion' && accordion.parentElement.querySelector('' + urlHash + '') && viewportWidth <= Object(_util__WEBPACK_IMPORTED_MODULE_2__["screenWidth"])('tablet')) {
       let hashConvert = urlHash.replace('tabs', 'accordion').replace('link', 'header'); // Wait for DOM to load before accessing selected accordion
 
       window.onload = function () {
@@ -4214,7 +4221,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'link-finder';
 /**
- * Function that prepends icon to anchor paramater
+ * Prepends icon to anchor element.
  *
  * @param {HTMLElement} anchor - HTML element to prepend icon to
  * @param {string} className - class name to specify FA icon
@@ -4225,6 +4232,31 @@ function prependIcon(anchor, className) {
   node.className = 'fas ' + className + '  link-decorator';
   node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].hidden, true);
   anchor.parentNode.insertBefore(node, anchor);
+}
+/**
+ * Adds icon inside anchor element.
+ *
+ * 1. Capture CTA text
+ * 2. Clear CTA text
+ * 3. Add data-theme attribute to anchor for icon styling
+ * 4. Render CTA with sibling spans for icon type and CTA text
+ *
+ * @param {HTMLElement} anchor - HTML element to insert icon inside
+ * @param {string} className - class name to specify FA icon
+ */
+
+
+function insertIcon(anchor, className) {
+  let ctaText = anchor.textContent;
+  anchor.textContent = '';
+  anchor.setAttribute('data-theme', 'color');
+  let spanNodeIcon = document.createElement('span');
+  spanNodeIcon.className = 'link-decorator fas ' + className;
+  let spanNodeText = document.createElement('span');
+  let spanNodeTextContent = document.createTextNode(ctaText);
+  spanNodeText.appendChild(spanNodeTextContent);
+  anchor.appendChild(spanNodeIcon);
+  anchor.appendChild(spanNodeText);
 }
 /**
  * Checks if anchor has to have external URL icon
@@ -4260,12 +4292,17 @@ function findDocumentLinks(anchor) {
 
   for (let key in fileTypes) {
     if (anchor.href.indexOf('.' + key) !== -1) {
-      prependIcon(anchor, 'fa-file-' + fileTypes[key]);
       let anchorText = anchor.textContent;
       anchorText += ' [' + key.toUpperCase() + ']';
       anchor.textContent = null;
       anchor.textContent = anchorText;
-      break;
+
+      if (anchor.parentElement.className.includes('cta-block')) {
+        insertIcon(anchor, 'fa-file-' + fileTypes[key]);
+      } else {
+        prependIcon(anchor, 'fa-file-' + fileTypes[key]);
+        break; // Ensures only one icon is prepended when duplicate file types exist, e.g. doc and docx
+      }
     }
   }
 }

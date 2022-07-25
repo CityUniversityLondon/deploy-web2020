@@ -36786,8 +36786,15 @@ figure figcaption a:active,
 }
 
 .link-decorator {
-    color: #d61726;
     margin-right: 0.5rem;
+}
+
+:not(a) > .link-decorator {
+    color: #d61726;
+}
+
+a .link-decorator {
+    margin-top: calc(0.25rem + (0.125rem));
 }
 
 .inline-external-link {
@@ -45717,6 +45724,10 @@ blockquote footer cite {
     color: #ffffff;
 }
 
+.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 .link-decorator {
+    color: #ffffff;
+}
+
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 a {
     background-color: initial;
     background-image: initial;
@@ -45837,6 +45848,10 @@ blockquote footer cite {
     color: #ffffff;
 }
 
+.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 .link-decorator {
+    color: #ffffff;
+}
+
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 a {
     background-color: initial;
     background-image: initial;
@@ -45954,6 +45969,10 @@ blockquote footer cite {
 }
 
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 {
+    color: #ffffff;
+}
+
+.related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 .link-decorator {
     color: #ffffff;
 }
 
