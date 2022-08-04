@@ -688,6 +688,14 @@ function Finder__Results__Contact(props) {
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Email:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: 'mailto:' + props.details.listMetadata.email[0]
   }, props.details.listMetadata.email[0])),
+        altemail = props.details.listMetadata.altemail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "card__tag"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fad fa-user icon",
+    "aria-hidden": "true"
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Executive Assistant:"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: 'mailto:' + props.details.listMetadata.altemail[0]
+  }, props.details.listMetadata.altemail[0])),
         telephone = props.details.listMetadata.telephone && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "card__tag"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -718,7 +726,7 @@ function Finder__Results__Contact(props) {
     className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "card__heading"
-  }, props.details.title), jobtitle, school, department, room, email, telephone, enquiry)));
+  }, props.details.title), jobtitle, school, department, room, email, telephone, enquiry, altemail)));
 }
 
 Finder__Results__Contact.propTypes = {
