@@ -24256,7 +24256,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     color: #696969;
     font-style: italic;
     margin-left: 1rem;
-    margin-top: 1rem;
+    margin-top: 0;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -24334,10 +24334,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card.card--socialmedia .card__anchor .card--socialmedia__footer .card--socialmedia__time {
     color: #696969;
     font-style: italic;
-}
-
-.card.card--socialmedia.card--socialmedia--instagram .card__thumbnail__wrapper {
-    position: absolute;
 }
 
 .card.card--socialmedia.card--socialmedia--instagram .card--socialmedia__label--source {
