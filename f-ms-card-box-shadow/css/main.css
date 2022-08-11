@@ -21741,9 +21741,13 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
+.card.card--news .card__anchor .card__thumbnail + .card__details__text {
+    padding-top: 0;
+}
+
 .card.card--news .card__anchor .card__details__text {
     padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding-top: 1.25rem;
 }
 
 .card.card--news .card__anchor .card__type {
@@ -24286,6 +24290,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card.card--socialmedia .card__anchor .card__details__text {
     padding-bottom: 1rem;
     padding-top: 1rem;
+}
+
+.card.card--socialmedia .card__anchor .card__details__text:not(.card__thumbnail__wrapper) .card--socialmedia__label--source {
+    margin-top: 1.25rem;
 }
 
 .card.card--socialmedia .card__anchor .card__type {
@@ -55748,7 +55756,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 main > article .finder .finder__results__list .card .card__details__text {
-    padding: 1rem 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 @media (min-width: 1024px) {
@@ -64839,7 +64848,8 @@ main .home .home__whats-happening .related-content .card__details__text {
 
 .landing--functional .related-content .card .card__details__text,
 .landing--functional .card--socialmedia .card__details__text {
-    padding: 1rem 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 @media (max-width: 1024px) {
@@ -65421,7 +65431,8 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 
 .landing--latest .wrapper--landing--latest__latest-content--news .related-content .card .card__details__text,
 .landing--latest .wrapper--landing--latest__latest-content--events .related-content .card .card__details__text {
-    padding: 1rem 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 @media (max-width: 767px) {
@@ -74881,7 +74892,8 @@ main .standard-content .content {
 
 .standard-content .related-content .card .card__details__text,
 .standard-content .card--socialmedia .card__details__text {
-    padding: 1rem 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .standard-content .pathway .pathway__cards {
@@ -78621,7 +78633,8 @@ main .standard-content .content {
 
 .school__content__whats-happening .related-content .card .card__details__text,
 .school__content__whats-happening .card--socialmedia .card__details__text {
-    padding: 1rem 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .banner__standfirst-cta {
@@ -79997,7 +80010,8 @@ main .standard-content .content {
 
 .department__whats-happening .related-content .card .card__details__text,
 .department__whats-happening .card--socialmedia .card__details__text {
-    padding: 1rem 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .js .department .department__contact-us__footer__find-us .related-content:not(.slider) li:only-child {
