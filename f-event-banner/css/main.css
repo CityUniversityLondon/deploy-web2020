@@ -62521,6 +62521,10 @@ main header .event__info p em {
     .event__info__details ul {
         display: inline-flex;
     }
+    .event__info__details li {
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+    }
 }
 
 .event__info__details ul {
@@ -62535,8 +62539,6 @@ main header .event__info p em {
     flex-direction: row;
     flex-wrap: nowrap;
     margin-top: 0;
-    margin-bottom: 1rem;
-    margin-right: 1rem;
 }
 
 .event__info__cta {
