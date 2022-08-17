@@ -62446,6 +62446,10 @@ main header .event__info p em {
     font-style: italic;
 }
 
+main header .event__info__status p {
+    line-height: 1.266;
+}
+
 .event__dates {
     font-size: 0.889rem;
     line-height: 1.625;
@@ -62554,6 +62558,7 @@ main header .event__info p em {
 @media (min-width: 1024px) {
     .event__info__details ul {
         display: inline-flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -62569,6 +62574,43 @@ main header .event__info p em {
         margin-bottom: 0.5rem;
         margin-right: 0.5rem;
     }
+}
+
+@media (min-width: 768px) {
+    .event__info__details--shorttext ul {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 769px) {
+    .event__info__status {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .event__info__status {
+        margin-top: 1rem;
+    }
+}
+
+.event__info__status p {
+    display: inline;
+    background-color: #919191;
+    box-shadow: 0.5rem 0 0 #919191, -0.5rem 0 0 #919191;
+    padding: 0.5rem;
+    color: #ffffff;
+}
+
+.event__info__status.event__cancel-postponed p {
+    background-color: #d61726;
+    box-shadow: 0.5rem 0 0 #d61726, -0.5rem 0 0 #d61726;
+}
+
+.event__info__status.event__past p {
+    background-color: #0c0c0e;
+    box-shadow: 0.5rem 0 0 #0c0c0e, -0.5rem 0 0 #0c0c0e;
 }
 
 .event__info__cta {
