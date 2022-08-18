@@ -62228,32 +62228,8 @@ main > .error {
 @media (max-width: 767px) {
     .event .banner__standfirst h1,
     .event .banner__standfirst .event__info {
-        text-align: initial;
+        text-align: left;
     }
-}
-
-.event .event__top__gradient {
-    background-image: linear-gradient(to top, #ffffff, #f2f2f2);
-}
-
-.event .event__top__gradient .background--purple80 {
-    background-color: #3f1464;
-}
-
-.event .event__top__gradient .background--pink80 {
-    background-color: #5d184a;
-}
-
-.event .event__top__gradient .background--blue80 {
-    background-color: #11334c;
-}
-
-.event .event__top__gradient .background--red80 {
-    background-color: #790b21;
-}
-
-.event .event__top__gradient .banner--image-generic {
-    padding-bottom: 4rem;
 }
 
 .event .embedded-video,
@@ -62576,13 +62552,6 @@ main header .event__info__status p {
     }
 }
 
-@media (min-width: 768px) {
-    .event__info__details--shorttext ul {
-        display: inline-flex;
-        flex-wrap: wrap;
-    }
-}
-
 @media (min-width: 769px) {
     .event__info__status {
         margin-bottom: 1rem;
@@ -62611,6 +62580,12 @@ main header .event__info__status p {
 .event__info__status.event__past p {
     background-color: #0c0c0e;
     box-shadow: 0.5rem 0 0 #0c0c0e, -0.5rem 0 0 #0c0c0e;
+}
+
+@media (max-width: 767px) {
+    .event__info__status + .event__info__cta {
+        margin-top: 1rem;
+    }
 }
 
 .event__info__cta {
@@ -62653,7 +62628,12 @@ main header .event__info__status p {
     margin: 0.75rem 0;
     border-top: 0.0625rem dotted #a1a1a1;
     border-bottom: 0.0625rem dotted #a1a1a1;
-    text-align: center;
+}
+
+@media (min-width: 1025px) {
+    .event__info__text {
+        text-align: center;
+    }
 }
 
 .event__info__text .event__info__text--recurring {
