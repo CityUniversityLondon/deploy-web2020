@@ -60156,22 +60156,6 @@ main > .case-study--business .case-study--business__content {
     main .navigation--secondary + .case-study--research .case-study--research__whats-happening .case-study--research__overview .case-study--research__overview__researchers {
         grid-column: 3 / -3;
     }
-    main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper .case-study--research__related-events,
-    main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper .case-study--research__whats-happening,
-    main .navigation--secondary + .case-study--research .case-study--research__video__wrapper .case-study--research__related-events,
-    main .navigation--secondary + .case-study--research .case-study--research__video__wrapper .case-study--research__whats-happening,
-    main .navigation--secondary + .case-study--research .case-study--research__content__wrapper .case-study--research__related-events,
-    main .navigation--secondary + .case-study--research .case-study--research__content__wrapper .case-study--research__whats-happening,
-    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__related-events,
-    main .navigation--secondary + .case-study--research .case-study--research__details__wrapper .case-study--research__whats-happening,
-    main .navigation--secondary + .case-study--research .case-study--research__related-events .case-study--research__related-events,
-    main .navigation--secondary + .case-study--research .case-study--research__related-events .case-study--research__whats-happening,
-    main .navigation--secondary + .case-study--research .case-study--research__whats-happening .case-study--research__related-events,
-    main .navigation--secondary + .case-study--research .case-study--research__whats-happening .case-study--research__whats-happening {
-        grid-column: 2/-2;
-        margin-left: 0;
-        margin-right: 0;
-    }
     main .navigation--secondary + .case-study--research .case-study--research__overview__wrapper .case-study--research__video,
     main .navigation--secondary + .case-study--research .case-study--research__video__wrapper .case-study--research__video,
     main .navigation--secondary + .case-study--research .case-study--research__content__wrapper .case-study--research__video,
