@@ -63394,6 +63394,216 @@ main header .event__info__status p {
     }
 }
 
+.event--old .wrapper--event__info {
+    padding: 1rem;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 767px) {
+    .event--old .wrapper--event__info {
+        padding: 1rem 0;
+    }
+    .event--old .wrapper--event__info .event__info {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 901px) {
+    .event--old .wrapper--event__info .event__info {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .event--old .wrapper--event__info {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (min-width: 901px) {
+    .event--old .wrapper--event__info {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (min-width: 901px) {
+    .event--old .wrapper--event__info {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (min-width: 1441px) {
+    .event--old .wrapper--event__info {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .event--old .wrapper--event__info {
+        margin-top: -2rem;
+    }
+}
+
+.event--old .event__info__details {
+    grid-column: 1 / span 10;
+}
+
+@media (min-width: 769px) {
+    .event--old .event__info__details {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-column-gap: 0;
+    }
+}
+
+@media (min-width: 769px) and (min-width: 768px) {
+    .event--old .event__info__details {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (min-width: 901px) {
+    .event--old .event__info__details {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .event--old .event__info__details .event__info__details__top {
+        grid-column: 1 / span 6;
+    }
+    .event--old .event__info__details .event__info__details__bottom {
+        grid-column: 7 / span 4;
+    }
+}
+
+.event--old .event__info__details ul li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.event--old .event__info__cta {
+    grid-column: 11 / span 6;
+}
+
+@media (min-width: 1024px) {
+    .event--old .event__info__cta__top {
+        grid-column: 4/ -1;
+    }
+    .event--old .event__info__cta__top li a,
+    .event--old .event__info__cta__top li button {
+        width: 100%;
+    }
+    .event--old .event__info__cta__top li a span,
+    .event--old .event__info__cta__top li button span {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1023px) {
+    .event--old .event__info__cta__top {
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 432px) {
+    .event--old .event__info__cta__top li button {
+        width: 100%;
+    }
+}
+
+.event--old .event__info__cta__top a:first-child {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 767px) {
+    .event--old .banner__standfirst h1,
+    .event--old .banner__standfirst .event__info {
+        text-align: initial;
+    }
+}
+
+.event--old .event__top__gradient {
+    background-image: linear-gradient(to top, #ffffff, #f2f2f2);
+}
+
+.event--old .event__top__gradient .background--purple80 {
+    background-color: #3f1464;
+}
+
+.event--old .event__top__gradient .background--pink80 {
+    background-color: #5d184a;
+}
+
+.event--old .event__top__gradient .background--blue80 {
+    background-color: #11334c;
+}
+
+.event--old .event__top__gradient .background--red80 {
+    background-color: #790b21;
+}
+
+.event--old .event__top__gradient .banner--image-generic {
+    padding-bottom: 4rem;
+}
+
+.event--old .event__info__text {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .event--old .event__info__details--shorttext ul {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1023px) {
+    .event--old .event__info__cta__top--twocta ul {
+        display: flex;
+    }
+}
+
+.event--old .event__info__cta__top--twocta ul li a {
+    padding: 0.5rem 0.75rem;
+}
+
+.event--old .event__info__text {
+    grid-column: 1/ -1;
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 1024px) {
+    .event--old .event__info__text {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+.event--old .event__info__text .event__info__text--recurring {
+    display: inline;
+}
+
+.event--old .event__info__text .event__info__text--recurring .fa-redo {
+    margin-right: 0.5rem;
+}
+
 .event-calendar {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
