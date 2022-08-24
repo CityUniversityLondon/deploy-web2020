@@ -1137,16 +1137,7 @@ function Finder__Results__News(props) {
     className: "fad fa-fw fa-hashtag icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Hashtag", props.details.listMetadata.hashtagtext.length > 1 && 's', ":"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.details.listMetadata.hashtagtext.join(', '))),
-        thumbnail = props.details.listMetadata.subject && props.details.listMetadata.thumbnailTiny[0] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("picture", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
-    srcSet: props.details.listMetadata.thumbnailTiny[0],
-    media: "(max-width: 375px)"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
-    srcSet: props.details.listMetadata.thumbnailMax[0],
-    media: "(min-width: 3840px)"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: props.details.listMetadata.thumbnailMobile[0],
-    alt: props.details.title
-  })) : props.details.listMetadata.thumbnailTiny[0] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("picture", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
+        thumbnail = props.details.listMetadata.thumbnailTiny[0] || props.details.listMetadata.thumbnailMax[0] || props.details.listMetadata.thumbnailMobile[0] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("picture", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
     srcSet: props.details.listMetadata.thumbnailTiny[0],
     media: "(max-width: 375px)"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("source", {
