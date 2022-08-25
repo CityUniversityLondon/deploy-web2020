@@ -60258,7 +60258,7 @@ main > .case-study--business .case-study--business__content {
 .case-study--research .case-study--research__whats-happening {
     background-color: #f2f2f2;
     display: grid;
-    grid-template-columns: repeat(24, 1fr);
+    grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     margin-bottom: 2rem;
 }
@@ -60296,7 +60296,7 @@ main > .case-study--business .case-study--business__content {
 }
 
 .case-study--research .case-study--research__whats-happening .related-content {
-    grid-template-columns: repeat(24, 1fr);
+    grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     grid-column-gap: 1.5rem;
     grid-column: 1/-1;
