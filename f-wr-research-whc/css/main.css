@@ -60353,6 +60353,18 @@ main > .case-study--business .case-study--business__content {
     }
 }
 
+@media (min-width: 1024px) {
+    .case-study--research .case-study--research__whats-happening .card {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+    .case-study--research .case-study--research__whats-happening .card:first-of-type {
+        margin-top: initial;
+    }
+}
+
 .case-study--research .case-study__related-case-studies {
     margin-left: 1rem;
     margin-right: 1rem;
