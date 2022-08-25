@@ -60340,6 +60340,19 @@ main > .case-study--business .case-study--business__content {
     }
 }
 
+@media (min-width: 432px) and (max-width: 767px) {
+    .case-study--research .case-study--research__whats-happening .card__details {
+        flex-direction: column;
+    }
+    .case-study--research .case-study--research__whats-happening .card__thumbnail {
+        width: initial;
+    }
+    .case-study--research .case-study--research__whats-happening .card--news__label--news + .card__thumbnail + .card__details__text {
+        padding-top: initial;
+        margin-top: initial;
+    }
+}
+
 .case-study--research .case-study__related-case-studies {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -64074,6 +64087,19 @@ main .home .home__whats-happening .related-content {
         display: grid;
         grid-column: 2/-2;
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 432px) and (max-width: 767px) {
+    main .home .home__whats-happening .card__details {
+        flex-direction: column;
+    }
+    main .home .home__whats-happening .card__thumbnail {
+        width: initial;
+    }
+    main .home .home__whats-happening .card--news__label--news + .card__thumbnail + .card__details__text {
+        padding-top: initial;
+        margin-top: initial;
     }
 }
 
