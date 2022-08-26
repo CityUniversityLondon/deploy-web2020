@@ -41617,6 +41617,11 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     margin-top: 1rem;
 }
 
+.dialog__body-copy hr {
+    border-top: 0.0625rem dotted #bebebe;
+    border-bottom: initial;
+}
+
 .dialog__underline-transition {
     background-color: initial;
     background-image: initial;
@@ -75967,6 +75972,7 @@ main .standard-content .content {
 
 .course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card .show-more .show-more__content[data-hidden='true']::after {
     background-image: none;
+    z-index: -1;
 }
 
 .course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card .show-more .show-more__content .promo-box__card__body__text__route {
