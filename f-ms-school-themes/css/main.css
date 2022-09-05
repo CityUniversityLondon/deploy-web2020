@@ -79116,11 +79116,11 @@ main .standard-content .content {
     border-bottom-color: #11334c;
 }
 
-.shs .banner__standfirst h1 {
+.shps .banner__standfirst h1 {
     color: #0177a0;
 }
 
-.shs .banner__standfirst-cta {
+.shps .banner__standfirst-cta {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -79139,29 +79139,29 @@ main .standard-content .content {
     color: #ffffff;
 }
 
-.shs .banner__standfirst-cta:disabled {
+.shps .banner__standfirst-cta:disabled {
     cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .shs .banner__standfirst-cta {
+    .shps .banner__standfirst-cta {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .shs .banner__standfirst-cta {
+    .shps .banner__standfirst-cta {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.shs .banner__standfirst-cta span {
+.shps .banner__standfirst-cta span {
     transition: transform 0.6s;
 }
 
-.shs .banner__standfirst-cta:after {
+.shps .banner__standfirst-cta:after {
     content: "";
     font-family: 'Font Awesome';
     font-style: normal;
@@ -79175,66 +79175,66 @@ main .standard-content .content {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .shs .banner__standfirst-cta:after {
+    .shps .banner__standfirst-cta:after {
         transition: none;
     }
 }
 
-.shs .banner__standfirst-cta:focus, .shs .banner__standfirst-cta:active {
+.shps .banner__standfirst-cta:focus, .shps .banner__standfirst-cta:active {
     background-color: transparent;
     border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
-.shs .banner__standfirst-cta:focus span, .shs .banner__standfirst-cta:active span {
+.shps .banner__standfirst-cta:focus span, .shps .banner__standfirst-cta:active span {
     transform: translateX(-0.75rem);
 }
 
-.shs .banner__standfirst-cta:focus:after, .shs .banner__standfirst-cta:active:after {
+.shps .banner__standfirst-cta:focus:after, .shps .banner__standfirst-cta:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .shs .banner__standfirst-cta:hover {
+    .shps .banner__standfirst-cta:hover {
         background-color: transparent;
         border: 0.125rem solid #d61726;
         color: #ffffff;
     }
-    .shs .banner__standfirst-cta:hover span {
+    .shps .banner__standfirst-cta:hover span {
         transform: translateX(-0.75rem);
     }
-    .shs .banner__standfirst-cta:hover:after {
+    .shps .banner__standfirst-cta:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.shs .banner__standfirst-cta:disabled {
+.shps .banner__standfirst-cta:disabled {
     opacity: 0.7;
 }
 
-.shs .banner__standfirst-cta:disabled span {
+.shps .banner__standfirst-cta:disabled span {
     transform: none;
 }
 
-.shs .banner__standfirst-cta:disabled:after {
+.shps .banner__standfirst-cta:disabled:after {
     opacity: 0;
     transform: none;
 }
 
-.shs .banner__standfirst-cta:visited {
+.shps .banner__standfirst-cta:visited {
     border-color: #d61726;
     color: #ffffff;
 }
 
-.shs .banner__standfirst-cta:focus {
+.shps .banner__standfirst-cta:focus {
     background: #d61726;
     border-color: #d61726;
     color: #ffffff;
 }
 
-.shs .banner__standfirst-cta:focus:focus, .shs .banner__standfirst-cta:focus:active {
+.shps .banner__standfirst-cta:focus:focus, .shps .banner__standfirst-cta:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -79242,100 +79242,315 @@ main .standard-content .content {
 }
 
 @media (hover: hover) {
-    .shs .banner__standfirst-cta:hover {
+    .shps .banner__standfirst-cta:hover {
         background: #ffffff;
         border-color: #d61726;
         color: #d61726;
     }
 }
 
-.shs .banner__standfirst-cta:active {
+.shps .banner__standfirst-cta:active {
     border-color: #d61726;
     box-shadow: none;
     color: #d61726;
     background: transparent;
 }
 
-.shs .banner__standfirst-cta:active:focus, .shs .banner__standfirst-cta:active:active {
+.shps .banner__standfirst-cta:active:focus, .shps .banner__standfirst-cta:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.shs .banner__standfirst-cta:disabled {
+.shps .banner__standfirst-cta:disabled {
     color: #ffffff;
     background: #d61726;
     border: 0.125rem solid #d61726;
 }
 
-.shs .banner__standfirst-cta span {
+.shps .banner__standfirst-cta span {
     transition: none;
 }
 
-.shs .banner__standfirst-cta:visited {
+.shps .banner__standfirst-cta:visited {
     border-color: #0177a0;
     color: #ffffff;
 }
 
-.shs .banner__standfirst-cta:after {
+.shps .banner__standfirst-cta:after {
     content: '';
 }
 
-.shs .banner__standfirst-cta:focus, .shs .banner__standfirst-cta:active {
+.shps .banner__standfirst-cta:focus, .shps .banner__standfirst-cta:active {
     background-color: #0177a0;
     border-color: #0177a0;
     color: #ffffff;
 }
 
 @media (hover: hover) {
-    .shs .banner__standfirst-cta:hover {
+    .shps .banner__standfirst-cta:hover {
         background-color: #01516d;
         border-color: #01516d;
         color: #ffffff;
     }
 }
 
-.shs .banner__standfirst-cta:active {
+.shps .banner__standfirst-cta:active {
     background-color: #01516d;
     border-color: #01516d;
 }
 
-.shs .banner__standfirst-cta:disabled {
+.shps .banner__standfirst-cta:disabled {
     color: #ffffff;
     background: #0177a0;
     border-color: #0177a0;
 }
 
-.shs .banner__standfirst-cta:active span, .shs .banner__standfirst-cta:focus span, .shs .banner__standfirst-cta:hover span {
+.shps .banner__standfirst-cta:active span, .shps .banner__standfirst-cta:focus span, .shps .banner__standfirst-cta:hover span {
     transform: none;
 }
 
-.shs .banner__standfirst-cta span {
+.shps .banner__standfirst-cta span {
     color: #ffffff;
 }
 
-.shs .school__content__links--right {
+.shps .school__content__links--right {
     background-color: #015a79;
 }
 
-.shs .school__content__links--left:hover .linked-heading__text:before {
+.shps .school__content__links--left:hover .linked-heading__text:before {
     background: #0177a0;
 }
 
-.shs .school__content__links--left .linked-heading__icons {
+.shps .school__content__links--left .linked-heading__icons {
     background: #0177a0;
 }
 
-.shs .school__statistic h2:after {
+.shps .school__statistic h2:after {
     border-bottom-color: #0177a0;
 }
 
-.mcse .banner__standfirst h1 {
+.bbs .banner__standfirst h1 {
+    color: #9e111c;
+}
+
+.bbs .banner__standfirst-cta {
+    background: initial;
+    border-radius: 0.25rem;
+    border: none;
+    color: initial;
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    transition: background-color 0.6s, transform 0.6s;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    background: #d61726;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+    background-color: #9e111c;
+    border-color: #9e111c;
+    color: #ffffff;
+}
+
+.bbs .banner__standfirst-cta:disabled {
+    cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bbs .banner__standfirst-cta {
+        transition: none;
+    }
+}
+
+@media (max-width: 432px) {
+    .bbs .banner__standfirst-cta {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.bbs .banner__standfirst-cta span {
+    transition: transform 0.6s;
+}
+
+.bbs .banner__standfirst-cta:after {
+    content: "";
+    font-family: 'Font Awesome';
+    font-style: normal;
+    font-weight: normal;
+    opacity: 0;
+    position: absolute;
+    right: 1.5rem;
+    text-decoration: inherit;
+    transform: translateX(-0.75rem);
+    transition: background-color 0.6s, transform 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bbs .banner__standfirst-cta:after {
+        transition: none;
+    }
+}
+
+.bbs .banner__standfirst-cta:focus, .bbs .banner__standfirst-cta:active {
+    background-color: transparent;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+}
+
+.bbs .banner__standfirst-cta:focus span, .bbs .banner__standfirst-cta:active span {
+    transform: translateX(-0.75rem);
+}
+
+.bbs .banner__standfirst-cta:focus:after, .bbs .banner__standfirst-cta:active:after {
+    opacity: 1;
+    transform: translateX(0.75rem);
+}
+
+@media (hover: hover) {
+    .bbs .banner__standfirst-cta:hover {
+        background-color: transparent;
+        border: 0.125rem solid #d61726;
+        color: #ffffff;
+    }
+    .bbs .banner__standfirst-cta:hover span {
+        transform: translateX(-0.75rem);
+    }
+    .bbs .banner__standfirst-cta:hover:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
+    }
+}
+
+.bbs .banner__standfirst-cta:disabled {
+    opacity: 0.7;
+}
+
+.bbs .banner__standfirst-cta:disabled span {
+    transform: none;
+}
+
+.bbs .banner__standfirst-cta:disabled:after {
+    opacity: 0;
+    transform: none;
+}
+
+.bbs .banner__standfirst-cta:visited {
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.bbs .banner__standfirst-cta:focus {
+    background: #d61726;
+    border-color: #d61726;
+    color: #ffffff;
+}
+
+.bbs .banner__standfirst-cta:focus:focus, .bbs .banner__standfirst-cta:focus:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .bbs .banner__standfirst-cta:hover {
+        background: #ffffff;
+        border-color: #d61726;
+        color: #d61726;
+    }
+}
+
+.bbs .banner__standfirst-cta:active {
+    border-color: #d61726;
+    box-shadow: none;
+    color: #d61726;
+    background: transparent;
+}
+
+.bbs .banner__standfirst-cta:active:focus, .bbs .banner__standfirst-cta:active:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.bbs .banner__standfirst-cta:disabled {
+    color: #ffffff;
+    background: #d61726;
+    border: 0.125rem solid #d61726;
+}
+
+.bbs .banner__standfirst-cta span {
+    transition: none;
+}
+
+.bbs .banner__standfirst-cta:visited {
+    border-color: #9e111c;
+    color: #ffffff;
+}
+
+.bbs .banner__standfirst-cta:after {
+    content: '';
+}
+
+.bbs .banner__standfirst-cta:focus, .bbs .banner__standfirst-cta:active {
+    background-color: #9e111c;
+    border-color: #9e111c;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .bbs .banner__standfirst-cta:hover {
+        background-color: #700c14;
+        border-color: #700c14;
+        color: #ffffff;
+    }
+}
+
+.bbs .banner__standfirst-cta:active {
+    background-color: #700c14;
+    border-color: #700c14;
+}
+
+.bbs .banner__standfirst-cta:disabled {
+    color: #ffffff;
+    background: #9e111c;
+    border-color: #9e111c;
+}
+
+.bbs .banner__standfirst-cta:active span, .bbs .banner__standfirst-cta:focus span, .bbs .banner__standfirst-cta:hover span {
+    transform: none;
+}
+
+.bbs .banner__standfirst-cta span {
+    color: #ffffff;
+}
+
+.bbs .school__content__links--right {
+    background-color: #9e111c;
+}
+
+.bbs .school__content__links--left:hover .linked-heading__text:before {
+    background: #9e111c;
+}
+
+.bbs .school__content__links--left .linked-heading__icons {
+    background: #9e111c;
+}
+
+.bbs .school__statistic h2:after {
+    border-bottom-color: #9e111c;
+}
+
+.sst .banner__standfirst h1 {
     color: #305731;
 }
 
-.mcse .banner__standfirst-cta {
+.sst .banner__standfirst-cta {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -79354,29 +79569,29 @@ main .standard-content .content {
     color: #ffffff;
 }
 
-.mcse .banner__standfirst-cta:disabled {
+.sst .banner__standfirst-cta:disabled {
     cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .mcse .banner__standfirst-cta {
+    .sst .banner__standfirst-cta {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .mcse .banner__standfirst-cta {
+    .sst .banner__standfirst-cta {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.mcse .banner__standfirst-cta span {
+.sst .banner__standfirst-cta span {
     transition: transform 0.6s;
 }
 
-.mcse .banner__standfirst-cta:after {
+.sst .banner__standfirst-cta:after {
     content: "";
     font-family: 'Font Awesome';
     font-style: normal;
@@ -79390,66 +79605,66 @@ main .standard-content .content {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .mcse .banner__standfirst-cta:after {
+    .sst .banner__standfirst-cta:after {
         transition: none;
     }
 }
 
-.mcse .banner__standfirst-cta:focus, .mcse .banner__standfirst-cta:active {
+.sst .banner__standfirst-cta:focus, .sst .banner__standfirst-cta:active {
     background-color: transparent;
     border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
-.mcse .banner__standfirst-cta:focus span, .mcse .banner__standfirst-cta:active span {
+.sst .banner__standfirst-cta:focus span, .sst .banner__standfirst-cta:active span {
     transform: translateX(-0.75rem);
 }
 
-.mcse .banner__standfirst-cta:focus:after, .mcse .banner__standfirst-cta:active:after {
+.sst .banner__standfirst-cta:focus:after, .sst .banner__standfirst-cta:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .mcse .banner__standfirst-cta:hover {
+    .sst .banner__standfirst-cta:hover {
         background-color: transparent;
         border: 0.125rem solid #d61726;
         color: #ffffff;
     }
-    .mcse .banner__standfirst-cta:hover span {
+    .sst .banner__standfirst-cta:hover span {
         transform: translateX(-0.75rem);
     }
-    .mcse .banner__standfirst-cta:hover:after {
+    .sst .banner__standfirst-cta:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.mcse .banner__standfirst-cta:disabled {
+.sst .banner__standfirst-cta:disabled {
     opacity: 0.7;
 }
 
-.mcse .banner__standfirst-cta:disabled span {
+.sst .banner__standfirst-cta:disabled span {
     transform: none;
 }
 
-.mcse .banner__standfirst-cta:disabled:after {
+.sst .banner__standfirst-cta:disabled:after {
     opacity: 0;
     transform: none;
 }
 
-.mcse .banner__standfirst-cta:visited {
+.sst .banner__standfirst-cta:visited {
     border-color: #d61726;
     color: #ffffff;
 }
 
-.mcse .banner__standfirst-cta:focus {
+.sst .banner__standfirst-cta:focus {
     background: #d61726;
     border-color: #d61726;
     color: #ffffff;
 }
 
-.mcse .banner__standfirst-cta:focus:focus, .mcse .banner__standfirst-cta:focus:active {
+.sst .banner__standfirst-cta:focus:focus, .sst .banner__standfirst-cta:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -79457,84 +79672,84 @@ main .standard-content .content {
 }
 
 @media (hover: hover) {
-    .mcse .banner__standfirst-cta:hover {
+    .sst .banner__standfirst-cta:hover {
         background: #ffffff;
         border-color: #d61726;
         color: #d61726;
     }
 }
 
-.mcse .banner__standfirst-cta:active {
+.sst .banner__standfirst-cta:active {
     border-color: #d61726;
     box-shadow: none;
     color: #d61726;
     background: transparent;
 }
 
-.mcse .banner__standfirst-cta:active:focus, .mcse .banner__standfirst-cta:active:active {
+.sst .banner__standfirst-cta:active:focus, .sst .banner__standfirst-cta:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.mcse .banner__standfirst-cta:disabled {
+.sst .banner__standfirst-cta:disabled {
     color: #ffffff;
     background: #d61726;
     border: 0.125rem solid #d61726;
 }
 
-.mcse .banner__standfirst-cta span {
+.sst .banner__standfirst-cta span {
     transition: none;
 }
 
-.mcse .banner__standfirst-cta:visited {
+.sst .banner__standfirst-cta:visited {
     border-color: #427844;
     color: #ffffff;
 }
 
-.mcse .banner__standfirst-cta:after {
+.sst .banner__standfirst-cta:after {
     content: '';
 }
 
-.mcse .banner__standfirst-cta:focus, .mcse .banner__standfirst-cta:active {
+.sst .banner__standfirst-cta:focus, .sst .banner__standfirst-cta:active {
     background-color: #427844;
     border-color: #427844;
     color: #ffffff;
 }
 
 @media (hover: hover) {
-    .mcse .banner__standfirst-cta:hover {
+    .sst .banner__standfirst-cta:hover {
         background-color: #305731;
         border-color: #305731;
         color: #ffffff;
     }
 }
 
-.mcse .banner__standfirst-cta:active {
+.sst .banner__standfirst-cta:active {
     background-color: #305731;
     border-color: #305731;
 }
 
-.mcse .banner__standfirst-cta:disabled {
+.sst .banner__standfirst-cta:disabled {
     color: #ffffff;
     background: #427844;
     border-color: #427844;
 }
 
-.mcse .banner__standfirst-cta:active span, .mcse .banner__standfirst-cta:focus span, .mcse .banner__standfirst-cta:hover span {
+.sst .banner__standfirst-cta:active span, .sst .banner__standfirst-cta:focus span, .sst .banner__standfirst-cta:hover span {
     transform: none;
 }
 
-.mcse .banner__standfirst-cta span {
+.sst .banner__standfirst-cta span {
     color: #ffffff;
 }
 
-.mcse .school__content__links--right {
+.sst .school__content__links--right {
     background-color: #305731;
 }
 
-.mcse .school__statistic h2:after {
+.sst .school__statistic h2:after {
     border-bottom-color: #305731;
 }
 
@@ -79745,11 +79960,11 @@ main .standard-content .content {
     border-bottom-color: #3f1464;
 }
 
-.sass .banner__standfirst h1 {
+.scc .banner__standfirst h1 {
     color: #005058;
 }
 
-.sass .banner__standfirst-cta {
+.scc .banner__standfirst-cta {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -79768,29 +79983,29 @@ main .standard-content .content {
     color: #ffffff;
 }
 
-.sass .banner__standfirst-cta:disabled {
+.scc .banner__standfirst-cta:disabled {
     cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .sass .banner__standfirst-cta {
+    .scc .banner__standfirst-cta {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .sass .banner__standfirst-cta {
+    .scc .banner__standfirst-cta {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.sass .banner__standfirst-cta span {
+.scc .banner__standfirst-cta span {
     transition: transform 0.6s;
 }
 
-.sass .banner__standfirst-cta:after {
+.scc .banner__standfirst-cta:after {
     content: "";
     font-family: 'Font Awesome';
     font-style: normal;
@@ -79804,66 +80019,66 @@ main .standard-content .content {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .sass .banner__standfirst-cta:after {
+    .scc .banner__standfirst-cta:after {
         transition: none;
     }
 }
 
-.sass .banner__standfirst-cta:focus, .sass .banner__standfirst-cta:active {
+.scc .banner__standfirst-cta:focus, .scc .banner__standfirst-cta:active {
     background-color: transparent;
     border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
-.sass .banner__standfirst-cta:focus span, .sass .banner__standfirst-cta:active span {
+.scc .banner__standfirst-cta:focus span, .scc .banner__standfirst-cta:active span {
     transform: translateX(-0.75rem);
 }
 
-.sass .banner__standfirst-cta:focus:after, .sass .banner__standfirst-cta:active:after {
+.scc .banner__standfirst-cta:focus:after, .scc .banner__standfirst-cta:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .sass .banner__standfirst-cta:hover {
+    .scc .banner__standfirst-cta:hover {
         background-color: transparent;
         border: 0.125rem solid #d61726;
         color: #ffffff;
     }
-    .sass .banner__standfirst-cta:hover span {
+    .scc .banner__standfirst-cta:hover span {
         transform: translateX(-0.75rem);
     }
-    .sass .banner__standfirst-cta:hover:after {
+    .scc .banner__standfirst-cta:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.sass .banner__standfirst-cta:disabled {
+.scc .banner__standfirst-cta:disabled {
     opacity: 0.7;
 }
 
-.sass .banner__standfirst-cta:disabled span {
+.scc .banner__standfirst-cta:disabled span {
     transform: none;
 }
 
-.sass .banner__standfirst-cta:disabled:after {
+.scc .banner__standfirst-cta:disabled:after {
     opacity: 0;
     transform: none;
 }
 
-.sass .banner__standfirst-cta:visited {
+.scc .banner__standfirst-cta:visited {
     border-color: #d61726;
     color: #ffffff;
 }
 
-.sass .banner__standfirst-cta:focus {
+.scc .banner__standfirst-cta:focus {
     background: #d61726;
     border-color: #d61726;
     color: #ffffff;
 }
 
-.sass .banner__standfirst-cta:focus:focus, .sass .banner__standfirst-cta:focus:active {
+.scc .banner__standfirst-cta:focus:focus, .scc .banner__standfirst-cta:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -79871,84 +80086,84 @@ main .standard-content .content {
 }
 
 @media (hover: hover) {
-    .sass .banner__standfirst-cta:hover {
+    .scc .banner__standfirst-cta:hover {
         background: #ffffff;
         border-color: #d61726;
         color: #d61726;
     }
 }
 
-.sass .banner__standfirst-cta:active {
+.scc .banner__standfirst-cta:active {
     border-color: #d61726;
     box-shadow: none;
     color: #d61726;
     background: transparent;
 }
 
-.sass .banner__standfirst-cta:active:focus, .sass .banner__standfirst-cta:active:active {
+.scc .banner__standfirst-cta:active:focus, .scc .banner__standfirst-cta:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.sass .banner__standfirst-cta:disabled {
+.scc .banner__standfirst-cta:disabled {
     color: #ffffff;
     background: #d61726;
     border: 0.125rem solid #d61726;
 }
 
-.sass .banner__standfirst-cta span {
+.scc .banner__standfirst-cta span {
     transition: none;
 }
 
-.sass .banner__standfirst-cta:visited {
+.scc .banner__standfirst-cta:visited {
     border-color: #007e8b;
     color: #ffffff;
 }
 
-.sass .banner__standfirst-cta:after {
+.scc .banner__standfirst-cta:after {
     content: '';
 }
 
-.sass .banner__standfirst-cta:focus, .sass .banner__standfirst-cta:active {
+.scc .banner__standfirst-cta:focus, .scc .banner__standfirst-cta:active {
     background-color: #007e8b;
     border-color: #007e8b;
     color: #ffffff;
 }
 
 @media (hover: hover) {
-    .sass .banner__standfirst-cta:hover {
+    .scc .banner__standfirst-cta:hover {
         background-color: #005058;
         border-color: #005058;
         color: #ffffff;
     }
 }
 
-.sass .banner__standfirst-cta:active {
+.scc .banner__standfirst-cta:active {
     background-color: #005058;
     border-color: #005058;
 }
 
-.sass .banner__standfirst-cta:disabled {
+.scc .banner__standfirst-cta:disabled {
     color: #ffffff;
     background: #007e8b;
     border-color: #007e8b;
 }
 
-.sass .banner__standfirst-cta:active span, .sass .banner__standfirst-cta:focus span, .sass .banner__standfirst-cta:hover span {
+.scc .banner__standfirst-cta:active span, .scc .banner__standfirst-cta:focus span, .scc .banner__standfirst-cta:hover span {
     transform: none;
 }
 
-.sass .banner__standfirst-cta span {
+.scc .banner__standfirst-cta span {
     color: #ffffff;
 }
 
-.sass .school__content__links--right {
+.scc .school__content__links--right {
     background-color: #005058;
 }
 
-.sass .school__statistic h2:after {
+.scc .school__statistic h2:after {
     border-bottom-color: #005058;
 }
 
