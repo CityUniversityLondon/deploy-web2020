@@ -62433,6 +62433,10 @@ main > .error {
     color: #0c0c0e;
 }
 
+.event .pathway .pathway__cards {
+    padding-left: 0;
+}
+
 .event__dates {
     font-size: 0.889rem;
     line-height: 1.625;
@@ -63443,8 +63447,8 @@ main > .error {
     }
 }
 
-.banner-standfirst-label--event .pathway .pathway__cards {
-    padding-left: 0;
+.banner-standfirst-label--event .evnt__info__details {
+    text-align: left;
 }
 
 main header .evnt__info {
@@ -63691,12 +63695,6 @@ main header .evnt__formassembly__form {
     margin: 0.75rem 0;
     border-top: 0.0625rem dotted #a1a1a1;
     border-bottom: 0.0625rem dotted #a1a1a1;
-}
-
-@media (min-width: 1025px) {
-    .evnt__info__text {
-        text-align: center;
-    }
 }
 
 .evnt__info__text .evnt__info__text--recurring {
