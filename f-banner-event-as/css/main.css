@@ -63443,6 +63443,10 @@ main > .error {
     }
 }
 
+.banner-standfirst-label--event .pathway .pathway__cards {
+    padding-left: 0;
+}
+
 main header .evnt__info {
     padding-top: 2rem;
 }
@@ -63522,10 +63526,8 @@ main header .evnt__formassembly__form {
     }
 }
 
-@media (min-width: 768px) {
-    .evnt__info__details {
-        margin-bottom: 1rem;
-    }
+.evnt__info__details {
+    margin-bottom: 1rem;
 }
 
 .evnt__info__details .icon {
