@@ -74804,9 +74804,9 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     background: #5d184a;
     color: #ffffff;
     font-weight: 600;
-    line-height: 2.25rem;
+    line-height: 2.5rem;
     box-shadow: 0.5rem 0 0 #5d184a, -0.5rem 0 0 #5d184a;
-    padding: 0.375rem 0;
+    padding: calc(0.25rem + 0.125rem);
     margin-bottom: 0.5rem;
 }
 
@@ -74814,9 +74814,9 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     background: #832c9e;
     color: #ffffff;
     font-weight: 600;
-    line-height: 2.25rem;
+    line-height: 2.5rem;
     box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-    padding: 0.375rem 0;
+    padding: calc(0.25rem + 0.125rem);
     display: inline;
 }
 
