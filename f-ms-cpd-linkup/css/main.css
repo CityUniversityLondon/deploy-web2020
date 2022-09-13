@@ -74797,35 +74797,40 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning__content__contributory-credits {
-    padding: 0.75rem 2rem;
+    padding: 1.25rem 2rem;
+    background-size: 10%;
 }
 
 .lifelong-learning__content__contributory-credits__short {
+    margin: 0;
+}
+
+.lifelong-learning__content__contributory-credits__short span {
     background: #5d184a;
     color: #ffffff;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 2.5rem;
     box-shadow: 0.5rem 0 0 #5d184a, -0.5rem 0 0 #5d184a;
-    padding: calc(0.25rem + 0.125rem);
     margin-bottom: 0.5rem;
+    padding: 0.25rem 0;
 }
 
 .lifelong-learning__content__contributory-credits__description {
+    max-width: 40ch;
+}
+
+.lifelong-learning__content__contributory-credits__description__heading {
     background: #832c9e;
     color: #ffffff;
     font-weight: 600;
     line-height: 2.5rem;
     box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-    padding: calc(0.25rem + 0.125rem);
     display: inline;
+    line-height: 2rem;
 }
 
 .lifelong-learning__content__contributory-credits__links {
     padding: 0.75rem 1.5rem 1.5rem;
-}
-
-.lifelong-learning__content__contributory-credits__links p {
-    font-weight: 500;
 }
 
 @media (max-width: 767px) {
