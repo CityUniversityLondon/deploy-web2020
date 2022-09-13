@@ -63451,6 +63451,12 @@ main > .error {
     text-align: left;
 }
 
+@media (min-width: 1025px) {
+    .banner-standfirst-label--event .evnt__info__details {
+        text-align: center;
+    }
+}
+
 main header .evnt__info {
     padding-top: 2rem;
 }
