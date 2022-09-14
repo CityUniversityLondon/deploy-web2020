@@ -74045,6 +74045,75 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     transform: rotate(90deg);
 }
 
+.lifelong-learning .wrapper--lifelong-learning__content__contributory-credits {
+    background: #ffffff;
+    margin-top: 1rem;
+    border: 0.0625rem solid #e5e5e5;
+}
+
+.lifelong-learning .lifelong-learning__content__contributory-credits {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1.25rem;
+    background-size: 10%;
+}
+
+@media (min-width: 901px) {
+    .lifelong-learning .lifelong-learning__content__contributory-credits {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.lifelong-learning .lifelong-learning__content__contributory-credits__short {
+    margin: 0;
+}
+
+.lifelong-learning .lifelong-learning__content__contributory-credits__short span {
+    background: #5d184a;
+    color: #ffffff;
+    font-weight: 400;
+    display: inline;
+    line-height: 2rem;
+    box-shadow: 0.5rem 0 0 #5d184a, -0.5rem 0 0 #5d184a;
+    box-decoration-break: clone;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0;
+}
+
+.lifelong-learning .lifelong-learning__content__contributory-credits__short,
+.lifelong-learning .lifelong-learning__content__contributory-credits__description__heading {
+    max-width: 40ch;
+}
+
+.lifelong-learning .lifelong-learning__content__contributory-credits__description__heading {
+    background: #832c9e;
+    color: #ffffff;
+    font-weight: 500;
+    display: inline;
+    line-height: 2rem;
+    box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
+    box-decoration-break: clone;
+}
+
+.lifelong-learning .lifelong-learning__content__contributory-credits__links {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.75rem;
+}
+
+@media (min-width: 901px) {
+    .lifelong-learning .lifelong-learning__content__contributory-credits__links {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.lifelong-learning .lifelong-learning__content__contributory-credits__links__intro {
+    font-weight: 600;
+}
+
 @media screen {
     .js .lifelong-learning .modal__content,
     .js .lifelong-learning .modal__content a:not(:hover):not(:active) {
@@ -74760,6 +74829,10 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     grid-column: 4/-4;
 }
 
+.js .accordion > .accordion__heading[data-open='true'] + .accordion__body p.lifelong-learning__content__contributory-credits__short {
+    margin: 0;
+}
+
 @media (min-width: 900px) {
     .no-js .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
         margin-top: 1rem;
@@ -74789,48 +74862,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     .no-js .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest[data-onload-mobile-only='true'] {
         display: grid;
     }
-}
-
-.wrapper--lifelong-learning__content__contributory-credits {
-    background: #ffffff;
-    margin-top: 1rem;
-}
-
-.lifelong-learning__content__contributory-credits {
-    padding: 1.25rem 2rem;
-    background-size: 10%;
-}
-
-.lifelong-learning__content__contributory-credits__short {
-    margin: 0;
-}
-
-.lifelong-learning__content__contributory-credits__short span {
-    background: #5d184a;
-    color: #ffffff;
-    font-weight: 400;
-    line-height: 2.5rem;
-    box-shadow: 0.5rem 0 0 #5d184a, -0.5rem 0 0 #5d184a;
-    margin-bottom: 0.5rem;
-    padding: 0.25rem 0;
-}
-
-.lifelong-learning__content__contributory-credits__description {
-    max-width: 40ch;
-}
-
-.lifelong-learning__content__contributory-credits__description__heading {
-    background: #832c9e;
-    color: #ffffff;
-    font-weight: 600;
-    line-height: 2.5rem;
-    box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-    display: inline;
-    line-height: 2rem;
-}
-
-.lifelong-learning__content__contributory-credits__links {
-    padding: 0.75rem 1.5rem 1.5rem;
 }
 
 @media (max-width: 767px) {
