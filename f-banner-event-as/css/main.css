@@ -63401,6 +63401,10 @@ main > .error {
     }
 }
 
+.banner-standfirst-label--event .banner__image:after {
+    background-image: none;
+}
+
 main header .evnt__info {
     padding-top: 2rem;
 }
