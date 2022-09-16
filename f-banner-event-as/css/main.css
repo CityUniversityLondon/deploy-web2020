@@ -63401,16 +63401,6 @@ main > .error {
     }
 }
 
-.banner-standfirst-label--event .evnt__info__details {
-    text-align: left;
-}
-
-@media (min-width: 1025px) {
-    .banner-standfirst-label--event .evnt__info__details {
-        text-align: center;
-    }
-}
-
 main header .evnt__info {
     padding-top: 2rem;
 }
@@ -63492,6 +63482,13 @@ main header .evnt__formassembly__form {
 
 .evnt__info__details {
     margin-bottom: 1rem;
+    text-align: left;
+}
+
+@media (min-width: 1025px) {
+    .evnt__info__details {
+        text-align: center;
+    }
 }
 
 .evnt__info__details .icon {
@@ -63529,6 +63526,7 @@ main header .evnt__formassembly__form {
 
 .evnt__info__details p {
     margin-top: 0;
+    text-align: left;
 }
 
 .evnt__info__details ul {
@@ -63538,28 +63536,28 @@ main header .evnt__formassembly__form {
     max-width: initial;
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
-    .evnt__info__details ul {
+@media (min-width: 1025px) {
+    .evnt__info__details ul.evnt__info__details--block {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 0;
     }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) and (min-width: 768px) {
-    .evnt__info__details ul {
+@media (min-width: 1025px) and (min-width: 768px) {
+    .evnt__info__details ul.evnt__info__details--block {
         grid-column-gap: 1rem;
     }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) and (min-width: 901px) {
-    .evnt__info__details ul {
+@media (min-width: 1025px) and (min-width: 901px) {
+    .evnt__info__details ul.evnt__info__details--block {
         grid-column-gap: 1.5rem;
     }
 }
 
-@media (min-width: 1024px) {
-    .evnt__info__details ul {
+@media (min-width: 1025px) {
+    .evnt__info__details ul.evnt__info__details--inline {
         display: inline-flex;
         flex-wrap: wrap;
     }
