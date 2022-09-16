@@ -35876,48 +35876,63 @@ figure figcaption a:active,
 }
 
 .infographic[data-theme='blue50'] .infographic__panel .infographic__description__text__highlight {
-    background-color: #0177a0;
+    background: #0177a0;
+    color: #ffffff;
+    font-weight: 500;
+    display: inline;
+    line-height: 2rem;
     box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
+    box-decoration-break: clone;
 }
 
 .infographic[data-theme='blue50'] .infographic__panel[data-theme-background='true'] .infographic__description__text__highlight {
-    background-color: #832c9e;
+    background: #832c9e;
+    color: #ffffff;
+    font-weight: 500;
+    display: inline;
+    line-height: 2rem;
     box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-}
-
-.infographic[data-theme='blue50'] .infographic__panel[data-theme-background='false'] .infographic__description__text__highlight {
-    background-color: #0177a0;
-    box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
+    box-decoration-break: clone;
 }
 
 .infographic[data-theme='purple50'] .infographic__panel .infographic__description__text__highlight {
-    background-color: #832c9e;
+    background: #832c9e;
+    color: #ffffff;
+    font-weight: 500;
+    display: inline;
+    line-height: 2rem;
     box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
+    box-decoration-break: clone;
 }
 
 .infographic[data-theme='purple50'] .infographic__panel[data-theme-background='true'] .infographic__description__text__highlight {
-    background-color: #0177a0;
+    background: #0177a0;
+    color: #ffffff;
+    font-weight: 500;
+    display: inline;
+    line-height: 2rem;
     box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
-}
-
-.infographic[data-theme='purple50'] .infographic__panel[data-theme-background='false'] .infographic__description__text__highlight {
-    background-color: #832c9e;
-    box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
+    box-decoration-break: clone;
 }
 
 .infographic[data-theme='red50'] .infographic__panel .infographic__description__text__highlight {
-    background-color: #d61726;
+    background: #d61726;
+    color: #ffffff;
+    font-weight: 500;
+    display: inline;
+    line-height: 2rem;
     box-shadow: 0.5rem 0 0 #d61726, -0.5rem 0 0 #d61726;
+    box-decoration-break: clone;
 }
 
 .infographic[data-theme='red50'] .infographic__panel[data-theme-background='true'] .infographic__description__text__highlight {
-    background-color: #832c9e;
+    background: #832c9e;
+    color: #ffffff;
+    font-weight: 500;
+    display: inline;
+    line-height: 2rem;
     box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-}
-
-.infographic[data-theme='red50'] .infographic__panel[data-theme-background='false'] .infographic__description__text__highlight {
-    background-color: #d61726;
-    box-shadow: 0.5rem 0 0 #d61726, -0.5rem 0 0 #d61726;
+    box-decoration-break: clone;
 }
 
 .infographic .infographic__panel[data-type='image'] {
@@ -74056,6 +74071,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     padding-right: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1.25rem;
+    background-image: url("https://www.city.ac.uk/__data/assets/file/0006/698784/grey-stripes.svg");
     background-size: 10%;
 }
 
