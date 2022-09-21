@@ -74081,13 +74081,13 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     transform: rotate(90deg);
 }
 
-.lifelong-learning .wrapper--credits-linkup {
+.lifelong-learning .wrapper--text-highlight-block {
     background: #ffffff;
     margin-top: 1rem;
     border: 0.0625rem solid #e5e5e5;
 }
 
-.lifelong-learning .credits-linkup {
+.lifelong-learning .text-highlight-block {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-top: 1rem;
@@ -74097,13 +74097,13 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (min-width: 901px) {
-    .lifelong-learning .credits-linkup {
+    .lifelong-learning .text-highlight-block {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-.lifelong-learning .credits-linkup .text-highlight__intro {
+.lifelong-learning .text-highlight-block .text-highlight__preheading {
     background: #5d184a;
     color: #ffffff;
     font-weight: 400;
@@ -74113,37 +74113,37 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     box-decoration-break: clone;
 }
 
-.lifelong-learning .credits-linkup .text-highlight__description {
+.lifelong-learning .text-highlight-block .text-highlight__heading {
     margin: 0;
 }
 
-.lifelong-learning .credits-linkup .text-highlight__description span {
-    background: #5d184a;
+.lifelong-learning .text-highlight-block .text-highlight__heading span {
+    background: #832c9e;
     color: #ffffff;
     font-weight: 400;
     display: inline;
     line-height: 2rem;
-    box-shadow: 0.5rem 0 0 #5d184a, -0.5rem 0 0 #5d184a;
+    box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
     box-decoration-break: clone;
     margin-bottom: 0.5rem;
     padding: 0.25rem 0;
     font-weight: 400;
 }
 
-.lifelong-learning .credits-linkup__links {
+.lifelong-learning .text-highlight__body {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     padding-bottom: 1.75rem;
 }
 
 @media (min-width: 901px) {
-    .lifelong-learning .credits-linkup__links {
+    .lifelong-learning .text-highlight__body {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
-.lifelong-learning .credits-linkup__links__intro {
+.lifelong-learning .text-highlight__body__intro {
     font-weight: 600;
 }
 
