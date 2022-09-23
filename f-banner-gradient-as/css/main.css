@@ -25946,6 +25946,16 @@ form:not([class]) .form__required-note--marker,
     overflow: hidden;
 }
 
+.banner__image:not(.banner__image--svg):after {
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(to top, #303030, transparent);
+}
+
 @media (max-width: 767px) {
     .banner__overlay {
         background-color: #303030;
@@ -26404,6 +26414,10 @@ form:not([class]) .form__required-note--marker,
 
 .banner-standfirst-label .banner__image {
     overflow: hidden;
+}
+
+.banner-standfirst-label .banner__image:not(.banner__image--svg):after {
+    background-image: none;
 }
 
 .banner-standfirst-label .banner__block-color {
@@ -64740,6 +64754,16 @@ main .home .home__whats-happening .related-content {
     overflow: hidden;
 }
 
+.landing .banner .banner__image:not(.banner__image--svg):after {
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(to top, #303030, transparent);
+}
+
 @media (max-width: 767px) {
     .landing .banner .banner__overlay {
         background-color: #303030;
@@ -67899,6 +67923,16 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .course--pgt .banner__image {
     position: relative;
     overflow: hidden;
+}
+
+.course--pgt .banner__image:not(.banner__image--svg):after {
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(to top, #5d184a, transparent);
 }
 
 @media (max-width: 767px) {
@@ -71690,6 +71724,16 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     overflow: hidden;
 }
 
+.research-degree .banner__image:not(.banner__image--svg):after {
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(to top, #303030, transparent);
+}
+
 @media (max-width: 767px) {
     .research-degree .banner__overlay {
         background-color: #303030;
@@ -73378,6 +73422,16 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .lifelong-learning .banner__image {
     position: relative;
     overflow: hidden;
+}
+
+.lifelong-learning .banner__image:not(.banner__image--svg):after {
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(to top, #5d184a, transparent);
 }
 
 @media (max-width: 767px) {
