@@ -4567,7 +4567,18 @@ function createMenuToggle(label, button, setMenu, veil) {
   button.setAttribute('type', 'button');
   button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hasPopup, 'menu');
   Array.from(label.childNodes).forEach(child => buttonWrapper.appendChild(child));
-  button.appendChild(buttonWrapper);
+  button.appendChild(buttonWrapper); //
+
+  const burgerBun = document.createElement('div');
+  const burgerSpan1 = document.createElement('span');
+  const burgerSpan2 = document.createElement('span');
+  const burgerSpan3 = document.createElement('span');
+  burgerBun.setAttribute('class', 'burger-bun');
+  burgerBun.appendChild(burgerSpan1);
+  burgerBun.appendChild(burgerSpan2);
+  burgerBun.appendChild(burgerSpan3);
+  button.appendChild(burgerBun); //
+
   const trap = focus_trap__WEBPACK_IMPORTED_MODULE_0___default()(menu, {
     /**
      * Initial focus should be whichever of: the current page; a menu item

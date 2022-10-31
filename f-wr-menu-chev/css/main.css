@@ -43349,6 +43349,59 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     opacity: 1;
 }
 
+.menu__display__button__button {
+    flex-direction: column !important;
+}
+
+.menu .burger-bun {
+    display: block;
+    position: relative;
+    z-index: 1;
+    /*
+        -webkit-user-select: none;
+        user-select: none;
+        top: 50px;
+        left: 50px;
+        */
+    background-color: aquamarine;
+}
+
+.menu .burger-bun span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.menu .burger-bun span:first-child {
+    transform-origin: 0% 0%;
+}
+
+.menu .burger-bun span:nth-child(2) {
+    transform-origin: 0% 100%;
+}
+
+.menu[data-open='true'] .burger-bun span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+.menu[data-open='true'] .burger-bun span:nth-child(3) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+.menu[data-open='true'] .burger-bun span:nth-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
 .navigation--secondary__header {
     display: none;
 }
