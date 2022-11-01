@@ -681,13 +681,12 @@ __webpack_require__.r(__webpack_exports__);
 
 function renderDurations(props) {
   const durations = Array.from(new Set(props.details.listMetadata.duration));
-  durations.map((duration, index) => {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
+  return durations.map((duration, index) => {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, {
       key: index
-    }, duration), index === durations.length - 1 ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
-      key: index,
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", null, duration), index === durations.length - 1 ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
       className: "color--red50"
-    }, ' ', "|", ' '));
+    }, " | "));
   });
 }
 /**
