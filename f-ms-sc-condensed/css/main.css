@@ -19194,6 +19194,7 @@ main article .content {
 }
 
 main .navigation--secondary {
+    display: none;
     grid-column: 1 / span 6;
 }
 

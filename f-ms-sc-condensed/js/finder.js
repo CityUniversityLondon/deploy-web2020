@@ -781,7 +781,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function renderDurations(props) {
   const durations = Array.from(new Set(props.details.listMetadata.duration));
-  return durations.map((duration, index) => {
+  durations.map((duration, index) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_4___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
       key: index
     }, duration), index === durations.length - 1 ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
