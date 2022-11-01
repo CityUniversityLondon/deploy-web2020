@@ -4570,10 +4570,13 @@ function createMenuToggle(label, button, setMenu, veil) {
   button.appendChild(buttonWrapper); //
 
   const burgerBun = document.createElement('div');
+  const burgerCheck = document.createElement('input');
   const burgerSpan1 = document.createElement('span');
   const burgerSpan2 = document.createElement('span');
   const burgerSpan3 = document.createElement('span');
   burgerBun.setAttribute('class', 'burger-bun');
+  burgerCheck.setAttribute('type', 'checkbox');
+  burgerBun.appendChild(burgerCheck);
   burgerBun.appendChild(burgerSpan1);
   burgerBun.appendChild(burgerSpan2);
   burgerBun.appendChild(burgerSpan3);
