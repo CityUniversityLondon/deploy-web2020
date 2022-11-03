@@ -4434,10 +4434,7 @@ function prepareSubNavigation(navigationItem, rootClass) {
 
 function prepareNavigation(navigation, rootClass) {
   Array.from(navigation.querySelectorAll('li')).forEach(navigationItem => {
-    const link = navigationItem.querySelector('a'),
-          subNavigation = navigationItem.querySelector('ul'),
-          linkText = 'Visit ' + navigationItem.dataset.title;
-    link.title = linkText;
+    const subNavigation = navigationItem.querySelector('ul');
     subNavigation && subNavigation.firstElementChild && prepareSubNavigation(navigationItem, rootClass);
   });
 }
