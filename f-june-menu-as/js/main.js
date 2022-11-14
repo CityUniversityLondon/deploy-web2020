@@ -4334,13 +4334,12 @@ function findLinks(e) {
 /*!**********************************************!*\
   !*** ./src/patterns/menu/menu-formatters.js ***!
   \**********************************************/
-/*! exports provided: prepareNavigation, prepareSideNavigation, listenForNavigationToggles */
+/*! exports provided: prepareNavigation, listenForNavigationToggles */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prepareNavigation", function() { return prepareNavigation; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "prepareSideNavigation", function() { return prepareSideNavigation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listenForNavigationToggles", function() { return listenForNavigationToggles; });
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_0__);
@@ -4433,20 +4432,6 @@ function prepareSubNavigation(navigationItem, rootClass) {
 
 
 function prepareNavigation(navigation, rootClass) {
-  Array.from(navigation.querySelectorAll('li')).forEach(navigationItem => {
-    const subNavigation = navigationItem.querySelector('ul');
-    subNavigation && subNavigation.firstElementChild && prepareSubNavigation(navigationItem, rootClass);
-  });
-}
-/**
- * Iterate over the navigation lists, transforming them into the initial
- * navigation with the current asset lineage open. When side navigation it creates extra control elements.
- *
- * @param {HTMLElement} navigation - The navigation container.
- * @param {string} rootClass - The class of the navigation element.
- */
-
-function prepareSideNavigation(navigation, rootClass) {
   const controlsClassName = rootClass + '__controls';
   Array.from(navigation.querySelectorAll('li')).forEach(navigationItem => {
     const link = navigationItem.querySelector('a'),
@@ -5324,7 +5309,7 @@ function launchSecondaryNavigation(navigation) {
   //     navigation.innerHTML = navigation.innerHTML
   //         .replace(/\(\( /g, '')
   //         .replace(/ \)\)/g, '');
-  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__["prepareSideNavigation"])(navigation, className);
+  Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__["prepareNavigation"])(navigation, className);
   Object(_menu_menu_formatters__WEBPACK_IMPORTED_MODULE_0__["listenForNavigationToggles"])(navigation, className);
 }
 
