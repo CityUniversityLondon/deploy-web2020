@@ -43412,6 +43412,24 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     transform-origin: 0% 100%;
 }
 
+#global-header__menu .menu__content {
+    opacity: 0;
+    transition: opacity 0.5s;
+    visibility: hidden;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: nowrap;
+    left: 0;
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+}
+
+#global-header__menu[data-open='true'] .menu__content {
+    visibility: visible;
+    opacity: 1;
+}
+
 .navigation--secondary__header {
     display: none;
 }
