@@ -25630,7 +25630,7 @@ form:not([class]) .form__required-note--marker,
 
 .back-to-top[data-docked='false'] a {
     display: inline;
-    opacity: 0.75;
+    opacity: 1;
     overflow: hidden;
     position: fixed;
     text-decoration: none;
