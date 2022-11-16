@@ -1567,16 +1567,16 @@ function showAnchor(backToTop) {
     // shows anchor when scrolled down far enough - see parameters
     backToTop.dataset.docked = 'false';
     backToTop.removeAttribute('hidden');
-
-    if (positionOnScreen > footerOffset - viewPortHeight + 70) {
-      backToTop.classList.add('back-to-top--invert');
-    } else if (positionOnScreen < footerOffset - viewPortHeight + 70) {
-      backToTop.classList.remove('back-to-top--invert');
-    }
   } else if (positionOnScreen < 200) {
     // hides anchor when close to top of the page
     backToTop.setAttribute('hidden', 'true');
     backToTop.dataset.docked = 'false';
+  }
+
+  if (positionOnScreen > footerOffset - viewPortHeight + 70) {
+    backToTop.classList.add('back-to-top--invert');
+  } else if (positionOnScreen < footerOffset - viewPortHeight + 70) {
+    backToTop.classList.remove('back-to-top--invert');
   }
 }
 /**
