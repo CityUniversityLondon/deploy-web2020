@@ -1573,9 +1573,9 @@ function showAnchor(backToTop) {
     backToTop.dataset.docked = 'false';
   }
 
-  if (positionOnScreen > footerOffset - viewPortHeight + 70) {
+  if (positionOnScreen > footerOffset - viewPortHeight + 35) {
     backToTop.classList.add('back-to-top--invert');
-  } else if (positionOnScreen < footerOffset - viewPortHeight + 70) {
+  } else if (positionOnScreen < footerOffset - viewPortHeight + 35) {
     backToTop.classList.remove('back-to-top--invert');
   }
 }
