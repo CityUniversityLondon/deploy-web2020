@@ -25937,14 +25937,31 @@ form:not([class]) .form__required-note--marker,
     stroke: #ffffff;
 }
 
+.back-to-top.back-to-top--invert .back-to-top__button svg circle {
+    fill: #ffffff;
+}
+
 .back-to-top.back-to-top--invert .back-to-top__button__arrow {
-    background: #ffffff;
     color: #0c0c0e;
 }
 
 .back-to-top.back-to-top--invert a:focus {
     outline: 0.125rem dotted #ffffff;
     border-bottom-width: 0;
+}
+
+@media (hover: hover) {
+    .back-to-top.back-to-top--invert a:hover svg circle {
+        fill: #1e1e1e;
+    }
+}
+
+.back-to-top.back-to-top--invert a:hover .back-to-top__button__arrow {
+    color: #ffffff;
+}
+
+.back-to-top.back-to-top--invert a:active .back-to-top__button__arrow {
+    color: #ffffff;
 }
 
 @media print {
