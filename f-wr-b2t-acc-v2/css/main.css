@@ -25610,7 +25610,7 @@ form:not([class]) .form__required-note--marker,
 }
 
 .back-to-top .back-to-top__button__arrow {
-    background: #696969;
+    background: #0c0c0e;
     border-radius: 50%;
     color: #ffffff;
     height: 2rem;
@@ -25683,7 +25683,7 @@ form:not([class]) .form__required-note--marker,
 }
 
 .back-to-top[data-docked='false'] .back-to-top__button svg circle {
-    fill: #696969;
+    fill: #0c0c0e;
 }
 
 .back-to-top[data-docked='false'] .back-to-top__button__arrow {
@@ -25948,6 +25948,10 @@ form:not([class]) .form__required-note--marker,
 .back-to-top.back-to-top--invert a:focus {
     outline: 0.125rem dotted #ffffff;
     border-bottom-width: 0;
+}
+
+.back-to-top.back-to-top--invert a:hover {
+    opacity: 1;
 }
 
 @media (hover: hover) {
