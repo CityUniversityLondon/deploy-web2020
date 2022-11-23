@@ -25630,7 +25630,7 @@ form:not([class]) .form__required-note--marker,
 
 .back-to-top[data-docked='false'] a {
     display: inline;
-    opacity: 0.75;
+    opacity: 1;
     overflow: hidden;
     position: fixed;
     text-decoration: none;
@@ -25650,6 +25650,10 @@ form:not([class]) .form__required-note--marker,
         bottom: 0.75rem;
         right: 1.25rem;
     }
+}
+
+.back-to-top[data-docked='false'] a:hover svg circle {
+    fill: #1e1e1e;
 }
 
 .back-to-top[data-docked='false'] .back-to-top__button__label {
@@ -25683,7 +25687,7 @@ form:not([class]) .form__required-note--marker,
 }
 
 .back-to-top[data-docked='false'] .back-to-top__button svg circle {
-    fill: #0c0c0e;
+    fill: #696969;
 }
 
 .back-to-top[data-docked='false'] .back-to-top__button__arrow {
@@ -25893,6 +25897,15 @@ form:not([class]) .form__required-note--marker,
     border-bottom-width: 0;
 }
 
+.back-to-top a:active svg circle {
+    fill: #1e1e1e;
+}
+
+.back-to-top a:active .back-to-top__button__label {
+    color: #1e1e1e;
+    border-bottom: 0.125rem solid #1e1e1e;
+}
+
 .back-to-top a:focus {
     outline: 0.125rem dotted #0c0c0e;
     border-bottom-width: 0;
@@ -25908,13 +25921,9 @@ form:not([class]) .form__required-note--marker,
 }
 
 @media (hover: hover) {
-    .back-to-top a:hover .back-to-top__button svg circle {
+    .back-to-top a:hover svg circle {
         fill: #1e1e1e;
     }
-}
-
-.back-to-top a:active .back-to-top__button svg circle {
-    fill: #1e1e1e;
 }
 
 @media (hover: hover) {
@@ -25922,11 +25931,6 @@ form:not([class]) .form__required-note--marker,
         color: #1e1e1e;
         border-bottom: 0.125rem solid #1e1e1e;
     }
-}
-
-.back-to-top a:active .back-to-top__button__label {
-    color: #1e1e1e;
-    border-bottom: 0.125rem solid #1e1e1e;
 }
 
 .back-to-top a svg {
