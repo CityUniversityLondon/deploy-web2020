@@ -35899,9 +35899,9 @@ figure figcaption a:active,
     grid-column: 1/-1;
 }
 
-.image-grid img {
+.image-grid img.inView {
     animation-name: slideInFromLeft100;
-    animation-duration: 1s;
+    animation-duration: 0.8s;
     overflow: hidden;
 }
 
