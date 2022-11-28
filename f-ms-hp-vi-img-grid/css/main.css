@@ -35895,54 +35895,105 @@ figure figcaption a:active,
     display: flex;
 }
 
-.image-grid {
+.image-grid--v1 {
     grid-column: 1/-1;
 }
 
-.image-grid img.inView {
+.image-grid--v1 img.inView {
     animation-name: slideInFromLeft100;
-    animation-duration: 0.8s;
+    animation-duration: 0.5s;
     overflow: hidden;
 }
 
-.img_1 {
+.image-grid--v1 img:not(.inView) {
+    opacity: 0;
+}
+
+.img_1,
+.img_6,
+.img_11 {
+    animation-delay: 0s;
+}
+
+.img_2,
+.img_7,
+.img_12 {
+    animation-delay: 0.05s;
+}
+
+.img_3,
+.img_8,
+.img_13 {
     animation-delay: 0.1s;
 }
 
-.img_2 {
+.img_4,
+.img_9,
+.img_14 {
+    animation-delay: 0.15s;
+}
+
+.img_5,
+.img_10,
+.img_15 {
     animation-delay: 0.2s;
 }
 
-.img_3 {
-    animation-delay: 0.3s;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.img_4 {
-    animation-delay: 0.4s;
+.image-grid--v2 {
+    grid-column: 1/-1;
+    --rows: 3;
+    --cols: 5;
+    --border: 14px;
+    background: conic-gradient(from 90deg at var(--border) var(--border), #e5e5e5 90deg, #cbcbcb 0) calc(-1 * var(--border)) calc(-1 * var(--border))/calc(100% / var(--cols)) calc(100% / var(--rows));
 }
 
-.img_5 {
-    animation-delay: 0.5s;
+.image-grid--v2 img.inView {
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    overflow: hidden;
 }
 
-.img_6 {
-    animation-delay: 0.6s;
+.image-grid--v2 img:not(.inView) {
+    opacity: 0;
 }
 
-.img_7 {
-    animation-delay: 0.7s;
+.img_1,
+.img_6,
+.img_11 {
+    animation-delay: 0s;
 }
 
-.img_8 {
-    animation-delay: 0.8s;
+.img_2,
+.img_7,
+.img_12 {
+    animation-delay: 0.05s;
 }
 
-.img_9 {
-    animation-delay: 0.9s;
+.img_3,
+.img_8,
+.img_13 {
+    animation-delay: 0.1s;
 }
 
-.img_10 {
-    animation-delay: 1s;
+.img_4,
+.img_9,
+.img_14 {
+    animation-delay: 0.15s;
+}
+
+.img_5,
+.img_10,
+.img_15 {
+    animation-delay: 0.2s;
 }
 
 @media (max-width: 767px) {
