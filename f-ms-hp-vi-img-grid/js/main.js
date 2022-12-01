@@ -4063,7 +4063,7 @@ function launchImgGrid(imgGrid) {
         els[i].classList.add('inView', 'scale');
         setTimeout(function () {
           box.classList.add('inView');
-        }, 4000);
+        }, 3000);
       }
     }
   }
