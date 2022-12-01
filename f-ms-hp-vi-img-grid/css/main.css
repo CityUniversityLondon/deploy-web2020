@@ -36043,6 +36043,61 @@ figure figcaption a:active,
     }
 }
 
+@keyframes slideInFromLeft100 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.row {
+    display: flex;
+    overflow: hidden;
+}
+
+.image-grid--v4 {
+    grid-column: 1/-1;
+}
+
+.image-grid--v4 .box {
+    position: absolute;
+    width: 40%;
+    transform: translate(10%, 50%);
+    background: white;
+    padding: 2rem 1rem;
+}
+
+.image-grid--v4 .box.inView {
+    animation: slideInFromLeft100 1s;
+}
+
+.image-grid--v4 .box:not(.inView) {
+    opacity: 0;
+}
+
+.image-grid--v4 img.inView {
+    animation: slideInFromLeft100 1s, scaleIn 4s;
+    overflow: hidden;
+    flex-basis: calc(100% / 5);
+    object-fit: cover;
+    max-width: calc(100% / 5);
+}
+
+.image-grid--v4 img:not(.inView) {
+    opacity: 0;
+}
+
 @media (max-width: 767px) {
     .infographic .infographic__panel {
         padding: 2rem 1rem;
