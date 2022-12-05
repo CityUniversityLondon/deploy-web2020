@@ -36079,7 +36079,7 @@ figure figcaption a:active,
 }
 
 .image-grid--v4 .box.inView {
-    animation: slideInFromLeft100 2s;
+    animation: slideInFromLeft100 1.5s;
 }
 
 .image-grid--v4 .box:not(.inView) {
@@ -36087,7 +36087,7 @@ figure figcaption a:active,
 }
 
 .image-grid--v4 img.inView {
-    animation: slideInFromLeft100 1s, scaleIn cubic-bezier(0.4, 0.53, 0.14, 0.9) 5s;
+    animation: slideInFromLeft100 1s, scaleIn ease-out 3s;
     overflow: hidden;
     flex-basis: calc(100% / 5);
     object-fit: cover;

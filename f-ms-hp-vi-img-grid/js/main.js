@@ -4060,10 +4060,10 @@ function launchImgGrid(imgGrid) {
       let distInView = imgGrid.getBoundingClientRect().top - window.innerHeight + 20;
 
       if (distInView < 0) {
-        els[i].classList.add('inView', 'scale');
         setTimeout(function () {
           box.classList.add('inView');
         }, 3000);
+        els[i].classList.add('inView', 'scale');
       }
     }
   }
