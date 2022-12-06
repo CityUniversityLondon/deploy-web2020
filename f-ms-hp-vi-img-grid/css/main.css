@@ -36071,6 +36071,7 @@ figure figcaption a:active,
 }
 
 .image-grid--v4 .box {
+    z-index: 10;
     position: absolute;
     width: 40%;
     transform: translate(10%, 50%);

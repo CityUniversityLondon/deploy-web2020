@@ -4046,24 +4046,34 @@ function launchImgGrid(imgGrid) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
+
 
 
 const className = 'image-grid--v4';
 
 function launchImgGrid(imgGrid) {
-  let els = imgGrid.querySelectorAll('.image-grid--v4 img');
+  let els = imgGrid.querySelectorAll('.image-grid--v4 .row');
   let box = imgGrid.querySelector('.box');
   window.addEventListener('scroll', fadeIn);
 
   function fadeIn() {
     for (let i = 0; i < els.length; i++) {
-      let distInView = imgGrid.getBoundingClientRect().top - window.innerHeight + 20;
+      let imgs = els[i].querySelectorAll('img');
+      let distInViewRow = els[i].getBoundingClientRect().top - window.innerHeight + 20;
+      let distInViewRowRow3 = els[i].getBoundingClientRect().top - window.innerHeight + 20;
 
-      if (distInView < 0) {
+      if (distInViewRow < 0) {
+        for (const img of imgs) {
+          img.classList.add('inView', 'scale');
+        }
+      }
+
+      if (distInViewRowRow3 < 0) {
         setTimeout(function () {
           box.classList.add('inView');
-        }, 3000);
-        els[i].classList.add('inView', 'scale');
+        }, 2000);
       }
     }
   }
