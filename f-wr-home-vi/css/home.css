@@ -45493,151 +45493,6 @@ main > .login footer p {
     color: #ffffff;
 }
 
-.card--event--home .card__anchor {
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background-color: #ffffff;
-    position: relative;
-}
-
-.card--event--home .card__anchor, .card--event--home .card__anchor:focus, .card--event--home .card__anchor:active, .card--event--home .card__anchor:visited {
-    border: none;
-}
-
-@media (hover: hover) {
-    .card--event--home .card__anchor:hover {
-        box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.35);
-        border: none;
-    }
-}
-
-.card--event--home .card__anchor .card__thumbnail {
-    margin-top: 0.75rem;
-    line-height: 0;
-    display: block;
-    position: relative;
-}
-
-.card--event--home .card__anchor .card--event__label--shortdate {
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    align-self: flex-start;
-    background-color: #d61726;
-    color: #ffffff;
-    display: inline-block;
-    font-weight: 700;
-    left: 0;
-    bottom: 0;
-    margin-top: 0;
-    position: absolute;
-    padding: 0.5rem;
-    transition: background-color 0.2s ease-in;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .card--event--home .card__anchor .card--event__label--shortdate {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--event--home .card__anchor .card--event__label--shortdate {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--event--home .card__anchor .card--event__label--shortdate {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--event--home .card__anchor .card--event__label--shortdate {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .card--event--home .card__anchor .card--event__label--shortdate {
-        transition: none;
-    }
-}
-
-.card--event--home .card__anchor .card--event__label--shortdate span {
-    font-weight: 450;
-}
-
-.card--event--home .card__anchor .card--event__label--shortdate:first-child {
-    top: 0;
-}
-
-.card--event--home .card__anchor .card--event__label--shortdate:first-child + .card__details__text {
-    margin-top: 2.5rem;
-}
-
-@media (hover: hover) {
-    .card--event--home .card__anchor:hover .card--event__label--shortdate {
-        background-color: #9e111c;
-    }
-}
-
-.card--event--home .card__anchor .card--event__label--shortdate + .card__thumbnail {
-    margin-top: 0.75rem;
-}
-
-.card--event--home .card__anchor .card__details__text {
-    margin-top: 3.25rem;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-}
-
-.card--event--home .card__anchor .card__thumbnail ~ .card__details__text {
-    margin-top: 0;
-}
-
-.card--event--home .card__anchor .card__type {
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
-    margin-top: 0.75rem;
-    color: #696969;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .card--event--home .card__anchor .card__type {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--event--home .card__anchor .card__type {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--event--home .card__anchor .card__type {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--event--home .card__anchor .card__type {
-        letter-spacing: -0.017em;
-    }
-}
-
-.card--event--home .card__anchor .card--event__divider {
-    color: #d61726;
-}
-
-.card--event--home .card__anchor:after {
-    content: unset;
-    display: none;
-}
-
-/*       NEW STYLES            */
 .card--event--home .card--event--home__anchor {
     background-color: #ffffff;
     display: flex;
@@ -45756,13 +45611,14 @@ main > .login footer p {
     }
 }
 
-.card--event--home .card--event--home__anchor:hover .card--event--home__thumbnail {
+.card--event--home .card--event--home__anchor:hover .card--event--home__thumbnail img {
     transform: scale(1.02);
 }
 
 .card--event--home .card--event--home__thumbnail {
     position: relative;
     line-height: 0;
+    overflow: hidden;
 }
 
 .card--event--home .card--event--home__date-label {
@@ -46036,8 +45892,12 @@ main > .login footer p {
     }
 }
 
-.card--news--home .card--news--home__anchor:hover .card--news--home__thumbnail {
+.card--news--home .card--news--home__anchor:hover .card--news--home__thumbnail img {
     transform: scale(1.02);
+}
+
+.card--news--home .card--news--home__thumbnail {
+    overflow: hidden;
 }
 
 .card--news--home .card--news--home__text {
