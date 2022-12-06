@@ -45348,16 +45348,45 @@ main > .login footer p {
     }
 }
 
+@media (max-width: 1023px) {
+    .home__news-events {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .home__news-events {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .home__news-events {
+        flex-direction: column;
+    }
+}
+
 .home__news-events .home__news-events__section {
     flex-basis: 50%;
 }
 
-.home__news-events .home__news-events__section:first-child {
-    margin-right: 1rem;
+@media (min-width: 769px) {
+    .home__news-events .home__news-events__section:first-child {
+        margin-right: 1rem;
+    }
 }
 
 .home__news-events .home__news-events__section .related-content {
     max-width: inherit;
+}
+
+@media (max-width: 767px) {
+    .home__news-events .home__news-events__section {
+        flex-basis: 100%;
+    }
 }
 
 .home__news-events .home__news-events__header {
@@ -45456,7 +45485,7 @@ main > .login footer p {
 }
 
 .home__news-events .home__news-events__header__link a:focus, .home__news-events .home__news-events__header__link a:active {
-    outline-color: yellow;
+    outline-color: #d61726;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
@@ -45491,6 +45520,37 @@ main > .login footer p {
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
+}
+
+.home__news-events .related-content {
+    display: flex;
+    list-style: none;
+}
+
+@media (max-width: 431px) {
+    .home__news-events .related-content {
+        flex-direction: column;
+    }
+}
+
+.home__news-events .related-content .card--news--home,
+.home__news-events .related-content .card--event--home {
+    flex-basis: 50%;
+    margin: 0;
+}
+
+@media (min-width: 433px) {
+    .home__news-events .related-content .card--news--home:first-child,
+    .home__news-events .related-content .card--event--home:first-child {
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 431px) {
+    .home__news-events .related-content .card--news--home,
+    .home__news-events .related-content .card--event--home {
+        flex-basis: 100%;
+    }
 }
 
 .card--event--home .card--event--home__anchor {
@@ -45623,9 +45683,9 @@ main > .login footer p {
 
 .card--event--home .card--event--home__date-label {
     position: absolute;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    letter-spacing: -0.008em;
     align-self: flex-start;
     background-color: #d61726;
     color: #ffffff;
@@ -45644,13 +45704,13 @@ main > .login footer p {
 
 @media (min-width: 1280px) and (max-width: 1919px) {
     .card--event--home .card--event--home__date-label {
-        letter-spacing: -0.005em;
+        letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .card--event--home .card--event--home__date-label {
-        letter-spacing: -0.01em;
+        letter-spacing: -0.014em;
     }
 }
 
@@ -45692,11 +45752,11 @@ main > .login footer p {
     font-style: normal;
     font-weight: 600;
     margin-top: 1rem;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
+    text-decoration: underline;
     display: inline;
     max-width: unset;
     color: #0c0c0e;
+    text-decoration-thickness: 12%;
 }
 
 .card--event--home .card--event--home__heading i,
@@ -45752,7 +45812,6 @@ main > .login footer p {
     line-height: 1.625;
     letter-spacing: 0em;
     margin-top: 0.75rem;
-    color: #696969;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -45919,11 +45978,11 @@ main > .login footer p {
     font-style: normal;
     font-weight: 600;
     margin-top: 1rem;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
+    text-decoration: underline;
     display: inline;
     max-width: unset;
     color: #0c0c0e;
+    text-decoration-thickness: 12%;
 }
 
 .card--news--home .card--news--home__heading i,
@@ -45978,7 +46037,6 @@ main > .login footer p {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    color: #696969;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
