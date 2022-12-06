@@ -45635,8 +45635,11 @@ main > .login footer p {
     bottom: 0;
     margin-top: 0;
     position: absolute;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     transition: background-color 0.2s ease-in;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -45671,6 +45674,8 @@ main > .login footer p {
 
 .card--event--home .card--event--home__date-label span {
     font-weight: 450;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card--event--home .card--event--home__text {
