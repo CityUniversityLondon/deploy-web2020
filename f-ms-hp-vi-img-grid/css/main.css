@@ -36073,7 +36073,7 @@ figure figcaption a:active,
 .image-grid--v4 .box {
     z-index: 10;
     position: absolute;
-    width: 40%;
+    width: 43%;
     transform: translate(10%, 50%);
     background: white;
     padding: 2rem 1rem;
@@ -36085,6 +36085,120 @@ figure figcaption a:active,
 
 .image-grid--v4 .box:not(.inView) {
     opacity: 0;
+}
+
+.image-grid--v4 .box__content {
+    position: relative;
+    margin-left: 4.5rem;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+}
+
+.image-grid--v4 .box__content .box__pre-strap {
+    text-transform: uppercase;
+    display: flex;
+    font-weight: 700;
+}
+
+.image-grid--v4 .box__content .box__pre-strap span {
+    display: block;
+}
+
+.image-grid--v4 .box__content .box__pre-strap span.text {
+    color: #d61726;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.image-grid--v4 .box__content .box__pre-strap span.text i,
+.image-grid--v4 .box__content .box__pre-strap span.text em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.image-grid--v4 .box__content .box__pre-strap span.line {
+    flex: 1;
+    border-top: 1px solid #a1a1a1;
+    margin: auto 0 auto 1rem;
+}
+
+.image-grid--v4 .box__content .box__content__body {
+    border-bottom: 1px solid #a1a1a1;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.image-grid--v4 .box__content .box__post-strap .icon__wrapper {
+    background-color: #d61726;
+    border-radius: 50%;
+    color: white;
+    display: inline-flex;
+    height: 2rem;
+    margin-bottom: 0.5rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+}
+
+.image-grid--v4 .box__content .box__post-strap .icon__wrapper .icon {
+    margin: auto;
+}
+
+.image-grid--v4 .box__content .box__post-strap .icon__wrapper .icon.fa-instagram:before {
+    font-size: 1.266rem;
+    line-height: 1.33333;
+    letter-spacing: -0.011em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .image-grid--v4 .box__content .box__post-strap .icon__wrapper .icon.fa-instagram:before {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .image-grid--v4 .box__content .box__post-strap .icon__wrapper .icon.fa-instagram:before {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .image-grid--v4 .box__content .box__post-strap .icon__wrapper .icon.fa-instagram:before {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .image-grid--v4 .box__content .box__post-strap .icon__wrapper .icon.fa-instagram:before {
+        letter-spacing: -0.017em;
+    }
+}
+
+.image-grid--v4 .box__content .box__post-strap a {
+    color: #d61726;
+    border-bottom-color: #d61726;
+    font-weight: 600;
+    background-image: none;
+}
+
+.image-grid--v4 .box__content .box__post-strap a:hover {
+    border-bottom-color: #d61726;
+    background-image: none;
+}
+
+.image-grid--v4 .box__border {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1px;
+    right: 0;
+    background: transparent;
+    width: 0;
+    border-left: 15px solid transparent;
+    border-image: url(https://www.city.ac.uk/__data/assets/file/0015/710241/community.svg) 65 round;
+    filter: invert(67%) sepia(1%) saturate(0%) hue-rotate(151deg) brightness(98%) contrast(85%);
+}
+
+.image-grid--v4 .box__border--two {
+    left: 0.75rem;
 }
 
 .image-grid--v4 img.inView {
