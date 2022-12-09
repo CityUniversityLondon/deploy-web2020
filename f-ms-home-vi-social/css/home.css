@@ -40391,21 +40391,16 @@ a .link-decorator {
     }
 }
 
-.image-grid--v4 .box__content .box__post-strap .box__post-strap__link {
+.image-grid--v4 .box__content .box__post-strap a.anchor-discreet {
     color: #d61726;
     border-bottom-color: #d61726;
     font-weight: 600;
     background-image: none;
 }
 
-.image-grid--v4 .box__content .box__post-strap .box__post-strap__link:hover {
-    background-color: none;
-}
-
-.image-grid--v4 .box__content .box__post-strap .box__post-strap__link:active {
-    border-bottom-color: #d61726;
-    background-image: none;
-    background-color: none;
+.image-grid--v4 .box__content .box__post-strap a.anchor-discreet:hover::before {
+    opacity: 0;
+    transition: none;
 }
 
 .image-grid--v4 .box__border {
@@ -40416,9 +40411,38 @@ a .link-decorator {
     right: 0;
     background: transparent;
     width: 0;
-    border-left: 15px solid transparent;
     border-image: url(https://www.city.ac.uk/__data/assets/file/0015/710241/community.svg) 65 round;
     filter: invert(67%) sepia(1%) saturate(0%) hue-rotate(151deg) brightness(98%) contrast(85%);
+}
+
+@media (min-width: 1024px) {
+    .image-grid--v4 .box__border {
+        border-left: 14px solid transparent;
+    }
+}
+
+@media (min-width: 1280px) {
+    .image-grid--v4 .box__border {
+        border-left: 16px solid transparent;
+    }
+}
+
+@media (min-width: 1920px) {
+    .image-grid--v4 .box__border {
+        border-left: 18px solid transparent;
+    }
+}
+
+@media (min-width: 3840px) {
+    .image-grid--v4 .box__border {
+        border-left: 36px solid transparent;
+    }
+}
+
+@media (min-width: 7680px) {
+    .image-grid--v4 .box__border {
+        border-left: 72px solid transparent;
+    }
 }
 
 .image-grid--v4 .box__border--two {
@@ -40435,10 +40459,6 @@ a .link-decorator {
 
 .image-grid--v4 img:not(.inView) {
     opacity: 0;
-}
-
-article a.box__post-strap__link:active {
-    background-color: none;
 }
 
 .cta-block {
