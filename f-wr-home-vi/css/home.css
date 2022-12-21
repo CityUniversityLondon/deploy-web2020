@@ -45662,13 +45662,17 @@ main > .login footer p {
 }
 
 .card--event--home .card--event--home__anchor:hover .card--event--home__thumbnail img {
-    transform: scale(1.02);
+    transform: scale(1.1);
 }
 
 .card--event--home .card--event--home__thumbnail {
     position: relative;
     line-height: 0;
     overflow: hidden;
+}
+
+.card--event--home .card--event--home__thumbnail img {
+    transition: transform 0.4s ease-in;
 }
 
 .card--event--home .card--event--home__date-label {
@@ -45686,7 +45690,6 @@ main > .login footer p {
     margin-top: 0;
     position: absolute;
     padding: 0.5rem 1rem;
-    transition: background-color 0.2s ease-in;
     display: flex;
     flex-direction: column;
     text-align: center;
