@@ -7758,7 +7758,7 @@ function screenWidth(size) {
 function addClassWhenVisible(el) {
   function handleIntersect(els) {
     for (const e of els) {
-      e.intersectionRatio > 0 ? e.target.classList.add('inView') : null;
+      e.intersectionRatio > 0 ? e.target.classList.add('in-view') : null;
     }
   }
 

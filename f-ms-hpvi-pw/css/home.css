@@ -45375,7 +45375,13 @@ main > .login footer p {
 .home-new-vi .pathway .card--pathway {
     list-style-type: none;
     height: fit-content;
+    opacity: 0;
+    transition: opacity 2s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.home-new-vi .pathway .card--pathway.in-view {
+    opacity: 1;
 }
 
 .home-new-vi .pathway .card--pathway a {
@@ -45526,11 +45532,11 @@ main > .login footer p {
     border-bottom-color: #0c0c0e;
 }
 
-.home-new-vi .pathway .wrapper--icon {
+.home-new-vi .pathway .wrap--icon {
     display: flex;
 }
 
-.home-new-vi .pathway .wrapper--icon:after {
+.home-new-vi .pathway .wrap--icon:after {
     background-color: #d61726;
     content: '';
     display: block;
@@ -45539,20 +45545,20 @@ main > .login footer p {
     width: 100%;
 }
 
-.home-new-vi .pathway .wrapper--icon .wrapper--icon__img {
+.home-new-vi .pathway .wrap--icon .wrap--icon__img {
     height: 2.5rem;
 }
 
-.home-new-vi .pathway .card--pathway__content__img + .card--pathway__content__text {
+.home-new-vi .pathway .card--pathway__img + .card--pathway__txt {
     padding-top: 0;
 }
 
-.home-new-vi .pathway .card--pathway__content__text {
+.home-new-vi .pathway .card--pathway__txt {
     padding: 1rem;
     color: initial;
 }
 
-.home-new-vi .pathway .card--pathway__content__heading {
+.home-new-vi .pathway .card--pathway__heading {
     display: inline;
     border-bottom: 0.1875rem solid #0c0c0e;
 }
