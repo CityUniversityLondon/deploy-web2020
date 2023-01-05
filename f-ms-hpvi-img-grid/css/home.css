@@ -45313,8 +45313,41 @@ main > .login footer p {
     text-align: center;
 }
 
+.home__pathway .col__triangle {
+    border-left: 100px solid transparent;
+    height: 200px;
+    transform: rotate(270deg);
+    z-index: 0;
+    border-image: url(https://www.city.ac.uk/__data/assets/file/0015/710241/community.svg) 65 round;
+    filter: invert(67%) sepia(1%) saturate(0%) hue-rotate(151deg) brightness(98%) contrast(85%);
+    display: inline-block;
+    position: relative;
+}
+
+.home__pathway .col__triangle--one {
+    left: 50px;
+    transform: rotate(270deg);
+}
+
+.home__pathway .col__triangle--two {
+    top: 100px;
+    right: 55px;
+    transform: rotate(270deg);
+}
+
+.home__pathway .col__triangle--three {
+    left: 90%;
+    transform: rotate(90deg);
+}
+
+.home__pathway .col__triangle--four {
+    top: 100px;
+    left: 83%;
+    transform: rotate(90deg);
+}
+
 @media (min-width: 1024px) {
-    .home-new-vi .pathway {
+    .home__pathway .pathway {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -45324,28 +45357,28 @@ main > .login footer p {
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    .home-new-vi .pathway {
+    .home__pathway .pathway {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    .home-new-vi .pathway {
+    .home__pathway .pathway {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1441px) {
-    .home-new-vi .pathway {
+    .home__pathway .pathway {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 1023px) {
-    .home-new-vi .pathway {
+    .home__pathway .pathway {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -45353,190 +45386,74 @@ main > .login footer p {
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    .home-new-vi .pathway {
+    .home__pathway .pathway {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-.home-new-vi .pathway .pathway__cards {
+.home__pathway .pathway .pathway__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: unset;
     grid-column-gap: 1.5rem;
+    background: #ffffff;
+    margin-top: -100px;
+    margin-bottom: -200px;
+    position: relative;
+    z-index: 1;
 }
 
 @media (max-width: 767px) {
-    .home-new-vi .pathway .pathway__cards {
+    .home__pathway .pathway .pathway__cards {
         display: block;
     }
 }
 
-.home-new-vi .pathway .card--pathway {
+.home__pathway .pathway .card--pathway {
     list-style-type: none;
     height: fit-content;
     opacity: 0;
     transition: opacity 2s;
+    margin-top: 0;
+    z-index: 1;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
-.home-new-vi .pathway .card--pathway.in-view {
+.home__pathway .pathway .card--pathway.in-view {
     opacity: 1;
 }
 
-.home-new-vi .pathway .card--pathway a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    background-color: transparent;
-    transition: background-color 0.2s ease-in, transform 0.2s ease-in-out;
-    border: 0.0625rem solid #f2f2f2;
-    color: #0c0c0e;
+.home__pathway .pathway .card--pathway .card--pathway__anchor {
+    border: 0;
     display: block;
+    background-image: none;
+}
+
+.home__pathway .pathway .card--pathway .card--pathway__anchor:focus, .home__pathway .pathway .card--pathway .card--pathway__anchor:active, .home__pathway .pathway .card--pathway .card--pathway__anchor:visited {
+    border: none;
+    outline-style: solid;
+}
+
+.home__pathway .pathway .card--pathway .card--pathway__anchor:hover {
+    background-color: inherit;
 }
 
 @media (hover: hover) {
-    .home-new-vi .pathway .card--pathway a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
+    .home__pathway .pathway .card--pathway .card--pathway__anchor:hover {
+        border: none;
     }
 }
 
-.home-new-vi .pathway .card--pathway a:focus, .home-new-vi .pathway .card--pathway a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
+.home__pathway .pathway .card--pathway .card--pathway__anchor:hover .card--pathway__img {
+    transform: scale(1.1);
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .home-new-vi .pathway .card--pathway a {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .home-new-vi .pathway .card--pathway a:hover {
-        background-color: #f2f2f2;
-    }
-}
-
-.home-new-vi .pathway .card--pathway a:active {
-    background-color: #f2f2f2;
-}
-
-.home-new-vi .pathway .card--pathway a:focus {
-    background-color: #f2f2f2;
-}
-
-@media (max-width: 1024px) {
-    .home-new-vi .pathway .card--pathway a {
-        background-color: #f2f2f2;
-    }
-}
-
-.home-new-vi .pathway .card--pathway a .card--pathway__content__heading {
-    color: #0c0c0e;
-}
-
-.home-new-vi .pathway .card--pathway a .card--pathway__content__heading__text {
-    border-bottom-color: #0c0c0e;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-}
-
-.home-new-vi .pathway .card--pathway a p {
-    color: #0c0c0e;
-}
-
-.home-new-vi .pathway .card--pathway a .card--pathway__content__img {
-    transition: transform 0.2s ease-in-out;
-    overflow: hidden;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .home-new-vi .pathway .card--pathway a {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .home-new-vi .pathway .card--pathway a:hover .card--pathway__content__img {
-        transform: scale(1.02);
-    }
-    .home-new-vi .pathway .card--pathway a:hover .card--pathway__content__heading,
-    .home-new-vi .pathway .card--pathway a:hover p {
-        color: #0c0c0e;
-    }
-    .home-new-vi .pathway .card--pathway a:hover .card--pathway__content__heading__text {
-        border-bottom-color: #0c0c0e;
-    }
-}
-
-.home-new-vi .pathway .card--pathway a:active, .home-new-vi .pathway .card--pathway a:focus {
-    outline-color: #0c0c0e;
-    outline-offset: 0.1875rem;
-    outline-style: dotted;
-    outline-width: 0.125rem;
-}
-
-.home-new-vi .pathway .card--pathway a:active .card--pathway__content__heading,
-.home-new-vi .pathway .card--pathway a:active p, .home-new-vi .pathway .card--pathway a:focus .card--pathway__content__heading,
-.home-new-vi .pathway .card--pathway a:focus p {
-    color: #0c0c0e;
-}
-
-.home-new-vi .pathway .card--pathway a:active .card--pathway__content__heading__text, .home-new-vi .pathway .card--pathway a:focus .card--pathway__content__heading__text {
-    border-bottom-color: #0c0c0e;
-}
-
-.home-new-vi .pathway .card--pathway a:visited .card--pathway__content__heading {
-    color: #0c0c0e;
-}
-
-.home-new-vi .pathway .card--pathway a:visited p {
-    color: #0c0c0e;
-}
-
-.home-new-vi .pathway .card--pathway a:visited .card--pathway__content__heading__text {
-    border-bottom-color: #0c0c0e;
-}
-
-.home-new-vi .pathway .wrap--icon {
+.home__pathway .pathway .wrap--icon {
     display: flex;
 }
 
-.home-new-vi .pathway .wrap--icon:after {
+.home__pathway .pathway .wrap--icon:after {
     background-color: #d61726;
     content: '';
     display: block;
@@ -45545,20 +45462,28 @@ main > .login footer p {
     width: 100%;
 }
 
-.home-new-vi .pathway .wrap--icon .wrap--icon__img {
+.home__pathway .pathway .wrap--icon .wrap--icon__img {
     height: 2.5rem;
 }
 
-.home-new-vi .pathway .card--pathway__img + .card--pathway__txt {
+.home__pathway .pathway .wrap--card--pathway__img {
+    overflow: hidden;
+}
+
+.home__pathway .pathway .wrap--card--pathway__img .card--pathway__img {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home__pathway .pathway .wrap--card--pathway__img + .card--pathway__txt {
     padding-top: 0;
 }
 
-.home-new-vi .pathway .card--pathway__txt {
+.home__pathway .pathway .card--pathway__txt {
     padding: 1rem;
     color: initial;
 }
 
-.home-new-vi .pathway .card--pathway__heading {
+.home__pathway .pathway .card--pathway__heading {
     display: inline;
     border-bottom: 0.1875rem solid #0c0c0e;
 }
