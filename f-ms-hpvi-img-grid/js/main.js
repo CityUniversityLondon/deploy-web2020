@@ -935,14 +935,24 @@ __webpack_require__.r(__webpack_exports__);
  */
 const className = 'add-class';
 /**
- * Expected behaviour once intersection observer conditions are met.
+ * Expected behaviour once intersection observer conditions are met. If sibling has 'data-add-class-sibling' data attribute, apply class to that element too.
  *
  * @param {Array} elements - Array of HTML elements meeting intersection conditions.
  */
 
 function handleIntersect(elements) {
   for (const element of elements) {
-    element.intersectionRatio > 0 ? element.target.classList.add('in-view') : null;
+    if (element.intersectionRatio > 0) {
+      element.target.classList.add('in-view');
+
+      if (element.target.dataset.addClassSibling) {
+        let siblings = element.target.parentNode.querySelectorAll('[data-add-class-sibling]');
+
+        for (const sibling of siblings) {
+          sibling.classList.add('in-view');
+        }
+      }
+    }
   }
 }
 /**
