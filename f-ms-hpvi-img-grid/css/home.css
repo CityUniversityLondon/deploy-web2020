@@ -45313,37 +45313,45 @@ main > .login footer p {
     text-align: center;
 }
 
-.home__pathway .col__triangle {
-    border-left: 100px solid transparent;
-    height: 200px;
-    transform: rotate(270deg);
-    z-index: 0;
+.home__pathway {
+    --l: 200px;
+}
+
+.home__pathway .row__triangle {
+    border-left: calc(var(--l) / 2) solid transparent;
+    height: var(--l);
     border-image: url(https://www.city.ac.uk/__data/assets/file/0015/710241/community.svg) 65 round;
     filter: invert(67%) sepia(1%) saturate(0%) hue-rotate(151deg) brightness(98%) contrast(85%);
     display: inline-block;
     position: relative;
 }
 
-.home__pathway .col__triangle--one {
-    left: 50px;
+.home__pathway .row__triangle--one,
+.home__pathway .row__triangle--two {
     transform: rotate(270deg);
 }
 
-.home__pathway .col__triangle--two {
-    top: 100px;
+.home__pathway .row__triangle--three,
+.home__pathway .row__triangle--four {
+    transform: rotate(90deg);
+}
+
+.home__pathway .row__triangle--one {
+    left: calc(var(--l) / 4);
+}
+
+.home__pathway .row__triangle--two {
+    top: calc(var(--l) / 2);
     right: 55px;
-    transform: rotate(270deg);
 }
 
-.home__pathway .col__triangle--three {
+.home__pathway .row__triangle--three {
     left: 90%;
-    transform: rotate(90deg);
 }
 
-.home__pathway .col__triangle--four {
-    top: 100px;
+.home__pathway .row__triangle--four {
+    top: calc(var(--l) / 2);
     left: 83%;
-    transform: rotate(90deg);
 }
 
 @media (min-width: 1024px) {
@@ -45398,8 +45406,8 @@ main > .login footer p {
     max-width: unset;
     grid-column-gap: 1.5rem;
     background: #ffffff;
-    margin-top: -100px;
-    margin-bottom: -200px;
+    margin-top: calc(var(--l) * -0.5);
+    margin-bottom: calc(var(--l) * -1);
     position: relative;
     z-index: 1;
 }
@@ -45425,28 +45433,24 @@ main > .login footer p {
 }
 
 .home__pathway .pathway .card--pathway .card--pathway__anchor {
-    border: 0;
     display: block;
     background-image: none;
+    border: 0;
 }
 
-.home__pathway .pathway .card--pathway .card--pathway__anchor:focus, .home__pathway .pathway .card--pathway .card--pathway__anchor:active, .home__pathway .pathway .card--pathway .card--pathway__anchor:visited {
+.home__pathway .pathway .card--pathway .card--pathway__anchor:focus, .home__pathway .pathway .card--pathway .card--pathway__anchor:active {
     border: none;
     outline-style: solid;
-}
-
-.home__pathway .pathway .card--pathway .card--pathway__anchor:hover {
-    background-color: inherit;
+    background: transparent;
 }
 
 @media (hover: hover) {
     .home__pathway .pathway .card--pathway .card--pathway__anchor:hover {
         border: none;
     }
-}
-
-.home__pathway .pathway .card--pathway .card--pathway__anchor:hover .card--pathway__img {
-    transform: scale(1.1);
+    .home__pathway .pathway .card--pathway .card--pathway__anchor:hover .card--pathway__img {
+        transform: scale(1.1);
+    }
 }
 
 .home__pathway .pathway .wrap--icon {
@@ -45456,9 +45460,8 @@ main > .login footer p {
 .home__pathway .pathway .wrap--icon:after {
     background-color: #d61726;
     content: '';
-    display: block;
     height: 0.25rem;
-    margin: 1.5rem 0 0 1rem;
+    margin: 1.25rem 0 0 1rem;
     width: 100%;
 }
 
