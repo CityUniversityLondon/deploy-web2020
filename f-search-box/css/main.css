@@ -59760,6 +59760,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     outline-width: 0;
     text-decoration: none;
     color: #ffffff;
+    text-decoration: underline;
 }
 
 @media (min-width: 432px) {
