@@ -45795,6 +45795,9 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (max-width: 431px) {
+    .search-box__text p:first-child {
+        margin-top: initial;
+    }
     .search-box__text span {
         display: none;
     }
