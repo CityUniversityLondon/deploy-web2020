@@ -21013,10 +21013,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Select(props) {
-  const stringLength = 16,
-        stringOffset = -4,
-        randomNumber = Math.random().toString(stringLength).slice(stringOffset),
-        currentValue = props.query.facets[props.facet.meta] || '';
+  const currentValue = props.query.facets[props.facet.meta] || '';
 
   const setFacet = value => {
     const newQuery = props.query;
@@ -21038,16 +21035,16 @@ function Select(props) {
     className: `search-box__filter search-box__select ${currentValue && 'search-box__select--selected'}`
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     className: "sr-only",
-    htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
+    htmlFor: `meta_${props.facet.meta}_sand--`
   }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("select", {
     name: `meta_${props.facet.meta}_sand`,
-    id: `meta_${props.facet.meta}_sand--${randomNumber}`,
+    id: `meta_${props.facet.meta}_sand--`,
     onChange: e => setFacet(e.target.value),
     value: currentValue
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
     value: "",
     id: `meta${props.facet.meta}all`,
-    name: `meta_${props.facet.meta}_sand--${randomNumber}`
+    name: `meta_${props.facet.meta}_sand--`
   }, props.facet.noSelection), props.facet.values.map((value, i) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("option", {
       key: i,
