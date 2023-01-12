@@ -25630,11 +25630,12 @@ form:not([class]) .form__required-note--marker,
 
 .back-to-top[data-docked='false'] a {
     display: inline;
-    opacity: 0.75;
+    opacity: 1;
     overflow: hidden;
     position: fixed;
     text-decoration: none;
     z-index: 2;
+    visibility: visible;
 }
 
 @media (max-width: 899px) {
@@ -25877,6 +25878,7 @@ form:not([class]) .form__required-note--marker,
 
 .back-to-top[hidden='true'] a {
     opacity: 0;
+    visibility: hidden;
 }
 
 .back-to-top a {
@@ -25892,7 +25894,7 @@ form:not([class]) .form__required-note--marker,
 }
 
 .back-to-top a:focus {
-    outline: 0.125rem dotted #0c0c0e;
+    outline: 0.125rem dotted #d61726;
     border-bottom-width: 0;
 }
 

@@ -980,6 +980,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _institutions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./institutions */ "./src/patterns/destination-leavers-higher-ed/components/results/institutions.js");
 /* harmony import */ var _job__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./job */ "./src/patterns/destination-leavers-higher-ed/components/results/job.js");
 /* harmony import */ var _salary__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./salary */ "./src/patterns/destination-leavers-higher-ed/components/results/salary.js");
+/* harmony import */ var _positiveOutcome__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./positiveOutcome */ "./src/patterns/destination-leavers-higher-ed/components/results/positiveOutcome.js");
+/* harmony import */ var _grad_level__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./grad-level */ "./src/patterns/destination-leavers-higher-ed/components/results/grad-level.js");
 
 
 /**
@@ -987,6 +989,8 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2019
  */
+
+
 
 
 
@@ -1013,6 +1017,12 @@ function Finder__Results__Generic(props) {
   }) : null,
         salary = props.details.listMetadata.salary ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_salary__WEBPACK_IMPORTED_MODULE_6__["default"], {
     text: props.details.listMetadata.salary[0]
+  }) : null,
+        gradLevel = props.details.listMetadata.gradLevel ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_grad_level__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    text: props.details.listMetadata.gradLevel[0]
+  }) : null,
+        positiveOutcome = props.details.listMetadata.positiveOutcome ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_positiveOutcome__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    text: props.details.listMetadata.positiveOutcome[0]
   }) : null;
   const charts = props.details.listMetadata.chart,
         data = charts.map(d => JSON.parse(d));
@@ -1021,6 +1031,8 @@ function Finder__Results__Generic(props) {
   props.details.listMetadata.institutions && count++;
   props.details.listMetadata.jobT && count++;
   props.details.listMetadata.salary && count++;
+  props.details.listMetadata.gradLevel && count++;
+  props.details.listMetadata.positiveOutcome && count++;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "destination-leaver"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1045,7 +1057,7 @@ function Finder__Results__Generic(props) {
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "destination-leaver-content",
     "data-length": count
-  }, salary, company, institutions, jobT));
+  }, salary, company, institutions, jobT, gradLevel, positiveOutcome));
 }
 
 Finder__Results__Generic.propTypes = {
@@ -1098,6 +1110,55 @@ Finder__Results__Card.propTypes = {
   type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Results__Card);
+
+/***/ }),
+
+/***/ "./src/patterns/destination-leavers-higher-ed/components/results/grad-level.js":
+/*!*************************************************************************************!*\
+  !*** ./src/patterns/destination-leavers-higher-ed/components/results/grad-level.js ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/finder/components/cards/finder__results__generic
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+/**
+ * Render a Funnelback result as a generic card.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function GradLevel__Container(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "jobs-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Graduate level employment"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "jobs-list",
+    dangerouslySetInnerHTML: {
+      __html: props.text
+    }
+  }));
+}
+
+GradLevel__Container.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array,
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  text: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+/* harmony default export */ __webpack_exports__["default"] = (GradLevel__Container);
 
 /***/ }),
 
@@ -1196,6 +1257,55 @@ Jobs__Container.propTypes = {
   text: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
 };
 /* harmony default export */ __webpack_exports__["default"] = (Jobs__Container);
+
+/***/ }),
+
+/***/ "./src/patterns/destination-leavers-higher-ed/components/results/positiveOutcome.js":
+/*!******************************************************************************************!*\
+  !*** ./src/patterns/destination-leavers-higher-ed/components/results/positiveOutcome.js ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/finder/components/cards/finder__results__generic
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+/**
+ * Render a Funnelback result as a generic card.
+ *
+ * @param {object} props React props.
+ * @return {object} - React component.
+ */
+
+function PositiveOutcome__Container(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "jobs-wrapper"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Positive outcome"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "jobs-list",
+    dangerouslySetInnerHTML: {
+      __html: props.text
+    }
+  }));
+}
+
+PositiveOutcome__Container.propTypes = {
+  data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array,
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
+  text: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+/* harmony default export */ __webpack_exports__["default"] = (PositiveOutcome__Container);
 
 /***/ }),
 
