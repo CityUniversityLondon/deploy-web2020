@@ -6420,7 +6420,6 @@ function launchDot(slider) {
 
     if (i === 0) {
       // Active slide
-      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].current, 'slide');
       dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_4__["default"].expanded, 'true');
       dot.setAttribute('disabled', 'true');
     } else {
