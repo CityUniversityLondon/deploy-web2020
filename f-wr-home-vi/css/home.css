@@ -45517,6 +45517,11 @@ main > .login footer p {
     color: #ffffff;
 }
 
+.home__news-events .home__news-events__header__link a, .home__news-events .home__news-events__header__link a:focus, .home__news-events .home__news-events__header__link a:active, .home__news-events .home__news-events__header__link a:visited {
+    border: none;
+    outline-style: solid;
+}
+
 .home__news-events .related-content {
     display: flex;
     list-style: none;
@@ -45543,7 +45548,6 @@ main > .login footer p {
 }
 
 .card--event--home .card--event--home__anchor {
-    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -45562,6 +45566,7 @@ main > .login footer p {
     text-decoration: none;
     background-color: transparent;
     color: #0c0c0e;
+    background-color: #ffffff;
 }
 
 @media (hover: hover) {
@@ -45759,6 +45764,7 @@ main > .login footer p {
 .card--event--home .card--event--home__text {
     padding-bottom: 1rem;
     padding-top: 0.25rem;
+    background-color: #ffffff;
 }
 
 .card--event--home .card--event--home__heading {
@@ -45857,7 +45863,6 @@ main > .login footer p {
 }
 
 .card--news--home .card--news--home__anchor {
-    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -45876,6 +45881,7 @@ main > .login footer p {
     text-decoration: none;
     background-color: transparent;
     color: #0c0c0e;
+    background-color: #ffffff;
 }
 
 @media (hover: hover) {
@@ -45984,6 +45990,8 @@ main > .login footer p {
 }
 
 .card--news--home .card--news--home__thumbnail {
+    position: relative;
+    line-height: 0;
     overflow: hidden;
 }
 
@@ -45994,6 +46002,7 @@ main > .login footer p {
 .card--news--home .card--news--home__text {
     padding-bottom: 1rem;
     padding-top: 0.25rem;
+    background-color: #ffffff;
 }
 
 .card--news--home .card--news--home__heading {
