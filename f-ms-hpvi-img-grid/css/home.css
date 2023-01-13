@@ -45314,44 +45314,28 @@ main > .login footer p {
 }
 
 .home__pathway {
-    --l: 200px;
+    margin: 2.5rem 0;
 }
 
-.home__pathway .row__triangle {
-    border-left: calc(var(--l) / 2) solid transparent;
-    height: var(--l);
-    border-image: url(https://www.city.ac.uk/__data/assets/file/0015/710241/community.svg) 65 round;
-    filter: invert(67%) sepia(1%) saturate(0%) hue-rotate(151deg) brightness(98%) contrast(85%);
-    display: inline-block;
-    position: relative;
+@media (max-width: 767px) {
+    .home__pathway .triangle__block {
+        display: none;
+    }
 }
 
-.home__pathway .row__triangle--one,
-.home__pathway .row__triangle--two {
-    transform: rotate(270deg);
+@media (max-width: 1023px) {
+    .home__pathway .pathway {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
 }
 
-.home__pathway .row__triangle--three,
-.home__pathway .row__triangle--four {
-    transform: rotate(90deg);
-}
-
-.home__pathway .row__triangle--one {
-    left: calc(var(--l) / 4);
-}
-
-.home__pathway .row__triangle--two {
-    top: calc(var(--l) / 2);
-    right: 55px;
-}
-
-.home__pathway .row__triangle--three {
-    left: 90%;
-}
-
-.home__pathway .row__triangle--four {
-    top: calc(var(--l) / 2);
-    left: 83%;
+@media (max-width: 1023px) and (min-width: 901px) {
+    .home__pathway .pathway {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -45385,29 +45369,35 @@ main > .login footer p {
     }
 }
 
-@media (max-width: 1023px) {
-    .home__pathway .pathway {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
+@media (min-width: 1440px) {
+    .home__pathway {
+        --l: 12vw;
     }
 }
 
-@media (max-width: 1023px) and (min-width: 901px) {
-    .home__pathway .pathway {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
+.home__pathway .triangle__block {
+    width: 5.25rem;
+    height: 5.25rem;
+}
+
+.home__pathway .triangle__block--left {
+    margin-bottom: -5.25rem;
+}
+
+.home__pathway .triangle__block--right {
+    right: 0;
+    position: absolute;
+    transform: rotate(180deg);
+    margin-top: -5.25rem;
 }
 
 .home__pathway .pathway .pathway__cards {
     display: grid;
+    background: #ffffff;
     grid-template-columns: repeat(3, 1fr);
     max-width: unset;
     grid-column-gap: 1.5rem;
     background: #ffffff;
-    margin-top: calc(var(--l) * -0.5);
-    margin-bottom: calc(var(--l) * -1);
     position: relative;
     z-index: 1;
 }
@@ -45478,7 +45468,7 @@ main > .login footer p {
 }
 
 .home__pathway .pathway .wrap--card--pathway__img + .card--pathway__txt {
-    padding-top: 0;
+    padding-top: 0.5rem;
 }
 
 .home__pathway .pathway .card--pathway__txt {
