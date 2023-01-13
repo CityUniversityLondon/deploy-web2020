@@ -32976,12 +32976,14 @@ article .link-copy {
     z-index: 2;
     /* and place it over the hamburger */
     -webkit-touch-callout: none;
+    margin: 0;
 }
 
 .menu .burger-bun input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: white;
+    margin-left: 13px;
 }
 
 .menu .burger-bun input:checked ~ span:nth-last-child(2) {
@@ -33003,7 +33005,7 @@ article .link-copy {
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, margin-left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 .menu .burger-bun span:first-child {
