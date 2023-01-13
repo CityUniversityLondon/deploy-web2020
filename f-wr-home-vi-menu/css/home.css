@@ -32981,9 +32981,8 @@ article .link-copy {
 
 .menu .burger-bun input:checked ~ span {
     opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
+    transform: rotate(45deg) translate(7px, -2px);
     background: white;
-    margin-left: 13px;
 }
 
 .menu .burger-bun input:checked ~ span:nth-last-child(2) {
@@ -32992,7 +32991,7 @@ article .link-copy {
 }
 
 .menu .burger-bun input:checked ~ span:nth-last-child(1) {
-    transform: rotate(-45deg) translate(0, -1px);
+    transform: rotate(-45deg) translate(1px, 8px);
 }
 
 .menu .burger-bun span {
@@ -33005,7 +33004,7 @@ article .link-copy {
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, margin-left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
 .menu .burger-bun span:first-child {
