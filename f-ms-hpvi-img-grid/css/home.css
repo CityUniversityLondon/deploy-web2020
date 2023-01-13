@@ -45410,7 +45410,6 @@ main > .login footer p {
 
 .home__pathway .pathway .card--pathway {
     list-style-type: none;
-    height: fit-content;
     opacity: 0;
     transition: opacity 2s;
     margin-top: 0;
@@ -45445,13 +45444,14 @@ main > .login footer p {
 
 .home__pathway .pathway .wrap--icon {
     display: flex;
+    margin-bottom: 0.75rem;
 }
 
 .home__pathway .pathway .wrap--icon:after {
     background-color: #d61726;
     content: '';
     height: 0.25rem;
-    margin: 1.25rem 0 0 1rem;
+    margin: 1.25rem 0 0 1.5rem;
     width: 100%;
 }
 
@@ -45461,6 +45461,7 @@ main > .login footer p {
 
 .home__pathway .pathway .wrap--card--pathway__img {
     overflow: hidden;
+    height: 230px;
 }
 
 .home__pathway .pathway .wrap--card--pathway__img .card--pathway__img {
@@ -45477,8 +45478,13 @@ main > .login footer p {
 }
 
 .home__pathway .pathway .card--pathway__heading {
+    font-weight: 700;
     display: inline;
     border-bottom: 0.1875rem solid #0c0c0e;
+}
+
+.home__pathway .pathway .card--pathway__desc {
+    font-weight: 400;
 }
 
 @keyframes fadeIn {
