@@ -45459,10 +45459,46 @@ main > .login footer p {
 .home-new-vi .research__heading,
 .home-new-vi .research__intro {
     grid-column: 1/-1;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-family: "Meta Sans", sans-serif;
+}
+
+.home-new-vi .research__heading i,
+.home-new-vi .research__heading em,
+.home-new-vi .research__intro i,
+.home-new-vi .research__intro em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
 .home-new-vi .research__intro {
     margin-bottom: 4rem;
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    letter-spacing: -0.008em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .home-new-vi .research__intro {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .home-new-vi .research__intro {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .home-new-vi .research__intro {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .home-new-vi .research__intro {
+        letter-spacing: -0.017em;
+    }
 }
 
 .home-new-vi .research__img {
@@ -45481,7 +45517,7 @@ main > .login footer p {
 }
 
 .home-new-vi .research__link__anchor:active, .home-new-vi .research__link__anchor:focus {
-    outline: 0.0625rem solid #ffffff;
+    outline: 0.125rem dotted #ffffff;
 }
 
 .home-new-vi .research__link__anchor:after {
