@@ -32982,7 +32982,7 @@ article .link-copy {
 .menu .burger-bun input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(7px, -2px);
-    background: white;
+    background: #ffffff;
 }
 
 .menu .burger-bun input:checked ~ span:nth-last-child(2) {
@@ -33000,7 +33000,7 @@ article .link-copy {
     height: 4px;
     margin-bottom: 5px;
     position: relative;
-    background: white;
+    background: #ffffff;
     border-radius: 3px;
     z-index: 1;
     transform-origin: 4px 0px;
