@@ -45505,78 +45505,81 @@ main > .login footer p {
     }
 }
 
-.row {
-    display: flex;
-    overflow: hidden;
-}
-
-.image-grid {
+.home__social {
     grid-column: 1/-1;
     position: relative;
 }
 
 @media (max-width: 431px) {
-    .image-grid .image-grid__img {
+    .home__social .image-grid__img {
         flex-basis: calc(100% / 2);
         max-width: calc(100% / 2);
     }
 }
 
 @media (min-width: 432px) and (max-width: 767px) {
-    .image-grid .image-grid__img {
+    .home__social .image-grid__img {
         flex-basis: calc(100% / 3);
         max-width: calc(100% / 3);
     }
 }
 
 @media (min-width: 768px) {
-    .image-grid .box {
+    .home__social .box {
         margin-left: 4rem;
         width: 55ch;
         transform: translate(10%, -30%);
         top: 30%;
     }
-    .image-grid .box__border {
+    .home__social .box__border {
         border-left: 14px solid transparent;
     }
-    .image-grid .box__content {
+    .home__social .box__content {
         margin: 0 2rem 0 3rem;
+    }
+    .home__social .social__img {
+        width: 20%;
     }
 }
 
 @media (min-width: 1280px) {
-    .image-grid .box__border {
+    .home__social .box__border {
         border-left: 16px solid transparent;
     }
 }
 
 @media (min-width: 1920px) {
-    .image-grid .box__border {
+    .home__social .box__border {
         border-left: 18px solid transparent;
     }
 }
 
 @media (min-width: 3840px) {
-    .image-grid .box__border {
+    .home__social .box__border {
         border-left: 36px solid transparent;
     }
 }
 
 @media (min-width: 7680px) {
-    .image-grid .box__border {
+    .home__social .box__border {
         border-left: 72px solid transparent;
     }
 }
 
-.image-grid .image-grid__img.in-view {
+.home__social .row {
+    display: flex;
+    overflow: hidden;
+}
+
+.home__social .image-grid__img.in-view {
     animation: fadeIn 1s, scaleIn ease-in-out 3s;
 }
 
-.image-grid .image-grid__img:not(.in-view) {
+.home__social .image-grid__img:not(.in-view) {
     opacity: 0;
 }
 
-.image-grid .box {
+.home__social .box {
     position: absolute;
     background: #ffffff;
     padding: 2rem 1rem;
@@ -45584,48 +45587,48 @@ main > .login footer p {
     z-index: 1;
 }
 
-.image-grid .box.in-view {
+.home__social .box.in-view {
     animation: fadeIn 1.5s;
 }
 
-.image-grid .box:not(.in-view) {
+.home__social .box:not(.in-view) {
     opacity: 0;
 }
 
-.image-grid .box__pre-strap {
+.home__social .box__pre-strap {
     text-transform: uppercase;
     display: flex;
     font-weight: 700;
 }
 
-.image-grid .box__pre-strap span {
+.home__social .box__pre-strap span {
     display: block;
 }
 
-.image-grid .box__pre-strap span.text {
+.home__social .box__pre-strap span.text {
     color: #d61726;
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.image-grid .box__pre-strap span.text i,
-.image-grid .box__pre-strap span.text em {
+.home__social .box__pre-strap span.text i,
+.home__social .box__pre-strap span.text em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.image-grid .box__pre-strap span.line {
+.home__social .box__pre-strap span.line {
     flex: 1;
     border-top: 0.0625rem solid #a1a1a1;
     margin: auto 0 auto 1rem;
 }
 
-.image-grid .box__content__body {
+.home__social .box__content__body {
     border-bottom: 0.0625rem solid solid #a1a1a1;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
 
-.image-grid .box__post-strap .icon__wrapper {
+.home__social .box__post-strap .icon__wrapper {
     background-color: #d61726;
     border-radius: 1rem;
     color: #ffffff;
@@ -45636,53 +45639,53 @@ main > .login footer p {
     margin-right: 0.5rem;
 }
 
-.image-grid .box__post-strap .icon__wrapper .icon {
+.home__social .box__post-strap .icon__wrapper .icon {
     margin: auto;
 }
 
-.image-grid .box__post-strap .icon__wrapper .icon.fa-instagram:before {
+.home__social .box__post-strap .icon__wrapper .icon.fa-instagram:before {
     font-size: 1.266rem;
     line-height: 1.33333;
     letter-spacing: -0.011em;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .image-grid .box__post-strap .icon__wrapper .icon.fa-instagram:before {
+    .home__social .box__post-strap .icon__wrapper .icon.fa-instagram:before {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .image-grid .box__post-strap .icon__wrapper .icon.fa-instagram:before {
+    .home__social .box__post-strap .icon__wrapper .icon.fa-instagram:before {
         letter-spacing: -0.015em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .image-grid .box__post-strap .icon__wrapper .icon.fa-instagram:before {
+    .home__social .box__post-strap .icon__wrapper .icon.fa-instagram:before {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .image-grid .box__post-strap .icon__wrapper .icon.fa-instagram:before {
+    .home__social .box__post-strap .icon__wrapper .icon.fa-instagram:before {
         letter-spacing: -0.017em;
     }
 }
 
-.image-grid .box__post-strap a.anchor-discreet {
+.home__social .box__post-strap a.anchor-discreet {
     color: #d61726;
     border-bottom-color: #d61726;
     font-weight: 600;
     background-image: none;
 }
 
-.image-grid .box__post-strap a.anchor-discreet:hover::before {
+.home__social .box__post-strap a.anchor-discreet:hover::before {
     opacity: 0;
     transition: none;
 }
 
-.image-grid .box__border {
+.home__social .box__border {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -45694,11 +45697,11 @@ main > .login footer p {
     filter: invert(67%) sepia(1%) saturate(0%) hue-rotate(151deg) brightness(98%) contrast(85%);
 }
 
-.image-grid .box__border--two {
+.home__social .box__border--two {
     left: 0.75rem;
 }
 
-.image-grid .image-grid__img {
+.home__social .social__img {
     flex-basis: calc(100% / 5);
     object-fit: cover;
 }
