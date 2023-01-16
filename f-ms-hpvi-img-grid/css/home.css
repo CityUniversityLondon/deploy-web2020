@@ -45511,14 +45511,14 @@ main > .login footer p {
 }
 
 @media (max-width: 431px) {
-    .home__social .image-grid__img {
+    .home__social .social__img {
         flex-basis: calc(100% / 2);
         max-width: calc(100% / 2);
     }
 }
 
 @media (min-width: 432px) and (max-width: 767px) {
-    .home__social .image-grid__img {
+    .home__social .social__img {
         flex-basis: calc(100% / 3);
         max-width: calc(100% / 3);
     }
@@ -45538,6 +45538,8 @@ main > .login footer p {
         margin: 0 2rem 0 3rem;
     }
     .home__social .social__img {
+        flex-basis: calc(100% / 5);
+        object-fit: cover;
         width: 20%;
     }
 }
@@ -45571,11 +45573,11 @@ main > .login footer p {
     overflow: hidden;
 }
 
-.home__social .image-grid__img.in-view {
+.home__social .social__img.in-view {
     animation: fadeIn 1s, scaleIn ease-in-out 3s;
 }
 
-.home__social .image-grid__img:not(.in-view) {
+.home__social .social__img:not(.in-view) {
     opacity: 0;
 }
 
@@ -45699,11 +45701,6 @@ main > .login footer p {
 
 .home__social .box__border--two {
     left: 0.75rem;
-}
-
-.home__social .social__img {
-    flex-basis: calc(100% / 5);
-    object-fit: cover;
 }
 
 .home-new-vi.cms-editor div.cms-editor-warning {
