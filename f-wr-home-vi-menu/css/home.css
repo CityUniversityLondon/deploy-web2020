@@ -32956,11 +32956,9 @@ article .link-copy {
     }
 }
 
+/* burger bun */
 .menu .burger-bun {
     display: block;
-    z-index: 1;
-    -webkit-user-select: none;
-    user-select: none;
 }
 
 .menu .burger-bun input {
@@ -32972,26 +32970,9 @@ article .link-copy {
     left: 0;
     cursor: pointer;
     opacity: 0;
-    /* hide this */
     z-index: 2;
-    /* and place it over the hamburger */
     -webkit-touch-callout: none;
     margin: 0;
-}
-
-.menu .burger-bun input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(7px, -2px);
-    background: #ffffff;
-}
-
-.menu .burger-bun input:checked ~ span:nth-last-child(2) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-.menu .burger-bun input:checked ~ span:nth-last-child(1) {
-    transform: rotate(-45deg) translate(1px, 8px);
 }
 
 .menu .burger-bun span {
@@ -33015,6 +32996,37 @@ article .link-copy {
     transform-origin: 0% 100%;
 }
 
+.js .menu[data-open='true'] .burger-bun input ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(7px, -2px);
+    background: #ffffff;
+}
+
+.js .menu[data-open='true'] .burger-bun input ~ span:nth-last-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.js .menu[data-open='true'] .burger-bun input ~ span:nth-last-child(1) {
+    transform: rotate(-45deg) translate(1px, 8px);
+}
+
+.no-js .menu .burger-bun input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(7px, -2px);
+    background: #ffffff;
+}
+
+.no-js .menu .burger-bun input:checked ~ span:nth-last-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.no-js .menu .burger-bun input:checked ~ span:nth-last-child(1) {
+    transform: rotate(-45deg) translate(1px, 8px);
+}
+
+/* end burger bun */
 @media (max-width: 1023px) {
     .menu {
         display: block;
@@ -35663,10 +35675,17 @@ article .link-copy {
     background-color: #1e1e1e;
     color: #ffffff;
     left: 0;
-    min-height: 20vh;
     position: absolute;
     width: 100%;
     z-index: 5;
+    transform-origin: top;
+    animation-duration: 0s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    overflow-y: hidden;
+    max-height: 0;
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .navigation--primary .navigation--primary__menu__content {
@@ -36030,7 +36049,7 @@ article .link-copy {
 }
 
 .navigation--primary .navigation--primary__menu {
-    display: none;
+    visibility: hidden;
 }
 
 .navigation--primary .navigation--primary__level1 > button div,
@@ -36127,15 +36146,25 @@ article .link-copy {
     width: 100%;
 }
 
+.js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='false'].menu-animation__slideClose + .navigation--primary__menu {
+    animation-name: slideUp;
+    animation-duration: 0.32s;
+    margin-top: 1.5rem;
+    max-height: 0;
+}
+
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'] > div:after {
     color: #1e1e1e;
 }
 
-.js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'] + .navigation--primary__menu {
+.js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'].menu-animation__slideOpen + .navigation--primary__menu {
     box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
-    display: block;
     margin-top: 1.5rem;
     padding-bottom: 1.5rem;
+    animation-name: slideDown;
+    animation-duration: 0.44s;
+    max-height: 100vh;
+    visibility: visible;
 }
 
 .js .navigation__veil {
@@ -36174,6 +36203,40 @@ article .link-copy {
 .no-js .navigation--primary .navigation__level1 > li:hover > .navigation--primary__menu, .no-js .navigation--primary .navigation__level1 > li:focus-within > .navigation--primary__menu {
     box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
     display: grid;
+    visibility: visible;
+}
+
+/*
+@keyframes slideDown {
+   from {transform:scaleY(0)} 
+    to{transform:scaleY(1)}
+}
+*/
+@keyframes slideDown {
+    0% {
+        max-height: 0;
+        visibility: visible;
+    }
+    99% {
+        max-height: 100vh;
+    }
+    100% {
+        max-height: 5000px;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        max-height: 5000px;
+        visibility: visible;
+    }
+    1% {
+        max-height: 100vh;
+    }
+    100% {
+        max-height: 0;
+        visibility: hidden;
+    }
 }
 
 .navigation--secondary__header {

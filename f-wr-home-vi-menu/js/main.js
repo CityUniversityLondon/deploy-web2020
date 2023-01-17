@@ -5047,6 +5047,13 @@ function createCloseAll(navigation, veil) {
   return () => {
     const buttons = Array.from(navigation.querySelectorAll('.navigation--primary__level1 > .navigation__button'));
     buttons.forEach(button => {
+      const open = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded);
+
+      if (open === 'true') {
+        button.classList.remove('menu-animation__slideOpen');
+        button.classList.add('menu-animation__slideClose');
+      }
+
       button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'false');
       button.querySelector(`.${openCloseTextClassName}`).replaceChild(document.createTextNode(openText), button.querySelector(`.${openCloseTextClassName}`).firstChild);
     });
@@ -5069,6 +5076,8 @@ function createSectionToggle(button, closeAll, veil) {
 
     if (open) {
       button.closest(`.${classNameSpecific}`).dataset.open = 'true';
+      button.classList.remove('menu-animation__slideClose');
+      button.classList.add('menu-animation__slideOpen');
       veil.dataset.on = 'true';
       button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, open);
       button.querySelector(`.${openCloseTextClassName}`).replaceChild(document.createTextNode(closeText), button.querySelector(`.${openCloseTextClassName}`).firstChild);
