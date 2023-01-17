@@ -689,8 +689,8 @@ function Query(props) {
         case arrowDown:
           if (suggestions && suggestions.length > 0) {
             e.preventDefault();
-            e.target.parentNode.querySelector('.finder__query__suggestions button').focus();
-            setActiveSuggestionID(e.target.parentNode.querySelector('.finder__query__suggestions li').id);
+            e.target.parentNode.querySelector('.search-box__query__suggestions button').focus();
+            setActiveSuggestionID(e.target.parentNode.querySelector('.search-box__query__suggestions li').id);
           }
 
           break;

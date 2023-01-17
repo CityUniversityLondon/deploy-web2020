@@ -59189,6 +59189,13 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     padding-bottom: 2rem;
 }
 
+@media (max-width: 1023px) {
+    .search-box__text__wrapper {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
 @media (min-width: 1024px) {
     .search-box__text__wrapper .search-box__text {
         margin-left: 1rem;
@@ -59226,9 +59233,17 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     padding-bottom: 2rem;
 }
 
+@media (max-width: 1023px) {
+    #search-box {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
 #search-box h2 {
     color: #ffffff;
     padding-bottom: 1rem;
+    margin-top: initial;
 }
 
 .search-box__select {
@@ -59237,9 +59252,9 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     position: relative;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
     .search-box__select {
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -59298,7 +59313,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     border-radius: 0.25rem;
     bottom: 0.25rem;
     color: #0c0c0e;
-    font-weight: 450;
+    font-weight: 600;
     height: 3.25rem;
     width: 100%;
     padding-left: 0.5rem;
@@ -59342,6 +59357,20 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
+    outline-style: solid;
+}
+
+.search-box__select select:hover {
+    background-color: #0c0c0e;
+    color: #ffffff;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .search-box__select select:hover {
+        transition: none;
+    }
 }
 
 .search-box__select .fa-chevron-down {
@@ -59352,6 +59381,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     color: #ffffff;
     border-radius: 100%;
     padding: 0.5rem;
+    pointer-events: none;
 }
 
 .search-box__select:not(.search-box__select--sort).search-box__select--selected select {
@@ -59431,6 +59461,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
+    outline-style: solid;
 }
 
 .search-box__query__input input {
@@ -59488,7 +59519,13 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
-.search-box__query__input input:focus {
+@media (max-width: 431px) {
+    .search-box__query__input input {
+        padding-right: 1rem;
+    }
+}
+
+.search-box__query__input input:focus-within {
     color: #1e1e1e;
     font-style: normal;
     font-weight: 600;
@@ -59548,6 +59585,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
+    outline-style: solid;
     outline-offset: -0.25rem;
 }
 
@@ -59624,6 +59662,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
+    outline-style: solid;
     outline-offset: 0;
 }
 
@@ -59686,6 +59725,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
+    outline-style: solid;
     outline-offset: -0.25rem;
 }
 
@@ -59735,6 +59775,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
+    outline-style: solid;
 }
 
 .search-box__query__submit .search-box__query__submit__icon {
@@ -59761,6 +59802,49 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     text-decoration: none;
     color: #ffffff;
     text-decoration: underline;
+}
+
+.search-box__text a:visited, .search-box__text a:focus, .search-box__text a:hover {
+    color: #ffffff;
+}
+
+.search-box__text a:hover {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.search-box__text a:focus {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+    outline-style: solid;
+    border-bottom-color: #ffffff;
+}
+
+.search-box__text .fa-slash {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: #e5e5e5;
+}
+
+.search-box__text .fa-slash:before {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
 
 @media (min-width: 432px) {
