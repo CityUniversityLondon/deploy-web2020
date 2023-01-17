@@ -34324,12 +34324,13 @@ figure figcaption a:active,
 .how-to-apply--pgt--js__modal {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
-    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
+    display: block;
+    visibility: hidden;
     bottom: 0;
     left: 0;
     position: fixed;
@@ -34339,7 +34340,34 @@ figure figcaption a:active,
 }
 
 .how-to-apply--pgt--js__modal[data-on='true'] {
-    display: block;
+    visibility: visible;
+    animation-name: veilFadeIn;
+    animation-duration: 0.32s;
+}
+
+.how-to-apply--pgt--js__modal[data-on='false'] {
+    animation-name: veilFadeOut;
+    animation-duration: 0.32s;
+}
+
+@keyframes veilFadeIn {
+    0% {
+        background-color: rgba(30, 30, 30, 0);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0.3);
+    }
+}
+
+@keyframes veilFadeOut {
+    0% {
+        background-color: rgba(30, 30, 30, 0.3);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0);
+    }
 }
 
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content {
@@ -41329,16 +41357,44 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .js .menu__veil {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
-    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
+    display: block;
+    visibility: hidden;
 }
 
 .js .menu__veil[data-on='true'] {
-    display: block;
+    visibility: visible;
+    animation-name: veilFadeIn;
+    animation-duration: 0.32s;
+}
+
+.js .menu__veil[data-on='false'] {
+    animation-name: veilFadeOut;
+    animation-duration: 0.32s;
+}
+
+@keyframes veilFadeIn {
+    0% {
+        background-color: rgba(30, 30, 30, 0);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0.3);
+    }
+}
+
+@keyframes veilFadeOut {
+    0% {
+        background-color: rgba(30, 30, 30, 0.3);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -41377,12 +41433,13 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .dialog {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
-    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
+    display: block;
+    visibility: hidden;
     position: fixed;
     left: 0;
     top: 0;
@@ -41392,7 +41449,34 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .dialog[data-on='true'] {
-    display: block;
+    visibility: visible;
+    animation-name: veilFadeIn;
+    animation-duration: 0.32s;
+}
+
+.dialog[data-on='false'] {
+    animation-name: veilFadeOut;
+    animation-duration: 0.32s;
+}
+
+@keyframes veilFadeIn {
+    0% {
+        background-color: rgba(30, 30, 30, 0);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0.3);
+    }
+}
+
+@keyframes veilFadeOut {
+    0% {
+        background-color: rgba(30, 30, 30, 0.3);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0);
+    }
 }
 
 .dialog__heading {
@@ -42866,9 +42950,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     overflow-y: hidden;
-    max-height: 0;
-    margin-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    max-height: 20vh;
 }
 
 .navigation--primary .navigation--primary__menu__content {
@@ -43353,16 +43435,44 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .js .navigation__veil {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
-    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
+    display: block;
+    visibility: hidden;
 }
 
 .js .navigation__veil[data-on='true'] {
-    display: block;
+    visibility: visible;
+    animation-name: veilFadeIn;
+    animation-duration: 0.32s;
+}
+
+.js .navigation__veil[data-on='false'] {
+    animation-name: veilFadeOut;
+    animation-duration: 0.32s;
+}
+
+@keyframes veilFadeIn {
+    0% {
+        background-color: rgba(30, 30, 30, 0);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0.3);
+    }
+}
+
+@keyframes veilFadeOut {
+    0% {
+        background-color: rgba(30, 30, 30, 0.3);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0);
+    }
 }
 
 @media (max-width: 1023px) {
@@ -43389,12 +43499,15 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     visibility: visible;
 }
 
-/*
 @keyframes slideDown {
-   from {transform:scaleY(0)} 
-    to{transform:scaleY(1)}
+    from {
+        transform: scaleY(0);
+    }
+    to {
+        transform: scaleY(1);
+    }
 }
-*/
+
 @keyframes slideDown {
     0% {
         max-height: 0;
@@ -49200,16 +49313,44 @@ article .link-copy {
 .js .global-header__search .veil--search {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
-    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
+    display: block;
+    visibility: hidden;
 }
 
 .js .global-header__search .veil--search[data-on='true'] {
-    display: block;
+    visibility: visible;
+    animation-name: veilFadeIn;
+    animation-duration: 0.32s;
+}
+
+.js .global-header__search .veil--search[data-on='false'] {
+    animation-name: veilFadeOut;
+    animation-duration: 0.32s;
+}
+
+@keyframes veilFadeIn {
+    0% {
+        background-color: rgba(30, 30, 30, 0);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0.3);
+    }
+}
+
+@keyframes veilFadeOut {
+    0% {
+        background-color: rgba(30, 30, 30, 0.3);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0);
+    }
 }
 
 .js .global-header__search .veil--search[data-on='true'] {
