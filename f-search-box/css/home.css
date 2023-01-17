@@ -45412,16 +45412,16 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .search-box__select:not(.search-box__select--sort).search-box__select--selected select {
     background-color: #ffffff;
-    border-color: #b91924;
-    color: #b91924;
+    border-color: #0c0c0e;
+    color: #0c0c0e;
     font-weight: 600;
 }
 
 @media (max-width: 767px) {
     .search-box__select.search-box__select--sort.search-box__select--selected select {
         background-color: #ffffff;
-        border-color: #b91924;
-        color: #b91924;
+        border-color: #0c0c0e;
+        color: #0c0c0e;
         font-weight: 600;
     }
 }
@@ -45830,10 +45830,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     text-decoration: underline;
 }
 
-.search-box__text a:visited, .search-box__text a:focus, .search-box__text a:hover {
-    color: #ffffff;
-}
-
 .search-box__text a:hover {
     background-color: initial;
     background-image: initial;
@@ -45850,7 +45846,11 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     text-decoration: none;
 }
 
-.search-box__text a:focus {
+.search-box__text a:visited, .search-box__text a:focus, .search-box__text a:hover, .search-box__text a:active {
+    color: #ffffff;
+}
+
+.search-box__text a:focus, .search-box__text a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
@@ -45859,18 +45859,25 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     border-bottom-color: #ffffff;
 }
 
-.search-box__text .fa-slash {
+.search-box__text .search-box__text__back-slash {
     padding-left: 2rem;
     padding-right: 2rem;
     color: #e5e5e5;
 }
 
-.search-box__text .fa-slash:before {
+.search-box__text .search-box__text__back-slash:before {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
+}
+
+@media (min-width: 432px) and (max-width: 1023px) {
+    .search-box__text .search-box__text__back-slash {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 @media (min-width: 432px) {
