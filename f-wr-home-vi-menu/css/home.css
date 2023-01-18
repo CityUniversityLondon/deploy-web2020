@@ -31041,19 +31041,19 @@ article .link-copy {
 .js .global-header__search .veil--search {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
-    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
+    display: block;
+    visibility: hidden;
 }
 
 .js .global-header__search .veil--search[data-on='true'] {
     visibility: visible;
     animation-name: veilFadeIn;
     animation-duration: 0.32s;
-    display: none;
 }
 
 .js .global-header__search .veil--search[data-on='false'] {
@@ -35263,19 +35263,19 @@ article .link-copy {
 .js .menu__veil {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
-    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
+    display: block;
+    visibility: hidden;
 }
 
 .js .menu__veil[data-on='true'] {
     visibility: visible;
     animation-name: veilFadeIn;
     animation-duration: 0.32s;
-    display: none;
 }
 
 .js .menu__veil[data-on='false'] {
@@ -36223,19 +36223,19 @@ article .link-copy {
 .js .navigation__veil {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
-    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
+    display: block;
+    visibility: hidden;
 }
 
 .js .navigation__veil[data-on='true'] {
     visibility: visible;
     animation-name: veilFadeIn;
     animation-duration: 0.32s;
-    display: none;
 }
 
 .js .navigation__veil[data-on='false'] {

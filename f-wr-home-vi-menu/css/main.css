@@ -34324,12 +34324,13 @@ figure figcaption a:active,
 .how-to-apply--pgt--js__modal {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
-    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
+    display: block;
+    visibility: hidden;
     bottom: 0;
     left: 0;
     position: fixed;
@@ -34342,7 +34343,6 @@ figure figcaption a:active,
     visibility: visible;
     animation-name: veilFadeIn;
     animation-duration: 0.32s;
-    display: none;
 }
 
 .how-to-apply--pgt--js__modal[data-on='false'] {
@@ -41357,19 +41357,19 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .js .menu__veil {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
-    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
+    display: block;
+    visibility: hidden;
 }
 
 .js .menu__veil[data-on='true'] {
     visibility: visible;
     animation-name: veilFadeIn;
     animation-duration: 0.32s;
-    display: none;
 }
 
 .js .menu__veil[data-on='false'] {
@@ -41433,12 +41433,13 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .dialog {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
-    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
+    display: block;
+    visibility: hidden;
     position: fixed;
     left: 0;
     top: 0;
@@ -41451,7 +41452,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     visibility: visible;
     animation-name: veilFadeIn;
     animation-duration: 0.32s;
-    display: none;
 }
 
 .dialog[data-on='false'] {
@@ -43434,19 +43434,19 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .js .navigation__veil {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
-    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
+    display: block;
+    visibility: hidden;
 }
 
 .js .navigation__veil[data-on='true'] {
     visibility: visible;
     animation-name: veilFadeIn;
     animation-duration: 0.32s;
-    display: none;
 }
 
 .js .navigation__veil[data-on='false'] {
@@ -49306,19 +49306,19 @@ article .link-copy {
 .js .global-header__search .veil--search {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
-    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
+    display: block;
+    visibility: hidden;
 }
 
 .js .global-header__search .veil--search[data-on='true'] {
     visibility: visible;
     animation-name: veilFadeIn;
     animation-duration: 0.32s;
-    display: none;
 }
 
 .js .global-header__search .veil--search[data-on='false'] {
