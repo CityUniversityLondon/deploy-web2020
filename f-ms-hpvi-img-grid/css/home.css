@@ -45321,9 +45321,6 @@ main > .login footer p {
     .home__pathway .triangle__block {
         display: none;
     }
-    .home__pathway .pathway__cards {
-        display: block;
-    }
 }
 
 @media (max-width: 1023px) {
@@ -45397,6 +45394,12 @@ main > .login footer p {
     background: #ffffff;
     position: relative;
     z-index: 1;
+}
+
+@media (max-width: 767px) {
+    .home__pathway .pathway .pathway__cards {
+        display: block;
+    }
 }
 
 .home__pathway .pathway .card--pathway {
