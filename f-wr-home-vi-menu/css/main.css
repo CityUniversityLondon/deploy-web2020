@@ -34324,13 +34324,16 @@ figure figcaption a:active,
 .how-to-apply--pgt--js__modal {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
+    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
-    display: block;
+    /*
+    display: block; 
     visibility: hidden;
+    */
     bottom: 0;
     left: 0;
     position: fixed;
@@ -34340,14 +34343,19 @@ figure figcaption a:active,
 }
 
 .how-to-apply--pgt--js__modal[data-on='true'] {
-    visibility: visible;
-    animation-name: veilFadeIn;
-    animation-duration: 0.32s;
+    display: block;
+    /*
+        visibility: visible; 
+        animation-name: veilFadeIn; 
+        animation-duration: 0.32s;
+        */
 }
 
 .how-to-apply--pgt--js__modal[data-on='false'] {
-    animation-name: veilFadeOut;
-    animation-duration: 0.32s;
+    /*
+        animation-name: veilFadeOut;
+        animation-duration: 0.32s;
+        */
 }
 
 @keyframes veilFadeIn {
@@ -41357,24 +41365,32 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .js .menu__veil {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
+    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
-    display: block;
+    /*
+    display: block; 
     visibility: hidden;
+    */
 }
 
 .js .menu__veil[data-on='true'] {
-    visibility: visible;
-    animation-name: veilFadeIn;
-    animation-duration: 0.32s;
+    display: block;
+    /*
+        visibility: visible; 
+        animation-name: veilFadeIn; 
+        animation-duration: 0.32s;
+        */
 }
 
 .js .menu__veil[data-on='false'] {
-    animation-name: veilFadeOut;
-    animation-duration: 0.32s;
+    /*
+        animation-name: veilFadeOut;
+        animation-duration: 0.32s;
+        */
 }
 
 @keyframes veilFadeIn {
@@ -41433,13 +41449,16 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .dialog {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
+    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
-    display: block;
+    /*
+    display: block; 
     visibility: hidden;
+    */
     position: fixed;
     left: 0;
     top: 0;
@@ -41449,14 +41468,19 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .dialog[data-on='true'] {
-    visibility: visible;
-    animation-name: veilFadeIn;
-    animation-duration: 0.32s;
+    display: block;
+    /*
+        visibility: visible; 
+        animation-name: veilFadeIn; 
+        animation-duration: 0.32s;
+        */
 }
 
 .dialog[data-on='false'] {
-    animation-name: veilFadeOut;
-    animation-duration: 0.32s;
+    /*
+        animation-name: veilFadeOut;
+        animation-duration: 0.32s;
+        */
 }
 
 @keyframes veilFadeIn {
@@ -43434,24 +43458,32 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .js .navigation__veil {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
+    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
-    display: block;
+    /*
+    display: block; 
     visibility: hidden;
+    */
 }
 
 .js .navigation__veil[data-on='true'] {
-    visibility: visible;
-    animation-name: veilFadeIn;
-    animation-duration: 0.32s;
+    display: block;
+    /*
+        visibility: visible; 
+        animation-name: veilFadeIn; 
+        animation-duration: 0.32s;
+        */
 }
 
 .js .navigation__veil[data-on='false'] {
-    animation-name: veilFadeOut;
-    animation-duration: 0.32s;
+    /*
+        animation-name: veilFadeOut;
+        animation-duration: 0.32s;
+        */
 }
 
 @keyframes veilFadeIn {
@@ -49306,24 +49338,32 @@ article .link-copy {
 .js .global-header__search .veil--search {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
+    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
-    display: block;
+    /*
+    display: block; 
     visibility: hidden;
+    */
 }
 
 .js .global-header__search .veil--search[data-on='true'] {
-    visibility: visible;
-    animation-name: veilFadeIn;
-    animation-duration: 0.32s;
+    display: block;
+    /*
+        visibility: visible; 
+        animation-name: veilFadeIn; 
+        animation-duration: 0.32s;
+        */
 }
 
 .js .global-header__search .veil--search[data-on='false'] {
-    animation-name: veilFadeOut;
-    animation-duration: 0.32s;
+    /*
+        animation-name: veilFadeOut;
+        animation-duration: 0.32s;
+        */
 }
 
 @keyframes veilFadeIn {
