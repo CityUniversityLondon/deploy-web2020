@@ -31041,19 +31041,19 @@ article .link-copy {
 .js .global-header__search .veil--search {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
+    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
-    display: block;
-    visibility: hidden;
 }
 
 .js .global-header__search .veil--search[data-on='true'] {
     visibility: visible;
     animation-name: veilFadeIn;
     animation-duration: 0.32s;
+    display: none;
 }
 
 .js .global-header__search .veil--search[data-on='false'] {
@@ -35263,19 +35263,19 @@ article .link-copy {
 .js .menu__veil {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
+    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
-    display: block;
-    visibility: hidden;
 }
 
 .js .menu__veil[data-on='true'] {
     visibility: visible;
     animation-name: veilFadeIn;
     animation-duration: 0.32s;
+    display: none;
 }
 
 .js .menu__veil[data-on='false'] {
@@ -35739,7 +35739,6 @@ article .link-copy {
     animation-timing-function: linear;
     animation-fill-mode: forwards;
     overflow-y: hidden;
-    max-height: 20vh;
 }
 
 .navigation--primary .navigation--primary__menu__content {
@@ -36200,11 +36199,14 @@ article .link-copy {
     width: 100%;
 }
 
+.js .navigation--primary .navigation__level1 > li .navigation__button + .navigation--primary__menu {
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='false'].menu-animation__slideClose + .navigation--primary__menu {
     animation-name: slideUp;
     animation-duration: 0.32s;
-    margin-top: 1.5rem;
-    max-height: 0;
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'] > div:after {
@@ -36213,30 +36215,27 @@ article .link-copy {
 
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'].menu-animation__slideOpen + .navigation--primary__menu {
     box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
-    margin-top: 1.5rem;
-    padding-bottom: 1.5rem;
     animation-name: slideDown;
     animation-duration: 0.44s;
-    max-height: 100vh;
     visibility: visible;
 }
 
 .js .navigation__veil {
     background-color: rgba(30, 30, 30, 0.3);
     bottom: 0;
+    display: none;
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 3;
-    display: block;
-    visibility: hidden;
 }
 
 .js .navigation__veil[data-on='true'] {
     visibility: visible;
     animation-name: veilFadeIn;
     animation-duration: 0.32s;
+    display: none;
 }
 
 .js .navigation__veil[data-on='false'] {
@@ -36302,21 +36301,15 @@ article .link-copy {
         max-height: 0;
         visibility: visible;
     }
-    99% {
-        max-height: 100vh;
-    }
     100% {
-        max-height: 5000px;
+        max-height: 100vh;
     }
 }
 
 @keyframes slideUp {
     0% {
-        max-height: 5000px;
-        visibility: visible;
-    }
-    1% {
         max-height: 100vh;
+        visibility: visible;
     }
     100% {
         max-height: 0;
