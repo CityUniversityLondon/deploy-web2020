@@ -45321,6 +45321,9 @@ main > .login footer p {
     .home__pathway .triangle__block {
         display: none;
     }
+    .home__pathway .pathway__cards {
+        display: block;
+    }
 }
 
 @media (max-width: 1023px) {
@@ -45369,12 +45372,6 @@ main > .login footer p {
     }
 }
 
-@media (min-width: 1440px) {
-    .home__pathway {
-        --l: 12vw;
-    }
-}
-
 .home__pathway .triangle__block {
     width: 5.25rem;
     height: 5.25rem;
@@ -45402,18 +45399,13 @@ main > .login footer p {
     z-index: 1;
 }
 
-@media (max-width: 767px) {
-    .home__pathway .pathway .pathway__cards {
-        display: block;
-    }
-}
-
 .home__pathway .pathway .card--pathway {
     list-style-type: none;
     opacity: 0;
     transition: opacity 2s;
     margin-top: 0;
     z-index: 1;
+    height: fit-content;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -45442,17 +45434,18 @@ main > .login footer p {
     }
 }
 
+.home__pathway .pathway .card--pathway .card--pathway__anchor.card--pathway__border {
+    border-top: 0.5rem solid #d61726;
+}
+
+.home__pathway .pathway .card--pathway .card--pathway__anchor .wrap--card--pathway__heading {
+    position: relative;
+    padding-left: 1rem;
+}
+
 .home__pathway .pathway .wrap--icon {
     display: flex;
     margin-bottom: 0.75rem;
-}
-
-.home__pathway .pathway .wrap--icon:after {
-    background-color: #d61726;
-    content: '';
-    height: 0.25rem;
-    margin: 1.25rem 0 0 1.5rem;
-    width: 100%;
 }
 
 .home__pathway .pathway .wrap--icon .wrap--icon__img {
@@ -45461,7 +45454,6 @@ main > .login footer p {
 
 .home__pathway .pathway .wrap--card--pathway__img {
     overflow: hidden;
-    height: 230px;
 }
 
 .home__pathway .pathway .wrap--card--pathway__img .card--pathway__img {
