@@ -30514,6 +30514,10 @@ form:not([class]) .form__required-note--marker,
     transform: none;
 }
 
+.outline-cta--rounded-edges:focus:focus {
+    outline-style: solid;
+}
+
 .featured-profiles-block {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
@@ -60065,8 +60069,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 @media (min-width: 432px) and (max-width: 1023px) {
     .search-box__text .search-box__text__back-slash {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 1.5rem;
+        padding-right: 1.75rem;
     }
 }
 
@@ -60087,7 +60091,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .search-box__cta {
     padding-top: 1rem;
-    border-top: 0.0625rem solid #0c0c0e;
+    border-top: rgba(0, 0, 0, 0.25) 0.0625rem solid;
 }
 
 @media (min-width: 769px) {
@@ -60112,7 +60116,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .search-box__cta p {
     color: #ffffff;
     margin-top: initial;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     font-weight: 700;
 }
 
