@@ -45690,7 +45690,7 @@ main > .login footer p {
     right: 0;
     background: transparent;
     width: 0;
-    border-image: url(https://www.city.ac.uk/__data/assets/file/0015/710241/community.svg) 65 round;
+    border-image: url(https://www.city.ac.uk/__data/assets/file/0015/710241/community.svg) 65 fill repeat;
     filter: invert(67%) sepia(1%) saturate(0%) hue-rotate(151deg) brightness(98%) contrast(85%);
 }
 
