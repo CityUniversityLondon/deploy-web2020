@@ -1193,8 +1193,7 @@ function initNumberAnimation(widget) {
 
 function runNumberAnimation(widget) {
   const numberContainer = findNumberContainer(widget);
-  const isFloat = widget.dataset.animationNumberFloat; // const value = parseInt(widget.dataset.animationNumberValue);
-
+  const isFloat = widget.dataset.animationNumberFloat;
   const value = widget.dataset.animationNumberValue;
   const format = widget.dataset.animationNumberFormat;
 
@@ -1217,14 +1216,12 @@ function runNumberAnimation(widget) {
 
       const t = (timestamp - startTime) / DURATION; // difference in time between two discrete points in time divied by duration
 
-      const finish = t >= 1;
-      let k = finish ? 1 : 1 - Math.pow(1 - t, 4); // let v = (k * (value - startValue) + startValue).toFixed(1);
+      const finish = t >= 1; // k => Animates from 0 to 1
+
+      let k = finish ? 1 : 1 - Math.pow(1 - t, 4); // v => Animates number, multiple d.p. before finishing on 1 d.p.
 
       let v = isFloat ? k * (value - startValue + startValue).toFixed(1) : null;
-      isFloat ? null : v = Math.round(v);
-
-      if (isFloat) {// v = Math.round(v);
-      }
+      isFloat ? v = v.toFixed(0) : null;
 
       if (lastValue !== v) {
         lastValue = v;
@@ -1235,6 +1232,8 @@ function runNumberAnimation(widget) {
       if (finish) {
         //end of animation
         widget.classList.add('animate--number--complete');
+        numberContainer.innerHTML = isFloat ? widget.dataset.animationNumberValue // append and format to GB
+        : null;
       } else {
         //repeat call requestAnimationFrame until finish is true
         window.requestAnimationFrame(f);
