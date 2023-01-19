@@ -1207,26 +1207,25 @@ function runNumberAnimation(widget) {
      * @param {timestamp} time stamp - time stamp from requestAnimationFrame API
      */
 
-    const f = timestamp => {
+    const runAnimation = timestamp => {
       if (first) {
         startTime = timestamp;
         first = false;
-      }
+      } // Updates dynamically from 0 (start) to 1 (finish)
 
-      const t = (timestamp - startTime) / DURATION; // difference in time between two discrete points in time divied by duration
 
-      const finish = t >= 1; // k: Animates from 0 to 1
+      const progress = (timestamp - startTime) / DURATION,
+            finish = progress >= 1,
+            animationSpeed = finish ? 1 : 1 - Math.pow(1 - progress, 4); // The current number value as the animation runs
 
-      let k = finish ? 1 : 1 - Math.pow(1 - t, 4); // v: Restrict number animation to 1 decimal place, if not whole number
+      let currentValue = isFloat ? animationSpeed * (value - startValue + startValue).toFixed(1) : null; // Restrict animated number to largest whole number; stops larger number appearing and then jumping down, e.g. 3.8% will animate to 3%, then finish on 3.8%, rather than displaying 4% and then dropping down to 3.8%
 
-      let v = isFloat ? k * (value - startValue + startValue).toFixed(1) : null; // Restrict animated number to largest whole number; stops larger number appearing and then jumping down, e.g. 3.8% will animate to 3%, then finish on 3.8%, rather than displaying 4% and then dropping down
+      isFloat ? currentValue = Math.floor(currentValue) : null;
 
-      isFloat ? v = Math.floor(v) : null;
-
-      if (lastValue !== v) {
-        lastValue = v;
-        numberContainer.innerHTML = format === 'true' ? v.toLocaleString('en-GB') // Append and format to GB, e.g. 4000 renders as 4,000
-        : v;
+      if (lastValue !== currentValue) {
+        lastValue = currentValue;
+        numberContainer.innerHTML = format === 'true' ? currentValue.toLocaleString('en-GB') // Append and format to GB, e.g. 4000 renders as 4,000
+        : currentValue;
       }
 
       if (finish) {
@@ -1237,7 +1236,7 @@ function runNumberAnimation(widget) {
         : widget.dataset.animationNumberValue;
       } else {
         // Repeat call requestAnimationFrame until finish is true
-        window.requestAnimationFrame(f);
+        window.requestAnimationFrame(runAnimation);
       }
     };
     /**
@@ -1245,7 +1244,7 @@ function runNumberAnimation(widget) {
      */
 
 
-    window.requestAnimationFrame(f);
+    window.requestAnimationFrame(runAnimation);
   }
 }
 /**
