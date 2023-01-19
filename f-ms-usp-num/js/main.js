@@ -1172,8 +1172,7 @@ function initNumberAnimation(widget) {
   const numberStr = numberContainer.innerHTML.trim().replace(/,/g, '');
 
   if (numberStr.match(/^-?[0-9,]+(\.[0-9,]+])?/)) {
-    widget.dataset.animationNumberValue = parseFloat(numberStr); // widget.dataset.animationNumberValue = 4.14;
-
+    widget.dataset.animationNumberValue = parseFloat(numberStr);
     widget.dataset.animationNumberFloat = !!numberStr.match(/\./);
     widget.dataset.animationNumberStart = start;
     numberContainer.innerHTML = startStr;
@@ -1216,26 +1215,28 @@ function runNumberAnimation(widget) {
 
       const t = (timestamp - startTime) / DURATION; // difference in time between two discrete points in time divied by duration
 
-      const finish = t >= 1; // k => Animates from 0 to 1
+      const finish = t >= 1; // k: Animates from 0 to 1
 
-      let k = finish ? 1 : 1 - Math.pow(1 - t, 4); // v => Animates number, multiple d.p. before finishing on 1 d.p.
+      let k = finish ? 1 : 1 - Math.pow(1 - t, 4); // v: Restrict number animation to 1 decimal place, if not whole number
 
-      let v = isFloat ? k * (value - startValue + startValue).toFixed(1) : null;
-      isFloat ? v = v.toFixed(0) : null;
+      let v = isFloat ? k * (value - startValue + startValue).toFixed(1) : null; // Restrict animated number to largest whole number; stops larger number appearing and then jumping down, e.g. 3.8% will animate to 3%, then finish on 3.8%, rather than displaying 4% and then dropping down
+
+      isFloat ? v = Math.floor(v) : null;
 
       if (lastValue !== v) {
         lastValue = v;
-        numberContainer.innerHTML = format === 'true' ? v.toLocaleString('en-GB') // append and format to GB
+        numberContainer.innerHTML = format === 'true' ? v.toLocaleString('en-GB') // Append and format to GB, e.g. 4000 renders as 4,000
         : v;
       }
 
       if (finish) {
-        //end of animation
-        widget.classList.add('animate--number--complete');
-        numberContainer.innerHTML = isFloat ? widget.dataset.animationNumberValue // append and format to GB
-        : null;
+        // Animation finished
+        widget.classList.add('animate--number--complete'); // Check if final rendered number needs formatting
+
+        numberContainer.innerHTML = parseInt(widget.dataset.animationNumberValue) >= 1000 ? parseInt(widget.dataset.animationNumberValue).toLocaleString() // append and format to GB
+        : widget.dataset.animationNumberValue;
       } else {
-        //repeat call requestAnimationFrame until finish is true
+        // Repeat call requestAnimationFrame until finish is true
         window.requestAnimationFrame(f);
       }
     };
