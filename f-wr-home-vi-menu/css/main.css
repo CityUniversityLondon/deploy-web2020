@@ -40516,7 +40516,24 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .menu .menu__content .menu__level1 ul {
-    display: none;
+    visibility: hidden;
+    max-height: 0;
+}
+
+.js .menu .menu__content .menu__level1 .menu-animation__slideClose > ul {
+    animation-duration: 0.4s;
+    animation-name: slideClose;
+}
+
+@keyframes slideClose {
+    0% {
+        max-height: 100vh;
+        visibility: visible;
+    }
+    100% {
+        max-height: 0;
+        visibility: hidden;
+    }
 }
 
 .js .menu .menu__content .menu__utility {
@@ -40829,7 +40846,23 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .menu[data-open='true'] > .menu__content ul li[data-open='true'] > ul {
-    display: block;
+    visibility: visible;
+    max-height: inherit;
+}
+
+.js .menu[data-open='true'] > .menu__content ul .menu-animation__slideOpen > ul {
+    animation-duration: 0.4s;
+    animation-name: slideOpen;
+}
+
+@keyframes slideOpen {
+    0% {
+        max-height: 0;
+        visibility: visible;
+    }
+    100% {
+        max-height: 100vh;
+    }
 }
 
 .js .menu > .menu__display__button {
@@ -43440,8 +43473,19 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='false'].menu-animation__slideClose + .navigation--primary__menu {
-    animation-name: slideUp;
-    animation-duration: 0.32s;
+    animation-duration: 0.4s;
+    animation-name: slideClose;
+}
+
+@keyframes slideClose {
+    0% {
+        max-height: 100vh;
+        visibility: visible;
+    }
+    100% {
+        max-height: 0;
+        visibility: hidden;
+    }
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'] > div:after {
@@ -43450,9 +43494,19 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'].menu-animation__slideOpen + .navigation--primary__menu {
     box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
-    animation-name: slideDown;
-    animation-duration: 0.44s;
     visibility: visible;
+    animation-duration: 0.4s;
+    animation-name: slideOpen;
+}
+
+@keyframes slideOpen {
+    0% {
+        max-height: 0;
+        visibility: visible;
+    }
+    100% {
+        max-height: 100vh;
+    }
 }
 
 .js .navigation__veil {
@@ -43528,36 +43582,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
     display: grid;
     visibility: visible;
-}
-
-@keyframes slideDown {
-    from {
-        transform: scaleY(0);
-    }
-    to {
-        transform: scaleY(1);
-    }
-}
-
-@keyframes slideDown {
-    0% {
-        max-height: 0;
-        visibility: visible;
-    }
-    100% {
-        max-height: 100vh;
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        max-height: 100vh;
-        visibility: visible;
-    }
-    100% {
-        max-height: 0;
-        visibility: hidden;
-    }
 }
 
 .navigation--secondary__header {

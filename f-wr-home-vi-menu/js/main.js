@@ -4387,7 +4387,19 @@ function setNavigationItemButtonDetails(button, open, rootClass) {
 
 
 function toggleSubNavigation(button, rootClass) {
-  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded);
+  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded); // Menu slide open/close animation for mobile menu
+
+  if (expanded === 'true') {
+    button.parentNode.parentNode.classList.remove('menu-animation__slideOpen');
+    button.parentNode.parentNode.classList.add('menu-animation__slideClose');
+    setTimeout(() => {
+      button.parentNode.parentNode.classList.remove('menu-animation__slideClose');
+    }, 1000); // fixes a bug with sub menu, when opening and closing burger bun after interaction already took place inside the menu
+  } else {
+    button.parentNode.parentNode.classList.remove('menu-animation__slideClose');
+    button.parentNode.parentNode.classList.add('menu-animation__slideOpen');
+  }
+
   Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(expanded) ? setNavigationItemButtonDetails(button, false, rootClass) : setNavigationItemButtonDetails(button, true, rootClass);
   zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.intoView(button.closest('li'), scrollDuration);
 }
