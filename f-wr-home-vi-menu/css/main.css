@@ -39172,20 +39172,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         margin-top: 0;
         max-width: unset;
     }
-    .menu .menu__level1 > li > .menu__controls > button,
-    .menu .menu__level2 > li > .menu__controls > button,
-    .menu .menu__level3 > li > .menu__controls > button,
-    .menu .menu__level4 > li > .menu__controls > button,
-    .menu .menu__level5 > li > .menu__controls > button,
-    .menu .menu__level6 > li > .menu__controls > button {
-        align-self: center;
-        margin-left: 0.75rem;
-        margin-right: 0.75rem;
-        padding-bottom: 0.25rem;
-        padding-left: 0.25rem;
-        padding-right: 0.25rem;
-        padding-top: 0.25rem;
-    }
     .menu .menu__level1 > li > .menu__controls > button .menu__button__icon:before,
     .menu .menu__level2 > li > .menu__controls > button .menu__button__icon:before,
     .menu .menu__level3 > li > .menu__controls > button .menu__button__icon:before,
@@ -39606,6 +39592,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #1e1e1e;
         color: #ffffff;
         transition: background-color ease-out 0.2s;
+        background: #1e1e1e;
+        border: 0.25rem solid #1e1e1e;
+        border-bottom: 0.25rem solid #1e1e1e;
+        width: 2rem;
     }
 }
 
@@ -39662,6 +39652,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (max-width: 1023px) {
+    .menu .menu__level1 > li > .menu__controls > button:focus, .menu .menu__level1 > li > .menu__controls > button:active, .menu .menu__level1 > li > .menu__controls > button:hover {
+        outline-offset: -0.0625rem;
+        border-bottom: 0.25rem solid #1e1e1e;
+    }
     .menu .menu__level1 > li > .menu__controls > a,
     .menu .menu__level1 > li > .menu__controls > span {
         padding-left: 0.5rem;
@@ -39799,6 +39793,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #303030;
         color: #ffffff;
         transition: background-color ease-out 0.2s;
+        background: #303030;
+        border: 0.25rem solid #303030;
+        border-bottom: 0.25rem solid #303030;
+        width: 2rem;
     }
 }
 
@@ -39855,6 +39853,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (max-width: 1023px) {
+    .menu .menu__level2 > li > .menu__controls > button:focus, .menu .menu__level2 > li > .menu__controls > button:active, .menu .menu__level2 > li > .menu__controls > button:hover {
+        outline-offset: -0.0625rem;
+        border-bottom: 0.25rem solid #303030;
+    }
     .menu .menu__level2 > li > .menu__controls > a,
     .menu .menu__level2 > li > .menu__controls > span {
         padding-left: 1rem;
@@ -39956,6 +39958,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #f2f2f2;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
+        background: #f2f2f2;
+        border: 0.25rem solid #f2f2f2;
+        border-bottom: 0.25rem solid #f2f2f2;
+        width: 2rem;
     }
 }
 
@@ -40012,6 +40018,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (max-width: 1023px) {
+    .menu .menu__level3 > li > .menu__controls > button:focus, .menu .menu__level3 > li > .menu__controls > button:active, .menu .menu__level3 > li > .menu__controls > button:hover {
+        outline-offset: -0.0625rem;
+        border-bottom: 0.25rem solid #f2f2f2;
+    }
     .menu .menu__level3 > li > .menu__controls > a,
     .menu .menu__level3 > li > .menu__controls > span {
         padding-left: 1.5rem;
@@ -40110,6 +40120,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #e5e5e5;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
+        background: #e5e5e5;
+        border: 0.25rem solid #e5e5e5;
+        border-bottom: 0.25rem solid #e5e5e5;
+        width: 2rem;
     }
 }
 
@@ -40166,6 +40180,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (max-width: 1023px) {
+    .menu .menu__level4 > li > .menu__controls > button:focus, .menu .menu__level4 > li > .menu__controls > button:active, .menu .menu__level4 > li > .menu__controls > button:hover {
+        outline-offset: -0.0625rem;
+        border-bottom: 0.25rem solid #e5e5e5;
+    }
     .menu .menu__level4 > li > .menu__controls > a,
     .menu .menu__level4 > li > .menu__controls > span {
         padding-left: 2rem;
@@ -40264,6 +40282,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #d8d8d8;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
+        background: #d8d8d8;
+        border: 0.25rem solid #d8d8d8;
+        border-bottom: 0.25rem solid #d8d8d8;
+        width: 2rem;
     }
 }
 
@@ -40320,6 +40342,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (max-width: 1023px) {
+    .menu .menu__level5 > li > .menu__controls > button:focus, .menu .menu__level5 > li > .menu__controls > button:active, .menu .menu__level5 > li > .menu__controls > button:hover {
+        outline-offset: -0.0625rem;
+        border-bottom: 0.25rem solid #d8d8d8;
+    }
     .menu .menu__level5 > li > .menu__controls > a,
     .menu .menu__level5 > li > .menu__controls > span {
         padding-left: 2.5rem;
@@ -40418,6 +40444,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #cbcbcb;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
+        background: #cbcbcb;
+        border: 0.25rem solid #cbcbcb;
+        border-bottom: 0.25rem solid #cbcbcb;
+        width: 2rem;
     }
 }
 
@@ -40474,6 +40504,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (max-width: 1023px) {
+    .menu .menu__level6 > li > .menu__controls > button:focus, .menu .menu__level6 > li > .menu__controls > button:active, .menu .menu__level6 > li > .menu__controls > button:hover {
+        outline-offset: -0.0625rem;
+        border-bottom: 0.25rem solid #cbcbcb;
+    }
     .menu .menu__level6 > li > .menu__controls > a,
     .menu .menu__level6 > li > .menu__controls > span {
         padding-left: 3rem;
@@ -40483,6 +40517,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
+        padding-right: 0.5rem;
     }
     .menu a,
     .menu .menu__current > .menu__controls > span {
