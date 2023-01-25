@@ -45387,11 +45387,9 @@ main > .login footer p {
 
 .home__pathway .pathway .pathway__cards {
     display: grid;
-    background: #ffffff;
     grid-template-columns: repeat(3, 1fr);
     max-width: unset;
     grid-column-gap: 1.5rem;
-    background: #ffffff;
     position: relative;
     z-index: 1;
 }
@@ -45410,6 +45408,7 @@ main > .login footer p {
     z-index: 1;
     height: fit-content;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    background: #ffffff;
 }
 
 .home__pathway .pathway .card--pathway.in-view {
