@@ -28112,10 +28112,7 @@ article a:active {
     }
 }
 
-.global-header__utility ul li:not(:last-of-type):after {
-    color: #cbcbcb;
-    content: '|';
-    margin-left: 0.75rem;
+.global-header__utility ul li:not(:last-of-type) {
     margin-right: 0.75rem;
 }
 
