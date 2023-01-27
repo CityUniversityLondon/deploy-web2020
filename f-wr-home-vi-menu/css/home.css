@@ -28066,6 +28066,7 @@ article a:active {
         grid-column-start: 4;
         grid-row-end: 1;
         grid-row-start: 1;
+        margin-top: 1.5rem;
     }
 }
 
@@ -28233,6 +28234,7 @@ article a:active {
         grid-column-start: 22;
         grid-row-end: 1;
         grid-row-start: 1;
+        margin-top: 1.5rem;
     }
 }
 
@@ -29839,8 +29841,6 @@ article .link-copy {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    min-height: 3rem;
-    width: 100%;
 }
 
 @media (max-width: 1023px) {
@@ -29999,95 +29999,76 @@ article .link-copy {
 @media (min-width: 1024px) {
     .global-header__search > a,
     .global-header__search .global-header__search__button {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-        display: inline-block;
-        padding-bottom: 0.5rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        padding-top: 0.5rem;
-        transition: background-color 0.6s;
+        /*
+            @include cta--basic--subelement(
+                $color-purewhite,
+                $color-red50,
+                $color-purewhite,
+                $color-red70,
+                $color-purewhite,
+                square,
+                'global-header__search__wrapper'
+            );*/
         display: flex;
         height: 100%;
+    }
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        font-size: 1.602rem;
+        line-height: 1.33333;
+        letter-spacing: -0.015em;
+        color: #d61726;
+        transition: transform 0.3s ease;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1919px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1920px) and (max-width: 3839px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 3840px) and (max-width: 7679px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 7680px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 1024px) and (hover: hover) {
-    .global-header__search > a:hover,
-    .global-header__search .global-header__search__button:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
+    .global-header__search > a .global-header__search__icon:hover,
+    .global-header__search .global-header__search__button .global-header__search__icon:hover {
+        transform: scale(1.2);
     }
 }
 
 @media (min-width: 1024px) {
-    .global-header__search > a:focus, .global-header__search > a:active,
-    .global-header__search .global-header__search__button:focus,
-    .global-header__search .global-header__search__button:active {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-    .global-header__search > a, .global-header__search > a:focus, .global-header__search > a:active,
-    .global-header__search .global-header__search__button,
-    .global-header__search .global-header__search__button:focus,
-    .global-header__search .global-header__search__button:active {
-        background-color: #d61726;
-        color: #ffffff;
-    }
-    .global-header__search > a:focus .global-header__search__wrapper,
-    .global-header__search .global-header__search__button:focus .global-header__search__wrapper {
-        outline-color: #ffffff;
+    .global-header__search > a .global-header__search__icon:active, .global-header__search > a .global-header__search__icon:focus,
+    .global-header__search .global-header__search__button .global-header__search__icon:active,
+    .global-header__search .global-header__search__button .global-header__search__icon:focus {
+        outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
         outline-style: solid;
         outline-width: 0.125rem;
     }
-}
-
-@media (min-width: 1024px) and (hover: hover) {
-    .global-header__search > a:hover,
-    .global-header__search .global-header__search__button:hover {
-        background-color: #9e111c;
-        color: #ffffff;
-    }
-}
-
-@media (min-width: 1024px) {
-    .global-header__search > a .global-header__search__icon,
-    .global-header__search .global-header__search__button .global-header__search__icon {
-        margin-left: 0.5rem;
+    .global-header__search > a .global-header__search__text,
+    .global-header__search .global-header__search__button .global-header__search__text {
+        display: none;
     }
 }
 
@@ -30251,9 +30232,13 @@ article .link-copy {
     }
 }
 
+.js .global-header__search .global-header__search__button[aria-expanded='true'] .global-header__search__icon {
+    color: #ffffff;
+}
+
 .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: linear-gradient(#d61726 30%, #790b21 80%, #3e1031 100%);
+    background: #0c0c0e;
     color: #ffffff;
     display: block;
     left: 0;
@@ -30262,11 +30247,6 @@ article .link-copy {
     right: 0;
     top: 0;
     z-index: 5;
-}
-
-.js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background-color: #d61726;
 }
 
 @media (max-width: 1023px) {
@@ -36445,7 +36425,7 @@ article .link-copy {
     line-height: 1.625;
     letter-spacing: 0.005em;
     margin-left: 0.5rem;
-    align-items: flex-end;
+    align-items: center;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {

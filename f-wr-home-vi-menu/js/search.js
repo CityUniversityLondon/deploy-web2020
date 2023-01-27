@@ -2619,7 +2619,7 @@ function Search__OtherSites(props) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
         href: collection.search + '?query=' + props.query.query
       }, collection.label, " (", collection.response.summary.totalMatching, ")"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        className: "fad fa-lock-alt icon",
+        className: "far fa-lock-alt icon",
         "aria-label": "Login required"
       })));
     } else {
