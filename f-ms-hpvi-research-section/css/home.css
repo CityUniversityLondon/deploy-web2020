@@ -45322,6 +45322,10 @@ main > .login footer p {
         margin-left: -1rem;
         margin-right: 2rem;
     }
+    .home-new-vi .home__research .wrap--research__media .media__container.in {
+        position: relative;
+        display: block;
+    }
 }
 
 @media (min-width: 768px) {
