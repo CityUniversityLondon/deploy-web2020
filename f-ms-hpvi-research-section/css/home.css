@@ -45509,18 +45509,18 @@ main > .login footer p {
     width: 100%;
 }
 
-.home-new-vi .home__research .wrap--research__media .research__media {
+.home-new-vi .home__research .wrap--research__media .media__container {
     position: absolute;
     width: 100%;
 }
 
-.home-new-vi .home__research .wrap--research__media .research__media.in {
+.home-new-vi .home__research .wrap--research__media .media__container.in {
     visibility: visible;
     opacity: 1;
     transition: visibility 0.3s, opacity 0.3s linear;
 }
 
-.home-new-vi .home__research .wrap--research__media .research__media.out {
+.home-new-vi .home__research .wrap--research__media .media__container.out {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.3s, opacity 0.3s linear;
