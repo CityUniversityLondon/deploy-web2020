@@ -45322,6 +45322,7 @@ main > .login footer p {
         margin-left: -1rem;
         margin-right: 2rem;
         height: 100%;
+        background: #1e1e1e;
     }
     .home-new-vi .home__research .wrap--research__media .media__container.in, .home-new-vi .home__research .wrap--research__media .media__container.out {
         position: relative;
