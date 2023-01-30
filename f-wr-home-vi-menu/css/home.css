@@ -30214,7 +30214,7 @@ article .link-copy {
         text-decoration: none;
     }
     .js .global-header__search .global-header__search__button[aria-expanded='true'], .js .global-header__search .global-header__search__button[aria-expanded='true']:focus, .js .global-header__search .global-header__search__button[aria-expanded='true']:active {
-        background-color: #d61726;
+        background-color: #0c0c0e;
         color: #ffffff;
     }
     .js .global-header__search .global-header__search__button[aria-expanded='true']:focus .global-header__search__wrapper {
@@ -30227,7 +30227,7 @@ article .link-copy {
 
 @media (max-width: 1023px) and (hover: hover) {
     .js .global-header__search .global-header__search__button[aria-expanded='true']:hover {
-        background-color: #9e111c;
+        background-color: #0c0c0e;
         color: #ffffff;
     }
 }
@@ -31147,12 +31147,12 @@ article .link-copy {
 }
 
 .js .global-header__search .search--inline__query > div button, .js .global-header__search .search--inline__query > div button:focus, .js .global-header__search .search--inline__query > div button:active {
-    background-color: #ffffff;
-    color: #0c0c0e;
+    background-color: #d61726;
+    color: #ffffff;
 }
 
 .js .global-header__search .search--inline__query > div button:focus .search--inline__query__submit__content {
-    outline-color: #0c0c0e;
+    outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: solid;
     outline-width: 0.125rem;
@@ -31161,7 +31161,7 @@ article .link-copy {
 @media (hover: hover) {
     .js .global-header__search .search--inline__query > div button:hover {
         background-color: #a1a1a1;
-        color: #0c0c0e;
+        color: #ffffff;
     }
 }
 
