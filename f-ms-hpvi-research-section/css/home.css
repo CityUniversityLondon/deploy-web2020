@@ -45440,6 +45440,12 @@ main > .login footer p {
     padding-bottom: 2rem;
 }
 
+@media (min-width: 1440px) {
+    .home-new-vi .home__research .wrap--research__content {
+        padding-bottom: 5rem;
+    }
+}
+
 .home-new-vi .home__research .research__content {
     color: #ffffff;
 }
@@ -45497,7 +45503,7 @@ main > .login footer p {
 }
 
 .home-new-vi .home__research .wrap--research__media {
-    margin-top: -3rem;
+    margin-top: -2.25rem;
     position: relative;
 }
 
@@ -45513,8 +45519,16 @@ main > .login footer p {
     width: 100%;
 }
 
+.home-new-vi .home__research .wrap--research__media .youtube-video {
+    margin-top: 0;
+}
+
 .home-new-vi .home__research .wrap--research__media .media__container {
     position: absolute;
+    width: 100%;
+}
+
+.home-new-vi .home__research .wrap--research__media .media__container .media__container__img {
     width: 100%;
 }
 
