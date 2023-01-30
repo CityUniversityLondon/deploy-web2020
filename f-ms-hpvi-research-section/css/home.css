@@ -45322,9 +45322,15 @@ main > .login footer p {
         margin-left: -1rem;
         margin-right: 2rem;
     }
-    .home-new-vi .home__research .wrap--research__media .media__container.in {
+    .home-new-vi .home__research .wrap--research__media .media__container.in, .home-new-vi .home__research .wrap--research__media .media__container.out {
         position: relative;
-        display: block;
+    }
+    .home-new-vi .home__research .wrap--research__media .media__container.in:first-of-type, .home-new-vi .home__research .wrap--research__media .media__container.out:first-of-type {
+        opacity: 1;
+        visibility: visible;
+    }
+    .home-new-vi .home__research .wrap--research__media .media__container.in:not(:first-of-type), .home-new-vi .home__research .wrap--research__media .media__container.out:not(:first-of-type) {
+        display: none;
     }
 }
 
