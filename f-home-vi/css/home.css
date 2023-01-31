@@ -45337,8 +45337,7 @@ main > .login footer p {
 @media (min-width: 768px) {
     .home-new-vi .home__research .wrap--research__media {
         grid-column: 1/11;
-        position: relative;
-        height: fit-content;
+        height: auto;
     }
     .home-new-vi .home__research .wrap--research__links {
         margin-top: 1.5rem;
@@ -45511,6 +45510,8 @@ main > .login footer p {
 .home-new-vi .home__research .wrap--research__media {
     margin-top: -2.25rem;
     position: relative;
+    height: 100%;
+    background: #1e1e1e;
 }
 
 .home-new-vi .home__research .wrap--research__media .youtube-video__wrapper {
@@ -45532,10 +45533,12 @@ main > .login footer p {
 .home-new-vi .home__research .wrap--research__media .media__container {
     position: absolute;
     width: 100%;
+    height: 100%;
 }
 
 .home-new-vi .home__research .wrap--research__media .media__container .media__container__img {
-    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .home-new-vi .home__research .wrap--research__media .media__container.in {
@@ -45576,6 +45579,10 @@ main > .login footer p {
     right: 0;
     transform: translateY(-50%);
     top: 50%;
+}
+
+.home-new-vi .home__research .linked-heading__icons span:nth-child(1), .home-new-vi .home__research .linked-heading__icons span:nth-child(2) {
+    font-size: 0.875em;
 }
 
 .home-new-vi.cms-editor div.cms-editor-warning {
