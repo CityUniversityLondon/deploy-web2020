@@ -45399,12 +45399,6 @@ main > .login footer p {
     display: flex;
     align-items: flex-end;
     margin-bottom: 0.25rem;
-    /*
-        $color: $color-inline-link,
-        $visited: $color-inline-link--visited,
-        $hover: $color-text--dark,
-        $outline: $color-outline
-        */
 }
 
 .home__news-events .home__news-events__header__link a {
