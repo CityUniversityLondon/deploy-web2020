@@ -45593,14 +45593,16 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     outline-style: solid;
 }
 
-.search-box__select select:hover {
-    background-color: #0c0c0e;
-    color: #ffffff;
-    font-weight: 600;
-    transition: all 0.2s ease;
+@media (hover: hover) {
+    .search-box__select select:hover {
+        background-color: #0c0c0e;
+        color: #ffffff;
+        font-weight: 600;
+        transition: all 0.2s ease;
+    }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (hover: hover) and (prefers-reduced-motion: reduce) {
     .search-box__select select:hover {
         transition: none;
     }
@@ -45842,13 +45844,14 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     line-height: 1;
 }
 
-.search-box__query__input .search-box__clear:hover {
-    background-color: transparent;
-}
-
-.search-box__query__input .search-box__clear:hover .icon {
-    --fa-primary-color: #f2f2f2;
-    --fa-secondary-color: #696969;
+@media (hover: hover) {
+    .search-box__query__input .search-box__clear:hover {
+        background-color: transparent;
+    }
+    .search-box__query__input .search-box__clear:hover .icon {
+        --fa-primary-color: #f2f2f2;
+        --fa-secondary-color: #696969;
+    }
 }
 
 .search-box__query__suggestions {
@@ -45899,10 +45902,12 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     outline-offset: 0;
 }
 
-.search-box__query__suggestions li button:hover {
-    background-color: #006bbd;
-    color: #ffffff;
-    text-decoration: underline;
+@media (hover: hover) {
+    .search-box__query__suggestions li button:hover {
+        background-color: #006bbd;
+        color: #ffffff;
+        text-decoration: underline;
+    }
 }
 
 .search-box__query__suggestions li button .search-box__suggestion {
@@ -45982,13 +45987,14 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     line-height: 1;
 }
 
-.finder__clear:hover {
-    background-color: transparent;
-}
-
-.finder__clear:hover .icon {
-    --fa-primary-color: #f2f2f2;
-    --fa-secondary-color: #696969;
+@media (hover: hover) {
+    .finder__clear:hover {
+        background-color: transparent;
+    }
+    .finder__clear:hover .icon {
+        --fa-primary-color: #f2f2f2;
+        --fa-secondary-color: #696969;
+    }
 }
 
 .search-box__query__submit {
@@ -46037,7 +46043,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     text-decoration: underline;
 }
 
-.search-box__text a:hover, .search-box__text a:active {
+.search-box__text a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -46053,11 +46059,27 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     text-decoration: none;
 }
 
-.search-box__text a:hover {
-    text-decoration: underline;
+@media (hover: hover) {
+    .search-box__text a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        text-decoration: underline;
+        color: #ffffff;
+    }
 }
 
-.search-box__text a:visited, .search-box__text a:focus, .search-box__text a:hover, .search-box__text a:active {
+.search-box__text a:visited, .search-box__text a:focus, .search-box__text a:active {
     color: #ffffff;
 }
 
