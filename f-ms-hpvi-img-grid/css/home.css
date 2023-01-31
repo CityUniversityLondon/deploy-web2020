@@ -45519,12 +45519,6 @@ main > .login footer p {
 }
 
 @media (min-width: 768px) {
-    .home__social .box {
-        margin-left: 4rem;
-        transform: translate(10%, -30%);
-        top: 30%;
-        border-top: 0.375rem solid #d61726;
-    }
     .home__social .box__border {
         border-left: 14px solid transparent;
     }
@@ -45535,6 +45529,53 @@ main > .login footer p {
         flex-basis: calc(100% / 5);
         object-fit: cover;
         width: 20%;
+    }
+}
+
+@media (max-width: 1023px) {
+    .home__social .wrap--box {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        position: relative;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .home__social .wrap--box {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home__social .wrap--box {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .home__social .wrap--box {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .home__social .wrap--box {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1441px) {
+    .home__social .wrap--box {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -45582,7 +45623,6 @@ main > .login footer p {
     position: absolute;
     background: #ffffff;
     padding: 2rem 1rem;
-    margin: 2rem;
     z-index: 1;
 }
 
@@ -45616,9 +45656,14 @@ main > .login footer p {
 }
 
 .home__social .box__pre-strap span.line {
-    flex: 1;
-    border-top: 0.0625rem solid #a1a1a1;
     margin: auto 0 auto 1rem;
+    flex: 1;
+}
+
+.home__social .line {
+    flex: 1;
+    border-top: 0.375rem solid #d61726;
+    margin: 0.75rem 0 0;
 }
 
 .home__social .box__content__body {
