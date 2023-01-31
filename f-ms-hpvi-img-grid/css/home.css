@@ -45521,9 +45521,9 @@ main > .login footer p {
 @media (min-width: 768px) {
     .home__social .box {
         margin-left: 4rem;
-        width: 55ch;
         transform: translate(10%, -30%);
         top: 30%;
+        border-top: 0.375rem solid #d61726;
     }
     .home__social .box__border {
         border-left: 14px solid transparent;
@@ -45564,6 +45564,9 @@ main > .login footer p {
 
 .home__social .row {
     display: flex;
+    overflow: hidden;
+    position: relative;
+    line-height: 0;
     overflow: hidden;
 }
 
@@ -45620,7 +45623,6 @@ main > .login footer p {
 
 .home__social .box__content__body {
     border-bottom: 0.0625rem solid solid #a1a1a1;
-    padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -45676,9 +45678,15 @@ main > .login footer p {
     background-image: none;
 }
 
-.home__social .box__post-strap a.anchor-discreet:hover::before {
-    opacity: 0;
-    transition: none;
+@media (hover: hover) {
+    .home__social .box__post-strap a.anchor-discreet:hover::before {
+        opacity: 0;
+        transition: none;
+    }
+}
+
+.home__social .box__post-strap a.anchor-discreet:focus {
+    outline-style: solid;
 }
 
 .home__social .box__border {
