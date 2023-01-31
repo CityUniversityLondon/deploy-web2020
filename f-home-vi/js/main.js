@@ -6459,7 +6459,6 @@ function launchDot(slider) {
 
     if (i === 0) {
       // Active slide
-      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].current, 'slide');
       dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'true');
       dot.setAttribute('disabled', 'true');
     } else {
@@ -7203,7 +7202,7 @@ function launchImageCredit(picture) {
 __webpack_require__.r(__webpack_exports__);
 
 
-const className = 'fa-link';
+const className = 'copy-link';
 
 function copyIconToClipboard(elem) {
   const copy = elem;
