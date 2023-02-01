@@ -45613,6 +45613,7 @@ main > .login footer p {
 
 .home__social .social__img.in-view {
     animation: fadeIn 1s, scaleIn ease-in-out 3s;
+    filter: brightness(0.5) saturate(100%);
 }
 
 .home__social .social__img:not(.in-view) {
@@ -45623,15 +45624,17 @@ main > .login footer p {
     position: absolute;
     background: #ffffff;
     padding: 2rem 1rem;
+    transition: top 0.4s;
     z-index: 1;
 }
 
 .home__social .box.in-view {
-    animation: fadeIn 1.5s;
+    top: 3rem;
 }
 
 .home__social .box:not(.in-view) {
     opacity: 0;
+    top: 10rem;
 }
 
 .home__social .box__pre-strap {
@@ -45721,6 +45724,7 @@ main > .login footer p {
     border-bottom-color: #d61726;
     font-weight: 600;
     background-image: none;
+    bottom: 0.125rem;
 }
 
 @media (hover: hover) {
