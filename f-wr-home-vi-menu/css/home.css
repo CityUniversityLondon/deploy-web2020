@@ -36241,6 +36241,7 @@ article .link-copy {
     outline-width: 0;
     text-decoration: none;
     position: relative;
+    align-items: center;
 }
 
 @media (hover: hover) {

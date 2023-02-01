@@ -43398,6 +43398,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     outline-width: 0;
     text-decoration: none;
     position: relative;
+    align-items: center;
 }
 
 @media (hover: hover) {
