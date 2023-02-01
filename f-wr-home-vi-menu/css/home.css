@@ -29999,16 +29999,6 @@ article .link-copy {
 @media (min-width: 1024px) {
     .global-header__search > a,
     .global-header__search .global-header__search__button {
-        /*
-            @include cta--basic--subelement(
-                $color-purewhite,
-                $color-red50,
-                $color-purewhite,
-                $color-red70,
-                $color-purewhite,
-                square,
-                'global-header__search__wrapper'
-            );*/
         display: flex;
         height: 100%;
     }
@@ -31024,26 +31014,10 @@ article .link-copy {
     right: 0;
     top: 0;
     z-index: 3;
-    /*
-    display: block; 
-    visibility: hidden;
-    */
 }
 
 .js .global-header__search .veil--search[data-on='true'] {
     display: block;
-    /*
-        visibility: visible; 
-        animation-name: veilFadeIn; 
-        animation-duration: 0.32s;
-        */
-}
-
-.js .global-header__search .veil--search[data-on='false'] {
-    /*
-        animation-name: veilFadeOut;
-        animation-duration: 0.32s;
-        */
 }
 
 @keyframes veilFadeIn {
@@ -35400,26 +35374,10 @@ article .link-copy {
     right: 0;
     top: 0;
     z-index: 3;
-    /*
-    display: block; 
-    visibility: hidden;
-    */
 }
 
 .js .menu__veil[data-on='true'] {
     display: block;
-    /*
-        visibility: visible; 
-        animation-name: veilFadeIn; 
-        animation-duration: 0.32s;
-        */
-}
-
-.js .menu__veil[data-on='false'] {
-    /*
-        animation-name: veilFadeOut;
-        animation-duration: 0.32s;
-        */
 }
 
 @keyframes veilFadeIn {
@@ -36398,26 +36356,10 @@ article .link-copy {
     right: 0;
     top: 0;
     z-index: 3;
-    /*
-    display: block; 
-    visibility: hidden;
-    */
 }
 
 .js .navigation__veil[data-on='true'] {
     display: block;
-    /*
-        visibility: visible; 
-        animation-name: veilFadeIn; 
-        animation-duration: 0.32s;
-        */
-}
-
-.js .navigation__veil[data-on='false'] {
-    /*
-        animation-name: veilFadeOut;
-        animation-duration: 0.32s;
-        */
 }
 
 @keyframes veilFadeIn {
