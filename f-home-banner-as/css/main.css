@@ -30354,6 +30354,170 @@ form:not([class]) .form__required-note--marker,
     border: 0.125rem solid #0c0c0e;
 }
 
+.outline-cta--rounded-edges {
+    background: initial;
+    border-radius: 0.25rem;
+    border: none;
+    color: initial;
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    transition: background-color 0.6s, transform 0.6s;
+    background: transparent;
+    border: 0.125rem solid #ffffff;
+    color: #ffffff;
+    padding: 0.25rem 1.5rem;
+    border-radius: 2rem;
+}
+
+.outline-cta--rounded-edges:disabled {
+    cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .outline-cta--rounded-edges {
+        transition: none;
+    }
+}
+
+@media (max-width: 432px) {
+    .outline-cta--rounded-edges {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.outline-cta--rounded-edges span {
+    transition: transform 0.6s;
+}
+
+.outline-cta--rounded-edges:after {
+    content: "";
+    font-family: 'Font Awesome';
+    font-style: normal;
+    font-weight: normal;
+    opacity: 0;
+    position: absolute;
+    right: 1.5rem;
+    text-decoration: inherit;
+    transform: translateX(-0.75rem);
+    transition: background-color 0.6s, transform 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .outline-cta--rounded-edges:after {
+        transition: none;
+    }
+}
+
+.outline-cta--rounded-edges:focus, .outline-cta--rounded-edges:active {
+    background-color: transparent;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+}
+
+.outline-cta--rounded-edges:focus span, .outline-cta--rounded-edges:active span {
+    transform: translateX(-0.75rem);
+}
+
+.outline-cta--rounded-edges:focus:after, .outline-cta--rounded-edges:active:after {
+    opacity: 1;
+    transform: translateX(0.75rem);
+}
+
+@media (hover: hover) {
+    .outline-cta--rounded-edges:hover {
+        background-color: transparent;
+        border: 0.125rem solid #d61726;
+        color: #ffffff;
+    }
+    .outline-cta--rounded-edges:hover span {
+        transform: translateX(-0.75rem);
+    }
+    .outline-cta--rounded-edges:hover:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
+    }
+}
+
+.outline-cta--rounded-edges:disabled {
+    opacity: 0.7;
+}
+
+.outline-cta--rounded-edges:disabled span {
+    transform: none;
+}
+
+.outline-cta--rounded-edges:disabled:after {
+    opacity: 0;
+    transform: none;
+}
+
+.outline-cta--rounded-edges:visited {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.outline-cta--rounded-edges:active {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #0c0c0e;
+}
+
+@media (hover: hover) {
+    .outline-cta--rounded-edges:hover {
+        background: #ffffff;
+        border-color: #ffffff;
+        color: #0c0c0e;
+    }
+}
+
+.outline-cta--rounded-edges:focus {
+    border-color: #ffffff;
+}
+
+.outline-cta--rounded-edges:focus:focus, .outline-cta--rounded-edges:focus:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.outline-cta--rounded-edges:active {
+    border-color: #ffffff;
+}
+
+.outline-cta--rounded-edges:active:focus, .outline-cta--rounded-edges:active:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.outline-cta--rounded-edges:disabled {
+    color: #ffffff;
+    background: transparent;
+    border: 0.125rem solid #ffffff;
+}
+
+.outline-cta--rounded-edges span {
+    transition: none;
+}
+
+.outline-cta--rounded-edges:after {
+    content: '';
+}
+
+.outline-cta--rounded-edges:active span, .outline-cta--rounded-edges:focus span, .outline-cta--rounded-edges:hover span {
+    transform: none;
+}
+
+.outline-cta--rounded-edges:focus:focus {
+    outline-style: solid;
+}
+
 .featured-profiles-block {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
