@@ -45666,7 +45666,7 @@ main > .login footer p {
 .home__social .line {
     flex: 1;
     border-top: 0.375rem solid #d61726;
-    margin: 0.75rem 0 0;
+    margin: 0.75rem 0 1.25rem;
 }
 
 .home__social .box__content__body {
@@ -45717,6 +45717,10 @@ main > .login footer p {
     .home__social .box__post-strap .icon__wrapper .icon.fa-instagram:before {
         letter-spacing: -0.017em;
     }
+}
+
+.home__social .box__post-strap .icon__wrapper .line {
+    margin-bottom: 1.25rem;
 }
 
 .home__social .box__post-strap a.anchor-discreet {
