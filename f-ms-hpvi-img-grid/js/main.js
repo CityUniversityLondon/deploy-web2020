@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([0,"vendor-dependencies","core","react","vendor-direct","axios"]);
+/******/ 	deferredModules.push([0,"vendor-dependencies","core","react","axios","vendor-direct"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -567,20 +567,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
 /* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
 /* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
-/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/animation/particle/particle */ "./src/patterns/animation/particle/particle.js");
-/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
-/* harmony import */ var _how_to_apply_research__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./how-to-apply--research */ "./src/how-to-apply--research.js");
-/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
-/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
-/* harmony import */ var _patterns_video_video__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/video/video */ "./src/patterns/video/video.js");
+/* harmony import */ var _patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/mouseover-gallery/mouseover-gallery */ "./src/patterns/mouseover-gallery/mouseover-gallery.js");
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
+/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/animation/particle/particle */ "./src/patterns/animation/particle/particle.js");
+/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
+/* harmony import */ var _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./how-to-apply--research */ "./src/how-to-apply--research.js");
+/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
+/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
+/* harmony import */ var _patterns_video_video__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./patterns/video/video */ "./src/patterns/video/video.js");
 
 
 /**
@@ -625,7 +626,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_31__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_32__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_22__["default"]]);
+
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_33__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_19__["default"]]);
 
 /***/ }),
 
@@ -5049,6 +5051,57 @@ function trapFocus(modal) {
 
 /***/ }),
 
+/***/ "./src/patterns/mouseover-gallery/mouseover-gallery.js":
+/*!*************************************************************!*\
+  !*** ./src/patterns/mouseover-gallery/mouseover-gallery.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+/**
+ * Rollover gallery
+ *
+ * @module patterns/mouseover-gallery/mouseover-gallery
+ * @author Web Development
+ * @copyright City, University of London 2023
+ */
+const className = 'mouseover-gallery';
+/**
+ * Makes a series of links change a media container's visibility, displaying a corresponding image if there is a matched ID.
+ *
+ * @param {HTMLHeadingElement} mouseoverGallery - A mouseover gallery.
+ */
+
+function launchMouseoverGallery(mouseoverGallery) {
+  let media = mouseoverGallery.getElementsByClassName('media__container'),
+      links = mouseoverGallery.getElementsByTagName('a'),
+      allImages;
+  const mediaElements = mouseoverGallery.querySelectorAll('.media__container'),
+        pictureElements = mouseoverGallery.getElementsByTagName('picture');
+  mediaElements.length === pictureElements.length ? allImages = true : allImages = false; // Only run mouseover behaviour if all media assets are images
+
+  if (allImages) {
+    for (const link of links) {
+      link.addEventListener('mouseover', () => {
+        for (const m of media) {
+          m.id === link.id ? m.className = 'media__container in' : m.className = 'media__container out';
+        }
+      });
+    }
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launchMouseoverGallery,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
 /***/ "./src/patterns/navigation/navigation-primary.js":
 /*!*******************************************************!*\
   !*** ./src/patterns/navigation/navigation-primary.js ***!
@@ -5996,15 +6049,8 @@ function showMore(showMoreElement) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
-
-
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 /**
@@ -6024,7 +6070,7 @@ const className = 'slider',
       arrowRight = 'ArrowRight';
 /**
  * This adds a few swipe related events listeners to the "ul" element of sliders
- * 
+ *
  * @param  {HTMLElement} slider - The slider ul element.
  * @param  {HTMLElement} controlsWrapper - The nav element containing the slider controls
  */
@@ -6044,14 +6090,14 @@ function addSwipeEvents(slider, controlsWrapper) {
   });
 }
 /**
-* For arrow responsive slider. Opimises slide elements for responsive slider on 
-* bigger screens by creating a new "ul li" structure containing the slides
-* 
-* @param  {HTMLElement} slider - The slider "ul" element.
-* @param  {Array} slides - an array containing the individual slides as li elements.
-* @param  {HTMLElement} controls - The "nav" element containing the controls
-* 
-*/
+ * For arrow responsive slider. Opimises slide elements for responsive slider on
+ * bigger screens by creating a new "ul li" structure containing the slides
+ *
+ * @param  {HTMLElement} slider - The slider "ul" element.
+ * @param  {Array} slides - an array containing the individual slides as li elements.
+ * @param  {HTMLElement} controls - The "nav" element containing the controls
+ *
+ */
 
 
 function responsiveOptimisation(slides, slider, controls, direction) {
@@ -6061,7 +6107,7 @@ function responsiveOptimisation(slides, slider, controls, direction) {
   let d;
   let currentSlide; // This cycles through all the current slides and re-structure the list by creating a "new" which list contains
   // the number of items per slide, as set above (responsiveNum)
-  //i.e. 
+  //i.e.
   //  <ul>
   //      <li> slide 1
   //          <ul>
@@ -6084,7 +6130,7 @@ function responsiveOptimisation(slides, slider, controls, direction) {
         ulElement.appendChild(slides[i + d]);
         let sliderposition = slides[i + d].getAttribute('data-sliderposition');
 
-        if (sliderposition == '0') {
+        if (sliderposition === '0') {
           currentSlide = i + d;
         }
 
@@ -6116,13 +6162,13 @@ function responsiveOptimisation(slides, slider, controls, direction) {
 /**
  * For arrow responsive slider.This reverses the optimasation (re-structure) that was done in
  * the function (responsiveOptimisation) above by creating a "normal" single structure ul list
- * 
+ *
  * @param  {HTMLElement} slider - The slider "ul" element.
  * @param  {HTMLElement} controls - The "nav" element containing the controls
  */
 
 
-function reverseOptimisation(slider, controls, direction, click) {
+function reverseOptimisation(slider, controls, direction) {
   //formula for reverse is working
   let slides = Array.from(slider.children);
   let i;
@@ -6132,12 +6178,12 @@ function reverseOptimisation(slider, controls, direction, click) {
   for (i = 0; i < slides.length; i++) {
     let sliderposition = slides[i].getAttribute('data-sliderposition');
 
-    if (sliderposition == '0') {
+    if (sliderposition === '0') {
       currentSlide = i;
     }
 
     const slidesChildren = Array.from(slides[i].querySelector('ul').children);
-    slidesChildren.forEach((slide, n) => {
+    slidesChildren.forEach(slide => {
       slider.appendChild(slide);
     });
     slides[i].remove();
@@ -6163,7 +6209,7 @@ function reverseOptimisation(slider, controls, direction, click) {
 }
 /**
  * Updates buttons for arrow slider
- * 
+ *
  * @param  {HTMLElement} slider - The slider element.
  * @param  {HTMLElement} controls - The slider controls element.
  */
@@ -6179,7 +6225,7 @@ function updateButtonState(slider, controls) {
 
   const responsive = slider.getAttribute('data-style');
   let slides = Array.from(slider.children);
-  responsive && slides.length == 1 ? nextButton.removeAttribute('disabled') : null;
+  responsive && slides.length === 1 ? nextButton.removeAttribute('disabled') : null;
 }
 /**
  * Handle clicks on the next/previous buttons for arrow slider.
@@ -6195,7 +6241,7 @@ function handleNextPrevClick(slider, controls, direction) {
   const optimised = slider.getAttribute('data-optimised');
   let screenSize = window.innerWidth; // This is for responsive slider only, checking if re-structuring is necesssary in case the viewport size changed.
 
-  if (responsive === 'responsive' && screenSize < 768 && optimised == 'true') {
+  if (responsive === 'responsive' && screenSize < 768 && optimised === 'true') {
     reverseOptimisation(slider, controls, direction, true);
     return;
   } else if (responsive === 'responsive' && screenSize >= 768 && optimised !== 'true') {
@@ -6275,7 +6321,7 @@ function handleNextPrevClick(slider, controls, direction) {
 /**
  * This is for arrow slider only. It applies the necessary data attribues needed
  *  for the functionality of the slider which positions the slides into their starting positions
- * 
+ *
  * @param  {Array} slides - an array containing the individual slides as li elements
  */
 
@@ -6284,7 +6330,7 @@ function prepareSlides(slides, current) {
   slides.forEach((slide, i) => {
     slide.setAttribute('tabindex', -1); // Remove inactive
 
-    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, `Slide ${i + 1} of ${slides.length}`); // Accesiblity
+    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].label, `Slide ${i + 1} of ${slides.length}`); // Accesiblity
 
     slide.classList.add('slide'); // Add slide class of slide
     // 0 = active / first slide
@@ -6311,7 +6357,7 @@ function prepareSlides(slides, current) {
  * Transform an element with the slider class name into a slider section controlled by arrows.
  *
  * @param {HTMLElement} slider - An element with the slider class
- * 
+ *
  */
 
 
@@ -6331,7 +6377,7 @@ function launchArrow(slider) {
         dividerScreenReader = document.createElement('span'); // If not enough slides, don't create it.
 
   if (1 >= slides.length) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(slider, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_0__["removeClass"])(slider, className, false);
     return;
   } // Reconstructs slides for responsive slider
 
@@ -6343,9 +6389,8 @@ function launchArrow(slider) {
     responsiveOptimisation(slides, slider); // Re-map slide items after re-structure
 
     slides = Array.from(slider.children);
-  }
+  } // Sets up the positions of the cards / slides
 
-  ; // Sets up the positions of the cards / slides
 
   prepareSlides(slides, 0); // Build the next button
 
@@ -6385,7 +6430,7 @@ function launchArrow(slider) {
 
   dividerVisible.appendChild(document.createTextNode('/'));
   dividerVisible.className = className + '__indicator__divider--visible';
-  dividerVisible.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, 'true');
+  dividerVisible.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, 'true');
   dividerScreenReader.appendChild(document.createTextNode(' of '));
   dividerScreenReader.className = className + '__indicator__divider--sr';
   divider.appendChild(dividerVisible);
@@ -6404,22 +6449,21 @@ function launchArrow(slider) {
   controlsWrapper.appendChild(prevButton);
   controlsWrapper.appendChild(nextButton);
   controlsWrapper.className = className + '__controls';
-  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'Slider navigation'); // Places controls directly after 'ul' containing the slides
+  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].label, 'Slider navigation'); // Places controls directly after 'ul' containing the slides
 
   slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); // Add event listeners
 
   addSwipeEvents(slider, controlsWrapper); // Set the height of the slider container to be fixed. This fixes the issue of having 'arrow navigation'
   //slideHeightFix(slider);
 }
-
-;
 /**
  * Transform an element with the slider class name into a slider section controlled by dots.
  * This is to be launched on smaller screens only.
  *
  * @param {HTMLElement} slider - An element with the slider class
- * 
+ *
  */
+
 
 function launchDot(slider) {
   // Creates pagination and control elements
@@ -6427,14 +6471,14 @@ function launchDot(slider) {
         controlsWrapper = document.createElement('nav'); // If not enough slides, don't create it.
 
   if (1 >= slides.length) {
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(slider, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_0__["removeClass"])(slider, className, false);
     return;
   }
 
   slides.forEach((slide, i) => {
     slide.setAttribute('tabindex', -1); // Remove inactive
 
-    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, `Slide ${i + 1} of ${slides.length}`); // Accesiblity
+    slide.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].label, `Slide ${i + 1} of ${slides.length}`); // Accesiblity
 
     slide.classList.add('slide'); // Add slide class of slide
     // Sets data attributes for slides which controls their position within slide collection
@@ -6453,7 +6497,7 @@ function launchDot(slider) {
     } // Creates dot buttons for each slide
 
 
-    let dot = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
+    let dot = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
       label: 'data-page',
       val: i
     }, {
@@ -6466,12 +6510,12 @@ function launchDot(slider) {
 
     if (i === 0) {
       // Active slide
-      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].current, 'slide');
-      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'true');
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].current, 'slide');
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'true');
       dot.setAttribute('disabled', 'true');
     } else {
       // All other slides
-      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, 'false');
+      dot.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'false');
     }
 
     dot.addEventListener('click', () => handleDotClick(slider, controlsWrapper, i), true);
@@ -6498,7 +6542,6 @@ function launchDot(slider) {
           buttons[pos + 1].click();
         }
 
-        ;
         break;
 
       default:
@@ -6507,7 +6550,7 @@ function launchDot(slider) {
   }, true); // Wrap element around slider__controls
 
   controlsWrapper.className = className + '__controls';
-  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'Slider navigation'); // Places controls directly after 'ul' containing the slides
+  controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].label, 'Slider navigation'); // Places controls directly after 'ul' containing the slides
 
   slider.nextElementSibling ? slider.parentElement.insertBefore(controlsWrapper, slider.nextElementSibling) : slider.parentElement.appendChild(controlsWrapper); //add event listeners
 
@@ -6527,7 +6570,7 @@ function handleDotClick(slider, controlsWrapper, selection) {
   const slides = Array.from(slider.children),
         dotButtons = Array.from(controlsWrapper.children); // Disables all buttons after click to avoid multiple clicks
 
-  dotButtons.forEach((dot, i) => {
+  dotButtons.forEach(dot => {
     dot.setAttribute('disabled', true);
   }); // Re-arranges the positions of the slides
 
@@ -6575,28 +6618,25 @@ function updateDotButtonState(active, dotButtons, slider) {
   slider.removeAttribute('disabled');
 }
 /**
- * This function creates a fix height for the slider container so the height don't change depending on each 
- * slides individual height which would cause the navigation arrows to move up and down when adjusting to the 
+ * This function creates a fix height for the slider container so the height don't change depending on each
+ * slides individual height which would cause the navigation arrows to move up and down when adjusting to the
  * height of the current slide
  * @param  {HTMLElement} slider - The slider element.
  */
+// function slideHeightFix(slider){
+//     let slides = Array.from(slider.children);
+//     let sliderSetHeight = 0;
+//     slider.style.minHeight = '0px';
+//     slides.forEach((slide) => {
+//         let slideHeight = slide.offsetHeight;
+//         slideHeight > sliderSetHeight ? sliderSetHeight = slideHeight: null;
+//     })
+//     slider.style.minHeight = sliderSetHeight+'px';
+// };
 
-
-function slideHeightFix(slider) {
-  let slides = Array.from(slider.children);
-  let sliderSetHeight = 0;
-  slider.style.minHeight = '0px';
-  slides.forEach(slide => {
-    let slideHeight = slide.offsetHeight;
-    slideHeight > sliderSetHeight ? sliderSetHeight = slideHeight : null;
-  });
-  slider.style.minHeight = sliderSetHeight + 'px';
-}
-
-;
 /**
  * 3 Swipe functions below. Unify records touch coordinates to determine left or right swipe.
- * Lock function locks the ul element to prevent too many additional touches interfering with the sliding 
+ * Lock function locks the ul element to prevent too many additional touches interfering with the sliding
  * functionality. I.e. when a slide is in progress it locks it not to register additional touches.
  * Move function monitors the 'end' of the swipe action to determine the direction of the swipe i.e. left / right.
  * The "dx" parameter can be used to adjust the sensitivity of the swiping. The larger the number the longer the swipe needs
@@ -6606,6 +6646,7 @@ function slideHeightFix(slider) {
  * @param {HTMLElement} Slider - The ul element containing the "li" slides
  * @param {HTMLElement} ControlsWrapper - The nav element containing the slider controls
  */
+
 
 let x0;
 
@@ -6622,51 +6663,46 @@ function lock(e, slider) {
   }
 }
 
-;
-
 function move(e, slider, controlsWrapper) {
   const locked = slider.getAttribute('disabled');
-  let currentSlide = slider.querySelector("li[data-hidden=false]");
+  let currentSlide = slider.querySelector('li[data-hidden=false]');
   const sliderType = slider.getAttribute('data-style');
 
   function getElementIndex(element) {
     return [...element.parentNode.children].indexOf(element);
   }
 
-  ;
-
   if (!locked) {
     let dx = unify(e).clientX - x0,
         //dx is value calculate by using clientX mousedown and after value
-    s = Math.sign(dx),
-        //check if swipe is left or right by checking value is negative or positive
-    tx = getComputedStyle(e.target).getPropertyValue('--tx'),
-        p = parseInt(tx.replace(/\D/g, '')); // May use the drag length as a condition to move slider
+    s = Math.sign(dx); //check if swipe is left or right by checking value is negative or positive
+    // tx = getComputedStyle(e.target).getPropertyValue('--tx');
+    // p = parseInt(tx.replace(/\D/g, '')); // May use the drag length as a condition to move slider
     // Next slide
 
-    if (s == -1 && currentSlide.nextElementSibling && dx < -25) {
+    if (s === -1 && currentSlide.nextElementSibling && dx < -25) {
       // Checks which type of slider you are using and handles slide
       slider.setAttribute('disabled', true);
-      sliderType == 'arrows' || sliderType === 'responsive' ? handleNextPrevClick(slider, controlsWrapper, 1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) + 1);
-    } // Previous slide 
-    else if (s == 1 && currentSlide.previousElementSibling && dx > 25) {
+      sliderType === 'arrows' || sliderType === 'responsive' ? handleNextPrevClick(slider, controlsWrapper, 1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) + 1);
+    } // Previous slide
+    else if (s === 1 && currentSlide.previousElementSibling && dx > 25) {
       // Checks which type of slider you are using and handles slide
       slider.setAttribute('disabled', true);
-      sliderType == 'arrows' || sliderType === 'responsive' ? handleNextPrevClick(slider, controlsWrapper, -1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) - 1);
+      sliderType === 'arrows' || sliderType === 'responsive' ? handleNextPrevClick(slider, controlsWrapper, -1) : handleDotClick(slider, controlsWrapper, getElementIndex(currentSlide) - 1);
     }
   }
 } // End of swipe functions
 
 /**
  * Transform an element with the slider class name into a slider section.
- * 
+ *
  * @param {HTMLElement} slider - An element with the slider class
  */
 
 
 function launchSlider(slider) {
   const style = slider.dataset.style || defaultStyle,
-        cardsPerRow = parseInt(slider.dataset.cardsperrow) || defaultCardsPerRow; // CardsPerRow not currently in use. Tom's old code. 
+        cardsPerRow = parseInt(slider.dataset.cardsperrow) || defaultCardsPerRow; // CardsPerRow not currently in use. Tom's old code.
   // Might have use case for bigger screen which have capacity to have more than 1 item per slide.
 
   switch (style) {
@@ -7210,7 +7246,7 @@ function launchImageCredit(picture) {
 __webpack_require__.r(__webpack_exports__);
 
 
-const className = 'fa-link';
+const className = 'copy-link';
 
 function copyIconToClipboard(elem) {
   const copy = elem;
