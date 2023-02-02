@@ -46915,6 +46915,12 @@ main > .login footer p {
 }
 
 @media (max-width: 767px) {
+    .home__pathway .pathway .card--pathway:not(:nth-of-type(1)) {
+        margin-top: 1.25rem;
+    }
+}
+
+@media (min-width: 1920px) {
     .home__pathway .triangle__block {
         display: none;
     }
@@ -46966,20 +46972,35 @@ main > .login footer p {
     }
 }
 
+.home__pathway:not(.in-view) .triangle__block {
+    transform: translateY(100%) 2s;
+}
+
+.home__pathway:not(.in-view) .triangle__block--right {
+    transform: rotate(180deg);
+}
+
+.home__pathway.in-view .triangle__block--left {
+    transform: translateY(0%) 2s;
+}
+
+.home__pathway.in-view .triangle__block--right {
+    transform: rotate(180deg) 0s translateY(0%) 2s;
+}
+
 .home__pathway .triangle__block {
-    width: 5.25rem;
-    height: 5.25rem;
+    width: 10rem;
+    height: 10rem;
 }
 
 .home__pathway .triangle__block--left {
-    margin-bottom: -5.25rem;
+    margin-bottom: -10rem;
 }
 
 .home__pathway .triangle__block--right {
     right: 0;
     position: absolute;
-    transform: rotate(180deg);
-    margin-top: -5.25rem;
+    margin-top: -10rem;
 }
 
 .home__pathway .pathway .pathway__cards {
@@ -47053,6 +47074,7 @@ main > .login footer p {
 
 .home__pathway .pathway .wrap--card--pathway__img {
     overflow: hidden;
+    line-height: 0;
 }
 
 .home__pathway .pathway .wrap--card--pathway__img .card--pathway__img {
@@ -47185,8 +47207,37 @@ main > .login footer p {
 }
 
 @media (min-width: 1920px) {
+    .home__social {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        width: 80rem;
+    }
     .home__social .box__border {
         border-left: 18px solid transparent;
+    }
+}
+
+@media (min-width: 1920px) and (min-width: 901px) {
+    .home__social {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1920px) and (min-width: 901px) {
+    .home__social {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1920px) and (min-width: 1441px) {
+    .home__social {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -47256,12 +47307,12 @@ main > .login footer p {
 }
 
 .home__social .box.in-view {
-    top: 3rem;
+    top: 10rem;
 }
 
 .home__social .box:not(.in-view) {
     opacity: 0;
-    top: 10rem;
+    top: 17rem;
 }
 
 .home__social .box__pre-strap {
