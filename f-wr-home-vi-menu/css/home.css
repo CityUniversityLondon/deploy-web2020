@@ -30493,8 +30493,8 @@ article .link-copy {
 @media (max-width: 1023px) and (hover: hover) {
     .global-header__search > a:hover,
     .global-header__search .global-header__search__button:hover {
-        background-color: #a1a1a1;
-        border-color: #a1a1a1;
+        background-color: #0c0c0e;
+        border-color: #0c0c0e;
         border-style: solid;
         border-width: 0.0625rem;
         color: #ffffff;
@@ -30540,11 +30540,37 @@ article .link-copy {
 @media (max-width: 1023px) {
     .global-header__search > a .global-header__search__icon,
     .global-header__search .global-header__search__button .global-header__search__icon {
-        font-size: inherit;
+        font-size: 1.602rem;
+        line-height: 1.33333;
+        letter-spacing: -0.015em;
     }
-    .global-header__search > a .global-header__search__text,
-    .global-header__search .global-header__search__button .global-header__search__text {
-        margin-top: 0.25rem;
+}
+
+@media (max-width: 1023px) and (min-width: 1280px) and (max-width: 1919px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1920px) and (max-width: 3839px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 3840px) and (max-width: 7679px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 7680px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.017em;
     }
 }
 
@@ -30789,6 +30815,9 @@ article .link-copy {
     right: 0;
     top: 0;
     z-index: 5;
+    width: 100vw;
+    transform: translate(-50%, 0%);
+    left: 50%;
 }
 
 @media (max-width: 1023px) {
@@ -30803,19 +30832,15 @@ article .link-copy {
 
 @media (min-width: 1024px) {
     .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         grid-template-rows: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 901px) {
-    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
-        padding-left: 2rem;
-        padding-right: 2rem;
     }
 }
 
@@ -30828,6 +30853,27 @@ article .link-copy {
 @media (min-width: 1024px) and (min-width: 901px) {
     .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
         grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1441px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -30860,6 +30906,11 @@ article .link-copy {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
@@ -30872,6 +30923,27 @@ article .link-copy {
 @media (min-width: 1024px) and (min-width: 901px) {
     .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body {
         grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1441px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -33605,8 +33677,8 @@ article .link-copy {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-.menu .burger-bun span:first-child {
-    transform-origin: 0% 0%;
+.menu .burger-bun span:nth-last-child(3) {
+    margin-top: 0.425rem;
 }
 
 .menu .burger-bun span:nth-last-child(1) {
@@ -35390,7 +35462,7 @@ article .link-copy {
 .js .menu > .menu__display__button {
     padding-bottom: 0.5rem;
     padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-right: 1rem;
     padding-top: 0.5rem;
 }
 
@@ -35583,7 +35655,6 @@ article .link-copy {
     line-height: 1.625;
     letter-spacing: 0em;
     font-weight: 500;
-    margin-top: 0.25rem;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
