@@ -46910,13 +46910,39 @@ main > .login footer p {
     text-align: center;
 }
 
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes moveUpAndRotate {
+    0% {
+        transform: translateY(100%) rotate(180deg);
+    }
+    100% {
+        transform: translateY(0%) rotate(180deg);
+    }
+}
+
 .home__pathway {
     margin: 2.5rem 0;
+}
+
+@media (min-width: 432px) and (max-width: 767px) {
+    .home__pathway .card--pathway__content {
+        display: flex;
+    }
 }
 
 @media (max-width: 767px) {
     .home__pathway .pathway .card--pathway:not(:nth-of-type(1)) {
         margin-top: 1.25rem;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 }
 
@@ -46972,20 +46998,20 @@ main > .login footer p {
     }
 }
 
-.home__pathway:not(.in-view) .triangle__block {
-    transform: translateY(100%) 2s;
-}
-
 .home__pathway:not(.in-view) .triangle__block--right {
     transform: rotate(180deg);
 }
 
+.home__pathway.in-view .triangle__block--right {
+    transform: rotate(180deg);
+}
+
 .home__pathway.in-view .triangle__block--left {
-    transform: translateY(0%) 2s;
+    animation: moveUp 1s;
 }
 
 .home__pathway.in-view .triangle__block--right {
-    transform: rotate(180deg) 0s translateY(0%) 2s;
+    animation: moveUpAndRotate 1s;
 }
 
 .home__pathway .triangle__block {
@@ -47000,6 +47026,7 @@ main > .login footer p {
 .home__pathway .triangle__block--right {
     right: 0;
     position: absolute;
+    transform: rotate(180deg);
     margin-top: -10rem;
 }
 
@@ -47091,7 +47118,7 @@ main > .login footer p {
 }
 
 .home__pathway .pathway .card--pathway__heading {
-    font-weight: 700;
+    font-weight: 600;
     display: inline;
     border-bottom: 0.1875rem solid #0c0c0e;
 }
