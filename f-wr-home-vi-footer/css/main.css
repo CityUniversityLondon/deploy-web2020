@@ -32895,6 +32895,7 @@ figure figcaption a:active,
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     text-align: center;
+    margin-top: 0;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
