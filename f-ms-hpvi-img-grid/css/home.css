@@ -47122,6 +47122,7 @@ main > .login footer p {
     font-weight: 600;
     display: inline;
     border-bottom: 0.1875rem solid #0c0c0e;
+    overflow-wrap: anywhere;
 }
 
 .home__pathway .pathway .card--pathway__desc {
