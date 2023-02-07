@@ -548,103 +548,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
- // function playVideo(video) {
-//     console.log('play-button-function');
-//     // video.pause();
-//     // video.currentTime = 0;
-//     // video.controls = false;
-// }
-
+//import { createHTMLElement } from '../../../util';
 const className = 'embedded-video--autoplay-vi';
-/**
- * Loop video as et number of times
- *
- * @param {element} video - Figure with the 'embedded-video--autoplay' class.
- * @param {element} videoEl - HTML video element.
- * @param {number} maxPlays - Maximum number of times video should play.
- */
 
-function loopVideo(maxPlays, video, videoEl) {
-  let playInstance = 0; // When video finishes autoplaying, switch controller from pause to play
-
-  videoEl.onended = () => {
-    playInstance += 1;
-
-    if (playInstance === maxPlays) {
-      toggleController(false, video, videoEl);
-    } else {
-      videoEl.play();
-    }
-  };
-}
-/**
- * Create video play/pause button.
- *
- * @param {element} video - Figure with the 'embedded-video--autoplay' class.
- * @param {element} videoEl - HTML video element.
- */
-
-
-function createController(video, videoEl) {
-  const controllerIcon = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
-    label: 'class',
-    val: 'embedded-video--autoplay__controller-btn__icon'
-  }]);
-  const controllerBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
-    label: 'class',
-    val: 'embedded-video--autoplay__controller-btn'
-  }]);
-  controllerBtn.addEventListener('click', () => {
-    toggleController(videoEl.paused, video, videoEl);
-  });
-  controllerBtn.append(controllerIcon);
-  video.append(controllerBtn); // checks if browser 'auto play' is enabled
-
-  var promise = videoEl.play();
-
-  if (promise !== undefined) {
-    promise.then(() => {
-      // autoplay enabled
-      controllerBtn.dataset.status = 'pause';
-      toggleController(true, video, videoEl);
-    }).catch(error => {
-      // autoplay disabled
-      console.error(error);
-      toggleController(false, video, videoEl);
-    });
-  }
-}
-/**
- * Handles click for pause and play
- *
- * @param {element} video - Figure with the 'embedded-video--autoplay' class.
- * @param {element} videoEl - HTML video element.
- * @param {bolean} status - current status of video true/false = paused/playing
- */
-
-
-function toggleController(status, video, videoEl) {
-  const controllerBtn = video.querySelector('.embedded-video--autoplay__controller-btn');
-
-  if (status) {
-    controllerBtn.dataset.status = 'pause';
-    controllerBtn.setAttribute('aria-label', 'Pause video');
-    videoEl.play();
-  } else {
-    controllerBtn.dataset.status = 'play';
-    controllerBtn.setAttribute('aria-label', 'Play video');
-    videoEl.pause();
-  }
-}
-
-function playVideo(video) {
-  const videoEl = video.querySelector('.embedded-video--autoplay__video'),
-        plays = parseInt(videoEl.dataset.maxPlays);
-  loopVideo(plays, video, videoEl);
-  createController(video, videoEl);
+function playVideo() {// const videoEl = video.querySelector('.embedded-video--autoplay__video'),
+  //     plays = parseInt(videoEl.dataset.maxPlays);
+  // loopVideo(plays, video, videoEl);
+  // createController(video, videoEl);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -7495,17 +7407,18 @@ function createController(video, videoEl) {
       toggleController(true, video, videoEl);
     }).catch(error => {
       // autoplay disabled
+      console.error(error);
       toggleController(false, video, videoEl);
     });
   }
 }
 /**
-* Handles click for pause and play
-*
-* @param {element} video - Figure with the 'embedded-video--autoplay' class.
-* @param {element} videoEl - HTML video element.
-* @param {bolean} status - current status of video true/false = paused/playing  
-*/
+ * Handles click for pause and play
+ *
+ * @param {element} video - Figure with the 'embedded-video--autoplay' class.
+ * @param {element} videoEl - HTML video element.
+ * @param {bolean} status - current status of video true/false = paused/playing
+ */
 
 
 function toggleController(status, video, videoEl) {
