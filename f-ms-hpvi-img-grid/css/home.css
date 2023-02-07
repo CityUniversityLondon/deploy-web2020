@@ -46932,7 +46932,7 @@ main > .login footer p {
     margin: 0 0 2.5rem 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
     .home__pathway .pathway .card--pathway:not(:nth-of-type(1)) {
         margin-top: 1.25rem;
         flex-direction: row;

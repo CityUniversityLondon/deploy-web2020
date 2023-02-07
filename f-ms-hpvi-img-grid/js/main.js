@@ -929,7 +929,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/addClass/addClass
  * @author Web Development
- * @copyright City, University of London 2022
+ * @copyright City, University of London 2023
  */
 const className = 'add-class';
 /**
@@ -961,7 +961,7 @@ function handleIntersect(elements) {
 
 
 function launchAddClass(addClass) {
-  window.addEventListener('scroll', () => new IntersectionObserver(handleIntersect).observe(addClass));
+  ['load', 'scroll'].forEach(event => window.addEventListener(event, new IntersectionObserver(handleIntersect).observe(addClass), false));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
