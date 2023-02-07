@@ -33137,6 +33137,11 @@ figure figcaption a:active,
     }
 }
 
+.global-footer .global-footer__content__section h2,
+.global-footer .global-footer__content__section h3 {
+    font-weight: 400;
+}
+
 @media (min-width: 900px) {
     .global-footer .global-footer__content__section--contact__content {
         display: flex;
