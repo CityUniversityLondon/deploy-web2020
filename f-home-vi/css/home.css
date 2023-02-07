@@ -46910,6 +46910,191 @@ main > .login footer p {
     text-align: center;
 }
 
+.home-banner {
+    margin: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #d61726;
+    background-size: cover;
+}
+
+.home-banner .hero-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-banner .hero-image__veil {
+    position: relative;
+}
+
+.home-banner .hero-image__veil:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+}
+
+.home-banner .cta-block a {
+    display: inline-block;
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    transition: background-color 0.6s;
+    border-radius: 0.25rem;
+}
+
+@media (hover: hover) {
+    .home-banner .cta-block a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.home-banner .cta-block a:focus, .home-banner .cta-block a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.home-banner .cta-block a:focus, .home-banner .cta-block a:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
+.home-banner .cta-block a, .home-banner .cta-block a:focus, .home-banner .cta-block a:active {
+    background-color: #d61726;
+    color: #ffffff;
+}
+
+@media (hover: hover) {
+    .home-banner .cta-block a:hover {
+        background-color: #790b21;
+        color: #ffffff;
+    }
+}
+
+.home-banner__content {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+@media (min-width: 768px) {
+    .home-banner__content {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .home-banner__content {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+.home-banner__content__text {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-70%);
+    grid-column: 2 / 10;
+    color: #ffffff;
+}
+
+.home-banner__strapline {
+    grid-column: 20 / -1;
+}
+
+.home-banner__strapline__text {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 4rem 2rem;
+}
+
+.home-banner__strapline__text p {
+    border-top: 2px solid #ffffff;
+    padding-top: 1rem;
+}
+
+.home-banner__strapline__svg {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+}
+
+.svg--red {
+    fill: #d61726;
+}
+
+.svg--black {
+    fill: #1e1e1e;
+}
+
+.svg--white {
+    fill: #ffffff;
+}
+
+.home-banner__strapline__svg--mobile {
+    display: none;
+}
+
+.home-banner__video-control {
+    border-radius: 50%;
+    color: #ffffff;
+    height: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+    width: 2rem;
+}
+
 .home__news-events {
     display: flex;
     gap: 1rem;
@@ -47416,6 +47601,10 @@ main > .login footer p {
 }
 
 .home-new-vi .breadcrumbs {
+    display: none;
+}
+
+.home-new-vi .navigation--secondary {
     display: none;
 }
 
