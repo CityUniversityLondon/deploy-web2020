@@ -46933,7 +46933,7 @@ main > .login footer p {
 }
 
 @media (max-width: 1023px) {
-    .home__pathway .pathway .card--pathway:not(:nth-of-type(1)) {
+    .home__pathway .pathway .pathway__cards .card--pathway:not(:nth-of-type(1)) {
         margin-top: 1.25rem;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -46992,14 +46992,6 @@ main > .login footer p {
     }
 }
 
-.home__pathway:not(.in-view) .triangle__block--right {
-    transform: rotate(180deg);
-}
-
-.home__pathway.in-view .triangle__block--right {
-    transform: rotate(180deg);
-}
-
 .home__pathway.in-view .triangle__block--left {
     animation: moveUp 1s;
 }
@@ -47010,7 +47002,6 @@ main > .login footer p {
 
 .home__pathway .triangle__block {
     width: 10rem;
-    height: 10rem;
 }
 
 .home__pathway .triangle__block--left {
@@ -47029,9 +47020,9 @@ main > .login footer p {
     grid-template-columns: repeat(3, 1fr);
     max-width: unset;
     grid-column-gap: 1.5rem;
+    margin: 1rem 0 2rem 0;
     position: relative;
     z-index: 1;
-    margin: 1rem 0 2rem 0;
 }
 
 @media (max-width: 1023px) {
@@ -47046,7 +47037,6 @@ main > .login footer p {
     transition: opacity 2s;
     margin-top: 0;
     z-index: 1;
-    height: auto;
     box-shadow: 0 0.25rem 0.375rem 0 rgba(0, 0, 0, 0.15);
     background: #ffffff;
 }
@@ -47059,18 +47049,15 @@ main > .login footer p {
     display: block;
     background-image: none;
     border: 0;
+    height: 100%;
 }
 
 .home__pathway .pathway .card--pathway .card--pathway__anchor:focus, .home__pathway .pathway .card--pathway .card--pathway__anchor:active {
-    border: none;
     outline-style: solid;
     background: transparent;
 }
 
 @media (hover: hover) {
-    .home__pathway .pathway .card--pathway .card--pathway__anchor:hover {
-        border: none;
-    }
     .home__pathway .pathway .card--pathway .card--pathway__anchor:hover .card--pathway__img {
         transform: scale(1.1);
     }
@@ -47128,12 +47115,6 @@ main > .login footer p {
     }
     .home__pathway .pathway .card--pathway .card--pathway__anchor .wrap--icon__img {
         margin-right: 1rem;
-    }
-    .home__pathway .pathway .card--pathway .card--pathway__anchor .wrap--icon__img::after {
-        border-top: 0.25rem solid blue;
-        flex: 1;
-        margin: auto;
-        content: '';
     }
     .home__pathway .pathway .card--pathway .card--pathway__anchor .line {
         border-top: 0.25rem solid #d61726;
