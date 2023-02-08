@@ -47163,13 +47163,6 @@ main > .login footer p {
     }
 }
 
-@keyframes blurIn {
-    0% {
-    }
-    100% {
-    }
-}
-
 .home__social {
     grid-column: 1/-1;
     position: relative;
@@ -47200,55 +47193,32 @@ main > .login footer p {
 }
 
 @media (max-width: 1023px) {
-    .home__social .wrap--box {
+    .home__social .box {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
-        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    .home__social .wrap--box {
+    .home__social .box {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
-    .home__social .wrap--box {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+    .home__social .box {
+        margin: 0 3.5rem;
     }
-}
-
-@media (min-width: 1024px) and (min-width: 901px) {
-    .home__social .wrap--box {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
+    .home__social .box.in-view {
+        top: 10rem;
     }
-}
-
-@media (min-width: 1024px) and (min-width: 901px) {
-    .home__social .wrap--box {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1441px) {
-    .home__social .wrap--box {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (min-width: 1024px) {
-    .home__social .wrap--social__img {
-        width: 20%;
+    .home__social .box:not(.in-view) {
+        opacity: 0;
+        top: 17rem;
     }
 }
 
@@ -47307,15 +47277,10 @@ main > .login footer p {
 
 .home__social .row {
     display: flex;
-    overflow: hidden;
-    position: relative;
-    line-height: 0;
-    overflow: hidden;
 }
 
 .home__social .wrap--social__img {
     overflow: hidden;
-    border: 0;
 }
 
 .home__social .wrap--social__img:nth-of-type(1) .social__img.in-view {
@@ -47344,8 +47309,6 @@ main > .login footer p {
 }
 
 .home__social .social__img {
-    height: 100%;
-    border: 0;
     opacity: 0;
     filter: brightness(0.5) saturate(100%);
 }
@@ -47353,18 +47316,9 @@ main > .login footer p {
 .home__social .box {
     position: absolute;
     background: #ffffff;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 3rem;
     transition: top 0.3s;
     z-index: 1;
-}
-
-.home__social .box.in-view {
-    top: 10rem;
-}
-
-.home__social .box:not(.in-view) {
-    opacity: 0;
-    top: 17rem;
 }
 
 .home__social .box__pre-strap {
@@ -47410,7 +47364,6 @@ main > .login footer p {
     color: #ffffff;
     display: inline-flex;
     height: 2rem;
-    margin-bottom: 0.5rem;
     width: 2rem;
     margin-right: 0.5rem;
 }
@@ -47457,7 +47410,6 @@ main > .login footer p {
     color: #d61726;
     border-bottom-color: #d61726;
     font-weight: 600;
-    background-image: none;
     bottom: 0.125rem;
 }
 
