@@ -4074,47 +4074,36 @@ function screenWidth(size) {
   switch (size) {
     case 'tiny':
       return 375;
-      break;
 
     case 'mobile':
       return 432;
-      break;
 
     case 'tablet':
       return 768;
-      break;
 
     case 'between':
       return 900;
-      break;
 
     case 'small':
       return 1024;
-      break;
 
     case 'desktop':
       return 1280;
-      break;
 
     case 'large':
       return 1440;
-      break;
 
     case '1080':
       return 1920;
-      break;
 
     case '4k':
       return 3840;
-      break;
 
     case '8k':
       return 7680;
-      break;
 
     default:
       return 1280;
-      break;
   }
 }
 
