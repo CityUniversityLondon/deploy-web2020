@@ -27965,24 +27965,41 @@ article a:active {
 
 .global-footer .global-footer__awards {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     list-style: none;
     margin-top: 1rem;
+    gap: 1.5rem;
 }
 
 @media (min-width: 900px) {
     .global-footer .global-footer__awards {
         margin-top: 0;
+        justify-content: space-between;
+    }
+    .global-footer .global-footer__awards li {
+        flex-basis: 40%;
     }
 }
 
-.global-footer .global-footer__awards li {
-    margin-top: 1.5rem;
+@media (max-width: 899px) {
+    .global-footer .global-footer__awards {
+        margin-top: 2rem;
+        justify-content: space-between;
+    }
+    .global-footer .global-footer__awards li {
+        flex-basis: 27%;
+    }
 }
 
-.global-footer .global-footer__awards li:first-of-type {
-    margin-top: 0;
+@media (max-width: 767px) {
+    .global-footer .global-footer__awards {
+        margin-top: 2rem;
+        justify-content: space-around;
+    }
+    .global-footer .global-footer__awards li {
+        flex-basis: 35%;
+    }
 }
 
 .global-footer .global-footer__awards li .logo {
