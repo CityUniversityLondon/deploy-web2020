@@ -47086,6 +47086,7 @@ main > .login footer p {
 .home__pathway .pathway .card--pathway .card--pathway__anchor .wrap--card--pathway__heading {
     position: relative;
     padding-left: 1rem;
+    flex-basis: 100%;
 }
 
 .home__pathway .pathway .wrap--icon {
@@ -47130,7 +47131,7 @@ main > .login footer p {
         flex-wrap: wrap;
     }
     .home__pathway .pathway .card--pathway .card--pathway__anchor .wrap--icon__img {
-        margin-right: 1rem;
+        margin-right: 0.25rem;
     }
     .home__pathway .pathway .card--pathway .card--pathway__anchor .line {
         border-top: 0.25rem solid #d61726;
@@ -47305,27 +47306,27 @@ main > .login footer p {
 }
 
 .home__social .wrap--social__img:nth-of-type(1) .social__img.in-view {
-    animation: fadeIn 1.5s 0s, scaleIn 2.5s 0s, blurIn 3s 0s;
+    animation: fadeIn 0.4s 0s, scaleIn 0.4s 0s;
     animation-fill-mode: forwards;
 }
 
 .home__social .wrap--social__img:nth-of-type(2) .social__img.in-view {
-    animation: fadeIn 1.5s 0.1s, scaleIn 2.5s 0.1s;
+    animation: fadeIn 0.4s 0.1s, scaleIn 0.4s 0.1s;
     animation-fill-mode: forwards;
 }
 
 .home__social .wrap--social__img:nth-of-type(3) .social__img.in-view {
-    animation: fadeIn 1.5s 0.2s, scaleIn 2.5s 0.2s;
+    animation: fadeIn 0.4s 0.2s, scaleIn 0.4s 0.2s;
     animation-fill-mode: forwards;
 }
 
 .home__social .wrap--social__img:nth-of-type(4) .social__img.in-view {
-    animation: fadeIn 1.5s 0.3s, scaleIn 2.5s 0.3s;
+    animation: fadeIn 0.4s 0.3s, scaleIn 0.4s 0.3s;
     animation-fill-mode: forwards;
 }
 
 .home__social .wrap--social__img:nth-of-type(5) .social__img.in-view {
-    animation: fadeIn 1.5s 0.3s, scaleIn 2.5s 0.3s;
+    animation: fadeIn 0.4s 0.4s, scaleIn 0.4s 0.4s;
     animation-fill-mode: forwards;
 }
 
