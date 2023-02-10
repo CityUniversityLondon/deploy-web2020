@@ -47090,9 +47090,16 @@ main > .login footer p {
     border-radius: 50%;
     color: #ffffff;
     height: 2rem;
-    padding: 0.5rem;
-    text-align: center;
     width: 2rem;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.banner__video video::-webkit-media-controls {
+    display: none !important;
 }
 
 @keyframes moveUp {

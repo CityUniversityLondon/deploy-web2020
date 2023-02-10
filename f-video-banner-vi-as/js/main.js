@@ -548,19 +548,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
-//import { createHTMLElement } from '../../../util';
-const className = 'embedded-video--autoplay-vi';
 
-function playVideo() {// const videoEl = video.querySelector('.embedded-video--autoplay__video'),
-  //     plays = parseInt(videoEl.dataset.maxPlays);
-  // loopVideo(plays, video, videoEl);
+const className = 'banner__video';
+
+function playVideo(e) {
+  e.play();
+}
+
+function pauseVideo(e) {
+  e.pause();
+}
+
+function createVideoButton(parent) {
+  const videoButton = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
+    label: 'class',
+    val: 'home-banner__video-control'
+  }]);
+  parent.append(videoButton);
+}
+
+function initBannerVideo(e) {
+  const video = video.querySelector('.banner__video__item');
+  const parent = e.parentElement;
+  createVideoButton(parent);
+  console.log(video);
+  const status = video.play();
+  console.log(status); // loopVideo(plays, video, videoEl);
   // createController(video, videoEl);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: playVideo,
+  launchFn: initBannerVideo,
   launchQuery: `.${className}`
 });
 
