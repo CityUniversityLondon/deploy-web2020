@@ -47098,6 +47098,15 @@ main > .login footer p {
 .home-banner--takeover {
     overflow: hidden;
     position: relative;
+    /*
+    .takeover__shapes {
+        z-index: z-index('above');
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 10%;
+    }
+    */
 }
 
 .home-banner--takeover .takeover__container {
@@ -47171,6 +47180,7 @@ main > .login footer p {
     position: absolute;
     left: 0;
     right: 0;
+    height: 100%;
 }
 
 .home-banner--takeover .takeover__image img {
@@ -47181,16 +47191,158 @@ main > .login footer p {
     grid-column: 1/6;
     background-color: #0c0c0e;
     color: #ffffff;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 9rem;
+    margin-bottom: 4rem;
+    padding: 1.5rem;
 }
 
-.home-banner--takeover .takeover__shapes {
-    z-index: 1;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 10%;
+.home-banner--takeover .takeover__text__heading {
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-size: 1.802rem;
+    line-height: 1.33333;
+    letter-spacing: -0.016em;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.28rem;
+    line-height: 1.33333;
+    letter-spacing: -0.017em;
+}
+
+.home-banner--takeover .takeover__text__heading i,
+.home-banner--takeover .takeover__text__heading em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.home-banner--takeover .takeover__text__heading b,
+.home-banner--takeover .takeover__text__heading strong {
+    font-weight: inherit;
+}
+
+.home-banner--takeover .takeover__text__heading i,
+.home-banner--takeover .takeover__text__heading em {
+    font-style: italic;
+}
+
+.home-banner--takeover .takeover__text__heading u {
+    text-decoration: none;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .home-banner--takeover .takeover__text__heading {
+        font-size: 2.027rem;
+        line-height: 1.33333;
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 1280px) and (max-width: 1919px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 1920px) and (max-width: 3839px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 3840px) and (max-width: 7679px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) and (min-width: 7680px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) {
+    .home-banner--takeover .takeover__text__heading {
+        font-size: 2.28rem;
+        line-height: 1.33333;
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 1280px) and (max-width: 1919px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 1920px) and (max-width: 3839px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 3840px) and (max-width: 7679px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 901px) and (min-width: 7680px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.027em;
+    }
+}
+
+.home-banner--takeover .takeover__text__heading b,
+.home-banner--takeover .takeover__text__heading strong {
+    font-weight: 600;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .home-banner--takeover .takeover__text__heading {
+        letter-spacing: -0.027em;
+    }
 }
 
 @keyframes moveUp {
