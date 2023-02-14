@@ -585,9 +585,18 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'takeover-transition';
 let prevRatio = 0.0;
-let backGradient = 'linear-gradient(0deg, rgba(214,23,38,1) ratio1%, rgba(214,23,38,0) ratio2%)'; //add get gradient value - then create gradient CSS from data: GET from elemnt
+let gradientColor1 = '';
+let gradientColor2 = '';
+let backGradient = 'linear-gradient(0deg, color1 ratio1%, color2 ratio2%)';
+let divGradient, divOpacity;
 
 function takeOver(box) {
+  console.log('initiate');
+  divGradient = box.querySelector('.takeover-transition-gradient');
+  divOpacity = box.querySelector('.takeover-transition-opacity');
+  gradientColor1 = divGradient.getAttribute('data-gradient-color1');
+  gradientColor2 = divGradient.getAttribute('data-gradient-color2');
+  backGradient = backGradient.replace('color1', gradientColor1).replace('color2', gradientColor2);
   let observer;
   let options = {
     root: null,
@@ -605,7 +614,6 @@ function buildThresholdList() {
   for (let i = 1.0; i <= numSteps; i++) {
     let ratio = i / numSteps;
     thresholds.push(ratio);
-    console.log('ratio: ' + ratio);
   }
 
   thresholds.push(0);
@@ -616,12 +624,28 @@ function handleIntersect(entries) {
   entries.forEach(entry => {
     let gradientRatio1 = 100 - entry.intersectionRatio * 100 < 0 ? 0 : 100 - entry.intersectionRatio * 100;
     let gradientRatio2 = 140 - entry.intersectionRatio * 100 <= 40 ? 0 : 140 - entry.intersectionRatio * 100;
-    console.log('intersect: ' + entry.intersectionRatio);
+    let opacity = entry.intersectionRatio === 1 ? entry.intersectionRatio : entry.intersectionRatio - entry.intersectionRatio * 20 / 100;
+    console.log('entry.intersectionRatio: ' + entry.intersectionRatio);
 
     if (entry.intersectionRatio > prevRatio) {
-      entry.target.style.background = backGradient.replace('ratio1', gradientRatio1).replace('ratio2', gradientRatio2);
+      /*
+      entry.target.style.background = backGradient
+          .replace('ratio1', gradientRatio1)
+          .replace('ratio2', gradientRatio2);
+      entry.target.style.opacity = opacity.replace('ratio',entry.intersectionRatio);
+      con
+      */
+      divGradient.style.background = backGradient.replace('ratio1', gradientRatio1).replace('ratio2', gradientRatio2);
+      divOpacity.style.opacity = opacity;
     } else {
-      entry.target.style.background = backGradient.replace('ratio1', gradientRatio1).replace('ratio2', gradientRatio2);
+      /*
+      entry.target.style.background = backGradient
+          .replace('ratio1', gradientRatio1)
+          .replace('ratio2', gradientRatio2);
+          entry.target.style.opacity = opacity.replace('ratio',entry.intersectionRatio);
+          */
+      divGradient.style.background = backGradient.replace('ratio1', gradientRatio1).replace('ratio2', gradientRatio2);
+      divOpacity.style.opacity = opacity;
     }
 
     prevRatio = entry.intersectionRatio;
