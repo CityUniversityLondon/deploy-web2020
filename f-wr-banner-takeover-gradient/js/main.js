@@ -578,24 +578,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const className = 'takeover-transition';
-let prevRatio = 0.0; //let gradientColor1 = '';
-//let gradientColor2 = '';
-//let backGradient = 'linear-gradient(0deg, color1 ratio1%, color2 ratio2%)';
-//let divGradient;
+let prevRatio = 0.0;
+let elemntWatch;
+let defaultTransitionElemnt;
 
-function takeOver() {
-  //Add condition if no data parameter for watch element is found then, use box
+function takeOver(box) {
+  defaultTransitionElemnt = box;
 
-  /*
-  divGradient = box.querySelector('.takeover-transition-gradient');
-  gradientColor1 = divGradient.getAttribute('data-gradient-color1');
-  gradientColor2 = divGradient.getAttribute('data-gradient-color2');
-  backGradient = backGradient
-      .replace('color1', gradientColor1)
-      .replace('color2', gradientColor2);
-  */
-  var box2 = document.querySelector('.header-logo--city');
-  console.log(box2);
+  if (box.getAttribute('data-transition-watch-elemnt')) {
+    elemntWatch = document.querySelector(box.getAttribute('data-transition-watch-elemnt'));
+  } else {
+    elemntWatch = box;
+  }
+
+  console.log(elemntWatch);
   let observer;
   let options = {
     root: null,
@@ -603,7 +599,7 @@ function takeOver() {
     threshold: buildThresholdList()
   };
   observer = new IntersectionObserver(handleIntersect, options);
-  observer.observe(box2);
+  observer.observe(elemntWatch);
 }
 
 function buildThresholdList() {
@@ -621,37 +617,14 @@ function buildThresholdList() {
 
 function handleIntersect(entries) {
   entries.forEach(entry => {
-    /*
-    let gradientRatio1 =
-        100 - entry.intersectionRatio * 100 < 0
-            ? 0
-            : 100 - entry.intersectionRatio * 100;
-    let gradientRatio2 =
-        140 - entry.intersectionRatio * 100 <= 40
-            ? 0
-            : 140 - entry.intersectionRatio * 100;
-     let opacity =
-        entry.intersectionRatio === 1
-            ? entry.intersectionRatio
-            : entry.intersectionRatio -
-              (entry.intersectionRatio * 20) / 100;
-    */
-    if (entry.intersectionRatio > prevRatio) {
-      /*
-      document.querySelector('.takeover-transition-gradient').style.background = backGradient
-          .replace('ratio1', gradientRatio1)
-          .replace('ratio2', gradientRatio2);
-      */
-      document.querySelector('.takeover-transition-opacity').style.opacity = entry.intersectionRatio; // add condition for FIXED
+    console.log('entry.intersectionRatio: ' + entry.intersectionRatio);
 
-      document.querySelector('.takeover-transition-opacity img').style.position = 'fixed';
+    if (entry.intersectionRatio > prevRatio) {
+      defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.opacity = entry.intersectionRatio;
+      entry.intersectionRatio > 0 ? defaultTransitionElemnt.querySelector('.takeover-transition-opacity img').style.position = 'fixed' : defaultTransitionElemnt.querySelector('.takeover-transition-opacity img').style.position = 'inherit';
     } else {
-      /*
-      document.querySelector('.takeover-transition-gradient').style.background = backGradient
-          .replace('ratio1', gradientRatio1)
-          .replace('ratio2', gradientRatio2);*/
-      document.querySelector('.takeover-transition-opacity').style.opacity = entry.intersectionRatio;
-      document.querySelector('.takeover-transition-opacity img').style.position = 'fixed';
+      defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.opacity = entry.intersectionRatio;
+      entry.intersectionRatio > 0 ? defaultTransitionElemnt.querySelector('.takeover-transition-opacity img').style.position = 'fixed' : defaultTransitionElemnt.querySelector('.takeover-transition-opacity img').style.position = 'inherit';
     }
 
     prevRatio = entry.intersectionRatio;
