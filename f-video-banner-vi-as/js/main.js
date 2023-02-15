@@ -560,20 +560,20 @@ function togglePlay(vid) {
     vid.pause();
   }
 
-  console.log("click");
+  console.log('click');
 }
 
 function initBannerVideo(video) {
-  console.log('boo');
   const urlPlayButton = video.dataset.playButton;
   const urlPauseButton = video.dataset.pauseButton;
+  const parent = video.parentElement;
   const elButtonPlay = document.createElement('button');
   const elImgPlay = document.createElement('img');
   let counter = 0;
   elImgPlay.src = urlPlayButton;
   elButtonPlay.setAttribute('aria-label', 'Video play and pause');
   elButtonPlay.appendChild(elImgPlay);
-  video.appendChild(elButtonPlay);
+  parent.appendChild(elButtonPlay);
   elButtonPlay.addEventListener('click', function (video) {
     togglePlay(video);
     this.classList.toggle('play');
