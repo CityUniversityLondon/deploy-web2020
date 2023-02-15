@@ -47181,6 +47181,7 @@ main > .login footer p {
     left: 0;
     right: 0;
     height: 100%;
+    top: -140px;
 }
 
 .home-banner--takeover .takeover__image img {
