@@ -548,36 +548,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
-
+// import { createHTMLElement } from '../../../util';
 const className = 'banner__video';
 
-function playVideo(e) {
-  e.play();
+function togglePlay(vid) {
+  if (vid.paused || vid.ended) {
+    vid.play();
+  } else {
+    vid.pause();
+  }
+
+  console.log("click");
 }
 
-function pauseVideo(e) {
-  e.pause();
-}
+function initBannerVideo(video) {
+  console.log('boo');
+  const urlPlayButton = video.dataset.playButton;
+  const urlPauseButton = video.dataset.pauseButton;
+  const elButtonPlay = document.createElement('button');
+  const elImgPlay = document.createElement('img');
+  let counter = 0;
+  elImgPlay.src = urlPlayButton;
+  elButtonPlay.setAttribute('aria-label', 'Video play and pause');
+  elButtonPlay.appendChild(elImgPlay);
+  video.appendChild(elButtonPlay);
+  elButtonPlay.addEventListener('click', function (video) {
+    togglePlay(video);
+    this.classList.toggle('play');
 
-function createVideoButton(parent) {
-  const videoButton = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
-    label: 'class',
-    val: 'home-banner__video-control'
-  }]);
-  parent.append(videoButton);
-}
-
-function initBannerVideo(e) {
-  const video = video.querySelector('.banner__video__item');
-  const parent = e.parentElement;
-  createVideoButton(parent);
-  console.log(video);
-  const status = video.play();
-  console.log(status); // loopVideo(plays, video, videoEl);
-  // createController(video, videoEl);
+    if (counter === 0) {
+      elImgPlay.src = urlPauseButton;
+      counter++;
+    } else {
+      elImgPlay.src = urlPlayButton;
+      counter--;
+    }
+  });
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
