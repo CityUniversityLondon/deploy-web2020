@@ -47098,6 +47098,15 @@ main > .login footer p {
 .home-banner--takeover {
     overflow: hidden;
     position: relative;
+    height: 80vh;
+    /*
+    .takeover-transition-gradient {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100%;
+    }
+    */
     /*
     .takeover__shapes {
         z-index: z-index('above');
@@ -47116,6 +47125,7 @@ main > .login footer p {
     display: grid;
     z-index: 1;
     position: relative;
+    height: 80vh;
 }
 
 @media (min-width: 768px) {
@@ -47182,17 +47192,17 @@ main > .login footer p {
     right: 0;
     height: 100%;
     top: -140px;
+    display: flex;
+}
+
+@media (max-width: 1023px) {
+    .home-banner--takeover .takeover__image {
+        justify-content: center;
+    }
 }
 
 .home-banner--takeover .takeover__image img {
     width: 100%;
-}
-
-.home-banner--takeover .takeover-transition-gradient {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%;
 }
 
 .home-banner--takeover .takeover__content {
@@ -47202,6 +47212,8 @@ main > .login footer p {
     margin-top: 9rem;
     margin-bottom: 7rem;
     padding: 3rem;
+    position: absolute;
+    bottom: 0;
 }
 
 .home-banner--takeover .takeover__content__heading {
