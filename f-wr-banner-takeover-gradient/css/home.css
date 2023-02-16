@@ -47248,6 +47248,12 @@ main > .login footer p {
     }
 }
 
+.home-banner--takeover .takeover__content__ctas {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
 .home-banner--takeover .takeover__content__text,
 .home-banner--takeover .takeover__content__ctas {
     margin-top: 1.5rem;
