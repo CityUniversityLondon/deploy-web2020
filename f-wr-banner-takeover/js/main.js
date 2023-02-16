@@ -575,20 +575,23 @@ function playVideo() {// const videoEl = video.querySelector('.embedded-video--a
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
-
-
 
 
 const className = 'takeover-transition';
 let prevRatio = 0.0;
-let increasingColor = 'ratio';
-let decreasingColor = 'ratio';
+let elemntWatch;
+let defaultTransitionElemnt;
 
 function takeOver(box) {
+  defaultTransitionElemnt = box;
+
+  if (box.getAttribute('data-transition-watch-elemnt')) {
+    elemntWatch = document.querySelector(box.getAttribute('data-transition-watch-elemnt'));
+  } else {
+    elemntWatch = box;
+  }
+
+  console.log(elemntWatch);
   let observer;
   let options = {
     root: null,
@@ -596,7 +599,7 @@ function takeOver(box) {
     threshold: buildThresholdList()
   };
   observer = new IntersectionObserver(handleIntersect, options);
-  observer.observe(box);
+  observer.observe(elemntWatch);
 }
 
 function buildThresholdList() {
@@ -606,7 +609,6 @@ function buildThresholdList() {
   for (let i = 1.0; i <= numSteps; i++) {
     let ratio = i / numSteps;
     thresholds.push(ratio);
-    console.log('ratio: ' + ratio);
   }
 
   thresholds.push(0);
@@ -615,12 +617,14 @@ function buildThresholdList() {
 
 function handleIntersect(entries) {
   entries.forEach(entry => {
-    console.log('intersect: ' + entry.intersectionRatio);
+    console.log('entry.intersectionRatio: ' + entry.intersectionRatio);
 
     if (entry.intersectionRatio > prevRatio) {
-      entry.target.style.opacity = increasingColor.replace('ratio', entry.intersectionRatio);
+      defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.opacity = entry.intersectionRatio;
+      entry.intersectionRatio > 0 ? defaultTransitionElemnt.querySelector('.takeover-transition-opacity img').style.position = 'fixed' : defaultTransitionElemnt.querySelector('.takeover-transition-opacity img').style.position = 'inherit';
     } else {
-      entry.target.style.opacity = decreasingColor.replace('ratio', entry.intersectionRatio);
+      defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.opacity = entry.intersectionRatio;
+      entry.intersectionRatio > 0 ? defaultTransitionElemnt.querySelector('.takeover-transition-opacity img').style.position = 'fixed' : defaultTransitionElemnt.querySelector('.takeover-transition-opacity img').style.position = 'inherit';
     }
 
     prevRatio = entry.intersectionRatio;
