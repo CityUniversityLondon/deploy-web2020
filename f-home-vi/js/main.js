@@ -550,17 +550,15 @@ document.addEventListener('DOMContentLoaded', () => {
 __webpack_require__.r(__webpack_exports__);
 
 
-//import { createHTMLElement } from '../../../util';
-const className = 'embedded-video--autoplay-vi';
+// import { createHTMLElement } from '../../../util';
+const className = 'home-banner--video';
 
-function playVideo() {// const videoEl = video.querySelector('.embedded-video--autoplay__video'),
-  //     plays = parseInt(videoEl.dataset.maxPlays);
-  // loopVideo(plays, video, videoEl);
-  // createController(video, videoEl);
-}
+function togglePlay(vid) {}
+
+function initBannerVideo(e) {}
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: playVideo,
+  launchFn: initBannerVideo,
   launchQuery: `.${className}`
 });
 
