@@ -47098,15 +47098,6 @@ main > .login footer p {
 .home-banner--takeover {
     overflow: hidden;
     position: relative;
-    /*
-    .takeover__shapes {
-        z-index: z-index('above');
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 10%;
-    }
-    */
 }
 
 .home-banner--takeover .takeover__container {
@@ -47239,6 +47230,14 @@ main > .login footer p {
 .home-banner--takeover .takeover__content__text,
 .home-banner--takeover .takeover__content__ctas {
     margin-top: 1.5rem;
+}
+
+.home-banner--takeover ~ .search-box__wrapper .search-box__cta__wrapper {
+    display: none;
+}
+
+.home-banner--takeover ~ .search-box__wrapper .search-box__text__wrapper {
+    padding-bottom: 4rem;
 }
 
 @keyframes moveUp {
