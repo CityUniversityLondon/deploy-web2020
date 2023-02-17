@@ -553,9 +553,45 @@ __webpack_require__.r(__webpack_exports__);
 // import { createHTMLElement } from '../../../util';
 const className = 'home-banner--video';
 
-function togglePlay(vid) {}
+function initBannerVideo(e) {
+  const video = e.querySelector('.banner__video');
+  const urlPlayButton = video.dataset.playButton;
+  const urlPauseButton = video.dataset.pauseButton;
+  const elButtonPlay = document.createElement('button');
+  const elImgPlay = document.createElement('img');
+  const elImgPause = document.createElement('img');
+  elImgPlay.src = urlPlayButton;
+  elImgPlay.classList.add('button__img--play');
+  elImgPause.src = urlPauseButton;
+  elImgPause.classList.add('button__img--pause');
+  elButtonPlay.setAttribute('aria-label', 'Video play and pause');
+  elButtonPlay.classList.add('banner__video__button');
+  elButtonPlay.appendChild(elImgPlay);
+  elButtonPlay.appendChild(elImgPause);
+  e.appendChild(elButtonPlay);
+  elButtonPlay.addEventListener('click', () => {
+    togglePlay(video, elButtonPlay);
+  });
+  var playPromise = video.play();
 
-function initBannerVideo(e) {}
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      togglePlay(video, elButtonPlay);
+    }).catch(error => {
+      console.error(error);
+    });
+  }
+}
+
+function togglePlay(vid, button) {
+  if (vid.paused || vid.ended) {
+    vid.play();
+    button.classList.toggle('play');
+  } else {
+    vid.pause();
+    button.classList.toggle('play');
+  }
+}
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: initBannerVideo,
