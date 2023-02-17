@@ -551,42 +551,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // import { createHTMLElement } from '../../../util';
-const className = 'banner__video';
+const className = 'home-banner--video';
 
-function togglePlay(vid) {
-  if (vid.paused || vid.ended) {
-    vid.play();
-  } else {
-    vid.pause();
-  }
+function togglePlay(vid) {}
 
-  console.log('click');
-}
-
-function initBannerVideo(video) {
-  const urlPlayButton = video.dataset.playButton;
-  const urlPauseButton = video.dataset.pauseButton;
-  const parent = video.parentElement;
-  const elButtonPlay = document.createElement('button');
-  const elImgPlay = document.createElement('img');
-  let counter = 0;
-  elImgPlay.src = urlPlayButton;
-  elButtonPlay.setAttribute('aria-label', 'Video play and pause');
-  elButtonPlay.appendChild(elImgPlay);
-  parent.appendChild(elButtonPlay);
-  elButtonPlay.addEventListener('click', function (video) {
-    togglePlay(video);
-    this.classList.toggle('play');
-
-    if (counter === 0) {
-      elImgPlay.src = urlPauseButton;
-      counter++;
-    } else {
-      elImgPlay.src = urlPlayButton;
-      counter--;
-    }
-  });
-}
+function initBannerVideo(e) {}
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: initBannerVideo,
