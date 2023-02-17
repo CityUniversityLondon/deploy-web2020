@@ -47061,7 +47061,7 @@ main > .login footer p {
 .home-banner__strapline__text {
     background-color: #d61726;
     color: #ffffff;
-    padding: 4rem 2rem;
+    padding: 3rem 1rem;
     height: 10rem;
     width: 10rem;
 }
@@ -47084,12 +47084,32 @@ main > .login footer p {
     position: absolute;
     top: 60%;
     right: 2rem;
-    z-index: 3;
+    z-index: 2;
     padding: 0.5rem;
 }
 
+.banner__video__button:focus, .banner__video__button:active {
+    border: 0.125rem solid #ffffff;
+}
+
+.banner__video__button .button__img--pause {
+    display: block;
+}
+
+.banner__video__button .button__img--play {
+    display: none;
+}
+
 .banner__video__button.play {
-    background-color: #0c0c0e;
+    background-color: #1e1e1e;
+}
+
+.banner__video__button.play .button__img--pause {
+    display: none;
+}
+
+.banner__video__button.play .button__img--play {
+    display: block;
 }
 
 @keyframes moveUp {
