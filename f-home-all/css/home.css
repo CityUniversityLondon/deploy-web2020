@@ -47608,16 +47608,20 @@ main > .login footer p {
     position: absolute;
     top: 60%;
     right: 2rem;
-    z-index: 3;
+    z-index: 2;
     padding: 0.5rem;
 }
 
+.banner__video__button:focus, .banner__video__button:active {
+    border: 0.125rem solid #ffffff;
+}
+
 .banner__video__button .button__img--pause {
-    display: none;
+    display: block;
 }
 
 .banner__video__button .button__img--play {
-    display: block;
+    display: none;
 }
 
 .banner__video__button.play {
@@ -47625,11 +47629,11 @@ main > .login footer p {
 }
 
 .banner__video__button.play .button__img--pause {
-    display: block;
+    display: none;
 }
 
 .banner__video__button.play .button__img--play {
-    display: none;
+    display: block;
 }
 
 @keyframes moveUp {
