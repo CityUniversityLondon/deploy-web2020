@@ -47019,6 +47019,22 @@ main > .login footer p {
     }
 }
 
+.js .home-banner .hero-image {
+    display: block;
+}
+
+.js .home-banner .hero-image[data-poster='off'] {
+    display: none;
+}
+
+.js .home-banner .banner__video {
+    display: none;
+}
+
+.js .home-banner .banner__video[data-poster='off'] {
+    display: block;
+}
+
 .home-banner__content {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
@@ -47075,7 +47091,7 @@ main > .login footer p {
 @media (min-width: 768px) {
     .home-banner__strapline__text {
         background-color: #d61726;
-        padding: 3rem .home-banner__strapline__text measure--basic;
+        padding: 3rem 1rem;
     }
 }
 
