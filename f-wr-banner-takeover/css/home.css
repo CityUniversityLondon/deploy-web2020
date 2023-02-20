@@ -47175,19 +47175,33 @@ main > .login footer p {
     top: -140px;
 }
 
+@media (max-width: 1279px) {
+    .home-banner--takeover .takeover__image picture {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1023px) {
+    .home-banner--takeover .takeover__image {
+        top: -75px;
+    }
+}
+
 .home-banner--takeover .takeover__image img {
     width: 100%;
 }
 
-.home-banner--takeover .takeover-transition-gradient {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 100%;
+@media (min-width: 901px) and (max-width: 1279px) {
+    .home-banner--takeover .takeover__image img {
+        height: 100%;
+        max-width: inherit;
+        width: auto;
+    }
 }
 
 .home-banner--takeover .takeover__content {
-    grid-column: 1/9;
+    grid-column: 1/10;
     background-color: #0c0c0e;
     color: #ffffff;
     margin-top: 9rem;
@@ -47195,12 +47209,36 @@ main > .login footer p {
     padding: 3rem;
 }
 
+@media (max-width: 1279px) {
+    .home-banner--takeover .takeover__content {
+        grid-column: 1/12;
+    }
+}
+
+@media (max-width: 899px) {
+    .home-banner--takeover .takeover__content {
+        grid-column: 1/-1;
+        margin-bottom: 3.5rem;
+        margin-top: 45%;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-banner--takeover .takeover__content {
+        margin-top: 42%;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-banner--takeover .takeover__content {
+        margin-top: 35%;
+    }
+}
+
 .home-banner--takeover .takeover__content__heading {
     font-size: 2.28rem;
     line-height: 1.33333;
     letter-spacing: -0.017em;
-    font-size: 3rem;
-    line-height: 2.5rem;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -47227,9 +47265,22 @@ main > .login footer p {
     }
 }
 
+@media (min-width: 1281px) {
+    .home-banner--takeover .takeover__content__heading {
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+}
+
 .home-banner--takeover .takeover__content__text,
 .home-banner--takeover .takeover__content__ctas {
     margin-top: 1.5rem;
+}
+
+.home-banner--takeover .takeover__content__ctas {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
 
 .home-banner--takeover ~ .search-box__wrapper .search-box__cta__wrapper {
@@ -47238,6 +47289,12 @@ main > .login footer p {
 
 .home-banner--takeover ~ .search-box__wrapper .search-box__text__wrapper {
     padding-bottom: 4rem;
+}
+
+@media (max-width: 1279px) {
+    .home-banner--takeover ~ * {
+        position: relative;
+    }
 }
 
 @keyframes moveUp {
