@@ -46918,6 +46918,13 @@ main > .login footer p {
     height: 100%;
     background-color: #d61726;
     background-size: cover;
+    background-color: #1e1e1e;
+}
+
+@media (min-width: 768px) {
+    .home-banner {
+        background-color: #d61726;
+    }
 }
 
 .home-banner .hero-image {
@@ -46939,7 +46946,13 @@ main > .login footer p {
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
-    height: 100%;
+    height: 99%;
+}
+
+@media (min-width: 768px) {
+    .home-banner .hero-image__veil:before {
+        height: 100%;
+    }
 }
 
 .home-banner .cta-block a {
@@ -47046,8 +47059,6 @@ main > .login footer p {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
     display: grid;
-    position: absolute;
-    top: 0;
     width: 100%;
     height: 100%;
     z-index: 2;
@@ -47065,23 +47076,43 @@ main > .login footer p {
     }
 }
 
+@media (min-width: 768px) {
+    .home-banner__content {
+        position: absolute;
+        top: 0;
+    }
+}
+
 .home-banner__content__text {
     position: absolute;
-    top: 50%;
+    bottom: 10rem;
     grid-column: 2 / -2;
     color: #ffffff;
     width: 100%;
+    z-index: 2;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 901px) {
+    .home-banner__content__text {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
 }
 
 .home-banner__content__text p, .home-banner__content__text ul {
-    text-align: center;
-    margin: auto;
+    text-align: left;
 }
 
 @media (min-width: 768px) {
     .home-banner__content__text {
         top: 60%;
         grid-column: 2 / -3;
+    }
+    .home-banner__content__text p, .home-banner__content__text ul {
+        text-align: center;
+        margin: auto;
     }
 }
 
@@ -47090,16 +47121,18 @@ main > .login footer p {
 }
 
 .home-banner__strapline__text {
-    padding: 3rem 0;
+    padding: 1rem 0;
     background-color: transparent;
-    height: 10rem;
-    width: 10rem;
+    height: 8rem;
+    width: 8rem;
 }
 
 @media (min-width: 768px) {
     .home-banner__strapline__text {
         background-color: #d61726;
         padding: 3rem 1rem;
+        height: 10rem;
+        width: 10rem;
     }
 }
 
