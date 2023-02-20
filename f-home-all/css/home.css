@@ -47602,10 +47602,6 @@ main > .login footer p {
     }
 }
 
-.banner__video video::-webkit-media-controls {
-    display: none !important;
-}
-
 .banner__video__button {
     border-radius: 50%;
     color: #ffffff;
