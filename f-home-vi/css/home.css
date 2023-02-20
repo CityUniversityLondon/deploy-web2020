@@ -28821,7 +28821,8 @@ article a:active {
 }
 
 .promo-strap {
-    background-color: #1e1e1e;
+    background-color: #3e1031;
+    background: linear-gradient(90deg, #b91924 0%, #5d184a 70%, #3e1031 100%);
     color: #ffffff;
     padding-bottom: 1rem;
     padding-top: 1rem;
@@ -47074,12 +47075,8 @@ main > .login footer p {
 @media (min-width: 768px) {
     .home-banner__strapline__text {
         background-color: #d61726;
-        padding: 3rem 1rem;
+        padding: 3rem .home-banner__strapline__text measure--basic;
     }
-}
-
-.banner__video video::-webkit-media-controls {
-    display: none !important;
 }
 
 .banner__video__button {
