@@ -47075,7 +47075,7 @@ main > .login footer p {
 @media (min-width: 768px) {
     .home-banner__strapline__text {
         background-color: #d61726;
-        padding: 3rem .home-banner__strapline__text measure--basic;
+        padding: 3rem 1rem;
     }
 }
 
