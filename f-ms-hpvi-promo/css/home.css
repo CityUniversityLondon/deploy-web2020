@@ -47882,7 +47882,6 @@ main > .login footer p {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
-        max-width: 80rem;
         top: 50%;
         transform: translateY(-50%);
     }
@@ -47897,13 +47896,20 @@ main > .login footer p {
 
 .home__promo .wrap--home__promo__card {
     position: absolute;
-    padding: 1.5rem;
+    padding: 2rem;
     background: #ffffff;
     padding: 1.5rem;
     transition: top 0.3s, opacity 0.3s;
     z-index: 1;
     max-width: 55ch;
+}
+
+.home__promo .wrap--home__promo__card[data-position='right'] {
     right: 0;
+}
+
+.home__promo .home__promo__title {
+    margin-top: 0;
 }
 
 .home__promo .home__promo__img {
