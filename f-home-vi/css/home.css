@@ -47019,6 +47019,13 @@ main > .login footer p {
     }
 }
 
+.home-banner .cta-block a:focus:focus, .home-banner .cta-block a:focus:active, .home-banner .cta-block a:active:focus, .home-banner .cta-block a:active:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: dotted;
+    outline-width: 0.125rem;
+}
+
 .js .home-banner .hero-image {
     display: block;
 }
@@ -47066,8 +47073,9 @@ main > .login footer p {
     width: 100%;
 }
 
-.home-banner__content__text p {
+.home-banner__content__text p, .home-banner__content__text ul {
     text-align: center;
+    margin: auto;
 }
 
 @media (min-width: 768px) {
