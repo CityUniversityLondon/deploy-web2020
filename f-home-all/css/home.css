@@ -47456,6 +47456,7 @@ main > .login footer p {
     height: 100%;
     position: relative;
     overflow: hidden;
+    object-fit: cover;
 }
 
 @media (max-width: 1023px) {
