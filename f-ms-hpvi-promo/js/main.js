@@ -553,9 +553,54 @@ __webpack_require__.r(__webpack_exports__);
 // import { createHTMLElement } from '../../../util';
 const className = 'home-banner--video';
 
-function togglePlay(vid) {}
+function initBannerVideo(e) {
+  const video = e.querySelector('.banner__video');
+  const poster = e.querySelector('.hero-image');
+  const urlPlayButton = video.dataset.playButton;
+  const urlPauseButton = video.dataset.pauseButton;
+  const elButtonPlay = document.createElement('button');
+  const elImgPlay = document.createElement('img');
+  const elImgPause = document.createElement('img');
+  elImgPlay.src = urlPlayButton;
+  elImgPlay.classList.add('button__img--play');
+  elImgPause.src = urlPauseButton;
+  elImgPause.classList.add('button__img--pause');
+  elButtonPlay.setAttribute('aria-label', 'Video play and pause');
+  elButtonPlay.classList.add('banner__video__button');
+  elButtonPlay.appendChild(elImgPlay);
+  elButtonPlay.appendChild(elImgPause);
+  e.appendChild(elButtonPlay);
+  elButtonPlay.addEventListener('click', () => {
+    togglePlay(video, elButtonPlay, poster);
+  });
+  var playPromise = video.play();
 
-function initBannerVideo(e) {}
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      togglePlay(video, elButtonPlay, poster);
+    }).catch(error => {
+      console.error(error);
+    });
+  }
+}
+
+function togglePlay(vid, button, poster) {
+  let counter = 0;
+
+  if (vid.paused || vid.ended) {
+    vid.play();
+    button.classList.toggle('play');
+
+    if (counter === 0) {
+      vid.setAttribute('data-poster', 'off');
+      poster.setAttribute('data-poster', 'off');
+      counter++;
+    }
+  } else {
+    vid.pause();
+    button.classList.toggle('play');
+  }
+}
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: initBannerVideo,
@@ -1296,34 +1341,36 @@ function runNumberAnimation(widget) {
      * @param {timestamp} time stamp - time stamp from requestAnimationFrame API
      */
 
-    const f = timestamp => {
+    const runAnimation = timestamp => {
       if (first) {
         startTime = timestamp;
         first = false;
-      }
+      } // Updates dynamically from 0 (start) to 1 (finish)
 
-      const t = (timestamp - startTime) / DURATION; // difference in time between two discrete points in time divied by duration
 
-      const finish = t >= 1;
-      let k = finish ? 1 : 1 - Math.pow(1 - t, 4);
-      let v = k * (value - startValue) + startValue;
+      const progress = (timestamp - startTime) / DURATION,
+            finish = progress >= 1,
+            animationSpeed = finish ? 1 : 1 - Math.pow(1 - progress, 4); // The current number value as the animation runs
 
-      if (isFloat) {
-        v = Math.round(v);
-      }
+      let currentValue = isFloat ? animationSpeed * (value - startValue + startValue).toFixed(1) : null; // Restrict animated number to largest whole number; stops larger number appearing and then jumping down, e.g. 3.8% will animate to 3%, then finish on 3.8%, rather than displaying 4% and then dropping down to 3.8%
 
-      if (lastValue !== v) {
-        lastValue = v;
-        numberContainer.innerHTML = format === 'true' ? v.toLocaleString('en-GB') // append and format to GB
-        : v;
+      isFloat ? currentValue = Math.floor(currentValue) : null;
+
+      if (lastValue !== currentValue) {
+        lastValue = currentValue;
+        numberContainer.innerHTML = format === 'true' ? currentValue.toLocaleString('en-GB') // Append and format to GB, e.g. 4000 renders as 4,000
+        : currentValue;
       }
 
       if (finish) {
-        //end of animation
-        widget.classList.add('animate--number--complete');
+        // Animation finished
+        widget.classList.add('animate--number--complete'); // Check if final rendered number needs formatting
+
+        numberContainer.innerHTML = parseInt(widget.dataset.animationNumberValue) >= 1000 ? parseInt(widget.dataset.animationNumberValue).toLocaleString() // append and format to GB
+        : widget.dataset.animationNumberValue;
       } else {
-        //repeat call requestAnimationFrame until finish is true
-        window.requestAnimationFrame(f);
+        // Repeat call requestAnimationFrame until finish is true
+        window.requestAnimationFrame(runAnimation);
       }
     };
     /**
@@ -1331,7 +1378,7 @@ function runNumberAnimation(widget) {
      */
 
 
-    window.requestAnimationFrame(f);
+    window.requestAnimationFrame(runAnimation);
   }
 }
 /**
