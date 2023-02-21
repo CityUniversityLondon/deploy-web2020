@@ -47033,10 +47033,6 @@ main > .login footer p {
     outline-width: 0.125rem;
 }
 
-.home-banner .banner__title {
-    text-shadow: 0 0 0.375rem RGB(0 0 0/55%);
-}
-
 .js .home-banner .hero-image {
     display: block;
 }
