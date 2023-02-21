@@ -587,7 +587,7 @@ const className = 'takeover-transition';
 let prevRatio = 0.0;
 let elemntWatch;
 let defaultTransitionElemnt;
-let scale = 'scale(10X%)';
+let scale = 'scale(1.0X)';
 
 function takeOver(box) {
   defaultTransitionElemnt = box;
@@ -630,7 +630,7 @@ function buildThresholdList() {
 function handleIntersect(entries) {
   entries.forEach(entry => {
     console.log('entry.intersectionRatio: ' + entry.intersectionRatio);
-    console.log('ratio is: ' + entry.intersectionRatio * 10);
+    console.log('ratio is: ' + Math.round(10 - entry.intersectionRatio * 10));
 
     if (entry.intersectionRatio > prevRatio) {
       /*
@@ -638,9 +638,11 @@ function handleIntersect(entries) {
           '.takeover-transition-opacity'
       ).style.opacity = entry.intersectionRatio;
       */
-      entry.intersectionRatio < 1 ? (defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.transform = scale.replace('X', 10 - entry.intersectionRatio * 10), defaultTransitionElemnt.querySelector('.takeover-transition-opacity img').style.position = 'fixed') : defaultTransitionElemnt.querySelector('.takeover-transition-opacity img').style.position = 'inherit';
+      defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.transform = scale.replace('X', Math.round(10 - entry.intersectionRatio * 10));
+      entry.intersectionRatio === 0 ? defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.position = 'absolute' : defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.position = 'fixed';
     } else {
-      entry.intersectionRatio < 1 ? (defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.transform = scale.replace('X', 10 - entry.intersectionRatio * 10), defaultTransitionElemnt.querySelector('.takeover-transition-opacity img').style.position = 'fixed') : defaultTransitionElemnt.querySelector('.takeover-transition-opacity img').style.position = 'inherit';
+      defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.transform = scale.replace('X', Math.round(10 - entry.intersectionRatio * 10));
+      entry.intersectionRatio === 0 ? defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.position = 'absolute' : defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.position = 'fixed';
     }
 
     prevRatio = entry.intersectionRatio;
