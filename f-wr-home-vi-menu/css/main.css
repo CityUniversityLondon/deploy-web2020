@@ -48374,6 +48374,7 @@ article .link-copy {
 
 .global-header__search > a,
 .global-header__search .global-header__search__button {
+    transition: transform 0.3s ease;
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -48565,13 +48566,30 @@ article .link-copy {
         display: flex;
         height: 100%;
     }
+}
+
+@media (min-width: 1024px) and (hover: hover) {
+    .global-header__search > a:hover,
+    .global-header__search .global-header__search__button:hover {
+        transform: scale(1.2);
+    }
+}
+
+@media (min-width: 1024px) {
+    .global-header__search > a:active, .global-header__search > a:focus,
+    .global-header__search .global-header__search__button:active,
+    .global-header__search .global-header__search__button:focus {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: solid;
+        outline-width: 0.125rem;
+    }
     .global-header__search > a .global-header__search__icon,
     .global-header__search .global-header__search__button .global-header__search__icon {
         font-size: 1.602rem;
         line-height: 1.33333;
         letter-spacing: -0.015em;
         color: #d61726;
-        transition: transform 0.3s ease;
     }
 }
 
@@ -48603,22 +48621,7 @@ article .link-copy {
     }
 }
 
-@media (min-width: 1024px) and (hover: hover) {
-    .global-header__search > a .global-header__search__icon:hover,
-    .global-header__search .global-header__search__button .global-header__search__icon:hover {
-        transform: scale(1.2);
-    }
-}
-
 @media (min-width: 1024px) {
-    .global-header__search > a .global-header__search__icon:active, .global-header__search > a .global-header__search__icon:focus,
-    .global-header__search .global-header__search__button .global-header__search__icon:active,
-    .global-header__search .global-header__search__button .global-header__search__icon:focus {
-        outline-color: #0c0c0e;
-        outline-offset: 0.1875rem;
-        outline-style: solid;
-        outline-width: 0.125rem;
-    }
     .global-header__search > a .global-header__search__text,
     .global-header__search .global-header__search__button .global-header__search__text {
         display: none;
