@@ -343,6 +343,14 @@
     background-color: #e7ebed;
 }
 
+.color--gray333 {
+    color: #333333;
+}
+
+.background--gray333 {
+    background-color: #333333;
+}
+
 .color--red5 {
     color: #fdf0ed;
 }
@@ -28756,7 +28764,7 @@ article a:active {
 }
 
 .global-header__utility ul li a .global-header__utility__icon {
-    color: #696969;
+    color: #333333;
     margin-left: 0.25rem;
     top: -0.125rem;
 }
@@ -30543,6 +30551,10 @@ article .link-copy {
 }
 
 @media (max-width: 1023px) {
+    .global-header__search > a,
+    .global-header__search .global-header__search__button {
+        justify-content: center;
+    }
     .global-header__search > a .global-header__search__icon,
     .global-header__search .global-header__search__button .global-header__search__icon {
         font-size: 1.602rem;
@@ -31765,7 +31777,7 @@ article .link-copy {
 
 @media (hover: hover) {
     .js .global-header__search .search--inline__query > div button:hover {
-        background-color: #a1a1a1;
+        background-color: #9e111c;
         color: #ffffff;
     }
 }
@@ -31773,25 +31785,6 @@ article .link-copy {
 @media (max-width: 1023px) {
     .js .global-header__search .search--inline__query > div button {
         margin-left: 1rem;
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-        display: inline-block;
-        padding-bottom: 0.5rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        padding-top: 0.5rem;
-        transition: background-color 0.6s;
     }
     .js .global-header__search .search--inline__query > div button .search--inline__query__submit__text {
         border: 0;
@@ -31802,59 +31795,6 @@ article .link-copy {
         padding: 0;
         position: absolute;
         width: 1px;
-    }
-}
-
-@media (max-width: 1023px) and (hover: hover) {
-    .js .global-header__search .search--inline__query > div button:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-@media (max-width: 1023px) {
-    .js .global-header__search .search--inline__query > div button:focus, .js .global-header__search .search--inline__query > div button:active {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-    .js .global-header__search .search--inline__query > div button, .js .global-header__search .search--inline__query > div button:focus, .js .global-header__search .search--inline__query > div button:active {
-        background-color: #d61726;
-        color: #ffffff;
-    }
-    .js .global-header__search .search--inline__query > div button:focus .search--inline__query__submit__content {
-        outline-color: #ffffff;
-        outline-offset: 0.1875rem;
-        outline-style: solid;
-        outline-width: 0.125rem;
-    }
-}
-
-@media (max-width: 1023px) and (hover: hover) {
-    .js .global-header__search .search--inline__query > div button:hover {
-        background-color: #a1a1a1;
-        color: #ffffff;
     }
 }
 
@@ -32048,6 +31988,7 @@ article .link-copy {
     right: 0.5rem;
     top: 0.25rem;
     width: 2.25rem;
+    background-color: initial;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -32071,12 +32012,6 @@ article .link-copy {
 @media (min-width: 7680px) {
     .js .global-header__search .search--inline__query__input .search--inline__clear {
         letter-spacing: -0.017em;
-    }
-}
-
-@media (max-width: 1023px) {
-    .js .global-header__search .search--inline__query__input .search--inline__clear {
-        background-color: initial;
     }
 }
 
