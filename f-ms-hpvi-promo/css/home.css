@@ -47983,31 +47983,51 @@ main > .login footer p {
 
 .home__promo {
     position: relative;
+    background-image: url(https://www.city.ac.uk/__data/assets/image/0019/720280/varieties/breakpoint-max.jpg);
+    background-size: cover;
 }
 
 @media (max-width: 1023px) {
-    .home__promo .wrap--home__promo__card {
+    .home__promo .home__promo__container {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
-        top: 50%;
-        transform: translateY(-50%);
     }
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    .home__promo .wrap--home__promo__card {
+    .home__promo .home__promo__container {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
+@media (max-width: 767px) {
+    .home__promo .wrap--home__promo__card {
+        width: 75%;
+    }
+}
+
+@media (max-width: 431px) {
+    .home__promo .wrap--home__promo__card {
+        width: 100%;
+    }
+}
+
+.home__promo .home__promo__text p {
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-family: "Meta Sans", sans-serif;
+}
+
+.home__promo .home__promo__text p i,
+.home__promo .home__promo__text p em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
 .home__promo .wrap--home__promo__card {
-    position: absolute;
-    padding: 2rem;
-    background: #ffffff;
-    padding: 1.5rem;
-    transition: top 0.3s, opacity 0.3s;
+    padding: 6rem 0;
+    box-sizing: border-box;
+    transition: transform 0.3s, opacity 0.3s;
     z-index: 1;
     max-width: 55ch;
 }
@@ -48024,25 +48044,58 @@ main > .login footer p {
     width: 100%;
 }
 
+.home__promo .home__promo__card {
+    background-color: #ffffff;
+    padding: 2.5rem;
+}
+
+.home__promo .basic-cta--bright:focus {
+    outline-style: solid;
+}
+
 @media (min-width: 1024px) {
-    .home__promo .wrap--home__promo__card {
+    .home__promo .home__promo__container {
+        margin-left: 1rem;
+        margin-right: 1rem;
         max-width: 80rem;
-        margin-left: 3.5rem;
-        margin-right: 3.5rem;
-    }
-    .home__promo .wrap--home__promo__card.in-view {
-        top: 10rem;
-        opacity: 1;
-    }
-    .home__promo .wrap--home__promo__card:not(.in-view) {
-        opacity: 0;
-        top: 17rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
-@media (min-width: 1920px) {
-    .home__promo {
-        width: auto;
+@media (min-width: 1024px) and (min-width: 901px) {
+    .home__promo .home__promo__container {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .home__promo .home__promo__container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1441px) {
+    .home__promo .home__promo__container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home__promo .wrap--home__promo__card {
+        width: 50%;
+    }
+    .home__promo .wrap--home__promo__card.in-view {
+        top: 50%;
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    .home__promo .wrap--home__promo__card:not(.in-view) {
+        opacity: 0;
+        transform: translateY(100%);
     }
 }
 
