@@ -28592,7 +28592,7 @@ article a:active {
 
 @media (min-width: 1024px) {
     .header-logo a {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         margin-top: 1.5rem;
     }
 }
@@ -28614,7 +28614,7 @@ article a:active {
 @media (min-width: 1024px) {
     .global-header__utility {
         display: block;
-        grid-column-end: 22;
+        grid-column-end: 24;
         grid-column-start: 4;
         grid-row-end: 1;
         grid-row-start: 1;
@@ -28782,8 +28782,8 @@ article a:active {
     .global-header__controls {
         align-self: stretch;
         display: flex;
-        grid-column-end: span 3;
-        grid-column-start: 22;
+        grid-column-end: span 1;
+        grid-column-start: 24;
         grid-row-end: 1;
         grid-row-start: 1;
         margin-top: 1.5rem;
@@ -30389,11 +30389,15 @@ article .link-copy {
 
 .global-header__search > a,
 .global-header__search .global-header__search__button {
-    transition: transform 0.3s ease;
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: flex-end;
+}
+
+.global-header__search > a span,
+.global-header__search .global-header__search__button span {
+    transition: transform 0.3s ease;
 }
 
 @media (max-width: 1023px) {
@@ -30584,8 +30588,8 @@ article .link-copy {
 }
 
 @media (min-width: 1024px) and (hover: hover) {
-    .global-header__search > a:hover,
-    .global-header__search .global-header__search__button:hover {
+    .global-header__search > a:hover span,
+    .global-header__search .global-header__search__button:hover span {
         transform: scale(1.2);
     }
 }
@@ -31748,12 +31752,12 @@ article .link-copy {
 }
 
 .js .global-header__search .search--inline__query > div button, .js .global-header__search .search--inline__query > div button:focus, .js .global-header__search .search--inline__query > div button:active {
-    background-color: #ffffff;
-    color: #0c0c0e;
+    background-color: #d61726;
+    color: #ffffff;
 }
 
 .js .global-header__search .search--inline__query > div button:focus .search--inline__query__submit__content {
-    outline-color: #0c0c0e;
+    outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: solid;
     outline-width: 0.125rem;
@@ -31762,7 +31766,7 @@ article .link-copy {
 @media (hover: hover) {
     .js .global-header__search .search--inline__query > div button:hover {
         background-color: #a1a1a1;
-        color: #0c0c0e;
+        color: #ffffff;
     }
 }
 
@@ -36040,7 +36044,7 @@ article .link-copy {
 
 @media (max-width: 1279px) {
     .navigation--primary {
-        padding-top: 0.5rem;
+        padding-top: 1.25rem;
         border-top: 0.0625rem solid #e5e5e5;
     }
 }
@@ -36064,7 +36068,7 @@ article .link-copy {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     list-style: none;
     margin-top: 0;
 }
