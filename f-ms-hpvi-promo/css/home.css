@@ -48006,7 +48006,7 @@ main > .login footer p {
 }
 
 .home__promo .wrap--home__promo__card[data-position='right'] {
-    right: 0;
+    margin-left: auto;
 }
 
 .home__promo .home__promo__title {
