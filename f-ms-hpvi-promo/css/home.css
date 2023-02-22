@@ -47983,7 +47983,7 @@ main > .login footer p {
 
 .home__promo {
     position: relative;
-    background-image: url(https://www.city.ac.uk/__data/assets/image/0019/720280/varieties/breakpoint-max.jpg);
+    background-image: url("https://www.city.ac.uk/__data/assets/image/0007/720673/student-life-desktop.jpg");
     background-size: cover;
 }
 
@@ -48022,7 +48022,7 @@ main > .login footer p {
     padding: 2.5rem;
 }
 
-.home__promo .basic-cta--bright:focus {
+.home__promo .basic-cta--bright:focus, .home__promo .basic-cta--bright:active {
     outline-style: solid;
 }
 
@@ -48048,6 +48048,9 @@ main > .login footer p {
 }
 
 @media (max-width: 431px) {
+    .home__promo {
+        background-image: url("https://www.city.ac.uk/__data/assets/image/0008/720674/student-life-mobile.jpg");
+    }
     .home__promo .wrap--home__promo__card {
         width: 100%;
     }
