@@ -47987,6 +47987,45 @@ main > .login footer p {
     background-size: cover;
 }
 
+.home__promo .home__promo__text p {
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-family: "Meta Sans", sans-serif;
+}
+
+.home__promo .home__promo__text p i,
+.home__promo .home__promo__text p em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.home__promo .wrap--home__promo__card {
+    padding: 6rem 0;
+    box-sizing: border-box;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 1;
+    width: 50%;
+}
+
+.home__promo .wrap--home__promo__card[data-position='right'] {
+    right: 0;
+}
+
+.home__promo .home__promo__title {
+    margin-top: 0;
+}
+
+.home__promo .home__promo__img {
+    width: 100%;
+}
+
+.home__promo .home__promo__card {
+    background-color: #ffffff;
+    padding: 2.5rem;
+}
+
+.home__promo .basic-cta--bright:focus {
+    outline-style: solid;
+}
+
 @media (max-width: 1023px) {
     .home__promo .home__promo__container {
         margin-left: 1rem;
@@ -48012,45 +48051,6 @@ main > .login footer p {
     .home__promo .wrap--home__promo__card {
         width: 100%;
     }
-}
-
-.home__promo .home__promo__text p {
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-    font-family: "Meta Sans", sans-serif;
-}
-
-.home__promo .home__promo__text p i,
-.home__promo .home__promo__text p em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-.home__promo .wrap--home__promo__card {
-    padding: 6rem 0;
-    box-sizing: border-box;
-    transition: transform 0.3s, opacity 0.3s;
-    z-index: 1;
-    max-width: 55ch;
-}
-
-.home__promo .wrap--home__promo__card[data-position='right'] {
-    right: 0;
-}
-
-.home__promo .home__promo__title {
-    margin-top: 0;
-}
-
-.home__promo .home__promo__img {
-    width: 100%;
-}
-
-.home__promo .home__promo__card {
-    background-color: #ffffff;
-    padding: 2.5rem;
-}
-
-.home__promo .basic-cta--bright:focus {
-    outline-style: solid;
 }
 
 @media (min-width: 1024px) {
@@ -48085,9 +48085,6 @@ main > .login footer p {
 }
 
 @media (min-width: 1024px) {
-    .home__promo .wrap--home__promo__card {
-        width: 50%;
-    }
     .home__promo .wrap--home__promo__card.in-view {
         top: 50%;
         opacity: 1;
