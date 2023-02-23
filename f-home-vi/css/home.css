@@ -48012,6 +48012,8 @@ main > .login footer p {
 }
 
 .home__promo .home__promo__card {
+    position: relative;
+    z-index: 1;
     background-color: #ffffff;
     padding: 2.5rem;
 }
