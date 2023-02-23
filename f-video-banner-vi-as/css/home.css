@@ -46172,6 +46172,8 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     border-radius: 100%;
     padding: 0.5rem;
     pointer-events: none;
+    min-width: 30px;
+    min-height: 30px;
 }
 
 .search-box__select:not(.search-box__select--sort).search-box__select--selected select {
@@ -46921,13 +46923,6 @@ main > .login footer p {
     height: 100%;
     background-color: #d61726;
     background-size: cover;
-    background-color: #1e1e1e;
-}
-
-@media (min-width: 768px) {
-    .home-banner {
-        background-color: #d61726;
-    }
 }
 
 .home-banner .hero-image img,
@@ -46971,7 +46966,7 @@ main > .login footer p {
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.55);
     width: 100%;
     height: 100%;
 }
@@ -47060,20 +47055,9 @@ main > .login footer p {
     outline-width: 0.125rem;
 }
 
-.js .home-banner .hero-image {
-    display: block;
-}
-
-.js .home-banner .hero-image[data-poster='off'] {
-    display: none;
-}
-
-.js .home-banner .banner__video {
-    display: none;
-}
-
-.js .home-banner .banner__video[data-poster='off'] {
-    display: block;
+.home-banner--video .hero-image {
+    position: absolute;
+    top: 0;
 }
 
 .home-banner__content {
@@ -47083,6 +47067,8 @@ main > .login footer p {
     width: 100%;
     height: 100%;
     z-index: 2;
+    position: absolute;
+    top: 0;
 }
 
 @media (min-width: 768px) {
@@ -47094,13 +47080,6 @@ main > .login footer p {
 @media (min-width: 901px) {
     .home-banner__content {
         grid-column-gap: 1.5rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .home-banner__content {
-        position: absolute;
-        top: 0;
     }
 }
 
@@ -47120,6 +47099,10 @@ main > .login footer p {
         padding-left: 2rem;
         padding-right: 2rem;
     }
+}
+
+.home-banner__content__text p {
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.65);
 }
 
 .home-banner__content__text p, .home-banner__content__text ul {
@@ -47142,18 +47125,16 @@ main > .login footer p {
 }
 
 .home-banner__strapline__text {
-    padding: 1rem 0;
+    padding: 3rem 0;
     background-color: transparent;
-    height: 8rem;
-    width: 8rem;
+    height: 10rem;
+    width: 10rem;
 }
 
 @media (min-width: 768px) {
     .home-banner__strapline__text {
         background-color: #d61726;
         padding: 3rem 1rem;
-        height: 10rem;
-        width: 10rem;
     }
 }
 

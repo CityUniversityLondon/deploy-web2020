@@ -555,7 +555,6 @@ const className = 'home-banner--video';
 
 function initBannerVideo(e) {
   const video = e.querySelector('.banner__video');
-  const poster = e.querySelector('.hero-image');
   const urlPlayButton = video.dataset.playButton;
   const urlPauseButton = video.dataset.pauseButton;
   const elButtonPlay = document.createElement('button');
@@ -571,31 +570,25 @@ function initBannerVideo(e) {
   elButtonPlay.appendChild(elImgPause);
   e.appendChild(elButtonPlay);
   elButtonPlay.addEventListener('click', () => {
-    togglePlay(video, elButtonPlay, poster);
+    togglePlay(video, elButtonPlay);
   });
+  video.play();
+  console.log('video play');
   var playPromise = video.play();
 
   if (playPromise !== undefined) {
     playPromise.then(() => {
-      togglePlay(video, elButtonPlay, poster);
+      togglePlay(video, elButtonPlay);
     }).catch(error => {
       console.error(error);
     });
   }
 }
 
-function togglePlay(vid, button, poster) {
-  let counter = 0;
-
+function togglePlay(vid, button) {
   if (vid.paused || vid.ended) {
     vid.play();
     button.classList.toggle('play');
-
-    if (counter === 0) {
-      vid.setAttribute('data-poster', 'off');
-      poster.setAttribute('data-poster', 'off');
-      counter++;
-    }
   } else {
     vid.pause();
     button.classList.toggle('play');
