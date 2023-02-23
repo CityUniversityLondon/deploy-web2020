@@ -44049,6 +44049,7 @@ a .link-decorator {
     color: #ffffff;
     padding: 0.25rem 1.5rem;
     border-radius: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .outline-cta--rounded-edges:disabled {
@@ -44192,10 +44193,6 @@ a .link-decorator {
 
 .outline-cta--rounded-edges:active span, .outline-cta--rounded-edges:focus span, .outline-cta--rounded-edges:hover span {
     transform: none;
-}
-
-.outline-cta--rounded-edges:focus:focus {
-    outline-style: solid;
 }
 
 /*
@@ -47283,21 +47280,6 @@ main > .login footer p {
     animation: moveUpAndRotate 1s;
 }
 
-.home__pathway .triangle__block {
-    width: 10rem;
-}
-
-.home__pathway .triangle__block--left {
-    margin-bottom: -9rem;
-}
-
-.home__pathway .triangle__block--right {
-    right: 0;
-    position: absolute;
-    transform: rotate(180deg);
-    margin-top: -10rem;
-}
-
 .home__pathway .pathway .pathway__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -47440,7 +47422,7 @@ main > .login footer p {
 
 @keyframes fadeIn {
     0% {
-        opacity: 0.5;
+        opacity: 0;
     }
     100% {
         opacity: 1;
@@ -47449,7 +47431,7 @@ main > .login footer p {
 
 @keyframes scaleIn {
     0% {
-        transform: scale(1.2);
+        transform: scale(1.15);
     }
     100% {
         transform: scale(1.1);
@@ -47461,32 +47443,152 @@ main > .login footer p {
     position: relative;
 }
 
+.home__social .row {
+    display: flex;
+}
+
+.home__social .wrap--social__img {
+    overflow: hidden;
+}
+
+.home__social .wrap--social__img:nth-of-type(1) .social__img.in-view {
+    animation: fadeIn 1.8s 0s, scaleIn 1.8s 0s;
+    animation-fill-mode: forwards;
+}
+
+.home__social .wrap--social__img:nth-of-type(2) .social__img.in-view {
+    animation: fadeIn 1.8s 0.1s, scaleIn 1.8s 0.1s;
+    animation-fill-mode: forwards;
+}
+
+.home__social .wrap--social__img:nth-of-type(3) .social__img.in-view {
+    animation: fadeIn 1.8s 0.2s, scaleIn 1.8s 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.home__social .wrap--social__img:nth-of-type(4) .social__img.in-view {
+    animation: fadeIn 1.8s 0.3s, scaleIn 1.8s 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.home__social .wrap--social__img:nth-of-type(5) .social__img.in-view {
+    animation: fadeIn 1.8s 0.4s, scaleIn 1.8s 0.4s;
+    animation-fill-mode: forwards;
+}
+
+.home__social .social__img {
+    opacity: 0;
+    filter: brightness(0.65);
+}
+
+.home__social .card {
+    position: absolute;
+    background: #ffffff;
+    padding: 3.75rem 2.75rem;
+    transition: top 0.3s;
+    z-index: 1;
+}
+
+.home__social .card__content__body {
+    border-bottom: 0.0625rem solid #a1a1a1;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.home__social .card__content__heading {
+    margin-top: 0;
+}
+
+.home__social .card__post-strap .icon__wrapper {
+    background-color: #d61726;
+    border-radius: 1rem;
+    color: #ffffff;
+    display: inline-flex;
+    height: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+}
+
+.home__social .card__post-strap .icon__wrapper .icon {
+    margin: auto;
+}
+
+.home__social .card__post-strap .icon__wrapper .icon.fa-instagram:before {
+    font-size: 1.266rem;
+    line-height: 1.33333;
+    letter-spacing: -0.011em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .home__social .card__post-strap .icon__wrapper .icon.fa-instagram:before {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .home__social .card__post-strap .icon__wrapper .icon.fa-instagram:before {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .home__social .card__post-strap .icon__wrapper .icon.fa-instagram:before {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .home__social .card__post-strap .icon__wrapper .icon.fa-instagram:before {
+        letter-spacing: -0.017em;
+    }
+}
+
+.home__social .card__post-strap .icon__wrapper .line {
+    margin-bottom: 1.25rem;
+}
+
+.home__social .card__post-strap a.anchor-discreet {
+    color: #d61726;
+    border-bottom-color: #d61726;
+    font-weight: 600;
+    bottom: 0.125rem;
+}
+
+@media (hover: hover) {
+    .home__social .card__post-strap a.anchor-discreet:hover::before {
+        opacity: 0;
+        transition: none;
+    }
+}
+
+.home__social .card__post-strap a.anchor-discreet:focus {
+    outline-style: solid;
+}
+
 @media (max-width: 431px) {
+    .home__social .card {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
     .home__social .wrap--social__img:nth-of-type(3) {
         display: none;
     }
 }
 
 @media (max-width: 767px) {
+    .home__social .card {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
     .home__social .wrap--social__img:nth-of-type(4), .home__social .wrap--social__img:nth-of-type(5) {
         display: none;
     }
 }
 
-@media (min-width: 768px) {
-    .home__social .box__border {
-        border-left: 14px solid transparent;
-    }
-    .home__social .box__content {
-        margin: 0 2rem 0 3rem;
-    }
-    .home__social .social__img {
-        object-fit: cover;
-    }
-}
-
 @media (max-width: 1023px) {
-    .home__social .box {
+    .home__social .card {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -47496,28 +47598,83 @@ main > .login footer p {
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    .home__social .box {
+    .home__social .card {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (min-width: 1024px) {
-    .home__social .box {
-        margin: 0 3.5rem;
-    }
-    .home__social .box.in-view {
-        top: 10rem;
-    }
-    .home__social .box:not(.in-view) {
-        opacity: 0;
-        top: 17rem;
+@media (min-width: 1024px) and (max-width: 1919px) {
+    .home__social .wrap--card {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        max-width: 80rem;
     }
 }
 
-@media (min-width: 1280px) {
-    .home__social .box__border {
-        border-left: 16px solid transparent;
+@media (min-width: 1024px) and (max-width: 1919px) and (min-width: 901px) {
+    .home__social .wrap--card {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1919px) and (min-width: 901px) {
+    .home__social .wrap--card {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1919px) and (min-width: 1441px) {
+    .home__social .wrap--card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home__social .wrap--card {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        max-width: 80rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .home__social .wrap--card {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .home__social .wrap--card {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1441px) {
+    .home__social .wrap--card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home__social .card.in-view {
+        top: 10rem;
+    }
+    .home__social .card:not(.in-view) {
+        opacity: 0;
+        top: 17rem;
     }
 }
 
@@ -47530,8 +47687,11 @@ main > .login footer p {
         padding-right: 1.5rem;
         width: 80rem;
     }
-    .home__social .box__border {
-        border-left: 18px solid transparent;
+    .home__social .wrap--card {
+        padding-left: 4rem;
+        padding-right: 4rem;
+        margin: 0;
+        width: 30vw;
     }
 }
 
@@ -47554,183 +47714,6 @@ main > .login footer p {
         margin-left: auto;
         margin-right: auto;
     }
-}
-
-@media (min-width: 3840px) {
-    .home__social .box__border {
-        border-left: 36px solid transparent;
-    }
-}
-
-@media (min-width: 7680px) {
-    .home__social .box__border {
-        border-left: 72px solid transparent;
-    }
-}
-
-.home__social .row {
-    display: flex;
-}
-
-.home__social .wrap--social__img {
-    overflow: hidden;
-}
-
-.home__social .wrap--social__img:nth-of-type(1) .social__img.in-view {
-    animation: fadeIn 1.5s 0s, scaleIn 1.5s 0s;
-    animation-fill-mode: forwards;
-}
-
-.home__social .wrap--social__img:nth-of-type(2) .social__img.in-view {
-    animation: fadeIn 1.5s 0.1s, scaleIn 1.5s 0.1s;
-    animation-fill-mode: forwards;
-}
-
-.home__social .wrap--social__img:nth-of-type(3) .social__img.in-view {
-    animation: fadeIn 1.5s 0.2s, scaleIn 1.5s 0.2s;
-    animation-fill-mode: forwards;
-}
-
-.home__social .wrap--social__img:nth-of-type(4) .social__img.in-view {
-    animation: fadeIn 1.5s 0.3s, scaleIn 1.5s 0.3s;
-    animation-fill-mode: forwards;
-}
-
-.home__social .wrap--social__img:nth-of-type(5) .social__img.in-view {
-    animation: fadeIn 1.5s 0.4s, scaleIn 1.5s 0.4s;
-    animation-fill-mode: forwards;
-}
-
-.home__social .social__img {
-    opacity: 0;
-    filter: brightness(0.5) saturate(100%);
-}
-
-.home__social .box {
-    position: absolute;
-    background: #ffffff;
-    padding: 2rem 1rem 3rem;
-    transition: top 0.3s;
-    z-index: 1;
-}
-
-.home__social .box__pre-strap {
-    text-transform: uppercase;
-    display: flex;
-    font-weight: 700;
-}
-
-.home__social .box__pre-strap span {
-    display: block;
-}
-
-.home__social .box__pre-strap span.text {
-    color: #d61726;
-    font-family: "Meta Sans", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-.home__social .box__pre-strap span.text i,
-.home__social .box__pre-strap span.text em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-.home__social .box__pre-strap span.line {
-    margin: auto 0 auto 1rem;
-    flex: 1;
-}
-
-.home__social .line {
-    flex: 1;
-    border-top: 0.375rem solid #d61726;
-    margin: 0.75rem 0 1.25rem;
-}
-
-.home__social .box__content__body {
-    border-bottom: 0.0625rem solid solid #a1a1a1;
-    margin-bottom: 1rem;
-}
-
-.home__social .box__post-strap .icon__wrapper {
-    background-color: #d61726;
-    border-radius: 1rem;
-    color: #ffffff;
-    display: inline-flex;
-    height: 2rem;
-    width: 2rem;
-    margin-right: 0.5rem;
-}
-
-.home__social .box__post-strap .icon__wrapper .icon {
-    margin: auto;
-}
-
-.home__social .box__post-strap .icon__wrapper .icon.fa-instagram:before {
-    font-size: 1.266rem;
-    line-height: 1.33333;
-    letter-spacing: -0.011em;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .home__social .box__post-strap .icon__wrapper .icon.fa-instagram:before {
-        letter-spacing: -0.013em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .home__social .box__post-strap .icon__wrapper .icon.fa-instagram:before {
-        letter-spacing: -0.015em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .home__social .box__post-strap .icon__wrapper .icon.fa-instagram:before {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .home__social .box__post-strap .icon__wrapper .icon.fa-instagram:before {
-        letter-spacing: -0.017em;
-    }
-}
-
-.home__social .box__post-strap .icon__wrapper .line {
-    margin-bottom: 1.25rem;
-}
-
-.home__social .box__post-strap a.anchor-discreet {
-    color: #d61726;
-    border-bottom-color: #d61726;
-    font-weight: 600;
-    bottom: 0.125rem;
-}
-
-@media (hover: hover) {
-    .home__social .box__post-strap a.anchor-discreet:hover::before {
-        opacity: 0;
-        transition: none;
-    }
-}
-
-.home__social .box__post-strap a.anchor-discreet:focus {
-    outline-style: solid;
-}
-
-.home__social .box__border {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -1px;
-    right: 0;
-    background: transparent;
-    width: 0;
-    border-image: url(https://www.city.ac.uk/__data/assets/file/0015/710241/community.svg) 65 fill repeat;
-    filter: invert(67%) sepia(1%) saturate(0%) hue-rotate(151deg) brightness(98%) contrast(85%);
-}
-
-.home__social .box__border--two {
-    left: 0.75rem;
 }
 
 .home__news-events {
@@ -47959,6 +47942,151 @@ main > .login footer p {
     .home__news-events .related-content .card--news--home,
     .home__news-events .related-content .card--event--home {
         flex-basis: 100%;
+    }
+}
+
+.home__promo {
+    position: relative;
+    background-image: url("https://www.city.ac.uk/__data/assets/image/0007/720673/student-life-desktop.jpg");
+    background-size: cover;
+}
+
+.home__promo[data-position='right'] .wrap--home__promo__card {
+    margin-left: auto;
+}
+
+.home__promo[data-position='right'] .triangle__block--right {
+    display: none;
+}
+
+.home__promo[data-position='left'] .triangle__block--left {
+    display: none;
+}
+
+.home__promo .home__promo__text p {
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-family: "Meta Sans", sans-serif;
+}
+
+.home__promo .home__promo__text p i,
+.home__promo .home__promo__text p em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+.home__promo .wrap--home__promo__card {
+    padding: 6rem 0;
+    box-sizing: border-box;
+    transition: transform 0.3s, opacity 0.3s;
+    z-index: 1;
+    width: 50%;
+}
+
+.home__promo .home__promo__title {
+    margin-top: 0;
+}
+
+.home__promo .home__promo__img {
+    width: 100%;
+}
+
+.home__promo .home__promo__card {
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+    padding: 2.5rem;
+}
+
+.home__promo .basic-cta--bright:focus, .home__promo .basic-cta--bright:active {
+    outline-style: solid;
+}
+
+.home__promo .triangle__block {
+    filter: brightness(0) invert(1);
+    bottom: 0;
+    position: absolute;
+}
+
+.home__promo .triangle__block.triangle__block--left {
+    margin-bottom: 0;
+    transform: rotate(270deg);
+    left: -1px;
+}
+
+.home__promo .triangle__block.triangle__block--right {
+    right: 0;
+    transform: rotate(180deg);
+}
+
+@media (max-width: 1023px) {
+    .home__promo .home__promo__container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .home__promo .home__promo__container {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .home__promo .wrap--home__promo__card {
+        width: 75%;
+    }
+}
+
+@media (max-width: 431px) {
+    .home__promo {
+        background-image: url("https://www.city.ac.uk/__data/assets/image/0008/720674/student-life-mobile.jpg");
+    }
+    .home__promo .wrap--home__promo__card {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home__promo .home__promo__container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .home__promo .home__promo__container {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .home__promo .home__promo__container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1441px) {
+    .home__promo .home__promo__container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home__promo .wrap--home__promo__card.in-view {
+        top: 50%;
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    .home__promo .wrap--home__promo__card:not(.in-view) {
+        opacity: 0;
+        transform: translateY(100%);
     }
 }
 
@@ -48250,6 +48378,21 @@ main > .login footer p {
 
 .home-new-vi .navigation--secondary {
     display: none;
+}
+
+.home-new-vi .triangle__block {
+    width: 10rem;
+}
+
+.home-new-vi .triangle__block--left {
+    margin-bottom: -9rem;
+}
+
+.home-new-vi .triangle__block--right {
+    right: 0;
+    position: absolute;
+    transform: rotate(180deg);
+    margin-top: -10rem;
 }
 
 .home-new-vi main {
