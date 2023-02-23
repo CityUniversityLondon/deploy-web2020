@@ -44049,6 +44049,7 @@ a .link-decorator {
     color: #ffffff;
     padding: 0.25rem 1.5rem;
     border-radius: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .outline-cta--rounded-edges:disabled {
@@ -44192,10 +44193,6 @@ a .link-decorator {
 
 .outline-cta--rounded-edges:active span, .outline-cta--rounded-edges:focus span, .outline-cta--rounded-edges:hover span {
     transform: none;
-}
-
-.outline-cta--rounded-edges:focus:focus {
-    outline-style: solid;
 }
 
 /*
