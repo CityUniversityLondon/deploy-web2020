@@ -47302,21 +47302,6 @@ main > .login footer p {
     animation: moveUpAndRotate 1s;
 }
 
-.home__pathway .triangle__block {
-    width: 10rem;
-}
-
-.home__pathway .triangle__block--left {
-    margin-bottom: -9rem;
-}
-
-.home__pathway .triangle__block--right {
-    right: 0;
-    position: absolute;
-    transform: rotate(180deg);
-    margin-top: -10rem;
-}
-
 .home__pathway .pathway .pathway__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -47988,6 +47973,18 @@ main > .login footer p {
     background-size: cover;
 }
 
+.home__promo[data-position='right'] .wrap--home__promo__card {
+    margin-left: auto;
+}
+
+.home__promo[data-position='right'] .triangle__block--right {
+    display: none;
+}
+
+.home__promo[data-position='left'] .triangle__block--left {
+    display: none;
+}
+
 .home__promo .home__promo__text p {
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-family: "Meta Sans", sans-serif;
@@ -48006,10 +48003,6 @@ main > .login footer p {
     width: 50%;
 }
 
-.home__promo .wrap--home__promo__card[data-position='right'] {
-    margin-left: auto;
-}
-
 .home__promo .home__promo__title {
     margin-top: 0;
 }
@@ -48025,6 +48018,23 @@ main > .login footer p {
 
 .home__promo .basic-cta--bright:focus, .home__promo .basic-cta--bright:active {
     outline-style: solid;
+}
+
+.home__promo .triangle__block {
+    filter: brightness(0) invert(1);
+    bottom: 0;
+    position: absolute;
+}
+
+.home__promo .triangle__block.triangle__block--left {
+    margin-bottom: 0;
+    transform: rotate(270deg);
+    left: -1px;
+}
+
+.home__promo .triangle__block.triangle__block--right {
+    right: 0;
+    transform: rotate(180deg);
 }
 
 @media (max-width: 1023px) {
@@ -48388,6 +48398,21 @@ main > .login footer p {
 
 .home-new-vi .navigation--secondary {
     display: none;
+}
+
+.home-new-vi .triangle__block {
+    width: 10rem;
+}
+
+.home-new-vi .triangle__block--left {
+    margin-bottom: -9rem;
+}
+
+.home-new-vi .triangle__block--right {
+    right: 0;
+    position: absolute;
+    transform: rotate(180deg);
+    margin-top: -10rem;
 }
 
 .home-new-vi main {
