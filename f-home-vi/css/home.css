@@ -47082,7 +47082,7 @@ main > .login footer p {
 
 .home-banner__content__text {
     position: absolute;
-    bottom: 10rem;
+    top: 50%;
     grid-column: 2 / -2;
     color: #ffffff;
     width: 100%;
