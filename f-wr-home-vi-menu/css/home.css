@@ -30486,15 +30486,15 @@ article .link-copy {
         border-width: 0.0625rem;
         color: #0c0c0e;
     }
-    .global-header__search > a:focus .global-header__search__wrapper,
-    .global-header__search .global-header__search__button:focus .global-header__search__wrapper {
+    .global-header__search > a:focus .text,
+    .global-header__search .global-header__search__button:focus .text {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
         outline-style: solid;
         outline-width: 0.125rem;
     }
-    .global-header__search > a:focus:hover .global-header__search__wrapper,
-    .global-header__search .global-header__search__button:focus:hover .global-header__search__wrapper {
+    .global-header__search > a:focus:hover .text,
+    .global-header__search .global-header__search__button:focus:hover .text {
         outline-color: #ffffff;
     }
 }
@@ -30508,6 +30508,15 @@ article .link-copy {
         border-width: 0.0625rem;
         color: #ffffff;
     }
+}
+
+.global-header__search > a:active, .global-header__search > a:focus,
+.global-header__search .global-header__search__button:active,
+.global-header__search .global-header__search__button:focus {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 .global-header__search > a .global-header__search__text,
@@ -30603,14 +30612,6 @@ article .link-copy {
 }
 
 @media (min-width: 1024px) {
-    .global-header__search > a:active, .global-header__search > a:focus,
-    .global-header__search .global-header__search__button:active,
-    .global-header__search .global-header__search__button:focus {
-        outline-color: #0c0c0e;
-        outline-offset: 0.1875rem;
-        outline-style: solid;
-        outline-width: 0.125rem;
-    }
     .global-header__search > a .global-header__search__icon,
     .global-header__search .global-header__search__button .global-header__search__icon {
         font-size: 1.602rem;
@@ -30801,7 +30802,7 @@ article .link-copy {
         background-color: #0c0c0e;
         color: #ffffff;
     }
-    .js .global-header__search .global-header__search__button[aria-expanded='true']:focus .global-header__search__wrapper {
+    .js .global-header__search .global-header__search__button[aria-expanded='true']:focus .text {
         outline-color: #ffffff;
         outline-offset: 0.1875rem;
         outline-style: solid;
@@ -30814,6 +30815,13 @@ article .link-copy {
         background-color: #1e1e1e;
         color: #ffffff;
     }
+}
+
+.js .global-header__search .global-header__search__button[aria-expanded='true']:active, .js .global-header__search .global-header__search__button[aria-expanded='true']:focus {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 .js .global-header__search .global-header__search__button[aria-expanded='true'] .global-header__search__icon {
@@ -35348,7 +35356,7 @@ article .link-copy {
     color: #ffffff;
 }
 
-.js .menu[data-open='true'] > .menu__display__button > button:focus .menu__display__button__button__wrapper {
+.js .menu[data-open='true'] > .menu__display__button > button:focus .text {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: solid;
@@ -35360,6 +35368,13 @@ article .link-copy {
         background-color: #494949;
         color: #ffffff;
     }
+}
+
+.js .menu[data-open='true'] > .menu__display__button > button:active, .js .menu[data-open='true'] > .menu__display__button > button:focus {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 .js .menu[data-open='true'] > .menu__display__button > button .menu__button__icon:before {
@@ -35570,7 +35585,7 @@ article .link-copy {
     color: #ffffff;
 }
 
-.js .menu > .menu__display__button .menu__display__button__button:focus .menu__display__button__button__wrapper {
+.js .menu > .menu__display__button .menu__display__button__button:focus .text {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: solid;
@@ -35582,6 +35597,13 @@ article .link-copy {
         background-color: #9e111c;
         color: #ffffff;
     }
+}
+
+.js .menu > .menu__display__button .menu__display__button__button:active, .js .menu > .menu__display__button .menu__display__button__button:focus {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 .js .menu > .menu__display__button .menu__display__button__button .menu__button__icon {
