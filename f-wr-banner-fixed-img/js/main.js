@@ -550,17 +550,53 @@ document.addEventListener('DOMContentLoaded', () => {
 __webpack_require__.r(__webpack_exports__);
 
 
-//import { createHTMLElement } from '../../../util';
-const className = 'embedded-video--autoplay-vi';
+// import { createHTMLElement } from '../../../util';
+const className = 'home-banner--video';
 
-function playVideo() {// const videoEl = video.querySelector('.embedded-video--autoplay__video'),
-  //     plays = parseInt(videoEl.dataset.maxPlays);
-  // loopVideo(plays, video, videoEl);
-  // createController(video, videoEl);
+function initBannerVideo(e) {
+  const video = e.querySelector('.banner__video');
+  const urlPlayButton = video.dataset.playButton;
+  const urlPauseButton = video.dataset.pauseButton;
+  const elButtonPlay = document.createElement('button');
+  const elImgPlay = document.createElement('img');
+  const elImgPause = document.createElement('img');
+  elImgPlay.src = urlPlayButton;
+  elImgPlay.classList.add('button__img--play');
+  elImgPause.src = urlPauseButton;
+  elImgPause.classList.add('button__img--pause');
+  elButtonPlay.setAttribute('aria-label', 'Video play and pause');
+  elButtonPlay.classList.add('banner__video__button');
+  elButtonPlay.appendChild(elImgPlay);
+  elButtonPlay.appendChild(elImgPause);
+  e.appendChild(elButtonPlay);
+  elButtonPlay.addEventListener('click', () => {
+    togglePlay(video, elButtonPlay);
+  });
+  video.play();
+  console.log('video play');
+  var playPromise = video.play();
+
+  if (playPromise !== undefined) {
+    playPromise.then(() => {
+      togglePlay(video, elButtonPlay);
+    }).catch(error => {
+      console.error(error);
+    });
+  }
+}
+
+function togglePlay(vid, button) {
+  if (vid.paused || vid.ended) {
+    vid.play();
+    button.classList.toggle('play');
+  } else {
+    vid.pause();
+    button.classList.toggle('play');
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: playVideo,
+  launchFn: initBannerVideo,
   launchQuery: `.${className}`
 });
 
@@ -699,8 +735,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
 /* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
 /* harmony import */ var _patterns_video_video__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./patterns/video/video */ "./src/patterns/video/video.js");
-/* harmony import */ var _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/play-button */ "./src/paint-layouts/home/home-vi-sections/play-button.js");
-/* harmony import */ var _paint_layouts_home_home_vi_sections_transition_image_takeover__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/transition-image-takeover */ "./src/paint-layouts/home/home-vi-sections/transition-image-takeover.js");
+/* harmony import */ var _paint_layouts_home_home_vi_sections_transition_image_takeover__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/transition-image-takeover */ "./src/paint-layouts/home/home-vi-sections/transition-image-takeover.js");
+/* harmony import */ var _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/play-button */ "./src/paint-layouts/home/home-vi-sections/play-button.js");
 
 
 /**
@@ -748,7 +784,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_33__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_19__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_34__["default"], _paint_layouts_home_home_vi_sections_transition_image_takeover__WEBPACK_IMPORTED_MODULE_35__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_33__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_19__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_35__["default"], _paint_layouts_home_home_vi_sections_transition_image_takeover__WEBPACK_IMPORTED_MODULE_34__["default"]]);
 
 /***/ }),
 
@@ -1390,34 +1426,36 @@ function runNumberAnimation(widget) {
      * @param {timestamp} time stamp - time stamp from requestAnimationFrame API
      */
 
-    const f = timestamp => {
+    const runAnimation = timestamp => {
       if (first) {
         startTime = timestamp;
         first = false;
-      }
+      } // Updates dynamically from 0 (start) to 1 (finish)
 
-      const t = (timestamp - startTime) / DURATION; // difference in time between two discrete points in time divied by duration
 
-      const finish = t >= 1;
-      let k = finish ? 1 : 1 - Math.pow(1 - t, 4);
-      let v = k * (value - startValue) + startValue;
+      const progress = (timestamp - startTime) / DURATION,
+            finish = progress >= 1,
+            animationSpeed = finish ? 1 : 1 - Math.pow(1 - progress, 4); // The current number value as the animation runs
 
-      if (isFloat) {
-        v = Math.round(v);
-      }
+      let currentValue = isFloat ? animationSpeed * (value - startValue + startValue).toFixed(1) : null; // Restrict animated number to largest whole number; stops larger number appearing and then jumping down, e.g. 3.8% will animate to 3%, then finish on 3.8%, rather than displaying 4% and then dropping down to 3.8%
 
-      if (lastValue !== v) {
-        lastValue = v;
-        numberContainer.innerHTML = format === 'true' ? v.toLocaleString('en-GB') // append and format to GB
-        : v;
+      isFloat ? currentValue = Math.floor(currentValue) : null;
+
+      if (lastValue !== currentValue) {
+        lastValue = currentValue;
+        numberContainer.innerHTML = format === 'true' ? currentValue.toLocaleString('en-GB') // Append and format to GB, e.g. 4000 renders as 4,000
+        : currentValue;
       }
 
       if (finish) {
-        //end of animation
-        widget.classList.add('animate--number--complete');
+        // Animation finished
+        widget.classList.add('animate--number--complete'); // Check if final rendered number needs formatting
+
+        numberContainer.innerHTML = parseInt(widget.dataset.animationNumberValue) >= 1000 ? parseInt(widget.dataset.animationNumberValue).toLocaleString() // append and format to GB
+        : widget.dataset.animationNumberValue;
       } else {
-        //repeat call requestAnimationFrame until finish is true
-        window.requestAnimationFrame(f);
+        // Repeat call requestAnimationFrame until finish is true
+        window.requestAnimationFrame(runAnimation);
       }
     };
     /**
@@ -1425,7 +1463,7 @@ function runNumberAnimation(widget) {
      */
 
 
-    window.requestAnimationFrame(f);
+    window.requestAnimationFrame(runAnimation);
   }
 }
 /**

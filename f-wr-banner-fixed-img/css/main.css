@@ -24141,6 +24141,9 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     .card__side-image[data-image-position='right'] {
         flex-direction: row-reverse;
     }
+    .card__side-image[data-image-position='right'] .card__side-image__text {
+        padding-left: 0;
+    }
     .card__side-image[data-image-position='right'] figure:after {
         right: 2rem;
     }
@@ -30369,6 +30372,7 @@ form:not([class]) .form__required-note--marker,
     color: #ffffff;
     padding: 0.25rem 1.5rem;
     border-radius: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .outline-cta--rounded-edges:disabled {
@@ -30512,10 +30516,6 @@ form:not([class]) .form__required-note--marker,
 
 .outline-cta--rounded-edges:active span, .outline-cta--rounded-edges:focus span, .outline-cta--rounded-edges:hover span {
     transform: none;
-}
-
-.outline-cta--rounded-edges:focus:focus {
-    outline-style: solid;
 }
 
 .featured-profiles-block {
