@@ -47057,8 +47057,29 @@ main > .login footer p {
     top: 0;
 }
 
-.home-banner--video video::-webkit-media-controls-overlay-play-button {
+.js .home-banner--video video::-webkit-media-controls-overlay-play-button {
     display: none;
+    -webkit-appearance: none;
+}
+
+.js .home-banner--video video::-webkit-media-controls-panel {
+    display: none !important;
+    -webkit-appearance: none;
+}
+
+.js .home-banner--video video::--webkit-media-controls-play-button {
+    display: none !important;
+    -webkit-appearance: none;
+}
+
+.js .home-banner--video video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none;
+}
+
+.js .home-banner--video video::-webkit-media-controls {
+    display: none !important;
+    -webkit-appearance: none;
 }
 
 .home-banner__content {
