@@ -572,8 +572,6 @@ function initBannerVideo(e) {
   elButtonPlay.addEventListener('click', () => {
     togglePlay(video, elButtonPlay);
   });
-  video.play();
-  console.log('video play');
   var playPromise = video.play();
 
   if (playPromise !== undefined) {
