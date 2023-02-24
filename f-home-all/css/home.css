@@ -28009,6 +28009,10 @@ article a:active {
     width: 10rem;
 }
 
+.global-footer .global-footer__awards li .logo--7rem {
+    width: 7rem;
+}
+
 .global-footer .global-footer__link-ribbon {
     margin-left: 1rem;
     margin-right: 1rem;
