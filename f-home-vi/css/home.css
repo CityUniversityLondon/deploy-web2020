@@ -47057,6 +47057,10 @@ main > .login footer p {
     top: 0;
 }
 
+.home-banner--video video::-webkit-media-controls-overlay-play-button {
+    display: none;
+}
+
 .home-banner__content {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
