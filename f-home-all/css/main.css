@@ -343,6 +343,14 @@
     background-color: #e7ebed;
 }
 
+.color--gray333 {
+    color: #333333;
+}
+
+.background--gray333 {
+    background-color: #333333;
+}
+
 .color--red5 {
     color: #fdf0ed;
 }
@@ -34082,7 +34090,7 @@ figure figcaption a:active,
 
 @media (min-width: 1024px) {
     .header-logo a {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         margin-top: 1.5rem;
     }
 }
@@ -34104,7 +34112,7 @@ figure figcaption a:active,
 @media (min-width: 1024px) {
     .global-header__utility {
         display: block;
-        grid-column-end: 22;
+        grid-column-end: 24;
         grid-column-start: 4;
         grid-row-end: 1;
         grid-row-start: 1;
@@ -34246,7 +34254,7 @@ figure figcaption a:active,
 }
 
 .global-header__utility ul li a .global-header__utility__icon {
-    color: #696969;
+    color: #333333;
     margin-left: 0.25rem;
     top: -0.125rem;
 }
@@ -34272,8 +34280,8 @@ figure figcaption a:active,
     .global-header__controls {
         align-self: stretch;
         display: flex;
-        grid-column-end: span 3;
-        grid-column-start: 22;
+        grid-column-end: span 1;
+        grid-column-start: 24;
         grid-row-end: 1;
         grid-row-start: 1;
         margin-top: 1.5rem;
@@ -41087,7 +41095,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     color: #ffffff;
 }
 
-.js .menu[data-open='true'] > .menu__display__button > button:focus .menu__display__button__button__wrapper {
+.js .menu[data-open='true'] > .menu__display__button > button:focus .text {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: solid;
@@ -41099,6 +41107,13 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #494949;
         color: #ffffff;
     }
+}
+
+.js .menu[data-open='true'] > .menu__display__button > button:active, .js .menu[data-open='true'] > .menu__display__button > button:focus {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 .js .menu[data-open='true'] > .menu__display__button > button .menu__button__icon:before {
@@ -41309,7 +41324,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     color: #ffffff;
 }
 
-.js .menu > .menu__display__button .menu__display__button__button:focus .menu__display__button__button__wrapper {
+.js .menu > .menu__display__button .menu__display__button__button:focus .text {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: solid;
@@ -41321,6 +41336,13 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #9e111c;
         color: #ffffff;
     }
+}
+
+.js .menu > .menu__display__button .menu__display__button__button:active, .js .menu > .menu__display__button .menu__display__button__button:focus {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 .js .menu > .menu__display__button .menu__display__button__button .menu__button__icon {
@@ -42827,7 +42849,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 @media (max-width: 1279px) {
     .navigation--primary {
-        padding-top: 0.5rem;
+        padding-top: 1.25rem;
         border-top: 0.0625rem solid #e5e5e5;
     }
 }
@@ -42851,7 +42873,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     list-style: none;
     margin-top: 0;
 }
@@ -48471,7 +48493,7 @@ article .link-copy {
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 @media (max-width: 1023px) {
@@ -48556,15 +48578,15 @@ article .link-copy {
         border-width: 0.0625rem;
         color: #0c0c0e;
     }
-    .global-header__search > a:focus .global-header__search__wrapper,
-    .global-header__search .global-header__search__button:focus .global-header__search__wrapper {
+    .global-header__search > a:focus .text,
+    .global-header__search .global-header__search__button:focus .text {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
         outline-style: solid;
         outline-width: 0.125rem;
     }
-    .global-header__search > a:focus:hover .global-header__search__wrapper,
-    .global-header__search .global-header__search__button:focus:hover .global-header__search__wrapper {
+    .global-header__search > a:focus:hover .text,
+    .global-header__search .global-header__search__button:focus:hover .text {
         outline-color: #ffffff;
     }
 }
@@ -48578,6 +48600,15 @@ article .link-copy {
         border-width: 0.0625rem;
         color: #ffffff;
     }
+}
+
+.global-header__search > a:active, .global-header__search > a:focus,
+.global-header__search .global-header__search__button:active,
+.global-header__search .global-header__search__button:focus {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 .global-header__search > a .global-header__search__text,
@@ -48617,6 +48648,10 @@ article .link-copy {
 }
 
 @media (max-width: 1023px) {
+    .global-header__search > a,
+    .global-header__search .global-header__search__button {
+        justify-content: center;
+    }
     .global-header__search > a .global-header__search__icon,
     .global-header__search .global-header__search__button .global-header__search__icon {
         font-size: 1.602rem;
@@ -48669,14 +48704,6 @@ article .link-copy {
 }
 
 @media (min-width: 1024px) {
-    .global-header__search > a:active, .global-header__search > a:focus,
-    .global-header__search .global-header__search__button:active,
-    .global-header__search .global-header__search__button:focus {
-        outline-color: #0c0c0e;
-        outline-offset: 0.1875rem;
-        outline-style: solid;
-        outline-width: 0.125rem;
-    }
     .global-header__search > a .global-header__search__icon,
     .global-header__search .global-header__search__button .global-header__search__icon {
         font-size: 1.602rem;
@@ -48825,6 +48852,7 @@ article .link-copy {
         margin-top: 0.5rem;
         padding-left: 0;
         padding-right: 0;
+        padding-top: 0;
     }
 }
 
@@ -48866,7 +48894,7 @@ article .link-copy {
         background-color: #0c0c0e;
         color: #ffffff;
     }
-    .js .global-header__search .global-header__search__button[aria-expanded='true']:focus .global-header__search__wrapper {
+    .js .global-header__search .global-header__search__button[aria-expanded='true']:focus .text {
         outline-color: #ffffff;
         outline-offset: 0.1875rem;
         outline-style: solid;
@@ -48879,6 +48907,13 @@ article .link-copy {
         background-color: #1e1e1e;
         color: #ffffff;
     }
+}
+
+.js .global-header__search .global-header__search__button[aria-expanded='true']:active, .js .global-header__search .global-header__search__button[aria-expanded='true']:focus {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 .js .global-header__search .global-header__search__button[aria-expanded='true'] .global-header__search__icon {
@@ -48965,8 +49000,11 @@ article .link-copy {
     }
 }
 
-.js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header .global-header__search__button {
-    grid-column: 22 / span 3;
+@media (min-width: 1024px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header .global-header__search__button {
+        grid-column: 24 / span 1;
+        margin-top: 1rem;
+    }
 }
 
 .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body {
@@ -49826,12 +49864,12 @@ article .link-copy {
 }
 
 .js .global-header__search .search--inline__query > div button, .js .global-header__search .search--inline__query > div button:focus, .js .global-header__search .search--inline__query > div button:active {
-    background-color: #ffffff;
-    color: #0c0c0e;
+    background-color: #d61726;
+    color: #ffffff;
 }
 
 .js .global-header__search .search--inline__query > div button:focus .search--inline__query__submit__content {
-    outline-color: #0c0c0e;
+    outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: solid;
     outline-width: 0.125rem;
@@ -49839,33 +49877,14 @@ article .link-copy {
 
 @media (hover: hover) {
     .js .global-header__search .search--inline__query > div button:hover {
-        background-color: #a1a1a1;
-        color: #0c0c0e;
+        background-color: #9e111c;
+        color: #ffffff;
     }
 }
 
 @media (max-width: 1023px) {
     .js .global-header__search .search--inline__query > div button {
         margin-left: 1rem;
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-        display: inline-block;
-        padding-bottom: 0.5rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        padding-top: 0.5rem;
-        transition: background-color 0.6s;
     }
     .js .global-header__search .search--inline__query > div button .search--inline__query__submit__text {
         border: 0;
@@ -49876,59 +49895,6 @@ article .link-copy {
         padding: 0;
         position: absolute;
         width: 1px;
-    }
-}
-
-@media (max-width: 1023px) and (hover: hover) {
-    .js .global-header__search .search--inline__query > div button:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-@media (max-width: 1023px) {
-    .js .global-header__search .search--inline__query > div button:focus, .js .global-header__search .search--inline__query > div button:active {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-    .js .global-header__search .search--inline__query > div button, .js .global-header__search .search--inline__query > div button:focus, .js .global-header__search .search--inline__query > div button:active {
-        background-color: #d61726;
-        color: #ffffff;
-    }
-    .js .global-header__search .search--inline__query > div button:focus .search--inline__query__submit__content {
-        outline-color: #ffffff;
-        outline-offset: 0.1875rem;
-        outline-style: solid;
-        outline-width: 0.125rem;
-    }
-}
-
-@media (max-width: 1023px) and (hover: hover) {
-    .js .global-header__search .search--inline__query > div button:hover {
-        background-color: #a1a1a1;
-        color: #ffffff;
     }
 }
 
@@ -50122,6 +50088,7 @@ article .link-copy {
     right: 0.5rem;
     top: 0.25rem;
     width: 2.25rem;
+    background-color: initial;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -50145,12 +50112,6 @@ article .link-copy {
 @media (min-width: 7680px) {
     .js .global-header__search .search--inline__query__input .search--inline__clear {
         letter-spacing: -0.017em;
-    }
-}
-
-@media (max-width: 1023px) {
-    .js .global-header__search .search--inline__query__input .search--inline__clear {
-        background-color: initial;
     }
 }
 
