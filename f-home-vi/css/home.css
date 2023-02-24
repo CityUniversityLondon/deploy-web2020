@@ -47067,7 +47067,7 @@ main > .login footer p {
     -webkit-appearance: none;
 }
 
-.js .home-banner--video video::--webkit-media-controls-play-button {
+.js .home-banner--video video::-webkit-media-controls-play-button {
     display: none !important;
     -webkit-appearance: none;
 }
