@@ -47140,12 +47140,13 @@ main > .login footer p {
     color: #ffffff;
     height: 3rem;
     width: 3rem;
-    background-color: #d61726;
+    background-color: #1e1e1e;
     position: absolute;
     top: 80%;
     right: 2rem;
     z-index: 2;
     padding: 0.5rem;
+    transition: all .2s ease-in-out;
 }
 
 @media (min-width: 768px) {
@@ -47154,8 +47155,20 @@ main > .login footer p {
     }
 }
 
+@media (hover: hover) {
+    .banner__video__button:hover {
+        background-color: #d61726;
+        transform: scale(1.2);
+    }
+}
+
+.banner__video__button:focus {
+    background-color: #d61726;
+}
+
 .banner__video__button:focus, .banner__video__button:active {
-    border: 0.125rem solid #ffffff;
+    outline: 0.125rem solid #ffffff;
+    outline-offset: 3px;
 }
 
 .banner__video__button .button__img--pause {
@@ -47168,6 +47181,12 @@ main > .login footer p {
 
 .banner__video__button.play {
     background-color: #1e1e1e;
+}
+
+@media (hover: hover) {
+    .banner__video__button.play:hover {
+        background-color: #d61726;
+    }
 }
 
 .banner__video__button.play .button__img--pause {
