@@ -47277,11 +47277,6 @@ main > .login footer p {
     margin-top: 1.5rem;
 }
 
-.home-banner--takeover ~ * {
-    position: relative;
-    background: #ffffff;
-}
-
 .home-banner--takeover .takeover__content__ctas {
     display: flex;
     flex-direction: row;
@@ -47294,6 +47289,12 @@ main > .login footer p {
 
 .home-banner--takeover ~ .search-box__wrapper .search-box__text__wrapper {
     padding-bottom: 4rem;
+}
+
+.home-banner--takeover ~ * {
+    position: relative;
+    background: #ffffff;
+    padding-top: 0.01rem;
 }
 
 @keyframes moveUp {
