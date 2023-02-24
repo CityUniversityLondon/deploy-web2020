@@ -583,6 +583,10 @@ function createControlButton(parent, video) {
   elButtonPlay.addEventListener('click', () => {
     togglePlay(video, elButtonPlay);
   });
+  video.addEventListener('ended', () => {
+    elButtonPlay.classList.toggle('play');
+    elButtonPlay.setAttribute('aria-label', 'play button');
+  });
 }
 /**
  * gracefully handle blocked automatic playback
