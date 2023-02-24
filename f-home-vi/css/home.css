@@ -47143,7 +47143,23 @@ main > .login footer p {
 }
 
 .home-banner__strapline {
-    grid-column: 2 / -1;
+    grid-column: 1 / -1;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 901px) {
+    .home-banner__strapline {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-banner__strapline {
+        grid-column: 2 / -1;
+        padding: 0;
+    }
 }
 
 .home-banner__strapline__text {
