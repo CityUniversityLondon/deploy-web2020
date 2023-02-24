@@ -44049,6 +44049,7 @@ a .link-decorator {
     color: #ffffff;
     padding: 0.25rem 1.5rem;
     border-radius: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .outline-cta--rounded-edges:disabled {
@@ -44192,10 +44193,6 @@ a .link-decorator {
 
 .outline-cta--rounded-edges:active span, .outline-cta--rounded-edges:focus span, .outline-cta--rounded-edges:hover span {
     transform: none;
-}
-
-.outline-cta--rounded-edges:focus:focus {
-    outline-style: solid;
 }
 
 /*
@@ -46172,6 +46169,8 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     border-radius: 100%;
     padding: 0.5rem;
     pointer-events: none;
+    min-width: 30px;
+    min-height: 30px;
 }
 
 .search-box__select:not(.search-box__select--sort).search-box__select--selected select {
@@ -46921,13 +46920,6 @@ main > .login footer p {
     height: 100%;
     background-color: #d61726;
     background-size: cover;
-    background-color: #1e1e1e;
-}
-
-@media (min-width: 768px) {
-    .home-banner {
-        background-color: #d61726;
-    }
 }
 
 .home-banner .hero-image img,
@@ -46971,7 +46963,7 @@ main > .login footer p {
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.55);
     width: 100%;
     height: 100%;
 }
@@ -47060,20 +47052,9 @@ main > .login footer p {
     outline-width: 0.125rem;
 }
 
-.js .home-banner .hero-image {
-    display: block;
-}
-
-.js .home-banner .hero-image[data-poster='off'] {
-    display: none;
-}
-
-.js .home-banner .banner__video {
-    display: none;
-}
-
-.js .home-banner .banner__video[data-poster='off'] {
-    display: block;
+.home-banner--video .hero-image {
+    position: absolute;
+    top: 0;
 }
 
 .home-banner__content {
@@ -47083,6 +47064,8 @@ main > .login footer p {
     width: 100%;
     height: 100%;
     z-index: 2;
+    position: absolute;
+    top: 0;
 }
 
 @media (min-width: 768px) {
@@ -47097,16 +47080,9 @@ main > .login footer p {
     }
 }
 
-@media (min-width: 768px) {
-    .home-banner__content {
-        position: absolute;
-        top: 0;
-    }
-}
-
 .home-banner__content__text {
     position: absolute;
-    bottom: 10rem;
+    top: 50%;
     grid-column: 2 / -2;
     color: #ffffff;
     width: 100%;
@@ -47120,6 +47096,10 @@ main > .login footer p {
         padding-left: 2rem;
         padding-right: 2rem;
     }
+}
+
+.home-banner__content__text p {
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.65);
 }
 
 .home-banner__content__text p,
@@ -47144,18 +47124,16 @@ main > .login footer p {
 }
 
 .home-banner__strapline__text {
-    padding: 1rem 0;
+    padding: 3rem 0;
     background-color: transparent;
-    height: 8rem;
-    width: 8rem;
+    height: 10rem;
+    width: 10rem;
 }
 
 @media (min-width: 768px) {
     .home-banner__strapline__text {
         background-color: #d61726;
         padding: 3rem 1rem;
-        height: 10rem;
-        width: 10rem;
     }
 }
 
@@ -47504,21 +47482,6 @@ main > .login footer p {
 
 .home__pathway.in-view .triangle__block--right {
     animation: moveUpAndRotate 1s;
-}
-
-.home__pathway .triangle__block {
-    width: 10rem;
-}
-
-.home__pathway .triangle__block--left {
-    margin-bottom: -9rem;
-}
-
-.home__pathway .triangle__block--right {
-    right: 0;
-    position: absolute;
-    transform: rotate(180deg);
-    margin-top: -10rem;
 }
 
 .home__pathway .pathway .pathway__cards {
@@ -48192,6 +48155,18 @@ main > .login footer p {
     background-size: cover;
 }
 
+.home__promo[data-position='right'] .wrap--home__promo__card {
+    margin-left: auto;
+}
+
+.home__promo[data-position='right'] .triangle__block--right {
+    display: none;
+}
+
+.home__promo[data-position='left'] .triangle__block--left {
+    display: none;
+}
+
 .home__promo .home__promo__text p {
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-family: "Meta Sans", sans-serif;
@@ -48210,10 +48185,6 @@ main > .login footer p {
     width: 50%;
 }
 
-.home__promo .wrap--home__promo__card[data-position='right'] {
-    margin-left: auto;
-}
-
 .home__promo .home__promo__title {
     margin-top: 0;
 }
@@ -48223,12 +48194,31 @@ main > .login footer p {
 }
 
 .home__promo .home__promo__card {
+    position: relative;
+    z-index: 1;
     background-color: #ffffff;
     padding: 2.5rem;
 }
 
 .home__promo .basic-cta--bright:focus, .home__promo .basic-cta--bright:active {
     outline-style: solid;
+}
+
+.home__promo .triangle__block {
+    filter: brightness(0) invert(1);
+    bottom: 0;
+    position: absolute;
+}
+
+.home__promo .triangle__block.triangle__block--left {
+    margin-bottom: 0;
+    transform: rotate(270deg);
+    left: -1px;
+}
+
+.home__promo .triangle__block.triangle__block--right {
+    right: 0;
+    transform: rotate(180deg);
 }
 
 @media (max-width: 1023px) {
@@ -48592,6 +48582,21 @@ main > .login footer p {
 
 .home-new-vi .navigation--secondary {
     display: none;
+}
+
+.home-new-vi .triangle__block {
+    width: 10rem;
+}
+
+.home-new-vi .triangle__block--left {
+    margin-bottom: -9rem;
+}
+
+.home-new-vi .triangle__block--right {
+    right: 0;
+    position: absolute;
+    transform: rotate(180deg);
+    margin-top: -10rem;
 }
 
 .home-new-vi main {
