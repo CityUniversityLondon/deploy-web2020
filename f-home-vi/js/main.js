@@ -550,11 +550,22 @@ document.addEventListener('DOMContentLoaded', () => {
 __webpack_require__.r(__webpack_exports__);
 
 
-// import { createHTMLElement } from '../../../util';
+/**
+ * Autoplay video asyncronously and Create control buttons for home page video.
+ *
+ * @module paint-layouts/home/home-vi-sections
+ * @author Web Development
+ * @copyright City, University of London
+ */
 const className = 'home-banner--video';
+/**
+ * Create control buttons for home page video.
+ *
+ * @param {element} parent - video wrapper element
+ * @param {element} video - HTML video element.
+ */
 
-function initBannerVideo(e) {
-  const video = e.querySelector('.banner__video');
+function createControlButton(parent, video) {
   const urlPlayButton = video.dataset.playButton;
   const urlPauseButton = video.dataset.pauseButton;
   const elButtonPlay = document.createElement('button');
@@ -564,33 +575,53 @@ function initBannerVideo(e) {
   elImgPlay.classList.add('button__img--play');
   elImgPause.src = urlPauseButton;
   elImgPause.classList.add('button__img--pause');
-  elButtonPlay.setAttribute('aria-label', 'Video play and pause');
+  elButtonPlay.setAttribute('aria-label', 'plause button');
   elButtonPlay.classList.add('banner__video__button');
   elButtonPlay.appendChild(elImgPlay);
   elButtonPlay.appendChild(elImgPause);
-  e.appendChild(elButtonPlay);
+  parent.appendChild(elButtonPlay);
   elButtonPlay.addEventListener('click', () => {
     togglePlay(video, elButtonPlay);
   });
-  var playPromise = video.play();
+}
+/**
+ * gracefully handle blocked automatic playback
+ *
+ * @param {element} video -  HTML video element.
+ * @param {element} button - video control button created by createControlButton() function
+ */
 
-  if (playPromise !== undefined) {
-    playPromise.then(() => {
-      togglePlay(video, elButtonPlay);
-    }).catch(error => {
-      console.error(error);
-    });
+
+async function playVideo(video, button) {
+  try {
+    await video.play();
+    button.classList.toggle('play');
+    button.setAttribute('aria-label', 'pause button');
+  } catch (err) {
+    button.classList.toggle('play');
+    button.setAttribute('aria-label', 'play button');
   }
 }
+/**
+ * video button event listener totoggle play/pause
+ *
+ * @param {element} video -  HTML video element.
+ * @param {element} button - video control button created by createControlButton() function
+ */
+
 
 function togglePlay(vid, button) {
   if (vid.paused || vid.ended) {
-    vid.play();
-    button.classList.toggle('play');
+    playVideo(vid, button);
   } else {
     vid.pause();
     button.classList.toggle('play');
   }
+}
+
+function initBannerVideo(e) {
+  const video = e.querySelector('.banner__video');
+  createControlButton(e, video);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
