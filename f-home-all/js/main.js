@@ -557,7 +557,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London
  */
-const className = 'banner__video';
+const className = 'home-banner__video';
 /**
  * Create control buttons for home page video.
  *
