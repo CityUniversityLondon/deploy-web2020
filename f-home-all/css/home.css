@@ -47719,16 +47719,6 @@ main > .login footer p {
     display: none;
 }
 
-.banner__video__button.play {
-    background-color: #1e1e1e;
-}
-
-@media (hover: hover) {
-    .banner__video__button.play:hover {
-        background-color: #d61726;
-    }
-}
-
 .banner__video__button.play .button__img--pause {
     display: none;
 }
