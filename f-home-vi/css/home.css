@@ -47494,6 +47494,10 @@ main > .login footer p {
     }
 }
 
+.no-js .home__pathway .pathway .card--pathway {
+    opacity: 1;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -47790,6 +47794,15 @@ main > .login footer p {
     }
 }
 
+.no-js .home__social .card {
+    opacity: 1;
+}
+
+.no-js .home__social .social__img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
 .home__news-events {
     display: flex;
     gap: 1rem;
@@ -48019,6 +48032,10 @@ main > .login footer p {
     }
 }
 
+.no-js .home__news-events .related-content {
+    margin-left: 0;
+}
+
 .home__promo {
     position: relative;
     background-image: url("https://www.city.ac.uk/__data/assets/image/0007/720673/student-life-desktop.jpg");
@@ -48162,6 +48179,11 @@ main > .login footer p {
         opacity: 0;
         transform: translateY(100%);
     }
+}
+
+.no-js .home__promo .wrap--home__promo__card {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 @media (max-width: 767px) {
