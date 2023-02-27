@@ -5194,6 +5194,26 @@ function launchMouseoverGallery(mouseoverGallery) {
   let media = mouseoverGallery.getElementsByClassName('media__container'),
       links = mouseoverGallery.getElementsByTagName('a'),
       allImages;
+  /**
+   * Example HTML for pattern. Ensure data-id is the same on the picture and anchor elements.
+   *
+   *  <div class="mouseover-gallery">
+   *      <div class="wrap--research__media">
+   *          <picture data-id="[shared ID]" class="media__container out">
+   *              <source srcset="[image path]">
+   *              <img srcset="[image path]" class="media__container__img" alt="[image description]">
+   *          </picture>
+   *      </div>
+   *      <div class="wrap--research__links">
+   *          <ul>
+   *              <li class="research__link">
+   *                  <a href="https://www.city.ac.uk/about/schools" class="linked-heading" data-id="[shared ID]" data-image="[image-path]"></a>
+   *              </li>
+   *          </ul>
+   *      </div>
+   *  </div>
+   */
+
   const mediaElements = mouseoverGallery.querySelectorAll('.media__container'),
         pictureElements = mouseoverGallery.getElementsByTagName('picture');
   mediaElements.length === pictureElements.length ? allImages = true : allImages = false; // Only run mouseover behaviour if all media assets are images
@@ -5202,7 +5222,7 @@ function launchMouseoverGallery(mouseoverGallery) {
     for (const link of links) {
       link.addEventListener('mouseover', () => {
         for (const m of media) {
-          m.id === link.id ? m.className = 'media__container in' : m.className = 'media__container out';
+          m.dataset.id === link.dataset.id ? m.className = 'media__container in' : m.className = 'media__container out';
         }
       });
     }
