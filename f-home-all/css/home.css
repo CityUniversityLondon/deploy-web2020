@@ -47529,6 +47529,14 @@ main > .login footer p {
     outline-width: 0.125rem;
 }
 
+.home-banner .cta-block__cta {
+    display: inline-block;
+}
+
+.home-banner .cta-block__cta:not(:first-of-type) {
+    margin-left: 1rem;
+}
+
 .home-banner--video .hero-image {
     position: absolute;
     top: 0;
@@ -47676,7 +47684,7 @@ main > .login footer p {
     position: absolute;
     top: 80%;
     right: 2rem;
-    z-index: 2;
+    z-index: 3;
     padding: 0.5rem;
     transition: all .2s ease-in-out;
 }
@@ -47969,6 +47977,10 @@ main > .login footer p {
     .home__pathway .pathway .card--pathway .wrap--icon__img {
         margin-bottom: 0.25rem;
     }
+}
+
+.no-js .home__pathway .pathway .card--pathway {
+    opacity: 1;
 }
 
 @keyframes fadeIn {
@@ -48267,6 +48279,15 @@ main > .login footer p {
     }
 }
 
+.no-js .home__social .card {
+    opacity: 1;
+}
+
+.no-js .home__social .social__img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
 .home__news-events {
     display: flex;
     gap: 1rem;
@@ -48496,6 +48517,10 @@ main > .login footer p {
     }
 }
 
+.no-js .home__news-events .related-content {
+    margin-left: 0;
+}
+
 .home__promo {
     position: relative;
     background-image: url("https://www.city.ac.uk/__data/assets/image/0007/720673/student-life-desktop.jpg");
@@ -48639,6 +48664,11 @@ main > .login footer p {
         opacity: 0;
         transform: translateY(100%);
     }
+}
+
+.no-js .home__promo .wrap--home__promo__card {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 @media (max-width: 767px) {
