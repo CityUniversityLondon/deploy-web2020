@@ -629,12 +629,7 @@ function takeOver(box) {
   defaultTransitionElemnt = box;
 
   if (box.getAttribute('data-transition-watch-elemnt')) {
-    /*
-    elemntWatch = document.querySelector(
-        box.getAttribute('data-transition-watch-elemnt')
-    );
-    */
-    elemntWatch = box;
+    elemntWatch = document.querySelector(box.getAttribute('data-transition-watch-elemnt'));
   } else {
     elemntWatch = box;
   }
