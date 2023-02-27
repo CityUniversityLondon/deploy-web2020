@@ -47448,17 +47448,6 @@ main > .login footer p {
     min-height: 100%;
 }
 
-.home-banner .hero-image__veil:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.55);
-    width: 100%;
-    height: 100%;
-}
-
 .home-banner .cta-block a {
     display: inline-block;
     background-color: initial;
@@ -47546,6 +47535,17 @@ main > .login footer p {
 .home-banner--video .hero-image {
     position: absolute;
     top: 0;
+}
+
+.js .hero-image__veil:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 100%;
 }
 
 .js .home-banner--video video::-webkit-media-controls-overlay-play-button {
