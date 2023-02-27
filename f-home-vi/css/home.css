@@ -46715,9 +46715,9 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     padding: 0.75rem;
 }
 
-.search-box__cta p {
+.search-box__cta .search-box__cta__heading {
     color: #ffffff;
-    margin-top: initial;
+    margin-top: 0.75rem;
     margin-left: 0.5rem;
     font-weight: 700;
 }
