@@ -47362,7 +47362,7 @@ main > .login footer p {
     margin-top: 1.5rem;
 }
 
-.home-banner--promo-alt .home-banner--promo-alt__content__ctas {
+.home-banner--promo-alt .cta-block {
     display: flex;
     flex-direction: row;
     gap: 1rem;
