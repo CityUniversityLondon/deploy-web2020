@@ -48054,6 +48054,7 @@ main > .login footer p {
     z-index: 1;
     background-color: #ffffff;
     padding: 2.5rem;
+    box-shadow: 0 2px RGB(0 0 0/2%), 0 0 6px RGB(0 0 0/3%), 0 0 10px RGB(0 0 0/4%), 0 0 18px RGB(0 0 0/4%), 0 0 34px RGB(0 0 0/5%), 0 0 80px RGB(0 0 0/7%);
 }
 
 .home__promo .basic-cta--bright:focus, .home__promo .basic-cta--bright:active {
@@ -48061,7 +48062,6 @@ main > .login footer p {
 }
 
 .home__promo .triangle__block {
-    filter: brightness(0) invert(1);
     bottom: 0;
     position: absolute;
 }
