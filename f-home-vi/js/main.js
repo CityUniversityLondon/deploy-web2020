@@ -557,15 +557,14 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London
  */
-const className = 'home-banner--video';
+const className = 'banner__video';
 /**
  * Create control buttons for home page video.
  *
- * @param {element} parent - video wrapper element
  * @param {element} video - HTML video element.
  */
 
-function createControlButton(parent, video) {
+function createControlButton(video) {
   const urlPlayButton = video.dataset.playButton;
   const urlPauseButton = video.dataset.pauseButton;
   const elButtonPlay = document.createElement('button');
@@ -577,17 +576,17 @@ function createControlButton(parent, video) {
   elImgPause.src = urlPauseButton;
   elImgPause.classList.add('button__img--pause');
   elImgPause.setAttribute('alt', '');
-  elButtonPlay.setAttribute('aria-label', 'pause button');
+  elButtonPlay.setAttribute('aria-label', 'pause background video');
   elButtonPlay.classList.add('banner__video__button');
   elButtonPlay.appendChild(elImgPlay);
   elButtonPlay.appendChild(elImgPause);
-  parent.appendChild(elButtonPlay);
+  video.insertAdjacentElement('afterend', elButtonPlay);
   elButtonPlay.addEventListener('click', () => {
     togglePlay(video, elButtonPlay);
   });
   video.addEventListener('ended', () => {
     elButtonPlay.classList.toggle('play');
-    elButtonPlay.setAttribute('aria-label', 'play button');
+    elButtonPlay.setAttribute('aria-label', 'play background video');
   });
 }
 /**
@@ -602,10 +601,10 @@ async function playVideo(video, button) {
   try {
     await video.play();
     button.classList.toggle('play');
-    button.setAttribute('aria-label', 'pause button');
+    button.setAttribute('aria-label', 'pause background video');
   } catch (err) {
     button.classList.toggle('play');
-    button.setAttribute('aria-label', 'play button');
+    button.setAttribute('aria-label', 'play background video');
   }
 }
 /**
@@ -622,12 +621,12 @@ function togglePlay(vid, button) {
   } else {
     vid.pause();
     button.classList.toggle('play');
+    button.setAttribute('aria-label', 'play background video');
   }
 }
 
 function initBannerVideo(e) {
-  const video = e.querySelector('.banner__video');
-  createControlButton(e, video);
+  createControlButton(e);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({

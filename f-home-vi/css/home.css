@@ -47052,6 +47052,14 @@ main > .login footer p {
     outline-width: 0.125rem;
 }
 
+.home-banner .cta-block__cta {
+    display: inline-block;
+}
+
+.home-banner .cta-block__cta:not(:first-of-type) {
+    margin-left: 1rem;
+}
+
 .home-banner--video .hero-image {
     position: absolute;
     top: 0;
@@ -47199,7 +47207,7 @@ main > .login footer p {
     position: absolute;
     top: 80%;
     right: 2rem;
-    z-index: 2;
+    z-index: 3;
     padding: 0.5rem;
     transition: all .2s ease-in-out;
 }
