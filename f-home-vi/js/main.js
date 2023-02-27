@@ -575,7 +575,8 @@ function createControlButton(parent, video) {
   elImgPlay.classList.add('button__img--play');
   elImgPause.src = urlPauseButton;
   elImgPause.classList.add('button__img--pause');
-  elButtonPlay.setAttribute('aria-label', 'plause button');
+  elButtonPlay.setAttribute('aria-label', 'pause button');
+  elButtonPlay.setAttribute('alt', '');
   elButtonPlay.classList.add('banner__video__button');
   elButtonPlay.appendChild(elImgPlay);
   elButtonPlay.appendChild(elImgPause);
