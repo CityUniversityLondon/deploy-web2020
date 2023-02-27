@@ -47269,6 +47269,7 @@ main > .login footer p {
 }
 
 .home__pathway {
+    position: relative;
     margin: 0 0 2.5rem 0;
 }
 
@@ -47344,6 +47345,11 @@ main > .login footer p {
     }
 }
 
+.home__pathway .triangle__block--left {
+    position: absolute;
+    margin-top: -1rem;
+}
+
 .home__pathway.in-view .triangle__block--left {
     animation: moveUp 1s;
 }
@@ -47365,6 +47371,7 @@ main > .login footer p {
 @media (max-width: 1023px) {
     .home__pathway .pathway .pathway__cards {
         display: block;
+        padding-top: 0.25rem;
     }
 }
 
@@ -47372,7 +47379,7 @@ main > .login footer p {
     list-style-type: none;
     opacity: 0;
     transition: opacity 2s;
-    margin-top: 0;
+    margin-top: 1rem;
     z-index: 1;
     background: #ffffff;
 }
@@ -47566,7 +47573,6 @@ main > .login footer p {
 }
 
 .home__social .card__content__body {
-    border-bottom: 0.0625rem solid #a1a1a1;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 }
