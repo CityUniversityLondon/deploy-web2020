@@ -47082,6 +47082,16 @@ main > .login footer p {
     -webkit-appearance: none;
 }
 
+.no-js .home-banner__strapline {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.no-js .home-banner__content {
+    position: initial;
+}
+
 .home-banner__content {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
