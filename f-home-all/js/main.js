@@ -573,10 +573,11 @@ function createControlButton(parent, video) {
   const elImgPause = document.createElement('img');
   elImgPlay.src = urlPlayButton;
   elImgPlay.classList.add('button__img--play');
+  elImgPlay.setAttribute('alt', '');
   elImgPause.src = urlPauseButton;
   elImgPause.classList.add('button__img--pause');
+  elImgPause.setAttribute('alt', '');
   elButtonPlay.setAttribute('aria-label', 'pause button');
-  elButtonPlay.setAttribute('alt', '');
   elButtonPlay.classList.add('banner__video__button');
   elButtonPlay.appendChild(elImgPlay);
   elButtonPlay.appendChild(elImgPause);
