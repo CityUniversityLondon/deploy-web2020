@@ -539,6 +539,91 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /***/ }),
 
+/***/ "./src/paint-layouts/home/home-vi-sections/banner-promo-alt.js":
+/*!*********************************************************************!*\
+  !*** ./src/paint-layouts/home/home-vi-sections/banner-promo-alt.js ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+const className = 'home-banner--promo-alt';
+let prevRatio = 0.0;
+let elementWatch;
+let defaultTransitionElemnt;
+let scale = 'scale(1.0X)';
+
+function takeOver(box) {
+  defaultTransitionElemnt = box;
+
+  if (box.getAttribute('data-transition-watch-element')) {
+    elementWatch = document.querySelector(box.getAttribute('data-transition-watch-element'));
+  } else {
+    elementWatch = box;
+  }
+
+  console.log(elementWatch);
+  let observer;
+  let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: buildThresholdList()
+  };
+  observer = new IntersectionObserver(handleIntersect, options);
+  observer.observe(elementWatch);
+}
+
+function buildThresholdList() {
+  let thresholds = [];
+  let numSteps = 60;
+
+  for (let i = 1.0; i <= numSteps; i++) {
+    let ratio = i / numSteps;
+    thresholds.push(ratio);
+  }
+
+  thresholds.push(0);
+  return thresholds;
+}
+
+function handleIntersect(entries) {
+  entries.forEach(entry => {
+    console.log('entry.intersectionRatio: ' + entry.intersectionRatio);
+    console.log('ratio is: ' + Math.round(10 - entry.intersectionRatio * 10));
+
+    if (entry.intersectionRatio > prevRatio) {
+      /*
+      defaultTransitionElemnt.querySelector(
+          '.takeover-transition-opacity'
+      ).style.opacity = entry.intersectionRatio;
+      */
+      defaultTransitionElemnt.querySelector('.banner-transition-ele').style.transform = scale.replace('X', Math.round(10 - entry.intersectionRatio * 10));
+      entry.intersectionRatio === 0 ? defaultTransitionElemnt.querySelector('.banner-transition-ele').style.position = 'absolute' : defaultTransitionElemnt.querySelector('.banner-transition-ele').style.position = 'fixed';
+    } else {
+      defaultTransitionElemnt.querySelector('.banner-transition-ele').style.transform = scale.replace('X', Math.round(10 - entry.intersectionRatio * 10));
+      entry.intersectionRatio === 0 ? defaultTransitionElemnt.querySelector('.banner-transition-ele').style.position = 'absolute' : defaultTransitionElemnt.querySelector('.banner-transition-ele').style.position = 'fixed';
+    }
+
+    prevRatio = entry.intersectionRatio;
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: takeOver,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
 /***/ "./src/paint-layouts/home/home-vi-sections/play-button.js":
 /*!****************************************************************!*\
   !*** ./src/paint-layouts/home/home-vi-sections/play-button.js ***!
@@ -602,91 +687,6 @@ function togglePlay(vid, button) {
 
 /***/ }),
 
-/***/ "./src/paint-layouts/home/home-vi-sections/transition-image-takeover.js":
-/*!******************************************************************************!*\
-  !*** ./src/paint-layouts/home/home-vi-sections/transition-image-takeover.js ***!
-  \******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
-
-
-
-
-const className = 'takeover-transition';
-let prevRatio = 0.0;
-let elemntWatch;
-let defaultTransitionElemnt;
-let scale = 'scale(1.0X)';
-
-function takeOver(box) {
-  defaultTransitionElemnt = box;
-
-  if (box.getAttribute('data-transition-watch-elemnt')) {
-    elemntWatch = document.querySelector(box.getAttribute('data-transition-watch-elemnt'));
-  } else {
-    elemntWatch = box;
-  }
-
-  console.log(elemntWatch);
-  let observer;
-  let options = {
-    root: null,
-    rootMargin: '0px',
-    threshold: buildThresholdList()
-  };
-  observer = new IntersectionObserver(handleIntersect, options);
-  observer.observe(elemntWatch);
-}
-
-function buildThresholdList() {
-  let thresholds = [];
-  let numSteps = 60;
-
-  for (let i = 1.0; i <= numSteps; i++) {
-    let ratio = i / numSteps;
-    thresholds.push(ratio);
-  }
-
-  thresholds.push(0);
-  return thresholds;
-}
-
-function handleIntersect(entries) {
-  entries.forEach(entry => {
-    console.log('entry.intersectionRatio: ' + entry.intersectionRatio);
-    console.log('ratio is: ' + Math.round(10 - entry.intersectionRatio * 10));
-
-    if (entry.intersectionRatio > prevRatio) {
-      /*
-      defaultTransitionElemnt.querySelector(
-          '.takeover-transition-opacity'
-      ).style.opacity = entry.intersectionRatio;
-      */
-      defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.transform = scale.replace('X', Math.round(10 - entry.intersectionRatio * 10));
-      entry.intersectionRatio === 0 ? defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.position = 'absolute' : defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.position = 'fixed';
-    } else {
-      defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.transform = scale.replace('X', Math.round(10 - entry.intersectionRatio * 10));
-      entry.intersectionRatio === 0 ? defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.position = 'absolute' : defaultTransitionElemnt.querySelector('.takeover-transition-opacity').style.position = 'fixed';
-    }
-
-    prevRatio = entry.intersectionRatio;
-  });
-}
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: takeOver,
-  launchQuery: `.${className}`
-});
-
-/***/ }),
-
 /***/ "./src/patterns.js":
 /*!*************************!*\
   !*** ./src/patterns.js ***!
@@ -730,7 +730,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
 /* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
 /* harmony import */ var _patterns_video_video__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./patterns/video/video */ "./src/patterns/video/video.js");
-/* harmony import */ var _paint_layouts_home_home_vi_sections_transition_image_takeover__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/transition-image-takeover */ "./src/paint-layouts/home/home-vi-sections/transition-image-takeover.js");
+/* harmony import */ var _paint_layouts_home_home_vi_sections_banner_promo_alt__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/banner-promo-alt */ "./src/paint-layouts/home/home-vi-sections/banner-promo-alt.js");
 /* harmony import */ var _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/play-button */ "./src/paint-layouts/home/home-vi-sections/play-button.js");
 
 
@@ -779,7 +779,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_33__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_19__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_35__["default"], _paint_layouts_home_home_vi_sections_transition_image_takeover__WEBPACK_IMPORTED_MODULE_34__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_video_video__WEBPACK_IMPORTED_MODULE_33__["default"], _patterns_animation_particle_particle__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_19__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_35__["default"], _paint_layouts_home_home_vi_sections_banner_promo_alt__WEBPACK_IMPORTED_MODULE_34__["default"]]);
 
 /***/ }),
 
