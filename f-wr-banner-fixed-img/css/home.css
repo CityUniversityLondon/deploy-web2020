@@ -47358,7 +47358,7 @@ main > .login footer p {
 }
 
 .home-banner--promo-alt .home-banner--promo-alt__content__text,
-.home-banner--promo-alt .home-banner--promo-alt__content__ctas {
+.home-banner--promo-alt .cta-block {
     margin-top: 1.5rem;
 }
 
@@ -47379,6 +47379,7 @@ main > .login footer p {
 .home-banner--promo-alt ~ * {
     position: relative;
     padding-top: 0.01rem;
+    background: #ffffff;
 }
 
 @keyframes moveUp {
