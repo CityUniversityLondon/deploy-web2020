@@ -4673,6 +4673,7 @@ function createMenuToggle(label, button, setMenu, veil) {
   buttonWrapper.className = 'menu__display__button__button__wrapper';
   button.setAttribute('type', 'button');
   button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hasPopup, 'menu');
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].lael, 'Toggle menu');
   Array.from(label.childNodes).forEach(child => buttonWrapper.appendChild(child));
   button.appendChild(buttonWrapper);
   const trap = focus_trap__WEBPACK_IMPORTED_MODULE_0___default()(menu, {
