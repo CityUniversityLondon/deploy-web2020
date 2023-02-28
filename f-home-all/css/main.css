@@ -28417,6 +28417,11 @@ form:not([class]) .form__required-note--marker,
     content: '';
 }
 
+.outline-cta--dark:focus {
+    color: #0c0c0e;
+    background-color: #ffffff;
+}
+
 .outline-cta--dark:active span, .outline-cta--dark:focus span, .outline-cta--dark:hover span {
     transform: none;
 }
@@ -30520,6 +30525,11 @@ form:not([class]) .form__required-note--marker,
 
 .outline-cta--rounded-edges:after {
     content: '';
+}
+
+.outline-cta--rounded-edges:focus {
+    color: #0c0c0e;
+    background-color: #ffffff;
 }
 
 .outline-cta--rounded-edges:active span, .outline-cta--rounded-edges:focus span, .outline-cta--rounded-edges:hover span {
@@ -58886,6 +58896,11 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:after, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:after, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:after {
     content: '';
+}
+
+.promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:focus, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:focus, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:focus {
+    color: #0c0c0e;
+    background-color: #ffffff;
 }
 
 .promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:active span, .promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:focus span, .promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:hover span, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:active span, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:focus span, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:hover span, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:active span, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:focus span, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:hover span {
