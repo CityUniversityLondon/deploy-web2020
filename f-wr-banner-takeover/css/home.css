@@ -47358,11 +47358,11 @@ main > .login footer p {
 }
 
 .home-banner--takeover .takeover__content__text,
-.home-banner--takeover .takeover__content__ctas {
+.home-banner--takeover .cta-block {
     margin-top: 1.5rem;
 }
 
-.home-banner--takeover .takeover__content__ctas {
+.home-banner--takeover .cta-block {
     display: flex;
     flex-direction: row;
     gap: 1rem;
