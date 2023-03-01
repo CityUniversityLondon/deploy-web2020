@@ -47797,6 +47797,12 @@ main > .login footer p {
     outline-offset: 3px;
 }
 
+.banner__video__button .button__img--pause,
+.banner__video__button .button__img--play {
+    margin: auto;
+    height: 100%;
+}
+
 .banner__video__button .button__img--pause {
     display: block;
 }
