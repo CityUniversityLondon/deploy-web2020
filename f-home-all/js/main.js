@@ -566,7 +566,9 @@ const className = 'home-banner__video';
 
 function createControlButton(video) {
   const urlPlayButton = video.dataset.playButton;
-  const urlPauseButton = video.dataset.pauseButton;
+  const urlPauseButton = video.dataset.pauseButton; // new wrap element to contain grid
+
+  const elButtonWrap = document.createElement('div');
   const elButtonPlay = document.createElement('button');
   const elImgPlay = document.createElement('img');
   const elImgPause = document.createElement('img');
@@ -576,11 +578,13 @@ function createControlButton(video) {
   elImgPause.src = urlPauseButton;
   elImgPause.classList.add('button__img--pause');
   elImgPause.setAttribute('alt', '');
+  elButtonWrap.classList.add('banner__video__button__wrap');
   elButtonPlay.setAttribute('aria-label', 'pause background video');
   elButtonPlay.classList.add('banner__video__button');
   elButtonPlay.appendChild(elImgPlay);
   elButtonPlay.appendChild(elImgPause);
-  video.insertAdjacentElement('afterend', elButtonPlay);
+  elButtonWrap.appendChild(elButtonPlay);
+  video.insertAdjacentElement('afterend', elButtonWrap);
   elButtonPlay.addEventListener('click', () => {
     togglePlay(video, elButtonPlay);
   });
