@@ -567,9 +567,11 @@ const className = 'home-banner__video';
 function createControlButton(video) {
   const urlPlayButton = video.dataset.playButton;
   const urlPauseButton = video.dataset.pauseButton;
+  const wrapper = document.createElement('div');
   const elButtonPlay = document.createElement('button');
   const elImgPlay = document.createElement('img');
   const elImgPause = document.createElement('img');
+  wrapper.classList.add('banner__video__button__wrapper');
   elImgPlay.src = urlPlayButton;
   elImgPlay.classList.add('button__img--play');
   elImgPlay.setAttribute('alt', '');
@@ -580,7 +582,8 @@ function createControlButton(video) {
   elButtonPlay.classList.add('banner__video__button');
   elButtonPlay.appendChild(elImgPlay);
   elButtonPlay.appendChild(elImgPause);
-  video.insertAdjacentElement('afterend', elButtonPlay);
+  wrapper.appendChild(elButtonPlay);
+  video.insertAdjacentElement('afterend', wrapper);
   elButtonPlay.addEventListener('click', () => {
     togglePlay(video, elButtonPlay);
   });

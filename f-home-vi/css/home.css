@@ -47082,54 +47082,13 @@ main > .login footer p {
     top: 0;
 }
 
-.js .home-banner--video video::-webkit-media-controls-overlay-play-button {
-    display: none;
-    -webkit-appearance: none;
-}
-
-.js .home-banner--video video::-webkit-media-controls-panel {
-    display: none !important;
-    -webkit-appearance: none;
-}
-
-.js .home-banner--video video::-webkit-media-controls-play-button {
-    display: none !important;
-    -webkit-appearance: none;
-}
-
-.js .home-banner--video video::-webkit-media-controls-start-playback-button {
-    display: none !important;
-    -webkit-appearance: none;
-}
-
-.js .home-banner--video video::-webkit-media-controls {
-    display: none !important;
-    -webkit-appearance: none;
-}
-
-.no-js .home-banner__strapline {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.no-js .home-banner__content {
-    position: initial;
-}
-
-.no-js .home-banner--video .hero-image__veil:before {
-    content: none;
-}
-
 .home-banner__content {
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
-    display: grid;
     width: 100%;
     height: 100%;
     z-index: 2;
-    position: absolute;
-    top: 0;
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
 }
 
 @media (min-width: 768px) {
@@ -47144,10 +47103,90 @@ main > .login footer p {
     }
 }
 
+@media (min-width: 1024px) {
+    .home-banner__content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .home-banner__content {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .home-banner__content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1441px) {
+    .home-banner__content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.banner__video__button__wrapper {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .banner__video__button__wrapper {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .banner__video__button__wrapper {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .banner__video__button__wrapper {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .banner__video__button__wrapper {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .banner__video__button__wrapper {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1441px) {
+    .banner__video__button__wrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .home-banner__content__text {
     position: absolute;
     top: 50%;
-    grid-column: 2 / -2;
+    grid-column: 1 / -1;
     color: #ffffff;
     width: 100%;
     z-index: 2;
@@ -47173,16 +47212,17 @@ main > .login footer p {
 @media (min-width: 768px) {
     .home-banner__content__text {
         top: 60%;
-        grid-column: 2 / -3;
     }
     .home-banner__content__text p, .home-banner__content__text ul {
         text-align: center;
-        margin: auto;
     }
 }
 
 .home-banner__strapline {
-    grid-column: 1 / -1;
+    grid-column: 1/-1;
+    position: absolute;
+    top: 0;
+    z-index: 3;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
@@ -47196,7 +47236,6 @@ main > .login footer p {
 
 @media (min-width: 1024px) {
     .home-banner__strapline {
-        grid-column: 2 / -1;
         padding: 0;
     }
 }
@@ -47217,22 +47256,17 @@ main > .login footer p {
 
 .banner__video__button {
     border-radius: 50%;
+    border: 0.125rem solid #ffffff;
     color: #ffffff;
     height: 3rem;
     width: 3rem;
     background-color: #1e1e1e;
     position: absolute;
-    top: 80%;
+    bottom: 10%;
     right: 2rem;
     z-index: 3;
     padding: 0.5rem;
     transition: all .2s ease-in-out;
-}
-
-@media (min-width: 768px) {
-    .banner__video__button {
-        top: 60%;
-    }
 }
 
 @media (hover: hover) {
@@ -47265,6 +47299,40 @@ main > .login footer p {
 
 .banner__video__button.play .button__img--play {
     display: block;
+}
+
+.js .home-banner--video video::-webkit-media-controls-overlay-play-button {
+    display: none;
+}
+
+.js .home-banner--video video::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+.js .home-banner--video video::-webkit-media-controls-play-button {
+    display: none !important;
+}
+
+.js .home-banner--video video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
+
+.js .home-banner--video video::-webkit-media-controls {
+    display: none !important;
+}
+
+.no-js .home-banner__strapline {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.no-js .home-banner__content {
+    position: initial;
+}
+
+.no-js .home-banner--video .hero-image__veil:before {
+    content: none;
 }
 
 @keyframes moveUp {
