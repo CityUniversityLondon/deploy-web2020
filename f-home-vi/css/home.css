@@ -28823,15 +28823,14 @@ article a:active {
     height: 100%;
 }
 
-.promo-strap {
-    background-color: #3e1031;
-    background: linear-gradient(90deg, #b91924 0%, #5d184a 70%, #3e1031 100%);
+.announcement {
+    background-color: #1e1e1e;
     color: #ffffff;
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
 
-.promo-strap .promo-strap__content {
+.announcement .announcement__content {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1rem;
@@ -28851,82 +28850,82 @@ article a:active {
     text-align: center;
 }
 
-.promo-strap .promo-strap__content i,
-.promo-strap .promo-strap__content em {
+.announcement .announcement__content i,
+.announcement .announcement__content em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.promo-strap .promo-strap__content b,
-.promo-strap .promo-strap__content strong {
+.announcement .announcement__content b,
+.announcement .announcement__content strong {
     font-weight: inherit;
 }
 
-.promo-strap .promo-strap__content i,
-.promo-strap .promo-strap__content em {
+.announcement .announcement__content i,
+.announcement .announcement__content em {
     font-style: italic;
 }
 
-.promo-strap .promo-strap__content u {
+.announcement .announcement__content u {
     text-decoration: none;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         letter-spacing: -0.017em;
     }
 }
 
-.promo-strap .promo-strap__content b,
-.promo-strap .promo-strap__content strong {
+.announcement .announcement__content b,
+.announcement .announcement__content strong {
     font-weight: 600;
 }
 
 @media (min-width: 901px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 901px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 @media (min-width: 1441px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-.promo-strap .promo-strap__content sup,
-.promo-strap .promo-strap__content sub {
+.announcement .announcement__content sup,
+.announcement .announcement__content sub {
     font-size: 0.7em;
     line-height: 0.7em;
 }
 
-.promo-strap .promo-strap__content a {
+.announcement .announcement__content a {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -28946,7 +28945,7 @@ article a:active {
 }
 
 @media (hover: hover) {
-    .promo-strap .promo-strap__content a:hover {
+    .announcement .announcement__content a:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -28963,7 +28962,7 @@ article a:active {
     }
 }
 
-.promo-strap .promo-strap__content a:focus, .promo-strap .promo-strap__content a:active {
+.announcement .announcement__content a:focus, .announcement .announcement__content a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -28979,24 +28978,24 @@ article a:active {
     text-decoration: none;
 }
 
-.promo-strap .promo-strap__content a:focus, .promo-strap .promo-strap__content a:active {
+.announcement .announcement__content a:focus, .announcement .announcement__content a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
     outline-style: dotted;
     outline-width: 0.125rem;
 }
 
-.promo-strap .promo-strap__content a:visited {
+.announcement .announcement__content a:visited {
     color: #ffffff;
 }
 
-.promo-strap .promo-strap__content a:focus {
+.announcement .announcement__content a:focus {
     color: #ffffff;
     text-decoration: underline;
 }
 
 @media (hover: hover) {
-    .promo-strap .promo-strap__content a:hover {
+    .announcement .announcement__content a:hover {
         color: #ffffff;
         text-decoration: underline;
     }
