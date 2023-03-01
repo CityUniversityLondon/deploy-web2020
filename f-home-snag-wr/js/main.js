@@ -577,15 +577,13 @@ function createControlButton(video) {
   elImgPlay.setAttribute('alt', '');
   elImgPause.src = urlPauseButton;
   elImgPause.classList.add('button__img--pause');
-  elImgPause.setAttribute('alt', ''); // assign class to new element
-
+  elImgPause.setAttribute('alt', '');
   elButtonWrap.classList.add('banner__video__button__wrap');
   elButtonPlay.setAttribute('aria-label', 'pause background video');
   elButtonPlay.classList.add('banner__video__button');
   elButtonPlay.appendChild(elImgPlay);
   elButtonPlay.appendChild(elImgPause);
-  elButtonWrap.appendChild(elButtonPlay); // insert new element
-
+  elButtonWrap.appendChild(elButtonPlay);
   video.insertAdjacentElement('afterend', elButtonWrap);
   elButtonPlay.addEventListener('click', () => {
     togglePlay(video, elButtonPlay);
