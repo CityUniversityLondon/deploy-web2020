@@ -45941,6 +45941,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     grid-column: 7 / span 10;
 }
 
+#search-box form select {
+    padding-right: 1rem;
+}
+
 .search-box__text__wrapper {
     background-color: #d61726;
     padding-bottom: 2rem;
