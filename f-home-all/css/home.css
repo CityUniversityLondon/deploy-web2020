@@ -47670,12 +47670,28 @@ main > .login footer p {
     background-color: transparent;
     height: 10rem;
     width: 10rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+}
+
+@media (min-width: 901px) {
+    .home-banner__strapline__text {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
 }
 
 @media (min-width: 768px) {
     .home-banner__strapline__text {
         background-color: #d61726;
         padding: 3rem 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-banner__strapline__text {
+        margin-left: 0;
     }
 }
 
