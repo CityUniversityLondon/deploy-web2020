@@ -66683,6 +66683,7 @@ main .home .home__whats-happening .related-content {
 .home-new-vi main {
     margin: 0;
     padding: 0;
+    max-width: inherit;
 }
 
 .home-new-vi main p {
