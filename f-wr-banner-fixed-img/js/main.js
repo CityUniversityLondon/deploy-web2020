@@ -635,49 +635,87 @@ function handleIntersect(entries) {
 __webpack_require__.r(__webpack_exports__);
 
 
-// import { createHTMLElement } from '../../../util';
-const className = 'home-banner--video';
+/**
+ * Autoplay video asyncronously and Create control buttons for home page video.
+ *
+ * @module paint-layouts/home/home-vi-sections
+ * @author Web Development
+ * @copyright City, University of London
+ */
+const className = 'home-banner__video';
+/**
+ * Create control buttons for home page video.
+ *
+ * @param {element} video - HTML video element.
+ */
 
-function initBannerVideo(e) {
-  const video = e.querySelector('.banner__video');
+function createControlButton(video) {
   const urlPlayButton = video.dataset.playButton;
-  const urlPauseButton = video.dataset.pauseButton;
+  const urlPauseButton = video.dataset.pauseButton; // new wrap element to contain grid
+
+  const elButtonWrap = document.createElement('div');
   const elButtonPlay = document.createElement('button');
   const elImgPlay = document.createElement('img');
   const elImgPause = document.createElement('img');
   elImgPlay.src = urlPlayButton;
   elImgPlay.classList.add('button__img--play');
+  elImgPlay.setAttribute('alt', '');
   elImgPause.src = urlPauseButton;
   elImgPause.classList.add('button__img--pause');
-  elButtonPlay.setAttribute('aria-label', 'Video play and pause');
+  elImgPause.setAttribute('alt', '');
+  elButtonWrap.classList.add('banner__video__button__wrap');
+  elButtonPlay.setAttribute('aria-label', 'pause background video');
   elButtonPlay.classList.add('banner__video__button');
   elButtonPlay.appendChild(elImgPlay);
   elButtonPlay.appendChild(elImgPause);
-  e.appendChild(elButtonPlay);
+  elButtonWrap.appendChild(elButtonPlay);
+  video.insertAdjacentElement('afterend', elButtonWrap);
   elButtonPlay.addEventListener('click', () => {
     togglePlay(video, elButtonPlay);
   });
-  video.play();
-  console.log('video play');
-  var playPromise = video.play();
+  video.addEventListener('ended', () => {
+    elButtonPlay.classList.toggle('play');
+    elButtonPlay.setAttribute('aria-label', 'play background video');
+  });
+}
+/**
+ * gracefully handle blocked automatic playback
+ *
+ * @param {element} video -  HTML video element.
+ * @param {element} button - video control button created by createControlButton() function
+ */
 
-  if (playPromise !== undefined) {
-    playPromise.then(() => {
-      togglePlay(video, elButtonPlay);
-    }).catch(error => {
-      console.error(error);
-    });
+
+async function playVideo(video, button) {
+  try {
+    await video.play();
+    button.classList.toggle('play');
+    button.setAttribute('aria-label', 'pause background video');
+  } catch (err) {
+    button.classList.toggle('play');
+    button.setAttribute('aria-label', 'play background video');
   }
 }
+/**
+ * video button event listener totoggle play/pause
+ *
+ * @param {element} video -  HTML video element.
+ * @param {element} button - video control button created by createControlButton() function
+ */
+
 
 function togglePlay(vid, button) {
   if (vid.paused || vid.ended) {
-    vid.play();
-    button.classList.toggle('play');
+    playVideo(vid, button);
   } else {
     vid.pause();
     button.classList.toggle('play');
+    button.setAttribute('aria-label', 'play background video');
   }
+}
+
+function initBannerVideo(e) {
+  createControlButton(e);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4592,7 +4630,19 @@ function setNavigationItemButtonDetails(button, open, rootClass) {
 
 
 function toggleSubNavigation(button, rootClass) {
-  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded);
+  const expanded = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded); // Menu slide open/close animation for mobile menu
+
+  if (expanded === 'true') {
+    button.parentNode.parentNode.classList.remove('menu-animation__slideOpen');
+    button.parentNode.parentNode.classList.add('menu-animation__slideClose');
+    setTimeout(() => {
+      button.parentNode.parentNode.classList.remove('menu-animation__slideClose');
+    }, 1000); // fixes a bug with sub menu, when opening and closing burger bun after interaction already took place inside the menu
+  } else {
+    button.parentNode.parentNode.classList.remove('menu-animation__slideClose');
+    button.parentNode.parentNode.classList.add('menu-animation__slideOpen');
+  }
+
   Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(expanded) ? setNavigationItemButtonDetails(button, false, rootClass) : setNavigationItemButtonDetails(button, true, rootClass);
   zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.intoView(button.closest('li'), scrollDuration);
 }
@@ -4786,6 +4836,7 @@ function createMenuToggle(label, button, setMenu, veil) {
   buttonWrapper.className = 'menu__display__button__button__wrapper';
   button.setAttribute('type', 'button');
   button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hasPopup, 'menu');
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'Toggle menu');
   Array.from(label.childNodes).forEach(child => buttonWrapper.appendChild(child));
   button.appendChild(buttonWrapper);
   const trap = focus_trap__WEBPACK_IMPORTED_MODULE_0___default()(menu, {
@@ -5234,6 +5285,26 @@ function launchMouseoverGallery(mouseoverGallery) {
   let media = mouseoverGallery.getElementsByClassName('media__container'),
       links = mouseoverGallery.getElementsByTagName('a'),
       allImages;
+  /**
+   * Example HTML for pattern. Ensure data-id is the same on the picture and anchor elements.
+   *
+   *  <div class="mouseover-gallery">
+   *      <div class="wrap--research__media">
+   *          <picture data-id="[shared ID]" class="media__container out">
+   *              <source srcset="[image path]">
+   *              <img srcset="[image path]" class="media__container__img" alt="[image description]">
+   *          </picture>
+   *      </div>
+   *      <div class="wrap--research__links">
+   *          <ul>
+   *              <li class="research__link">
+   *                  <a href="https://www.city.ac.uk/about/schools" class="linked-heading" data-id="[shared ID]" data-image="[image-path]"></a>
+   *              </li>
+   *          </ul>
+   *      </div>
+   *  </div>
+   */
+
   const mediaElements = mouseoverGallery.querySelectorAll('.media__container'),
         pictureElements = mouseoverGallery.getElementsByTagName('picture');
   mediaElements.length === pictureElements.length ? allImages = true : allImages = false; // Only run mouseover behaviour if all media assets are images
@@ -5242,7 +5313,7 @@ function launchMouseoverGallery(mouseoverGallery) {
     for (const link of links) {
       link.addEventListener('mouseover', () => {
         for (const m of media) {
-          m.id === link.id ? m.className = 'media__container in' : m.className = 'media__container out';
+          m.dataset.id === link.dataset.id ? m.className = 'media__container in' : m.className = 'media__container out';
         }
       });
     }
@@ -5303,6 +5374,13 @@ function createCloseAll(navigation, veil) {
   return () => {
     const buttons = Array.from(navigation.querySelectorAll('.navigation--primary__level1 > .navigation__button'));
     buttons.forEach(button => {
+      const open = button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded);
+
+      if (open === 'true') {
+        button.classList.remove('menu-animation__slideOpen');
+        button.classList.add('menu-animation__slideClose');
+      }
+
       button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, 'false');
       button.querySelector(`.${openCloseTextClassName}`).replaceChild(document.createTextNode(openText), button.querySelector(`.${openCloseTextClassName}`).firstChild);
     });
@@ -5325,6 +5403,8 @@ function createSectionToggle(button, closeAll, veil) {
 
     if (open) {
       button.closest(`.${classNameSpecific}`).dataset.open = 'true';
+      button.classList.remove('menu-animation__slideClose');
+      button.classList.add('menu-animation__slideOpen');
       veil.dataset.on = 'true';
       button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, open);
       button.querySelector(`.${openCloseTextClassName}`).replaceChild(document.createTextNode(closeText), button.querySelector(`.${openCloseTextClassName}`).firstChild);
@@ -5453,20 +5533,22 @@ function prepareLowerLevels(navigation) {
 
 
 function prepareHeaders(navigation) {
-  Array.from(navigation.querySelectorAll(`.${headerClassName}`)).forEach(header => {
-    const link = header.querySelector('a'),
-          textWrapper = document.createElement('span');
+  Array.from(navigation.querySelectorAll('.navigation--primary__level1')).forEach(headertop => {
+    Array.from(headertop.querySelectorAll(`.${headerClassName}`)).forEach(header => {
+      const link = header.querySelector('a'),
+            textWrapper = document.createElement('span');
 
-    if (!link) {
-      const currentPageWrapper = document.createElement('span'),
-            linkText = header.firstChild.wholeText.trim() + ' overview';
-      textWrapper.appendChild(document.createTextNode(linkText));
-      currentPageWrapper.appendChild(textWrapper);
-      header.replaceChild(currentPageWrapper, header.firstChild);
-    } else {
-      textWrapper.innerText = link.innerText + ' overview';
-      link.replaceChild(textWrapper, link.firstChild);
-    }
+      if (!link) {
+        const currentPageWrapper = document.createElement('span'),
+              linkText = header.firstChild.wholeText.trim() + ' overview';
+        textWrapper.appendChild(document.createTextNode(linkText));
+        currentPageWrapper.appendChild(textWrapper);
+        header.replaceChild(currentPageWrapper, header.firstChild);
+      } else {
+        textWrapper.innerText = headertop.getAttribute('data-title') + ' overview';
+        link.replaceChild(textWrapper, link.firstChild);
+      }
+    });
   });
 }
 /**

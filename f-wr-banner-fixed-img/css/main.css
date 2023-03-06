@@ -343,6 +343,14 @@
     background-color: #e7ebed;
 }
 
+.color--gray333 {
+    color: #333333;
+}
+
+.background--gray333 {
+    background-color: #333333;
+}
+
 .color--red5 {
     color: #fdf0ed;
 }
@@ -20580,7 +20588,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card .card__anchor:focus, .card .card__anchor:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -22192,7 +22200,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--blue50.background--purewhite a:focus, .card__side-image.background--blue50.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -22337,7 +22345,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--blue70.background--purewhite a:focus, .card__side-image.background--blue70.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -22482,7 +22490,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--blue90.background--purewhite a:focus, .card__side-image.background--blue90.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -22627,7 +22635,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--brown40.background--purewhite a:focus, .card__side-image.background--brown40.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -22772,7 +22780,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--green50.background--purewhite a:focus, .card__side-image.background--green50.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -22917,7 +22925,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--orange50.background--purewhite a:focus, .card__side-image.background--orange50.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -23062,7 +23070,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--orange80.background--purewhite a:focus, .card__side-image.background--orange80.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -23207,7 +23215,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--pink90.background--purewhite a:focus, .card__side-image.background--pink90.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -23352,7 +23360,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--purewhite.background--purewhite a:focus, .card__side-image.background--purewhite.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -23497,7 +23505,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--purple50.background--purewhite a:focus, .card__side-image.background--purple50.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -23642,7 +23650,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--purple80.background--purewhite a:focus, .card__side-image.background--purple80.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -23787,7 +23795,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--red50.background--purewhite a:focus, .card__side-image.background--red50.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -23932,7 +23940,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--teal90.background--purewhite a:focus, .card__side-image.background--teal90.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -24077,7 +24085,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card__side-image.background--yellow20.background--purewhite a:focus, .card__side-image.background--yellow20.background--purewhite a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -24721,7 +24729,7 @@ article a:focus, article a:active {
 article a:focus, article a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -25051,7 +25059,7 @@ form:not([class]) textarea:not([type='submit']):focus,
 .form textarea:not([type='submit']):focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -25136,7 +25144,7 @@ form:not([class]) textarea[type='submit']:active,
 .form textarea[type='submit']:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -25173,7 +25181,7 @@ form:not([class]) textarea[type='submit']:focus,
 .form textarea[type='submit']:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -25761,7 +25769,7 @@ form:not([class]) .form__required-note--marker,
 .back-to-top[data-docked='true'] a:focus, .back-to-top[data-docked='true'] a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -26841,7 +26849,7 @@ form:not([class]) .form__required-note--marker,
 .breadcrumbs ol li a:focus, .breadcrumbs ol li a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -27124,7 +27132,7 @@ form:not([class]) .form__required-note--marker,
 .cms-editor .cms-editor-warning-remover:focus, .cms-editor .cms-editor-warning-remover:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -27259,7 +27267,7 @@ form:not([class]) .form__required-note--marker,
 .primary-cta-arrow--bright:focus:focus, .primary-cta-arrow--bright:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -27281,7 +27289,7 @@ form:not([class]) .form__required-note--marker,
 .primary-cta-arrow--bright:active:focus, .primary-cta-arrow--bright:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -27408,7 +27416,7 @@ form:not([class]) .form__required-note--marker,
 .primary-cta--bright:focus:focus, .primary-cta--bright:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -27430,7 +27438,7 @@ form:not([class]) .form__required-note--marker,
 .primary-cta--bright:active:focus, .primary-cta--bright:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -27603,7 +27611,7 @@ form:not([class]) .form__required-note--marker,
 .primary-cta-arrow--dark:active:focus, .primary-cta-arrow--dark:active:active, .primary-cta-arrow--dark:focus:focus, .primary-cta-arrow--dark:focus:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -27739,7 +27747,7 @@ form:not([class]) .form__required-note--marker,
 .primary-cta--dark:active:focus, .primary-cta--dark:active:active, .primary-cta--dark:focus:focus, .primary-cta--dark:focus:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -27913,7 +27921,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta-arrow--bright:focus:focus, .outline-cta-arrow--bright:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -27935,7 +27943,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta-arrow--bright:active:focus, .outline-cta-arrow--bright:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -28059,7 +28067,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta--bright:focus:focus, .outline-cta--bright:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -28081,7 +28089,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta--bright:active:focus, .outline-cta--bright:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -28234,7 +28242,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta-arrow--dark:focus:focus, .outline-cta-arrow--dark:focus:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -28245,7 +28253,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta-arrow--dark:active:focus, .outline-cta-arrow--dark:active:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -28380,7 +28388,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta--dark:focus:focus, .outline-cta--dark:focus:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -28391,7 +28399,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta--dark:active:focus, .outline-cta--dark:active:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -28407,6 +28415,11 @@ form:not([class]) .form__required-note--marker,
 
 .outline-cta--dark:after {
     content: '';
+}
+
+.outline-cta--dark:focus {
+    color: #0c0c0e;
+    background-color: #ffffff;
 }
 
 .outline-cta--dark:active span, .outline-cta--dark:focus span, .outline-cta--dark:hover span {
@@ -28530,7 +28543,7 @@ form:not([class]) .form__required-note--marker,
 .basic-cta--bright:focus:focus, .basic-cta--bright:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -28552,7 +28565,7 @@ form:not([class]) .form__required-note--marker,
 .basic-cta--bright:active:focus, .basic-cta--bright:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -28724,7 +28737,7 @@ form:not([class]) .form__required-note--marker,
 .basic-cta--dark:focus:focus, .basic-cta--dark:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -28746,7 +28759,7 @@ form:not([class]) .form__required-note--marker,
 .basic-cta--dark:active:focus, .basic-cta--dark:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -28828,7 +28841,7 @@ form:not([class]) .form__required-note--marker,
 .basic-cta--dark:focus:focus, .basic-cta--dark:focus:active, .basic-cta--dark:active:focus, .basic-cta--dark:active:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -28955,7 +28968,7 @@ form:not([class]) .form__required-note--marker,
 .primary-cta--grey--bright:focus:focus, .primary-cta--grey--bright:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -28977,7 +28990,7 @@ form:not([class]) .form__required-note--marker,
 .primary-cta--grey--bright:active:focus, .primary-cta--grey--bright:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -29152,7 +29165,7 @@ form:not([class]) .form__required-note--marker,
 .basic-cta--lifelong-learning-primary:focus:focus, .basic-cta--lifelong-learning-primary:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -29174,7 +29187,7 @@ form:not([class]) .form__required-note--marker,
 .basic-cta--lifelong-learning-primary:active:focus, .basic-cta--lifelong-learning-primary:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -29301,7 +29314,7 @@ form:not([class]) .form__required-note--marker,
 .basic-cta--lifelong-learning-secondary:focus:focus, .basic-cta--lifelong-learning-secondary:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -29323,7 +29336,7 @@ form:not([class]) .form__required-note--marker,
 .basic-cta--lifelong-learning-secondary:active:focus, .basic-cta--lifelong-learning-secondary:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -29494,7 +29507,7 @@ form:not([class]) .form__required-note--marker,
 .primary-cta--grey--bright:active:focus, .primary-cta--grey--bright:active:active, .primary-cta--grey--bright:focus:focus, .primary-cta--grey--bright:focus:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -29673,7 +29686,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta--bright-square:focus:focus, .outline-cta--bright-square:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -29695,7 +29708,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta--bright-square:active:focus, .outline-cta--bright-square:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -29846,7 +29859,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta--bright-red-ol:focus:focus, .outline-cta--bright-red-ol:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -29868,7 +29881,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta--bright-red-ol:active:focus, .outline-cta--bright-red-ol:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -30015,7 +30028,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta--mixed-red-gray:focus:focus, .outline-cta--mixed-red-gray:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -30037,7 +30050,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta--mixed-red-gray:active:focus, .outline-cta--mixed-red-gray:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -30190,7 +30203,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta-play--dark:focus:focus, .outline-cta-play--dark:focus:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -30201,7 +30214,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta-play--dark:active:focus, .outline-cta-play--dark:active:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -30325,7 +30338,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta-play--light:focus:focus, .outline-cta-play--light:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -30347,7 +30360,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta-play--light:active:focus, .outline-cta-play--light:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -30485,7 +30498,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta--rounded-edges:focus:focus, .outline-cta--rounded-edges:focus:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -30496,7 +30509,7 @@ form:not([class]) .form__required-note--marker,
 .outline-cta--rounded-edges:active:focus, .outline-cta--rounded-edges:active:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -30512,6 +30525,11 @@ form:not([class]) .form__required-note--marker,
 
 .outline-cta--rounded-edges:after {
     content: '';
+}
+
+.outline-cta--rounded-edges:focus {
+    color: #0c0c0e;
+    background-color: #ffffff;
 }
 
 .outline-cta--rounded-edges:active span, .outline-cta--rounded-edges:focus span, .outline-cta--rounded-edges:hover span {
@@ -31397,7 +31415,7 @@ form:not([class]) .form__required-note--marker,
 .feedback .feedback__direct button:focus:focus, .feedback .feedback__direct button:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -31419,7 +31437,7 @@ form:not([class]) .form__required-note--marker,
 .feedback .feedback__direct button:active:focus, .feedback .feedback__direct button:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -31565,7 +31583,7 @@ form:not([class]) .form__required-note--marker,
 .feedback .feedback__form-link a:focus, .feedback .feedback__form-link a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -31654,14 +31672,14 @@ figure a:focus, figure a:active {
 figure a:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
 figure a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -31769,7 +31787,7 @@ figure figcaption a:focus, figure figcaption a:active,
 .figcaption-like a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -31987,7 +32005,7 @@ figure figcaption a:active,
 .course-footer.background--pink80 a:focus, .course-footer.background--pink80 a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -32128,7 +32146,7 @@ figure figcaption a:active,
 .global-footer .wrapper--global-footer__content__section--contact__directory a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -32273,7 +32291,7 @@ figure figcaption a:active,
 .global-footer .global-footer__awards a:focus {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -32281,7 +32299,7 @@ figure figcaption a:active,
 .global-footer .global-footer__awards a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -32339,14 +32357,14 @@ figure figcaption a:active,
 .global-footer .global-footer__content__section--contact__content > a:focus {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
 .global-footer .global-footer__content__section--contact__content > a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -32371,17 +32389,17 @@ figure figcaption a:active,
 
 @media (hover: hover) {
     .global-footer .global-footer__social-media a:hover {
-        border-color: #e93745;
+        border-color: #d61726;
     }
     .global-footer .global-footer__social-media a:hover .icon {
-        color: #e93745;
+        color: #d61726;
     }
 }
 
 .global-footer .global-footer__social-media a:active, .global-footer .global-footer__social-media a:focus {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -32440,7 +32458,7 @@ figure figcaption a:active,
     .global-footer .global-footer__link-ribbon a:focus, .global-footer .global-footer__link-ribbon a:active {
         outline-color: #ffffff;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .global-footer .global-footer__link-ribbon a .global-footer__link-ribbon__name {
@@ -32616,7 +32634,7 @@ figure figcaption a:active,
     .global-footer .global-footer__link-ribbon a:focus, .global-footer .global-footer__link-ribbon a:active {
         outline-color: #ffffff;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .global-footer .global-footer__link-ribbon a .global-footer__link-ribbon__name__text {
@@ -32785,7 +32803,7 @@ figure figcaption a:active,
     border-bottom: 0;
     border-left: 0;
     border-right: 0;
-    border-top: 0.125rem solid #494949;
+    border-top: 0.125rem solid #1e1e1e;
     color: transparent;
     margin-top: 2rem;
     width: 100%;
@@ -32878,8 +32896,78 @@ figure figcaption a:active,
     }
 }
 
+.global-footer .global-footer__tagline {
+    font-size: 1.266rem;
+    line-height: 1.33333;
+    letter-spacing: -0.011em;
+    font-family: "Meta Sans", sans-serif;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.625;
+    margin-top: 0.75rem;
+    max-width: 55ch;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .global-footer .global-footer__tagline {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .global-footer .global-footer__tagline {
+        letter-spacing: -0.015em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .global-footer .global-footer__tagline {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .global-footer .global-footer__tagline {
+        letter-spacing: -0.017em;
+    }
+}
+
+.global-footer .global-footer__tagline i,
+.global-footer .global-footer__tagline em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+@media (min-width: 901px) {
+    .global-footer .global-footer__tagline {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .global-footer .global-footer__tagline {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1441px) {
+    .global-footer .global-footer__tagline {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .global-footer .wrapper--global-footer {
-    background-color: #303030;
+    background-color: #0c0c0e;
     color: #ffffff;
     padding-top: 2rem;
     grid-column: 1/-1;
@@ -32901,7 +32989,6 @@ figure figcaption a:active,
     padding-right: 1.5rem;
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
-    background-color: #303030;
     color: #ffffff;
     display: grid;
     padding-bottom: 2rem;
@@ -33068,6 +33155,11 @@ figure figcaption a:active,
     }
 }
 
+.global-footer .global-footer__content__section h2,
+.global-footer .global-footer__content__section h3 {
+    font-weight: 400;
+}
+
 @media (min-width: 900px) {
     .global-footer .global-footer__content__section--contact__content {
         display: flex;
@@ -33199,7 +33291,7 @@ figure figcaption a:active,
     outline-style: none;
     outline-width: 0;
     text-decoration: none;
-    background-color: transparent;
+    background-color: #d61726;
     border-style: solid;
     border-width: 0.0625rem;
     display: inline-block;
@@ -33248,13 +33340,13 @@ figure figcaption a:active,
 .global-footer .global-footer__content__section--location__cta:focus, .global-footer .global-footer__content__section--location__cta:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
 .global-footer .global-footer__content__section--location__cta, .global-footer .global-footer__content__section--location__cta:focus, .global-footer .global-footer__content__section--location__cta:active {
-    background-color: transparent;
-    border-color: #e93745;
+    background-color: #d61726;
+    border-color: #d61726;
     border-style: solid;
     border-width: 0.0625rem;
     color: #ffffff;
@@ -33262,8 +33354,8 @@ figure figcaption a:active,
 
 @media (hover: hover) {
     .global-footer .global-footer__content__section--location__cta:hover {
-        background-color: #d61726;
-        border-color: #d61726;
+        background-color: #b91924;
+        border-color: #b91924;
         border-style: solid;
         border-width: 0.0625rem;
         color: #ffffff;
@@ -33287,28 +33379,49 @@ figure figcaption a:active,
 
 .global-footer .global-footer__awards {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     list-style: none;
     margin-top: 1rem;
+    gap: 1.5rem;
 }
 
 @media (min-width: 900px) {
     .global-footer .global-footer__awards {
         margin-top: 0;
+        justify-content: space-between;
+    }
+    .global-footer .global-footer__awards li {
+        flex-basis: 40%;
     }
 }
 
-.global-footer .global-footer__awards li {
-    margin-top: 1.5rem;
+@media (max-width: 899px) {
+    .global-footer .global-footer__awards {
+        margin-top: 2rem;
+        justify-content: space-between;
+    }
+    .global-footer .global-footer__awards li {
+        flex-basis: 27%;
+    }
 }
 
-.global-footer .global-footer__awards li:first-of-type {
-    margin-top: 0;
+@media (max-width: 767px) {
+    .global-footer .global-footer__awards {
+        margin-top: 2rem;
+        justify-content: space-around;
+    }
+    .global-footer .global-footer__awards li {
+        flex-basis: 35%;
+    }
 }
 
 .global-footer .global-footer__awards li .logo {
     width: 10rem;
+}
+
+.global-footer .global-footer__awards li .logo--7rem {
+    width: 7rem;
 }
 
 .global-footer .global-footer__link-ribbon {
@@ -33574,9 +33687,8 @@ figure figcaption a:active,
 
 .global-footer .global-footer__social-media li a {
     border-color: #ffffff;
-    border-radius: 50%;
     border-style: solid;
-    border-width: 0.125rem;
+    border-width: 0.0625rem;
     display: inline-block;
     height: 2rem;
     padding: 0.25rem;
@@ -33969,14 +34081,14 @@ figure figcaption a:active,
 .header-logo a:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
 .header-logo a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -33988,7 +34100,7 @@ figure figcaption a:active,
 
 @media (min-width: 1024px) {
     .header-logo a {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         margin-top: 1.5rem;
     }
 }
@@ -34010,10 +34122,11 @@ figure figcaption a:active,
 @media (min-width: 1024px) {
     .global-header__utility {
         display: block;
-        grid-column-end: 22;
+        grid-column-end: 24;
         grid-column-start: 4;
         grid-row-end: 1;
         grid-row-start: 1;
+        margin-top: 1.5rem;
     }
 }
 
@@ -34060,10 +34173,7 @@ figure figcaption a:active,
     }
 }
 
-.global-header__utility ul li:not(:last-of-type):after {
-    color: #cbcbcb;
-    content: '|';
-    margin-left: 0.75rem;
+.global-header__utility ul li:not(:last-of-type) {
     margin-right: 0.75rem;
 }
 
@@ -34121,7 +34231,7 @@ figure figcaption a:active,
 .global-header__utility ul li a:focus, .global-header__utility ul li a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -34154,7 +34264,7 @@ figure figcaption a:active,
 }
 
 .global-header__utility ul li a .global-header__utility__icon {
-    color: #696969;
+    color: #333333;
     margin-left: 0.25rem;
     top: -0.125rem;
 }
@@ -34180,10 +34290,11 @@ figure figcaption a:active,
     .global-header__controls {
         align-self: stretch;
         display: flex;
-        grid-column-end: span 3;
-        grid-column-start: 22;
+        grid-column-end: span 1;
+        grid-column-start: 24;
         grid-row-end: 1;
         grid-row-start: 1;
+        margin-top: 1.5rem;
     }
 }
 
@@ -34216,15 +34327,14 @@ figure figcaption a:active,
     height: 100%;
 }
 
-.promo-strap {
-    background-color: #3e1031;
-    background: linear-gradient(90deg, #b91924 0%, #5d184a 70%, #3e1031 100%);
+.announcement {
+    background-color: #1e1e1e;
     color: #ffffff;
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
 
-.promo-strap .promo-strap__content {
+.announcement .announcement__content {
     font-family: "Meta Sans", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1rem;
@@ -34244,82 +34354,82 @@ figure figcaption a:active,
     text-align: center;
 }
 
-.promo-strap .promo-strap__content i,
-.promo-strap .promo-strap__content em {
+.announcement .announcement__content i,
+.announcement .announcement__content em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.promo-strap .promo-strap__content b,
-.promo-strap .promo-strap__content strong {
+.announcement .announcement__content b,
+.announcement .announcement__content strong {
     font-weight: inherit;
 }
 
-.promo-strap .promo-strap__content i,
-.promo-strap .promo-strap__content em {
+.announcement .announcement__content i,
+.announcement .announcement__content em {
     font-style: italic;
 }
 
-.promo-strap .promo-strap__content u {
+.announcement .announcement__content u {
     text-decoration: none;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         letter-spacing: -0.017em;
     }
 }
 
-.promo-strap .promo-strap__content b,
-.promo-strap .promo-strap__content strong {
+.announcement .announcement__content b,
+.announcement .announcement__content strong {
     font-weight: 600;
 }
 
 @media (min-width: 901px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 901px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 @media (min-width: 1441px) {
-    .promo-strap .promo-strap__content {
+    .announcement .announcement__content {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
-.promo-strap .promo-strap__content sup,
-.promo-strap .promo-strap__content sub {
+.announcement .announcement__content sup,
+.announcement .announcement__content sub {
     font-size: 0.7em;
     line-height: 0.7em;
 }
 
-.promo-strap .promo-strap__content a {
+.announcement .announcement__content a {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -34339,7 +34449,7 @@ figure figcaption a:active,
 }
 
 @media (hover: hover) {
-    .promo-strap .promo-strap__content a:hover {
+    .announcement .announcement__content a:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -34356,7 +34466,7 @@ figure figcaption a:active,
     }
 }
 
-.promo-strap .promo-strap__content a:focus, .promo-strap .promo-strap__content a:active {
+.announcement .announcement__content a:focus, .announcement .announcement__content a:active {
     background-color: initial;
     background-image: initial;
     background-size: initial;
@@ -34372,24 +34482,24 @@ figure figcaption a:active,
     text-decoration: none;
 }
 
-.promo-strap .promo-strap__content a:focus, .promo-strap .promo-strap__content a:active {
+.announcement .announcement__content a:focus, .announcement .announcement__content a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
-.promo-strap .promo-strap__content a:visited {
+.announcement .announcement__content a:visited {
     color: #ffffff;
 }
 
-.promo-strap .promo-strap__content a:focus {
+.announcement .announcement__content a:focus {
     color: #ffffff;
     text-decoration: underline;
 }
 
 @media (hover: hover) {
-    .promo-strap .promo-strap__content a:hover {
+    .announcement .announcement__content a:hover {
         color: #ffffff;
         text-decoration: underline;
     }
@@ -34504,6 +34614,26 @@ figure figcaption a:active,
 
 .how-to-apply--pgt--js__modal[data-on='true'] {
     display: block;
+}
+
+@keyframes veilFadeIn {
+    0% {
+        background-color: rgba(30, 30, 30, 0);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0.3);
+    }
+}
+
+@keyframes veilFadeOut {
+    0% {
+        background-color: rgba(30, 30, 30, 0.3);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0);
+    }
 }
 
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content {
@@ -34697,7 +34827,7 @@ figure figcaption a:active,
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__options a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -34807,7 +34937,7 @@ figure figcaption a:active,
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__alternative a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -34853,7 +34983,7 @@ figure figcaption a:active,
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__close:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -34895,7 +35025,7 @@ figure figcaption a:active,
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__reset button:focus, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__reset button:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -35149,7 +35279,7 @@ figure figcaption a:active,
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous button:active, .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li.how-to-apply--pgt--js__modal__progress__previous button:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -35523,7 +35653,7 @@ figure figcaption a:active,
 .js .swiper-slide__text a:focus, .js .swiper-slide__text a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -35666,7 +35796,7 @@ figure figcaption a:active,
 .swiper-slider-arrow:focus:focus, .swiper-slider-arrow:focus:active, .swiper-slider-arrow:active:focus, .swiper-slider-arrow:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -35815,7 +35945,7 @@ figure figcaption a:active,
 .carousel-gallery .swiper-slide__text a:focus, .carousel-gallery .swiper-slide__text a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -35885,7 +36015,7 @@ figure figcaption a:active,
 .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:focus:focus, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:focus:active, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:active:focus, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -36000,7 +36130,7 @@ figure figcaption a:active,
 .js .galleria-thumbnails-list .galleria-thumbnail input:focus, .js .galleria-thumbnails-list .galleria-thumbnail input:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -36311,7 +36441,7 @@ figure figcaption a:active,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -36337,7 +36467,7 @@ figure figcaption a:active,
 .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -36765,7 +36895,7 @@ figure figcaption a:active,
 .js .key-information--lifelong-learning__dates--controllable .key-information--lifelong-learning__dates > li:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
     outline-offset: -0.1875rem;
 }
@@ -36911,7 +37041,7 @@ figure figcaption a:active,
 .js .key-information--lifelong-learning__dates--controllable .key-information--lifelong-learning__controls .key-information--lifelong-learning__controls__loadmore:active:not(:disabled) {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -37074,7 +37204,7 @@ a .link-decorator {
 .linked-heading:focus, .linked-heading:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -37259,7 +37389,7 @@ h3 .linked-heading__icons {
 .anchor-inline--gray:focus, .anchor-inline--gray:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -37369,7 +37499,7 @@ h3 .linked-heading__icons {
 .anchor-inline--gray4:focus, .anchor-inline--gray4:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -37479,7 +37609,7 @@ h3 .linked-heading__icons {
 .anchor-inline--dark:focus, .anchor-inline--dark:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -37573,7 +37703,7 @@ h3 .linked-heading__icons {
 .anchor-discreet:focus, .anchor-discreet:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -37710,7 +37840,7 @@ h3 .linked-heading__icons {
 .anchor-inline--notvisited:focus, .anchor-inline--notvisited:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -37873,7 +38003,7 @@ h3 .linked-heading__icons {
 .anchor-cta-like:focus:focus, .anchor-cta-like:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -37895,7 +38025,7 @@ h3 .linked-heading__icons {
 .anchor-cta-like:active:focus, .anchor-cta-like:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -38117,7 +38247,7 @@ h3 .linked-heading__icons {
 .anchor-underline-transition:focus, .anchor-underline-transition:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -38273,7 +38403,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:focus {
 ul.cta-like-anchor-block li.cta-like-anchor a:focus:focus, ul.cta-like-anchor-block li.cta-like-anchor a:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -38295,7 +38425,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a:active {
 ul.cta-like-anchor-block li.cta-like-anchor a:active:focus, ul.cta-like-anchor-block li.cta-like-anchor a:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -38472,7 +38602,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor a:focus {
 ul.cta-like-anchor-inline li.cta-like-anchor a:focus:focus, ul.cta-like-anchor-inline li.cta-like-anchor a:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -38494,7 +38624,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor a:active {
 ul.cta-like-anchor-inline li.cta-like-anchor a:active:focus, ul.cta-like-anchor-inline li.cta-like-anchor a:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -38791,7 +38921,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .event__formassembly__button:focus:focus, .event__formassembly__button:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -38813,7 +38943,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .event__formassembly__button:active:focus, .event__formassembly__button:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -38897,7 +39027,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .event__formassembly__form:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
     outline-offset: 0;
 }
@@ -39030,7 +39160,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .event__formassembly__form__close-button:focus:focus, .event__formassembly__form__close-button:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -39052,7 +39182,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .event__formassembly__form__close-button:active:focus, .event__formassembly__form__close-button:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -39189,7 +39319,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     text-decoration: none;
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -39214,6 +39344,63 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     transition: background-color 0.3s ease-in-out;
 }
 
+/* burger bun */
+.menu .burger-bun {
+    display: block;
+}
+
+.menu .burger-bun span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.menu .burger-bun span:nth-last-child(3) {
+    margin-top: 0.425rem;
+}
+
+.menu .burger-bun span:nth-last-child(1) {
+    transform-origin: 0% 100%;
+}
+
+.js .menu[data-open='true'] .burger-bun span {
+    opacity: 1;
+    transform: rotate(45deg) translate(7px, -2px);
+    background: #ffffff;
+}
+
+.js .menu[data-open='true'] .burger-bun span:nth-last-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.js .menu[data-open='true'] .burger-bun span:nth-last-child(1) {
+    transform: rotate(-45deg) translate(1px, 8px);
+}
+
+.no-js .menu .burger-bun input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(7px, -2px);
+    background: #ffffff;
+}
+
+.no-js .menu .burger-bun input:checked ~ span:nth-last-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.no-js .menu .burger-bun input:checked ~ span:nth-last-child(1) {
+    transform: rotate(-45deg) translate(1px, 8px);
+}
+
+/* end burger bun */
 @media (max-width: 1023px) {
     .menu {
         display: block;
@@ -39228,20 +39415,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         margin-left: 0;
         margin-top: 0;
         max-width: unset;
-    }
-    .menu .menu__level1 > li > .menu__controls > button,
-    .menu .menu__level2 > li > .menu__controls > button,
-    .menu .menu__level3 > li > .menu__controls > button,
-    .menu .menu__level4 > li > .menu__controls > button,
-    .menu .menu__level5 > li > .menu__controls > button,
-    .menu .menu__level6 > li > .menu__controls > button {
-        align-self: center;
-        margin-left: 0.75rem;
-        margin-right: 0.75rem;
-        padding-bottom: 0.25rem;
-        padding-left: 0.25rem;
-        padding-right: 0.25rem;
-        padding-top: 0.25rem;
     }
     .menu .menu__level1 > li > .menu__controls > button .menu__button__icon:before,
     .menu .menu__level2 > li > .menu__controls > button .menu__button__icon:before,
@@ -39375,7 +39548,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level2 li.menu__current > .menu__controls > span:focus > span {
         outline-color: #ffffff;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .menu .menu__level3 li,
@@ -39530,7 +39703,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level6 li.menu__current > .menu__controls > span:focus > span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .menu .menu__level1 {
@@ -39633,7 +39806,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level1 > li > .menu__controls > a:focus span, .menu .menu__level1 > li > .menu__controls > a:active span {
         outline-color: #ffffff;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
@@ -39663,6 +39836,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #1e1e1e;
         color: #ffffff;
         transition: background-color ease-out 0.2s;
+        background: #1e1e1e;
+        border: 0.25rem solid #1e1e1e;
+        border-bottom: 0.25rem solid #1e1e1e;
+        width: 2rem;
     }
 }
 
@@ -39703,7 +39880,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level1 > li > .menu__controls > button:focus, .menu .menu__level1 > li > .menu__controls > button:active {
         outline-color: #ffffff;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .menu .menu__level1 > li > .menu__controls > button:focus span {
@@ -39719,6 +39896,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (max-width: 1023px) {
+    .menu .menu__level1 > li > .menu__controls > button:focus, .menu .menu__level1 > li > .menu__controls > button:active, .menu .menu__level1 > li > .menu__controls > button:hover {
+        outline-offset: -0.0625rem;
+        border-bottom: 0.25rem solid #1e1e1e;
+    }
     .menu .menu__level1 > li > .menu__controls > a,
     .menu .menu__level1 > li > .menu__controls > span {
         padding-left: 0.5rem;
@@ -39826,7 +40007,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level2 > li > .menu__controls > a:focus span, .menu .menu__level2 > li > .menu__controls > a:active span {
         outline-color: #ffffff;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
@@ -39856,6 +40037,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #303030;
         color: #ffffff;
         transition: background-color ease-out 0.2s;
+        background: #303030;
+        border: 0.25rem solid #303030;
+        border-bottom: 0.25rem solid #303030;
+        width: 2rem;
     }
 }
 
@@ -39896,7 +40081,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level2 > li > .menu__controls > button:focus, .menu .menu__level2 > li > .menu__controls > button:active {
         outline-color: #ffffff;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .menu .menu__level2 > li > .menu__controls > button:focus span {
@@ -39912,6 +40097,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (max-width: 1023px) {
+    .menu .menu__level2 > li > .menu__controls > button:focus, .menu .menu__level2 > li > .menu__controls > button:active, .menu .menu__level2 > li > .menu__controls > button:hover {
+        outline-offset: -0.0625rem;
+        border-bottom: 0.25rem solid #303030;
+    }
     .menu .menu__level2 > li > .menu__controls > a,
     .menu .menu__level2 > li > .menu__controls > span {
         padding-left: 1rem;
@@ -39983,7 +40172,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level3 > li > .menu__controls > a:focus span, .menu .menu__level3 > li > .menu__controls > a:active span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
@@ -40013,6 +40202,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #f2f2f2;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
+        background: #f2f2f2;
+        border: 0.25rem solid #f2f2f2;
+        border-bottom: 0.25rem solid #f2f2f2;
+        width: 2rem;
     }
 }
 
@@ -40053,7 +40246,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level3 > li > .menu__controls > button:focus, .menu .menu__level3 > li > .menu__controls > button:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .menu .menu__level3 > li > .menu__controls > button:focus span {
@@ -40069,6 +40262,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (max-width: 1023px) {
+    .menu .menu__level3 > li > .menu__controls > button:focus, .menu .menu__level3 > li > .menu__controls > button:active, .menu .menu__level3 > li > .menu__controls > button:hover {
+        outline-offset: -0.0625rem;
+        border-bottom: 0.25rem solid #f2f2f2;
+    }
     .menu .menu__level3 > li > .menu__controls > a,
     .menu .menu__level3 > li > .menu__controls > span {
         padding-left: 1.5rem;
@@ -40137,7 +40334,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level4 > li > .menu__controls > a:focus span, .menu .menu__level4 > li > .menu__controls > a:active span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
@@ -40167,6 +40364,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #e5e5e5;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
+        background: #e5e5e5;
+        border: 0.25rem solid #e5e5e5;
+        border-bottom: 0.25rem solid #e5e5e5;
+        width: 2rem;
     }
 }
 
@@ -40207,7 +40408,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level4 > li > .menu__controls > button:focus, .menu .menu__level4 > li > .menu__controls > button:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .menu .menu__level4 > li > .menu__controls > button:focus span {
@@ -40223,6 +40424,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (max-width: 1023px) {
+    .menu .menu__level4 > li > .menu__controls > button:focus, .menu .menu__level4 > li > .menu__controls > button:active, .menu .menu__level4 > li > .menu__controls > button:hover {
+        outline-offset: -0.0625rem;
+        border-bottom: 0.25rem solid #e5e5e5;
+    }
     .menu .menu__level4 > li > .menu__controls > a,
     .menu .menu__level4 > li > .menu__controls > span {
         padding-left: 2rem;
@@ -40291,7 +40496,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level5 > li > .menu__controls > a:focus span, .menu .menu__level5 > li > .menu__controls > a:active span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
@@ -40321,6 +40526,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #d8d8d8;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
+        background: #d8d8d8;
+        border: 0.25rem solid #d8d8d8;
+        border-bottom: 0.25rem solid #d8d8d8;
+        width: 2rem;
     }
 }
 
@@ -40361,7 +40570,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level5 > li > .menu__controls > button:focus, .menu .menu__level5 > li > .menu__controls > button:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .menu .menu__level5 > li > .menu__controls > button:focus span {
@@ -40377,6 +40586,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (max-width: 1023px) {
+    .menu .menu__level5 > li > .menu__controls > button:focus, .menu .menu__level5 > li > .menu__controls > button:active, .menu .menu__level5 > li > .menu__controls > button:hover {
+        outline-offset: -0.0625rem;
+        border-bottom: 0.25rem solid #d8d8d8;
+    }
     .menu .menu__level5 > li > .menu__controls > a,
     .menu .menu__level5 > li > .menu__controls > span {
         padding-left: 2.5rem;
@@ -40445,7 +40658,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level6 > li > .menu__controls > a:focus span, .menu .menu__level6 > li > .menu__controls > a:active span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
@@ -40475,6 +40688,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #cbcbcb;
         color: #0c0c0e;
         transition: background-color ease-out 0.2s;
+        background: #cbcbcb;
+        border: 0.25rem solid #cbcbcb;
+        border-bottom: 0.25rem solid #cbcbcb;
+        width: 2rem;
     }
 }
 
@@ -40515,7 +40732,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level6 > li > .menu__controls > button:focus, .menu .menu__level6 > li > .menu__controls > button:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .menu .menu__level6 > li > .menu__controls > button:focus span {
@@ -40531,6 +40748,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 @media (max-width: 1023px) {
+    .menu .menu__level6 > li > .menu__controls > button:focus, .menu .menu__level6 > li > .menu__controls > button:active, .menu .menu__level6 > li > .menu__controls > button:hover {
+        outline-offset: -0.0625rem;
+        border-bottom: 0.25rem solid #cbcbcb;
+    }
     .menu .menu__level6 > li > .menu__controls > a,
     .menu .menu__level6 > li > .menu__controls > span {
         padding-left: 3rem;
@@ -40540,6 +40761,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
+        padding-right: 0.5rem;
     }
     .menu a,
     .menu .menu__current > .menu__controls > span {
@@ -40573,7 +40795,24 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .menu .menu__content .menu__level1 ul {
-    display: none;
+    visibility: hidden;
+    max-height: 0;
+}
+
+.js .menu .menu__content .menu__level1 .menu-animation__slideClose > ul {
+    animation-duration: 0.4s;
+    animation-name: slideClose;
+}
+
+@keyframes slideClose {
+    0% {
+        max-height: 100vh;
+        visibility: visible;
+    }
+    100% {
+        max-height: 0;
+        visibility: hidden;
+    }
 }
 
 .js .menu .menu__content .menu__utility {
@@ -40738,7 +40977,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .js .menu .menu__content .menu__utility ul li a:focus, .js .menu .menu__content .menu__utility ul li a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -40852,10 +41091,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     color: #ffffff;
 }
 
-.js .menu[data-open='true'] > .menu__display__button > button:focus .menu__display__button__button__wrapper {
+.js .menu[data-open='true'] > .menu__display__button > button:focus .text {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -40864,6 +41103,13 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #494949;
         color: #ffffff;
     }
+}
+
+.js .menu[data-open='true'] > .menu__display__button > button:active, .js .menu[data-open='true'] > .menu__display__button > button:focus {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 .js .menu[data-open='true'] > .menu__display__button > button .menu__button__icon:before {
@@ -40886,13 +41132,29 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .menu[data-open='true'] > .menu__content ul li[data-open='true'] > ul {
-    display: block;
+    visibility: visible;
+    max-height: inherit;
+}
+
+.js .menu[data-open='true'] > .menu__content ul .menu-animation__slideOpen > ul {
+    animation-duration: 0.4s;
+    animation-name: slideOpen;
+}
+
+@keyframes slideOpen {
+    0% {
+        max-height: 0;
+        visibility: visible;
+    }
+    100% {
+        max-height: 100vh;
+    }
 }
 
 .js .menu > .menu__display__button {
     padding-bottom: 0.5rem;
     padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-right: 1rem;
     padding-top: 0.5rem;
 }
 
@@ -40953,6 +41215,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     padding-right: 0;
     padding-top: 0;
     width: 4rem;
+    position: relative;
 }
 
 .js .menu > .menu__display__button .menu__display__button__button i,
@@ -41057,10 +41320,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     color: #ffffff;
 }
 
-.js .menu > .menu__display__button .menu__display__button__button:focus .menu__display__button__button__wrapper {
+.js .menu > .menu__display__button .menu__display__button__button:focus .text {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -41069,6 +41332,13 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: #9e111c;
         color: #ffffff;
     }
+}
+
+.js .menu > .menu__display__button .menu__display__button__button:active, .js .menu > .menu__display__button .menu__display__button__button:focus {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 .js .menu > .menu__display__button .menu__display__button__button .menu__button__icon {
@@ -41084,7 +41354,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     line-height: 1.625;
     letter-spacing: 0em;
     font-weight: 500;
-    margin-top: 0.25rem;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -41374,7 +41643,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .js .menu .menu__content__header a:focus span, .js .menu .menu__content__header a:active span {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -41414,7 +41683,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .js .menu .menu__content__header span:focus > span {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -41431,6 +41700,26 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .js .menu__veil[data-on='true'] {
     display: block;
+}
+
+@keyframes veilFadeIn {
+    0% {
+        background-color: rgba(30, 30, 30, 0);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0.3);
+    }
+}
+
+@keyframes veilFadeOut {
+    0% {
+        background-color: rgba(30, 30, 30, 0.3);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0);
+    }
 }
 
 @media (min-width: 1024px) {
@@ -41485,6 +41774,26 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .dialog[data-on='true'] {
     display: block;
+}
+
+@keyframes veilFadeIn {
+    0% {
+        background-color: rgba(30, 30, 30, 0);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0.3);
+    }
+}
+
+@keyframes veilFadeOut {
+    0% {
+        background-color: rgba(30, 30, 30, 0.3);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0);
+    }
 }
 
 .dialog__heading {
@@ -41741,7 +42050,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .dialog__content a:focus, .dialog__content a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -41787,7 +42096,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .dialog__close:focus, .dialog__close:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -41885,7 +42194,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .dialog__underline-transition:focus, .dialog__underline-transition:active {
     outline-color: transparent;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -41954,7 +42263,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .dialog__slider-control button:focus, .dialog__slider-control button:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -42082,7 +42391,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .modal__buttons--calendar a:focus, .modal__buttons--calendar a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -42158,7 +42467,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .modal__button:focus, .modal__button:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -42237,7 +42546,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .modal__button .inline-text:focus, .modal__button .inline-text:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -42534,6 +42843,13 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
      */
 }
 
+@media (max-width: 1279px) {
+    .navigation--primary {
+        padding-top: 1.25rem;
+        border-top: 0.0625rem solid #e5e5e5;
+    }
+}
+
 .navigation--primary ul {
     list-style: none;
     margin-left: 0;
@@ -42553,7 +42869,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-between;
     list-style: none;
     margin-top: 0;
 }
@@ -42795,7 +43111,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .navigation--primary .navigation__level2 a:focus span, .navigation--primary .navigation__level2 a:active span {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -42950,10 +43266,14 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     background-color: #1e1e1e;
     color: #ffffff;
     left: 0;
-    min-height: 20vh;
     position: absolute;
     width: 100%;
     z-index: 5;
+    transform-origin: top;
+    animation-duration: 0s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    overflow-y: hidden;
 }
 
 .navigation--primary .navigation--primary__menu__content {
@@ -43076,7 +43396,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .navigation--primary .wrapper--navigation--primary__menu__close button:focus, .navigation--primary .wrapper--navigation--primary__menu__close button:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -43284,7 +43604,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .navigation--primary .navigation--primary__menu__header a:focus span, .navigation--primary .navigation--primary__menu__header a:active span {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -43317,7 +43637,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .navigation--primary .navigation--primary__menu {
-    display: none;
+    visibility: hidden;
 }
 
 .navigation--primary .navigation--primary__level1 > button div,
@@ -43352,6 +43672,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     outline-width: 0;
     text-decoration: none;
     position: relative;
+    align-items: center;
 }
 
 @media (hover: hover) {
@@ -43391,11 +43712,14 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .js .navigation--primary .navigation__level1 > li .navigation__button:focus, .js .navigation--primary .navigation__level1 > li .navigation__button:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
 @media (hover: hover) {
+    .js .navigation--primary .navigation__level1 > li .navigation__button:hover {
+        color: #d61726;
+    }
     .js .navigation--primary .navigation__level1 > li .navigation__button:hover div {
         border-bottom-color: #d61726;
     }
@@ -43410,19 +43734,49 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     font-weight: 800;
     left: 0;
     position: absolute;
-    top: 1.5rem;
     width: 100%;
+}
+
+.js .navigation--primary .navigation__level1 > li .navigation__button + .navigation--primary__menu {
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='false'].menu-animation__slideClose + .navigation--primary__menu {
+    animation-duration: 0.4s;
+    animation-name: slideClose;
+}
+
+@keyframes slideClose {
+    0% {
+        max-height: 100vh;
+        visibility: visible;
+    }
+    100% {
+        max-height: 0;
+        visibility: hidden;
+    }
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'] > div:after {
     color: #1e1e1e;
 }
 
-.js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'] + .navigation--primary__menu {
+.js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'].menu-animation__slideOpen + .navigation--primary__menu {
     box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
-    display: block;
-    margin-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    visibility: visible;
+    animation-duration: 0.4s;
+    animation-name: slideOpen;
+}
+
+@keyframes slideOpen {
+    0% {
+        max-height: 0;
+        visibility: visible;
+    }
+    100% {
+        max-height: 100vh;
+    }
 }
 
 .js .navigation__veil {
@@ -43438,6 +43792,26 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .js .navigation__veil[data-on='true'] {
     display: block;
+}
+
+@keyframes veilFadeIn {
+    0% {
+        background-color: rgba(30, 30, 30, 0);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0.3);
+    }
+}
+
+@keyframes veilFadeOut {
+    0% {
+        background-color: rgba(30, 30, 30, 0.3);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0);
+    }
 }
 
 @media (max-width: 1023px) {
@@ -43458,9 +43832,82 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     width: 1px;
 }
 
+@media (max-width: 1439px) {
+    .navigation--primary .navigation--primary__level1 .navigation__button .navigation--primary__section-text {
+        font-size: 1rem;
+        line-height: 1.625;
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (max-width: 1439px) and (min-width: 1280px) and (max-width: 1919px) {
+    .navigation--primary .navigation--primary__level1 .navigation__button .navigation--primary__section-text {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (max-width: 1439px) and (min-width: 1920px) and (max-width: 3839px) {
+    .navigation--primary .navigation--primary__level1 .navigation__button .navigation--primary__section-text {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (max-width: 1439px) and (min-width: 3840px) and (max-width: 7679px) {
+    .navigation--primary .navigation--primary__level1 .navigation__button .navigation--primary__section-text {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1439px) and (min-width: 7680px) {
+    .navigation--primary .navigation--primary__level1 .navigation__button .navigation--primary__section-text {
+        letter-spacing: -0.017em;
+    }
+}
+
+.navigation--primary .navigation--primary__level1 .navigation__button:first-child {
+    display: flex;
+}
+
+.navigation--primary .navigation--primary__level1 .navigation__button:first-child:after {
+    content: '\f078';
+    font-family: 'Font Awesome';
+    display: inline-flex;
+    color: #d61726;
+    font-size: 0.79rem;
+    line-height: 1.625;
+    letter-spacing: 0.005em;
+    margin-left: 0.5rem;
+    align-items: center;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .navigation--primary .navigation--primary__level1 .navigation__button:first-child:after {
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .navigation--primary .navigation--primary__level1 .navigation__button:first-child:after {
+        letter-spacing: -0.007em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .navigation--primary .navigation--primary__level1 .navigation__button:first-child:after {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .navigation--primary .navigation--primary__level1 .navigation__button:first-child:after {
+        letter-spacing: -0.017em;
+    }
+}
+
 .no-js .navigation--primary .navigation__level1 > li:hover > .navigation--primary__menu, .no-js .navigation--primary .navigation__level1 > li:focus-within > .navigation--primary__menu {
     box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
     display: grid;
+    visibility: visible;
 }
 
 .navigation--secondary__header {
@@ -43623,7 +44070,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary .navigation__level4 li.navigation__current > .navigation__controls > span:focus > span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .navigation--secondary .navigation__level5 li,
@@ -43742,7 +44189,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary .navigation__level6 li.navigation__current > .navigation__controls > span:focus > span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .navigation--secondary .navigation__level3 {
@@ -43814,7 +44261,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary .navigation__level3 > li > .navigation__controls > a:focus span, .navigation--secondary .navigation__level3 > li > .navigation__controls > a:active span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
@@ -43884,7 +44331,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary .navigation__level3 > li > .navigation__controls > button:focus, .navigation--secondary .navigation__level3 > li > .navigation__controls > button:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .navigation--secondary .navigation__level3 > li > .navigation__controls > button:focus span {
@@ -43971,7 +44418,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary .navigation__level4 > li > .navigation__controls > a:focus span, .navigation--secondary .navigation__level4 > li > .navigation__controls > a:active span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
@@ -44041,7 +44488,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary .navigation__level4 > li > .navigation__controls > button:focus, .navigation--secondary .navigation__level4 > li > .navigation__controls > button:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .navigation--secondary .navigation__level4 > li > .navigation__controls > button:focus span {
@@ -44125,7 +44572,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary .navigation__level5 > li > .navigation__controls > a:focus span, .navigation--secondary .navigation__level5 > li > .navigation__controls > a:active span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
@@ -44195,7 +44642,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary .navigation__level5 > li > .navigation__controls > button:focus, .navigation--secondary .navigation__level5 > li > .navigation__controls > button:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .navigation--secondary .navigation__level5 > li > .navigation__controls > button:focus span {
@@ -44279,7 +44726,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary .navigation__level6 > li > .navigation__controls > a:focus span, .navigation--secondary .navigation__level6 > li > .navigation__controls > a:active span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
@@ -44349,7 +44796,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary .navigation__level6 > li > .navigation__controls > button:focus, .navigation--secondary .navigation__level6 > li > .navigation__controls > button:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .navigation--secondary .navigation__level6 > li > .navigation__controls > button:focus span {
@@ -44433,7 +44880,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary .navigation__level7 > li > .navigation__controls > a:focus span, .navigation--secondary .navigation__level7 > li > .navigation__controls > a:active span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
@@ -44503,7 +44950,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary .navigation__level7 > li > .navigation__controls > button:focus, .navigation--secondary .navigation__level7 > li > .navigation__controls > button:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .navigation--secondary .navigation__level7 > li > .navigation__controls > button:focus span {
@@ -44649,7 +45096,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary > .navigation--secondary__header a:focus span, .navigation--secondary > .navigation--secondary__header a:active span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
@@ -44683,7 +45130,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .navigation--secondary > .navigation--secondary__header > span:focus, .navigation--secondary > .navigation--secondary__header > span:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .navigation--secondary > .navigation--secondary__header.navigation--secondary__header--current > a {
@@ -44766,7 +45213,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .js .paginated-list .page[data-open='true']:focus {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .js .paginated-list .page ul {
@@ -44889,7 +45336,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .pagination__wrapper .pagination__controls button:focus {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
         background-image: linear-gradient(120deg, #ffffff 0%, #ffffff 100%);
         border-bottom-color: #d61726;
@@ -44915,7 +45362,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .pagination__wrapper .pagination__controls button:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
         background-image: linear-gradient(120deg, #d61726 0%, #d61726 100%);
         background-size: 100% 100%;
@@ -45285,7 +45732,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .pathway .pathway__cards .card--pathway a:active, .pathway .pathway__cards .card--pathway a:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -45501,7 +45948,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .pathway.background--pink90 .pathway__cards .card--pathway a:active, .pathway.background--pink90 .pathway__cards .card--pathway a:focus {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -46008,7 +46455,7 @@ blockquote footer cite {
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 a:focus, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--blue70 a:active {
     outline-color: #cbcbcb;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -46132,7 +46579,7 @@ blockquote footer cite {
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 a:focus, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--pink90 a:active {
     outline-color: #cbcbcb;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -46256,7 +46703,7 @@ blockquote footer cite {
 .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 a:focus, .related-links--with-images__cards .card--related-links--with-images:not(.background--purewhite):not(.background--gray2).background--red70 a:active {
     outline-color: #cbcbcb;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -46528,7 +46975,7 @@ blockquote footer cite {
 .show-more .show-more__button button:focus, .show-more .show-more__button button:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -46664,7 +47111,7 @@ blockquote footer cite {
 .skip-links .skip-links__link:focus, .skip-links .skip-links__link:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -46864,7 +47311,7 @@ blockquote footer cite {
 .js .slider .slide:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
     outline-offset: -0.1875rem;
 }
@@ -47277,7 +47724,7 @@ blockquote footer cite {
 .js .slider[data-style='responsive'] + .slider__controls .slider__controls__next:active:not(:disabled) {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -47622,7 +48069,7 @@ blockquote footer cite {
 .wrapper--tooltip__label .tooltip__label:focus {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
     outline-offset: -0.125rem;
 }
@@ -47686,7 +48133,7 @@ blockquote footer cite {
 .wrapper--tooltip__label .tooltip__label a:focus, .wrapper--tooltip__label .tooltip__label a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -47864,7 +48311,7 @@ article .social-icon:focus {
 article .social-icon:focus:focus, article .social-icon:focus:active, article .social-icon:active:focus, article .social-icon:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -48038,12 +48485,11 @@ article .link-copy {
 
 .global-header__search > a,
 .global-header__search .global-header__search__button {
+    transition: transform 0.3s ease;
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
-    min-height: 3rem;
-    width: 100%;
+    justify-content: flex-end;
 }
 
 @media (max-width: 1023px) {
@@ -48128,15 +48574,15 @@ article .link-copy {
         border-width: 0.0625rem;
         color: #0c0c0e;
     }
-    .global-header__search > a:focus .global-header__search__wrapper,
-    .global-header__search .global-header__search__button:focus .global-header__search__wrapper {
+    .global-header__search > a:focus .text,
+    .global-header__search .global-header__search__button:focus .text {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
-    .global-header__search > a:focus:hover .global-header__search__wrapper,
-    .global-header__search .global-header__search__button:focus:hover .global-header__search__wrapper {
+    .global-header__search > a:focus:hover .text,
+    .global-header__search .global-header__search__button:focus:hover .text {
         outline-color: #ffffff;
     }
 }
@@ -48144,12 +48590,21 @@ article .link-copy {
 @media (max-width: 1023px) and (hover: hover) {
     .global-header__search > a:hover,
     .global-header__search .global-header__search__button:hover {
-        background-color: #a1a1a1;
-        border-color: #a1a1a1;
+        background-color: #0c0c0e;
+        border-color: #0c0c0e;
         border-style: solid;
         border-width: 0.0625rem;
         color: #ffffff;
     }
+}
+
+.global-header__search > a:active, .global-header__search > a:focus,
+.global-header__search .global-header__search__button:active,
+.global-header__search .global-header__search__button:focus {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 .global-header__search > a .global-header__search__text,
@@ -48189,38 +48644,49 @@ article .link-copy {
 }
 
 @media (max-width: 1023px) {
+    .global-header__search > a,
+    .global-header__search .global-header__search__button {
+        justify-content: center;
+    }
     .global-header__search > a .global-header__search__icon,
     .global-header__search .global-header__search__button .global-header__search__icon {
-        font-size: inherit;
+        font-size: 1.602rem;
+        line-height: 1.33333;
+        letter-spacing: -0.015em;
     }
-    .global-header__search > a .global-header__search__text,
-    .global-header__search .global-header__search__button .global-header__search__text {
-        margin-top: 0.25rem;
+}
+
+@media (max-width: 1023px) and (min-width: 1280px) and (max-width: 1919px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 1920px) and (max-width: 3839px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 3840px) and (max-width: 7679px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 7680px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 1024px) {
     .global-header__search > a,
     .global-header__search .global-header__search__button {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-        display: inline-block;
-        padding-bottom: 0.5rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-        padding-top: 0.5rem;
-        transition: background-color 0.6s;
         display: flex;
         height: 100%;
     }
@@ -48229,68 +48695,52 @@ article .link-copy {
 @media (min-width: 1024px) and (hover: hover) {
     .global-header__search > a:hover,
     .global-header__search .global-header__search__button:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-@media (min-width: 1024px) {
-    .global-header__search > a:focus, .global-header__search > a:active,
-    .global-header__search .global-header__search__button:focus,
-    .global-header__search .global-header__search__button:active {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-    .global-header__search > a, .global-header__search > a:focus, .global-header__search > a:active,
-    .global-header__search .global-header__search__button,
-    .global-header__search .global-header__search__button:focus,
-    .global-header__search .global-header__search__button:active {
-        background-color: #d61726;
-        color: #ffffff;
-    }
-    .global-header__search > a:focus .global-header__search__wrapper,
-    .global-header__search .global-header__search__button:focus .global-header__search__wrapper {
-        outline-color: #ffffff;
-        outline-offset: 0.1875rem;
-        outline-style: dotted;
-        outline-width: 0.125rem;
-    }
-}
-
-@media (min-width: 1024px) and (hover: hover) {
-    .global-header__search > a:hover,
-    .global-header__search .global-header__search__button:hover {
-        background-color: #9e111c;
-        color: #ffffff;
+        transform: scale(1.2);
     }
 }
 
 @media (min-width: 1024px) {
     .global-header__search > a .global-header__search__icon,
     .global-header__search .global-header__search__button .global-header__search__icon {
-        margin-left: 0.5rem;
+        font-size: 1.602rem;
+        line-height: 1.33333;
+        letter-spacing: -0.015em;
+        color: #d61726;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1919px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.016em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1920px) and (max-width: 3839px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 3840px) and (max-width: 7679px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 7680px) {
+    .global-header__search > a .global-header__search__icon,
+    .global-header__search .global-header__search__button .global-header__search__icon {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .global-header__search > a .global-header__search__text,
+    .global-header__search .global-header__search__button .global-header__search__text {
+        display: none;
     }
 }
 
@@ -48398,6 +48848,7 @@ article .link-copy {
         margin-top: 0.5rem;
         padding-left: 0;
         padding-right: 0;
+        padding-top: 0;
     }
 }
 
@@ -48436,27 +48887,38 @@ article .link-copy {
         text-decoration: none;
     }
     .js .global-header__search .global-header__search__button[aria-expanded='true'], .js .global-header__search .global-header__search__button[aria-expanded='true']:focus, .js .global-header__search .global-header__search__button[aria-expanded='true']:active {
-        background-color: #d61726;
+        background-color: #0c0c0e;
         color: #ffffff;
     }
-    .js .global-header__search .global-header__search__button[aria-expanded='true']:focus .global-header__search__wrapper {
+    .js .global-header__search .global-header__search__button[aria-expanded='true']:focus .text {
         outline-color: #ffffff;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
 
 @media (max-width: 1023px) and (hover: hover) {
     .js .global-header__search .global-header__search__button[aria-expanded='true']:hover {
-        background-color: #9e111c;
+        background-color: #1e1e1e;
         color: #ffffff;
     }
 }
 
+.js .global-header__search .global-header__search__button[aria-expanded='true']:active, .js .global-header__search .global-header__search__button[aria-expanded='true']:focus {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
+}
+
+.js .global-header__search .global-header__search__button[aria-expanded='true'] .global-header__search__icon {
+    color: #ffffff;
+}
+
 .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: linear-gradient(#d61726 30%, #790b21 80%, #3e1031 100%);
+    background: #0c0c0e;
     color: #ffffff;
     display: block;
     left: 0;
@@ -48465,11 +48927,9 @@ article .link-copy {
     right: 0;
     top: 0;
     z-index: 5;
-}
-
-.js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
-    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background-color: #d61726;
+    width: 100vw;
+    transform: translate(-50%, 0%);
+    left: 50%;
 }
 
 @media (max-width: 1023px) {
@@ -48484,19 +48944,15 @@ article .link-copy {
 
 @media (min-width: 1024px) {
     .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
         grid-template-rows: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 901px) {
-    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
-        padding-left: 2rem;
-        padding-right: 2rem;
     }
 }
 
@@ -48512,6 +48968,27 @@ article .link-copy {
     }
 }
 
+@media (min-width: 1024px) and (min-width: 901px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1441px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 @media (min-width: 1280px) {
     .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header {
         grid-row-gap: 1rem;
@@ -48519,8 +48996,11 @@ article .link-copy {
     }
 }
 
-.js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header .global-header__search__button {
-    grid-column: 22 / span 3;
+@media (min-width: 1024px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__header .global-header__search__button {
+        grid-column: 24 / span 1;
+        margin-top: 1rem;
+    }
 }
 
 .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body {
@@ -48541,6 +49021,11 @@ article .link-copy {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
@@ -48553,6 +49038,27 @@ article .link-copy {
 @media (min-width: 1024px) and (min-width: 901px) {
     .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body {
         grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1441px) {
+    .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -48805,7 +49311,7 @@ article .link-copy {
 .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body__results .search--inline__results__updating--topresults .card--search a:focus {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
     color: #ffffff;
 }
@@ -49200,14 +49706,14 @@ article .link-copy {
 .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .header-logo a:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
 .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .header-logo a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -49251,6 +49757,26 @@ article .link-copy {
 
 .js .global-header__search .veil--search[data-on='true'] {
     display: block;
+}
+
+@keyframes veilFadeIn {
+    0% {
+        background-color: rgba(30, 30, 30, 0);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0.3);
+    }
+}
+
+@keyframes veilFadeOut {
+    0% {
+        background-color: rgba(30, 30, 30, 0.3);
+        visibility: visible;
+    }
+    100% {
+        background-color: rgba(30, 30, 30, 0);
+    }
 }
 
 .js .global-header__search .veil--search[data-on='true'] {
@@ -49334,21 +49860,21 @@ article .link-copy {
 }
 
 .js .global-header__search .search--inline__query > div button, .js .global-header__search .search--inline__query > div button:focus, .js .global-header__search .search--inline__query > div button:active {
-    background-color: #ffffff;
-    color: #0c0c0e;
+    background-color: #d61726;
+    color: #ffffff;
 }
 
 .js .global-header__search .search--inline__query > div button:focus .search--inline__query__submit__content {
-    outline-color: #0c0c0e;
+    outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
 @media (hover: hover) {
     .js .global-header__search .search--inline__query > div button:hover {
-        background-color: #a1a1a1;
-        color: #0c0c0e;
+        background-color: #9e111c;
+        color: #ffffff;
     }
 }
 
@@ -49471,7 +49997,7 @@ article .link-copy {
 .js .global-header__search .search--inline__query__input:focus-within {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -49558,6 +50084,7 @@ article .link-copy {
     right: 0.5rem;
     top: 0.25rem;
     width: 2.25rem;
+    background-color: initial;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -49587,7 +50114,7 @@ article .link-copy {
 .js .global-header__search .search--inline__query__input .search--inline__clear:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
     outline-offset: -0.25rem;
 }
@@ -49825,7 +50352,7 @@ article .link-copy {
 .js .global-header__search .search--inline__suggestions a:focus, .js .global-header__search .search--inline__suggestions a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -50130,7 +50657,7 @@ article .link-copy {
 .search .search__bestbets__list .card--search a:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
     color: #0c0c0e;
 }
@@ -50805,7 +51332,7 @@ article .link-copy {
 .search .search__query__suggestions li button:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
     outline-offset: 0;
 }
@@ -50961,7 +51488,7 @@ article .link-copy {
 .search .search__summary__noresults a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -51136,7 +51663,7 @@ article .link-copy {
 .search .search__select select:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -51866,7 +52393,7 @@ article .link-copy {
     .js .tabs .tabs__panel:focus {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
         outline-offset: 0;
     }
@@ -52314,7 +52841,7 @@ article .link-copy {
     text-decoration: none;
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -53006,7 +53533,7 @@ article .link-copy {
 .carousel-gallery .swiper-slide__text a:focus, .carousel-gallery .swiper-slide__text a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -53076,7 +53603,7 @@ article .link-copy {
 .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:focus:focus, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:focus:active, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:active:focus, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -53191,7 +53718,7 @@ article .link-copy {
 .js .galleria-thumbnails-list .galleria-thumbnail input:focus, .js .galleria-thumbnails-list .galleria-thumbnail input:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -53406,14 +53933,14 @@ article .link-copy {
 .wrapper--logo li a:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
 .wrapper--logo li a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -55017,7 +55544,7 @@ article .link-copy {
     .finder__reset:focus, .finder__reset:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .finder__reset, .finder__reset:focus, .finder__reset:active {
@@ -55148,7 +55675,7 @@ article .link-copy {
 .finder__select select:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -55226,7 +55753,7 @@ article .link-copy {
 .finder__checkbox:focus-within {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -55368,7 +55895,7 @@ article .link-copy {
 .finder__tag button:focus, .finder__tag button:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -55686,7 +56213,7 @@ article .link-copy {
 .wrapper--finder__filters--mobile[data-open='true'] .wrapper--finder__filters--mobile__apply button:focus .wrapper--finder__filters--mobile__apply__text {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -55777,7 +56304,7 @@ article .link-copy {
 .wrapper--finder__filters--mobile[data-open='true'] .finder__reset:focus .finder__reset__text {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -55904,7 +56431,7 @@ article .link-copy {
 .wrapper--finder__filters--mobile__toggle:focus, .wrapper--finder__filters--mobile__toggle:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -56202,7 +56729,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .finder__query__input:focus-within {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -56318,7 +56845,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .finder__query__input .finder__clear:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
     outline-offset: -0.25rem;
 }
@@ -56456,7 +56983,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .finder__query__submit:focus, .finder__query__submit:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -56595,7 +57122,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .finder__didyoumean__button:focus, .finder__didyoumean__button:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -56813,7 +57340,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .finder__query__suggestions li button:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
     outline-offset: 0;
 }
@@ -57087,7 +57614,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .finder__results__summary button:focus, .finder__results__summary button:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -57228,21 +57755,21 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .edge .finder__query__input input:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
 .edge .finder__query__input .finder__clear:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
 .edge .finder__select select:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -57402,7 +57929,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .dropdown-filter select:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -57623,7 +58150,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .campus-map__controls__search__wrap .campus-map__controls__search__clear:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -58342,7 +58869,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:focus:focus, .promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:focus:active, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:focus:focus, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:focus:active, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:focus:focus, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:focus:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -58353,7 +58880,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:active:focus, .promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:active:active, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:active:focus, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:active:active, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:active:focus, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:active:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -58369,6 +58896,11 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:after, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:after, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:after {
     content: '';
+}
+
+.promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:focus, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:focus, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:focus {
+    color: #0c0c0e;
+    background-color: #ffffff;
 }
 
 .promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:active span, .promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:focus span, .promo-area__wrap .promo-area .promo-area__content.background--pink90 .cta-block__cta a:hover span, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:active span, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:focus span, .promo-area__wrap .promo-area .promo-area__content.background--red60 .cta-block__cta a:hover span, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:active span, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:focus span, .promo-area__wrap .promo-area .promo-area__content.background--teal70 .cta-block__cta a:hover span {
@@ -58497,7 +59029,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .promo-area__wrap .promo-area .promo-area__content.background--brown10 .cta-block__cta a:focus:focus, .promo-area__wrap .promo-area .promo-area__content.background--brown10 .cta-block__cta a:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -58519,7 +59051,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .promo-area__wrap .promo-area .promo-area__content.background--brown10 .cta-block__cta a:active:focus, .promo-area__wrap .promo-area .promo-area__content.background--brown10 .cta-block__cta a:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -58957,7 +59489,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .sc-content--link a:focus .card-link, .sc-content--link a:active .card-link {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -60831,7 +61363,7 @@ main > .case-study--business .case-study--business__content {
 .content-hub .banner-text .cta-block .cta-block__cta a:focus:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -60845,7 +61377,7 @@ main > .case-study--business .case-study--business__content {
 .content-hub .banner-text .cta-block .cta-block__cta a:active:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -61374,7 +61906,7 @@ main > .case-study--business .case-study--business__content {
 .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:active, .content-hub__block-two .careers-accordions .pathway .pathway__cards .card--pathway a:focus {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -61898,7 +62430,7 @@ main > .case-study--business .case-study--business__content {
 .content-hub__block-three .news-events .content-hub__block-three__research__centres a:focus, .content-hub__block-three .news-events .content-hub__block-three__research__centres a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -62484,7 +63016,7 @@ main > .error {
 .event .footer-cards a:focus, .event .footer-cards a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -62885,14 +63417,14 @@ main > .error {
 .event__sponsors li a:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
 .event__sponsors li a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -63214,7 +63746,7 @@ main > .error {
 .wrapper--event__contact .event__contact .related-content .card__details .card__tag a:focus, .wrapper--event__contact .event__contact .related-content .card__details .card__tag a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -63467,7 +63999,7 @@ main header .event__formassembly__button:focus {
 main header .event__formassembly__button:focus:focus, main header .event__formassembly__button:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -63489,7 +64021,7 @@ main header .event__formassembly__button:active {
 main header .event__formassembly__button:active:focus, main header .event__formassembly__button:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -64203,7 +64735,7 @@ main .home .home__research__wrap .home__research__content .home__research__conte
 main .home .home__research__wrap .home__research__content .home__research__content__links ul li a:focus, main .home .home__research__wrap .home__research__content .home__research__content__links ul li a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -65373,7 +65905,7 @@ main .home .home__whats-happening .related-content {
 .landing--functional .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:focus, .landing--functional .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -65495,7 +66027,7 @@ main .home .home__whats-happening .related-content {
 .landing--functional .wrapper--landing__contact .landing__contact__location .card--findus .card--findus__content__name:focus, .landing--functional .wrapper--landing__contact .landing__contact__location .card--findus .card--findus__content__name:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -65930,7 +66462,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 .landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:focus, .landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -66200,7 +66732,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 .landing--functional__finder .landing--functional__finder__links__content--links li a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -66802,7 +67334,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 .listing .wrapper--listing__content .card--contact a:focus, .listing .wrapper--listing__content .card--contact a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -66944,14 +67476,14 @@ main > .login header a:focus, main > .login header a:active {
 main > .login header a:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
 main > .login header a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -67584,7 +68116,7 @@ main > .news .news__contact a:focus, main > .news .news__contact a:active {
 main > .news .news__contact a:focus, main > .news .news__contact a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -67886,7 +68418,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .course--pgt .wrapper--course--pgt__introduction button:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -68012,7 +68544,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__year-select p a:focus, .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__year-select p a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -69429,7 +69961,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .course--pgt .pathway a:active, .course--pgt .pathway a:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -70572,7 +71104,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .profile .profile__banner__content__details__organisation a:focus, .profile .profile__banner__content__details__organisation a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -72357,7 +72889,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .search .search__query__input:focus-within {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -72482,7 +73014,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .search .search__query__input .search__clear:focus {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
     outline-offset: -0.25rem;
 }
@@ -72615,7 +73147,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .search .search__query__submit:focus, .search .search__query__submit:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -73948,7 +74480,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .lifelong-learning .lifelong-learning__content .overview__subject-wrapper .cta-block a:focus:focus, .lifelong-learning .lifelong-learning__content .overview__subject-wrapper .cta-block a:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -73970,7 +74502,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .lifelong-learning .lifelong-learning__content .overview__subject-wrapper .cta-block a:active:focus, .lifelong-learning .lifelong-learning__content .overview__subject-wrapper .cta-block a:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -74025,7 +74557,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .lifelong-learning .lifelong-learning__content .overview__subject-wrapper .cta-block a:focus:focus, .lifelong-learning .lifelong-learning__content .overview__subject-wrapper .cta-block a:focus:active, .lifelong-learning .lifelong-learning__content .overview__subject-wrapper .cta-block a:active:focus, .lifelong-learning .lifelong-learning__content .overview__subject-wrapper .cta-block a:active:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -74264,7 +74796,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .lifelong-learning .lifelong-learning__contact .cta-block li a:focus:focus, .lifelong-learning .lifelong-learning__contact .cta-block li a:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -74286,7 +74818,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .lifelong-learning .lifelong-learning__contact .cta-block li a:active:focus, .lifelong-learning .lifelong-learning__contact .cta-block li a:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -74341,7 +74873,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .lifelong-learning .lifelong-learning__contact .cta-block li a:focus:focus, .lifelong-learning .lifelong-learning__contact .cta-block li a:focus:active, .lifelong-learning .lifelong-learning__contact .cta-block li a:active:focus, .lifelong-learning .lifelong-learning__contact .cta-block li a:active:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -74541,7 +75073,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     .js .lifelong-learning .modal__trigger:focus:focus, .js .lifelong-learning .modal__trigger:focus:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
 }
@@ -74564,7 +75096,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     .js .lifelong-learning .modal__trigger:active:focus, .js .lifelong-learning .modal__trigger:active:active {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
-        outline-style: dotted;
+        outline-style: solid;
         outline-width: 0.125rem;
     }
     .js .lifelong-learning .modal__trigger:disabled {
@@ -75056,7 +75588,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .lifelong-learning .swiper-slider-arrow:focus:focus, .lifelong-learning .swiper-slider-arrow:focus:active, .lifelong-learning .swiper-slider-arrow:active:focus, .lifelong-learning .swiper-slider-arrow:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -76356,7 +76888,7 @@ main .standard-content .content {
 .course--ug__announcement.course--ug__announcement--clearing.promo-box a:focus, .course--ug__announcement.course--ug__announcement--clearing.promo-box a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -76505,7 +77037,7 @@ main .standard-content .content {
 .course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card .show-more .show-more__button button:focus, .course--ug__announcement.course--ug__announcement--clearing.promo-box .promo-box__card .show-more .show-more__button button:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -78121,7 +78653,7 @@ main .standard-content .content {
 .course--ug__related-links .related-links--with-images a:focus, .course--ug__related-links .related-links--with-images a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -78211,7 +78743,7 @@ main .standard-content .content {
 .course--ug__related-links .related-links--with-images__links a:focus, .course--ug__related-links .related-links--with-images__links a:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -78387,7 +78919,7 @@ main .standard-content .content {
 .course--ug + .dialog .how-to-apply--ug--js__modal__options a:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -78772,7 +79304,7 @@ main .standard-content .content {
 .school__content__links .school__content__links--right .school__anchor-inline--gray4--darkColor:focus, .school__content__links .school__content__links--right .school__anchor-inline--gray4--darkColor:active {
     outline-color: #ffffff;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -78962,7 +79494,7 @@ main .standard-content .content {
 .school__content__cta .school__cta-outlined-light-bg:focus:focus, .school__content__cta .school__cta-outlined-light-bg:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -78984,7 +79516,7 @@ main .standard-content .content {
 .school__content__cta .school__cta-outlined-light-bg:active:focus, .school__content__cta .school__cta-outlined-light-bg:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -79195,7 +79727,7 @@ main .standard-content .content {
 .banner__standfirst-cta:focus:focus, .banner__standfirst-cta:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -79217,7 +79749,7 @@ main .standard-content .content {
 .banner__standfirst-cta:active:focus, .banner__standfirst-cta:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -79394,7 +79926,7 @@ main .standard-content .content {
 .pga .banner__standfirst-cta:focus:focus, .pga .banner__standfirst-cta:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -79416,7 +79948,7 @@ main .standard-content .content {
 .pga .banner__standfirst-cta:active:focus, .pga .banner__standfirst-cta:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -79609,7 +80141,7 @@ main .standard-content .content {
 .shps .banner__standfirst-cta:focus:focus, .shps .banner__standfirst-cta:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -79631,7 +80163,7 @@ main .standard-content .content {
 .shps .banner__standfirst-cta:active:focus, .shps .banner__standfirst-cta:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -79824,7 +80356,7 @@ main .standard-content .content {
 .bbs .banner__standfirst-cta:focus:focus, .bbs .banner__standfirst-cta:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -79846,7 +80378,7 @@ main .standard-content .content {
 .bbs .banner__standfirst-cta:active:focus, .bbs .banner__standfirst-cta:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -80039,7 +80571,7 @@ main .standard-content .content {
 .sst .banner__standfirst-cta:focus:focus, .sst .banner__standfirst-cta:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -80061,7 +80593,7 @@ main .standard-content .content {
 .sst .banner__standfirst-cta:active:focus, .sst .banner__standfirst-cta:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -80246,7 +80778,7 @@ main .standard-content .content {
 .cls .banner__standfirst-cta:focus:focus, .cls .banner__standfirst-cta:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -80268,7 +80800,7 @@ main .standard-content .content {
 .cls .banner__standfirst-cta:active:focus, .cls .banner__standfirst-cta:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -80453,7 +80985,7 @@ main .standard-content .content {
 .scc .banner__standfirst-cta:focus:focus, .scc .banner__standfirst-cta:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
@@ -80475,7 +81007,7 @@ main .standard-content .content {
 .scc .banner__standfirst-cta:active:focus, .scc .banner__standfirst-cta:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
-    outline-style: dotted;
+    outline-style: solid;
     outline-width: 0.125rem;
 }
 
