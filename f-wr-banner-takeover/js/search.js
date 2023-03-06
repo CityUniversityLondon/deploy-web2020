@@ -2612,7 +2612,7 @@ function Search__OtherSites(props) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
         href: collection.search + '?query=' + props.query.query
       }, collection.label, " (", collection.response.summary.totalMatching, ")"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        className: "fad fa-lock-alt icon",
+        className: "far fa-lock-alt icon",
         "aria-label": "Login required"
       })));
     } else {
@@ -3256,6 +3256,7 @@ function InlineSearch(props) {
     }
   }, [display, focusTrap]);
   const iconClass = `global-header__search__icon far fa-fw ${display ? 'fa-times' : 'fa-search'}`,
+        ariaLabel = `${display ? 'Close search' : 'Open search'}`,
         veil = display && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "veil--search",
     "data-on": "true"
@@ -3265,6 +3266,7 @@ function InlineSearch(props) {
     type: "button",
     id: "search",
     "aria-expanded": display,
+    "aria-label": ariaLabel,
     onClick: () => {
       setDisplay(!display);
     }
