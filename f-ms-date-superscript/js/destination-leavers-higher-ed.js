@@ -2408,7 +2408,6 @@ function formatTime(timeString) {
  */
 
 function daySuffix(day) {
-  console.log;
   const eleventh = 11,
         thirteenth = 13,
         lastDigit = day.toString().slice(-1);
