@@ -49319,10 +49319,6 @@ main > .login footer p {
     margin-top: -10rem;
 }
 
-.home-new-vi main .navigation--secondary + article {
-    grid-column: 1/-1;
-}
-
 .home-new-vi main {
     margin: 0;
     padding: 0;

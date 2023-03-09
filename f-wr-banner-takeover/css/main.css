@@ -65424,6 +65424,208 @@ main .home .home__whats-happening .related-content {
     content: none;
 }
 
+.home-banner--takeover {
+    overflow: hidden;
+    position: relative;
+}
+
+.home-banner--takeover .takeover__container {
+    max-width: 55ch;
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+    z-index: 1;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .home-banner--takeover .takeover__container {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .home-banner--takeover .takeover__container {
+        grid-column-gap: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-banner--takeover .takeover__container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .home-banner--takeover .takeover__container {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .home-banner--takeover .takeover__container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1441px) {
+    .home-banner--takeover .takeover__container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1023px) {
+    .home-banner--takeover .takeover__container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    .home-banner--takeover .takeover__container {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.home-banner--takeover .takeover__image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    top: -140px;
+}
+
+@media (max-width: 1279px) {
+    .home-banner--takeover .takeover__image picture {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1023px) {
+    .home-banner--takeover .takeover__image {
+        top: -75px;
+    }
+}
+
+.home-banner--takeover .takeover__image img {
+    width: 100%;
+}
+
+@media (min-width: 901px) and (max-width: 1279px) {
+    .home-banner--takeover .takeover__image img {
+        height: 100%;
+        max-width: inherit;
+        width: auto;
+    }
+}
+
+.home-banner--takeover .takeover__content {
+    grid-column: 1/10;
+    background-color: #0c0c0e;
+    color: #ffffff;
+    margin-top: 9rem;
+    margin-bottom: 7rem;
+    padding: 3rem;
+}
+
+@media (max-width: 1279px) {
+    .home-banner--takeover .takeover__content {
+        grid-column: 1/12;
+    }
+}
+
+@media (max-width: 899px) {
+    .home-banner--takeover .takeover__content {
+        grid-column: 1/-1;
+        margin-bottom: 3.5rem;
+        margin-top: 45%;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-banner--takeover .takeover__content {
+        margin-top: 42%;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-banner--takeover .takeover__content {
+        margin-top: 35%;
+    }
+}
+
+.home-banner--takeover .takeover__content__heading {
+    font-size: 2.28rem;
+    line-height: 1.33333;
+    letter-spacing: -0.017em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .home-banner--takeover .takeover__content__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .home-banner--takeover .takeover__content__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .home-banner--takeover .takeover__content__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .home-banner--takeover .takeover__content__heading {
+        letter-spacing: -0.027em;
+    }
+}
+
+@media (min-width: 1281px) {
+    .home-banner--takeover .takeover__content__heading {
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+}
+
+.home-banner--takeover .takeover__content__text,
+.home-banner--takeover .cta-block {
+    margin-top: 1.5rem;
+}
+
+.home-banner--takeover .cta-block {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.home-banner--takeover ~ .search-box__wrapper .search-box__cta__wrapper {
+    display: none;
+}
+
+.home-banner--takeover ~ .search-box__wrapper .search-box__text__wrapper {
+    padding-bottom: 4rem;
+}
+
+@media (max-width: 1279px) {
+    .home-banner--takeover ~ * {
+        position: relative;
+    }
+}
+
 @keyframes moveUp {
     0% {
         transform: translateX(-100%);
@@ -66682,6 +66884,10 @@ main .home .home__whats-happening .related-content {
     position: absolute;
     transform: rotate(180deg);
     margin-top: -10rem;
+}
+
+.home-new-vi main .navigation--secondary + article {
+    grid-column: 1 / -1;
 }
 
 .home-new-vi main {
