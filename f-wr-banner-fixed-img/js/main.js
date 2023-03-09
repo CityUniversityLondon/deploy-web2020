@@ -668,7 +668,8 @@ function createControlButton(video) {
   elButtonPlay.classList.add('banner__video__button');
   elButtonPlay.appendChild(elImgPlay);
   elButtonPlay.appendChild(elImgPause);
-  elButtonWrap.appendChild(elButtonPlay);
+  elButtonWrap.appendChild(elButtonPlay); // add new elements adjent to video
+
   video.insertAdjacentElement('afterend', elButtonWrap);
   elButtonPlay.addEventListener('click', () => {
     togglePlay(video, elButtonPlay);
