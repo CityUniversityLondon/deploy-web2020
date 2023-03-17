@@ -49086,6 +49086,14 @@ main .home__research .linked-heading__icons span:nth-child(1), main .home__resea
     }
 }
 
+.home-new-vi .breadcrumbs {
+    display: none;
+}
+
+.home-new-vi .navigation--secondary {
+    display: none;
+}
+
 .home-new-vi .triangle__block {
     width: 10rem;
 }
