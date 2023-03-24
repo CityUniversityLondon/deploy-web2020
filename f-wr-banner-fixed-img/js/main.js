@@ -548,19 +548,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
-
-
 
 
 const className = 'home-banner--promo-alt';
 let prevRatio = 0.0;
 let elementWatch;
-let defaultTransitionElemnt;
-let scale = 'scale(1.0X)';
+let defaultTransitionElemnt; //let scale = 'scale(1.0X)';
 
 function takeOver(box) {
   defaultTransitionElemnt = box;
@@ -602,14 +595,25 @@ function handleIntersect(entries) {
 
     if (entry.intersectionRatio > prevRatio) {
       /*
-      defaultTransitionElemnt.querySelector(
-          '.takeover-transition-opacity'
-      ).style.opacity = entry.intersectionRatio;
+             
+       defaultTransitionElemnt.querySelector(
+          '.banner-transition-ele'
+      ).style.transform = scale.replace(
+          'X',
+          Math.round(10 - entry.intersectionRatio * 10)
+      );
       */
-      defaultTransitionElemnt.querySelector('.banner-transition-ele').style.transform = scale.replace('X', Math.round(10 - entry.intersectionRatio * 10));
       entry.intersectionRatio === 0 ? defaultTransitionElemnt.querySelector('.banner-transition-ele').style.position = 'absolute' : defaultTransitionElemnt.querySelector('.banner-transition-ele').style.position = 'fixed';
     } else {
-      defaultTransitionElemnt.querySelector('.banner-transition-ele').style.transform = scale.replace('X', Math.round(10 - entry.intersectionRatio * 10));
+      /*
+      defaultTransitionElemnt.querySelector(
+          '.banner-transition-ele'
+      ).style.transform = scale.replace(
+          'X',
+          Math.round(10 - entry.intersectionRatio * 10) 
+          
+      );
+      */
       entry.intersectionRatio === 0 ? defaultTransitionElemnt.querySelector('.banner-transition-ele').style.position = 'absolute' : defaultTransitionElemnt.querySelector('.banner-transition-ele').style.position = 'fixed';
     }
 
