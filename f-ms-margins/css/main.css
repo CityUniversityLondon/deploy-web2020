@@ -26558,8 +26558,9 @@ form:not([class]) .form__required-note--marker,
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
     display: grid;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
 }
 
 @media (min-width: 768px) {
@@ -26576,8 +26577,8 @@ form:not([class]) .form__required-note--marker,
 
 @media (min-width: 901px) {
     .banner-svg--wrapper {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
@@ -56341,8 +56342,8 @@ article .link-copy {
 }
 
 .wrapper--finder__filters--mobile[data-open='false'] {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     text-align: right;
 }
 
@@ -66341,8 +66342,8 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -66521,8 +66522,8 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 
 @media (max-width: 1023px) {
     main .listing .banner-text .banner-text__content {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 0;
+        padding-right: 0;
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
@@ -66530,12 +66531,12 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 
 @media (max-width: 767px) {
     main .listing .banner-text .banner-text__content {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
     main .finder .finder__query {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
@@ -66584,15 +66585,16 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 
 @media (max-width: 767px) {
     .listing .finder__results {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
     }
 }
 
 @media (max-width: 767px) and (min-width: 901px) {
     .listing .finder__results {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
@@ -75796,42 +75798,17 @@ main .standard-content .content {
     main > .course--ug .courses--ug__facilities,
     main > .course--ug .course--ug__student {
         grid-column: 1/-1;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    main > .course--ug .course-info__wrapper,
-    main > .course--ug .course--ug__keyinfo__wrapper,
-    main > .course--ug .course-footer,
-    main > .course--ug .course--ug__whats-happening,
-    main > .course--ug .course--ug__related-courses__wrapper,
-    main > .course--ug .course--ug__tabs__wrap,
-    main > .course--ug .courses--ug__facilities,
-    main > .course--ug .course--ug__student {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) {
-    main > .course--ug header {
-        grid-column: 1/-1;
-    }
+    main > .course--ug header,
+    main > .course--ug .course--ug__related-courses,
     main > .course--ug .featured-profiles-block__wrap {
         grid-column: 1/-1;
     }
     main > .course--ug .featured-profiles-block {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    main > .course--ug .featured-profiles-block {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
@@ -75859,8 +75836,9 @@ main .standard-content .content {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
     display: grid;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 80rem;
 }
 
 @media (min-width: 768px) {
@@ -75877,8 +75855,8 @@ main .standard-content .content {
 
 @media (min-width: 901px) {
     .course--ug .course--promo-cards {
-        padding-left: 2rem;
-        padding-right: 2rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
