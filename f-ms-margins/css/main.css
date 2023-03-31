@@ -69566,7 +69566,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (max-width: 1023px) {
-    main > .profile .standfirst,
     main > .profile .profile--global__date {
         margin-left: 1rem;
         margin-right: 1rem;
@@ -69575,7 +69574,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    main > .profile .standfirst,
     main > .profile .profile--global__date {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
@@ -69816,49 +69814,42 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     margin-top: 1rem;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
     .profile .standfirst,
     .profile .profile--global__about,
-    .profile .profile--global__about-heading {
+    .profile .profile--global__about-heading,
+    .profile .profile--global__tags {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
     }
 }
 
-@media (max-width: 1023px) and (min-width: 901px) {
+@media (max-width: 767px) and (min-width: 901px) {
     .profile .standfirst,
     .profile .profile--global__about,
-    .profile .profile--global__about-heading {
+    .profile .profile--global__about-heading,
+    .profile .profile--global__tags {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-@media (max-width: 1023px) and (min-width: 901px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     .profile .standfirst,
     .profile .profile--global__about,
-    .profile .profile--global__about-heading {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .profile .standfirst,
-    .profile .profile--global__about,
-    .profile .profile--global__about-heading {
-        margin-left: auto;
-        margin-right: auto;
+    .profile .profile--global__about-heading,
+    .profile .profile--global__tags {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
     .profile .standfirst,
     .profile .profile--global__about,
-    .profile .profile--global__about-heading {
+    .profile .profile--global__about-heading,
+    .profile .profile--global__tags {
         grid-column: 4 / span 12;
     }
 }
@@ -70046,8 +70037,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
         margin-top: 2.25rem;
     }
 }
@@ -70056,20 +70045,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     .profile .tabs--accordion {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 768px) and (min-width: 901px) {
-    .profile .tabs--accordion {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 768px) and (min-width: 1441px) {
-    .profile .tabs--accordion {
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
@@ -70478,37 +70453,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .profile .profile--global__tags .content {
     grid-column: 1/-1;
     padding: 0;
-}
-
-@media (max-width: 1023px) {
-    .profile .profile--global__tags {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .profile .profile--global__tags {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .profile .profile--global__tags {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .profile .profile--global__tags {
-        margin-left: auto;
-        margin-right: auto;
-    }
+    margin: 0;
 }
 
 @media (min-width: 1024px) {
@@ -71270,8 +71215,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .profile--staff,
 .profile--academic {
     background: #ffffff;
-    padding-left: 3rem;
-    padding-right: 3rem;
     display: flex;
     flex-direction: row;
 }
@@ -71279,19 +71222,8 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 @media (max-width: 1023px) {
     .profile--staff,
     .profile--academic {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        max-width: 80rem;
         padding-left: 1.5rem;
         padding-right: 1.5rem;
-    }
-}
-
-@media (max-width: 1023px) and (min-width: 901px) {
-    .profile--staff,
-    .profile--academic {
-        margin-left: 1.5rem;
-        margin-right: 1.5rem;
     }
 }
 
@@ -71303,14 +71235,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
-@media (max-width: 1023px) and (min-width: 1441px) {
-    .profile--staff,
-    .profile--academic {
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
 @media (max-width: 1279px) {
     .profile--staff,
     .profile--academic {
@@ -71318,10 +71242,20 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
+@media (max-width: 767px) {
+    .profile--staff,
+    .profile--academic {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
 @media (min-width: 768px) {
     .profile--staff,
     .profile--academic {
         margin-top: -4rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }
 
