@@ -7141,21 +7141,18 @@ function launchTimeZone(timeZone) {
         srcDate = new Date(dateString),
         srcHours = srcDate.getHours();
   let srcMinutes;
-  srcDate.getMinutes() === 0 ? srcMinutes = '00' : srcMinutes = srcDate.getMinutes(); // console.log('Hours: ' + srcHours);
-  // console.log('Minutes: ' + srcMinutes);
+  srcDate.getMinutes() === 0 ? srcMinutes = '00' : srcMinutes = srcDate.getMinutes(); // Create a Date object and pass in source values. This is required to set a local timezone.
 
-  const theBigDay = new Date();
-  theBigDay.setUTCHours(srcHours);
-  theBigDay.setUTCMinutes(srcMinutes);
-  theBigDay.setUTCSeconds(0); // console.log('Date object: ' + theBigDay);
-  // console.log('Local zone hours: ' + theBigDay.getHours());
-  // console.log('Local zone minutes: ' + theBigDay.getMinutes());
+  const dateObj = new Date();
+  dateObj.setUTCHours(srcHours);
+  dateObj.setUTCMinutes(srcMinutes);
+  dateObj.setUTCSeconds(0); // If hours <10, prepend '0' to minute value
 
-  const formattedHours = theBigDay.getHours();
-  let formattedMinutes;
-  theBigDay.getMinutes() === 0 ? formattedMinutes = '00' : formattedMinutes.getMinutes();
-  const textNode = document.createTextNode(`${theBigDay.getHours()}:${theBigDay.getMinutes() === 0 ? '00' : theBigDay.getMinutes()}`);
-  timeZone.append(textNode);
+  const formattedHours = parseInt(dateObj.getHours()) < 10 ? `0${dateObj.getHours()}` : dateObj.getHours(); // If minutes <10, prepend '0' to minute value
+
+  const formattedMinutes = parseInt(dateObj.getMinutes()) < 10 ? `0${dateObj.getMinutes()}` : dateObj.getMinutes();
+  const timeTextNode = document.createTextNode(`${formattedHours}:${formattedMinutes}`);
+  timeZone.append(timeTextNode);
   timeZone.setAttribute('dateTime', `${formattedHours}:${formattedMinutes}`);
 }
 
