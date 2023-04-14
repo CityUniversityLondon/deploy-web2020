@@ -7120,6 +7120,7 @@ function launchTabs(tabs) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 /**
@@ -7129,7 +7130,10 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2023
  */
+
 const className = 'local-time-zone';
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+      days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 /**
  * Format time zone to local value.
  *
@@ -7140,7 +7144,8 @@ function launchTimeZone(time) {
   const dateString = time.dataset.time,
         srcDate = new Date(dateString),
         srcHours = srcDate.getHours();
-  let srcMinutes;
+  let srcMinutes,
+      revisedDayTextNode = '';
   srcDate.getMinutes() === 0 ? srcMinutes = '00' : srcMinutes = srcDate.getMinutes(); // Create a Date object and pass in source values. This is required to set a local time zone.
 
   const dateObj = new Date();
@@ -7168,7 +7173,32 @@ function launchTimeZone(time) {
   if (hoursOffset < 0) {
     // console.log('test: ' + hoursOffset * -1)
     if (24 - formattedHours < hoursOffset * -1) {
-      srcDate.setDate(srcDate.getDate() - 1); // console.log('reduce day by 1');
+      srcDate.setDate(srcDate.getDate() - 1); // console.log(days[srcDate.getDay()]);
+      // console.log(srcDate.getDate());
+      // console.log(daySuffix(srcDate.getDate()));
+      // console.log(months[srcDate.getMonth()]);
+      // console.log(srcDate.getFullYear());
+
+      var dayName = days[srcDate.getDay()];
+      var dayNumber = srcDate.getDate();
+      var dayNumberSuffix = Object(_util__WEBPACK_IMPORTED_MODULE_0__["daySuffix"])(srcDate.getDate());
+      var month = months[srcDate.getMonth()];
+      var year = srcDate.getFullYear(); // console.log (`${dayName}, ${dayNumber}${dayNumberSuffix} ${month} ${year}`)
+
+      revisedDayTextNode = document.createTextNode(`${dayName}, ${dayNumber}${dayNumberSuffix} ${month} ${year}`); // console.log(revisedDayTextNode);
+      // if (time.dataset.day === "true") {
+      //     console.log('update date')
+      // }
+      // console.log(time.dataset)
+
+      if (time.dataset.day) {
+        // console.log(123)
+        time.append(revisedDayTextNode);
+      } // time.append(revisedDayTextNode)
+      // var dateObj2 = new Date(srcDate);
+      // console.log(dateObj2)
+      // console.log('reduce day by 1');
+
     }
   } // Update data-time attribute with local time zone values
 
@@ -7176,9 +7206,25 @@ function launchTimeZone(time) {
   srcDate.setHours(formattedHours);
   srcDate.setMinutes(formattedMinutes);
   time.setAttribute('data-time', srcDate);
-  time.setAttribute('dateTime', `${formattedHours}:${formattedMinutes}`); // Append formatted time
+  time.setAttribute('dateTime', `${formattedHours}:${formattedMinutes}`); // const dateTextNode = document.createTextNode(
+  //     `${srcDate}`
+  // );
+  // console.log(time.dataset.time);
+  // var dateObj2 = new Date(time.dataset.time);
+  // var day2 = days[dateObj2.getDay()];
+  // const day2TextNode = document.createTextNode(`${day2}`);
+  // console.log(day2TextNode)
+  // Append formatted time
 
-  time.append(timeTextNode);
+  if (!time.dataset.day) {
+    time.append(timeTextNode);
+  } else {
+    // console.log('a')
+    // console.log(revisedDayTextNode)
+    time.append('revisedDayTextNode'); // console.log(dateObj);
+    // var dayNum = dateObj.getDay();
+    // console.log(parseInt(dayNum))
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -7385,7 +7431,7 @@ function copyIconToClipboard(elem) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatTime, formatReactDate, arraySlicer, screenWidth */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatTime, daySuffix, formatReactDate, arraySlicer, screenWidth */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7408,6 +7454,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "uppercaseFirstLetterLowercaseRest", function() { return uppercaseFirstLetterLowercaseRest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "axiosRequest", function() { return axiosRequest; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatTime", function() { return formatTime; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "daySuffix", function() { return daySuffix; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatReactDate", function() { return formatReactDate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arraySlicer", function() { return arraySlicer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "screenWidth", function() { return screenWidth; });
@@ -7723,7 +7770,6 @@ function daySuffix(day) {
  * @param {Date} date - A date object.
  * @returns {ReactFragment} The formatted date.
  */
-
 
 function formatReactDate(date) {
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
