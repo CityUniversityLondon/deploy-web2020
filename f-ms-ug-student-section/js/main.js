@@ -7123,25 +7123,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * Format time to local timezone value
+ * Format time to local time zone value
  *
- * @module patterns/timeZone
+ * @module patterns/time
  * @author Web Development
  * @copyright City, University of London 2023
  */
 const className = 'local-time-zone';
 /**
- * Format timezone to local value.
+ * Format time zone to local value.
  *
- * @param {} time - The timezone as a string.
+ * @param {String} time - The time zone as a string.
  */
 
-function launchTimeZone(timeZone) {
-  const dateString = timeZone.dataset.time,
+function launchTimeZone(time) {
+  const dateString = time.dataset.time,
         srcDate = new Date(dateString),
         srcHours = srcDate.getHours();
   let srcMinutes;
-  srcDate.getMinutes() === 0 ? srcMinutes = '00' : srcMinutes = srcDate.getMinutes(); // Create a Date object and pass in source values. This is required to set a local timezone.
+  srcDate.getMinutes() === 0 ? srcMinutes = '00' : srcMinutes = srcDate.getMinutes(); // Create a Date object and pass in source values. This is required to set a local time zone.
 
   const dateObj = new Date();
   dateObj.setUTCHours(srcHours);
@@ -7151,9 +7151,34 @@ function launchTimeZone(timeZone) {
   const formattedHours = parseInt(dateObj.getHours()) < 10 ? `0${dateObj.getHours()}` : dateObj.getHours(); // If minutes <10, prepend '0' to minute value
 
   const formattedMinutes = parseInt(dateObj.getMinutes()) < 10 ? `0${dateObj.getMinutes()}` : dateObj.getMinutes();
-  const timeTextNode = document.createTextNode(`${formattedHours}:${formattedMinutes}`);
-  timeZone.append(timeTextNode);
-  timeZone.setAttribute('dateTime', `${formattedHours}:${formattedMinutes}`);
+  const timeTextNode = document.createTextNode(`${formattedHours}:${formattedMinutes}`); // Calculate getTimezoneOffset in hours (negative = behind GMT, positive = ahead of GMT)
+
+  const hoursOffset = dateObj.getTimezoneOffset() / -60; // console.log(hoursOffset);
+  // If time zone offset is positive and local hour value is less than this, add a day
+  // e.g. 7pm event GMT would be 4am local time in Tokyo (+9 hours)
+  // As 4 hours into new day is less than the time zone difference, it shows the date value
+  // needs to be increased by 1 day
+  // formattedHours < hoursOffset ? console.log('add 1 day') : console.log('not new day')
+
+  formattedHours < hoursOffset ? srcDate.setDate(srcDate.getDate() + 1) : null; // console.log(srcDate);
+  // The inverse applies to timezones behind GMT/BST. A 5am GMT event would be 10pm
+  // in San Fransisco (-7 hours). In this case, if when the local hour value is subjected
+  // from 24, it is less than the offset (7), the date value needs to be decreased by 1 day.
+
+  if (hoursOffset < 0) {
+    // console.log('test: ' + hoursOffset * -1)
+    if (24 - formattedHours < hoursOffset * -1) {
+      srcDate.setDate(srcDate.getDate() - 1); // console.log('reduce day by 1');
+    }
+  } // Update data-time attribute with local time zone values
+
+
+  srcDate.setHours(formattedHours);
+  srcDate.setMinutes(formattedMinutes);
+  time.setAttribute('data-time', srcDate);
+  time.setAttribute('dateTime', `${formattedHours}:${formattedMinutes}`); // Append formatted time
+
+  time.append(timeTextNode);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
