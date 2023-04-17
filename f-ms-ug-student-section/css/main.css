@@ -77200,13 +77200,18 @@ main .standard-content .content {
     }
 }
 
-.course--ug__student-testimonial-videos .embedded-video,
+.course--ug__student-testimonial__videos,
+.course--ug__student-coursework__videos {
+    grid-column: 1/-1;
+}
+
+.course--ug__student-testimonial__videos .embedded-video,
 .course--ug__student-coursework__videos .embedded-video {
     padding: 0.5rem 0 1.5rem;
 }
 
 @media (min-width: 901px) {
-    .course--ug__student-testimonial-videos,
+    .course--ug__student-testimonial__videos,
     .course--ug__student-coursework__videos {
         display: grid;
         grid-template-columns: 1fr 1fr;
