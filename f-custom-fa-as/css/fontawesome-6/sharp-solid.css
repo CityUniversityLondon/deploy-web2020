@@ -13,7 +13,7 @@
     font-style: normal;
     font-weight: 900;
     font-display: block;
-    src: url("../../assets/fonts/fontawesome-6/fa-sharp-solid-900.woff2") format("woff2"), url("../../assets/fonts/fontawesome-6/fa-sharp-solid-900.ttf") format("truetype");
+    src: url("/fonts//fa-sharp-solid-900.woff2") format("woff2"), url("/fonts//fa-sharp-solid-900.ttf") format("truetype");
 }
 
 .fass,

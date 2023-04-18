@@ -3152,7 +3152,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: local("Font Awesome Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-light-300.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-light-300.woff) format("woff");
+    src: local("Font Awesome Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-light-300.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-light-300.truetype) format("truetype");
 }
 
 @font-face {
@@ -3160,7 +3160,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local("Font Awesome Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-regular-400.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-regular-400.woff) format("woff");
+    src: local("Font Awesome Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-regular-400.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-regular-400.truetype) format("truetype");
 }
 
 @font-face {
@@ -3168,15 +3168,15 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 900;
     font-display: swap;
-    src: local("Font Awesome Solid"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-solid-900.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-solid-900.woff) format("woff");
+    src: local("Font Awesome Solid"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-solid-900.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-solid-900.truetype) format("truetype");
 }
 
 @font-face {
-    font-family: "Font Awesome Brands";
+    font-family: "Font Awesome 6 Brands";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local("Font Awesome Brands Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-brands-400.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-brands-400.woff) format("woff");
+    src: local("Font Awesome 6 Brands Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-brands-400.) format("");
 }
 
 @font-face {
@@ -3184,7 +3184,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 900;
     font-display: swap;
-    src: local("Font Awesome Duotone Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-duotone-900.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-duotone-900.woff) format("woff");
+    src: local("Font Awesome Duotone Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-duotone-900.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-duotone-900.truetype) format("truetype");
 }
 
 @font-face {
@@ -3192,7 +3192,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: local("Font Awesome Sharp Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-light-300.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-light-300.woff) format("woff");
+    src: local("Font Awesome Sharp Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-light-300.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-light-300.truetype) format("truetype");
 }
 
 @font-face {
@@ -3200,7 +3200,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local("Font Awesome Sharp Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-regular-400.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-regular-400.woff) format("woff");
+    src: local("Font Awesome Sharp Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-regular-400.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-regular-400.truetype) format("truetype");
 }
 
 @font-face {
@@ -3208,7 +3208,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 900;
     font-display: swap;
-    src: local("Font Awesome Sharp Solid"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-solid-900.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-solid-900.woff) format("woff");
+    src: local("Font Awesome Sharp Solid"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-solid-900.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-solid-900.truetype) format("truetype");
 }
 
 .alpha-type {
