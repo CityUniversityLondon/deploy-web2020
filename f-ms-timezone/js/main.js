@@ -7147,8 +7147,6 @@ function launchTimeZone(time) {
 
   for (const timeElement of timeElements) {
     if (timeElement.dataset.time) {
-      // console.log(timeElement);
-      // timeEls.push(timeElement);
       const dateString = timeElement.dataset.time,
             srcDate = new Date(dateString),
             srcHours = srcDate.getHours();
@@ -7177,7 +7175,6 @@ function launchTimeZone(time) {
       // from 24, it is less than the offset (7), the date value needs to be decreased by 1 day.
 
       if (hoursOffset < 0) {
-        // console.log('test: ' + hoursOffset * -1)
         if (24 - formattedHours < hoursOffset * -1) {
           srcDate.setDate(srcDate.getDate() - 1);
         }
@@ -7190,122 +7187,20 @@ function launchTimeZone(time) {
       var month = months[srcDate.getMonth()];
       var monthFormattedString;
       var year = srcDate.getFullYear();
-      monthFormattedString = month + 1; // console.log(typeof monthFormattedString);
+      monthFormattedString = month + 1;
 
       if (monthFormattedString < 10) {
         monthFormattedString += 1;
       }
 
-      revisedDayTextNode = document.createTextNode(`${dayName}, ${dayNumber}${dayNumberSuffix} ${month} ${year}`); // console.log(month);
-
+      revisedDayTextNode = document.createTextNode(`${dayName}, ${dayNumber}${dayNumberSuffix} ${month} ${year}`);
       dayEl.innerHTML = '';
       dayEl.appendChild(revisedDayTextNode);
       dayEl.setAttribute('datetime', `${year}-${srcDate.getMonth() + 1}-${srcDate.getDate()}`);
-      time.append(timeTextNode); // dayEl.append(revisedDayTextNode)
-      // console.log(dayEl.textContent)
-      // console.log(revisedDayTextNode);
+      timeElement.setAttribute('datetime', `${year}-${srcDate.getMonth() + 1}-${srcDate.getDate()} ${formattedHours}:${formattedMinutes}`);
+      timeElement.appendChild(timeTextNode);
     }
-  } // dayEl.append('test')
-  // const dateString = time.dataset.time,
-  //     srcDate = new Date(dateString),
-  //     srcHours = srcDate.getHours();
-  // console.log(dateString);
-  // let srcMinutes,
-  //     revisedDayTextNode = '';
-  // srcDate.getMinutes() === 0
-  //     ? (srcMinutes = '00')
-  //     : (srcMinutes = srcDate.getMinutes());
-  // Create a Date object and pass in source values. This is required to set a local time zone.
-  // const dateObj = new Date();
-  // dateObj.setUTCHours(srcHours);
-  // dateObj.setUTCMinutes(srcMinutes);
-  // dateObj.setUTCSeconds(0);
-  // If hours <10, prepend '0' to minute value
-  // const formattedHours =
-  //     parseInt(dateObj.getHours()) < 10
-  //         ? `0${dateObj.getHours()}`
-  //         : dateObj.getHours();
-  // If minutes <10, prepend '0' to minute value
-  // const formattedMinutes =
-  //     parseInt(dateObj.getMinutes()) < 10
-  //         ? `0${dateObj.getMinutes()}`
-  //         : dateObj.getMinutes();
-  // const timeTextNode = document.createTextNode(
-  //     `${formattedHours}:${formattedMinutes}`
-  // );
-  // Calculate getTimezoneOffset in hours (negative = behind GMT, positive = ahead of GMT)
-  // const hoursOffset = dateObj.getTimezoneOffset() / -60;
-  // console.log(hoursOffset);
-  // If time zone offset is positive and local hour value is less than this, add a day
-  // e.g. 7pm event GMT would be 4am local time in Tokyo (+9 hours)
-  // As 4 hours into new day is less than the time zone difference, it shows the date value
-  // needs to be increased by 1 day
-  // formattedHours < hoursOffset ? console.log('add 1 day') : console.log('not new day')
-  // formattedHours < hoursOffset
-  //     ? srcDate.setDate(srcDate.getDate() + 1)
-  //     : null;
-  // console.log(srcDate);
-  // The inverse applies to timezones behind GMT/BST. A 5am GMT event would be 10pm
-  // in San Fransisco (-7 hours). In this case, if when the local hour value is subjected
-  // from 24, it is less than the offset (7), the date value needs to be decreased by 1 day.
-  // if (hoursOffset < 0) {
-  // console.log('test: ' + hoursOffset * -1)
-  // if (24 - formattedHours < hoursOffset * -1) {
-  //     srcDate.setDate(srcDate.getDate() - 1);
-  // console.log(days[srcDate.getDay()]);
-  // console.log(srcDate.getDate());
-  // console.log(daySuffix(srcDate.getDate()));
-  // console.log(months[srcDate.getMonth()]);
-  // console.log(srcDate.getFullYear());
-  // var dayName = days[srcDate.getDay()];
-  // var dayNumber = srcDate.getDate();
-  // var dayNumberSuffix = daySuffix(srcDate.getDate());
-  // var month = months[srcDate.getMonth()];
-  // var year = srcDate.getFullYear();
-  // console.log (`${dayName}, ${dayNumber}${dayNumberSuffix} ${month} ${year}`)
-  // revisedDayTextNode = document.createTextNode(
-  //     `${dayName}, ${dayNumber}${dayNumberSuffix} ${month} ${year}`
-  // );
-  // console.log(revisedDayTextNode);
-  // if (time.dataset.day === "true") {
-  //     console.log('update date')
-  // }
-  // console.log(time.dataset)
-  // if (time.dataset.day) {
-  // console.log(123)
-  //     time.append(revisedDayTextNode);
-  // }
-  // time.append(revisedDayTextNode)
-  // var dateObj2 = new Date(srcDate);
-  // console.log(dateObj2)
-  // console.log('reduce day by 1');
-  //     }
-  // }
-  // Update data-time attribute with local time zone values
-  // srcDate.setHours(formattedHours);
-  // srcDate.setMinutes(formattedMinutes);
-  // time.setAttribute('data-time', srcDate);
-  // time.setAttribute('dateTime', `${formattedHours}:${formattedMinutes}`);
-  // const dateTextNode = document.createTextNode(
-  //     `${srcDate}`
-  // );
-  // console.log(time.dataset.time);
-  // var dateObj2 = new Date(time.dataset.time);
-  // var day2 = days[dateObj2.getDay()];
-  // const day2TextNode = document.createTextNode(`${day2}`);
-  // console.log(day2TextNode)
-  // Append formatted time
-  // if (!time.dataset.day) {
-  //     time.append(timeTextNode);
-  // } else {
-  // console.log('a')
-  // console.log(revisedDayTextNode)
-  // time.append('revisedDayTextNode');
-  // console.log(dateObj);
-  // var dayNum = dateObj.getDay();
-  // console.log(parseInt(dayNum))
-  //      }
-
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
