@@ -3187,6 +3187,30 @@ readers do not read off random characters that represent icons */
     src: local("Font Awesome Duotone Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-duotone-900.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-duotone-900.woff) format("woff");
 }
 
+@font-face {
+    font-family: "Font Awesome Sharp";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local("Font Awesome Sharp Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-light-300.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-light-300.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Font Awesome Sharp";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Font Awesome Sharp Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-regular-400.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-regular-400.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Font Awesome Sharp";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: local("Font Awesome Sharp Solid"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-solid-900.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-solid-900.woff) format("woff");
+}
+
 .alpha-type {
     font-size: 1rem;
     line-height: 1.625;

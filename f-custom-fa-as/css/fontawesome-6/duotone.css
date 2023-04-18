@@ -13,7 +13,7 @@
     font-style: normal;
     font-weight: 900;
     font-display: block;
-    src: url("../../assets/fonts/fontawesome-6/webfonts/fa-duotone-900.woff2") format("woff2"), url("../../assets/fonts/fontawesome-6/webfonts/fa-duotone-900.ttf") format("truetype");
+    src: url("../../assets/fonts/fontawesome-6/fa-duotone-900.woff2") format("woff2"), url("../../assets/fonts/fontawesome-6/fa-duotone-900.ttf") format("truetype");
 }
 
 .fad,
