@@ -7172,8 +7172,7 @@ function launchTimeZone(time) {
 
       const formattedTimeTextNode = document.createTextNode(`${formattedHours}:${formattedMinutes}`); // Calculate time zone offset in hours (negative = behind GMT, positive = ahead of GMT)
 
-      const hoursOffset = formattedDateObj.getTimezoneOffset() / -60; // let dayChanged = false;
-
+      const hoursOffset = formattedDateObj.getTimezoneOffset() / -60;
       /**
        * If time zone offset is positive and local hour value is less than this value, add 1 day.
        *
@@ -7182,7 +7181,7 @@ function launchTimeZone(time) {
        */
 
       if (formattedHours < hoursOffset) {
-        timeDisplayElementDateObject.setDate(timeDisplayElementDateObject.getDate() + 1); // dayChanged = true;
+        timeDisplayElementDateObject.setDate(timeDisplayElementDateObject.getDate() + 1);
       }
       /**
        * The inverse applies to time zones behind GMT/BST.
@@ -7194,24 +7193,17 @@ function launchTimeZone(time) {
 
       if (hoursOffset < 0) {
         if (24 - formattedHours < hoursOffset * -1) {
-          timeDisplayElementDateObject.setDate(timeDisplayElementDateObject.getDate() - 1); // dayChanged = true;
+          timeDisplayElementDateObject.setDate(timeDisplayElementDateObject.getDate() - 1);
         }
-      } // if (dayChanged) {
-      // }
-      // If day has changed, get updated date values and create new text node based on these values
+      } // Update printed date/time and dateset attribute on time elements
 
 
-      var dayName = days[timeDisplayElementDateObject.getDay()];
-      var dayNumber = timeDisplayElementDateObject.getDate();
-      var dayNumberSuffix = Object(_util__WEBPACK_IMPORTED_MODULE_0__["daySuffix"])(timeDisplayElementDateObject.getDate());
-      var month = months[timeDisplayElementDateObject.getMonth()]; // var monthFormattedString;
-
-      var year = timeDisplayElementDateObject.getFullYear(); // monthFormattedString = month + 1;
-      // if (monthFormattedString < 10) {
-      //     monthFormattedString += 1;
-      // }
-
-      const revisedDayTextNode = document.createTextNode(`${dayName}, ${dayNumber}${dayNumberSuffix} ${month} ${year}`);
+      const dayName = days[timeDisplayElementDateObject.getDay()],
+            dayNumber = timeDisplayElementDateObject.getDate(),
+            dayNumberSuffix = Object(_util__WEBPACK_IMPORTED_MODULE_0__["daySuffix"])(timeDisplayElementDateObject.getDate()),
+            month = months[timeDisplayElementDateObject.getMonth()],
+            year = timeDisplayElementDateObject.getFullYear(),
+            revisedDayTextNode = document.createTextNode(`${dayName}, ${dayNumber}${dayNumberSuffix} ${month} ${year}`);
       dateDisplayElement.innerHTML = '';
       dateDisplayElement.appendChild(revisedDayTextNode);
       dateDisplayElement.setAttribute('datetime', `${year}-${timeDisplayElementDateObject.getMonth() + 1}-${timeDisplayElementDateObject.getDate()}`);
