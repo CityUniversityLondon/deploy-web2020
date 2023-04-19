@@ -7126,7 +7126,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Format time to local time zone value
  *
- * @module patterns/time
+ * @module patterns/time-zone
  * @author Web Development
  * @copyright City, University of London 2023
  */
@@ -7141,64 +7141,83 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
  */
 
 function launchTimeZone(time) {
-  const timeElements = time.querySelectorAll('time'); // There should only be one day displayed; standard query selector suffices.
+  /**
+   * Example markup:
+   * <div class="local-time-zone">
+   *      <time datetime="2023-04-12" role="presentation" data-day="true">Wednesday, 12<sup>th</sup>April 2023</time>,
+          <time datetime="2023-04-12 19:00:00" data-time="2023-04-12 19:00:00" role="presentation"></time> – 
+          <time datetime="2023-04-12 21:00:00" data-time="2023-04-12 21:00:00" role="presentation">
+          </time>
+      </div>
+   */
+  const timeDisplayElements = time.querySelectorAll('time'),
+        dateDisplayElement = time.querySelector('[data-day="true"]'); // Capture elements with time data attribute
 
-  const dayEl = time.querySelector('[data-day="true"]'); // Capture elements with time data attribute
-
-  for (const timeElement of timeElements) {
+  for (const timeElement of timeDisplayElements) {
     if (timeElement.dataset.time) {
-      const dateString = timeElement.dataset.time,
-            srcDate = new Date(dateString),
-            srcHours = srcDate.getHours();
-      let srcMinutes,
-          revisedDayTextNode = '';
-      srcDate.getMinutes() === 0 ? srcMinutes = '00' : srcMinutes = srcDate.getMinutes(); // Create a Date object and pass in source values; required to set a local time zone.
+      const timeDisplayElement = timeElement,
+            timeDisplayElementDateString = timeDisplayElement.dataset.time,
+            timeDisplayElementDateObject = new Date(timeDisplayElementDateString),
+            timeDisplayElementHours = timeDisplayElementDateObject.getHours(),
+            timeDisplayElementMinutes = timeDisplayElementDateObject.getMinutes(); // Create a Date object passing in the formatted values; required to set a local time zone.
 
-      const dateObj = new Date();
-      dateObj.setUTCHours(srcHours);
-      dateObj.setUTCMinutes(srcMinutes);
-      dateObj.setUTCSeconds(0); // If hours <10, prepend '0' to minute value
+      const formattedDateObj = new Date();
+      formattedDateObj.setUTCHours(timeDisplayElementHours);
+      formattedDateObj.setUTCMinutes(timeDisplayElementMinutes);
+      formattedDateObj.setUTCSeconds(0); // If hours <10, prepend '0' to minute value
 
-      const formattedHours = parseInt(dateObj.getHours()) < 10 ? `0${dateObj.getHours()}` : dateObj.getHours(); // If minutes <10, prepend '0' to minute value
+      const formattedHours = parseInt(formattedDateObj.getHours()) < 10 ? `0${formattedDateObj.getHours()}` : formattedDateObj.getHours(); // If minutes <10, prepend '0' to minute value
 
-      const formattedMinutes = parseInt(dateObj.getMinutes()) < 10 ? `0${dateObj.getMinutes()}` : dateObj.getMinutes(); // Combine hours and minutes to give text node respresentation of time value
+      const formattedMinutes = parseInt(formattedDateObj.getMinutes()) < 10 ? `0${formattedDateObj.getMinutes()}` : formattedDateObj.getMinutes(); // Combine hours and minutes to give text node respresentation of time value
 
-      const timeTextNode = document.createTextNode(`${formattedHours}:${formattedMinutes}`); // Calculate getTimezoneOffset in hours (negative = behind GMT, positive = ahead of GMT)
+      const formattedTimeTextNode = document.createTextNode(`${formattedHours}:${formattedMinutes}`); // Calculate time zone offset in hours (negative = behind GMT, positive = ahead of GMT)
 
-      const hoursOffset = dateObj.getTimezoneOffset() / -60; // If time zone offset is positive and local hour value is less than this, add a day
-      // e.g. 7pm event GMT would be 4am local time in Tokyo (+9 hours)
-      // As 4 hours into new day is less than the time zone difference, it shows the date value
-      // needs to be increased by 1 day
+      const hoursOffset = formattedDateObj.getTimezoneOffset() / -60; // let dayChanged = false;
 
-      formattedHours < hoursOffset ? srcDate.setDate(srcDate.getDate() + 1) : null; // The inverse applies to timezones behind GMT/BST. A 5am GMT event would be 10pm
-      // in San Fransisco (-7 hours). In this case, if when the local hour value is subjected
-      // from 24, it is less than the offset (7), the date value needs to be decreased by 1 day.
+      /**
+       * If time zone offset is positive and local hour value is less than this value, add 1 day.
+       *
+       * For example, 7pm GMT would be 4am in Tokyo (+9 hours). As 4 hours is less than the time zone
+       * difference (9 hours), the date value needs to be increased by 1 day.
+       */
+
+      if (formattedHours < hoursOffset) {
+        timeDisplayElementDateObject.setDate(timeDisplayElementDateObject.getDate() + 1); // dayChanged = true;
+      }
+      /**
+       * The inverse applies to time zones behind GMT/BST.
+       *
+       * For example, 17:00 GMT would be 22:00 in San Fransisco (-7 hours). If when the local hour
+       * value subjected from 24 is less than the offset (7 hours), the date value needs to be decreased by 1 day.
+       */
+
 
       if (hoursOffset < 0) {
         if (24 - formattedHours < hoursOffset * -1) {
-          srcDate.setDate(srcDate.getDate() - 1);
+          timeDisplayElementDateObject.setDate(timeDisplayElementDateObject.getDate() - 1); // dayChanged = true;
         }
-      } // If day has changed, get updated date values and create new text node based on these values
+      } // if (dayChanged) {
+      // }
+      // If day has changed, get updated date values and create new text node based on these values
 
 
-      var dayName = days[srcDate.getDay()];
-      var dayNumber = srcDate.getDate();
-      var dayNumberSuffix = Object(_util__WEBPACK_IMPORTED_MODULE_0__["daySuffix"])(srcDate.getDate());
-      var month = months[srcDate.getMonth()];
-      var monthFormattedString;
-      var year = srcDate.getFullYear();
-      monthFormattedString = month + 1;
+      var dayName = days[timeDisplayElementDateObject.getDay()];
+      var dayNumber = timeDisplayElementDateObject.getDate();
+      var dayNumberSuffix = Object(_util__WEBPACK_IMPORTED_MODULE_0__["daySuffix"])(timeDisplayElementDateObject.getDate());
+      var month = months[timeDisplayElementDateObject.getMonth()]; // var monthFormattedString;
 
-      if (monthFormattedString < 10) {
-        monthFormattedString += 1;
-      }
+      var year = timeDisplayElementDateObject.getFullYear(); // monthFormattedString = month + 1;
+      // if (monthFormattedString < 10) {
+      //     monthFormattedString += 1;
+      // }
 
-      revisedDayTextNode = document.createTextNode(`${dayName}, ${dayNumber}${dayNumberSuffix} ${month} ${year}`);
-      dayEl.innerHTML = '';
-      dayEl.appendChild(revisedDayTextNode);
-      dayEl.setAttribute('datetime', `${year}-${srcDate.getMonth() + 1}-${srcDate.getDate()}`);
-      timeElement.setAttribute('datetime', `${year}-${srcDate.getMonth() + 1}-${srcDate.getDate()} ${formattedHours}:${formattedMinutes}`);
-      timeElement.appendChild(timeTextNode);
+      const revisedDayTextNode = document.createTextNode(`${dayName}, ${dayNumber}${dayNumberSuffix} ${month} ${year}`);
+      dateDisplayElement.innerHTML = '';
+      dateDisplayElement.appendChild(revisedDayTextNode);
+      dateDisplayElement.setAttribute('datetime', `${year}-${timeDisplayElementDateObject.getMonth() + 1}-${timeDisplayElementDateObject.getDate()}`);
+      timeDisplayElement.innerHTML = '';
+      timeDisplayElement.appendChild(formattedTimeTextNode);
+      timeDisplayElement.setAttribute('datetime', `${year}-${timeDisplayElementDateObject.getMonth() + 1}-${timeDisplayElementDateObject.getDate()} ${formattedHours}:${formattedMinutes}`);
     }
   }
 }
