@@ -3698,7 +3698,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatTime, daySuffix, formatReactDate, arraySlicer, screenWidth */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatTime, daySuffix, formatReactDate, arraySlicer, screenWidth, isDateBST */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3725,6 +3725,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatReactDate", function() { return formatReactDate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arraySlicer", function() { return arraySlicer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "screenWidth", function() { return screenWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDateBST", function() { return isDateBST; });
 /* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
 /* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
@@ -4104,6 +4105,38 @@ function screenWidth(size) {
     default:
       return 1280;
   }
+}
+/**
+ * @param {string} date - A string representation of a date, e.g. 2023-11-01
+ * @returns {number} - 0 = Greenwich Mean Time (GMT), 1 = British Summer Time (BST)
+ */
+
+function isDateBST(date) {
+  const d = new Date(date);
+  let lastMarchSunday, lastOctoberSunday;
+  /**
+   * Loop through maximum days a month can have (31). Decrement loop index value; GMT -> BST and BST -> GMT
+   * changeover happens on the last Sunday of March and October, so we want to capture the first Sunday when
+   * looping backwards.
+   */
+
+  for (let i = 31; i > 0; i--) {
+    const marchDays = new Date(d.getFullYear(), 2, i);
+    const octoberDays = new Date(d.getFullYear(), 9, i); // March loop
+
+    if (marchDays.getDay() === 0) {
+      lastMarchSunday = marchDays;
+      break;
+    } // October loop
+
+
+    if (octoberDays.getDay() === 0) {
+      lastOctoberSunday = octoberDays;
+      break;
+    }
+  }
+
+  return d < lastMarchSunday || d > lastOctoberSunday ? 0 : 1;
 }
 
 /***/ }),
