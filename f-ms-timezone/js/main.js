@@ -7141,6 +7141,8 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
  */
 
 function launchTimeZone(time) {
+  console.log('time zone pattern');
+  console.log(time.innerText);
   /**
    * Example markup:
    * <div class="local-time-zone">
@@ -7149,10 +7151,15 @@ function launchTimeZone(time) {
    *      <time datetime="2023-04-12 21:00:00" data-time="2023-04-12 21:00:00" role="presentation"></time>
    * </div>
    */
+
   const timeDisplayElements = time.querySelectorAll('time'),
-        dateDisplayElement = time.querySelector('[data-day="true"]'); // Capture elements with time data attribute
+        dateDisplayElement = time.querySelector('[data-day="true"]');
+  console.log(timeDisplayElements); // Capture elements with time data attribute
 
   for (const timeElement of timeDisplayElements) {
+    console.log(1);
+    console.log(timeElement);
+
     if (timeElement.dataset.time) {
       const timeDisplayElement = timeElement,
             timeDisplayElementDateString = timeDisplayElement.dataset.time,
@@ -7165,7 +7172,13 @@ function launchTimeZone(time) {
       formattedDateObj.setUTCMinutes(timeDisplayElementMinutes);
       formattedDateObj.setUTCSeconds(0); // If hours <10, prepend '0' to minute value
 
-      const formattedHours = parseInt(formattedDateObj.getHours()) < 10 ? `0${formattedDateObj.getHours()}` : formattedDateObj.getHours(); // If minutes <10, prepend '0' to minute value
+      let formattedHours = parseInt(formattedDateObj.getHours()) < 10 ? `0${formattedDateObj.getHours()}` : formattedDateObj.getHours();
+
+      if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["isDateBST"])(timeElement.getAttribute('dateTime')) === 1) {
+        formattedHours -= 1;
+        formattedHours < 10 ? formattedHours = `0${formattedHours}` : null;
+      } // If minutes <10, prepend '0' to minute value
+
 
       const formattedMinutes = parseInt(formattedDateObj.getMinutes()) < 10 ? `0${formattedDateObj.getMinutes()}` : formattedDateObj.getMinutes(); // Combine hours and minutes to give text node respresentation of time value
 
@@ -7191,7 +7204,6 @@ function launchTimeZone(time) {
 
 
       if (hoursOffset < 0) {
-        // console.log('prev');
         if (24 - formattedHours < hoursOffset * -1) {
           timeDisplayElementDateObject.setDate(timeDisplayElementDateObject.getDate() - 1);
         }
@@ -7210,11 +7222,9 @@ function launchTimeZone(time) {
       timeDisplayElement.innerHTML = '';
       timeDisplayElement.appendChild(formattedTimeTextNode);
       timeDisplayElement.setAttribute('datetime', `${year}-${timeDisplayElementDateObject.getMonth() + 1}-${timeDisplayElementDateObject.getDate()} ${formattedHours}:${formattedMinutes}`);
-    } else {
-      if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["isDateBST"])(timeElement.getAttribute('dateTime')) === 1) {// console.log('BST')
-      } else {// console.log('GMT')
-      }
     }
+
+    console.log(2);
   }
 }
 
