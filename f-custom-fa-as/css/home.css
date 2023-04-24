@@ -20609,10 +20609,6 @@ article .link-copy {
     }
 }
 
-.js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'] > div:after {
-    color: #1e1e1e;
-}
-
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'].menu-animation__slideOpen + .navigation--primary__menu {
     box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
     visibility: visible;
