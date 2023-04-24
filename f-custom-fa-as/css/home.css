@@ -2635,6 +2635,326 @@ readers do not read off random characters that represent icons */
     content: "\e1fe\e1fe";
 }
 
+/*!
+ * Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+/*!
+ * Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+:root, :host {
+    --fa-style-family-brands: 'Font Awesome 6 Brands';
+    --fa-font-brands: normal 400 1em/1 'Font Awesome 6 Brands';
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Brands';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("../fonts/fa-brands-400.woff2") format("woff2"), url("../fonts/fa-brands-400.ttf") format("truetype");
+}
+
+.fab,
+.fa-brands {
+    font-weight: 400;
+}
+
+.fa-square-instagram:before {
+    content: "\e055";
+}
+
+.fa-instagram-square:before {
+    content: "\e055";
+}
+
+.fa-linkedin-in:before {
+    content: "\f0e1";
+}
+
+.fa-weixin:before {
+    content: "\f1d7";
+}
+
+.fa-square-twitter:before {
+    content: "\f081";
+}
+
+.fa-twitter-square:before {
+    content: "\f081";
+}
+
+.fa-weibo:before {
+    content: "\f18a";
+}
+
+.fa-square-youtube:before {
+    content: "\f431";
+}
+
+.fa-youtube-square:before {
+    content: "\f431";
+}
+
+.fa-facebook-f:before {
+    content: "\f39e";
+}
+
+.fa-tiktok:before {
+    content: "\e07b";
+}
+
+.fa-square-facebook:before {
+    content: "\f082";
+}
+
+.fa-facebook-square:before {
+    content: "\f082";
+}
+
+.fa-linkedin:before {
+    content: "\f08c";
+}
+
+.fa-instagram:before {
+    content: "\f16d";
+}
+
+.fa-facebook:before {
+    content: "\f09a";
+}
+
+.fa-whatsapp:before {
+    content: "\f232";
+}
+
+.fa-youtube:before {
+    content: "\f167";
+}
+
+.fa-twitter:before {
+    content: "\f099";
+}
+
+.fa-telegram:before {
+    content: "\f2c6";
+}
+
+.fa-telegram-plane:before {
+    content: "\f2c6";
+}
+
+.fa-square-whatsapp:before {
+    content: "\f40c";
+}
+
+.fa-whatsapp-square:before {
+    content: "\f40c";
+}
+
+/*!
+ * Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+:root, :host {
+    --fa-style-family-duotone: 'Font Awesome 6 Duotone';
+    --fa-font-duotone: normal 900 1em/1 'Font Awesome 6 Duotone';
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Duotone';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("../fonts/fa-duotone-900.woff2") format("woff2"), url("../fonts/fa-duotone-900.ttf") format("truetype");
+}
+
+.fad,
+.fa-duotone {
+    position: relative;
+    font-weight: 900;
+    letter-spacing: normal;
+}
+
+.fad::before,
+.fa-duotone::before {
+    position: absolute;
+    color: var(--fa-primary-color, inherit);
+    opacity: var(--fa-primary-opacity, 1);
+}
+
+.fad::after,
+.fa-duotone::after {
+    color: var(--fa-secondary-color, inherit);
+    opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.fa-swap-opacity .fad::before,
+.fa-swap-opacity .fa-duotone::before,
+.fad.fa-swap-opacity::before,
+.fa-duotone.fa-swap-opacity::before {
+    opacity: var(--fa-secondary-opacity, 0.4);
+}
+
+.fa-swap-opacity .fad::after,
+.fa-swap-opacity .fa-duotone::after,
+.fad.fa-swap-opacity::after,
+.fa-duotone.fa-swap-opacity::after {
+    opacity: var(--fa-primary-opacity, 1);
+}
+
+.fad.fa-inverse,
+.fa-duotone.fa-inverse {
+    color: var(--fa-inverse, #fff);
+}
+
+.fad.fa-stack-1x, .fad.fa-stack-2x,
+.fa-duotone.fa-stack-1x, .fa-duotone.fa-stack-2x {
+    position: absolute;
+}
+
+/*!
+ * Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+:root, :host {
+    --fa-style-family-classic: 'Font Awesome 6 Pro';
+    --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Pro';
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("../fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fa-solid-900.ttf") format("truetype");
+}
+
+.fas,
+.fa-solid {
+    font-weight: 900;
+}
+
+/*!
+ * Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+:root, :host {
+    --fa-style-family-classic: 'Font Awesome 6 Pro';
+    --fa-font-regular: normal 400 1em/1 'Font Awesome 6 Pro';
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("../fonts/fa-regular-400.woff2") format("woff2"), url("../fonts/fa-regular-400.ttf") format("truetype");
+}
+
+.far,
+.fa-regular {
+    font-weight: 400;
+}
+
+/*!
+ * Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+:root, :host {
+    --fa-style-family-classic: 'Font Awesome 6 Pro';
+    --fa-font-light: normal 300 1em/1 'Font Awesome 6 Pro';
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Pro';
+    font-style: normal;
+    font-weight: 300;
+    font-display: block;
+    src: url("../fonts/fa-light-300.woff2") format("woff2"), url("../fonts/fa-light-300.ttf") format("truetype");
+}
+
+.fal,
+.fa-light {
+    font-weight: 300;
+}
+
+/*!
+ * Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+:root, :host {
+    --fa-style-family-sharp: 'Font Awesome 6 Sharp';
+    --fa-font-sharp-solid: normal 900 1em/1 'Font Awesome 6 Sharp';
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Sharp';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("../fonts/fa-sharp-solid-900.woff2") format("woff2"), url("../fonts/fa-sharp-solid-900.ttf") format("truetype");
+}
+
+.fass,
+.fa-solid {
+    font-weight: 900;
+}
+
+/*!
+ * Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+:root, :host {
+    --fa-style-family-sharp: 'Font Awesome 6 Sharp';
+    --fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 6 Sharp';
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Sharp';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url("../fonts/fa-sharp-regular-400.woff2") format("woff2"), url("../fonts/fa-sharp-regular-400.ttf") format("truetype");
+}
+
+.fasr,
+.fa-regular {
+    font-weight: 400;
+}
+
+/*!
+ * Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Commercial License)
+ * Copyright 2023 Fonticons, Inc.
+ */
+:root, :host {
+    --fa-style-family-sharp: 'Font Awesome 6 Sharp';
+    --fa-font-sharp-light: normal 300 1em/1 'Font Awesome 6 Sharp';
+}
+
+@font-face {
+    font-family: 'Font Awesome 6 Sharp';
+    font-style: normal;
+    font-weight: 300;
+    font-display: block;
+    src: url("../fonts/fa-sharp-light-300.woff2") format("woff2"), url("../fonts/fa-sharp-light-300.ttf") format("truetype");
+}
+
+.fasl,
+.fa-light {
+    font-weight: 300;
+}
+
 @font-face {
     font-family: "Meta Sans";
     font-style: normal;
@@ -3147,70 +3467,6 @@ readers do not read off random characters that represent icons */
     src: local("Plex Mono Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-BoldItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-BoldItalic.woff) format("woff");
 }
 
-@font-face {
-    font-family: "Font Awesome";
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local("Font Awesome Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-light-300.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-light-300.truetype) format("truetype");
-}
-
-@font-face {
-    font-family: "Font Awesome";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Font Awesome Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-regular-400.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-regular-400.truetype) format("truetype");
-}
-
-@font-face {
-    font-family: "Font Awesome";
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: local("Font Awesome Solid"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-solid-900.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-solid-900.truetype) format("truetype");
-}
-
-@font-face {
-    font-family: "Font Awesome 6 Brands";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Font Awesome 6 Brands Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-brands-400.) format("");
-}
-
-@font-face {
-    font-family: "Font Awesome Duotone";
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: local("Font Awesome Duotone Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-duotone-900.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-duotone-900.truetype) format("truetype");
-}
-
-@font-face {
-    font-family: "Font Awesome Sharp";
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local("Font Awesome Sharp Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-light-300.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-light-300.truetype) format("truetype");
-}
-
-@font-face {
-    font-family: "Font Awesome Sharp";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Font Awesome Sharp Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-regular-400.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-regular-400.truetype) format("truetype");
-}
-
-@font-face {
-    font-family: "Font Awesome Sharp";
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: local("Font Awesome Sharp Solid"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-solid-900.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/fa-sharp-solid-900.truetype) format("truetype");
-}
-
 .alpha-type {
     font-size: 1rem;
     line-height: 1.625;
@@ -3718,33 +3974,40 @@ u {
 .fad,
 .fal,
 .far,
-.fas {
+.fas,
+.fa-brands,
+.fa-light,
+.fa-regular,
+.fa-sharp,
+.fa-solid,
+.fa-duotone {
     font-size: 0.875em;
 }
 
-.fal {
-    font-family: "Font Awesome";
-    font-weight: 300;
-}
-
-.far {
-    font-family: "Font Awesome";
+.fa-sharp {
     font-weight: 400;
 }
 
-.fa,
-.fas {
-    font-family: "Font Awesome";
+.fas,
+.fa-solid {
     font-weight: 900;
 }
 
-.fab {
-    font-family: "Font Awesome Brands";
+.fa,
+.far,
+.fa-regular,
+.fa-sharp.fa-regular {
     font-weight: 400;
 }
 
-.fad {
-    font-family: "Font Awesome Duotone";
+.fal,
+.fa-light,
+.fa-sharp.fa-light {
+    font-weight: 300;
+}
+
+.fad,
+.fa-duotone {
     font-weight: 900;
 }
 
@@ -5097,7 +5360,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card .card__anchor:after {
-    font-family: "Font Awesome";
+    font-family: "Font Awesome 6 Pro";
     align-items: center;
     bottom: 0;
     content: '\f178';
@@ -16815,7 +17078,7 @@ article .link-copy {
     .menu .menu__level4 > li > .menu__controls > button .menu__button__icon:before,
     .menu .menu__level5 > li > .menu__controls > button .menu__button__icon:before,
     .menu .menu__level6 > li > .menu__controls > button .menu__button__icon:before {
-        font-family: "Font Awesome";
+        font-family: "Font Awesome 6 Pro";
         content: '\f067';
         font-weight: 300;
     }
@@ -19328,7 +19591,7 @@ article .link-copy {
 
 .navigation--primary .navigation__level2 > li > a:after,
 .navigation--primary .navigation__level2 > li > .navigation__current > span:after {
-    font-family: "Font Awesome";
+    font-family: "Font Awesome 6 Pro";
     content: '\f054';
     font-size: 0.875em;
     font-weight: 300;
@@ -19901,7 +20164,7 @@ article .link-copy {
 
 .navigation--primary .navigation--primary__menu__header a:after,
 .navigation--primary .navigation--primary__menu__header > span:after {
-    font-family: "Font Awesome";
+    font-family: "Font Awesome 6 Pro";
     content: '\f054';
     font-size: 0.875em;
     font-weight: 300;
@@ -20010,7 +20273,7 @@ article .link-copy {
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button > div:after {
-    font-family: "Font Awesome";
+    font-family: "Font Awesome 6 Pro";
     color: transparent;
     content: '\f0d8';
     display: block;
@@ -20154,7 +20417,7 @@ article .link-copy {
 
 .navigation--primary .navigation--primary__level1 .navigation__button:first-child:after {
     content: '\f078';
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     display: inline-flex;
     color: #d61726;
     font-size: 0.79rem;
@@ -21456,7 +21719,7 @@ article .link-copy {
 }
 
 .js .navigation--secondary button .navigation__button__icon:before {
-    font-family: "Font Awesome";
+    font-family: "Font Awesome 6 Pro";
     content: '\f067';
     font-weight: 300;
 }
@@ -22254,7 +22517,7 @@ figure figcaption a:active,
 .js .slider[data-style='arrows'] + .slider__controls .slider__controls__next,
 .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev,
 .js .slider[data-style='responsive'] + .slider__controls .slider__controls__next {
-    font-family: "Font Awesome";
+    font-family: "Font Awesome 6 Pro";
     font-weight: 400;
 }
 
@@ -22868,7 +23131,7 @@ a .link-decorator {
 
 .feedback .feedback__direct button:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -23233,7 +23496,7 @@ a .link-decorator {
 
 .primary-cta-arrow--bright:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -23382,7 +23645,7 @@ a .link-decorator {
 
 .primary-cta--bright:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -23574,7 +23837,7 @@ a .link-decorator {
 
 .primary-cta-arrow--dark:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -23710,7 +23973,7 @@ a .link-decorator {
 
 .primary-cta--dark:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -23887,7 +24150,7 @@ a .link-decorator {
 
 .outline-cta-arrow--bright:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -24033,7 +24296,7 @@ a .link-decorator {
 
 .outline-cta--bright:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -24196,7 +24459,7 @@ a .link-decorator {
 
 .outline-cta-arrow--dark:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -24342,7 +24605,7 @@ a .link-decorator {
 
 .outline-cta--dark:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -24509,7 +24772,7 @@ a .link-decorator {
 
 .basic-cta--bright:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -24703,7 +24966,7 @@ a .link-decorator {
 
 .basic-cta--dark:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -24934,7 +25197,7 @@ a .link-decorator {
 
 .primary-cta--grey--bright:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -25131,7 +25394,7 @@ a .link-decorator {
 
 .basic-cta--lifelong-learning-primary:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -25280,7 +25543,7 @@ a .link-decorator {
 
 .basic-cta--lifelong-learning-secondary:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -25470,7 +25733,7 @@ a .link-decorator {
 
 .primary-cta--grey--bright:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -25652,7 +25915,7 @@ a .link-decorator {
 
 .outline-cta--bright-square:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -25825,7 +26088,7 @@ a .link-decorator {
 
 .outline-cta--bright-red-ol:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -25994,7 +26257,7 @@ a .link-decorator {
 
 .outline-cta--mixed-red-gray:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -26157,7 +26420,7 @@ a .link-decorator {
 
 .outline-cta-play--dark:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -26304,7 +26567,7 @@ a .link-decorator {
 
 .outline-cta-play--light:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -26452,7 +26715,7 @@ a .link-decorator {
 
 .outline-cta--rounded-edges:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -27374,7 +27637,7 @@ h3 .linked-heading__icons {
 
 .anchor-cta-like:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -27774,7 +28037,7 @@ ul.cta-like-anchor-block li.cta-like-anchor a span {
 
 ul.cta-like-anchor-block li.cta-like-anchor a:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
@@ -27973,7 +28236,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor a span {
 
 ul.cta-like-anchor-inline li.cta-like-anchor a:after {
     content: "";
-    font-family: 'Font Awesome';
+    font-family: 'Font Awesome 6 Pro';
     font-style: normal;
     font-weight: normal;
     opacity: 0;
