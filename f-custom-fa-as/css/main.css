@@ -1632,6 +1632,10 @@ readers do not read off random characters that represent icons */
     content: "\f073";
 }
 
+.fa-door-open::before {
+    content: "\f52b";
+}
+
 .fa-calculator-simple::before {
     content: "\f64c";
 }
@@ -1692,6 +1696,10 @@ readers do not read off random characters that represent icons */
     content: "\f303";
 }
 
+.fa-caret-right::before {
+    content: "\f0da";
+}
+
 .fa-comments::before {
     content: "\f086";
 }
@@ -1710,6 +1718,10 @@ readers do not read off random characters that represent icons */
 
 .fa-legal::before {
     content: "\f0e3";
+}
+
+.fa-caret-left::before {
+    content: "\f0d9";
 }
 
 .fa-circle-chevron-down::before {
@@ -1794,6 +1806,10 @@ readers do not read off random characters that represent icons */
 
 .fa-map-marked-alt::before {
     content: "\f5a0";
+}
+
+.fa-caret-up::before {
+    content: "\f0d8";
 }
 
 .fa-angles-right::before {
@@ -1996,6 +2012,10 @@ readers do not read off random characters that represent icons */
     content: "\f017";
 }
 
+.fa-caret-down::before {
+    content: "\f0d7";
+}
+
 .fa-sliders::before {
     content: "\f1de";
 }
@@ -2006,6 +2026,10 @@ readers do not read off random characters that represent icons */
 
 .fa-map-pin::before {
     content: "\f276";
+}
+
+.fa-ticket::before {
+    content: "\f145";
 }
 
 .fa-loader::before {
@@ -2148,6 +2172,14 @@ readers do not read off random characters that represent icons */
     content: "\f559";
 }
 
+.fa-ticket-simple::before {
+    content: "\f3ff";
+}
+
+.fa-ticket-alt::before {
+    content: "\f3ff";
+}
+
 .fa-building::before {
     content: "\f1ad";
 }
@@ -2182,6 +2214,14 @@ readers do not read off random characters that represent icons */
 
 .fa-calendar::before {
     content: "\f133";
+}
+
+.fa-circle-plus::before {
+    content: "\f055";
+}
+
+.fa-plus-circle::before {
+    content: "\f055";
 }
 
 .fa-desktop::before {
@@ -2307,6 +2347,10 @@ readers do not read off random characters that represent icons */
     content: "\f073\f073";
 }
 
+.fad.fa-door-open::after, .fa-duotone.fa-door-open::after {
+    content: "\f52b\f52b";
+}
+
 .fad.fa-calculator-simple::after, .fa-duotone.fa-calculator-simple::after {
     content: "\f64c\f64c";
 }
@@ -2367,6 +2411,10 @@ readers do not read off random characters that represent icons */
     content: "\f303\f303";
 }
 
+.fad.fa-caret-right::after, .fa-duotone.fa-caret-right::after {
+    content: "\f0da\f0da";
+}
+
 .fad.fa-comments::after, .fa-duotone.fa-comments::after {
     content: "\f086\f086";
 }
@@ -2385,6 +2433,10 @@ readers do not read off random characters that represent icons */
 
 .fad.fa-legal::after, .fa-duotone.fa-legal::after {
     content: "\f0e3\f0e3";
+}
+
+.fad.fa-caret-left::after, .fa-duotone.fa-caret-left::after {
+    content: "\f0d9\f0d9";
 }
 
 .fad.fa-circle-chevron-down::after, .fa-duotone.fa-circle-chevron-down::after {
@@ -2469,6 +2521,10 @@ readers do not read off random characters that represent icons */
 
 .fad.fa-map-marked-alt::after, .fa-duotone.fa-map-marked-alt::after {
     content: "\f5a0\f5a0";
+}
+
+.fad.fa-caret-up::after, .fa-duotone.fa-caret-up::after {
+    content: "\f0d8\f0d8";
 }
 
 .fad.fa-angles-right::after, .fa-duotone.fa-angles-right::after {
@@ -2671,6 +2727,10 @@ readers do not read off random characters that represent icons */
     content: "\f017\f017";
 }
 
+.fad.fa-caret-down::after, .fa-duotone.fa-caret-down::after {
+    content: "\f0d7\f0d7";
+}
+
 .fad.fa-sliders::after, .fa-duotone.fa-sliders::after {
     content: "\f1de\f1de";
 }
@@ -2681,6 +2741,10 @@ readers do not read off random characters that represent icons */
 
 .fad.fa-map-pin::after, .fa-duotone.fa-map-pin::after {
     content: "\f276\f276";
+}
+
+.fad.fa-ticket::after, .fa-duotone.fa-ticket::after {
+    content: "\f145\f145";
 }
 
 .fad.fa-loader::after, .fa-duotone.fa-loader::after {
@@ -2823,6 +2887,14 @@ readers do not read off random characters that represent icons */
     content: "\f559\f559";
 }
 
+.fad.fa-ticket-simple::after, .fa-duotone.fa-ticket-simple::after {
+    content: "\f3ff\f3ff";
+}
+
+.fad.fa-ticket-alt::after, .fa-duotone.fa-ticket-alt::after {
+    content: "\f3ff\f3ff";
+}
+
 .fad.fa-building::after, .fa-duotone.fa-building::after {
     content: "\f1ad\f1ad";
 }
@@ -2857,6 +2929,14 @@ readers do not read off random characters that represent icons */
 
 .fad.fa-calendar::after, .fa-duotone.fa-calendar::after {
     content: "\f133\f133";
+}
+
+.fad.fa-circle-plus::after, .fa-duotone.fa-circle-plus::after {
+    content: "\f055\f055";
+}
+
+.fad.fa-plus-circle::after, .fa-duotone.fa-plus-circle::after {
+    content: "\f055\f055";
 }
 
 .fad.fa-desktop::after, .fa-duotone.fa-desktop::after {
@@ -2959,7 +3039,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: url("../fonts/fa-brands-400.woff2") format("woff2"), url("../fonts/fa-brands-400.ttf") format("truetype");
+    src: url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.ttf") format("truetype");
 }
 
 .fab,
@@ -3074,7 +3154,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 900;
     font-display: block;
-    src: url("../fonts/fa-duotone-900.woff2") format("woff2"), url("../fonts/fa-duotone-900.ttf") format("truetype");
+    src: url("../webfonts/fa-duotone-900.woff2") format("woff2"), url("../webfonts/fa-duotone-900.ttf") format("truetype");
 }
 
 .fad,
@@ -3136,7 +3216,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 900;
     font-display: block;
-    src: url("../fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fa-solid-900.ttf") format("truetype");
+    src: url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.ttf") format("truetype");
 }
 
 .fas,
@@ -3159,7 +3239,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: url("../fonts/fa-regular-400.woff2") format("woff2"), url("../fonts/fa-regular-400.ttf") format("truetype");
+    src: url("../webfonts/fa-regular-400.woff2") format("woff2"), url("../webfonts/fa-regular-400.ttf") format("truetype");
 }
 
 .far,
@@ -3182,7 +3262,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 300;
     font-display: block;
-    src: url("../fonts/fa-light-300.woff2") format("woff2"), url("../fonts/fa-light-300.ttf") format("truetype");
+    src: url("../webfonts/fa-light-300.woff2") format("woff2"), url("../webfonts/fa-light-300.ttf") format("truetype");
 }
 
 .fal,
@@ -3205,7 +3285,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 900;
     font-display: block;
-    src: url("../fonts/fa-sharp-solid-900.woff2") format("woff2"), url("../fonts/fa-sharp-solid-900.ttf") format("truetype");
+    src: url("../webfonts/fa-sharp-solid-900.woff2") format("woff2"), url("../webfonts/fa-sharp-solid-900.ttf") format("truetype");
 }
 
 .fass,
@@ -3228,7 +3308,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: url("../fonts/fa-sharp-regular-400.woff2") format("woff2"), url("../fonts/fa-sharp-regular-400.ttf") format("truetype");
+    src: url("../webfonts/fa-sharp-regular-400.woff2") format("woff2"), url("../webfonts/fa-sharp-regular-400.ttf") format("truetype");
 }
 
 .fasr,
@@ -3251,7 +3331,7 @@ readers do not read off random characters that represent icons */
     font-style: normal;
     font-weight: 300;
     font-display: block;
-    src: url("../fonts/fa-sharp-light-300.woff2") format("woff2"), url("../fonts/fa-sharp-light-300.ttf") format("truetype");
+    src: url("../webfonts/fa-sharp-light-300.woff2") format("woff2"), url("../webfonts/fa-sharp-light-300.ttf") format("truetype");
 }
 
 .fasl,
@@ -28793,6 +28873,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         max-height: 0;
         visibility: hidden;
     }
+}
+
+.js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'] > div:after {
+    color: #1e1e1e;
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'].menu-animation__slideOpen + .navigation--primary__menu {
