@@ -7120,7 +7120,14 @@ function launchTabs(tabs) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+
 
 
 /**
@@ -7141,8 +7148,8 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
  */
 
 function launchTimeZone(time) {
-  console.log('time zone pattern');
-  console.log(time.innerText);
+  // console.log('time zone')
+
   /**
    * Example markup:
    * <div class="local-time-zone">
@@ -7151,15 +7158,10 @@ function launchTimeZone(time) {
    *      <time datetime="2023-04-12 21:00:00" data-time="2023-04-12 21:00:00" role="presentation"></time>
    * </div>
    */
-
-  const timeDisplayElements = time.querySelectorAll('time'),
-        dateDisplayElement = time.querySelector('[data-day="true"]');
-  console.log(timeDisplayElements); // Capture elements with time data attribute
+  const timeDisplayElements = time.querySelectorAll('time');
+  let dayForward, dayBackward; // Capture elements with time data attribute
 
   for (const timeElement of timeDisplayElements) {
-    console.log(1);
-    console.log(timeElement);
-
     if (timeElement.dataset.time) {
       const timeDisplayElement = timeElement,
             timeDisplayElementDateString = timeDisplayElement.dataset.time,
@@ -7174,7 +7176,7 @@ function launchTimeZone(time) {
 
       let formattedHours = parseInt(formattedDateObj.getHours()) < 10 ? `0${formattedDateObj.getHours()}` : formattedDateObj.getHours();
 
-      if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["isDateBST"])(timeElement.getAttribute('dateTime')) === 1) {
+      if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["isDateBST"])(timeElement.getAttribute('dateTime')) === 1) {
         formattedHours -= 1;
         formattedHours < 10 ? formattedHours = `0${formattedHours}` : null;
       } // If minutes <10, prepend '0' to minute value
@@ -7182,7 +7184,7 @@ function launchTimeZone(time) {
 
       const formattedMinutes = parseInt(formattedDateObj.getMinutes()) < 10 ? `0${formattedDateObj.getMinutes()}` : formattedDateObj.getMinutes(); // Combine hours and minutes to give text node respresentation of time value
 
-      const formattedTimeTextNode = document.createTextNode(`${formattedHours}:${formattedMinutes}`); // Calculate time zone offset in hours (negative = behind GMT, positive = ahead of GMT)
+      const formattedTimeTextNode = document.createTextNode(`${formattedHours}:${formattedMinutes} \u2013`); // Calculate time zone offset in hours (negative = behind GMT, positive = ahead of GMT)
 
       const hoursOffset = formattedDateObj.getTimezoneOffset() / -60;
       /**
@@ -7193,7 +7195,7 @@ function launchTimeZone(time) {
        */
 
       if (formattedHours < hoursOffset) {
-        timeDisplayElementDateObject.setDate(timeDisplayElementDateObject.getDate() + 1);
+        dayForward = true;
       }
       /**
        * The inverse applies to time zones behind GMT/BST.
@@ -7205,26 +7207,79 @@ function launchTimeZone(time) {
 
       if (hoursOffset < 0) {
         if (24 - formattedHours < hoursOffset * -1) {
-          timeDisplayElementDateObject.setDate(timeDisplayElementDateObject.getDate() - 1);
+          dayBackward = true;
         }
       } // Update printed date/time and dateset attribute on time elements
+      // const dayName = days[timeDisplayElementDateObject.getDay()],
+      //     dayNumber = timeDisplayElementDateObject.getDate(),
+      //     dayNumberSuffix = daySuffix(
+      //         timeDisplayElementDateObject.getDate()
+      //     ),
+      //     month = months[timeDisplayElementDateObject.getMonth()],
 
 
-      const dayName = days[timeDisplayElementDateObject.getDay()],
-            dayNumber = timeDisplayElementDateObject.getDate(),
-            dayNumberSuffix = Object(_util__WEBPACK_IMPORTED_MODULE_0__["daySuffix"])(timeDisplayElementDateObject.getDate()),
-            month = months[timeDisplayElementDateObject.getMonth()],
-            year = timeDisplayElementDateObject.getFullYear(),
-            revisedDayTextNode = document.createTextNode(`${dayName}, ${dayNumber}${dayNumberSuffix} ${month} ${year}`);
-      dateDisplayElement.innerHTML = '';
-      dateDisplayElement.appendChild(revisedDayTextNode);
-      dateDisplayElement.setAttribute('datetime', `${year}-${timeDisplayElementDateObject.getMonth() + 1}-${timeDisplayElementDateObject.getDate()}`);
+      const year = timeDisplayElementDateObject.getFullYear(); // revisedDayTextNode = document.createTextNode(
+      //     `${dayName}, ${dayNumber}${dayNumberSuffix} ${month} ${year}`
+      // );
+
+      let srcTime = time.querySelectorAll('.time-display');
+
+      for (const s of srcTime) {
+        s.innerHTML = '';
+      } // console.log(srcTime.length);
+      // srcTime.innerHTML = '';
+
+
       timeDisplayElement.innerHTML = '';
-      timeDisplayElement.appendChild(formattedTimeTextNode);
+      timeDisplayElement.appendChild(formattedTimeTextNode); // Format date so end date doesn't contain trailing dash
+
+      if (time.querySelectorAll('[data-time]')[1]) {
+        // console.log(time.querySelectorAll('[data-time]')[1].textContent);
+        let timeEls = time.querySelectorAll('[data-time]');
+        let endTimeEl = timeEls[1];
+        let endTimeContent = endTimeEl.textContent;
+        let endTimeTrimmed = endTimeContent.replace(' \u2013', '');
+        endTimeEl.textContent = endTimeTrimmed;
+      }
+
       timeDisplayElement.setAttribute('datetime', `${year}-${timeDisplayElementDateObject.getMonth() + 1}-${timeDisplayElementDateObject.getDate()} ${formattedHours}:${formattedMinutes}`);
     }
+  }
 
-    console.log(2);
+  const daysBackward = [],
+        daysForward = [];
+
+  for (const timeElement of timeDisplayElements) {
+    if (timeElement.dataset.day) {
+      if (dayBackward) {
+        // console.log('Need to move day backward');
+        daysBackward.push(timeElement);
+      } else if (dayForward) {
+        // console.log('Need to move day forward');
+        daysForward.push(timeElement);
+      }
+    }
+  }
+
+  for (const d of daysBackward) {
+    let BackTimeDisplayElementDateString = d.getAttribute('datetime'),
+        BackTimeDisplayElementDateObject = new Date(BackTimeDisplayElementDateString);
+    BackTimeDisplayElementDateObject.setDate(BackTimeDisplayElementDateObject.getDate() - 1);
+    const dayName = days[BackTimeDisplayElementDateObject.getDay()],
+          dayNumber = BackTimeDisplayElementDateObject.getDate(),
+          dayNumberSuffix = Object(_util__WEBPACK_IMPORTED_MODULE_2__["daySuffix"])(BackTimeDisplayElementDateObject.getDate()),
+          month = months[BackTimeDisplayElementDateObject.getMonth()],
+          year = BackTimeDisplayElementDateObject.getFullYear();
+
+    if (d.dataset.format === 'day-number') {
+      d.innerHTML = `${dayNumber}<sup>${dayNumberSuffix}</sup>`;
+    } else if (d.dataset.format === 'day-number-month-year') {
+      d.innerHTML = `${dayNumber}<sup>${dayNumberSuffix}</sup> ${month} ${year}`;
+    } else if (d.dataset.format === 'full') {
+      d.innerHTML = `${dayName}, ${dayNumber}<sup>${dayNumberSuffix}</sup> ${month} ${year}`;
+    }
+
+    d.setAttribute('datetime', `${year}-${BackTimeDisplayElementDateObject.getMonth()}-${BackTimeDisplayElementDateObject.getDate()}`);
   }
 }
 
