@@ -7146,11 +7146,38 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 let dayForward,
     dayBackward,
     differentMonthOnTimeOffset = false; // function buildTimeElements() {}
-// function monthChangeCheck() {
-// }
+
+/**
+ * Checks an array of time elements. If the start / end month value differs, run
+ * updateDateValue function with relevant parameter.
+ *
+ * @param {Array} dates - An array of time elements.
+ */
+
+function monthChangeCheck(dates) {
+  let start = new Date(dates[0]['dateTime']),
+      end = new Date(dates[1]['dateTime']);
+
+  if (dayBackward) {
+    start.setDate(start.getDate() - 1);
+    start.getMonth() !== end.getMonth() ? differentMonthOnTimeOffset = true : null;
+    updateDateValue(daysBackward, 'subtract', differentMonthOnTimeOffset);
+  } else if (dayForward) {
+    end.setDate(end.getDate() + 1);
+    start.getMonth() !== end.getMonth() ? differentMonthOnTimeOffset = true : null;
+    updateDateValue(daysForward, 'add', differentMonthOnTimeOffset);
+  }
+}
+/**
+ * Update HTML where date is rendered.
+ *
+ * @param {Array} dates - An array of time elements.
+ * @param {String} operand - Instruction if day should be added or subtracted.
+ * @param {Boolean} monthChange - Has the time zone offset resulted in a different start/end month.
+ */
+
 
 function updateDateValue(date, operand, monthChange) {
-  // console.log(monthChange);
   for (const d of date) {
     let dateString = d.getAttribute('datetime'),
         dateObject = new Date(dateString);
@@ -7246,11 +7273,7 @@ function launchTimeZone(time) {
        */
 
       if (hoursOffset < 0) {
-        // console.log(1);
-        // console.log(24 - formattedHours);
-        // console.log(hoursOffset * -1)
         if (24 - formattedHours < hoursOffset * -1) {
-          // console.log('2a');
           dayBackward = true;
         }
       } // hoursOffset < 0 && (24 - formattedHours) < (hoursOffset * -1) ? dayBackward = true : null;
@@ -7278,30 +7301,18 @@ function launchTimeZone(time) {
   for (const timeElement of timeDisplayElements) {
     if (timeElement.dataset.day) {
       if (dayBackward) {
-        // console.log('day back');
         daysBackward.push(timeElement);
       } else if (dayForward) {
-        // console.log(timeDisplayElements[1]['innerText'])
         daysForward.push(timeElement);
       }
     }
-  }
+  } // Check to see if time zone offset has resulted in the start and end dates having different month
+
 
   if (daysBackward.length > 0) {
-    // console.log('db')
-    var BmonthCheckDateObjStart = new Date(daysBackward[0]['dateTime']);
-    var BmonthCheckDateObjEnd = new Date(daysBackward[1]['dateTime']);
-    BmonthCheckDateObjStart.setDate(BmonthCheckDateObjStart.getDate() - 1);
-    BmonthCheckDateObjStart.getMonth() !== BmonthCheckDateObjEnd.getMonth() ? differentMonthOnTimeOffset = true : null; // console.log(differentMonthOnTimeOffset);
-
-    updateDateValue(daysBackward, 'subtract', differentMonthOnTimeOffset);
+    monthChangeCheck(daysBackward);
   } else if (daysForward.length > 0) {
-    // console.log('df')
-    var FmonthCheckDateObjStart = new Date(daysForward[0]['dateTime']);
-    var FmonthCheckDateObjEnd = new Date(daysForward[1]['dateTime']);
-    FmonthCheckDateObjEnd.setDate(FmonthCheckDateObjEnd.getDate() + 1);
-    FmonthCheckDateObjStart.getMonth() !== FmonthCheckDateObjEnd.getMonth() ? differentMonthOnTimeOffset = true : null;
-    updateDateValue(daysForward, 'add', differentMonthOnTimeOffset);
+    monthChangeCheck(daysForward);
   }
 }
 
