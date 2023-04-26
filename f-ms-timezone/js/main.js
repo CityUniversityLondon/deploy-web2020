@@ -7145,14 +7145,88 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
       daysForward = [];
 let dayForward,
     dayBackward,
-    differentMonthOnTimeOffset = false; // function buildTimeElements() {}
+    differentMonthOnTimeOffset = false;
+/**
+ * Formats time values and updates the HTML.
+ *
+ * @param {HTMLElement} time - An HTML element with the 'local-time-zone' class.
+ * @param {Array} timeDisplayElements - An array of time elements.
+ */
 
+function formatTimes(time, timeDisplayElements) {
+  for (const timeElement of timeDisplayElements) {
+    if (timeElement.dataset.time) {
+      const timeDisplayElement = timeElement,
+            timeDisplayElementDateString = timeDisplayElement.dataset.time,
+            timeDisplayElementDateObject = new Date(timeDisplayElementDateString),
+            timeDisplayElementHours = timeDisplayElementDateObject.getHours(),
+            timeDisplayElementMinutes = timeDisplayElementDateObject.getMinutes(); // Create a Date object passing in the formatted values; required to set a local time zone.
+
+      const formattedDateObj = new Date();
+      formattedDateObj.setUTCHours(timeDisplayElementHours);
+      formattedDateObj.setUTCMinutes(timeDisplayElementMinutes);
+      formattedDateObj.setUTCSeconds(0); // If hours <10, prepend '0' to minute value
+
+      let formattedHours = parseInt(formattedDateObj.getHours()) < 10 ? `0${formattedDateObj.getHours()}` : formattedDateObj.getHours();
+
+      if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["isDateBST"])(timeElement.getAttribute('dateTime')) === 1) {
+        formattedHours -= 1;
+        formattedHours < 10 ? formattedHours = `0${formattedHours}` : null;
+      } // If minutes <10, prepend '0' to minute value
+
+
+      const formattedMinutes = parseInt(formattedDateObj.getMinutes()) < 10 ? `0${formattedDateObj.getMinutes()}` : formattedDateObj.getMinutes(); // Combine hours and minutes to give text node respresentation of time value
+
+      const formattedTimeTextNode = document.createTextNode(`${formattedHours}:${formattedMinutes} \u2013`); // Calculate time zone offset in hours (negative = behind GMT, positive = ahead of GMT)
+
+      const hoursOffset = formattedDateObj.getTimezoneOffset() / -60;
+      /**
+       * If time zone offset is positive and local hour value is less than this value, add 1 day.
+       *
+       * For example, 7pm GMT would be 4am in Tokyo (+9 hours). As 4 hours is less than the time zone
+       * difference (9 hours), the date value needs to be increased by 1 day.
+       */
+
+      formattedHours < hoursOffset ? dayForward = true : null;
+      /**
+       * The inverse applies to time zones behind GMT/BST.
+       *
+       * For example, 05:00 GMT would be 22:00 in San Fransisco (-7 hours). If when the local hour
+       * value subjected from 24 is less than the offset (7 hours), the date value needs to be decreased by 1 day.
+       */
+
+      if (hoursOffset < 0) {
+        if (24 - formattedHours < hoursOffset * -1) {
+          dayBackward = true;
+        }
+      }
+
+      let srcTime = time.querySelectorAll('.time-display');
+
+      for (const s of srcTime) {
+        s.innerHTML = '';
+      }
+
+      timeDisplayElement.innerHTML = '';
+      timeDisplayElement.appendChild(formattedTimeTextNode); // Format date so end date doesn't contain trailing dash
+
+      if (time.querySelectorAll('[data-time]')[1]) {
+        let endTime = time.querySelectorAll('[data-time]')[1],
+            endTimeContent = endTime.textContent.replace(' \u2013', '');
+        endTime.textContent = endTimeContent;
+      }
+
+      timeDisplayElement.setAttribute('datetime', `${formattedHours}:${formattedMinutes}`);
+    }
+  }
+}
 /**
  * Checks an array of time elements. If the start / end month value differs, run
  * updateDateValue function with relevant parameter.
  *
  * @param {Array} dates - An array of time elements.
  */
+
 
 function monthChangeCheck(dates) {
   let start = new Date(dates[0]['dateTime']),
@@ -7229,74 +7303,8 @@ function launchTimeZone(time) {
    *      <time datetime="2023-04-12 21:00:00" data-time="2023-04-12 21:00:00" role="presentation"></time>
    * </div>
    */
-  const timeDisplayElements = time.querySelectorAll('time'); // Capture elements with time data attribute
-
-  for (const timeElement of timeDisplayElements) {
-    if (timeElement.dataset.time) {
-      const timeDisplayElement = timeElement,
-            timeDisplayElementDateString = timeDisplayElement.dataset.time,
-            timeDisplayElementDateObject = new Date(timeDisplayElementDateString),
-            timeDisplayElementHours = timeDisplayElementDateObject.getHours(),
-            timeDisplayElementMinutes = timeDisplayElementDateObject.getMinutes(); // Create a Date object passing in the formatted values; required to set a local time zone.
-
-      const formattedDateObj = new Date();
-      formattedDateObj.setUTCHours(timeDisplayElementHours);
-      formattedDateObj.setUTCMinutes(timeDisplayElementMinutes);
-      formattedDateObj.setUTCSeconds(0); // If hours <10, prepend '0' to minute value
-
-      let formattedHours = parseInt(formattedDateObj.getHours()) < 10 ? `0${formattedDateObj.getHours()}` : formattedDateObj.getHours();
-
-      if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["isDateBST"])(timeElement.getAttribute('dateTime')) === 1) {
-        formattedHours -= 1;
-        formattedHours < 10 ? formattedHours = `0${formattedHours}` : null;
-      } // If minutes <10, prepend '0' to minute value
-
-
-      const formattedMinutes = parseInt(formattedDateObj.getMinutes()) < 10 ? `0${formattedDateObj.getMinutes()}` : formattedDateObj.getMinutes(); // Combine hours and minutes to give text node respresentation of time value
-
-      const formattedTimeTextNode = document.createTextNode(`${formattedHours}:${formattedMinutes} \u2013`); // Calculate time zone offset in hours (negative = behind GMT, positive = ahead of GMT)
-
-      const hoursOffset = formattedDateObj.getTimezoneOffset() / -60;
-      /**
-       * If time zone offset is positive and local hour value is less than this value, add 1 day.
-       *
-       * For example, 7pm GMT would be 4am in Tokyo (+9 hours). As 4 hours is less than the time zone
-       * difference (9 hours), the date value needs to be increased by 1 day.
-       */
-
-      formattedHours < hoursOffset ? dayForward = true : null;
-      /**
-       * The inverse applies to time zones behind GMT/BST.
-       *
-       * For example, 05:00 GMT would be 22:00 in San Fransisco (-7 hours). If when the local hour
-       * value subjected from 24 is less than the offset (7 hours), the date value needs to be decreased by 1 day.
-       */
-
-      if (hoursOffset < 0) {
-        if (24 - formattedHours < hoursOffset * -1) {
-          dayBackward = true;
-        }
-      } // hoursOffset < 0 && (24 - formattedHours) < (hoursOffset * -1) ? dayBackward = true : null;
-
-
-      let srcTime = time.querySelectorAll('.time-display');
-
-      for (const s of srcTime) {
-        s.innerHTML = '';
-      }
-
-      timeDisplayElement.innerHTML = '';
-      timeDisplayElement.appendChild(formattedTimeTextNode); // Format date so end date doesn't contain trailing dash
-
-      if (time.querySelectorAll('[data-time]')[1]) {
-        let endTime = time.querySelectorAll('[data-time]')[1],
-            endTimeContent = endTime.textContent.replace(' \u2013', '');
-        endTime.textContent = endTimeContent;
-      }
-
-      timeDisplayElement.setAttribute('datetime', `${formattedHours}:${formattedMinutes}`);
-    }
-  }
+  const timeDisplayElements = time.querySelectorAll('time');
+  formatTimes(time, timeDisplayElements);
 
   for (const timeElement of timeDisplayElements) {
     if (timeElement.dataset.day) {
