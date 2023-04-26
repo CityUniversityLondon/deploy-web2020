@@ -7140,16 +7140,60 @@ __webpack_require__.r(__webpack_exports__);
 
 const className = 'local-time-zone';
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-      days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+      days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      daysBackward = [],
+      daysForward = [];
+let dayForward,
+    dayBackward,
+    differentMonthOnTimeOffset = false; // function buildTimeElements() {}
+// function monthChangeCheck() {
+// }
+
+function updateDateValue(date, operand, monthChange) {
+  // console.log(monthChange);
+  for (const d of date) {
+    let dateString = d.getAttribute('datetime'),
+        dateObject = new Date(dateString);
+
+    if (operand === 'subtract') {
+      dateObject.setDate(dateObject.getDate() - 1);
+    } else if (operand === 'add') {
+      dateObject.setDate(dateObject.getDate() + 1);
+    }
+
+    const dayName = days[dateObject.getDay()],
+          dayNumber = dateObject.getDate(),
+          dayNumberSuffix = Object(_util__WEBPACK_IMPORTED_MODULE_2__["daySuffix"])(dateObject.getDate()),
+          month = months[dateObject.getMonth()],
+          year = dateObject.getFullYear();
+
+    if (d.dataset.format === 'day-number') {
+      if (monthChange) {
+        d.innerHTML = `${dayName}, ${dayNumber}<sup>${dayNumberSuffix}</sup> ${month} ${year}`;
+      } else {
+        d.innerHTML = `${dayNumber}<sup>${dayNumberSuffix}</sup>`;
+      }
+    } else if (d.dataset.format === 'day-number-month-year') {
+      if (monthChange) {
+        d.innerHTML = `${dayName}, ${dayNumber}<sup>${dayNumberSuffix}</sup> ${month} ${year}`;
+      } else {
+        d.innerHTML = `${dayNumber}<sup>${dayNumberSuffix}</sup> ${month} ${year}`;
+      }
+    } else if (d.dataset.format === 'full') {
+      d.innerHTML = `${dayName}, ${dayNumber}<sup>${dayNumberSuffix}</sup> ${month} ${year}`;
+    }
+
+    d.setAttribute('datetime', `${year}-${dateObject.getMonth() + 1}-${dateObject.getDate()}`);
+  }
+}
 /**
  * Format time zone to local value.
  *
  * @param {String} time - The time zone as a string.
  */
 
-function launchTimeZone(time) {
-  // console.log('time zone')
 
+function launchTimeZone(time) {
   /**
    * Example markup:
    * <div class="local-time-zone">
@@ -7158,8 +7202,7 @@ function launchTimeZone(time) {
    *      <time datetime="2023-04-12 21:00:00" data-time="2023-04-12 21:00:00" role="presentation"></time>
    * </div>
    */
-  const timeDisplayElements = time.querySelectorAll('time');
-  let dayForward, dayBackward; // Capture elements with time data attribute
+  const timeDisplayElements = time.querySelectorAll('time'); // Capture elements with time data attribute
 
   for (const timeElement of timeDisplayElements) {
     if (timeElement.dataset.time) {
@@ -7194,92 +7237,71 @@ function launchTimeZone(time) {
        * difference (9 hours), the date value needs to be increased by 1 day.
        */
 
-      if (formattedHours < hoursOffset) {
-        dayForward = true;
-      }
+      formattedHours < hoursOffset ? dayForward = true : null;
       /**
        * The inverse applies to time zones behind GMT/BST.
        *
-       * For example, 17:00 GMT would be 22:00 in San Fransisco (-7 hours). If when the local hour
+       * For example, 05:00 GMT would be 22:00 in San Fransisco (-7 hours). If when the local hour
        * value subjected from 24 is less than the offset (7 hours), the date value needs to be decreased by 1 day.
        */
 
-
       if (hoursOffset < 0) {
+        // console.log(1);
+        // console.log(24 - formattedHours);
+        // console.log(hoursOffset * -1)
         if (24 - formattedHours < hoursOffset * -1) {
+          // console.log('2a');
           dayBackward = true;
         }
-      } // Update printed date/time and dateset attribute on time elements
-      // const dayName = days[timeDisplayElementDateObject.getDay()],
-      //     dayNumber = timeDisplayElementDateObject.getDate(),
-      //     dayNumberSuffix = daySuffix(
-      //         timeDisplayElementDateObject.getDate()
-      //     ),
-      //     month = months[timeDisplayElementDateObject.getMonth()],
+      } // hoursOffset < 0 && (24 - formattedHours) < (hoursOffset * -1) ? dayBackward = true : null;
 
-
-      const year = timeDisplayElementDateObject.getFullYear(); // revisedDayTextNode = document.createTextNode(
-      //     `${dayName}, ${dayNumber}${dayNumberSuffix} ${month} ${year}`
-      // );
 
       let srcTime = time.querySelectorAll('.time-display');
 
       for (const s of srcTime) {
         s.innerHTML = '';
-      } // console.log(srcTime.length);
-      // srcTime.innerHTML = '';
-
+      }
 
       timeDisplayElement.innerHTML = '';
       timeDisplayElement.appendChild(formattedTimeTextNode); // Format date so end date doesn't contain trailing dash
 
       if (time.querySelectorAll('[data-time]')[1]) {
-        // console.log(time.querySelectorAll('[data-time]')[1].textContent);
-        let timeEls = time.querySelectorAll('[data-time]');
-        let endTimeEl = timeEls[1];
-        let endTimeContent = endTimeEl.textContent;
-        let endTimeTrimmed = endTimeContent.replace(' \u2013', '');
-        endTimeEl.textContent = endTimeTrimmed;
+        let endTime = time.querySelectorAll('[data-time]')[1],
+            endTimeContent = endTime.textContent.replace(' \u2013', '');
+        endTime.textContent = endTimeContent;
       }
 
-      timeDisplayElement.setAttribute('datetime', `${year}-${timeDisplayElementDateObject.getMonth() + 1}-${timeDisplayElementDateObject.getDate()} ${formattedHours}:${formattedMinutes}`);
+      timeDisplayElement.setAttribute('datetime', `${formattedHours}:${formattedMinutes}`);
     }
   }
-
-  const daysBackward = [],
-        daysForward = [];
 
   for (const timeElement of timeDisplayElements) {
     if (timeElement.dataset.day) {
       if (dayBackward) {
-        // console.log('Need to move day backward');
+        // console.log('day back');
         daysBackward.push(timeElement);
       } else if (dayForward) {
-        // console.log('Need to move day forward');
+        // console.log(timeDisplayElements[1]['innerText'])
         daysForward.push(timeElement);
       }
     }
   }
 
-  for (const d of daysBackward) {
-    let BackTimeDisplayElementDateString = d.getAttribute('datetime'),
-        BackTimeDisplayElementDateObject = new Date(BackTimeDisplayElementDateString);
-    BackTimeDisplayElementDateObject.setDate(BackTimeDisplayElementDateObject.getDate() - 1);
-    const dayName = days[BackTimeDisplayElementDateObject.getDay()],
-          dayNumber = BackTimeDisplayElementDateObject.getDate(),
-          dayNumberSuffix = Object(_util__WEBPACK_IMPORTED_MODULE_2__["daySuffix"])(BackTimeDisplayElementDateObject.getDate()),
-          month = months[BackTimeDisplayElementDateObject.getMonth()],
-          year = BackTimeDisplayElementDateObject.getFullYear();
+  if (daysBackward.length > 0) {
+    // console.log('db')
+    var BmonthCheckDateObjStart = new Date(daysBackward[0]['dateTime']);
+    var BmonthCheckDateObjEnd = new Date(daysBackward[1]['dateTime']);
+    BmonthCheckDateObjStart.setDate(BmonthCheckDateObjStart.getDate() - 1);
+    BmonthCheckDateObjStart.getMonth() !== BmonthCheckDateObjEnd.getMonth() ? differentMonthOnTimeOffset = true : null; // console.log(differentMonthOnTimeOffset);
 
-    if (d.dataset.format === 'day-number') {
-      d.innerHTML = `${dayNumber}<sup>${dayNumberSuffix}</sup>`;
-    } else if (d.dataset.format === 'day-number-month-year') {
-      d.innerHTML = `${dayNumber}<sup>${dayNumberSuffix}</sup> ${month} ${year}`;
-    } else if (d.dataset.format === 'full') {
-      d.innerHTML = `${dayName}, ${dayNumber}<sup>${dayNumberSuffix}</sup> ${month} ${year}`;
-    }
-
-    d.setAttribute('datetime', `${year}-${BackTimeDisplayElementDateObject.getMonth()}-${BackTimeDisplayElementDateObject.getDate()}`);
+    updateDateValue(daysBackward, 'subtract', differentMonthOnTimeOffset);
+  } else if (daysForward.length > 0) {
+    // console.log('df')
+    var FmonthCheckDateObjStart = new Date(daysForward[0]['dateTime']);
+    var FmonthCheckDateObjEnd = new Date(daysForward[1]['dateTime']);
+    FmonthCheckDateObjEnd.setDate(FmonthCheckDateObjEnd.getDate() + 1);
+    FmonthCheckDateObjStart.getMonth() !== FmonthCheckDateObjEnd.getMonth() ? differentMonthOnTimeOffset = true : null;
+    updateDateValue(daysForward, 'add', differentMonthOnTimeOffset);
   }
 }
 
