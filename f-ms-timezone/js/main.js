@@ -7230,7 +7230,9 @@ function formatTimes(time, timeDisplayElements) {
 
 function monthChangeCheck(dates) {
   let start = new Date(dates[0]['dateTime']),
-      end = new Date(dates[1]['dateTime']);
+      end; // Set end date to start date if range doesn't extend beyond one day in the metadata
+
+  dates[1] ? end = new Date(dates[1]['dateTime']) : end = new Date(dates[0]['dateTime']);
 
   if (dayBackward) {
     start.setDate(start.getDate() - 1);
