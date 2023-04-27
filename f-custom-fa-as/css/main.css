@@ -1632,6 +1632,14 @@ readers do not read off random characters that represent icons */
     content: "\f073";
 }
 
+.fa-circle-minus::before {
+    content: "\f056";
+}
+
+.fa-minus-circle::before {
+    content: "\f056";
+}
+
 .fa-door-open::before {
     content: "\f52b";
 }
@@ -1842,6 +1850,14 @@ readers do not read off random characters that represent icons */
 
 .fa-arrow-circle-down::before {
     content: "\f0ab";
+}
+
+.fa-square-arrow-up-right::before {
+    content: "\f14c";
+}
+
+.fa-external-link-square::before {
+    content: "\f14c";
 }
 
 .fa-address-card::before {
@@ -2347,6 +2363,14 @@ readers do not read off random characters that represent icons */
     content: "\f073\f073";
 }
 
+.fad.fa-circle-minus::after, .fa-duotone.fa-circle-minus::after {
+    content: "\f056\f056";
+}
+
+.fad.fa-minus-circle::after, .fa-duotone.fa-minus-circle::after {
+    content: "\f056\f056";
+}
+
 .fad.fa-door-open::after, .fa-duotone.fa-door-open::after {
     content: "\f52b\f52b";
 }
@@ -2557,6 +2581,14 @@ readers do not read off random characters that represent icons */
 
 .fad.fa-arrow-circle-down::after, .fa-duotone.fa-arrow-circle-down::after {
     content: "\f0ab\f0ab";
+}
+
+.fad.fa-square-arrow-up-right::after, .fa-duotone.fa-square-arrow-up-right::after {
+    content: "\f14c\f14c";
+}
+
+.fad.fa-external-link-square::after, .fa-duotone.fa-external-link-square::after {
+    content: "\f14c\f14c";
 }
 
 .fad.fa-address-card::after, .fa-duotone.fa-address-card::after {
