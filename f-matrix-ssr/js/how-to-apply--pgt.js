@@ -1199,7 +1199,7 @@ function removeClass(elem, className, removePartials) {
  */
 
 function reduceMotion() {
-  const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const reducedMotionQuery = typeof window !== 'undefined' ? window.matchMedia('(prefers-reduced-motion: reduce)') : false;
   return reducedMotionQuery.matches ? true : false;
 }
 /**

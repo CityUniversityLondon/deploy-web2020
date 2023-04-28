@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -9366,7 +9366,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ((() => {
   const launch = function (formData) {
     try {
-      const initialResults = JSON.parse(_REST.response && _REST.response.body || '{}' // eslint-disable-line
+      const initialResults = JSON.parse(_REST.response && _REST.response.body || {} // eslint-disable-line
       ),
             queryStr = '%globals_server_QUERY_STRING^urldecode^striphtml%',
             vars = queryStr.split('&'),
@@ -9480,7 +9480,7 @@ Wrapper.propTypes = {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!*********************************************!*\
   !*** multi ./src/matrix-server/test-ssr.js ***!
   \*********************************************/
