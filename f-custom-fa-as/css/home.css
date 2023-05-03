@@ -5776,7 +5776,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card .card__anchor:after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     align-items: center;
     bottom: 0;
     content: '\f178';
@@ -17494,7 +17494,7 @@ article .link-copy {
     .menu .menu__level4 > li > .menu__controls > button .menu__button__icon:before,
     .menu .menu__level5 > li > .menu__controls > button .menu__button__icon:before,
     .menu .menu__level6 > li > .menu__controls > button .menu__button__icon:before {
-        font-family: "Font Awesome 6 Pro";
+        font-family: "Font Awesome 6 Sharp";
         content: '\f067';
         font-weight: 300;
     }
@@ -20007,7 +20007,7 @@ article .link-copy {
 
 .navigation--primary .navigation__level2 > li > a:after,
 .navigation--primary .navigation__level2 > li > .navigation__current > span:after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     content: '\f054';
     font-size: 0.875em;
     font-weight: 300;
@@ -20580,7 +20580,7 @@ article .link-copy {
 
 .navigation--primary .navigation--primary__menu__header a:after,
 .navigation--primary .navigation--primary__menu__header > span:after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     content: '\f054';
     font-size: 0.875em;
     font-weight: 300;
@@ -20689,7 +20689,7 @@ article .link-copy {
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button > div:after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     color: transparent;
     content: '\f0d8';
     display: block;
@@ -20698,6 +20698,7 @@ article .link-copy {
     left: 0;
     position: absolute;
     width: 100%;
+    margin-top: 0.25rem;
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button + .navigation--primary__menu {
@@ -22135,7 +22136,7 @@ article .link-copy {
 }
 
 .js .navigation--secondary button .navigation__button__icon:before {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     content: '\f067';
     font-weight: 300;
 }
@@ -22933,7 +22934,7 @@ figure figcaption a:active,
 .js .slider[data-style='arrows'] + .slider__controls .slider__controls__next,
 .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev,
 .js .slider[data-style='responsive'] + .slider__controls .slider__controls__next {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     font-weight: 400;
 }
 

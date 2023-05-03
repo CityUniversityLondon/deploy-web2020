@@ -5802,7 +5802,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card .card__anchor:after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     align-items: center;
     bottom: 0;
     content: '\f178';
@@ -11932,7 +11932,7 @@ form:not([class]) .form__required-note--marker,
 }
 
 .breadcrumbs ol li:not(:last-of-type):after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     font-size: 0.875em;
     content: '\f105';
     font-weight: 300;
@@ -19676,7 +19676,7 @@ figure figcaption a:active,
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     color: #a1a1a1;
     content: '\f05a';
     font-size: 0.875em;
@@ -22213,7 +22213,7 @@ figure figcaption a:active,
 
 .js .key-information--lifelong-learning__dates--controllable .key-information--lifelong-learning__controls .key-information--lifelong-learning__controls__prev,
 .js .key-information--lifelong-learning__dates--controllable .key-information--lifelong-learning__controls .key-information--lifelong-learning__controls__next {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     font-weight: 400;
     display: block;
 }
@@ -24571,7 +24571,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level4 > li > .menu__controls > button .menu__button__icon:before,
     .menu .menu__level5 > li > .menu__controls > button .menu__button__icon:before,
     .menu .menu__level6 > li > .menu__controls > button .menu__button__icon:before {
-        font-family: "Font Awesome 6 Pro";
+        font-family: "Font Awesome 6 Sharp";
         content: '\f067';
         font-weight: 300;
     }
@@ -27599,7 +27599,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .modal__buttons--calendar a:after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     content: '\f133';
     position: absolute;
     right: 0.75rem;
@@ -28193,7 +28193,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .navigation--primary .navigation__level2 > li > a:after,
 .navigation--primary .navigation__level2 > li > .navigation__current > span:after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     content: '\f054';
     font-size: 0.875em;
     font-weight: 300;
@@ -28766,7 +28766,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .navigation--primary .navigation--primary__menu__header a:after,
 .navigation--primary .navigation--primary__menu__header > span:after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     content: '\f054';
     font-size: 0.875em;
     font-weight: 300;
@@ -28875,7 +28875,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button > div:after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     color: transparent;
     content: '\f0d8';
     display: block;
@@ -28884,6 +28884,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     left: 0;
     position: absolute;
     width: 100%;
+    margin-top: 0.25rem;
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button + .navigation--primary__menu {
@@ -30321,7 +30322,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .navigation--secondary button .navigation__button__icon:before {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     content: '\f067';
     font-weight: 300;
 }
@@ -30660,7 +30661,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
     .pagination__wrapper .pagination__controls .pagination__controls__button--next:before,
     .pagination__wrapper .pagination__controls .pagination__controls__button--prev:before {
-        font-family: "Font Awesome 6 Pro";
+        font-family: "Font Awesome 6 Sharp";
         align-self: center;
         font-size: 0.875em;
         font-weight: 400;
@@ -32900,7 +32901,7 @@ blockquote footer cite {
 .js .slider[data-style='arrows'] + .slider__controls .slider__controls__next,
 .js .slider[data-style='responsive'] + .slider__controls .slider__controls__prev,
 .js .slider[data-style='responsive'] + .slider__controls .slider__controls__next {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     font-weight: 400;
 }
 
@@ -51130,7 +51131,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 }
 
 .landing--functional__finder .landing--functional__finder__cta a:after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     content: '\f061';
     margin-left: 0.5rem;
 }
@@ -52499,7 +52500,7 @@ main > .news .news__schools li {
 main > .news .news__related-subjects li:before,
 main > .news .news__related-centres li:before,
 main > .news .news__schools li:before {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     color: #d61726;
     content: '\f0a9';
     display: inline-block;
@@ -60771,7 +60772,7 @@ main .standard-content .content {
 }
 
 .user-journey__steps li:not(:last-of-type):after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
     transform: rotate(90deg);
     content: '\f54b';
@@ -60783,7 +60784,7 @@ main .standard-content .content {
 }
 
 .user-journey__steps li:last-of-type:after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     font-size: 0.875em;
     content: '\f11e';
     display: block;
@@ -63690,7 +63691,7 @@ main .standard-content .content {
 }
 
 .school__content__links .school__content__links--left .school__content__links--left__all-research-centres:after {
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Sharp";
     content: '\f061';
     margin-left: 0.5rem;
 }
