@@ -59825,6 +59825,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     border: 0.125rem solid #bab4b2;
 }
 
+.local-time-zone {
+    text-align: left;
+}
+
 .generic {
     display: block;
 }
