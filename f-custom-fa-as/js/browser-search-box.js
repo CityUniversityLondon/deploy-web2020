@@ -441,7 +441,7 @@ function Select(props) {
       value: value.data.toLowerCase()
     }, value.label);
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fas fa-chevron-down icon"
+    className: "fas fa-sharp fa-chevron-down icon"
   }));
 }
 

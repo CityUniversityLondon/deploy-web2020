@@ -1703,7 +1703,7 @@ function InlineSearch__Clear(props) {
       props.clear();
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fad fa-fw fa-times-circle icon "
+    className: "fad fa-sharp fa-fw fa-times-circle icon "
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "search--inline__clear__text"
   }, "Clear query"));
@@ -1793,7 +1793,7 @@ function InlineSearch__Query(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "search--inline__query__icon--wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "search--inline__icon fal fa-search icon",
+    className: "search--inline__icon fal fa-sharp fa-search icon",
     "aria-hidden": "true"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "sr-only",
@@ -1832,7 +1832,7 @@ function InlineSearch__Query(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "search--inline__query__submit__content"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fas fa-search search--inline__query__submit__icon",
+    className: "fas fa-sharp fa-search search--inline__query__submit__icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "search--inline__query__submit__text"
@@ -1954,7 +1954,7 @@ function genericResult(result, type) {
     className: "card__label"
   }, type),
         external = result.liveUrl.indexOf(siteUrl) < 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fas fa-external-link icon",
+    className: "fas fa-sharp fa-external-link icon",
     "aria-label": "(external link)"
   }));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -2073,7 +2073,7 @@ function Search__Clear(props) {
       props.clear();
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fad fa-fw fa-times-circle icon"
+    className: "fad fa-sharp fa-fw fa-times-circle icon"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "search__clear__text"
   }, "Clear query"));
@@ -2350,7 +2350,7 @@ function Search__Query(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", {
     className: "search__query__icon--wrapper"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
-    className: "search__icon fal fa-search icon",
+    className: "search__icon fal fa-sharp fa-search icon",
     "aria-hidden": "true"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("label", {
     className: "sr-only",
@@ -2431,7 +2431,7 @@ function Search__Query(props) {
     className: "search__query__submit",
     onClick: () => submitForm()
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
-    className: "fal fa-search search__query__submit__icon",
+    className: "fal fa-sharp fa-search search__query__submit__icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("span", {
     className: "search__query__submit__text"
@@ -2550,7 +2550,7 @@ function genericResult(result, collection, i) {
     alt: ""
   }))),
         external = result.liveUrl.indexOf(siteUrl) < 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-external-link icon",
+    className: "fas fa-sharp external-link icon",
     "aria-label": "(external link)"
   }));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
@@ -2592,7 +2592,7 @@ function Search__OtherSites(props) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
         href: collection.search + '?query=' + props.query.query
       }, collection.label, " (", collection.response.summary.totalMatching, ")"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        className: "fas fa-arrow-right icon",
+        className: "fas fa-sharp fa-arrow-right icon",
         "aria-hidden": "true"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
         className: "search__results"
@@ -2612,7 +2612,7 @@ function Search__OtherSites(props) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
         href: collection.search + '?query=' + props.query.query
       }, collection.label, " (", collection.response.summary.totalMatching, ")"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        className: "far fa-lock-alt icon",
+        className: "far fa-sharp fa-lock-alt icon",
         "aria-label": "Login required"
       })));
     } else {
@@ -2735,7 +2735,7 @@ function genericResult(result, type, i) {
     className: "card__label"
   }, type),
         external = result.liveUrl.indexOf(siteUrl) < 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-external-link icon",
+    className: "fas fa-sharp fa-external-link icon",
     "aria-label": "(external link)"
   }));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
@@ -2783,7 +2783,7 @@ function Search__Results(props) {
       className: "search__results__updating",
       "aria-live": "polite"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-      className: "fas fa-spinner fa-pulse icon",
+      className: "fas fa-sharp fa-spinner fa-pulse icon",
       "aria-hidden": "true"
     }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Updating ", results, "\u2026"));
   };
@@ -2852,7 +2852,7 @@ function Search__Results(props) {
     "aria-current": currentTab === 0,
     onClick: () => setCurrentTab(0)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, props.primary[0].label, " (", props.primary[0].updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "fas fa-spinner fa-pulse icon",
+    className: "fas fa-sharp fa-spinner fa-pulse icon",
     "aria-label": "Updating\u2026"
   }) : props.primary[0].response && props.primary[0].response.summary.totalMatching, ")"))), props.finders.map((finder, i) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
@@ -2865,7 +2865,7 @@ function Search__Results(props) {
       "aria-current": currentTab === i + 1,
       onClick: () => setCurrentTab(i + 1)
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, finder.label, " (", finder.updating || !finder.response ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-      className: "fas fa-spinner fa-pulse icon",
+      className: "fas fa-sharp fa-spinner fa-pulse icon",
       "aria-label": "Updating\u2026"
     }) : finder.response.summary.totalMatching, ")")));
   })); // if we have more results than will fit on a single page, we need
@@ -2982,7 +2982,7 @@ function Search__Results(props) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
       href: finder.search + '?query=' + props.query.query
     }, "Browse more", ' ', finder.summariseAs.plural, ' '), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-      className: "fas fa-arrow-right icon",
+      className: "fas fa-sharp fa-arrow-right icon",
       "aria-hidden": "true"
     })), finder.response && finder.response.summary.totalMatching > finder.response.summary.currEnd && finder.summariseAs.plural === 'people' && finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
       className: "search__results__browse-more"
@@ -3002,7 +3002,7 @@ function Search__Results(props) {
     }, "No matching ", finder.summariseAs.plural, ".", ' ', finder.search && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
       href: finder.search
     }, "Browse", ' ', finder.summariseAs.plural, ' ', "instead"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-      className: "fas fa-arrow-right icon",
+      className: "fas fa-sharp fa-arrow-right icon",
       "aria-hidden": "true"
     })))));
   }));
@@ -3235,7 +3235,7 @@ function InlineSearch(props) {
     className: `search--inline__results__updating search--inline__results__updating--${what.replace(/ /g, '')}`,
     "aria-live": "polite"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-    className: "fas fa-spinner fa-pulse icon",
+    className: "fas fa-sharp fa-spinner fa-pulse icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "Updating ", what, "\u2026")); // trap tab focus when the filters are open
 
@@ -3255,7 +3255,7 @@ function InlineSearch(props) {
       focusTrap.deactivate && focusTrap.deactivate();
     }
   }, [display, focusTrap]);
-  const iconClass = `global-header__search__icon far fa-fw ${display ? 'fa-times' : 'fa-search'}`,
+  const iconClass = `global-header__search__icon far fa-sharp fa-fw ${display ? 'fa-times' : 'fa-search'}`,
         ariaLabel = `${display ? 'Close search' : 'Open search'}`,
         veil = display && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "veil--search",

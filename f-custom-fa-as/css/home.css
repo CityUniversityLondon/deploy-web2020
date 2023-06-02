@@ -29036,7 +29036,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .search-box__cta__wrapper {
     background-color: #d61726;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 @media (max-width: 1023px) {
@@ -31690,4 +31690,8 @@ main .home__research .linked-heading__icons span:nth-child(1), main .home__resea
 
 .home-new-vi main p {
     max-width: 55ch;
+}
+
+.home-new-vi main .outline-cta--rounded-edges {
+    margin-bottom: 0;
 }

@@ -4434,7 +4434,7 @@ function prepareSubNavigation(navigationItem, rootClass) {
         controlsWrapper = navigationItem.querySelector(`.${controlsClassName}`);
   navigationItemBtn.setAttribute('type', 'button');
   iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].hidden, 'true');
-  iconSpan.className = `${buttonIconClassName} fal fa-fw`;
+  iconSpan.className = `${buttonIconClassName} fal fa-sharp fa-fw`;
   textSpan.className = `${buttonTextClassName}`;
   Object(_util__WEBPACK_IMPORTED_MODULE_1__["appendAll"])(navigationItemBtn, [iconSpan, textSpan]);
   controlsWrapper.appendChild(navigationItemBtn);
@@ -4767,7 +4767,7 @@ function createDialog(parent, position, dialogArray) {
         type = parent.dataset.type;
   const closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
     label: 'class',
-    val: 'dialog__close fas fa-times'
+    val: 'dialog__close fas fa-sharp fa-times'
   }, {
     label: 'aria-label',
     val: 'Close modal'
@@ -4938,7 +4938,7 @@ function controlButton(dialogArray, position, direction) {
 
   const buttonIcon = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
     label: 'class',
-    val: `icon far fa-long-arrow-${direction}`
+    val: `icon far fa-sharp fa-long-arrow-${direction}`
   }]);
 
   if (direction === 'left') {
@@ -5337,7 +5337,7 @@ function addCloseButtons(navigation, closeAll) {
     closeButtonText.appendChild(document.createTextNode(text));
     closeButtonText.className = 'navigation--primary__menu__close__text';
     closeButtonIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, 'true');
-    closeButtonIcon.className = 'fas fa-fw fa-times navigation--primary__menu__close__icon';
+    closeButtonIcon.className = 'fas fa-sharp fa-fw fa-times navigation--primary__menu__close__icon';
     closeButtonWrapper.className = 'wrapper--navigation--primary__menu__close';
     closeButton.className = 'navigation--primary__menu__close';
     Object(_util__WEBPACK_IMPORTED_MODULE_0__["appendAll"])(closeButtonDiv, [closeButtonText, closeButtonIcon]);
@@ -7213,7 +7213,7 @@ function launchImageCredit(picture) {
   button.setAttribute('type', 'button');
   button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].expanded, false);
   button.addEventListener('click', () => toggleImageCredit(wrapper), true);
-  spanIcon.className = 'tooltip__icon icon fas fa-info-circle';
+  spanIcon.className = 'tooltip__icon icon fas fa-sharp fa-info-circle';
   spanIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].hidden, true);
   spanText.className = 'sr-only';
   spanText.appendChild(document.createTextNode(openText));
