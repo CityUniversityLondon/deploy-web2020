@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([0,"vendor-dependencies","core","react","axios","vendor-direct"]);
+/******/ 	deferredModules.push([0,"react","vendor-dependencies","axios","vendor-direct"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -438,14 +438,10 @@ function launchResearchApplyCta(cta) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "tryCatch", function() { return tryCatch; });
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./patterns */ "./src/patterns.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util */ "./src/util.js");
-/* harmony import */ var _patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/devcorate/devcorate */ "./src/patterns/devcorate/devcorate.js");
-/* harmony import */ var _patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./patterns/tabs/prepareAccordionTabs */ "./src/patterns/tabs/prepareAccordionTabs.js");
-
-
+/* harmony import */ var _patterns__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./patterns */ "./src/patterns.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util */ "./src/util.js");
+/* harmony import */ var _patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./patterns/devcorate/devcorate */ "./src/patterns/devcorate/devcorate.js");
+/* harmony import */ var _patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./patterns/tabs/prepareAccordionTabs */ "./src/patterns/tabs/prepareAccordionTabs.js");
 
 
 /**
@@ -470,7 +466,7 @@ function tryCatch(f) {
     return f();
   } catch (e) {
     // console.log(e);
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["gaEvent"])('jsError', 'JavaScript error', `Line ${e.lineNumber} – ${e.message}`, `Pattern launch ${e.fileName} (${window.location})`, true);
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["gaEvent"])('jsError', 'JavaScript error', `Line ${e.lineNumber} – ${e.message}`, `Pattern launch ${e.fileName} (${window.location})`, true);
   }
 }
 /**
@@ -502,7 +498,7 @@ function launchPattern(pattern) {
 
 function accordionizeTabs(root) {
   Array.from(root.querySelectorAll('.tabs')).filter(elem => elem.className.indexOf('.tabs-no-js')).forEach(elem => {
-    const potential = tryCatch(() => Object(_patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_4__["default"])(elem));
+    const potential = tryCatch(() => Object(_patterns_tabs_prepareAccordionTabs__WEBPACK_IMPORTED_MODULE_3__["default"])(elem));
     potential && accordionizeTabs(potential);
   });
 }
@@ -520,8 +516,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //     }, false);
     // }
     Array.from(document.getElementsByTagName('html')).forEach(html => {
-      let ie = Object(_util__WEBPACK_IMPORTED_MODULE_2__["detectIE"])();
-      Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(html, 'no-js', false);
+      let ie = Object(_util__WEBPACK_IMPORTED_MODULE_1__["detectIE"])();
+      Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(html, 'no-js', false);
 
       if (ie >= edgeVersion) {
         html.className = (html.className + ' js ' + 'edge').trim();
@@ -530,10 +526,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     accordionizeTabs(document);
-    _patterns__WEBPACK_IMPORTED_MODULE_1__["default"].forEach(launchPattern);
-    const parameters = Object(_util__WEBPACK_IMPORTED_MODULE_2__["parametersToObject"])(location.search);
-    parameters['dev'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_3__["devcorate"])(document.querySelector('body'), 'dev', parameters['dev']);
-    parameters['rel'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_3__["devcorate"])(document.querySelector('body'), 'rel', parameters['rel']);
+    _patterns__WEBPACK_IMPORTED_MODULE_0__["default"].forEach(launchPattern);
+    const parameters = Object(_util__WEBPACK_IMPORTED_MODULE_1__["parametersToObject"])(location.search);
+    parameters['dev'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_2__["devcorate"])(document.querySelector('body'), 'dev', parameters['dev']);
+    parameters['rel'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_2__["devcorate"])(document.querySelector('body'), 'rel', parameters['rel']);
   }
 }, false);
 
@@ -742,16 +738,10 @@ _patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_19__["def
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_4__);
-
-
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -772,7 +762,7 @@ const className = 'accordion',
       bodyClassName = className + '__body',
       oneSecond = 1000,
       tenthOfASecond = 100,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_0__["reduceMotion"])() ? 0 : oneSecond,
       scrollTo = true;
 /**
  * Sets a heading and the button nested within to be open or closed.
@@ -783,7 +773,7 @@ const className = 'accordion',
 
 function setSection(heading, open) {
   heading.dataset.open = open;
-  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, open);
+  heading.firstElementChild.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded, open);
 }
 /**
  * Open a section, calculate its height, then close it again.
@@ -825,7 +815,7 @@ function setupTransition(element, initialHeight) {
 
 
 function cleanupTransition(section) {
-  const open = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(section.previousElementSibling.dataset.open);
+  const open = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(section.previousElementSibling.dataset.open);
   section.style.height = null;
   section.dataset.closed = open ? 'false' : 'true';
 }
@@ -846,7 +836,7 @@ function buttonClick(button, headings, toggleOpen) {
   const heading = button.parentNode,
         accordionSection = heading.nextElementSibling;
 
-  if (button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded) === 'true') {
+  if (button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded) === 'true') {
     // updates URL hash, by removing hash from URL when accordion closes
     history.pushState({}, null, location.href.split('#')[0]);
   } else {
@@ -865,7 +855,7 @@ function buttonClick(button, headings, toggleOpen) {
     once: true
   });
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded))) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(button.getAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].expanded))) {
     // Starting height is the current height
     setupTransition(accordionSection, accordionSection.offsetHeight + 'px'); // setTimeout lets the DOM recalculate before we continue, so the transition will fire
 
@@ -893,8 +883,8 @@ function buttonClick(button, headings, toggleOpen) {
 
     setSection(heading, true);
 
-    if (scrollTo && !(Object(_util__WEBPACK_IMPORTED_MODULE_2__["verticallyInWindow"])(heading) && Object(_util__WEBPACK_IMPORTED_MODULE_2__["verticallyInWindow"])(accordionSection))) {
-      zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(heading, scrollDuration);
+    if (scrollTo && !(Object(_util__WEBPACK_IMPORTED_MODULE_0__["verticallyInWindow"])(heading) && Object(_util__WEBPACK_IMPORTED_MODULE_0__["verticallyInWindow"])(accordionSection))) {
+      zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
     }
   }
 }
@@ -914,10 +904,10 @@ function buttonFromHeading(heading) {
         iconSpan = document.createElement('span');
   textSpan.className = headingTextClassName;
   iconSpan.className = headingIconClassName;
-  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].hidden, true);
+  iconSpan.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].hidden, true);
   button.setAttribute('type', 'button');
   textSpan.appendChild(document.createTextNode(heading.textContent));
-  Object(_util__WEBPACK_IMPORTED_MODULE_2__["appendAll"])(wrapper, [textSpan, iconSpan]);
+  Object(_util__WEBPACK_IMPORTED_MODULE_0__["appendAll"])(wrapper, [textSpan, iconSpan]);
   button.appendChild(wrapper);
   return button;
 }
@@ -943,9 +933,9 @@ function buttonFromHeading(heading) {
 
 
 function launchAccordion(accordion) {
-  const toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(accordion.dataset.toggleopen),
-        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(accordion.dataset.defaultopen),
-        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(accordion.dataset.allowsingle),
+  const toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(accordion.dataset.toggleopen),
+        defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(accordion.dataset.defaultopen),
+        allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(accordion.dataset.allowsingle),
         headings = Array.from(accordion.parentNode.querySelectorAll(`#${accordion.id} > .${headingClassName}`));
   let idLinked = false;
 
@@ -953,14 +943,14 @@ function launchAccordion(accordion) {
     /**
      * not enough content to accordion
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(accordion, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_0__["removeClass"])(accordion, className, false);
     return;
   }
 
   headings.forEach(heading => {
     const content = heading.nextElementSibling,
           button = buttonFromHeading(heading);
-    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].labelledBy, heading.id);
+    content.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].labelledBy, heading.id);
     content.setAttribute('role', 'region');
     heading.replaceChild(button, heading.firstChild);
     setSection(heading, false);
@@ -990,19 +980,19 @@ function launchAccordion(accordion) {
       window.onload = function () {
         setSection(heading, true);
         heading.nextElementSibling.dataset.closed = 'false';
-        zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(heading, scrollDuration);
+        zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
       };
     } // determines if the hash is perhaps of an accordion which kicks in on smaller viewports, as part of a tabs / accordion pattern
 
 
-    if (accordion.parentElement.className === 'tabs--accordion' && accordion.parentElement.querySelector('' + urlHash + '') && viewportWidth <= Object(_util__WEBPACK_IMPORTED_MODULE_2__["screenWidth"])('tablet')) {
+    if (accordion.parentElement.className === 'tabs--accordion' && accordion.parentElement.querySelector('' + urlHash + '') && viewportWidth <= Object(_util__WEBPACK_IMPORTED_MODULE_0__["screenWidth"])('tablet')) {
       let hashConvert = urlHash.replace('tabs', 'accordion').replace('link', 'header'); // Wait for DOM to load before accessing selected accordion
 
       window.onload = function () {
         heading = accordion.parentElement.querySelector('' + hashConvert + '');
         setSection(heading, true);
         heading.nextElementSibling.dataset.closed = 'false';
-        zenscroll__WEBPACK_IMPORTED_MODULE_4___default.a.to(heading, scrollDuration);
+        zenscroll__WEBPACK_IMPORTED_MODULE_2___default.a.to(heading, scrollDuration);
       };
     }
   }
@@ -1289,14 +1279,8 @@ function imageExpand(image) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _action_on_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../action-on-scroll */ "./src/action-on-scroll.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
-
-
+/* harmony import */ var _action_on_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../action-on-scroll */ "./src/action-on-scroll.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 
 
 
@@ -1438,7 +1422,7 @@ function init(elm) {
    * check if browser support IntersectionObserver api
    */
 
-  if (Object(_util__WEBPACK_IMPORTED_MODULE_3__["checkIntersectionObserver"])()) {
+  if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["checkIntersectionObserver"])()) {
     lazyNumbers.forEach(function (lazyUnit) {
       initNumberAnimation(lazyUnit);
       /**
@@ -1446,7 +1430,7 @@ function init(elm) {
        * to animate when element is intersecting
        */
 
-      Object(_action_on_scroll__WEBPACK_IMPORTED_MODULE_2__["actionOnScroll"])(lazyUnit, runNumberAnimation);
+      Object(_action_on_scroll__WEBPACK_IMPORTED_MODULE_0__["actionOnScroll"])(lazyUnit, runNumberAnimation);
     });
   }
 }
@@ -1844,11 +1828,7 @@ function launchRemover(elem) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "devcorate", function() { return devcorate; });
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 /**
@@ -1870,9 +1850,9 @@ __webpack_require__.r(__webpack_exports__);
 function devcorate(elem, param, value) {
   Array.from(elem.querySelectorAll('a')).forEach(anchor => {
     if (anchor.origin === window.location.origin) {
-      const parameters = anchor.search ? Object(_util__WEBPACK_IMPORTED_MODULE_1__["parametersToObject"])(anchor.search) : {};
+      const parameters = anchor.search ? Object(_util__WEBPACK_IMPORTED_MODULE_0__["parametersToObject"])(anchor.search) : {};
       parameters[param] = value;
-      anchor.href = `${anchor.origin}${anchor.pathname}${Object(_util__WEBPACK_IMPORTED_MODULE_1__["objectToParameters"])(parameters)}${anchor.hash}`;
+      anchor.href = `${anchor.origin}${anchor.pathname}${Object(_util__WEBPACK_IMPORTED_MODULE_0__["objectToParameters"])(parameters)}${anchor.hash}`;
     }
   });
 }
@@ -2205,14 +2185,14 @@ function launchFormAssemblyForm(eventInfo) {
   button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].owns, 'event__formassembly__form');
   closeButtonSpan.appendChild(document.createTextNode(closeButtonText));
   closeButtonSpan.className = 'event__formassembly__form__close-button__text';
-  closeButtonIcon.className = 'fa fas fa-fw fa-times';
+  closeButtonIcon.className = 'fa fas fa-sharp fa-fw fa-times';
   closeButton.setAttribute('type', 'button');
   closeButton.className = 'event__formassembly__form__close-button';
   closeButton.appendChild(closeButtonIcon);
   closeButton.appendChild(closeButtonSpan);
   closeButtonEndSpan.appendChild(document.createTextNode(closeButtonText));
   closeButtonEndSpan.className = 'event__formassembly__form__close-button__text';
-  closeButtonEndIcon.className = 'fa fas fa-fw fa-times';
+  closeButtonEndIcon.className = 'fa fas fa-sharp fa-fw fa-times';
   closeButtonEnd.setAttribute('type', 'button');
   closeButtonEnd.className = 'event__formassembly__form__close-button';
   closeButtonEnd.appendChild(closeButtonEndIcon);
@@ -2358,14 +2338,7 @@ function launchFeedback(elem) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-
-
-
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 /**
@@ -2686,7 +2659,7 @@ function createMap(mapContainer) {
       return updateHash(marker);
     }); // create list element
 
-    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', [{
+    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('li', [{
       label: 'id',
       val: 'building-' + markerConfig.id
     }, {
@@ -2694,7 +2667,7 @@ function createMap(mapContainer) {
       val: 'building'
     }]); // create a element with click handler to open infoWindow
 
-    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', [{
       label: 'html',
       val: '<span>' + markerConfig.name + '</span>'
     }, {
@@ -2783,7 +2756,7 @@ function createMap(mapContainer) {
 
 
       cityLayers.buildingsObj[marker.id] = marker;
-      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', [{
         label: 'content',
         val: markerConfig.name
       }, {
@@ -2817,11 +2790,11 @@ function createMap(mapContainer) {
 
         if (searchString.length > 0) {
           // creates HTML structure for suggestion list
-          let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('div', [{
+          let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
             label: 'class',
             val: 'query__suggestions__wrapper'
           }]);
-          let createList = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('ul', [{
+          let createList = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('ul', [{
             label: 'id',
             val: 'query__suggestions'
           }, {
@@ -2834,12 +2807,12 @@ function createMap(mapContainer) {
           searchBox.parentElement.appendChild(createListWrapper).appendChild(createList);
           let list = document.getElementById('query__suggestions'); // adds search clear button
 
-          let clearSearchButton = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('button', [{
+          let clearSearchButton = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
             label: 'class',
             val: 'campus-map__controls__search__clear'
           }, {
             label: 'html',
-            val: '<span class="fad fa-fw fa-times-circle icon "></span><span class="campus-map__controls__search__clear__text">Clear query</span>'
+            val: '<span class="fad fa-sharp fa-fw fa-times-circle icon "></span><span class="campus-map__controls__search__clear__text">Clear query</span>'
           }]); // adds click event to clear search button
 
           clearSearchButton.addEventListener('click', function () {
@@ -2859,8 +2832,8 @@ function createMap(mapContainer) {
           Array.from(searchTags).forEach(function (tag) {
             if (tag.textContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1) {
               if (counter < maxNumberSuggestions) {
-                let item = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('li', []);
-                let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('a', [{
+                let item = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('li', []);
+                let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', [{
                   label: 'tabindex',
                   val: -1
                 }, {
@@ -2978,7 +2951,7 @@ function createMap(mapContainer) {
 
   function init() {
     mapContainer.classList.add('loading');
-    mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_2__["createHTMLElement"])('i', [{
+    mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('i', [{
       label: 'class',
       val: 'fa fa-refresh fa-spin loading-fa-icon'
     }]));
@@ -3164,17 +3137,11 @@ function createMap(mapContainer) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Carousel; });
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
 
 
 
-
-
-const ie = Object(_util__WEBPACK_IMPORTED_MODULE_2__["detectIE"])();
+const ie = Object(_util__WEBPACK_IMPORTED_MODULE_0__["detectIE"])();
 class Carousel {
   constructor(elem, options) {
     this.elem = elem;
@@ -3205,7 +3172,7 @@ class Carousel {
 
 
   activeSlider(index, sliders) {
-    let a = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toArray"])(sliders.querySelectorAll('.swiper-slide'));
+    let a = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toArray"])(sliders.querySelectorAll('.swiper-slide'));
     a.forEach(e => {
       e.classList.remove('active');
       e.querySelectorAll('a').forEach(a => a.tabIndex = -1); // disable focus on non active slider with hyperlinks
@@ -3473,7 +3440,7 @@ class Carousel {
 
 
   totalSliderWidth(e) {
-    const sliders = Object(_util__WEBPACK_IMPORTED_MODULE_2__["toArray"])(this.checkEventType(e).querySelectorAll('.swiper-slide'));
+    const sliders = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toArray"])(this.checkEventType(e).querySelectorAll('.swiper-slide'));
     let totalWidth = 0;
     sliders.forEach(s => {
       let style = window.getComputedStyle ? getComputedStyle(s, null) : s.currentStyle;
@@ -4278,7 +4245,7 @@ function insertIcon(anchor, className) {
 function findExternalLink(anchor) {
   if (anchor.origin !== window.location.origin && anchor.querySelectorAll('img').length < 1 && anchor.querySelectorAll('.fa-external-link').length < 1 && !anchor.parentElement.className.includes('cta-like-anchor') && anchor.className !== 'social-icon' && !anchor.className.includes('cta') && !anchor.parentElement.className.includes('cta-block') && !anchor.parentElement.className.includes('sc-content') && !anchor.parentElement.className.includes('card') && anchor.href.indexOf('mailto:') !== 0 && anchor.href.indexOf('tel:') !== 0 && anchor.href.indexOf('javascript:') !== 0 && anchor.origin) {
     let node = document.createElement('span');
-    node.className = 'far fa-external-link inline-external-link';
+    node.className = 'far fa-sharp fa-external-link inline-external-link';
     node.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].label, '(external link)');
     anchor.appendChild(node);
   }
@@ -5593,14 +5560,10 @@ function launchPaginatedList(list) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addPagination", function() { return addPagination; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "pageClassName", function() { return pageClassName; });
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
-
-
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 /**
@@ -5624,7 +5587,7 @@ const className = 'pagination',
       nextPrevRegEx = /pagination__controls__button--(next|prev)/,
       maximumButtonsToDisplay = 6,
       oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
       minimumPagesRequiringEllipsis = 2;
 /**
  * Creates a function for enabling/disabling the next/previous page buttons when
@@ -5678,9 +5641,9 @@ function setProximity(pageCount, controls, pageNumber) {
 
 
 function toggleButton(button, selected) {
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded, selected);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded, selected);
   selected ? button.setAttribute('disabled', 'true') : button.removeAttribute('disabled');
-  selected ? button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].current, 'page') : button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].current);
+  selected ? button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].current, 'page') : button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].current);
 }
 /**
  * 'Close' all pages and mark all buttons as not selected.
@@ -5728,7 +5691,7 @@ function createOpenPage(pages, controls, toggleNextPrev) {
     page.dataset.open = true;
     toggleButton(button, true);
     focus && page.focus();
-    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_1___default.a.to(page, scrollDuration);
+    scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_0___default.a.to(page, scrollDuration);
   };
 
   return openPage;
@@ -5748,7 +5711,7 @@ function createNextPrevOpenPage(controls, newPageFn, openPage) {
    * Returns a function that responds to next/previous button clicks.
    */
   const nextPrevOpenPage = () => {
-    const currentPage = Number.parseInt(controls.querySelector(`[${_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].expanded}="true"]`).dataset.page);
+    const currentPage = Number.parseInt(controls.querySelector(`[${_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].expanded}="true"]`).dataset.page);
     openPage(newPageFn(currentPage), true, false);
   };
 
@@ -5821,7 +5784,7 @@ function createPageButton(pageNumber, totalPages) {
   buttonSpan.appendChild(document.createTextNode(pageNumber));
   button.dataset.page = pageNumber;
   button.setAttribute('type', 'button');
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, `Open page ${pageNumber}`);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, `Open page ${pageNumber}`);
 
   if (totalPages - pageNumber === 1) {
     button.className = `${controlsElementClassName} ${buttonClassName} ${buttonClassName}--penultimate`;
@@ -5870,7 +5833,7 @@ function addPagination(elem, itemCount) {
      * remove the classname to avoid conflicting
      * styles then bail
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_2__["removeClass"])(elem, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_1__["removeClass"])(elem, className, false);
     return;
   }
 
@@ -5902,7 +5865,7 @@ function addPagination(elem, itemCount) {
   wrapper.className = wrapperClassName;
   controls.className = controlsClassName;
   controls.dataset.pagecount = pages.length;
-  controls.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_3__["default"].label, 'Pagination');
+  controls.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_2__["default"].label, 'Pagination');
   summary.className = summaryClassName;
   setSummaryText(summary, pages.length, itemCount);
   elem.parentNode.replaceChild(wrapper, elem);
@@ -7332,17 +7295,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatReactDate", function() { return formatReactDate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arraySlicer", function() { return arraySlicer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "screenWidth", function() { return screenWidth; });
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-
-
-
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 
 
 /**
@@ -7601,14 +7557,14 @@ function uppercaseFirstLetterLowercaseRest(s) {
 
 function axiosRequest(config) {
   const httpOK = 200;
-  return axios__WEBPACK_IMPORTED_MODULE_2___default()(config).then(response => {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default()(config).then(response => {
     if (httpOK === response.status) {
       return response.data;
     } else {
       throw `Bad response: ${response.status}`;
     }
   }).catch(e => {
-    if (!axios__WEBPACK_IMPORTED_MODULE_2___default.a.isCancel(e)) {
+    if (!axios__WEBPACK_IMPORTED_MODULE_0___default.a.isCancel(e)) {
       gaEvent('jsError', 'JavaScript error', `Line ${e.lineNumber} – ${e.message}`, `axiosRequest ${e.fileName} (${window.location})`, true);
     }
   });
@@ -7621,7 +7577,7 @@ function axiosRequest(config) {
 
 function formatTime(timeString) {
   const time = new Date(timeString);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("time", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("time", {
     dateTime: `${time.getHours() ? time.getHours() : '00'}:${time.getMinutes() ? time.getMinutes() : '00'}`
   }, time.getHours() ? time.getHours() : '00', ":", time.getMinutes() ? time.getMinutes() : '00');
 }
@@ -7649,9 +7605,9 @@ function daySuffix(day) {
 function formatReactDate(date) {
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("time", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("time", {
     dateTime: date.toISOString().split('T')[0]
-  }, days[date.getUTCDay()], ", ", date.getUTCDate(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("sup", null, daySuffix(date.getUTCDate())), ' ', months[date.getUTCMonth()], " ", date.getUTCFullYear());
+  }, days[date.getUTCDay()], ", ", date.getUTCDate(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("sup", null, daySuffix(date.getUTCDate())), ' ', months[date.getUTCMonth()], " ", date.getUTCFullYear());
 }
 /**
  * Array slicer
