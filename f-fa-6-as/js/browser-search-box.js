@@ -724,7 +724,7 @@ function Query(props) {
     type: "submit",
     className: "search-box__query__submit"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fal fa-search search-box__query__submit__icon",
+    className: "fal fa-sharp fa-search search-box__query__submit__icon",
     "aria-hidden": "true"
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "sr-only search-box__query__submit__text"

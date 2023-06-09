@@ -758,7 +758,7 @@ __webpack_require__.r(__webpack_exports__);
 const className = 'accordion',
       headingClassName = className + '__heading',
       headingTextClassName = headingClassName + '__text',
-      headingIconClassName = headingClassName + '__indicator fal',
+      headingIconClassName = headingClassName + '__indicator far fa-sharp',
       bodyClassName = className + '__body',
       oneSecond = 1000,
       tenthOfASecond = 100,
