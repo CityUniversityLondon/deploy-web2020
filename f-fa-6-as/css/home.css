@@ -29807,13 +29807,13 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 .search-box__cta ul li {
     margin-top: initial;
     margin-left: 1rem;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
 }
 
 @media (max-width: 768px) {
     .search-box__cta ul li {
-        margin-top: 0.5rem;
         margin-left: initial;
-        margin-right: 1rem;
     }
 }
 
