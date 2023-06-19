@@ -47934,19 +47934,17 @@ main > .login footer p {
     left: 0;
     right: 0;
     height: 100%;
-    top: -140px;
+    top: 0;
+}
+
+.home-banner--promo-alt .home-banner--promo-alt__image figure {
+    margin-top: 0;
 }
 
 @media (max-width: 1279px) {
     .home-banner--promo-alt .home-banner--promo-alt__image picture {
         display: flex;
         justify-content: center;
-    }
-}
-
-@media (max-width: 1023px) {
-    .home-banner--promo-alt .home-banner--promo-alt__image {
-        top: -75px;
     }
 }
 
