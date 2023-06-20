@@ -65424,12 +65424,12 @@ main .home .home__whats-happening .related-content {
     content: none;
 }
 
-.home-banner--promo-alt {
+.home-banner--promo {
     overflow: hidden;
     position: relative;
 }
 
-.home-banner--promo-alt .home-banner--promo-alt__container {
+.home-banner--promo .home-banner--promo__container {
     max-width: 55ch;
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
@@ -65439,19 +65439,19 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 768px) {
-    .home-banner--promo-alt .home-banner--promo-alt__container {
+    .home-banner--promo .home-banner--promo__container {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 901px) {
-    .home-banner--promo-alt .home-banner--promo-alt__container {
+    .home-banner--promo .home-banner--promo__container {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
-    .home-banner--promo-alt .home-banner--promo-alt__container {
+    .home-banner--promo .home-banner--promo__container {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -65461,28 +65461,28 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    .home-banner--promo-alt .home-banner--promo-alt__container {
+    .home-banner--promo .home-banner--promo__container {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    .home-banner--promo-alt .home-banner--promo-alt__container {
+    .home-banner--promo .home-banner--promo__container {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1441px) {
-    .home-banner--promo-alt .home-banner--promo-alt__container {
+    .home-banner--promo .home-banner--promo__container {
         margin-left: auto;
         margin-right: auto;
     }
 }
 
 @media (max-width: 1023px) {
-    .home-banner--promo-alt .home-banner--promo-alt__container {
+    .home-banner--promo .home-banner--promo__container {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -65490,13 +65490,13 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    .home-banner--promo-alt .home-banner--promo-alt__container {
+    .home-banner--promo .home-banner--promo__container {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
-.home-banner--promo-alt .home-banner--promo-alt__image {
+.home-banner--promo .home-banner--promo__image {
     position: absolute;
     left: 0;
     right: 0;
@@ -65504,30 +65504,30 @@ main .home .home__whats-happening .related-content {
     top: 0;
 }
 
-.home-banner--promo-alt .home-banner--promo-alt__image figure {
+.home-banner--promo .home-banner--promo__image figure {
     margin-top: 0;
 }
 
 @media (max-width: 1279px) {
-    .home-banner--promo-alt .home-banner--promo-alt__image picture {
+    .home-banner--promo .home-banner--promo__image picture {
         display: flex;
         justify-content: center;
     }
 }
 
-.home-banner--promo-alt .home-banner--promo-alt__image img {
+.home-banner--promo .home-banner--promo__image img {
     width: 100%;
 }
 
 @media (min-width: 901px) and (max-width: 1279px) {
-    .home-banner--promo-alt .home-banner--promo-alt__image img {
+    .home-banner--promo .home-banner--promo__image img {
         height: 100%;
         max-width: inherit;
         width: auto;
     }
 }
 
-.home-banner--promo-alt .home-banner--promo-alt__content {
+.home-banner--promo .home-banner--promo__content {
     grid-column: 1/10;
     background-color: #0c0c0e;
     color: #ffffff;
@@ -65537,13 +65537,13 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (max-width: 1279px) {
-    .home-banner--promo-alt .home-banner--promo-alt__content {
+    .home-banner--promo .home-banner--promo__content {
         grid-column: 1/12;
     }
 }
 
 @media (max-width: 899px) {
-    .home-banner--promo-alt .home-banner--promo-alt__content {
+    .home-banner--promo .home-banner--promo__content {
         grid-column: 1/-1;
         margin-bottom: 3.5rem;
         margin-top: 45%;
@@ -65551,76 +65551,75 @@ main .home .home__whats-happening .related-content {
 }
 
 @media (max-width: 767px) {
-    .home-banner--promo-alt .home-banner--promo-alt__content {
+    .home-banner--promo .home-banner--promo__content {
         margin-top: 42%;
     }
 }
 
 @media (max-width: 767px) {
-    .home-banner--promo-alt .home-banner--promo-alt__content {
+    .home-banner--promo .home-banner--promo__content {
         margin-top: 35%;
     }
 }
 
-.home-banner--promo-alt .home-banner--promo-alt__content__heading {
+.home-banner--promo .home-banner--promo__content__heading {
     font-size: 2.28rem;
     line-height: 1.33333;
     letter-spacing: -0.017em;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .home-banner--promo-alt .home-banner--promo-alt__content__heading {
+    .home-banner--promo .home-banner--promo__content__heading {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .home-banner--promo-alt .home-banner--promo-alt__content__heading {
+    .home-banner--promo .home-banner--promo__content__heading {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .home-banner--promo-alt .home-banner--promo-alt__content__heading {
+    .home-banner--promo .home-banner--promo__content__heading {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .home-banner--promo-alt .home-banner--promo-alt__content__heading {
+    .home-banner--promo .home-banner--promo__content__heading {
         letter-spacing: -0.027em;
     }
 }
 
 @media (min-width: 1281px) {
-    .home-banner--promo-alt .home-banner--promo-alt__content__heading {
+    .home-banner--promo .home-banner--promo__content__heading {
         font-size: 3rem;
         line-height: 2.5rem;
     }
 }
 
-.home-banner--promo-alt .home-banner--promo-alt__content__text,
-.home-banner--promo-alt .cta-block {
+.home-banner--promo .home-banner--promo__content__text,
+.home-banner--promo .cta-block {
     margin-top: 1.5rem;
 }
 
-.home-banner--promo-alt .cta-block {
+.home-banner--promo .cta-block {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
 
-.home-banner--promo-alt ~ .search-box__wrapper .search-box__cta__wrapper {
+.home-banner--promo ~ .search-box__wrapper .search-box__cta__wrapper {
     display: none;
 }
 
-.home-banner--promo-alt ~ .search-box__wrapper .search-box__text__wrapper {
+.home-banner--promo ~ .search-box__wrapper .search-box__text__wrapper {
     padding-bottom: 4rem;
 }
 
-.home-banner--promo-alt ~ * {
+.home-banner--promo ~ * {
     position: relative;
-    padding-top: 0.01rem;
     background: #ffffff;
 }
 
@@ -65721,7 +65720,6 @@ main .home .home__whats-happening .related-content {
 
 .home-new-vi .home__pathway .triangle__block--left {
     position: absolute;
-    margin-top: -1rem;
 }
 
 .home-new-vi .home__pathway.in-view .triangle__block--left {
@@ -65737,7 +65735,8 @@ main .home .home__whats-happening .related-content {
     grid-template-columns: repeat(3, 1fr);
     max-width: unset;
     grid-column-gap: 1.5rem;
-    margin: 1rem 0 2rem 0;
+    margin: 0 0 2rem 0;
+    padding-top: 1rem;
     position: relative;
     z-index: 1;
 }
@@ -65745,7 +65744,6 @@ main .home .home__whats-happening .related-content {
 @media (max-width: 1023px) {
     .home-new-vi .home__pathway .pathway .pathway__cards {
         display: block;
-        padding-top: 0.25rem;
     }
 }
 

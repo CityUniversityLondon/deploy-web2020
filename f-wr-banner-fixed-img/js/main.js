@@ -546,21 +546,12 @@ document.addEventListener('DOMContentLoaded', () => {
 __webpack_require__.r(__webpack_exports__);
 
 
-const className = 'home-banner--promo-alt';
+const className = 'home-banner--promo';
 let prevRatio = 0.0;
-let elementWatch;
-let defaultTransitionElemnt; //let scale = 'scale(1.0X)';
+let transitionElemnt;
 
 function takeOver(box) {
-  defaultTransitionElemnt = box;
-
-  if (box.getAttribute('data-transition-watch-element')) {
-    elementWatch = document.querySelector(box.getAttribute('data-transition-watch-element'));
-  } else {
-    elementWatch = box;
-  }
-
-  console.log(elementWatch);
+  transitionElemnt = box;
   let observer;
   let options = {
     root: null,
@@ -568,7 +559,7 @@ function takeOver(box) {
     threshold: buildThresholdList()
   };
   observer = new IntersectionObserver(handleIntersect, options);
-  observer.observe(elementWatch);
+  observer.observe(transitionElemnt);
 }
 
 function buildThresholdList() {
@@ -590,27 +581,9 @@ function handleIntersect(entries) {
     console.log('ratio is: ' + Math.round(10 - entry.intersectionRatio * 10));
 
     if (entry.intersectionRatio > prevRatio) {
-      /*
-             
-       defaultTransitionElemnt.querySelector(
-          '.banner-transition-ele'
-      ).style.transform = scale.replace(
-          'X',
-          Math.round(10 - entry.intersectionRatio * 10)
-      );
-      */
-      entry.intersectionRatio === 0 ? defaultTransitionElemnt.querySelector('.banner-transition-ele').style.position = 'absolute' : defaultTransitionElemnt.querySelector('.banner-transition-ele').style.position = 'fixed';
+      entry.intersectionRatio === 0 ? transitionElemnt.querySelector('.banner-transition-ele').style.position = 'absolute' : transitionElemnt.querySelector('.banner-transition-ele').style.position = 'fixed';
     } else {
-      /*
-      defaultTransitionElemnt.querySelector(
-          '.banner-transition-ele'
-      ).style.transform = scale.replace(
-          'X',
-          Math.round(10 - entry.intersectionRatio * 10) 
-          
-      );
-      */
-      entry.intersectionRatio === 0 ? defaultTransitionElemnt.querySelector('.banner-transition-ele').style.position = 'absolute' : defaultTransitionElemnt.querySelector('.banner-transition-ele').style.position = 'fixed';
+      entry.intersectionRatio === 0 ? transitionElemnt.querySelector('.banner-transition-ele').style.position = 'absolute' : transitionElemnt.querySelector('.banner-transition-ele').style.position = 'fixed';
     }
 
     prevRatio = entry.intersectionRatio;
