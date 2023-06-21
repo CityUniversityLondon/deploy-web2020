@@ -65623,6 +65623,23 @@ main .home .home__whats-happening .related-content {
     background: #ffffff;
 }
 
+.home-banner--promo.home-banner__theme--undergraduate .home-banner--promo__content {
+    background: #ffffff;
+}
+
+.home-banner--promo.home-banner__theme--undergraduate .home-banner--promo__content__heading {
+    color: #ffffff;
+    background: #d61726;
+    box-decoration-break: clone;
+    display: inline;
+    line-height: 2;
+    padding: 0.5rem 1rem;
+}
+
+.home-banner--promo.home-banner__theme--undergraduate .home-banner--promo__content__text {
+    color: #0c0c0e;
+}
+
 @keyframes moveUp {
     0% {
         transform: translateX(-100%);
