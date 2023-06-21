@@ -65563,40 +65563,7 @@ main .home .home__whats-happening .related-content {
 }
 
 .home-banner--promo .home-banner--promo__content__heading {
-    font-size: 2.28rem;
-    line-height: 1.33333;
-    letter-spacing: -0.017em;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .home-banner--promo .home-banner--promo__content__heading {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .home-banner--promo .home-banner--promo__content__heading {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .home-banner--promo .home-banner--promo__content__heading {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .home-banner--promo .home-banner--promo__content__heading {
-        letter-spacing: -0.027em;
-    }
-}
-
-@media (min-width: 1281px) {
-    .home-banner--promo .home-banner--promo__content__heading {
-        font-size: 3rem;
-        line-height: 2.5rem;
-    }
+    margin-top: 1rem;
 }
 
 .home-banner--promo .home-banner--promo__content__text,
@@ -65623,6 +65590,43 @@ main .home .home__whats-happening .related-content {
     background: #ffffff;
 }
 
+.home-banner--promo.home-banner__theme--default .home-banner--promo__content__heading {
+    font-size: 2.28rem;
+    line-height: 1.33333;
+    letter-spacing: -0.017em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .home-banner--promo.home-banner__theme--default .home-banner--promo__content__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .home-banner--promo.home-banner__theme--default .home-banner--promo__content__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .home-banner--promo.home-banner__theme--default .home-banner--promo__content__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .home-banner--promo.home-banner__theme--default .home-banner--promo__content__heading {
+        letter-spacing: -0.027em;
+    }
+}
+
+@media (min-width: 1281px) {
+    .home-banner--promo.home-banner__theme--default .home-banner--promo__content__heading {
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+}
+
 .home-banner--promo.home-banner__theme--undergraduate .home-banner--promo__content {
     background: #ffffff;
 }
@@ -65632,8 +65636,14 @@ main .home .home__whats-happening .related-content {
     background: #d61726;
     box-decoration-break: clone;
     display: inline;
-    line-height: 2;
-    padding: 0.5rem 1rem;
+    line-height: 3rem;
+    padding: 0rem 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .home-banner--promo.home-banner__theme--undergraduate .home-banner--promo__content__heading {
+        line-height: 3.5rem;
+    }
 }
 
 .home-banner--promo.home-banner__theme--undergraduate .home-banner--promo__content__text {
