@@ -1119,6 +1119,14 @@
     background-color: #ffffff;
 }
 
+.color--chinesesilver {
+    color: #cccccc;
+}
+
+.background--chinesesilver {
+    background-color: #cccccc;
+}
+
 .sr-only-focusable-within:active, .sr-only-focusable-within:focus, .sr-only-focusable-within:focus-within {
     clip: auto;
     height: auto;
@@ -65626,12 +65634,15 @@ main .home .home__whats-happening .related-content {
 
 .home-banner--promo.home-banner__theme--undergraduate .home-banner--promo__content {
     background: #ffffff;
+    border: 0.0625rem solid chinesesilver;
+    box-shadow: 1rem 1rem 0rem rgba(0, 0, 0, 0.3);
 }
 
 .home-banner--promo.home-banner__theme--undergraduate .home-banner--promo__content__heading {
     color: #ffffff;
     background: #d61726;
     box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
     display: inline;
     padding: 0rem 0.5rem;
     font-size: 1.802rem;
