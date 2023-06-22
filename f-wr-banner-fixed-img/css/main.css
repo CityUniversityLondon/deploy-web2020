@@ -65761,7 +65761,8 @@ main .home .home__whats-happening .related-content {
 
 .home-new-vi .home__pathway {
     position: relative;
-    margin: 0 0 2.5rem 0;
+    background: #ffffff;
+    padding-bottom: 0.5rem;
 }
 
 @media (max-width: 1023px) {
@@ -66297,10 +66298,15 @@ main .home .home__whats-happening .related-content {
     transform: scale(1.1);
 }
 
+.home-new-vi .home__news-events__wrap {
+    background: #ffffff;
+}
+
 .home-new-vi .home__news-events {
     display: flex;
     gap: 1rem;
-    margin: 5rem 0;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 @media (min-width: 1024px) {
@@ -66682,7 +66688,8 @@ main .home .home__whats-happening .related-content {
 }
 
 .home-new-vi .home__research {
-    margin-top: 3.5rem;
+    padding-top: 0.5rem;
+    background: #ffffff;
 }
 
 .home-new-vi .home__research .wrap--research__content {
