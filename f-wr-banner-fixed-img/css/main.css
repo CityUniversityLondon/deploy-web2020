@@ -1119,14 +1119,6 @@
     background-color: #ffffff;
 }
 
-.color--chinesesilver {
-    color: #cccccc;
-}
-
-.background--chinesesilver {
-    background-color: #cccccc;
-}
-
 .sr-only-focusable-within:active, .sr-only-focusable-within:focus, .sr-only-focusable-within:focus-within {
     clip: auto;
     height: auto;
@@ -65634,7 +65626,7 @@ main .home .home__whats-happening .related-content {
 
 .home-banner--promo.home-banner__theme--undergraduate .home-banner--promo__content {
     background: #ffffff;
-    border: 0.0625rem solid chinesesilver;
+    border: 0.0625rem solid #cbcbcb;
     box-shadow: 1rem 1rem 0rem rgba(0, 0, 0, 0.3);
 }
 
