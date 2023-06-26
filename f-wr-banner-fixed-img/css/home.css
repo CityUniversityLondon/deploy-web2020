@@ -48174,6 +48174,13 @@ main > .login footer p {
     color: #0c0c0e;
 }
 
+.home-banner--promo.home-banner__theme--undergraduate .cta-block a:focus:focus, .home-banner--promo.home-banner__theme--undergraduate .cta-block a:focus:active, .home-banner--promo.home-banner__theme--undergraduate .cta-block a:active:focus, .home-banner--promo.home-banner__theme--undergraduate .cta-block a:active:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
+}
+
 @keyframes moveUp {
     0% {
         transform: translateX(-100%);
