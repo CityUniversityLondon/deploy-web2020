@@ -999,8 +999,7 @@ function Finder__Results__Generic(props) {
         positiveOutcome = props.details.listMetadata.positiveOutcome ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_positiveOutcome__WEBPACK_IMPORTED_MODULE_7__["default"], {
     text: props.details.listMetadata.positiveOutcome[0]
   }) : null;
-  const charts = props.details.listMetadata.chart,
-        data = charts.map(d => JSON.parse(d));
+  const charts = props.details.listMetadata.chart ? props.details.listMetadata.chart.map(d => JSON.parse(d)) : null;
   let count = 0;
   props.details.listMetadata.companys && count++;
   props.details.listMetadata.institutions && count++;
@@ -1018,9 +1017,9 @@ function Finder__Results__Generic(props) {
     className: "card__description"
   }, props.details.listMetadata.c && props.details.listMetadata.c[0])), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "chart-row chart-row--columns"
-  }, data.map((c, i) => {
+  }, charts ? charts.map((c, i) => {
     let k = `${c[0].title}${i}${c[0].id}`;
-    let chartsLength = data.length;
+    let chartsLength = charts.length;
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_chart__WEBPACK_IMPORTED_MODULE_2__["default"], {
       key: k,
       data: c[0].chart,
@@ -1029,7 +1028,7 @@ function Finder__Results__Generic(props) {
       chartsLength: chartsLength,
       chartId: parseInt(c[0].id)
     });
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "destination-leaver-content",
     "data-length": count
   }, salary, company, institutions, jobT, gradLevel, positiveOutcome));

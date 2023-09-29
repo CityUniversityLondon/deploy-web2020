@@ -18572,8 +18572,11 @@ figure figcaption a:active,
         margin-top: 0;
         justify-content: space-between;
     }
-    .global-footer .global-footer__awards li {
-        flex-basis: 40%;
+    .global-footer .global-footer__awards li:first-child {
+        flex-basis: 100%;
+    }
+    .global-footer .global-footer__awards li:not(:first-child) {
+        flex-basis: 25%;
     }
 }
 
@@ -18583,7 +18586,7 @@ figure figcaption a:active,
         justify-content: space-between;
     }
     .global-footer .global-footer__awards li {
-        flex-basis: 27%;
+        flex-basis: 40%;
     }
 }
 
