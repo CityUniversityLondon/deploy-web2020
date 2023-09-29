@@ -851,7 +851,7 @@ function Finder__Chart(props) {
         key: randomNum,
         className: "chart__legend__item"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "fa-solid fa-circle chart__legend__item__icon",
+        className: "fa fa-circle chart__legend__item__icon",
         "aria-hidden": "true"
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "chart__legend__item__label"
