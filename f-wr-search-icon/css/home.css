@@ -15869,6 +15869,7 @@ article .link-copy {
     top: 0.25rem;
     width: 2.25rem;
     background-color: initial;
+    padding: 0;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -15915,12 +15916,24 @@ article .link-copy {
 }
 
 .js .global-header__search .search--inline__query__input .search--inline__clear .icon {
-    --fa-primary-color: #696969;
-    --fa-primary-opacity: 1;
-    --fa-secondary-color: #f2f2f2;
-    --fa-secondary-opacity: 1;
+    /*
+                // temp overide with xmark-temp-styling below
+
+                --fa-primary-color: #696969;
+                --fa-primary-opacity: 1;
+                --fa-secondary-color: #f2f2f2;
+                --fa-secondary-opacity: 1;
+                */
     letter-spacing: 0;
     line-height: 1;
+    background: #f2f2f2;
+    color: #696969;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .js .global-header__search .search--inline__query__input .search--inline__clear:hover {
@@ -15928,8 +15941,14 @@ article .link-copy {
 }
 
 .js .global-header__search .search--inline__query__input .search--inline__clear:hover .icon {
-    --fa-primary-color: #f2f2f2;
-    --fa-secondary-color: #696969;
+    /*
+                    // temp overide with xmark-temp-styling below
+
+                    --fa-primary-color: #f2f2f2;
+                    --fa-secondary-color: #696969;
+                    */
+    color: #f2f2f2;
+    background: #696969;
 }
 
 .js .global-header__search .search--inline__results__updating {
@@ -29506,10 +29525,22 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .search-box__query__input .search-box__clear .icon {
-    --fa-primary-color: #696969;
-    --fa-primary-opacity: 1;
-    --fa-secondary-color: #f2f2f2;
-    --fa-secondary-opacity: 1;
+    /*
+            // temp overide with xmark-temp-styling below
+
+            --fa-primary-color: #696969;
+            --fa-primary-opacity: 1;
+            --fa-secondary-color: #f2f2f2;
+            --fa-secondary-opacity: 1;
+            */
+    background: #f2f2f2;
+    color: #696969;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
     letter-spacing: 0;
     line-height: 1;
 }
@@ -29519,8 +29550,14 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: transparent;
     }
     .search-box__query__input .search-box__clear:hover .icon {
-        --fa-primary-color: #f2f2f2;
-        --fa-secondary-color: #696969;
+        /*
+                    // temp overide with xmark-temp-styling below
+
+                    --fa-primary-color: #f2f2f2;
+                    --fa-secondary-color: #696969;
+                    */
+        color: #f2f2f2;
+        background: #696969;
     }
 }
 
@@ -29649,10 +29686,22 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .finder__clear .icon {
-    --fa-primary-color: #696969;
-    --fa-primary-opacity: 1;
-    --fa-secondary-color: #f2f2f2;
-    --fa-secondary-opacity: 1;
+    /*
+        // temp overide with xmark-temp-styling below
+
+        --fa-primary-color: #696969;
+        --fa-primary-opacity: 1;
+        --fa-secondary-color: #f2f2f2;
+        --fa-secondary-opacity: 1;
+        */
+    background: #f2f2f2;
+    color: #696969;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
     letter-spacing: 0;
     line-height: 1;
 }
@@ -29662,8 +29711,14 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         background-color: transparent;
     }
     .finder__clear:hover .icon {
-        --fa-primary-color: #f2f2f2;
-        --fa-secondary-color: #696969;
+        /*
+                // temp overide with xmark-temp-styling below
+
+                --fa-primary-color: #f2f2f2;
+                --fa-secondary-color: #696969;
+                */
+        color: #f2f2f2;
+        background: #696969;
     }
 }
 
