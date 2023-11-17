@@ -12533,6 +12533,12 @@ article a:active {
     }
 }
 
+@media (max-width: 432px) {
+    .global-footer .global-footer__awards li {
+        flex-basis: 28%;
+    }
+}
+
 .global-footer .global-footer__awards li .logo {
     width: 10rem;
 }
