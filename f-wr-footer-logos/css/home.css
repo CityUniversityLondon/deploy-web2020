@@ -12547,6 +12547,16 @@ article a:active {
     width: 7rem;
 }
 
+.global-footer .global-footer__awards li .logo--ofsted {
+    width: 7rem;
+}
+
+@media (min-width: 901px) {
+    .global-footer .global-footer__awards li .logo--ofsted {
+        width: 4rem;
+    }
+}
+
 .global-footer .global-footer__link-ribbon {
     margin-left: 1rem;
     margin-right: 1rem;
