@@ -4839,18 +4839,18 @@ function createDialog(parent, position, dialogArray) {
     label: 'class',
     val: 'dialog__body-copy'
   }]);
-  const dialogLabel = dialogArray[position].label ? Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('p', [{
+  const dialogLabel = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('p', [{
     label: 'class',
     val: 'dialog__label'
-  }]) : null;
+  }]);
   dialogTitle.innerText = dialogArray[position].title;
   dialogBody.innerHTML = dialogArray[position].body;
   dialogStrapline.innerHTML = dialogArray[position].topic;
-  dialogLabel ? dialogLabel.innerHTML = dialogArray[position].label : null;
+  dialogArray[position].label ? dialogLabel.innerHTML = dialogArray[position].label : null;
   bodyWrapper.appendChild(closeBtn);
   bodyWrapper.appendChild(dialogStrapline);
   bodyWrapper.appendChild(dialogTitle);
-  if (dialogLabel) bodyWrapper.appendChild(dialogLabel);
+  bodyWrapper.appendChild(dialogLabel);
   bodyWrapper.appendChild(dialogBody);
   wrapperWrapper.appendChild(bodyWrapper);
   dialog.appendChild(wrapperWrapper);
@@ -4935,7 +4935,7 @@ function addDialogEvent(dialog, dialogArray, nextState) {
   console.log(dialogArray);
   nextState = parseInt(nextState);
   dialog.querySelector('.dialog__heading').innerText = dialogArray[nextState].title;
-  dialogArray[nextState].label ? dialog.querySelector('.dialog__label').innerHTML = dialogArray[nextState].label : dialog.querySelector('.dialog__label').innerHTML = '';
+  dialogArray[nextState].label ? dialog.querySelector('.dialog__label').innerHTML = dialogArray[nextState].label : dialog.querySelector('.dialog__label') ? dialog.querySelector('.dialog__label').innerHTML = '' : null;
   dialog.querySelector('.dialog__body-copy').innerHTML = dialogArray[nextState].body;
 
   if (nextState === 0) {
