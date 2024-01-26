@@ -21066,7 +21066,7 @@ article .link-copy {
     font-family: "Font Awesome 6 Sharp";
     color: transparent;
     content: '\f0d8';
-    display: block;
+    display: none;
     font-size: 2rem;
     font-weight: 800;
     left: 0;
@@ -21097,6 +21097,7 @@ article .link-copy {
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'] > div:after {
+    display: block;
     color: #1e1e1e;
 }
 

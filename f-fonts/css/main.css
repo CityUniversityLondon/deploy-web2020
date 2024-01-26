@@ -29233,7 +29233,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     font-family: "Font Awesome 6 Sharp";
     color: transparent;
     content: '\f0d8';
-    display: block;
+    display: none;
     font-size: 2rem;
     font-weight: 800;
     left: 0;
@@ -29264,6 +29264,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .navigation--primary .navigation__level1 > li .navigation__button[aria-expanded='true'] > div:after {
+    display: block;
     color: #1e1e1e;
 }
 
@@ -52526,7 +52527,7 @@ main > .news {
     }
     main > .news .news__contact,
     main > .news .news__related-news,
-    main > .news .news__related-courses {
+    main > .news .news__related-bayes-courses {
         grid-column: 1 / -1;
     }
     main > .news.news--fullwidth {
@@ -52633,7 +52634,7 @@ main > .news {
     }
     main > .news .news__contact,
     main > .news .news__related-news,
-    main > .news .news__related-courses {
+    main > .news .news__related-bayes-courses {
         grid-column: 1 / -1;
     }
     main > .news.news--fullwidth {
@@ -52930,22 +52931,22 @@ main > .news .news__schools li:before {
 }
 
 main > .news .news__related-news,
-main > .news .news__related-courses {
+main > .news .news__related-bayes-courses {
     background: #ffffff;
 }
 
 main > .news .news__related-news .news__related-news__container,
-main > .news .news__related-news .news__related-courses__container,
-main > .news .news__related-courses .news__related-news__container,
-main > .news .news__related-courses .news__related-courses__container {
+main > .news .news__related-news .news__related-bayes-courses__container,
+main > .news .news__related-bayes-courses .news__related-news__container,
+main > .news .news__related-bayes-courses .news__related-bayes-courses__container {
     margin: 0 1.5rem;
 }
 
 @media (max-width: 1023px) {
     main > .news .news__related-news .news__related-news__container,
-    main > .news .news__related-news .news__related-courses__container,
-    main > .news .news__related-courses .news__related-news__container,
-    main > .news .news__related-courses .news__related-courses__container {
+    main > .news .news__related-news .news__related-bayes-courses__container,
+    main > .news .news__related-bayes-courses .news__related-news__container,
+    main > .news .news__related-bayes-courses .news__related-bayes-courses__container {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -52954,18 +52955,18 @@ main > .news .news__related-courses .news__related-courses__container {
 
 @media (max-width: 1023px) and (min-width: 901px) {
     main > .news .news__related-news .news__related-news__container,
-    main > .news .news__related-news .news__related-courses__container,
-    main > .news .news__related-courses .news__related-news__container,
-    main > .news .news__related-courses .news__related-courses__container {
+    main > .news .news__related-news .news__related-bayes-courses__container,
+    main > .news .news__related-bayes-courses .news__related-news__container,
+    main > .news .news__related-bayes-courses .news__related-bayes-courses__container {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
 }
 
 main > .news .news__related-news .news__related-news__container h2,
-main > .news .news__related-news .news__related-courses__container h2,
-main > .news .news__related-courses .news__related-news__container h2,
-main > .news .news__related-courses .news__related-courses__container h2 {
+main > .news .news__related-news .news__related-bayes-courses__container h2,
+main > .news .news__related-bayes-courses .news__related-news__container h2,
+main > .news .news__related-bayes-courses .news__related-bayes-courses__container h2 {
     text-align: center;
 }
 
