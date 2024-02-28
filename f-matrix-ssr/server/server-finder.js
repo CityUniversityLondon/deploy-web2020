@@ -22338,8 +22338,8 @@ function useLogicWrapper(config, results, matrixQuery, element) {
     misspelling: null,
     numRanks: hasMounted && params.get('num_ranks') ? params.get('num_ranks') : config.numRanks,
     query: !matrixState && params.get('query') ? params.get('query') : params && params.query ? params.query : '',
-    sortType: hasMounted && params.get('query') ? '' : hasMounted && params.get('sort') ? params.get('sort') : config.sort[0].type,
-    startRank: hasMounted && params.get('start_rank') ? params.get('start_rank') : 1
+    sortType: !matrixState && params.get('query') ? '' : !matrixState && params.get('sort') ? params.get('sort') : params && params.sort ? params.sort : config.sort[0].type,
+    startRank: !matrixState && params.get('start_rank') ? params.get('start_rank') : params && params.start_rank ? params.start_rank : 1
   };
   /**
    * Dummy, empty Funnelback response object for initial state.
