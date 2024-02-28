@@ -1105,7 +1105,7 @@ function howToApplyConfig(url) {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatTime, formatReactDate, arraySlicer, screenWidth */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatTime, formatReactDate, arraySlicer, screenWidth, flattenObj */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1131,6 +1131,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatReactDate", function() { return formatReactDate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arraySlicer", function() { return arraySlicer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "screenWidth", function() { return screenWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "flattenObj", function() { return flattenObj; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -1504,6 +1505,49 @@ function screenWidth(size) {
     default:
       return 1280;
   }
+}
+/**
+ * Flatten object to one level that contains array of objects and 2 level objects
+ *
+ * @param {object} - a object to flatten
+ * @returns {object} - return a flatten object
+ */
+
+function flattenObj(ob) {
+  // The object which contains the
+  // final result
+  let result = {}; // loop through the object "ob"
+
+  for (const i in ob) {
+    // We check the type of the i using
+    // typeof() function and recursively
+    // call the function again
+    if (typeof ob[i] === 'object' && !Array.isArray(ob[i])) {
+      const temp = flattenObj(ob[i]);
+
+      for (const j in temp) {
+        if (i === 'parameters') {
+          result[`${i}-${j}`] = temp[j];
+        } else {
+          result[j] = temp[j];
+        } // Store temp in result
+
+      }
+    } else if (Array.isArray(ob[i])) {
+      ob[i].forEach(val => {
+        if (i === 'fixedFacets') {
+          result[`${i}-${val.meta}`] = val.value;
+        } else {
+          result[`${i}-${val.name}`] = val.value;
+        }
+      });
+    } // Else store ob[i] in result directly
+    else {
+      result[i] = ob[i];
+    }
+  }
+
+  return result;
 }
 
 /***/ }),

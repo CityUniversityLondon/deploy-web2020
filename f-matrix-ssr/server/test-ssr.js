@@ -7286,13 +7286,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const render = (formData, config, initialQuery, initialResults, cb) => {
-  const Form = formData,
-        ServerRenderer = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
+  const Finder = formData,
+        ServerRenderer = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Finder, {
     config: config,
     initialQuery: initialQuery,
     initialResults: initialResults
   }),
-        formHtml = Object(react_dom_server__WEBPACK_IMPORTED_MODULE_1__["renderToStaticMarkup"])(ServerRenderer);
+        formHtml = Object(react_dom_server__WEBPACK_IMPORTED_MODULE_1__["renderToString"])(ServerRenderer);
   cb(null, formHtml);
 };
 

@@ -818,7 +818,7 @@ function Finder__Results__Event(props) {
   }),
         eventStartDate = props.details.listMetadata.d && props.details.listMetadata.d[0],
         eventEndDate = props.details.listMetadata.d && props.details.listMetadata.d[1],
-        eventLabel = compareDates(eventStartDate, eventEndDate, parseInt(props.details.listMetadata.displayTime[0]));
+        eventLabel = compareDates(eventStartDate, eventEndDate, parseInt(props.details.listMetadata.displayTime && props.details.listMetadata.displayTime[0]));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "card card--event card--landscape"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1102,7 +1102,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Finder__Results__News(props) {
-  const formattedDate = Object(_util__WEBPACK_IMPORTED_MODULE_2__["formatReactDate"])(new Date(props.details.listMetadata.d[0])),
+  const formattedDate = props.details.listMetadata.d && Object(_util__WEBPACK_IMPORTED_MODULE_2__["formatReactDate"])(new Date(props.details.listMetadata.d[0])),
         dateString = props.details.listMetadata.d && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "card__type"
   }, formattedDate),
@@ -1347,6 +1347,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
 /**
@@ -1354,6 +1355,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2019
  */
+
 
 
 /**
@@ -1378,15 +1380,75 @@ function Finder__Pagination(props) {
     props.update.results(!props.update.updateState);
   };
 
-  pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  const hyperLink = pageNumber => {
+    const newStartRank = 1 + (pageNumber - 1) * props.numRanks,
+          newQuery = Object(_util__WEBPACK_IMPORTED_MODULE_2__["flattenObj"])(props.query);
+    const paramQueryString = newQuery ? Object.entries(newQuery).filter(key => {
+      let param = Object.values(key);
+
+      if (param[1] === '') {
+        return false;
+      } else {
+        switch (param[0]) {
+          case 'interacted':
+            return false;
+
+          case 'num_rank':
+            return false;
+
+          case 'start_rank':
+            return false;
+
+          default:
+            return true;
+        }
+      }
+    }).map(key => {
+      let param = Object.values(key);
+
+      if (/fixedParameters/.test(param[0])) {
+        return encodeURIComponent(param[0].substring(16)) + '=' + encodeURIComponent(param[1]);
+      } else if (/fixedFacets/.test(param[0])) {
+        return encodeURIComponent(`meta_${param[0].substring(12)}_sand`) + '=' + encodeURIComponent(param[1]);
+      } else if (/parameters/.test(param[0])) {
+        return encodeURIComponent(param[0].substring(11)) + '=' + encodeURIComponent(param[1]);
+      }
+
+      switch (param[0]) {
+        case 'collection':
+          return encodeURIComponent(param[0]) + '=' + encodeURIComponent(param[1]);
+
+        case 'query':
+          return encodeURIComponent(param[0]) + '=' + encodeURIComponent(param[1]);
+
+        case 'sortType':
+          return encodeURIComponent('sort') + '=' + encodeURIComponent(param[1]);
+
+        case 'startRank':
+          return encodeURIComponent('start_rank') + '=' + encodeURIComponent(newStartRank);
+
+        case 'numRanks':
+          return encodeURIComponent('num_rank') + '=' + encodeURIComponent(param[1]);
+
+        default:
+          return encodeURIComponent(`meta_${param[0]}_sand`) + '=' + encodeURIComponent(param[1]);
+      }
+    }).join('&') : '';
+    return '?' + paramQueryString;
+  };
+
+  pages.push(currentPage === 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    key: "previousPage",
+    className: "pagination__controls__button--prev"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Previous page")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "pagination__controls__button--prev",
     key: "prev",
-    type: "button",
-    disabled: currentPage === 1 ? true : false,
-    onClick: () => {
+    onClick: e => {
+      e.preventDefault();
       changePage(currentPage - 1);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Previous page")));
+    },
+    href: hyperLink(currentPage - 1)
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Previous page ", currentPage)));
 
   for (let page = 1; page <= numberOfPages; page++) {
     let className;
@@ -1404,7 +1466,7 @@ function Finder__Pagination(props) {
         className = 'pagination__controls__element pagination__controls__button';
     }
 
-    pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       "aria-current": page === currentPage ? 'page' : null,
       "aria-expanded": page === currentPage ? true : false,
       "aria-label": `Open page ${page}`,
@@ -1413,10 +1475,11 @@ function Finder__Pagination(props) {
       "data-proximity": Math.abs(page - currentPage),
       disabled: page === currentPage ? true : false,
       key: page,
-      type: "button",
-      onClick: () => {
+      onClick: e => {
+        e.preventDefault();
         changePage(page);
-      }
+      },
+      href: hyperLink(page)
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, page)));
 
     if (page === 1) {
@@ -1432,14 +1495,18 @@ function Finder__Pagination(props) {
     }
   }
 
-  pages.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  pages.push(currentPage === numberOfPages ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    key: "nextPage",
+    className: "pagination__controls__button--next"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Next page")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "pagination__controls__button--next",
     key: "next",
-    type: "button",
     disabled: currentPage === numberOfPages ? true : false,
-    onClick: () => {
+    onClick: e => {
+      e.preventDefault();
       changePage(currentPage + 1);
-    }
+    },
+    href: hyperLink(currentPage + 1)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Next page")));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "pagination__wrapper"
@@ -1546,11 +1613,14 @@ const baseUrl = 'https://www.city.ac.uk/web-services',
  * @return {Promise} - A promise of search results.
  */
 
-function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, events) {
+function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters) {
   const fixedParams = {};
   fixedParameters.forEach(param => {
     fixedParams[`${param.name}`] = param.value;
   });
+  const params = {},
+        paramsKeys = Object.keys(parameters);
+  paramsKeys.forEach(key => params[key] = parameters[key]);
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
     fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value;
@@ -1571,12 +1641,12 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
     params: { ...fixedParams,
       ...fixedFacetParams,
       ...facetParams,
+      ...params,
       collection: collection,
       num_ranks: numRank,
       query: query,
       sort: sortType || '',
-      start_rank: startRank,
-      events: events || ''
+      start_rank: startRank
     }
   };
   return [Object(_util_js__WEBPACK_IMPORTED_MODULE_2__["axiosRequest"])(config), call];
@@ -3072,7 +3142,8 @@ function InlineSearch(props) {
     startRank: 1,
     facets: [],
     fixedFacets: [],
-    fixedParameters: []
+    fixedParameters: [],
+    parameters: []
   };
   /**
    * Dummy, empty Funnelback response object for initial state.
@@ -3128,7 +3199,7 @@ function InlineSearch(props) {
     call.cancel();
     suggestionsCall.cancel(); // make new, asynchronous requests to Funnelback
 
-    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets);
+    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters);
     const [suggestionsRequest, suggestionsRequestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["suggest"])(query.collection, query.query); // save the requestTokens
 
     setCall({
@@ -3440,7 +3511,7 @@ function Search(props) {
       query.interacted && props.element.querySelector('.search__results') && zenscroll__WEBPACK_IMPORTED_MODULE_7___default.a.center(props.element.querySelector('.search__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
       props.config.primary.collections.forEach((collection, i) => {
         fbResponses.primary[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(collection.collection, [], [], query.query, '', query.startRank, query.numRanks, []),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(collection.collection, [], [], query.query, '', query.startRank, query.numRanks, [], []),
               newResponses = fbResponses;
         newResponses.primary[i].call = {
           cancel: () => {
@@ -3466,7 +3537,7 @@ function Search(props) {
       });
       props.config.finders.forEach((finder, i) => {
         fbResponses.finders[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(finder.collection, [], [], query.query, '', 1, finder.numRanks, []),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(finder.collection, [], [], query.query, '', 1, finder.numRanks, [], []),
               newResponses = fbResponses;
         newResponses.finders[i].call = {
           cancel: () => {
@@ -3494,7 +3565,7 @@ function Search(props) {
       });
       props.config.nonpublic.forEach((nonpublic, i) => {
         fbResponses.nonpublic[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(nonpublic.collection, [], [], query.query, '', 1, 0, []),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(nonpublic.collection, [], [], query.query, '', 1, 0, [], []),
               newResponses = fbResponses;
         newResponses.nonpublic[i].call = {
           cancel: () => {
@@ -3624,7 +3695,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*!*********************!*\
   !*** ./src/util.js ***!
   \*********************/
-/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatTime, formatReactDate, arraySlicer, screenWidth */
+/*! exports provided: toBool, removeClass, reduceMotion, isVisible, verticallyInWindow, parametersToObject, objectToParameters, gaEvent, appendAll, numberFromString, isMobile, toArray, detectIE, checkIntersectionObserver, createHTMLElement, uppercaseFirstLetterLowercaseRest, axiosRequest, formatTime, formatReactDate, arraySlicer, screenWidth, flattenObj */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3650,6 +3721,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatReactDate", function() { return formatReactDate; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "arraySlicer", function() { return arraySlicer; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "screenWidth", function() { return screenWidth; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "flattenObj", function() { return flattenObj; });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -4023,6 +4095,49 @@ function screenWidth(size) {
     default:
       return 1280;
   }
+}
+/**
+ * Flatten object to one level that contains array of objects and 2 level objects
+ *
+ * @param {object} - a object to flatten
+ * @returns {object} - return a flatten object
+ */
+
+function flattenObj(ob) {
+  // The object which contains the
+  // final result
+  let result = {}; // loop through the object "ob"
+
+  for (const i in ob) {
+    // We check the type of the i using
+    // typeof() function and recursively
+    // call the function again
+    if (typeof ob[i] === 'object' && !Array.isArray(ob[i])) {
+      const temp = flattenObj(ob[i]);
+
+      for (const j in temp) {
+        if (i === 'parameters') {
+          result[`${i}-${j}`] = temp[j];
+        } else {
+          result[j] = temp[j];
+        } // Store temp in result
+
+      }
+    } else if (Array.isArray(ob[i])) {
+      ob[i].forEach(val => {
+        if (i === 'fixedFacets') {
+          result[`${i}-${val.meta}`] = val.value;
+        } else {
+          result[`${i}-${val.name}`] = val.value;
+        }
+      });
+    } // Else store ob[i] in result directly
+    else {
+      result[i] = ob[i];
+    }
+  }
+
+  return result;
 }
 
 /***/ }),
