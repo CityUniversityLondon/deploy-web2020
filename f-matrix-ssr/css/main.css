@@ -44758,7 +44758,16 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-bottom: 1rem;
 }
 
-.wrapper--destination-leavers-HE .wrapper--finder__filters--desktop .finder__filters label:not(.finder__filters__label--always) {
+@media (min-width: 769px) {
+    .wrapper--destination-leavers-HE .wrapper--finder__filters .finder__filters .finder__filter:not(.finder__tag) {
+        width: 100%;
+    }
+    .wrapper--destination-leavers-HE .finder__query__submit {
+        margin-left: initial;
+    }
+}
+
+.wrapper--destination-leavers-HE .wrapper--finder__filters .finder__filters label:not(.finder__filters__label--always) {
     border: initial;
     clip: initial;
     height: initial;
@@ -44769,16 +44778,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     color: #0c0c0e;
 }
 
-.wrapper--destination-leavers-HE .wrapper--finder__filters--desktop .finder__filters .finder__filters__reset--desktop {
+.wrapper--destination-leavers-HE .wrapper--finder__filters .finder__filters .finder__filters__reset--desktop {
     margin-top: 1rem;
 }
 
 .wrapper--destination-leavers-HE .wrapper--finder_filters--filters {
     display: block;
-}
-
-.wrapper--destination-leavers-HE .wrapper--finder__filters--desktop .finder__filters .finder__filter:not(.finder__tag) {
-    width: 100%;
 }
 
 .wrapper--destination-leavers-HE .wrapper--destination-leavers-HE__info-text {
@@ -44791,7 +44796,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-right: 1.5rem;
 }
 
-.wrapper--finder__filters--mobile[data-open='false'] .wrapper--finder__filters--mobile__filters__content--text {
+.wrapper--finder__filters[data-open='false'] .wrapper--finder__filters--mobile__filters__content--text {
     display: none;
 }
 

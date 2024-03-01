@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -7286,8 +7286,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const render = (formData, config, initialQuery, initialResults, cb) => {
-  const Finder = formData,
-        ServerRenderer = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Finder, {
+  const Form = formData,
+        ServerRenderer = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Form, {
     config: config,
     initialQuery: initialQuery,
     initialResults: initialResults
@@ -7344,7 +7344,7 @@ Wrapper.propTypes = {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!*********************************************!*\
   !*** multi ./src/matrix-server/test-ssr.js ***!
   \*********************************************/

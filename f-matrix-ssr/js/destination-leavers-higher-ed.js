@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const destinations = document.querySelectorAll('.wrapper--destination-leavers-HE');
     destinations && Array.from(destinations).forEach(destination => {
       Object(_patterns_finder_funnelback__WEBPACK_IMPORTED_MODULE_3__["finderConfig"])(destination.dataset.config).then(config => {
-        Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patterns_destination_leavers_higher_ed_destinationHE__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["hydrate"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_patterns_destination_leavers_higher_ed_destinationHE__WEBPACK_IMPORTED_MODULE_2__["default"], {
           config: config,
           element: destination
         }), destination);
@@ -197,130 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
-/***/ }),
-
-/***/ "./src/patterns/destination-leavers-higher-ed/components/filters/filters.js":
-/*!**********************************************************************************!*\
-  !*** ./src/patterns/destination-leavers-higher-ed/components/filters/filters.js ***!
-  \**********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _select_filter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./select__filter */ "./src/patterns/destination-leavers-higher-ed/components/filters/select__filter.js");
-/* harmony import */ var _finder_components_filters_finder_reset__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../finder/components/filters/finder__reset */ "./src/patterns/finder/components/filters/finder__reset.js");
-/* harmony import */ var _finder_components_filters_finder_sort__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../finder/components/filters/finder__sort */ "./src/patterns/finder/components/filters/finder__sort.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
-
-
-/**
- * @module patterns/finder/components/finder__filters
- * @author Web Development
- * @copyright City, University of London 2019
- */
-
-
-
-
-
-
-/**
- * Predicate for whether a facet should be displayed, if it's dependent on
- * another facet being set.
- *
- * @param {object} facet The facet to potentially display.
- * @param {object} facetMap The facets currently set on the query.
- * @return {bool} - Has any dependency been met
- */
-
-function dependencyMet(facet, facetMap) {
-  const setFacets = Object.keys(facetMap);
-
-  if (!facet.dependency) {
-    return true;
-  }
-
-  if (setFacets.indexOf(facet.dependency) >= 0 && facetMap[facet.dependency] !== '') {
-    return true;
-  }
-
-  return false;
-}
-/**
- * Component to update facet values in the query.
- *
- * @param {object} props React props.
- * @returns {object} - React component.
- */
-
-
-function Finder__Filters(props) {
-  const clearFiltersDesktop = Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "finder__filters__reset finder__filters__reset--desktop"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_filters_finder_reset__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    clear: props.clear,
-    resetSort: false
-  })) : null,
-        clearFiltersMobile = Object.keys(props.query.facets).length > 0 || props.query.sortType !== props.config.sort[0].type ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_filters_finder_reset__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    clear: props.clear,
-    resetSort: true
-  }) : null;
-  const sort = props.config.sort.length > 1 && props.config.displaySort ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrapper--finder__select--sort--mobile"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_filters_finder_sort__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    config: props.config,
-    query: props.query,
-    update: props.update
-  })) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "finder__filters"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "finder__filters__heading"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "finder__filters__heading__text"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "far fa-sharp fa-sliders-h icon",
-    "aria-hidden": "true"
-  }), ' ', 'Use the filter to show data that is of interest to you'), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrapper--finder_filters--filters"
-  }, props.config.facetLabels.map(facet => {
-    if (dependencyMet(facet, props.query.facets)) {
-      switch (facet.type) {
-        case 'select':
-          return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_select_filter__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            key: facet.meta,
-            facet: facet,
-            query: props.query,
-            responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
-            update: props.update,
-            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
-          });
-
-        default:
-          Object(_util__WEBPACK_IMPORTED_MODULE_5__["gaEvent"])('jsError', 'JavaScript error', 'finder__filters()', 'Unknown filter type in finder__filters.js', true);
-      }
-    } else {
-      return null;
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "finder__filters__nofilters"
-  }, "No filters are valid for the current query."), clearFiltersDesktop, sort)));
-}
-
-Finder__Filters.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  response: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
-};
-/* harmony default export */ __webpack_exports__["default"] = (Finder__Filters);
 
 /***/ }),
 
@@ -409,7 +285,7 @@ function Finder__FiltersMobile(props) {
     "aria-hidden": "true"
   }), ' ', filtersCount));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrapper--finder__filters--mobile",
+    className: "wrapper--finder__filters",
     "data-open": display,
     ref: mobilefilters => filters = mobilefilters
   }, toggle, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -421,7 +297,8 @@ function Finder__FiltersMobile(props) {
     query: props.query,
     response: props.response,
     update: props.update,
-    clear: props.clear
+    clear: props.clear,
+    matrixState: props.matrixState
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "wrapper--finder__filters--mobile__filters__content--text"
   }, "If you do not see the course you are interested in, please contact the", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -454,7 +331,8 @@ Finder__FiltersMobile.propTypes = {
   update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   updating: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
-  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  matrixState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__FiltersMobile);
 
@@ -542,6 +420,12 @@ function Finder__Filters(props) {
     query: props.query,
     update: props.update
   })) : null;
+  const submit = props.matrixState ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "finder__filters__submit finder__filters__reset--desktop"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "submit",
+    className: "finder__query__submit"
+  })) : null;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -554,7 +438,7 @@ function Finder__Filters(props) {
   }), ' ', `Filter ${props.config.summariseAs.plural}`), clearFiltersMobile), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("fieldset", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "wrapper--finder_filters--filters"
   }, props.config.facetLabels.map(facet => {
-    if (dependencyMet(facet, props.query.facets)) {
+    if (dependencyMet(facet, props.query.facets) || props.matrixState) {
       switch (facet.type) {
         case 'select':
           return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_select_filter__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -563,7 +447,8 @@ function Finder__Filters(props) {
             query: props.query,
             responseFacet: props.response && props.response.facets ? props.response.facets.filter(funnelbackFacet => funnelbackFacet.name === facet.funnelbackName) : [],
             update: props.update,
-            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta)
+            dependencies: props.config.facetLabels.filter(candidate => candidate.dependency === facet.meta),
+            matrixState: props.matrixState
           });
 
         case 'checkbox':
@@ -594,7 +479,7 @@ function Finder__Filters(props) {
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__filters__nofilters"
-  }, "No filters are valid for the current query."), clearFiltersDesktop, sort)));
+  }, "No filters are valid for the current query."), clearFiltersDesktop, sort, submit)));
 }
 
 Finder__Filters.propTypes = {
@@ -602,7 +487,8 @@ Finder__Filters.propTypes = {
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   response: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
+  matrixState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Filters);
 
@@ -669,13 +555,13 @@ function Finder__Select(props) {
     props.update.results(!props.update.updateState);
   };
 
-  if (props.facet.values.length > hiddenFacets) {
+  if (props.facet.values.length > hiddenFacets || props.matrixState) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: `finder__filter finder__select ${currentValue && 'finder__select--selected'}`
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
     }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-      name: props.facet.name,
+      name: `meta_${props.facet.meta}_sand`,
       id: `meta_${props.facet.meta}_sand--${randomNumber}`,
       onChange: e => setFacet(e.target.value),
       value: currentValue
@@ -705,7 +591,8 @@ Finder__Select.propTypes = {
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object),
   update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object)
+  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object),
+  matrixState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Select);
 
@@ -1341,13 +1228,11 @@ function Finder__Results(props) {
 }
 
 Finder__Results.propTypes = {
-  clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   response: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   type: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
-  update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+  config: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  matrixState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Results);
 
@@ -1416,12 +1301,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _finder_funnelback__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../finder/funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _components_filters_filters__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/filters/filters */ "./src/patterns/destination-leavers-higher-ed/components/filters/filters.js");
-/* harmony import */ var _components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/filters/filtersmobile */ "./src/patterns/destination-leavers-higher-ed/components/filters/filtersmobile.js");
-/* harmony import */ var _components_results_results__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/results/results */ "./src/patterns/destination-leavers-higher-ed/components/results/results.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/filters/filtersmobile */ "./src/patterns/destination-leavers-higher-ed/components/filters/filtersmobile.js");
+/* harmony import */ var _components_results_results__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/results/results */ "./src/patterns/destination-leavers-higher-ed/components/results/results.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _finder_logic_replace_history__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../finder/logic/replace-history */ "./src/patterns/finder/logic/replace-history.js");
+/* harmony import */ var _finder_logic_url_params__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../finder/logic/url-params */ "./src/patterns/finder/logic/url-params.js");
+/* harmony import */ var _finder_logic_has_mounted__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../finder/logic/has-mounted */ "./src/patterns/finder/logic/has-mounted.js");
 
 
 /**
@@ -1441,55 +1328,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
 const oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_7__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_6__["reduceMotion"])() ? 0 : oneSecond,
       screenOffsetRatio = 10;
-/**
- * Retrieve current values for facets from the URL parameters.
- *
- * @param {object[]} facets Array of facet definitions.
- * @param {object} params URLSearchParams object for the current page.
- * @return {object} - Map of facet meta labels to their current value from the URL.
- */
-
-function getFacetParams(facets, params) {
-  return facets.map(facet => {
-    const param = {};
-
-    if (params.get(`meta_${facet.meta}_sand`)) {
-      param[facet.meta] = params.get(`meta_${facet.meta}_sand`);
-    }
-
-    return param;
-  }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
-}
-/**
- * Preserve the search state in the URL parameters.
- *
- * @param {string} currQuery The search query.
- * @param {integer} currStartRank The start rank.
- * @param {object[]} currFacets A map of facet meta labels to their values.
- * @param {*} facetLabels Array of facet definitions.
- */
-
-
-function replaceHistory(currQuery, currStartRank, currFacets, currSort, facetLabels, defaultSort) {
-  if (window) {
-    const params = new URLSearchParams(window.location.search);
-    currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
-    currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
-    currSort !== defaultSort && currSort !== '' ? params.set('sort', currSort) : params.delete('sort');
-    facetLabels.forEach(facet => {
-      if (currFacets[facet.meta]) {
-        params.set(`meta_${facet.meta}_sand`, currFacets[facet.meta]);
-      } else {
-        params.delete(`meta_${facet.meta}_sand`);
-      }
-    });
-    const hasParams = params.toString().length ? '?' : '';
-    window.history.replaceState({}, '', `${window.location.pathname}${hasParams}${params.toString()}`);
-  }
-}
 /**
  * Launch the universal Finder.
  *
@@ -1497,9 +1340,16 @@ function replaceHistory(currQuery, currStartRank, currFacets, currSort, facetLab
  * @return {object} The React component to render.
  */
 
-
 function DestinationLeaversHE(props) {
-  const params = new URLSearchParams(window.location.search);
+  /**
+   * Check if react has mounted
+   */
+  const hasMounted = Object(_finder_logic_has_mounted__WEBPACK_IMPORTED_MODULE_9__["default"])(); // check if we in Matrix
+
+  const matrixState = !hasMounted && props.initialQuery;
+  const params = matrixState ? props.initialQuery : new URLSearchParams(window.location.search),
+        initialResults = props.initialResults || {};
+  const nonFBParams = props.config.facetLabels.filter(paramFacet => paramFacet.nonFBParam);
   /**
    * initial state for the Funnelback query, taken from URL parameters and
    * configuration
@@ -1507,22 +1357,24 @@ function DestinationLeaversHE(props) {
 
   const initialQuery = {
     collection: props.config.collection,
-    facets: props.config.facetLabels.length > 0 ? getFacetParams(props.config.facetLabels, params) : {},
+    facets: props.config.facetLabels.length > 0 && params ? Object(_finder_logic_url_params__WEBPACK_IMPORTED_MODULE_8__["getFacetParams"])(props.config.facetLabels, params, matrixState) : {},
+    parameters: nonFBParams.length > 0 && params ? Object(_finder_logic_url_params__WEBPACK_IMPORTED_MODULE_8__["getNonFBParams"])(props.config.facetLabels, params, matrixState) : {},
     fixedFacets: props.config.fixedFacets,
     fixedParameters: props.config.fixParameters ? props.config.fixParameters : [],
     interacted: false,
     misspelling: null,
-    numRanks: params.get('num_ranks') || props.config.numRanks,
-    query: params.get('query') || '',
-    sortType: params.get('query') ? '' : params.get('sort') || props.config.sort[0].type,
-    startRank: params.get('start_rank') || 1
+    numRanks: hasMounted && params.get('num_ranks') ? params.get('num_ranks') : props.config.numRanks,
+    query: !matrixState && params.get('query') ? params.get('query') : params && params.query ? params.query : '',
+    sortType: !matrixState && params.get('query') ? '' : !matrixState && params.get('sort') ? params.get('sort') : params && params.sort ? params.sort : props.config.sort[0].type,
+    startRank: !matrixState && params.get('start_rank') ? params.get('start_rank') : params && params.start_rank ? params.start_rank : 1
   };
   /**
    * Dummy, empty Funnelback response object for initial state.
    */
 
-  const initialResponse = Object.freeze({
+  const initialResponse = Object.keys(initialResults).length > 0 ? Object.freeze(initialResults) : Object.freeze({
     bestBets: [],
+    extraSearches: {},
     facets: [],
     results: [],
     spell: null,
@@ -1551,10 +1403,10 @@ function DestinationLeaversHE(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     // preserve the state
-    replaceHistory(query.query, query.startRank, query.facets, query.sortType, props.config.facetLabels, props.config.sort[0].type); // indicate a request is in progress
+    Object(_finder_logic_replace_history__WEBPACK_IMPORTED_MODULE_7__["default"])(query.query, query.startRank, query.facets, query.parameters, query.sortType, props.config.facetLabels, props.config.sort[0].type, hasMounted); // indicate a request is in progress
 
     setUpdating(true);
-    query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_6___default.a.center(props.element.querySelector('.finder__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
+    query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.center(props.element.querySelector('.finder__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
     /**
      * cancel any request already in progress
      *
@@ -1563,7 +1415,7 @@ function DestinationLeaversHE(props) {
 
     call.cancel(); // make a new, asynchronous request to Funnelback
 
-    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets); // save the requestToken
+    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters); // save the requestToken
 
     setCall({
       cancel: () => {
@@ -1617,27 +1469,20 @@ function DestinationLeaversHE(props) {
     onSubmit: e => {
       e.preventDefault();
     }
-  }, props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_3__["default"], {
     config: props.config,
     query: query,
     response: funnelbackResponse,
     update: updater,
     updating: updating,
     summariseAs: props.config.summariseAs,
-    clear: clear
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "wrapper--finder__filters--desktop"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_filters_filters__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    config: props.config,
-    query: query,
-    response: funnelbackResponse,
-    update: updater,
-    clear: clear
-  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    clear: clear,
+    matrixState: matrixState
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "wrapper--destination-leavers-HE__info-text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "If you do not see the course you are interested in, please contact the", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "/prospective-students/career-development/careers-team"
-  }, "careers department"), ' ', "at City for full details")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_results_results__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, "careers department"), ' ', "at City for full details")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_results_results__WEBPACK_IMPORTED_MODULE_4__["default"], {
     clear: clear,
     config: props.config,
     query: query,
@@ -1645,13 +1490,16 @@ function DestinationLeaversHE(props) {
     summariseAs: props.config.summariseAs,
     type: props.config.resultCard,
     update: updater,
-    updating: updating
+    updating: updating,
+    matrixState: matrixState
   }));
 }
 
 DestinationLeaversHE.propTypes = {
   config: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  element: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
+  element: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  initialQuery: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
+  initialResults: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (DestinationLeaversHE);
 
@@ -2046,6 +1894,167 @@ function finderConfig(url) {
     url: url
   };
   return Object(_util_js__WEBPACK_IMPORTED_MODULE_2__["axiosRequest"])(config);
+}
+
+/***/ }),
+
+/***/ "./src/patterns/finder/logic/has-mounted.js":
+/*!**************************************************!*\
+  !*** ./src/patterns/finder/logic/has-mounted.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/**
+ * custom hook to check if react has mounted
+ *
+ *
+ * @module patterns/finder/finder
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+function useHasMounted() {
+  const [hasMounted, setHasMounted] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    setHasMounted(true);
+  }, []);
+  return hasMounted;
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (useHasMounted);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/logic/replace-history.js":
+/*!******************************************************!*\
+  !*** ./src/patterns/finder/logic/replace-history.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return replaceHistory; });
+
+
+/**
+ * Preserve the search state in the URL parameters.
+ *
+ * @param {string} currQuery The search query.
+ * @param {integer} currStartRank The start rank.
+ * @param {object[]} currFacets A map of facet meta labels to their values.
+ * @param {*} facetLabels Array of facet definitions.
+ */
+function replaceHistory(currQuery, currStartRank, currFacets, currParameters, currSort, facetLabels, defaultSort, hasMounted) {
+  if (hasMounted) {
+    const params = new URLSearchParams(window.location.search);
+    currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
+    currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
+    currSort !== defaultSort && currSort !== '' ? params.set('sort', currSort) : params.delete('sort');
+    facetLabels.forEach(facet => {
+      if (currFacets[facet.meta]) {
+        params.set(`meta_${facet.meta}_sand`, currFacets[facet.meta]);
+      } else {
+        params.delete(`meta_${facet.meta}_sand`);
+      }
+    });
+    facetLabels.forEach(facet => {
+      if (currParameters[facet.meta]) {
+        params.set(facet.meta, currParameters[facet.meta]);
+      } else {
+        params.delete(facet.meta);
+      }
+    });
+    const hasParams = params.toString().length ? '?' : '';
+    window.history.replaceState({}, '', `${window.location.pathname}${hasParams}${params.toString()}`);
+  }
+}
+
+/***/ }),
+
+/***/ "./src/patterns/finder/logic/url-params.js":
+/*!*************************************************!*\
+  !*** ./src/patterns/finder/logic/url-params.js ***!
+  \*************************************************/
+/*! exports provided: getNonFBParams, getFacetParams */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNonFBParams", function() { return getNonFBParams; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFacetParams", function() { return getFacetParams; });
+
+
+/**
+ * Retrieve non FB parameters from the URL parameters
+ *
+ * @param {object[]} facets Array of facet definitions.
+ * @param {object} params URLSearchParams object for the current page.
+ * @return {object} - Map of facet meta labels to their current value from the URL.
+ */
+function getNonFBParams(facets, params, matrixState) {
+  if (matrixState) {
+    return facets.map(facet => {
+      const keys = Object.keys(params);
+      const param = {};
+
+      if (keys.indexOf(facet.meta) !== -1) {
+        param[facet.meta] = params[facet.meta];
+      }
+
+      return param;
+    }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
+  } else {
+    return facets.filter(facet => facet.nonFBParam).map(facet => {
+      const param = {};
+
+      if (params.get(facet.meta)) {
+        param[facet.meta] = params.get(facet.meta);
+      }
+
+      return param;
+    }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
+  }
+}
+/**
+ * Retrieve current values for facets from the URL parameters.
+ *
+ * @param {object[]} facets Array of facet definitions.
+ * @param {object} params URLSearchParams object for the current page.
+ * @return {object} - Map of facet meta labels to their current value from the URL.
+ */
+
+function getFacetParams(facets, params, matrixState) {
+  if (matrixState) {
+    return facets.map(facet => {
+      const keys = Object.keys(params);
+      const param = {};
+
+      if (keys.indexOf(`meta_${facet.meta}_sand`) !== -1) {
+        param[facet.meta] = params[`meta_${facet.meta}_sand`];
+      }
+
+      return param;
+    }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
+  } else {
+    return facets.map(facet => {
+      const param = {};
+
+      if (params.get(`meta_${facet.meta}_sand`)) {
+        param[facet.meta] = params.get(`meta_${facet.meta}_sand`);
+      }
+
+      return param;
+    }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
+  }
 }
 
 /***/ }),
