@@ -43372,6 +43372,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-top: 1.5rem;
 }
 
+.no-js .wrapper--finder__select--sort--desktop {
+    display: block;
+}
+
 .standard-content__entry-requirement .dropdown-filter {
     background-color: #f2f2f2;
 }

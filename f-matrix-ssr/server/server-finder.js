@@ -20434,17 +20434,17 @@ function dependencyMet(facet, facetMap) {
 
 function Finder__Filters(props) {
   const totalMatching = props.response && props.response.summary && props.response.summary.fullyMatching;
-  const clearFiltersDesktop = Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  const clearFiltersDesktop = !props.matrixState && Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__reset finder__filters__reset--desktop"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_7__["default"], {
     clear: props.clear,
     resetSort: false
   })) : null,
-        clearFiltersMobile = Object.keys(props.query.facets).length > 0 || props.query.sortType !== props.config.sort[0].type ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        clearFiltersMobile = !props.matrixState && Object.keys(props.query.facets).length > 0 || props.query.sortType !== props.config.sort[0].type ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_7__["default"], {
     clear: props.clear,
     resetSort: true
   }) : null;
-  const sort = props.config.sort.length > 1 && props.config.displaySort && totalMatching ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  const sort = !props.matrixState && props.config.sort.length > 1 && props.config.displaySort && totalMatching ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "wrapper--finder__select--sort--mobile"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_sort__WEBPACK_IMPORTED_MODULE_8__["default"], {
     key: props.mobile ? 'sort-mobile' : 'sort-desktop',
@@ -20642,7 +20642,8 @@ function Finder__FiltersMobile(props) {
     update: props.update,
     clear: props.clear,
     mobile: props.mobile,
-    hasMounted: props.hasMounted
+    hasMounted: props.hasMounted,
+    matrixState: props.matrixState
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "wrapper--finder__filters--mobile__apply"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -20673,7 +20674,8 @@ Finder__FiltersMobile.propTypes = {
   updating: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
   summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   mobile: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
-  hasMounted: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+  hasMounted: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  matrixState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__FiltersMobile);
 
@@ -22338,7 +22340,7 @@ function useLogicWrapper(config, results, matrixQuery, element) {
     misspelling: null,
     numRanks: hasMounted && params.get('num_ranks') ? params.get('num_ranks') : config.numRanks,
     query: !matrixState && params.get('query') ? params.get('query') : params && params.query ? params.query : '',
-    sortType: !matrixState && params.get('query') ? '' : !matrixState && params.get('sort') ? params.get('sort') : params && params.sort ? params.sort : config.sort[0].type,
+    sortType: !matrixState && params.get('query') ? '' : !matrixState && params.get('sort') ? params.get('sort') : config.sort[0].type,
     startRank: !matrixState && params.get('start_rank') ? params.get('start_rank') : params && params.start_rank ? params.start_rank : 1
   };
   /**
