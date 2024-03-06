@@ -1650,6 +1650,15 @@ function Finder__Filters(props) {
     query: props.query,
     update: props.update
   })) : null;
+  const submitSSR = props.matrixState && props.config.noQuery && props.config.noQuery === true ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "submit",
+    className: "finder__query__submit"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "fal fa-sharp fa-search finder__query__submit__icon",
+    "aria-hidden": "true"
+  }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "finder__query__submit__text"
+  }, "Find")) : null;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -1723,7 +1732,7 @@ function Finder__Filters(props) {
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "finder__filters__nofilters"
-  }, "No filters are valid for the current query."), clearFiltersDesktop, sort)));
+  }, "No filters are valid for the current query."), clearFiltersDesktop, sort, submitSSR)));
 }
 
 Finder__Filters.propTypes = {
