@@ -1613,22 +1613,35 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Finder__Reset(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "finder__reset",
-    type: "button",
-    onClick: () => {
-      props.clear(props.resetSort);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fa-sharp fa-solid fa-xmark icon"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "finder__reset__text"
-  }, "Reset"));
+  if (props.matrixState) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "?",
+      className: "finder__reset",
+      type: "button"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "fa-sharp fa-solid fa-xmark icon"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "finder__reset__text"
+    }, "Reset"));
+  } else {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "finder__reset",
+      type: "button",
+      onClick: () => {
+        props.clear(props.resetSort);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "fa-sharp fa-solid fa-xmark icon"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "finder__reset__text"
+    }, "Reset"));
+  }
 }
 
 Finder__Reset.propTypes = {
   clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  resetSort: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+  resetSort: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  matrixState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Reset);
 

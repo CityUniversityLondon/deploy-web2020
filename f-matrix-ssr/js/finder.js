@@ -1632,15 +1632,17 @@ function dependencyMet(facet, facetMap) {
 
 function Finder__Filters(props) {
   const totalMatching = props.response && props.response.summary && props.response.summary.fullyMatching;
-  const clearFiltersDesktop = !props.matrixState && Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  const clearFiltersDesktop = !props.updating && Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__reset finder__filters__reset--desktop"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_7__["default"], {
     clear: props.clear,
-    resetSort: false
+    resetSort: false,
+    matrixState: props.matrixState
   })) : null,
-        clearFiltersMobile = !props.matrixState && Object.keys(props.query.facets).length > 0 || props.query.sortType !== props.config.sort[0].type ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        clearFiltersMobile = !props.updating && Object.keys(props.query.facets).length > 0 || props.query.sortType !== props.config.sort[0].type ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_reset__WEBPACK_IMPORTED_MODULE_7__["default"], {
     clear: props.clear,
-    resetSort: true
+    resetSort: true,
+    matrixState: props.matrixState
   }) : null;
   const sort = !props.matrixState && props.config.sort.length > 1 && props.config.displaySort && totalMatching ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "wrapper--finder__select--sort--mobile"
@@ -1743,7 +1745,8 @@ Finder__Filters.propTypes = {
   clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
   mobile: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
   hasMounted: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
-  matrixState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+  matrixState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Filters);
 
@@ -1850,7 +1853,8 @@ function Finder__FiltersMobile(props) {
     clear: props.clear,
     mobile: props.mobile,
     hasMounted: props.hasMounted,
-    matrixState: props.matrixState
+    matrixState: props.matrixState,
+    updating: props.updating
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "wrapper--finder__filters--mobile__apply"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -2038,22 +2042,35 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Finder__Reset(props) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "finder__reset",
-    type: "button",
-    onClick: () => {
-      props.clear(props.resetSort);
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fa-sharp fa-solid fa-xmark icon"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "finder__reset__text"
-  }, "Reset"));
+  if (props.matrixState) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "?",
+      className: "finder__reset",
+      type: "button"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "fa-sharp fa-solid fa-xmark icon"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "finder__reset__text"
+    }, "Reset"));
+  } else {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "finder__reset",
+      type: "button",
+      onClick: () => {
+        props.clear(props.resetSort);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "fa-sharp fa-solid fa-xmark icon"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "finder__reset__text"
+    }, "Reset"));
+  }
 }
 
 Finder__Reset.propTypes = {
   clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  resetSort: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+  resetSort: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  matrixState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Reset);
 
