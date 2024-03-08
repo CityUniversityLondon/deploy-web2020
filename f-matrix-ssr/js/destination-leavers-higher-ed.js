@@ -298,7 +298,8 @@ function Finder__FiltersMobile(props) {
     response: props.response,
     update: props.update,
     clear: props.clear,
-    matrixState: props.matrixState
+    matrixState: props.matrixState,
+    updating: props.updating
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "wrapper--finder__filters--mobile__filters__content--text"
   }, "If you do not see the course you are interested in, please contact the", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -403,15 +404,17 @@ function dependencyMet(facet, facetMap) {
 
 
 function Finder__Filters(props) {
-  const clearFiltersDesktop = Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  const clearFiltersDesktop = !props.updating && Object.keys(props.query.facets).length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "finder__filters__reset finder__filters__reset--desktop"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_filters_finder_reset__WEBPACK_IMPORTED_MODULE_5__["default"], {
     clear: props.clear,
-    resetSort: false
+    resetSort: false,
+    matrixState: props.matrixState
   })) : null,
-        clearFiltersMobile = Object.keys(props.query.facets).length > 0 || props.query.sortType !== props.config.sort[0].type ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_filters_finder_reset__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        clearFiltersMobile = !props.updating && Object.keys(props.query.facets).length > 0 || props.query.sortType !== props.config.sort[0].type ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_finder_components_filters_finder_reset__WEBPACK_IMPORTED_MODULE_5__["default"], {
     clear: props.clear,
-    resetSort: true
+    resetSort: true,
+    matrixState: props.matrixState
   }) : null;
   const sort = props.config.sort.length > 1 && props.config.displaySort ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "wrapper--finder__select--sort--mobile"
@@ -488,7 +491,8 @@ Finder__Filters.propTypes = {
   response: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   clear: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func,
-  matrixState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+  matrixState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Filters);
 
@@ -1389,7 +1393,7 @@ function DestinationLeaversHE(props) {
   const [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(initialQuery);
   const [funnelbackResponse, setResponse] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(initialResponse); // Boolean to indicate when a query is in progress
 
-  const [updating, setUpdating] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true); // Request token from the Funnelback request object, so we can cancel if
+  const [updating, setUpdating] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(Object.keys(initialResults).length > 0 ? false : true); // Request token from the Funnelback request object, so we can cancel if
   // another request is triggered by the user
 
   const [call, setCall] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
