@@ -1809,6 +1809,10 @@ readers do not read off random characters that represent icons */
     content: "\f5da";
 }
 
+.fa-book-reader::before {
+    content: "\f5da";
+}
+
 .fa-book-user::before {
     content: "\f7e7";
 }
@@ -2762,6 +2766,10 @@ readers do not read off random characters that represent icons */
 }
 
 .fad.fa-book-open-reader::after, .fa-duotone.fa-book-open-reader::after {
+    content: "\f5da\f5da";
+}
+
+.fad.fa-book-reader::after, .fa-duotone.fa-book-reader::after {
     content: "\f5da\f5da";
 }
 
