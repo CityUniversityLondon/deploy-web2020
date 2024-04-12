@@ -2145,6 +2145,10 @@ readers do not read off random characters that represent icons */
     content: "\f0e0";
 }
 
+.fa-envelope-open-text::before {
+    content: "\f658";
+}
+
 .fa-envelopes-bulk::before {
     content: "\f674";
 }
@@ -2311,6 +2315,14 @@ readers do not read off random characters that represent icons */
 
 .fa-phone-alt::before {
     content: "\f879";
+}
+
+.fa-phone-volume::before {
+    content: "\f2a0";
+}
+
+.fa-volume-control-phone::before {
+    content: "\f2a0";
 }
 
 .fa-plus::before {
@@ -3105,6 +3117,10 @@ readers do not read off random characters that represent icons */
     content: "\f0e0\f0e0";
 }
 
+.fad.fa-envelope-open-text::after, .fa-duotone.fa-envelope-open-text::after {
+    content: "\f658\f658";
+}
+
 .fad.fa-envelopes-bulk::after, .fa-duotone.fa-envelopes-bulk::after {
     content: "\f674\f674";
 }
@@ -3271,6 +3287,14 @@ readers do not read off random characters that represent icons */
 
 .fad.fa-phone-alt::after, .fa-duotone.fa-phone-alt::after {
     content: "\f879\f879";
+}
+
+.fad.fa-phone-volume::after, .fa-duotone.fa-phone-volume::after {
+    content: "\f2a0\f2a0";
+}
+
+.fad.fa-volume-control-phone::after, .fa-duotone.fa-volume-control-phone::after {
+    content: "\f2a0\f2a0";
 }
 
 .fad.fa-plus::after, .fa-duotone.fa-plus::after {
