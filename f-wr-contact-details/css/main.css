@@ -6642,6 +6642,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 .related-content .card.card--contact .card__details .card__details__text {
     padding-bottom: 1rem;
+    padding-top: inherit;
 }
 
 .card--course .wrapper--card__label__details {
@@ -17295,7 +17296,7 @@ figure figcaption a:active,
 }
 
 .course-footer h2 {
-    border-bottom: 0.0625rem solid #cbcbcb;
+    border-bottom: 0.25rem solid #d61726;
     padding-bottom: 1rem;
     margin-top: 2rem;
 }
@@ -49186,7 +49187,7 @@ main > .error {
 
 .wrapper--event__contact .event__contact__heading {
     border-bottom-style: solid;
-    border-bottom-width: 0.0625rem;
+    border-bottom-width: 0.25rem;
     padding-bottom: 0.5rem;
     text-align: left;
 }
@@ -49216,7 +49217,7 @@ main > .error {
 }
 
 .wrapper--event__contact .event__contact__heading {
-    border-bottom-color: #9e111c;
+    border-bottom-color: #d61726;
 }
 
 .wrapper--event__contact .event__contact .related-content .card__details .card__tag a {
@@ -50027,7 +50028,7 @@ main header .event__formassembly__form {
 
 .landing .wrapper--landing__contact .landing__contact__heading {
     border-bottom-style: solid;
-    border-bottom-width: 0.0625rem;
+    border-bottom-width: 0.25rem;
     padding-bottom: 0.5rem;
     text-align: left;
 }
@@ -50626,7 +50627,7 @@ main header .event__formassembly__form {
 }
 
 .landing--functional .wrapper--landing__contact .landing__contact__heading {
-    border-bottom-color: #7c2062;
+    border-bottom-color: #d61726;
 }
 
 .landing--functional .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a {

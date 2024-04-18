@@ -6616,6 +6616,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 .related-content .card.card--contact .card__details .card__details__text {
     padding-bottom: 1rem;
+    padding-top: inherit;
 }
 
 .card--course .wrapper--card__label__details {
