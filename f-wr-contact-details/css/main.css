@@ -6643,6 +6643,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .related-content .card.card--contact .card__details .card__details__text {
     padding-bottom: 1rem;
     padding-top: inherit;
+    padding-left: 0;
+}
+
+.card--contact__content .fa-sharp {
+    font-size: 1rem;
 }
 
 .card--course .wrapper--card__label__details {
