@@ -6620,7 +6620,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     padding-left: 0;
 }
 
-.related-content .card.card--contact .card__tag {
+.related-content .card.card--contact .card__tag + .card__tag {
     margin-top: 0.5rem;
 }
 
