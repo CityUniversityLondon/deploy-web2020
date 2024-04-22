@@ -6646,8 +6646,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     padding-left: 0;
 }
 
+.related-content .card.card--contact .card__tag {
+    margin-top: 0.5rem;
+}
+
 .card--contact__content .fa-sharp {
-    font-size: 1rem;
+    font-size: 1.266rem;
 }
 
 .card--course .wrapper--card__label__details {
