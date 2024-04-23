@@ -6532,28 +6532,28 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     color: #d61726;
 }
 
+.card--contact {
+    /*
+    .wrapper--card--contact__content {
+        display: flex;
+        flex-wrap: nowrap;
+
+        @include media('<small') {
+            flex-direction: column;
+        }
+
+        @include media('>=small') {
+            flex-direction: row;
+
+            .card--contact__content {
+                margin-right: $measure--small2;
+            }
+        }
+    }*/
+}
+
 .card--contact .card__details .card__tag .icon {
     color: #d61726;
-}
-
-.card--contact .wrapper--card--contact__content {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-@media (max-width: 1023px) {
-    .card--contact .wrapper--card--contact__content {
-        flex-direction: column;
-    }
-}
-
-@media (min-width: 1024px) {
-    .card--contact .wrapper--card--contact__content {
-        flex-direction: row;
-    }
-    .card--contact .wrapper--card--contact__content .card--contact__content {
-        margin-right: 1.5rem;
-    }
 }
 
 .card--contact .wrapper--card--contact__address {
@@ -6620,11 +6620,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 .card--contact .wrapper--card--contact__address address .card--contact__addressline {
     display: block;
-}
-
-.card--contact .wrapper--card--contact__address .icon {
-    line-height: 1.625;
-    padding-top: 0.25rem;
 }
 
 .related-content .card.card--contact {
@@ -7355,28 +7350,28 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     color: #d61726;
 }
 
+.card--research {
+    /*
+    .wrapper--card--contact__content {
+        display: flex;
+        flex-wrap: nowrap;
+
+        @include media('<small') {
+            flex-direction: column;
+        }
+
+        @include media('>=small') {
+            flex-direction: row;
+
+            .card--contact__content {
+                margin-right: $measure--small2;
+            }
+        }
+    }*/
+}
+
 .card--research .card__details .card__tag .icon {
     color: #d61726;
-}
-
-.card--research .wrapper--card--contact__content {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-@media (max-width: 1023px) {
-    .card--research .wrapper--card--contact__content {
-        flex-direction: column;
-    }
-}
-
-@media (min-width: 1024px) {
-    .card--research .wrapper--card--contact__content {
-        flex-direction: row;
-    }
-    .card--research .wrapper--card--contact__content .card--contact__content {
-        margin-right: 1.5rem;
-    }
 }
 
 .card--research .wrapper--card--contact__address {
@@ -7443,11 +7438,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 .card--research .wrapper--card--contact__address address .card--contact__addressline {
     display: block;
-}
-
-.card--research .wrapper--card--contact__address .icon {
-    line-height: 1.625;
-    padding-top: 0.25rem;
 }
 
 .related-content .card.card--research {
@@ -17476,12 +17466,6 @@ figure figcaption a:active,
 @media (min-width: 769px) {
     .course-footer .related-content:not(.slider) {
         flex-wrap: nowrap;
-    }
-}
-
-@media (min-width: 769px) {
-    .course-footer .card--contact .wrapper--card--contact__content {
-        flex-direction: column;
     }
 }
 
