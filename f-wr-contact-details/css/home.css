@@ -6506,26 +6506,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     color: #d61726;
 }
 
-.card--contact {
-    /*
-    .wrapper--card--contact__content {
-        display: flex;
-        flex-wrap: nowrap;
-
-        @include media('<small') {
-            flex-direction: column;
-        }
-
-        @include media('>=small') {
-            flex-direction: row;
-
-            .card--contact__content {
-                margin-right: $measure--small2;
-            }
-        }
-    }*/
-}
-
 .card--contact .card__details .card__tag .icon {
     color: #d61726;
 }
@@ -7330,26 +7310,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .finder__results__list .card--research .card__details .card__type,
 .search__results .card--research .card__details .card__type {
     color: #d61726;
-}
-
-.card--research {
-    /*
-    .wrapper--card--contact__content {
-        display: flex;
-        flex-wrap: nowrap;
-
-        @include media('<small') {
-            flex-direction: column;
-        }
-
-        @include media('>=small') {
-            flex-direction: row;
-
-            .card--contact__content {
-                margin-right: $measure--small2;
-            }
-        }
-    }*/
 }
 
 .card--research .card__details .card__tag .icon {

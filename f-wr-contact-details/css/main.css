@@ -6532,26 +6532,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     color: #d61726;
 }
 
-.card--contact {
-    /*
-    .wrapper--card--contact__content {
-        display: flex;
-        flex-wrap: nowrap;
-
-        @include media('<small') {
-            flex-direction: column;
-        }
-
-        @include media('>=small') {
-            flex-direction: row;
-
-            .card--contact__content {
-                margin-right: $measure--small2;
-            }
-        }
-    }*/
-}
-
 .card--contact .card__details .card__tag .icon {
     color: #d61726;
 }
@@ -7348,26 +7328,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .finder__results__list .card--research .card__details .card__type,
 .search__results .card--research .card__details .card__type {
     color: #d61726;
-}
-
-.card--research {
-    /*
-    .wrapper--card--contact__content {
-        display: flex;
-        flex-wrap: nowrap;
-
-        @include media('<small') {
-            flex-direction: column;
-        }
-
-        @include media('>=small') {
-            flex-direction: row;
-
-            .card--contact__content {
-                margin-right: $measure--small2;
-            }
-        }
-    }*/
 }
 
 .card--research .card__details .card__tag .icon {
@@ -49213,16 +49173,6 @@ main > .error {
     border-bottom-color: #d61726;
 }
 
-.wrapper--event__contact .event__contact .related-content .card__details .card__tag a {
-    /*
-                        @include anchor-inline(
-                            $color-gray4,
-                            $color-gray4,
-                            $color-gray11,
-                            $color-outline--dark
-                        );*/
-}
-
 .wrapper--event__contact .event__contact .related-content li + li {
     border-top-color: #9e111c;
 }
@@ -50621,15 +50571,6 @@ main header .event__formassembly__form {
 
 .landing--functional .wrapper--landing__contact .landing__contact__heading {
     border-bottom-color: #d61726;
-}
-
-.landing--functional .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a {
-    /*@include anchor-inline(
-                                $color-gray4,
-                                $color-gray4,
-                                $color-gray11,
-                                $color-outline--dark
-                            );*/
 }
 
 .landing--functional .wrapper--landing__contact .landing__contact .related-content .card--contact .card__details .card__heading {
