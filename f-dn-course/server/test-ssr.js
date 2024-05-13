@@ -7246,6 +7246,7 @@ __webpack_require__.r(__webpack_exports__);
       /* eslint-disable*/
 
       Object(_renderer__WEBPACK_IMPORTED_MODULE_0__["render"])(formData, config, params, initialResults, (err, html) => {
+        //config coming from squiz global-config.js
         print(err ? 'err: ' + err : html);
       });
       /* eslint-enable*/

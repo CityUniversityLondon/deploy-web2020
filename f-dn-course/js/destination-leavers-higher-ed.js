@@ -1736,6 +1736,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
 
 
 /**
@@ -1746,7 +1747,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function Finder__Tag(props) {
+  // reduce the facet configuration to an array of all possible values for
+  // the facet
+  const allFacets = props.facet.values.reduce((acc, data) => {
+    return [...acc, data];
+  }, []); // reduce the Funnelback response for the facet to an array of valid
+  // values for the current query
+
+  const responseFacets = props.responseFacet[0] && props.responseFacet[0].allValues ? props.responseFacet[0].allValues.reduce((acc, data) => {
+    return [...acc, data.data];
+  }, []) : []; // count how many possible facets are not valid for the current query
+  // and will be hidden
+
+  const hiddenFacets = allFacets.map(facet => facet.data).filter(facet => responseFacets.indexOf(facet.toLowerCase()) < 0).length;
+
   const deleteFacet = () => {
     const newQuery = props.query;
     props.dependencies.map(facet => {
@@ -1760,19 +1776,100 @@ function Finder__Tag(props) {
     props.update.results(!props.update.updateState);
   };
 
-  return props.query.facets[props.facet.meta] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "finder__filter finder__tag"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: () => deleteFacet(),
-    type: "button"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  const hyperLink = () => {
+    let newQuery = JSON.parse(JSON.stringify(props.query)); //deep clone
+
+    function remove(obj, key) {
+      for (let k in obj) {
+        if (k === key) {
+          delete obj[k];
+        } else if (typeof obj[k] === 'object') {
+          remove(obj[k], key);
+        }
+      }
+    }
+
+    remove(newQuery, props.facet.meta);
+    const flattenQuery = Object(_util__WEBPACK_IMPORTED_MODULE_2__["flattenObj"])(newQuery);
+    return '?' + Object.entries(flattenQuery).filter(key => {
+      let param = Object.values(key);
+
+      if (param[1] === '') {
+        return false;
+      } else {
+        switch (param[0]) {
+          case 'interacted':
+            return false;
+
+          case 'num_rank':
+            return false;
+
+          case 'start_rank':
+            return false;
+
+          default:
+            return true;
+        }
+      }
+    }).map(key => {
+      let param = Object.values(key);
+
+      if (/fixedParameters/.test(param[0])) {
+        return encodeURIComponent(param[0].substring(16)) + '=' + encodeURIComponent(param[1]);
+      } else if (/fixedFacets/.test(param[0])) {
+        return encodeURIComponent(`meta_${param[0].substring(12)}_sand`) + '=' + encodeURIComponent(param[1]);
+      } else if (/parameters/.test(param[0])) {
+        return encodeURIComponent(param[0].substring(11)) + '=' + encodeURIComponent(param[1]);
+      }
+
+      switch (param[0]) {
+        case 'collection':
+          return encodeURIComponent(param[0]) + '=' + encodeURIComponent(param[1]);
+
+        case 'query':
+          return encodeURIComponent(param[0]) + '=' + encodeURIComponent(param[1]);
+
+        case 'sortType':
+          return encodeURIComponent('sort') + '=' + encodeURIComponent(param[1]);
+
+        case 'startRank':
+          return encodeURIComponent('start_rank') + '=' + encodeURIComponent(param[1]);
+
+        case 'numRanks':
+          return encodeURIComponent('num_rank') + '=' + encodeURIComponent(param[1]);
+
+        default:
+          return encodeURIComponent(`meta_${param[0]}_sand`) + '=' + encodeURIComponent(param[1]);
+      }
+    }).join('&');
+  };
+
+  const labelText = props.query.facets[props.facet.meta] && props.facet.values.length > hiddenFacets && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fa-sharp fa-solid fa-xmark icon",
     "aria-hidden": "true"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "finder__tag__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "sr-only"
-  }, "Remove filter for "), props.facet.name, ":", ' ', props.facet.values.filter(value => value.data.toLowerCase() === props.query.facets[props.facet.meta].toLowerCase())[0].label))) : null;
+  }, "Remove filter for "), props.facet.name, ":", ' ', props.facet.values.filter(value => value.data.toLowerCase() === props.query.facets[props.facet.meta].toLowerCase())[0].label));
+  const ssrHiddenField = props.matrixState && props.query.facets[props.facet.meta] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "hidden",
+    name: `meta_${props.facet.meta}_sand`,
+    value: props.query.facets[props.facet.meta]
+  }) : null;
+
+  if (props.facet.values.length > hiddenFacets && props.query.facets[props.facet.meta]) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "finder__filter finder__tag"
+    }, ssrHiddenField, props.matrixState && props.query.facets[props.facet.meta] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: hyperLink()
+    }, labelText) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: () => deleteFacet(),
+      type: "button"
+    }, labelText));
+  } else {
+    return null;
+  }
 }
 
 Finder__Tag.propTypes = {
@@ -1780,7 +1877,9 @@ Finder__Tag.propTypes = {
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   responseFacet: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object),
   update: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object)
+  dependencies: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object),
+  matrixState: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
+  hasMounted: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Tag);
 
