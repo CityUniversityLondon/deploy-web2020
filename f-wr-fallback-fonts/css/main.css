@@ -4620,7 +4620,7 @@ main .navigation--secondary + article {
 }
 
 html {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -4709,7 +4709,7 @@ u {
 }
 
 .sans {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     font-weight: 450;
 }
 
@@ -4754,7 +4754,7 @@ u {
 }
 
 .meta, .content-hub__block-two .testimonial .card--testimonial__quote, .course--pgt__keyinfo .course--pgt__keyinfo__content .course--pgt__keyinfo__content__column__item *, .course--ug__keyinfo__details * {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-weight: 400;
 }
@@ -4841,7 +4841,7 @@ u {
 }
 
 .content-style {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -4900,7 +4900,7 @@ u {
 
 code,
 pre {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -4980,7 +4980,7 @@ p code {
 
 h6,
 .h6-style {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1rem;
     line-height: 1.625;
@@ -5054,7 +5054,7 @@ h6 strong,
 
 h5,
 .h5-style {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -5127,7 +5127,7 @@ h5 strong,
 
 h4,
 .h4-style {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.266rem;
     line-height: 1.33333;
@@ -5200,7 +5200,7 @@ h4 strong,
 
 h3,
 .h3-style {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.33333;
@@ -5273,7 +5273,7 @@ h3 strong,
 
 h2,
 .h2-style {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.602rem;
     line-height: 1.33333;
@@ -5346,7 +5346,7 @@ h2 strong,
 
 h1,
 .h1-style {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.802rem;
     line-height: 1.33333;
@@ -5532,7 +5532,7 @@ main ol,
 main ul,
 main dl,
 main blockquote {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -5645,7 +5645,7 @@ main sub {
 }
 
 main header p {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.602rem;
     line-height: 1.33333;
@@ -5710,7 +5710,7 @@ main .standfirst-style {
     font-size: 1.266rem;
     line-height: 1.33333;
     letter-spacing: -0.011em;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
@@ -5777,7 +5777,7 @@ main ul ul {
 }
 
 main dt {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1rem;
     line-height: 1.625;
@@ -6120,7 +6120,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card .card__details .card__heading {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -6213,7 +6213,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card .card__details .card__description {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -6537,7 +6537,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card--contact .wrapper--card--contact__address {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -7089,7 +7089,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card--module .card__details .card--module__code {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -7335,7 +7335,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card--research .wrapper--card--contact__address {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -7409,7 +7409,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .related-content .card.card--research .card__details__text .card--research__title-link {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.266rem;
     line-height: 1.33333;
@@ -9880,7 +9880,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     font-size: 1.266rem;
     line-height: 1.33333;
     letter-spacing: -0.011em;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
@@ -9940,7 +9940,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     font-size: 1.266rem;
     line-height: 1.33333;
     letter-spacing: -0.011em;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
@@ -10209,7 +10209,7 @@ form:not([class]) fieldset .form__label,
 form:not([class]) fieldset label,
 .form fieldset .form__label,
 .form fieldset label {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -10309,7 +10309,7 @@ form:not([class]) input,
 form:not([class]) textarea,
 .form input,
 .form textarea {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -11086,7 +11086,7 @@ form:not([class]) .form__required-note--marker,
 }
 
 .back-to-top[data-docked='false'] .back-to-top__button__arrow__label {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
 }
 
 .back-to-top[data-docked='true'] a {
@@ -11353,7 +11353,7 @@ form:not([class]) .form__required-note--marker,
 }
 
 .banner__label {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -12063,7 +12063,7 @@ form:not([class]) .form__required-note--marker,
 }
 
 .breadcrumbs ol li {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -12359,7 +12359,7 @@ form:not([class]) .form__required-note--marker,
 }
 
 .cms-editor .wrapper--cms-editor-warning-remover {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -16580,7 +16580,7 @@ form:not([class]) .form__required-note--marker,
 
 .feedback .feedback__form-link,
 .feedback .feedback__direct {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -18097,7 +18097,7 @@ figure figcaption a:active,
 }
 
 .global-footer p {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -18177,7 +18177,7 @@ figure figcaption a:active,
 }
 
 .global-footer .global-footer__heading {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.33333;
@@ -18267,7 +18267,7 @@ figure figcaption a:active,
     font-size: 1.266rem;
     line-height: 1.33333;
     letter-spacing: -0.011em;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
@@ -18408,7 +18408,7 @@ figure figcaption a:active,
         margin-top: 2rem;
     }
     .global-footer .global-footer__content__section h2 {
-        font-family: "Meta Sans", Trebuchet MS, arial;
+        font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
         font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
         font-size: 1.424rem;
         line-height: 1.33333;
@@ -18465,7 +18465,7 @@ figure figcaption a:active,
         font-weight: 600;
     }
     .global-footer .global-footer__content__section h3 {
-        font-family: "Meta Sans", Trebuchet MS, arial;
+        font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
         font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
         font-size: 1.266rem;
         line-height: 1.33333;
@@ -18575,7 +18575,7 @@ figure figcaption a:active,
 
 .global-footer .wrapper--global-footer__content__section--location__cta,
 .global-footer .wrapper--global-footer__content__section--contact__directory {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -18864,7 +18864,7 @@ figure figcaption a:active,
 }
 
 .global-footer .global-footer__link-ribbon li {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -19124,7 +19124,7 @@ figure figcaption a:active,
 }
 
 .global-footer .global-footer__useful-links li {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -19721,7 +19721,7 @@ figure figcaption a:active,
 }
 
 .announcement .announcement__content {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1rem;
     line-height: 1.625;
@@ -20068,7 +20068,7 @@ figure figcaption a:active,
 }
 
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content p {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -20497,7 +20497,7 @@ figure figcaption a:active,
 }
 
 .how-to-apply--pgt--js__modal .how-to-apply--pgt--js__modal__content .how-to-apply--pgt--js__modal__progress li .how-to-apply--pgt--js__modal__progress__text {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -22120,7 +22120,7 @@ figure figcaption a:active,
 .key-information--research__main__dates tr th {
     flex: 1;
     color: #303030;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-size: 1.125rem;
     line-height: 1.33333;
     letter-spacing: -0.008em;
@@ -22203,7 +22203,7 @@ figure figcaption a:active,
     line-height: 1.33333;
     letter-spacing: -0.008em;
     font-weight: 600;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     margin-bottom: 0.5rem;
 }
 
@@ -23279,7 +23279,7 @@ h3 .linked-heading__icons {
     background: #ffffff;
     border: 0.125rem solid #ffffff;
     color: #d61726;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -23491,7 +23491,7 @@ h3 .linked-heading__icons {
 }
 
 .anchor-cta-like .cta-like-anchor__text span:nth-child(2) {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -23878,7 +23878,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor a {
     background: #ffffff;
     border: 0.125rem solid #ffffff;
     color: #d61726;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -24090,7 +24090,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor a span:active {
 }
 
 ul.cta-like-anchor-inline li.cta-like-anchor a .cta-like-anchor__text span:nth-child(2) {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -24850,7 +24850,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
     .menu .menu__level1 li,
     .menu .menu__level2 li {
-        font-family: "Plex Sans", arial;
+        font-family: "Plex Sans", arial, sans-serif;
         /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -24866,7 +24866,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         font-style: normal;
         font-weight: 450;
         max-width: 55ch;
-        font-family: "Meta Sans", Trebuchet MS, arial;
+        font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
         font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
         font-weight: 400;
         max-width: unset;
@@ -24945,7 +24945,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     .menu .menu__level4 li,
     .menu .menu__level5 li,
     .menu .menu__level6 li {
-        font-family: "Plex Sans", arial;
+        font-family: "Plex Sans", arial, sans-serif;
         /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -26227,7 +26227,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .menu .menu__content .menu__utility ul li {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -26555,7 +26555,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .menu > .menu__display__button .menu__display__button__button {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -26771,7 +26771,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .menu > .menu__display__button .menu__display__button__button__wrapper {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -26875,7 +26875,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .js .menu .menu__content__header {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -26891,7 +26891,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     font-style: normal;
     font-weight: 450;
     max-width: 55ch;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -27190,14 +27190,14 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     font-size: 1.266rem;
     line-height: 1.33333;
     letter-spacing: -0.011em;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
     line-height: 1.625;
     margin-top: 0.75rem;
     max-width: 55ch;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.266rem;
     line-height: 1.33333;
@@ -27630,7 +27630,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .dialog__slider-control button {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -28045,7 +28045,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .module-selector__heading {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.33333;
@@ -28248,7 +28248,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .navigation--primary .navigation__level1 {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -28367,7 +28367,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .navigation--primary .navigation__level2 > li {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -28552,7 +28552,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .navigation--primary .navigation__level3 > li {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -28737,7 +28737,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     background-color: #1e1e1e;
     color: #ffffff;
     transition: background-color ease-out 0.2s;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -28861,7 +28861,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .navigation--primary .navigation--primary__menu__header {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.266rem;
     line-height: 1.33333;
@@ -29349,7 +29349,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
     .navigation--secondary .navigation__level3 li,
     .navigation--secondary .navigation__level4 li {
-        font-family: "Plex Sans", arial;
+        font-family: "Plex Sans", arial, sans-serif;
         /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -29467,7 +29467,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
     .navigation--secondary .navigation__level5 li,
     .navigation--secondary .navigation__level6 li {
-        font-family: "Plex Sans", arial;
+        font-family: "Plex Sans", arial, sans-serif;
         /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -30367,7 +30367,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         border-bottom: 0.125rem solid #b91924;
     }
     .navigation--secondary > .navigation--secondary__header {
-        font-family: "Meta Sans", Trebuchet MS, arial;
+        font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
         font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
         font-size: 1rem;
         line-height: 1.625;
@@ -31439,7 +31439,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .promo-content__heading {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.602rem;
     line-height: 1.33333;
@@ -31585,7 +31585,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .promo-content__graphic--stat {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-size: 2.28rem;
     line-height: 1.33333;
     letter-spacing: -0.017em;
@@ -31627,7 +31627,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     font-size: 1.266rem;
     line-height: 1.33333;
     letter-spacing: -0.011em;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
@@ -32188,7 +32188,7 @@ blockquote footer cite {
 }
 
 .show-more .show-more__content {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -33733,7 +33733,7 @@ article .social-icon:active, article .social-icon:hover, article .social-icon:fo
 }
 
 .tooltip {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     color: #696969;
     border: 0.0625rem solid #e5e5e5;
     border-radius: 0.1rem;
@@ -33781,7 +33781,7 @@ article .link-copy {
 }
 
 .global-header__search .global-header__search__wrapper {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -34141,7 +34141,7 @@ article .link-copy {
 @media (min-width: 1280px) {
     .global-header__search > a,
     .global-header__search .global-header__search__button {
-        font-family: "Meta Sans", Trebuchet MS, arial;
+        font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
         font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
         font-size: 1.125rem;
         line-height: 1.33333;
@@ -34457,7 +34457,7 @@ article .link-copy {
 }
 
 .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body h2 {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.602rem;
     line-height: 1.33333;
@@ -34519,7 +34519,7 @@ article .link-copy {
 }
 
 .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body h3 {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.33333;
@@ -34712,7 +34712,7 @@ article .link-copy {
 
 .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body__results .search--inline__topresults .card--search a .card__heading,
 .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body__results .search--inline__results__updating--topresults .card--search a .card__heading {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.266rem;
     line-height: 1.33333;
@@ -34893,7 +34893,7 @@ article .link-copy {
 
 .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body__results .search--inline__topresults .card--search .card__description,
 .js .global-header__search .global-header__search__button[aria-expanded='true'] + .global-header__search__modal .global-header__search__modal__body__results .search--inline__results__updating--topresults .card--search .card__description {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -35306,7 +35306,7 @@ article .link-copy {
 }
 
 .js .global-header__search .search--inline__query__input {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -35396,7 +35396,7 @@ article .link-copy {
 }
 
 .js .global-header__search .search--inline__query__input input {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -35604,7 +35604,7 @@ article .link-copy {
 }
 
 .js .global-header__search .search--inline__suggestions li {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -35805,7 +35805,7 @@ article .link-copy {
 }
 
 .search .search__results__summary__heading {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
@@ -35896,7 +35896,7 @@ article .link-copy {
 }
 
 .search .search__othersites .search__othersites__heading {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.33333;
@@ -36079,7 +36079,7 @@ article .link-copy {
 .search .search__results__browse-more .card--search a .card__heading,
 .search .search__results__browse-more ul .card--search a .card__heading,
 .search .search__bestbets__list .card--search a .card__heading {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.266rem;
     line-height: 1.33333;
@@ -36317,7 +36317,7 @@ article .link-copy {
 .search .search__results__browse-more .card--search .card__description,
 .search .search__results__browse-more ul .card--search .card__description,
 .search .search__bestbets__list .card--search .card__description {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -36495,7 +36495,7 @@ article .link-copy {
 .search .search__results__browse-more .card .card__anchor .card__heading,
 .search .search__results__browse-more ul .card .card__anchor .card__heading,
 .search .search__bestbets__list .card .card__anchor .card__heading {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.266rem;
     line-height: 1.33333;
@@ -36765,7 +36765,7 @@ article .link-copy {
 }
 
 .search .search__othersites__site__heading {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
@@ -37019,7 +37019,7 @@ article .link-copy {
 }
 
 .search .search__select select {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -37163,7 +37163,7 @@ article .link-copy {
 }
 
 .statistics-block .ksp__items .ksp__item h2 {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.802rem;
     line-height: 1.33333;
@@ -37317,7 +37317,7 @@ article .link-copy {
 }
 
 .statistics-block .ksp__items .ksp__item__overline {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     color: #696969;
     font-size: 1rem;
     font-weight: 500;
@@ -37327,14 +37327,14 @@ article .link-copy {
 .statistics-block .ksp__items .ksp__item__figure,
 .statistics-block .ksp__items .ksp__item__post-figure,
 .statistics-block .ksp__items .ksp__item__text-only {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-weight: 300;
     display: inline;
     color: #d61726;
 }
 
 .statistics-block .ksp__items .ksp__item__text {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     color: #1e1e1e;
     font-size: 1rem;
     font-weight: 450;
@@ -37628,7 +37628,7 @@ article .link-copy {
         text-decoration: none;
     }
     .js .tabs .tabs__links li button > span {
-        font-family: "Meta Sans", Trebuchet MS, arial;
+        font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
         font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
         font-size: 1rem;
         line-height: 1.625;
@@ -41039,7 +41039,7 @@ article .link-copy {
 }
 
 .finder__select select {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -41117,7 +41117,7 @@ article .link-copy {
 }
 
 .finder__checkbox {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -42075,7 +42075,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .finder__query__input {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -42165,7 +42165,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .finder__query__input input {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -42644,7 +42644,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .finder__filter legend {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.33333;
@@ -42846,7 +42846,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .finder__results__summary__heading {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.424rem;
     line-height: 1.33333;
@@ -42938,7 +42938,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .finder__results__summary__heading span {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -43356,7 +43356,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .dropdown-filter select {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -44127,7 +44127,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .promo-area__wrap .promo-area .promo-area__content p {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -44181,7 +44181,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .promo-area__wrap .promo-area .promo-area__content .promo-area__text__details p {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -45912,7 +45912,7 @@ main > .case-study--business .case-study--business__content {
 }
 
 .case-study--business .company-card__name-title {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     margin-bottom: 0.5rem;
 }
 
@@ -48572,7 +48572,7 @@ main > .error {
     font-size: 1.266rem;
     line-height: 1.33333;
     letter-spacing: -0.011em;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-weight: 300;
 }
 
@@ -49024,7 +49024,7 @@ main > .error {
 }
 
 .event__tags h2 {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     color: #696969;
     margin-bottom: 1rem;
     font-size: 0.889rem;
@@ -49202,7 +49202,7 @@ main header .evnt__info {
 }
 
 main header .evnt__info p {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -49895,7 +49895,7 @@ main header .event__formassembly__form {
 }
 
 .landing .banner .banner__label {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -50951,7 +50951,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 }
 
 .landing--latest .landing--latest__event-categories p {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.266rem;
     line-height: 1.33333;
@@ -52430,7 +52430,7 @@ main > .news .news__summary p {
     font-size: 1.266rem;
     line-height: 1.33333;
     letter-spacing: -0.011em;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
@@ -52508,7 +52508,7 @@ main > .news .news__published p {
 }
 
 main > .news .news__body blockquote p {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-size: 1.266rem;
     line-height: 1.33333;
     letter-spacing: -0.011em;
@@ -52959,7 +52959,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .course--pgt .banner__label {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -53501,11 +53501,11 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     margin-bottom: 0.25rem;
     color: #303030;
     font-weight: 500;
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
 }
 
 .course--pgt__keyinfo .course--pgt__keyinfo__content span.label {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     color: #696969;
     font-weight: 400;
 }
@@ -54127,7 +54127,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     font-size: 1.266rem;
     line-height: 1.33333;
     letter-spacing: -0.011em;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-style: normal;
     font-weight: 300;
@@ -54200,7 +54200,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 
 .course--pgt .wrapper--tabs__panel__body__fees__qualification-type__method-of-study p.tabs__panel__body__domicile__fees {
     color: #5d184a;
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -55230,7 +55230,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .profile .wrapper--profile__contact .profile__contact__content__heading {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -55631,7 +55631,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .profile .profile__banner__content__details__organisation {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     font-size: 1rem;
     line-height: 1.625;
     letter-spacing: -0.005em;
@@ -55850,7 +55850,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .profile .profile--global__tags__heading {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -55963,7 +55963,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .profile .profile--global__details__heading__text {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -56110,7 +56110,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .profile .profile--global__other-contact-methods .profile--global__details__content {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -56759,7 +56759,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .research-degree .banner__label {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -57480,7 +57480,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .search .search__query__input {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -57570,7 +57570,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .search .search__query__input input {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -58499,7 +58499,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning .banner__label {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -60981,7 +60981,7 @@ main .standard-content .content {
 }
 
 .user-journey__steps h3 {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -62199,7 +62199,7 @@ main .standard-content .content {
 .course--ug__keyinfo__details p,
 .course--ug__keyinfo__details span,
 .course--ug__keyinfo__details time {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-size: 1.125rem;
     line-height: 1.33333;
     letter-spacing: -0.008em;
@@ -62598,7 +62598,7 @@ main .standard-content .content {
 }
 
 .statistics-block--ug .ksp__item__overline {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     font-weight: 500;
     font-size: 1rem;
     color: #696969;
@@ -62635,7 +62635,7 @@ main .standard-content .content {
 }
 
 .ug-text-table .ug-text-table__prop span {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -62694,7 +62694,7 @@ main .standard-content .content {
 }
 
 .ug-text-table .ug-text-table__value span {
-    font-family: "Plex Sans", arial;
+    font-family: "Plex Sans", arial, sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
      *
@@ -63274,7 +63274,7 @@ main .standard-content .content {
 }
 
 .course--ug__related-links .related-links--with-images .underline-transition__title {
-    font-family: "Meta Sans", Trebuchet MS, arial;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.602rem;
     line-height: 1.33333;
