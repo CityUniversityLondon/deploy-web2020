@@ -31057,6 +31057,59 @@ main .home-banner--promo .cta-block a:focus:focus, main .home-banner--promo .cta
     outline-width: 0.125rem;
 }
 
+.home-banner--image .hero-image__veil {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4) 30%);
+}
+
+.home-banner--image .home-banner__content__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .home-banner--image .home-banner__content__text {
+        top: 30%;
+    }
+}
+
+.home-banner--image .home-banner__content__text .banner__subtitle {
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-family: "Meta Sans", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    letter-spacing: -0.008em;
+}
+
+.home-banner--image .home-banner__content__text .banner__subtitle i,
+.home-banner--image .home-banner__content__text .banner__subtitle em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .home-banner--image .home-banner__content__text .banner__subtitle {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .home-banner--image .home-banner__content__text .banner__subtitle {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .home-banner--image .home-banner__content__text .banner__subtitle {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .home-banner--image .home-banner__content__text .banner__subtitle {
+        letter-spacing: -0.017em;
+    }
+}
+
 @keyframes moveUp {
     0% {
         transform: translateX(-100%);
