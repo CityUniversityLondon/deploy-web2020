@@ -21072,7 +21072,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
+/* harmony import */ var _logic_hyper_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../logic/hyper-link */ "./src/patterns/finder/logic/hyper-link.js");
 
 
 /**
@@ -21112,74 +21112,6 @@ function Finder__Tag(props) {
     props.update.results(!props.update.updateState);
   };
 
-  const hyperLink = () => {
-    let newQuery = JSON.parse(JSON.stringify(props.query)); //deep clone
-
-    function remove(obj, key) {
-      for (let k in obj) {
-        if (k === key) {
-          delete obj[k];
-        } else if (typeof obj[k] === 'object') {
-          remove(obj[k], key);
-        }
-      }
-    }
-
-    remove(newQuery, props.facet.meta);
-    const flattenQuery = Object(_util__WEBPACK_IMPORTED_MODULE_2__["flattenObj"])(newQuery);
-    return '?' + Object.entries(flattenQuery).filter(key => {
-      let param = Object.values(key);
-
-      if (param[1] === '') {
-        return false;
-      } else {
-        switch (param[0]) {
-          case 'interacted':
-            return false;
-
-          case 'num_rank':
-            return false;
-
-          case 'start_rank':
-            return false;
-
-          default:
-            return true;
-        }
-      }
-    }).map(key => {
-      let param = Object.values(key);
-
-      if (/fixedParameters/.test(param[0])) {
-        return encodeURIComponent(param[0].substring(16)) + '=' + encodeURIComponent(param[1]);
-      } else if (/fixedFacets/.test(param[0])) {
-        return encodeURIComponent(`meta_${param[0].substring(12)}_sand`) + '=' + encodeURIComponent(param[1]);
-      } else if (/parameters/.test(param[0])) {
-        return encodeURIComponent(param[0].substring(11)) + '=' + encodeURIComponent(param[1]);
-      }
-
-      switch (param[0]) {
-        case 'collection':
-          return encodeURIComponent(param[0]) + '=' + encodeURIComponent(param[1]);
-
-        case 'query':
-          return encodeURIComponent(param[0]) + '=' + encodeURIComponent(param[1]);
-
-        case 'sortType':
-          return encodeURIComponent('sort') + '=' + encodeURIComponent(param[1]);
-
-        case 'startRank':
-          return encodeURIComponent('start_rank') + '=' + encodeURIComponent(param[1]);
-
-        case 'numRanks':
-          return encodeURIComponent('num_rank') + '=' + encodeURIComponent(param[1]);
-
-        default:
-          return encodeURIComponent(`meta_${param[0]}_sand`) + '=' + encodeURIComponent(param[1]);
-      }
-    }).join('&');
-  };
-
   const labelText = props.query.facets[props.facet.meta] && props.facet.values.length > hiddenFacets && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fa-sharp fa-solid fa-xmark icon",
     "aria-hidden": "true"
@@ -21198,7 +21130,7 @@ function Finder__Tag(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "finder__filter finder__tag"
     }, ssrHiddenField, props.matrixState && props.query.facets[props.facet.meta] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: hyperLink()
+      href: Object(_logic_hyper_link__WEBPACK_IMPORTED_MODULE_2__["hyperLink"])(props.query, props.facet)
     }, labelText) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onClick: () => deleteFacet(),
       type: "button"
@@ -21633,7 +21565,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
+/* harmony import */ var _logic_hyper_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../logic/hyper-link */ "./src/patterns/finder/logic/hyper-link.js");
 
 
 /**
@@ -21666,63 +21598,6 @@ function Finder__Pagination(props) {
     props.update.results(!props.update.updateState);
   };
 
-  const hyperLink = pageNumber => {
-    const newStartRank = 1 + (pageNumber - 1) * props.numRanks,
-          newQuery = Object(_util__WEBPACK_IMPORTED_MODULE_2__["flattenObj"])(props.query);
-    const paramQueryString = newQuery ? Object.entries(newQuery).filter(key => {
-      let param = Object.values(key);
-
-      if (param[1] === '') {
-        return false;
-      } else {
-        switch (param[0]) {
-          case 'interacted':
-            return false;
-
-          case 'num_rank':
-            return false;
-
-          case 'start_rank':
-            return false;
-
-          default:
-            return true;
-        }
-      }
-    }).map(key => {
-      let param = Object.values(key);
-
-      if (/fixedParameters/.test(param[0])) {
-        return encodeURIComponent(param[0].substring(16)) + '=' + encodeURIComponent(param[1]);
-      } else if (/fixedFacets/.test(param[0])) {
-        return encodeURIComponent(`meta_${param[0].substring(12)}_sand`) + '=' + encodeURIComponent(param[1]);
-      } else if (/parameters/.test(param[0])) {
-        return encodeURIComponent(param[0].substring(11)) + '=' + encodeURIComponent(param[1]);
-      }
-
-      switch (param[0]) {
-        case 'collection':
-          return encodeURIComponent(param[0]) + '=' + encodeURIComponent(param[1]);
-
-        case 'query':
-          return encodeURIComponent(param[0]) + '=' + encodeURIComponent(param[1]);
-
-        case 'sortType':
-          return encodeURIComponent('sort') + '=' + encodeURIComponent(param[1]);
-
-        case 'startRank':
-          return encodeURIComponent('start_rank') + '=' + encodeURIComponent(newStartRank);
-
-        case 'numRanks':
-          return encodeURIComponent('num_rank') + '=' + encodeURIComponent(param[1]);
-
-        default:
-          return encodeURIComponent(`meta_${param[0]}_sand`) + '=' + encodeURIComponent(param[1]);
-      }
-    }).join('&') : '';
-    return '?' + paramQueryString;
-  };
-
   pages.push(currentPage === 1 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     key: "previousPage",
     className: "pagination__controls__button--prev"
@@ -21733,7 +21608,7 @@ function Finder__Pagination(props) {
       e.preventDefault();
       changePage(currentPage - 1);
     },
-    href: hyperLink(currentPage - 1)
+    href: Object(_logic_hyper_link__WEBPACK_IMPORTED_MODULE_2__["hyperLink"])(props.query, null, currentPage - 1, props.numRanks)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Previous page ", currentPage)));
 
   for (let page = 1; page <= numberOfPages; page++) {
@@ -21765,7 +21640,7 @@ function Finder__Pagination(props) {
         e.preventDefault();
         changePage(page);
       },
-      href: hyperLink(page)
+      href: Object(_logic_hyper_link__WEBPACK_IMPORTED_MODULE_2__["hyperLink"])(props.query, null, page, props.numRanks)
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, page)));
 
     if (page === 1) {
@@ -21792,7 +21667,7 @@ function Finder__Pagination(props) {
       e.preventDefault();
       changePage(currentPage + 1);
     },
-    href: hyperLink(currentPage + 1)
+    href: Object(_logic_hyper_link__WEBPACK_IMPORTED_MODULE_2__["hyperLink"])(props.query, null, currentPage + 1, props.numRanks)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Next page")));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "pagination__wrapper"
@@ -22404,6 +22279,92 @@ function useHasMounted() {
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (useHasMounted);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/logic/hyper-link.js":
+/*!*************************************************!*\
+  !*** ./src/patterns/finder/logic/hyper-link.js ***!
+  \*************************************************/
+/*! exports provided: hyperLink */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "hyperLink", function() { return hyperLink; });
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
+
+
+
+
+function remove(obj, key) {
+  for (let k in obj) {
+    if (k === key) {
+      delete obj[k];
+    } else if (typeof obj[k] === 'object') {
+      remove(obj[k], key);
+    }
+  }
+}
+
+function hyperLink(query, facet, pageNumber, numberRank) {
+  const newStartRank = pageNumber && 1 + (pageNumber - 1) * numberRank;
+  let newQuery = JSON.parse(JSON.stringify(query)); //deep clone
+
+  facet && facet.type === 'tag' && remove(newQuery, facet.meta);
+  const flattenQuery = Object(_util__WEBPACK_IMPORTED_MODULE_0__["flattenObj"])(newQuery);
+  return '?' + Object.entries(flattenQuery).filter(key => {
+    let param = Object.values(key);
+
+    if (param[1] === '') {
+      return false;
+    } else {
+      switch (param[0]) {
+        case 'interacted':
+          return false;
+
+        case 'num_rank':
+          return false;
+
+        case 'start_rank':
+          return false;
+
+        default:
+          return true;
+      }
+    }
+  }).map(key => {
+    let param = Object.values(key);
+
+    if (/fixedParameters/.test(param[0])) {
+      return encodeURIComponent(param[0].substring(16)) + '=' + encodeURIComponent(param[1]);
+    } else if (/fixedFacets/.test(param[0])) {
+      return encodeURIComponent(`meta_${param[0].substring(12)}_sand`) + '=' + encodeURIComponent(param[1]);
+    } else if (/parameters/.test(param[0])) {
+      return encodeURIComponent(param[0].substring(11)) + '=' + encodeURIComponent(param[1]);
+    }
+
+    switch (param[0]) {
+      case 'collection':
+        return encodeURIComponent(param[0]) + '=' + encodeURIComponent(param[1]);
+
+      case 'query':
+        return encodeURIComponent(param[0]) + '=' + encodeURIComponent(param[1]);
+
+      case 'sortType':
+        return encodeURIComponent('sort') + '=' + encodeURIComponent(param[1]);
+
+      case 'startRank':
+        return encodeURIComponent('start_rank') + '=' + encodeURIComponent(facet ? param[1] : newStartRank);
+
+      case 'numRanks':
+        return encodeURIComponent('num_rank') + '=' + encodeURIComponent(param[1]);
+
+      default:
+        return encodeURIComponent(`meta_${param[0]}_sand`) + '=' + encodeURIComponent(param[1]);
+    }
+  }).join('&');
+}
 
 /***/ }),
 
