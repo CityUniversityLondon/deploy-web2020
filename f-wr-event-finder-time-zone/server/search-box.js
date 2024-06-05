@@ -18882,7 +18882,7 @@ function formatTime(timeString, timeZone) {
 
   if (timeZone) {
     let timeOffset = time.getTimezoneOffset() / -60;
-    timeLabel = (timeOffset = 0) ? 'GMT' : 'BST';
+    timeLabel = (timeOffset = 0) ? '(GMT)' : '(BST)';
   }
 
   ;
