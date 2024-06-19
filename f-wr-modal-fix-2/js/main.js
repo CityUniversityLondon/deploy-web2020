@@ -4805,7 +4805,10 @@ function getVerticalScrollbarWidth() {
   document.body.appendChild(scrollDiv);
   const scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth; // Remove the div from the body
 
-  document.body.removeChild(scrollDiv);
+  document.body.removeChild(scrollDiv); // adds scrollbar width as variable to root so can be used by CSS styles
+
+  let root = document.documentElement;
+  root.style.setProperty('--scrollbar-width', scrollbarWidth + 'px');
   return scrollbarWidth;
 }
 /**
@@ -4818,15 +4821,13 @@ function getVerticalScrollbarWidth() {
 
 function enableBodyScroll() {
   document.documentElement.classList.remove('dialog-in', 'no-scroll-html');
-  document.documentElement.style.marginRight = 0;
   document.querySelector('.back-to-top').setAttribute('hidden', 'false');
 }
 
 function disableBodyScroll() {
-  const verticalScrollbarWidth = getVerticalScrollbarWidth();
-  document.documentElement.classList.add('dialog-in', 'no-scroll-html');
-  document.documentElement.style.marginRight = verticalScrollbarWidth + 'px';
+  getVerticalScrollbarWidth();
   document.querySelector('.back-to-top').setAttribute('hidden', 'true');
+  document.documentElement.classList.add('dialog-in', 'no-scroll-html');
 }
 /**
  * function that creates a pop-up dialog, linked to click event in launchModal(modal)
