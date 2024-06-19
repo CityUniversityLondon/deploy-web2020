@@ -4819,12 +4819,14 @@ function getVerticalScrollbarWidth() {
 function enableBodyScroll() {
   document.documentElement.classList.remove('dialog-in', 'no-scroll-html');
   document.documentElement.style.marginRight = 0;
+  document.querySelector('.back-to-top').setAttribute('hidden', 'false');
 }
 
 function disableBodyScroll() {
   const verticalScrollbarWidth = getVerticalScrollbarWidth();
   document.documentElement.classList.add('dialog-in', 'no-scroll-html');
   document.documentElement.style.marginRight = verticalScrollbarWidth + 'px';
+  document.querySelector('.back-to-top').setAttribute('hidden', 'true');
 }
 /**
  * function that creates a pop-up dialog, linked to click event in launchModal(modal)
