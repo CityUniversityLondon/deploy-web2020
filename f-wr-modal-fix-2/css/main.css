@@ -27148,7 +27148,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
-.no-scroll-html {
+.no-scroll {
     overflow-y: hidden;
     margin-right: var(--scrollbar-width);
 }
