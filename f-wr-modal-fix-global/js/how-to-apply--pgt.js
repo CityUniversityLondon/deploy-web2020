@@ -977,8 +977,7 @@ function HowToApply(props) {
   }, props.element.dataset.otheryear, " entry is also available.")); // End modal wrapper render
   // Focus trap
 
-  const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({}); //let modalRef = null,
-
+  const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({});
   let modalContentRef = null;
 
   const getModalContent = () => modalContentRef;
@@ -1018,8 +1017,7 @@ function HowToApply(props) {
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Apply now")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal",
-    "data-open": modalVisible //ref={(modal) => (modalRef = modal)}
-
+    "data-open": modalVisible
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "how-to-apply--pgt--js__modal__content",
     ref: modalContent => modalContentRef = modalContent
