@@ -13673,7 +13673,7 @@ article a:active {
     color: #ffffff;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    position: absolute;
+    position: relative;
     z-index: 2;
     width: 100%;
 }
