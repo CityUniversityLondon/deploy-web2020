@@ -42902,6 +42902,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     color: #ffffff;
 }
 
+.finder__results__announcement p {
+    max-width: initial;
+}
+
 .finder__results__summary__heading {
     font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
