@@ -58545,6 +58545,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .lifelong-learning .banner-text {
     color: #ffffff;
     padding-bottom: 1rem;
+    padding-top: 2rem;
 }
 
 @media print {
@@ -58755,7 +58756,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     background: linear-gradient(to top left, #ffffff00 0%, #ffffff00 50%, #0c0c0e 50%, #0c0c0e 100%);
 }
 
-.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 {
+.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 {
     font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
@@ -58767,51 +58768,51 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     margin-top: initial;
 }
 
-.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 i,
-.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 em {
+.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 i,
+.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 em {
     font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
 }
 
-.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 b,
-.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 strong {
+.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 b,
+.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 strong {
     font-weight: inherit;
 }
 
-.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 i,
-.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 em {
+.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 i,
+.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 em {
     font-style: italic;
 }
 
-.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 u {
+.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 u {
     text-decoration: none;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 {
+    .lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 {
         letter-spacing: -0.011em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 {
+    .lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 {
         letter-spacing: -0.014em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 {
+    .lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 {
+    .lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 {
         letter-spacing: -0.017em;
     }
 }
 
-.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 b,
-.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h3 strong {
+.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 b,
+.lifelong-learning .lifelong-learning__announcement__event .lifelong-learning__announcement__event--title h2 strong {
     font-weight: 600;
 }
 
@@ -58822,7 +58823,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     max-width: 80rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    padding-bottom: 2rem;
 }
 
 @media (min-width: 901px) {
@@ -58849,7 +58849,18 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
+.lifelong-learning .lifelong-learning__introduction .standfirst {
+    margin-top: initial;
+}
+
+.lifelong-learning .lifelong-learning__announcement {
+    padding-bottom: 1rem;
+}
+
 .lifelong-learning .lifelong-learning__announcement__event--content {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
     width: fit-content;
     padding: 2.75rem 1rem 1rem 1rem;
     background-color: #ffffff;
@@ -58857,8 +58868,59 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     border-radius: 0.5rem;
 }
 
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .lifelong-learning .lifelong-learning__announcement__event--content {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .lifelong-learning .lifelong-learning__announcement__event--content {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .lifelong-learning .lifelong-learning__announcement__event--content {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .lifelong-learning .lifelong-learning__announcement__event--content {
+        letter-spacing: -0.017em;
+    }
+}
+
 .lifelong-learning .lifelong-learning__announcement__event--content p {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
     margin-top: initial;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .lifelong-learning .lifelong-learning__announcement__event--content p {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .lifelong-learning .lifelong-learning__announcement__event--content p {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .lifelong-learning .lifelong-learning__announcement__event--content p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .lifelong-learning .lifelong-learning__announcement__event--content p {
+        letter-spacing: -0.017em;
+    }
 }
 
 .lifelong-learning .lifelong-learning__selling-points__background {
