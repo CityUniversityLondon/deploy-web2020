@@ -58573,6 +58573,10 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
+.lifelong-learning .wrapper--lifelong-learning__introduction:has(+ .wrapper--key-information--lifelong-learning) {
+    padding-bottom: 2rem;
+}
+
 .lifelong-learning .wrapper--lifelong-learning__announcement {
     padding-bottom: 2rem;
 }
