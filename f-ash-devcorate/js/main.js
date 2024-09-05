@@ -1003,10 +1003,12 @@ function buttonFromHeading(heading) {
 
 
 function launchAccordion(accordion) {
+  const viewportWidth = window.innerWidth;
   const toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(accordion.dataset.toggleopen),
         defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(accordion.dataset.defaultopen),
         allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_0__["toBool"])(accordion.dataset.allowsingle),
-        headings = Array.from(accordion.parentNode.querySelectorAll(`#${accordion.id} > .${headingClassName}`));
+        headings = Array.from(accordion.parentNode.querySelectorAll(`#${accordion.id} > .${headingClassName}`)),
+        body = Array.from(accordion.parentNode.querySelectorAll(`#${accordion.id} > .${bodyClassName}`));
   let idLinked = false;
 
   if (!(allowSingle || headings.length > 1)) {
@@ -1015,6 +1017,21 @@ function launchAccordion(accordion) {
      */
     Object(_util__WEBPACK_IMPORTED_MODULE_0__["removeClass"])(accordion, className, false);
     return;
+  }
+  /**
+   * Set Iframe container to be scrollable if a tab accordion and is mobile
+   */
+
+
+  if (accordion.parentElement.className === 'tabs--accordion' && viewportWidth <= Object(_util__WEBPACK_IMPORTED_MODULE_0__["screenWidth"])('tablet')) {
+    body.forEach(elem => {
+      const iframe = elem.querySelector('iframe');
+
+      if (iframe) {
+        iframe.scrolling = 'auto';
+        iframe.style.height = '70vh';
+      }
+    });
   }
 
   headings.forEach(heading => {
@@ -1042,8 +1059,7 @@ function launchAccordion(accordion) {
   if (window.location.hash) {
     //finds accordion heading in URL
     let urlHash = window.location.hash;
-    let heading = accordion.querySelector('' + urlHash + '');
-    let viewportWidth = window.innerWidth; // condition when hash in URL is of a 'always' accordion, regardless of viewport width
+    let heading = accordion.querySelector('' + urlHash + ''); // condition when hash in URL is of a 'always' accordion, regardless of viewport width
 
     if (heading) {
       // Wait for DOM to load before accessing selected accordion

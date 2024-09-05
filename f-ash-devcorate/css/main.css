@@ -19247,6 +19247,10 @@ figure figcaption a:active,
 
 .global-footer .footer-logo--uol {
     margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (min-width: 900px) {
@@ -19259,8 +19263,9 @@ figure figcaption a:active,
 
 @media (min-width: 1024px) {
     .global-footer .footer-logo--uol {
-        grid-column-end: span 4;
+        grid-column-end: span 8;
         grid-row-end: span 2;
+        justify-content: flex-start;
     }
 }
 
@@ -42896,6 +42901,17 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     display: none;
 }
 
+.finder__results__announcement {
+    padding: 1rem;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.finder__results__announcement p {
+    max-width: initial;
+    margin-top: initial;
+}
+
 .finder__results__summary__heading {
     font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -51790,7 +51806,8 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
         margin-right: 1.5rem;
     }
     main .navigation--secondary + .listing .finder .wrapper--finder__filters .finder__filters__heading,
-    main .navigation--secondary + .listing .finder .finder__results__summary {
+    main .navigation--secondary + .listing .finder .finder__results__summary,
+    main .navigation--secondary + .listing .finder .finder__results__announcement {
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: 80rem;
@@ -51799,7 +51816,8 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 
 @media (min-width: 1024px) and (min-width: 901px) {
     main .navigation--secondary + .listing .finder .wrapper--finder__filters .finder__filters__heading,
-    main .navigation--secondary + .listing .finder .finder__results__summary {
+    main .navigation--secondary + .listing .finder .finder__results__summary,
+    main .navigation--secondary + .listing .finder .finder__results__announcement {
         margin-left: 1.5rem;
         margin-right: 1.5rem;
     }

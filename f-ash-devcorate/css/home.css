@@ -13170,6 +13170,10 @@ article a:active {
 
 .global-footer .footer-logo--uol {
     margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (min-width: 900px) {
@@ -13182,8 +13186,9 @@ article a:active {
 
 @media (min-width: 1024px) {
     .global-footer .footer-logo--uol {
-        grid-column-end: span 4;
+        grid-column-end: span 8;
         grid-row-end: span 2;
+        justify-content: flex-start;
     }
 }
 

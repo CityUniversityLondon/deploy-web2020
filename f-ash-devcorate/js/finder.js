@@ -2690,6 +2690,61 @@ Finder__Query.propTypes = {
 
 /***/ }),
 
+/***/ "./src/patterns/finder/components/results/finder__announcement.js":
+/*!************************************************************************!*\
+  !*** ./src/patterns/finder/components/results/finder__announcement.js ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var dompurify__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! dompurify */ "./node_modules/dompurify/dist/purify.js");
+/* harmony import */ var dompurify__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(dompurify__WEBPACK_IMPORTED_MODULE_2__);
+
+
+/**
+ * @module patterns/finder/components/results/finder__announcement
+ * @author Web Development
+ * @copyright City, University of London 2019
+ */
+
+
+
+/**
+ * Renders the announcement box
+ *
+ * @param {object} props React props.
+ * @returns {object} - React component.
+ */
+
+function Finder__Announcement(props) {
+  const clean = dompurify__WEBPACK_IMPORTED_MODULE_2___default.a.sanitize(props.announcement, {
+    allowedTags: ['strong', 'p', 'h2', 'h3', 'a'],
+    allowedAttributes: {
+      a: ['href']
+    }
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "finder__results__announcement"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    dangerouslySetInnerHTML: {
+      __html: clean
+    }
+  }));
+}
+
+Finder__Announcement.propTypes = {
+  announcement: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string
+};
+/* harmony default export */ __webpack_exports__["default"] = (Finder__Announcement);
+
+/***/ }),
+
 /***/ "./src/patterns/finder/components/results/finder__didyoumean.js":
 /*!**********************************************************************!*\
   !*** ./src/patterns/finder/components/results/finder__didyoumean.js ***!
@@ -2906,6 +2961,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _finder_results_summary__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./finder__results__summary */ "./src/patterns/finder/components/results/finder__results__summary.js");
+/* harmony import */ var _finder_announcement__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./finder__announcement */ "./src/patterns/finder/components/results/finder__announcement.js");
 
 
 /**
@@ -2913,6 +2969,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2021
  */
+
 
 
 
@@ -2999,6 +3056,9 @@ function Finder__Results(props) {
       totalMatching: props.response.summary.totalMatching,
       update: props.update
     });
+    const announcement = props.config.announcement && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_finder_announcement__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      announcement: props.config.announcement
+    });
     const didYouMean = (props.query.misspelling || props.response.spell) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_finder_didyoumean__WEBPACK_IMPORTED_MODULE_2__["default"], {
       query: props.query,
       summariseAs: props.summariseAs,
@@ -3072,7 +3132,7 @@ function Finder__Results(props) {
     } // render either the results, or a spinner while we wait for Funnelback
 
 
-    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, didYouMean, summary, results, pagination);
+    const resultsContent = props.updating ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, updating) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, didYouMean, announcement, summary, results, pagination);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
       className: "finder__results"
     }, resultsContent);
@@ -3090,7 +3150,13 @@ Finder__Results.propTypes = {
   summariseAs: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
   type: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string,
   update: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
-  updating: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool
+  updating: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.bool,
+  config: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  promo: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.array,
+  pastEventsQuery: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  pastEventsResponse: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  pastEventsUpdate: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  matrixState: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (Finder__Results);
 
