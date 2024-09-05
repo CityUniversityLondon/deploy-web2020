@@ -528,8 +528,8 @@ document.addEventListener('DOMContentLoaded', () => {
     accordionizeTabs(document);
     _patterns__WEBPACK_IMPORTED_MODULE_0__["default"].forEach(launchPattern);
     const parameters = Object(_util__WEBPACK_IMPORTED_MODULE_1__["parametersToObject"])(location.search);
-    parameters['dev'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_2__["devcorate"])(document.querySelector('body'), 'test', parameters['test']);
-    parameters['rel'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_2__["devcorate"])(document.querySelector('body'), 'prod', parameters['prod']);
+    parameters['tes'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_2__["devcorate"])(document.querySelector('body'), 'test', parameters['test']);
+    parameters['prod'] && Object(_patterns_devcorate_devcorate__WEBPACK_IMPORTED_MODULE_2__["devcorate"])(document.querySelector('body'), 'prod', parameters['prod']);
   }
 }, false);
 
