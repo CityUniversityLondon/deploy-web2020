@@ -20942,7 +20942,7 @@ function Finder__Results__Course(props) {
         // City St George's label temporarily in place accordion to branding guidelines
   cityStGeorgesLabel = String(props.details.listMetadata.location).toLowerCase() === 'tooting' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__label card--course__label--citystgeorges"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Tooting Campus")) : '',
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Tooting Campus")) : null,
         // City and Business School use different metadata values; check for both
   clearing = props.details.listMetadata.clearing && ['Yes', 'yes'].includes(props.details.listMetadata.clearing[0]) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__label card--course__label--clearing"
