@@ -6064,10 +6064,6 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
-.card .card__anchor.card__location--tooting {
-    border-color: #14cef5;
-}
-
 .card .card__anchor, .card .card__anchor:focus, .card .card__anchor:active, .card .card__anchor:visited {
     border-width: 0.0625rem;
     border-style: solid;
@@ -6649,12 +6645,14 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 .card--course .wrapper--card__label__details {
     float: right;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 767px) {
     .card--course .wrapper--card__label__details {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 }
 
@@ -6711,6 +6709,46 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 431px) {
     .card--course .wrapper--card__label__details .card--course__label--clearing p {
         position: absolute;
+    }
+}
+
+.card--course .wrapper--card__label__details .card--course__label--citystgeorges {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.card--course .wrapper--card__label__details .card--course__label--citystgeorges p {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    background-color: #14cef5;
+    color: #ffffff;
+    font-weight: 700;
+    margin-top: 0;
+    padding: 0.75rem;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--course .wrapper--card__label__details .card--course__label--citystgeorges p {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--course .wrapper--card__label__details .card--course__label--citystgeorges p {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--course .wrapper--card__label__details .card--course__label--citystgeorges p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--course .wrapper--card__label__details .card--course__label--citystgeorges p {
+        letter-spacing: -0.017em;
     }
 }
 

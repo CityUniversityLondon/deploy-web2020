@@ -794,12 +794,41 @@ function Finder__Results__Course(props) {
     key: i
   }, "| ", e)))),
         // City and Business School use different metadata values; check for both
-  clearing = props.details.listMetadata.clearing && ['Yes', 'yes'].includes(props.details.listMetadata.clearing[0]) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  cityStGeorgesLabel = String(props.details.listMetadata.location).toLowerCase() === 'tooting' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "card__label card--course__label--citystgeorges"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "City St George's Tooting Campus")) : '',
+
+  /**/
+
+  /*
+      cityStGeorgesLabel = String(
+          props.details.listMetadata.location
+      ).toLowerCase() === 'tooting' ?
+      <div className="card__label card--course__label--clearing">
+              <p className="card__label card--course__label--clearing">
+                      City St George&apos;s Tooting Campus
+                  </p>
+              </div>
+          : '',
+          */
+  clearing = props.details.title.includes('Bio') ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__label card--course__label--clearing"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__label card--course__label--clearing"
-  }, "Clearing")),
-        external = externalSiteUrl.some(s => props.details.indexUrl.indexOf(s) >= 0) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+  }, "Clearing")) : '',
+
+  /*
+  // City and Business School use different metadata values; check for both
+  clearing = props.details.listMetadata.clearing &&
+      ['Yes', 'yes'].includes(props.details.listMetadata.clearing[0]) && (
+          <div className="card__label card--course__label--clearing">
+              <p className="card__label card--course__label--clearing">
+                  Clearing
+              </p>
+          </div>
+      ),
+      */
+  external = externalSiteUrl.some(s => props.details.indexUrl.indexOf(s) >= 0) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-sharp fa-external-link icon",
     "aria-label": "(external link)"
   })) : null,
@@ -818,15 +847,14 @@ function Finder__Results__Course(props) {
         description = props.details.listMetadata.c && props.details.listMetadata.c[0] && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__description"
   }, props.query.query ? Object(_results_formatLabel__WEBPACK_IMPORTED_MODULE_2__["default"])(props.details.listMetadata.c[0], props.query.query) : props.details.listMetadata.c[0]);
-  const locationClass = String(props.details.listMetadata.location).toLowerCase();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     className: "card card--course"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.liveUrl,
-    className: `card__anchor card__details card__location--${locationClass}`
+    className: "card__anchor card__details "
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "wrapper--card__label__details"
-  }, clearing, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, clearing, " ", cityStGeorgesLabel, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "card__heading"
