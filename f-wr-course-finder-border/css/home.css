@@ -1127,12 +1127,12 @@
     background-color: #ffffff;
 }
 
-.color--zima-blue {
-    color: #14cef5;
+.color--city-st-georges {
+    color: #008569;
 }
 
-.background--zima-blue {
-    background-color: #14cef5;
+.background--city-st-georges {
+    background-color: #008569;
 }
 
 .sr-only-focusable-within:active, .sr-only-focusable-within:focus, .sr-only-focusable-within:focus-within {
@@ -6718,7 +6718,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    background-color: #14cef5;
+    background-color: #008569;
     color: #ffffff;
     font-weight: 700;
     margin-top: 0;
