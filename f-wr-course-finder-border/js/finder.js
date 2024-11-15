@@ -793,7 +793,7 @@ function Finder__Results__Course(props) {
   }, e.replace('and', '&')) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
     key: i
   }, "| ", e)))),
-        // City and Business School use different metadata values; check for both
+        // City St George's label temporarily in place accordion to branding guidelines
   cityStGeorgesLabel = String(props.details.listMetadata.location).toLowerCase() === 'tooting' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__label card--course__label--citystgeorges"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Tooting Campus")) : '',
@@ -826,7 +826,7 @@ function Finder__Results__Course(props) {
     className: "card card--course"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: props.details.liveUrl,
-    className: "card__anchor card__details "
+    className: "card__anchor card__details"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "wrapper--card__label__details"
   }, clearing, " ", cityStGeorgesLabel, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
