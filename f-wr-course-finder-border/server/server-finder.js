@@ -20942,39 +20942,14 @@ function Finder__Results__Course(props) {
         // City and Business School use different metadata values; check for both
   cityStGeorgesLabel = String(props.details.listMetadata.location).toLowerCase() === 'tooting' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__label card--course__label--citystgeorges"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "City St George's Tooting Campus")) : '',
-
-  /**/
-
-  /*
-      cityStGeorgesLabel = String(
-          props.details.listMetadata.location
-      ).toLowerCase() === 'tooting' ?
-      <div className="card__label card--course__label--clearing">
-              <p className="card__label card--course__label--clearing">
-                      City St George&apos;s Tooting Campus
-                  </p>
-              </div>
-          : '',
-          */
-  clearing = props.details.title.includes('Bio') ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Tooting Campus")) : '',
+        // City and Business School use different metadata values; check for both
+  clearing = props.details.listMetadata.clearing && ['Yes', 'yes'].includes(props.details.listMetadata.clearing[0]) && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__label card--course__label--clearing"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__label card--course__label--clearing"
-  }, "Clearing")) : '',
-
-  /*
-  // City and Business School use different metadata values; check for both
-  clearing = props.details.listMetadata.clearing &&
-      ['Yes', 'yes'].includes(props.details.listMetadata.clearing[0]) && (
-          <div className="card__label card--course__label--clearing">
-              <p className="card__label card--course__label--clearing">
-                  Clearing
-              </p>
-          </div>
-      ),
-      */
-  external = externalSiteUrl.some(s => props.details.indexUrl.indexOf(s) >= 0) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+  }, "Clearing")),
+        external = externalSiteUrl.some(s => props.details.indexUrl.indexOf(s) >= 0) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-sharp fa-external-link icon",
     "aria-label": "(external link)"
   })) : null,
