@@ -43368,9 +43368,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     display: block;
 }
 
-.card__details__location {
+.card .card__anchor .card__details__location {
     position: absolute;
     right: 0;
+    top: 0;
     background-color: #d61726;
     padding: 0.25rem;
     color: #ffffff;
@@ -43381,27 +43382,32 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .card__details__location {
+    .card .card__anchor .card__details__location {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card__details__location {
+    .card .card__anchor .card__details__location {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card__details__location {
+    .card .card__anchor .card__details__location {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card__details__location {
+    .card .card__anchor .card__details__location {
         letter-spacing: -0.017em;
     }
+}
+
+.card .card__anchor .card__details__location .icon {
+    color: #ffffff;
+    margin-right: initial;
 }
 
 .standard-content__entry-requirement .dropdown-filter {
