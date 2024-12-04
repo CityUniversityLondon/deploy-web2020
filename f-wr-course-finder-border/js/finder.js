@@ -794,8 +794,8 @@ function Finder__Results__Course(props) {
     key: i
   }, "| ", e)))),
         // City St George's label temporarily in place according to branding guidelines
-  cityStGeorgesLabel = String(props.details.listMetadata.location).toLowerCase() === 'tooting' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "card__label card--course__label--citystgeorges"
+  stGeorgesLabel = String(props.details.listMetadata.location).toLowerCase() === 'tooting' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "card__label card--course__label--stgeorges"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-fw fa-map-marker-alt icon",
     "aria-hidden": "true"
@@ -838,7 +838,7 @@ function Finder__Results__Course(props) {
     className: "card__heading"
   }, props.query.query ? Object(_results_formatLabel__WEBPACK_IMPORTED_MODULE_2__["default"])(props.details.title, props.query.query) : props.details.title, external), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__type"
-  }, props.query.query ? Object(_results_formatLabel__WEBPACK_IMPORTED_MODULE_2__["default"])(subtitle, props.query.query) : subtitle && subtitle), description, cityStGeorgesLabel, school, award, duration, courseCode, entryYears, method, location))));
+  }, props.query.query ? Object(_results_formatLabel__WEBPACK_IMPORTED_MODULE_2__["default"])(subtitle, props.query.query) : subtitle && subtitle), description, stGeorgesLabel, school, award, duration, courseCode, entryYears, method, location))));
 }
 
 Finder__Results__Course.propTypes = {
