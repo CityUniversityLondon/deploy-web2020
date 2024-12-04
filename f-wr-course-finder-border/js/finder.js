@@ -793,7 +793,7 @@ function Finder__Results__Course(props) {
   }, e.replace('and', '&')) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
     key: i
   }, "| ", e)))),
-        // City St George's label temporarily in place accordion to branding guidelines
+        // City St George's label temporarily in place according to branding guidelines
   cityStGeorgesLabel = String(props.details.listMetadata.location).toLowerCase() === 'tooting' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "card__label card--course__label--citystgeorges"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Tooting Campus")) : null,

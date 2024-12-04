@@ -6676,7 +6676,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 @media (max-width: 767px) {
     .card--course .wrapper--card__label__details {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
 }
 
