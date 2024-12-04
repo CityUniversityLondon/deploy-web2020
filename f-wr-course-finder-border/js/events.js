@@ -1879,7 +1879,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-const externalSiteUrl = ['bayes.city.ac.uk', 'online.city.ac.uk'];
+const externalSiteUrl = ['www.city.ac.uk'];
 
 function Finder__Results__Course(props) {
   const subtitle = props.details.listMetadata.type && props.details.listMetadata.type[0] || props.details.listMetadata.level && props.details.listMetadata.level[0] || null,
@@ -1928,7 +1928,7 @@ function Finder__Results__Course(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "card__label card--course__label--clearing"
   }, "Clearing")),
-        external = externalSiteUrl.some(s => props.details.indexUrl.indexOf(s) >= 0) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        external = !externalSiteUrl.some(s => props.details.indexUrl.indexOf(s) >= 0) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "fas fa-sharp fa-external-link icon",
     "aria-label": "(external link)"
   })) : null,
