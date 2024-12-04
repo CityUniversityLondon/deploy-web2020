@@ -6711,7 +6711,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card--course .wrapper--card__label__details .card--course__label--citystgeorges {
-    margin-bottom: 2.25rem;
+    margin-top: 0.75rem;
 }
 
 .card--course .wrapper--card__label__details .card--course__label--citystgeorges p {
@@ -6723,9 +6723,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     font-weight: 700;
     margin-top: 0;
     padding: 0.75rem;
-    position: absolute;
-    right: 0;
-    top: 0;
+    display: inline-block;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
