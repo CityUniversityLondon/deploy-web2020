@@ -43410,6 +43410,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-right: initial;
 }
 
+.card .card__anchor .card__details__location-tooting {
+    background-color: #008569;
+}
+
 .standard-content__entry-requirement .dropdown-filter {
     background-color: #f2f2f2;
 }

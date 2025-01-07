@@ -20414,7 +20414,7 @@ function Finder__Results__Accommodation(props) {
         location = props.details.listMetadata.location && props.details.listMetadata.location[0] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "sr-only"
   }, "Distance to"), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "card__details__location"
+    className: `card__details__location card__details__location-${props.details.listMetadata.location[0].trim().replace(' ', '-').toLowerCase()}`
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "fas fa-fw fa-location-dot icon",
     "aria-hidden": "true"
