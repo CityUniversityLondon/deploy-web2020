@@ -1619,10 +1619,12 @@ function Finder__paramCheckbox(props) {
       delete newQuery.parameters.lt_eventDate;
       delete newQuery.parameters.events;
       newQuery.parameters['ge_eventDate'] = currentDateString;
+      newQuery.sortType = 'adate';
     } else {
       delete newQuery.parameters.ge_eventDate;
       newQuery.parameters['lt_eventDate'] = currentDateString;
       newQuery.parameters['events'] = 'past';
+      newQuery.sortType = 'date';
     }
 
     newQuery.startRank = 1;
