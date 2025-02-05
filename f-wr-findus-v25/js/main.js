@@ -2438,197 +2438,192 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 const className = 'campus-map-v25';
-let campus;
 let lat, lng;
 let campusId;
 let campusOverlay;
-let campusZoom; // On page load the northampton square campus is shown on the map as an overlay
-// co-ordinates below draws the 'shape' of the campus overlay
-
-var clerkenwellCampus = [{
-  lat: 51.527261,
-  lng: -0.107649
-}, {
-  lat: 51.527333,
-  lng: -0.106411
-}, {
-  lat: 51.527737,
-  lng: -0.104968
-}, {
-  lat: 51.527824,
-  lng: -0.104421
-}, {
-  lat: 51.528418,
-  lng: -0.101159
-}, {
-  lat: 51.52784,
-  lng: -0.100794
-}, {
-  lat: 51.52784,
-  lng: -0.100794
-}, {
-  lat: 51.52759,
-  lng: -0.101888
-}, {
-  lat: 51.52768,
-  lng: -0.102484
-}, {
-  lat: 51.527624,
-  lng: -0.102693
-}, {
-  lat: 51.5272,
-  lng: -0.103048
-}, {
-  lat: 51.526903,
-  lng: -0.104104
-}, {
-  lat: 51.52771,
-  lng: -0.104635
-}, {
-  lat: 51.526669,
-  lng: -0.105284
-}, {
-  lat: 51.52725,
-  lng: -0.106421
-}, {
-  lat: 51.526689,
-  lng: -0.107671
-}];
-var tootingCampus = [{
-  lat: 51.42871771131454,
-  lng: -0.17409794550102456
-}, {
-  lat: 51.427333969551015,
-  lng: -0.17154881456144014
-}, {
-  lat: 51.42719674940197,
-  lng: -0.17154883345598806
-}, {
-  lat: 51.42652213570394,
-  lng: -0.17261262254587703
-}, {
-  lat: 51.425973297007815,
-  lng: -0.17363968682340267
-}, {
-  lat: 51.42566453304997,
-  lng: -0.1731445558491159
-}, {
-  lat: 51.424075098238916,
-  lng: -0.1740433018916375
-}, // bottom mayburry
-{
-  lat: 51.42472694955013,
-  lng: -0.17646397027100444
-}, {
-  lat: 51.42497852622366,
-  lng: -0.1772525339184661
-}, {
-  lat: 51.42565319025514,
-  lng: -0.1784445684661768
-}, {
-  lat: 51.426545111724465,
-  lng: -0.17923317817964338
-}, {
-  lat: 51.42771148002197,
-  lng: -0.17639052473001537
-}, {
-  lat: 51.428054534331324,
-  lng: -0.17688569618860447
-}, {
-  lat: 51.428260360024545,
-  lng: -0.1764455280204006
-}, {
-  lat: 51.42773434010492,
-  lng: -0.17571194556875333
-}];
-var finsburyCampus = [[{
-  lat: 51.520858774620955,
-  lng: -0.08556863723688905
-}, {
-  lat: 51.52083653205823,
-  lng: -0.08531154647877388
-}, {
-  lat: 51.520778361337925,
-  lng: -0.08532529531463161
-}, {
-  lat: 51.52075440778178,
-  lng: -0.0851438198842833
-}, {
-  lat: 51.520585883979244,
-  lng: -0.08521118813542727
-}, {
-  lat: 51.52059786108497,
-  lng: -0.08538028971282675
-}, {
-  lat: 51.52048665235475,
-  lng: -0.08540641209058407
-}, {
-  lat: 51.52049092985349,
-  lng: -0.08547652721697489
-}, {
-  lat: 51.52044901271319,
-  lng: -0.08548890077010746
-}, {
-  lat: 51.5204592785169,
-  lng: -0.08565662701426627
-}], [{
-  lat: 51.52226476474981,
-  lng: -0.09015529755665408
-}, {
-  lat: 51.52224363127885,
-  lng: -0.08992989274911023
-}, {
-  lat: 51.52185123063815,
-  lng: -0.08993395734466093
-}, {
-  lat: 51.52186711537125,
-  lng: -0.09021479068592209
-}, {
-  lat: 51.52193065682891,
-  lng: -0.09020628113292894
-}, {
-  lat: 51.521966603858395,
-  lng: -0.09080856634806456
-}, {
-  lat: 51.521966603858395,
-  lng: -0.09080856634806456
-}, {
-  lat: 51.52219047244918,
-  lng: -0.09079029525013968
-}, {
-  lat: 51.522260598763985,
-  lng: -0.09022127815580626
-}]];
+let campusZoom;
+let campusLocConfig = {
+  498711: {
+    // clerkenwell
+    lat: '51.527761',
+    lng: '-0.103283',
+    campusZoom: 17,
+    overlay: [{
+      lat: 51.527261,
+      lng: -0.107649
+    }, {
+      lat: 51.527333,
+      lng: -0.106411
+    }, {
+      lat: 51.527737,
+      lng: -0.104968
+    }, {
+      lat: 51.527824,
+      lng: -0.104421
+    }, {
+      lat: 51.528418,
+      lng: -0.101159
+    }, {
+      lat: 51.52784,
+      lng: -0.100794
+    }, {
+      lat: 51.52784,
+      lng: -0.100794
+    }, {
+      lat: 51.52759,
+      lng: -0.101888
+    }, {
+      lat: 51.52768,
+      lng: -0.102484
+    }, {
+      lat: 51.527624,
+      lng: -0.102693
+    }, {
+      lat: 51.5272,
+      lng: -0.103048
+    }, {
+      lat: 51.526903,
+      lng: -0.104104
+    }, {
+      lat: 51.52771,
+      lng: -0.104635
+    }, {
+      lat: 51.526669,
+      lng: -0.105284
+    }, {
+      lat: 51.52725,
+      lng: -0.106421
+    }, {
+      lat: 51.526689,
+      lng: -0.107671
+    }]
+  },
+  763053: {
+    // finsbury
+    lat: '51.5208744',
+    lng: '-0.0852537',
+    campusZoom: 17,
+    overlay: [[{
+      lat: 51.520858774620955,
+      lng: -0.08556863723688905
+    }, {
+      lat: 51.52083653205823,
+      lng: -0.08531154647877388
+    }, {
+      lat: 51.520778361337925,
+      lng: -0.08532529531463161
+    }, {
+      lat: 51.52075440778178,
+      lng: -0.0851438198842833
+    }, {
+      lat: 51.520585883979244,
+      lng: -0.08521118813542727
+    }, {
+      lat: 51.52059786108497,
+      lng: -0.08538028971282675
+    }, {
+      lat: 51.52048665235475,
+      lng: -0.08540641209058407
+    }, {
+      lat: 51.52049092985349,
+      lng: -0.08547652721697489
+    }, {
+      lat: 51.52044901271319,
+      lng: -0.08548890077010746
+    }, {
+      lat: 51.5204592785169,
+      lng: -0.08565662701426627
+    }], [{
+      lat: 51.52226476474981,
+      lng: -0.09015529755665408
+    }, {
+      lat: 51.52224363127885,
+      lng: -0.08992989274911023
+    }, {
+      lat: 51.52185123063815,
+      lng: -0.08993395734466093
+    }, {
+      lat: 51.52186711537125,
+      lng: -0.09021479068592209
+    }, {
+      lat: 51.52193065682891,
+      lng: -0.09020628113292894
+    }, {
+      lat: 51.521966603858395,
+      lng: -0.09080856634806456
+    }, {
+      lat: 51.521966603858395,
+      lng: -0.09080856634806456
+    }, {
+      lat: 51.52219047244918,
+      lng: -0.09079029525013968
+    }, {
+      lat: 51.522260598763985,
+      lng: -0.09022127815580626
+    }]]
+  },
+  795583: {
+    // tooting
+    lat: '51.4262478',
+    lng: '-0.177115',
+    campusZoom: 16,
+    overlay: [{
+      lat: 51.42871771131454,
+      lng: -0.17409794550102456
+    }, {
+      lat: 51.427333969551015,
+      lng: -0.17154881456144014
+    }, {
+      lat: 51.42719674940197,
+      lng: -0.17154883345598806
+    }, {
+      lat: 51.42652213570394,
+      lng: -0.17261262254587703
+    }, {
+      lat: 51.425973297007815,
+      lng: -0.17363968682340267
+    }, {
+      lat: 51.42566453304997,
+      lng: -0.1731445558491159
+    }, {
+      lat: 51.424075098238916,
+      lng: -0.1740433018916375
+    }, {
+      lat: 51.42472694955013,
+      lng: -0.17646397027100444
+    }, {
+      lat: 51.42497852622366,
+      lng: -0.1772525339184661
+    }, {
+      lat: 51.42565319025514,
+      lng: -0.1784445684661768
+    }, {
+      lat: 51.426545111724465,
+      lng: -0.17923317817964338
+    }, {
+      lat: 51.42771148002197,
+      lng: -0.17639052473001537
+    }, {
+      lat: 51.428054534331324,
+      lng: -0.17688569618860447
+    }, {
+      lat: 51.428260360024545,
+      lng: -0.1764455280204006
+    }, {
+      lat: 51.42773434010492,
+      lng: -0.17571194556875333
+    }]
+  }
+};
 
 function createMap(mapContainer) {
   const getCampus = mapContainer.getAttribute('data-campus');
-  campus = getCampus ? getCampus : 'clerkenwell'; // set to Clerkenwell for default
+  campusId = getCampus ? getCampus : '498711'; // set to Clerkenwell for default
 
-  console.log(`Campus : ${campus}`);
-
-  if (campus === 'clerkenwell') {
-    // for default map load position
-    lat = '51.527761';
-    lng = '-0.103283'; // default campus info baloon to display on page load
-
-    campusId = '498711'; // fetches correct campus overlay coordinates
-
-    campusOverlay = clerkenwellCampus;
-    campusZoom = 17;
-  } else if (campus === 'finsbury') {
-    lat = '51.5208744';
-    lng = '-0.0852537';
-    campusId = '763053';
-    campusOverlay = finsburyCampus;
-    campusZoom = 17;
-  } else if (campus === 'tooting') {
-    lat = '51.4262478';
-    lng = '-0.177115';
-    campusId = '795583';
-    campusOverlay = tootingCampus;
-    campusZoom = 16;
-  } // == PROPERTIES ==
-
+  lat = campusLocConfig[campusId]['lat'];
+  lng = campusLocConfig[campusId]['lng'];
+  campusOverlay = campusLocConfig[campusId]['overlay'];
+  campusZoom = campusLocConfig[campusId]['campusZoom']; // == PROPERTIES ==
 
   let
   /**
@@ -2757,14 +2752,9 @@ function createMap(mapContainer) {
   let marker;
 
   function hashChange(id) {
-    // Trigger - to show northampton square campus marker on initial load
-    if (id === '' || id === campusId) {
+    // Trigger - to show relevant campus marker on initial load
+    if (id === '') {
       id = campusId;
-    }
-
-    if (id !== campusId) {
-      // removes northampton square campus map overlay
-      initialMapOverlay.setMap(null);
     } //loop over  bigBuildingsArray to find marker
 
 
@@ -2790,7 +2780,22 @@ function createMap(mapContainer) {
 
         map.panTo(marker.position); //add marker to map
 
-        marker.setMap(map);
+        marker.setMap(map); // checks if location is an campus, if so then it would activate the overlay for that campus
+
+        if (id in campusLocConfig) {
+          // seems like a small delay is needed sometimes to apply overlay
+          setTimeout(() => {
+            showOverlay(campusLocConfig[id]['overlay']);
+          }, '100');
+        } else {
+          // else as it is normal location, then removes overlay if present
+          initialMapOverlay.setMap(null);
+        }
+
+        break;
+      } else {
+        // else as it is normal location, then removes overlay if present
+        initialMapOverlay.setMap(null);
       }
     }
   }
@@ -2989,8 +2994,7 @@ function createMap(mapContainer) {
       const itemCampusCheck = $self.getElementsByTagName('campus')[0].textContent;
       console.log(`item : ${getTitle}, campus : ${itemCampusCheck}`);
 
-      if (itemCampusCheck === campus || campus === 'all') {
-        console.log(`MATCH campus ${campus} ..., === ${itemCampusCheck} `);
+      if (itemCampusCheck === campusId || campusId === '498711') {//console.log(`MATCH campus ${campus} ..., === ${itemCampusCheck} `);
       }
 
       markerConfig.index = index + 1;
@@ -3335,8 +3339,7 @@ function createMap(mapContainer) {
     clearSearchButton ? clearSearchButton.remove() : null;
   } // Optional - to show all markers in the buildingsArray on initial load
   //showOverlays(cityLayers.bigBuildingsArray);
-  // loads northampton square campus map overlay on initial load
-  //or can be displayed using: initialMapOverlay.setMap(map);
+  // loads relevant campus map overlay on initial page load
 
 
   var initialMapOverlay = new google.maps.Polygon({
@@ -3348,7 +3351,22 @@ function createMap(mapContainer) {
     fillColor: '#FF0000',
     fillOpacity: 0.2,
     geodesic: true
-  });
+  }); // function to load specific campus overlay
+
+  function showOverlay(newCampusOverlay) {
+    initialMapOverlay.setMap(null);
+    initialMapOverlay = new google.maps.Polygon({
+      map: map,
+      paths: newCampusOverlay,
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 0,
+      fillColor: '#FF0000',
+      fillOpacity: 0.2,
+      geodesic: true
+    });
+  }
+
   init();
 }
 
