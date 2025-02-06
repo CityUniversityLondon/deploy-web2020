@@ -2442,12 +2442,14 @@ let lat, lng;
 let campusId;
 let campusOverlay;
 let campusZoom;
+let dataSrc;
 let campusLocConfig = {
   498711: {
     // clerkenwell
     lat: '51.527761',
     lng: '-0.103283',
     campusZoom: 17,
+    dataSrc: '/feed/locations/campus-map-locations-v25-clerkenwell/_nocache',
     overlay: [{
       lat: 51.527261,
       lng: -0.107649
@@ -2503,6 +2505,7 @@ let campusLocConfig = {
     lat: '51.5208744',
     lng: '-0.0852537',
     campusZoom: 17,
+    dataSrc: '/feed/locations/campus-map-locations-v25-finsbury/_nocache',
     overlay: [[{
       lat: 51.520858774620955,
       lng: -0.08556863723688905
@@ -2567,6 +2570,7 @@ let campusLocConfig = {
     lat: '51.4262478',
     lng: '-0.177115',
     campusZoom: 16,
+    dataSrc: '/feed/locations/campus-map-locations-v25-tooting/_nocache',
     overlay: [{
       lat: 51.42871771131454,
       lng: -0.17409794550102456
@@ -2615,6 +2619,15 @@ let campusLocConfig = {
     }]
   }
 };
+let locationCounter = {
+  building: 0,
+  'student-service': 0,
+  library: 0,
+  'lecture-theatre': 0,
+  'residential-hall': 0
+}; // var to check if needing to remove the map search incase there are no locations inside the accordions
+
+let removeSearch = true;
 
 function createMap(mapContainer) {
   const getCampus = mapContainer.getAttribute('data-campus');
@@ -2623,15 +2636,10 @@ function createMap(mapContainer) {
   lat = campusLocConfig[campusId]['lat'];
   lng = campusLocConfig[campusId]['lng'];
   campusOverlay = campusLocConfig[campusId]['overlay'];
-  campusZoom = campusLocConfig[campusId]['campusZoom']; // == PROPERTIES ==
+  campusZoom = campusLocConfig[campusId]['campusZoom'];
+  dataSrc = campusLocConfig[campusId]['dataSrc']; // == PROPERTIES ==
 
   let
-  /**
-   * data source - relative to handle production and test environments
-   * @let {String}
-   */
-  dataSrc = '/feed/locations/campus-map-locations-v25/_nocache',
-
   /**
    * Create a LatLng object containing the coordinate for the center of the map
    * @let {Object}
@@ -2967,6 +2975,11 @@ function createMap(mapContainer) {
     }); //add li item to accordion category ul
 
     listId ? listId.appendChild(listItem).appendChild(anchor) : null;
+
+    if (markerConfig.category in locationCounter) {
+      locationCounter[markerConfig.category] += 1;
+    }
+
     return marker;
   } //end fn.createMarker
 
@@ -3215,7 +3228,21 @@ function createMap(mapContainer) {
     window.addEventListener('hashchange', hashChange); // Since the event is only triggered when the hash changes, we need to trigger
     // the event now, to handle the hash the page may have loaded with.
 
-    hashChange(location.hash.replace('#', ''));
+    hashChange(location.hash.replace('#', '')); // cleans up empty accorions
+
+    for (let key in locationCounter) {
+      if (locationCounter[key] === 0) {
+        // selects empty accordion
+        document.getElementById('accordion-' + key).style.display = 'none';
+      } else {
+        // basically checks to remove the search if all location values are 0, then no search required
+        removeSearch = false;
+      }
+    }
+
+    if (removeSearch === true) {
+      document.getElementById('map-controls').style.display = 'none';
+    }
   } //end parse xml,
   // Loads location data from 'dataSrc' -json containing location info
 
