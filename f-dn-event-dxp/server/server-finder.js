@@ -21745,6 +21745,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Finder__paramCheckbox(props) {
+  const dateDayFormat = 10;
   const stringLength = 16,
         stringOffset = -4,
         randomNumber = Math.random().toString(stringLength).slice(stringOffset),
@@ -21756,7 +21757,7 @@ function Finder__paramCheckbox(props) {
         currentYear = currentDate.getUTCFullYear(),
         currentDateMonth = currentDate.getUTCMonth() >= 10 ? currentDate.getUTCMonth() : '0' + (currentDate.getUTCMonth() + 1),
         currentDateDay = currentDate.getUTCDate(),
-        currentDateString = `${currentYear}${currentDateMonth}${currentDateDay}`;
+        currentDateString = `${currentYear}${currentDateMonth}${currentDateDay >= dateDayFormat ? currentDateDay : '0' + currentDateDay}`;
 
   const toggleFacet = () => {
     let newQuery = props.query;
@@ -21858,11 +21859,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Finder__Select(props) {
+  const dateDayFormat = 10;
   const currentDate = new Date(),
         currentYear = currentDate.getUTCFullYear(),
         currentDateMonth = currentDate.getUTCMonth() >= 10 ? currentDate.getUTCMonth() : '0' + (currentDate.getUTCMonth() + 1),
         currentDateDay = currentDate.getUTCDate(),
-        currentDateString = `${currentYear}${currentDateMonth}${currentDateDay}`;
+        currentDateString = `${currentYear}${currentDateMonth}${currentDateDay >= dateDayFormat ? currentDateDay : '0' + currentDateDay}`;
   const randomNumber = props.mobile ? 'mobile' : 'desktop',
         currentValue = props.query.facets[props.facet.meta] || ''; // reduce the facet configuration to an array of all possible values for
   // the facet
@@ -23058,7 +23060,7 @@ function Finder__Query(props) {
 
       if (e.target.value) {
         // input is populated, ask for suggestions
-        const [suggestionsPromise, newCall] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_2__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
+        const [suggestionsPromise, newCall] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_2__["suggest"])(props.query.collection, e.target.value, props.config.dxp ? props.config.dxp : false); // update our request cancel function for the new request
 
         setCall({
           cancel: () => {
@@ -23822,9 +23824,12 @@ __webpack_require__.r(__webpack_exports__);
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-const baseUrl = 'https://www.city.ac.uk/web-services/dxp-fb',
-      findRootUrl = '/funnelback-dxp-find',
-      suggestRootUrl = '/funnelback-dxp-suggest',
+const baseUrl = 'https://www.city.ac.uk/web-services',
+      dxpBaseUrl = 'https://www.city.ac.uk/web-services/dxp-fb',
+      findRootUrl = '/funnelback-16-find',
+      dxpFindRootUrl = '/funnelback-dxp-find',
+      dxpSuggestRootUrl = '/funnelback-dxp-suggest',
+      suggestRootUrl = '/funnelback-16-suggest',
       maximumSuggestions = 100,
       timeout = 30000;
 /**
@@ -23839,7 +23844,7 @@ const baseUrl = 'https://www.city.ac.uk/web-services/dxp-fb',
  * @return {Promise} - A promise of search results.
  */
 
-function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters) {
+function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters, dxp) {
   const fixedParams = {};
   fixedParameters.forEach(param => {
     fixedParams[`${param.name}`] = param.value;
@@ -23857,12 +23862,12 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: baseUrl,
+    baseURL: dxp ? dxpBaseUrl : baseUrl,
     cancelToken: call.token,
     httpsAgent: new https__WEBPACK_IMPORTED_MODULE_1___default.a.Agent({
       keepAlive: true
     }),
-    url: findRootUrl,
+    url: dxp ? dxpFindRootUrl : findRootUrl,
     timeout: timeout,
     params: { ...fixedParams,
       ...fixedFacetParams,
@@ -23885,13 +23890,13 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
  * @return {Promise} - A promise of an array of suggestion strings.
  */
 
-function suggest(collection, partialQuery) {
+function suggest(collection, partialQuery, dxp) {
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: baseUrl,
+    baseURL: dxp ? dxpBaseUrl : baseUrl,
     cancelToken: call.token,
-    url: suggestRootUrl,
+    url: dxp ? dxpSuggestRootUrl : suggestRootUrl,
     timeout: timeout,
     params: {
       collection: collection,
@@ -24154,7 +24159,7 @@ function useLogicWrapper(config, results, matrixQuery, element) {
 
     call.cancel(); // make a new, asynchronous request to Funnelback
 
-    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_5__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters); // save the requestToken
+    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_5__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters, config.dxp ? config.dxp : false); // save the requestToken
 
     setCall({
       cancel: () => {

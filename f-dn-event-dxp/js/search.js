@@ -1552,9 +1552,12 @@ __webpack_require__.r(__webpack_exports__);
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-const baseUrl = 'https://www.city.ac.uk/web-services/dxp-fb',
-      findRootUrl = '/funnelback-dxp-find',
-      suggestRootUrl = '/funnelback-dxp-suggest',
+const baseUrl = 'https://www.city.ac.uk/web-services',
+      dxpBaseUrl = 'https://www.city.ac.uk/web-services/dxp-fb',
+      findRootUrl = '/funnelback-16-find',
+      dxpFindRootUrl = '/funnelback-dxp-find',
+      dxpSuggestRootUrl = '/funnelback-dxp-suggest',
+      suggestRootUrl = '/funnelback-16-suggest',
       maximumSuggestions = 100,
       timeout = 30000;
 /**
@@ -1569,7 +1572,7 @@ const baseUrl = 'https://www.city.ac.uk/web-services/dxp-fb',
  * @return {Promise} - A promise of search results.
  */
 
-function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters) {
+function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters, dxp) {
   const fixedParams = {};
   fixedParameters.forEach(param => {
     fixedParams[`${param.name}`] = param.value;
@@ -1587,12 +1590,12 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: baseUrl,
+    baseURL: dxp ? dxpBaseUrl : baseUrl,
     cancelToken: call.token,
     httpsAgent: new https__WEBPACK_IMPORTED_MODULE_1___default.a.Agent({
       keepAlive: true
     }),
-    url: findRootUrl,
+    url: dxp ? dxpFindRootUrl : findRootUrl,
     timeout: timeout,
     params: { ...fixedParams,
       ...fixedFacetParams,
@@ -1615,13 +1618,13 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
  * @return {Promise} - A promise of an array of suggestion strings.
  */
 
-function suggest(collection, partialQuery) {
+function suggest(collection, partialQuery, dxp) {
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: baseUrl,
+    baseURL: dxp ? dxpBaseUrl : baseUrl,
     cancelToken: call.token,
-    url: suggestRootUrl,
+    url: dxp ? dxpSuggestRootUrl : suggestRootUrl,
     timeout: timeout,
     params: {
       collection: collection,
@@ -2462,7 +2465,7 @@ function Search__Query(props) {
 
       if (e.target.value) {
         // input is populated, ask for suggestions
-        const [suggestionsPromise, newCall] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
+        const [suggestionsPromise, newCall] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["suggest"])(props.query.collection, e.target.value, props.config.dxp ? props.config.dxp : false); // update our request cancel function for the new request
 
         setCall({
           cancel: () => {
@@ -3241,8 +3244,8 @@ function InlineSearch(props) {
     call.cancel();
     suggestionsCall.cancel(); // make new, asynchronous requests to Funnelback
 
-    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters);
-    const [suggestionsRequest, suggestionsRequestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["suggest"])(query.collection, query.query); // save the requestTokens
+    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters, props.config.dxp ? props.config.dxp : false);
+    const [suggestionsRequest, suggestionsRequestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["suggest"])(query.collection, query.query, props.config.dxp ? props.config.dxp : false); // save the requestTokens
 
     setCall({
       cancel: () => {
@@ -3553,7 +3556,7 @@ function Search(props) {
       query.interacted && props.element.querySelector('.search__results') && zenscroll__WEBPACK_IMPORTED_MODULE_7___default.a.center(props.element.querySelector('.search__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
       props.config.primary.collections.forEach((collection, i) => {
         fbResponses.primary[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(collection.collection, [], [], query.query, '', query.startRank, query.numRanks, [], []),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(collection.collection, [], [], query.query, '', query.startRank, query.numRanks, [], [], props.config.dxp ? props.config.dxp : false),
               newResponses = fbResponses;
         newResponses.primary[i].call = {
           cancel: () => {
@@ -3579,7 +3582,7 @@ function Search(props) {
       });
       props.config.finders.forEach((finder, i) => {
         fbResponses.finders[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(finder.collection, [], [], query.query, '', 1, finder.numRanks, [], []),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(finder.collection, [], [], query.query, '', 1, finder.numRanks, [], [], props.config.dxp ? props.config.dxp : false),
               newResponses = fbResponses;
         newResponses.finders[i].call = {
           cancel: () => {
@@ -3607,7 +3610,7 @@ function Search(props) {
       });
       props.config.nonpublic.forEach((nonpublic, i) => {
         fbResponses.nonpublic[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(nonpublic.collection, [], [], query.query, '', 1, 0, [], []),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(nonpublic.collection, [], [], query.query, '', 1, 0, [], [], props.config.dxp ? props.config.dxp : false),
               newResponses = fbResponses;
         newResponses.nonpublic[i].call = {
           cancel: () => {
