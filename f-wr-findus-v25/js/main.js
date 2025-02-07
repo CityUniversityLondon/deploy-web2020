@@ -2627,7 +2627,7 @@ let locationCounter = {
   'residential-hall': 0
 }; // var to check if needing to remove the map search incase there are no locations inside the accordions
 
-let removeSearch = true;
+let showSearch = false;
 
 function createMap(mapContainer) {
   const getCampus = mapContainer.getAttribute('data-campus');
@@ -3231,17 +3231,15 @@ function createMap(mapContainer) {
     hashChange(location.hash.replace('#', '')); // cleans up empty accorions
 
     for (let key in locationCounter) {
-      if (locationCounter[key] === 0) {
+      if (locationCounter[key] > 0) {
         // selects empty accordion
-        document.getElementById('accordion-' + key).style.display = 'none';
-      } else {
-        // basically checks to remove the search if all location values are 0, then no search required
-        removeSearch = false;
+        document.getElementById('accordion-' + key).style.display = 'block';
+        showSearch = true;
       }
     }
 
-    if (removeSearch === true) {
-      document.getElementById('map-controls').style.display = 'none';
+    if (showSearch === true) {
+      document.getElementById('map-controls').style.display = 'block';
     }
   } //end parse xml,
   // Loads location data from 'dataSrc' -json containing location info

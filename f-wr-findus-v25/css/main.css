@@ -44098,6 +44098,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     position: relative;
 }
 
+#map-controls.campus-map-v25__controls {
+    display: none;
+}
+
 .campus-map-v25__controls__container {
     display: flex;
 }
@@ -44388,8 +44392,11 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     z-index: 1;
 }
 
+.campus-map-v25__controls__locations .accordion.accordion--location {
+    display: none;
+}
+
 .campus-map-v25__controls__locations[data-show='true'] {
-    display: inherit;
     position: absolute;
     width: 100%;
     top: 2.93rem;
