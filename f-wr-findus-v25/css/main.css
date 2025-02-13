@@ -20981,7 +20981,7 @@ figure figcaption a:active,
     top: -2rem;
     padding: 1.5rem;
     color: #ffffff;
-    background-color: #00294a;
+    background-color: #0c0c0e;
     width: calc(100% - 5rem);
     margin-right: auto;
     margin-left: auto;
@@ -21230,7 +21230,7 @@ figure figcaption a:active,
 }
 
 .swiper-indicator__active-slider {
-    color: #d61726;
+    color: #0c0c0e;
 }
 
 .swiper-indicator__slider-length {
@@ -21253,8 +21253,8 @@ figure figcaption a:active,
 }
 
 .swiper-slider-arrow {
-    color: #d61726;
-    border: 0.0625rem solid #d61726;
+    color: #0c0c0e;
+    border: 0.0625rem solid #0c0c0e;
     padding: 0.75rem;
     font-weight: 400;
 }
@@ -21262,13 +21262,13 @@ figure figcaption a:active,
 @media (hover: hover) {
     .swiper-slider-arrow:hover {
         color: #ffffff;
-        background: #d61726;
+        background: #0c0c0e;
     }
 }
 
 .swiper-slider-arrow:focus, .swiper-slider-arrow:active {
     color: #ffffff;
-    background: #d61726;
+    background: #0c0c0e;
 }
 
 .swiper-slider-arrow:focus:focus, .swiper-slider-arrow:focus:active, .swiper-slider-arrow:active:focus, .swiper-slider-arrow:active:active {
@@ -37932,7 +37932,7 @@ article .link-copy {
         text-decoration: underline;
     }
     .js .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
-        background: #3e1031;
+        background: #d61726;
         color: #ffffff;
         text-decoration: underline;
     }
@@ -37947,7 +37947,7 @@ article .link-copy {
         color: #1e1e1e;
     }
     .js .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__indicator {
-        background: #3e1031;
+        background: #d61726;
         color: #ffffff;
     }
     .js .tabs--accordion > .accordion .accordion__heading button {
@@ -37972,7 +37972,7 @@ article .link-copy {
         padding: 1rem;
         text-align: center;
         text-decoration: underline;
-        background: #3e1031;
+        background: #d61726;
         color: #ffffff;
     }
     .js .tabs--accordion > .accordion .accordion__heading button .accordion__heading__indicator:before {
@@ -37990,11 +37990,11 @@ article .link-copy {
     }
     .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__indicator,
     .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
-        background: #3e1031;
+        background: #d61726;
         color: #ffffff;
     }
     .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__indicator {
-        background: #3e1031;
+        background: #d61726;
         color: #ffffff;
     }
     .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__text {
@@ -51611,13 +51611,8 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 }
 
 .landing--latest .wrapper--landing__contact {
-    background-color: #5d184a;
-    color: #ffffff;
+    background-color: #f2f2f2;
     grid-column: 1/-1;
-}
-
-.landing--latest .wrapper--landing__contact .landing__contact__heading {
-    border-bottom-color: #7c2062;
 }
 
 .landing--latest .wrapper--landing__contact .landing__contact .related-content {
@@ -51640,120 +51635,6 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
     }
 }
 
-.landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    transition: background-size 0.2s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    background-position: 0 100%;
-    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #cbcbcb;
-}
-
-@media (hover: hover) {
-    .landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:focus, .landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a {
-        transition: none;
-    }
-}
-
-@media (hover: hover) {
-    .landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:hover {
-        background-size: 100% 100%;
-        background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
-    }
-}
-
-.landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:focus, .landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:active {
-    outline-color: #ffffff;
-    outline-offset: 0.1875rem;
-    outline-style: solid;
-    outline-width: 0.125rem;
-}
-
-.landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:visited {
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #cbcbcb;
-}
-
-.landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:focus {
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #cbcbcb;
-}
-
-@media (hover: hover) {
-    .landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:hover {
-        border-bottom-color: #cbcbcb;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #0c0c0e;
-    }
-}
-
-.landing--latest .wrapper--landing__contact .landing__contact .related-content .card__details .card__tag a:active {
-    background-color: #cbcbcb;
-    border-bottom-color: #cbcbcb;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #0c0c0e;
-}
-
-.landing--latest .wrapper--landing__contact .landing__contact .related-content .card--contact .card__details .card__tag .icon {
-    color: #ffffff;
-}
-
 .landing--latest .wrapper--landing__contact .landing__contact .related-content li {
     padding-right: 1.5rem;
     width: unset;
@@ -51762,7 +51643,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 @media (max-width: 767px) {
     .landing--latest .wrapper--landing__contact .landing__contact .related-content li + li {
         border-left: 0;
-        border-top-color: #7c2062;
+        border-top-color: #0c0c0e;
         border-top-style: solid;
         border-top-width: 0.0625rem;
         padding-left: 0;
@@ -51772,7 +51653,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 
 @media (min-width: 768px) {
     .landing--latest .wrapper--landing__contact .landing__contact .related-content li + li {
-        border-left-color: #7c2062;
+        border-left-color: #0c0c0e;
         border-left-style: solid;
         border-left-width: 0.0625rem;
         border-top: 0;

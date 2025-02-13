@@ -148,7 +148,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push([9,"react","vendor-dependencies","axios"]);
+/******/ 	deferredModules.push([8,"react","vendor-dependencies","axios"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -283,7 +283,10 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 const baseUrl = 'https://www.city.ac.uk/web-services',
+      dxpBaseUrl = 'https://www.city.ac.uk/web-services/dxp-fb',
       findRootUrl = '/funnelback-16-find',
+      dxpFindRootUrl = '/funnelback-dxp-find',
+      dxpSuggestRootUrl = '/funnelback-dxp-suggest',
       suggestRootUrl = '/funnelback-16-suggest',
       maximumSuggestions = 100,
       timeout = 30000;
@@ -299,7 +302,7 @@ const baseUrl = 'https://www.city.ac.uk/web-services',
  * @return {Promise} - A promise of search results.
  */
 
-function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters) {
+function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters, dxp) {
   const fixedParams = {};
   fixedParameters.forEach(param => {
     fixedParams[`${param.name}`] = param.value;
@@ -317,12 +320,12 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: baseUrl,
+    baseURL: dxp ? dxpBaseUrl : baseUrl,
     cancelToken: call.token,
     httpsAgent: new https__WEBPACK_IMPORTED_MODULE_1___default.a.Agent({
       keepAlive: true
     }),
-    url: findRootUrl,
+    url: dxp ? dxpFindRootUrl : findRootUrl,
     timeout: timeout,
     params: { ...fixedParams,
       ...fixedFacetParams,
@@ -345,13 +348,13 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
  * @return {Promise} - A promise of an array of suggestion strings.
  */
 
-function suggest(collection, partialQuery) {
+function suggest(collection, partialQuery, dxp) {
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: baseUrl,
+    baseURL: dxp ? dxpBaseUrl : baseUrl,
     cancelToken: call.token,
-    url: suggestRootUrl,
+    url: dxp ? dxpSuggestRootUrl : suggestRootUrl,
     timeout: timeout,
     params: {
       collection: collection,
@@ -707,7 +710,7 @@ function Query(props) {
 
       if (e.target.value) {
         // input is populated, ask for suggestions
-        const [suggestionsPromise, newCall] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["suggest"])('city-university~sp-web2020-courses', e.target.value); // update our request cancel function for the new request
+        const [suggestionsPromise, newCall] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["suggest"])('city-university~sp-web2020-courses', e.target.value, props.config.dxp ? props.config.dxp : false); // update our request cancel function for the new request
 
         setCall({
           cancel: () => {
@@ -1369,7 +1372,7 @@ function disableBodyScroll() {
 
 /***/ }),
 
-/***/ 9:
+/***/ 8:
 /*!*****************************************!*\
   !*** multi ./src/browser-search-box.js ***!
   \*****************************************/
