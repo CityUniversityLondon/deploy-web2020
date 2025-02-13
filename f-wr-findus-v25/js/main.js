@@ -3003,13 +3003,6 @@ function createMap(mapContainer) {
     Array.from(items).forEach(function (item) {
       $self = item;
       markerConfig.openingHours = [];
-      const getTitle = $self.getElementsByTagName('title')[0].textContent;
-      const itemCampusCheck = $self.getElementsByTagName('campus')[0].textContent;
-      console.log(`item : ${getTitle}, campus : ${itemCampusCheck}`);
-
-      if (itemCampusCheck === campusId || campusId === '498711') {//console.log(`MATCH campus ${campus} ..., === ${itemCampusCheck} `);
-      }
-
       markerConfig.index = index + 1;
       markerConfig.id = $self.getElementsByTagName('guid')[0].textContent;
       markerConfig.name = $self.getElementsByTagName('title')[0].textContent;
