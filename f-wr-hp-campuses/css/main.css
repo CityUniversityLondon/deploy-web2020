@@ -816,11 +816,11 @@
 }
 
 .color--orange50 {
-    color: #f25d21;
+    color: #ff4e00;
 }
 
 .background--orange50 {
-    background-color: #f25d21;
+    background-color: #ff4e00;
 }
 
 .color--orange60 {
@@ -992,11 +992,11 @@
 }
 
 .color--teal60 {
-    color: #007e8b;
+    color: #009b77;
 }
 
 .background--teal60 {
-    background-color: #007e8b;
+    background-color: #009b77;
 }
 
 .color--teal70 {
@@ -8284,19 +8284,19 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 @media (min-width: 768px) {
     .card__side-image.background--orange50 figure:after {
-        background-color: #f25d21;
+        background-color: #ff4e00;
     }
 }
 
 @media (max-width: 767px) {
     .card__side-image.background--orange50 figure {
-        background-color: #f25d21;
+        background-color: #ff4e00;
     }
 }
 
 .card__side-image.background--orange50 .card__side-image__text {
     color: #1e1e1e;
-    background-color: #f25d21;
+    background-color: #ff4e00;
 }
 
 .card__side-image.background--orange50 img {
@@ -45269,7 +45269,7 @@ div#CybotCookiebotDialogPoweredByText {
 
 .sc-content--teal {
     color: #ffffff;
-    background-color: #007e8b;
+    background-color: #009b77;
 }
 
 .sc-content--teal.sc-content--link {
@@ -45279,15 +45279,15 @@ div#CybotCookiebotDialogPoweredByText {
 
 .sc-content--teal.sc-content--link .sc-content__heading {
     color: #ffffff;
-    background-color: #007e8b;
+    background-color: #009b77;
 }
 
 .sc-content--teal.sc-content--link a {
-    background-color: #007e8b;
+    background-color: #009b77;
 }
 
 .sc-content--teal.sc-content--link a:hover, .sc-content--teal.sc-content--link a:focus, .sc-content--teal.sc-content--link a:active {
-    background-image: linear-gradient(120deg, #007e8b 0%, #007e8b 100%);
+    background-image: linear-gradient(120deg, #009b77 0%, #009b77 100%);
 }
 
 .sc-content--teal.sc-content--link a .sc-content__heading {
@@ -45296,7 +45296,7 @@ div#CybotCookiebotDialogPoweredByText {
 
 .sc-content--teal.sc-content--link .sc-content__icon {
     color: #ffffff;
-    background-color: #007e8b;
+    background-color: #009b77;
 }
 
 .sc-content--yellow {
@@ -45595,11 +45595,11 @@ main .campuses__links .campuses__links__cards li:nth-child(1) .campuses__links__
 }
 
 main .campuses__links .campuses__links__cards li:nth-child(2) .campuses__links__card--label__heading-icon {
-    background: #f25d21;
+    background: #ff4e00;
 }
 
 main .campuses__links .campuses__links__cards li:nth-child(3) .campuses__links__card--label__heading-icon {
-    background: #007e8b;
+    background: #009b77;
 }
 
 main .campuses__links .campuses__links__card {
@@ -65881,8 +65881,8 @@ main .standard-content .content {
     background: #d61726;
     border: 0.125rem solid #d61726;
     color: #ffffff;
-    background-color: #007e8b;
-    border-color: #007e8b;
+    background-color: #009b77;
+    border-color: #009b77;
     color: #ffffff;
 }
 
@@ -66021,7 +66021,7 @@ main .standard-content .content {
 }
 
 .scc .banner__standfirst-cta:visited {
-    border-color: #007e8b;
+    border-color: #009b77;
     color: #ffffff;
 }
 
@@ -66030,28 +66030,28 @@ main .standard-content .content {
 }
 
 .scc .banner__standfirst-cta:focus, .scc .banner__standfirst-cta:active {
-    background-color: #007e8b;
-    border-color: #007e8b;
+    background-color: #009b77;
+    border-color: #009b77;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .scc .banner__standfirst-cta:hover {
-        background-color: #005058;
-        border-color: #005058;
+        background-color: #006850;
+        border-color: #006850;
         color: #ffffff;
     }
 }
 
 .scc .banner__standfirst-cta:active {
-    background-color: #005058;
-    border-color: #005058;
+    background-color: #006850;
+    border-color: #006850;
 }
 
 .scc .banner__standfirst-cta:disabled {
     color: #ffffff;
-    background: #007e8b;
-    border-color: #007e8b;
+    background: #009b77;
+    border-color: #009b77;
 }
 
 .scc .banner__standfirst-cta:active span, .scc .banner__standfirst-cta:focus span, .scc .banner__standfirst-cta:hover span {

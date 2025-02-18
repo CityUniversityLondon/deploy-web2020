@@ -816,11 +816,11 @@
 }
 
 .color--orange50 {
-    color: #f25d21;
+    color: #ff4e00;
 }
 
 .background--orange50 {
-    background-color: #f25d21;
+    background-color: #ff4e00;
 }
 
 .color--orange60 {
@@ -992,11 +992,11 @@
 }
 
 .color--teal60 {
-    color: #007e8b;
+    color: #009b77;
 }
 
 .background--teal60 {
-    background-color: #007e8b;
+    background-color: #009b77;
 }
 
 .color--teal70 {
@@ -8266,19 +8266,19 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 @media (min-width: 768px) {
     .card__side-image.background--orange50 figure:after {
-        background-color: #f25d21;
+        background-color: #ff4e00;
     }
 }
 
 @media (max-width: 767px) {
     .card__side-image.background--orange50 figure {
-        background-color: #f25d21;
+        background-color: #ff4e00;
     }
 }
 
 .card__side-image.background--orange50 .card__side-image__text {
     color: #1e1e1e;
-    background-color: #f25d21;
+    background-color: #ff4e00;
 }
 
 .card__side-image.background--orange50 img {
@@ -32585,11 +32585,11 @@ main .campuses__links .campuses__links__cards li:nth-child(1) .campuses__links__
 }
 
 main .campuses__links .campuses__links__cards li:nth-child(2) .campuses__links__card--label__heading-icon {
-    background: #f25d21;
+    background: #ff4e00;
 }
 
 main .campuses__links .campuses__links__cards li:nth-child(3) .campuses__links__card--label__heading-icon {
-    background: #007e8b;
+    background: #009b77;
 }
 
 main .campuses__links .campuses__links__card {
