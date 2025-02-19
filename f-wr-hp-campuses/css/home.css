@@ -31773,7 +31773,7 @@ main .home__news-events {
     display: flex;
     gap: 1rem;
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 0;
 }
 
 @media (min-width: 1024px) {
@@ -32539,8 +32539,49 @@ main .campuses {
     }
 }
 
+main .campuses__content p {
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-family: "Meta Sans", Trebuchet MS, arial, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    letter-spacing: -0.008em;
+}
+
+main .campuses__content p i,
+main .campuses__content p em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    main .campuses__content p {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    main .campuses__content p {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    main .campuses__content p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    main .campuses__content p {
+        letter-spacing: -0.017em;
+    }
+}
+
 main .campuses__links {
     width: 100%;
+}
+
+main .campuses__links.campuses--stacked .campuses__links__cards {
+    grid-template-columns: repeat(1, 1fr);
 }
 
 main .campuses__links .campuses__links__cards {
@@ -32580,6 +32621,11 @@ main .campuses__links .campuses__links__cards li a {
     }
 }
 
+main .campuses__links .campuses__links__cards li a:hover .campuses__links__card--image:after, main .campuses__links .campuses__links__cards li a:focus .campuses__links__card--image:after {
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
 main .campuses__links .campuses__links__cards li:nth-child(1) .campuses__links__card--label__heading-icon {
     background: #d61726;
 }
@@ -32596,6 +32642,10 @@ main .campuses__links .campuses__links__card {
     position: relative;
 }
 
+main .campuses__links .campuses__links__card--image {
+    line-height: 0;
+}
+
 main .campuses__links .campuses__links__card--image::after {
     content: '';
     position: absolute;
@@ -32604,6 +32654,12 @@ main .campuses__links .campuses__links__card--image::after {
     height: 100%;
     width: 100%;
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent);
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+}
+
+main .campuses__links figure {
+    margin-top: 0;
 }
 
 main .campuses__links .campuses__links__card--label {
