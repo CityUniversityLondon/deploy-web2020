@@ -32611,17 +32611,18 @@ main .campuses__links .campuses__links__cards li {
     }
 }
 
-main .campuses__links .campuses__links__cards li a {
+main .campuses__links .campuses__links__cards li .campuses__links__anchor {
     outline-offset: 0.25rem;
+    display: block;
 }
 
 @media (max-width: 900px) {
-    main .campuses__links .campuses__links__cards li a {
+    main .campuses__links .campuses__links__cards li .campuses__links__anchor {
         max-width: initial;
     }
 }
 
-main .campuses__links .campuses__links__cards li a:hover .campuses__links__card--image:after, main .campuses__links .campuses__links__cards li a:focus .campuses__links__card--image:after {
+main .campuses__links .campuses__links__cards li .campuses__links__anchor:hover .campuses__links__card--image:after, main .campuses__links .campuses__links__cards li .campuses__links__anchor:focus .campuses__links__card--image:after {
     opacity: 0;
     transition: opacity 0.2s ease-in;
 }
@@ -32679,6 +32680,33 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
 
 main .campuses__links .campuses__links__card--label .campuses__links__card--label__heading-text {
     padding: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    letter-spacing: -0.008em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    main .campuses__links .campuses__links__card--label .campuses__links__card--label__heading-text {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    main .campuses__links .campuses__links__card--label .campuses__links__card--label__heading-text {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    main .campuses__links .campuses__links__card--label .campuses__links__card--label__heading-text {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    main .campuses__links .campuses__links__card--label .campuses__links__card--label__heading-text {
+        letter-spacing: -0.017em;
+    }
 }
 
 main .campuses__links .campuses__links__card--label .campuses__links__card--label__heading-icon {
