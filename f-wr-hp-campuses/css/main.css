@@ -45624,6 +45624,7 @@ main .campuses__links .campuses__links__cards li {
 main .campuses__links .campuses__links__cards li .campuses__links__anchor {
     outline-offset: 0.25rem;
     display: block;
+    border-bottom: 0;
 }
 
 @media (max-width: 900px) {
