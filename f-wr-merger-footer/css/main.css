@@ -18619,6 +18619,13 @@ figure figcaption a:active,
     margin-top: 0.75rem;
 }
 
+@media (max-width: 899px) {
+    .global-footer .global-footer__content__section--links ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .global-footer .global-footer__content__section--links ul li {
     list-style: none;
     font-family: "Plex Sans", arial, sans-serif;
@@ -18676,6 +18683,12 @@ figure figcaption a:active,
 .global-footer .global-footer__content__section--links ul li i,
 .global-footer .global-footer__content__section--links ul li em {
     font-style: italic;
+}
+
+@media (max-width: 899px) {
+    .global-footer .global-footer__content__section--links ul li {
+        align-self: center;
+    }
 }
 
 @media (min-width: 900px) {
