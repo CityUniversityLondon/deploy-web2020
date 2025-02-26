@@ -19062,10 +19062,7 @@ figure figcaption a:active,
 
 @media (min-width: 900px) {
     .global-footer .global-footer__awards li {
-        grid-column-end: span 4;
-    }
-    .global-footer .global-footer__awards li:nth-child(2) {
-        grid-column-end: span 8;
+        grid-column-end: span 5;
     }
 }
 
@@ -19096,21 +19093,11 @@ figure figcaption a:active,
 }
 
 .global-footer .global-footer__awards li .logo {
-    width: 10rem;
-}
-
-.global-footer .global-footer__awards li .logo--7rem {
-    width: 7rem;
+    width: 8rem;
 }
 
 .global-footer .global-footer__awards li .logo--ofsted {
-    width: 7rem;
-}
-
-@media (min-width: 901px) {
-    .global-footer .global-footer__awards li .logo--ofsted {
-        width: 4.9rem;
-    }
+    width: 4rem;
 }
 
 .global-footer .global-footer__link-ribbon {
