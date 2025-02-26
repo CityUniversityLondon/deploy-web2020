@@ -3378,11 +3378,11 @@ function InlineSearch(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header-logo__responsive"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://city.ac.uk",
+    href: "https://www.citystgeorges.ac.uk",
     rel: "home"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "logo",
-    src: "/?a=860452",
+    src: "./?a=860452",
     width: "180",
     alt: "City, University of London"
   })))), modalToggleButton), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
