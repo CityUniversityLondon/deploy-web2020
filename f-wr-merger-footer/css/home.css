@@ -12990,6 +12990,9 @@ article a:active {
     .global-footer .global-footer__awards li {
         grid-column-end: span 5;
     }
+    .global-footer .global-footer__awards .global-footer__awards__ofsted {
+        grid-column-end: span 4;
+    }
 }
 
 @media (max-width: 899px) {
@@ -13335,7 +13338,7 @@ article a:active {
     .global-footer .global-footer__useful-links {
         grid-column-end: span 16;
         grid-column-start: 1;
-        grid-row-start: 8;
+        grid-row-start: 1;
     }
 }
 
@@ -13441,7 +13444,7 @@ article a:active {
     .global-footer .footer-logo--uol {
         grid-column-end: span 8;
         grid-column-start: auto;
-        grid-row-start: 8;
+        grid-row-start: 1;
     }
 }
 
@@ -13497,12 +13500,11 @@ article a:active {
     .global-footer .copyright {
         grid-column-end: span 16;
         grid-column-start: 1;
-        grid-row-start: 9;
+        grid-row-start: 2;
     }
 }
 
 .global-footer .back-to-top[data-docked='true'] {
-    grid-row-start: 9;
     text-align: right;
 }
 
@@ -13510,7 +13512,6 @@ article a:active {
     .global-footer .back-to-top[data-docked='true'] {
         grid-column-end: span 8;
         grid-column-start: 17;
-        grid-row-start: 8;
     }
 }
 
