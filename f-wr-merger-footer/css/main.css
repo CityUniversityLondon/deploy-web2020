@@ -19067,7 +19067,7 @@ figure figcaption a:active,
     .global-footer .global-footer__awards li {
         grid-column-end: span 5;
     }
-    .global-footer .global-footer__awards .global-footer__awards__ofsted {
+    .global-footer .global-footer__awards .global-footer__awards__4span {
         grid-column-end: span 4;
     }
 }
@@ -19102,7 +19102,7 @@ figure figcaption a:active,
     width: 8rem;
 }
 
-.global-footer .global-footer__awards li .logo--ofsted {
+.global-footer .global-footer__awards li .logo--4rem {
     width: 4rem;
 }
 
