@@ -1559,7 +1559,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
- * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
+ * LAUNCH: change web2020.city.ac.uk to www.citystgeorges.ac.uk
  */
 
 const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
