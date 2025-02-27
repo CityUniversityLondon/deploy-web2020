@@ -12968,30 +12968,7 @@ article a:active {
     .global-footer .global-footer__awards {
         margin-top: 0;
         justify-content: space-between;
-        display: grid;
-        grid-template-columns: repeat(24, 1fr);
-        grid-column-gap: 0;
-    }
-}
-
-@media (min-width: 900px) and (min-width: 768px) {
-    .global-footer .global-footer__awards {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 900px) and (min-width: 901px) {
-    .global-footer .global-footer__awards {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-@media (min-width: 900px) {
-    .global-footer .global-footer__awards li {
-        grid-column-end: span 5;
-    }
-    .global-footer .global-footer__awards .global-footer__awards__4span {
-        grid-column-end: span 4;
+        display: flex;
     }
 }
 
