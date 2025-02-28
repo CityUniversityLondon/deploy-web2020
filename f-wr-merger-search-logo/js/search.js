@@ -668,7 +668,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-const externalSiteUrl = ['www.city.ac.uk'];
+const externalSiteUrl = ['www.citystgeorges.ac.uk'];
 
 function Finder__Results__Course(props) {
   const subtitle = props.details.listMetadata.type && props.details.listMetadata.type[0] || props.details.listMetadata.level && props.details.listMetadata.level[0] || null,
@@ -1562,8 +1562,8 @@ __webpack_require__.r(__webpack_exports__);
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-const baseUrl = 'https://www.city.ac.uk/web-services',
-      dxpBaseUrl = 'https://www.city.ac.uk/web-services/dxp-fb',
+const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
+      dxpBaseUrl = 'https://www.citystgeorges.ac.uk/web-services/dxp-fb',
       findRootUrl = '/funnelback-16-find',
       dxpFindRootUrl = '/funnelback-dxp-find',
       dxpSuggestRootUrl = '/funnelback-dxp-suggest',
@@ -3124,7 +3124,7 @@ function Search__Results__BrowsePeople(props) {
     className: "cta-block__cta"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     className: "outline-cta--bright-square",
-    href: 'https://www.city.ac.uk/about/people/' + props.path + '?query=' + props.query
+    href: 'https://www.citystgeorges.ac.uk/about/people/' + props.path + '?query=' + props.query
   }, props.type.charAt(0).toUpperCase() + props.type.slice(1)));
 }
 
@@ -3382,7 +3382,7 @@ function InlineSearch(props) {
     rel: "home"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "logo",
-    src: "./?a=860452",
+    src: "https://www.citystgeorges.ac.uk/__data/assets/file/0007/860452/city-st-georges-white-responsive-logo.svg",
     width: "180",
     alt: "City, University of London"
   })))), modalToggleButton), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

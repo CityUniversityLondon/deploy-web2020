@@ -17995,8 +17995,8 @@ __webpack_require__.r(__webpack_exports__);
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-const baseUrl = 'https://www.city.ac.uk/web-services',
-      dxpBaseUrl = 'https://www.city.ac.uk/web-services/dxp-fb',
+const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
+      dxpBaseUrl = 'https://www.citystgeorges.ac.uk/web-services/dxp-fb',
       findRootUrl = '/funnelback-16-find',
       dxpFindRootUrl = '/funnelback-dxp-find',
       dxpSuggestRootUrl = '/funnelback-dxp-suggest',
@@ -18546,7 +18546,7 @@ function SearchBox(props) {
   };
   const level = props.config.facetLabels.filter(facet => facet.meta === 'level');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    action: "https://www.city.ac.uk/prospective-students/courses"
+    action: "https://www.citystgeorges.ac.uk/prospective-students/courses"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Search for a course"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_filter_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
     key: level[0].meta,
     facet: level[0],

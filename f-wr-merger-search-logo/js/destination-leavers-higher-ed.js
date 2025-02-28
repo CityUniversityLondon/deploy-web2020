@@ -1849,8 +1849,8 @@ __webpack_require__.r(__webpack_exports__);
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-const baseUrl = 'https://www.city.ac.uk/web-services',
-      dxpBaseUrl = 'https://www.city.ac.uk/web-services/dxp-fb',
+const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
+      dxpBaseUrl = 'https://www.citystgeorges.ac.uk/web-services/dxp-fb',
       findRootUrl = '/funnelback-16-find',
       dxpFindRootUrl = '/funnelback-dxp-find',
       dxpSuggestRootUrl = '/funnelback-dxp-suggest',
