@@ -816,11 +816,11 @@
 }
 
 .color--orange50 {
-    color: #f25d21;
+    color: #ff4e00;
 }
 
 .background--orange50 {
-    background-color: #f25d21;
+    background-color: #ff4e00;
 }
 
 .color--orange60 {
@@ -992,11 +992,11 @@
 }
 
 .color--teal60 {
-    color: #007e8b;
+    color: #009b77;
 }
 
 .background--teal60 {
-    background-color: #007e8b;
+    background-color: #009b77;
 }
 
 .color--teal70 {
@@ -3677,518 +3677,6 @@ readers do not read off random characters that represent icons */
 .fast,
 .fa-thin {
     font-weight: 100;
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: normal;
-    font-weight: 100;
-    font-display: swap;
-    src: local("Meta Sans Hairline"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-hairline.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-hairline.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: normal;
-    font-weight: 200;
-    font-display: swap;
-    src: local("Meta Sans Thin"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-thin.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-thin.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local("Meta Sans Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-light.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-light.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Meta Sans Normal"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-normal.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-normal.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local("Meta Sans Book"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-book.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-book.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: local("Meta Sans Medium"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-medium.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-medium.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Meta Sans Bold"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-bold.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-bold.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: local("Meta Sans Black"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-black.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-black.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: italic;
-    font-weight: 100;
-    font-display: swap;
-    src: local("Meta Sans Hairline Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-hairline-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-hairline-italic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: italic;
-    font-weight: 200;
-    font-display: swap;
-    src: local("Meta Sans Thin Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-thin-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-thin-italic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: italic;
-    font-weight: 300;
-    font-display: swap;
-    src: local("Meta Sans Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-light-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-light-italic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Meta Sans Normal Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-normal-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-normal-italic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: italic;
-    font-weight: 500;
-    font-display: swap;
-    src: local("Meta Sans Book Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-book-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-book-italic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: italic;
-    font-weight: 600;
-    font-display: swap;
-    src: local("Meta Sans Medium Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-medium-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-medium-italic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Meta Sans Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-bold-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-bold-italic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Meta Sans";
-    font-style: italic;
-    font-weight: 800;
-    font-display: swap;
-    src: local("Meta Sans Black Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-black-italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/ff-meta-w06-black-italic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: normal;
-    font-weight: 100;
-    font-display: swap;
-    src: local("Plex Sans Thin"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Thin.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Thin.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: normal;
-    font-weight: 200;
-    font-display: swap;
-    src: local("Plex Sans Extra Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-ExtraLight.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-ExtraLight.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local("Plex Sans Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Light.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Light.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Plex Sans Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Regular.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Regular.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: normal;
-    font-weight: 450;
-    font-display: swap;
-    src: local("Plex Sans Text"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Text.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Text.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local("Plex Sans Medium"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Medium.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Medium.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: local("Plex Sans Semi Bold"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-SemiBold.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-SemiBold.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Plex Sans Bold"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Bold.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Bold.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: italic;
-    font-weight: 100;
-    font-display: swap;
-    src: local("Plex Sans Thin Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-ThinItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-ThinItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: italic;
-    font-weight: 200;
-    font-display: swap;
-    src: local("Plex Sans Extra Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-ExtraLightItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-ExtraLightItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: italic;
-    font-weight: 300;
-    font-display: swap;
-    src: local("Plex Sans Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-LightItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-LightItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Plex Sans Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-Italic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: italic;
-    font-weight: 450;
-    font-display: swap;
-    src: local("Plex Sans Text Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-TextItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-TextItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: italic;
-    font-weight: 500;
-    font-display: swap;
-    src: local("Plex Sans Medium Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-MediumItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-MediumItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: italic;
-    font-weight: 600;
-    font-display: swap;
-    src: local("Plex Sans Semi Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-SemiBoldItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-SemiBoldItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Sans";
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Plex Sans Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-BoldItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSans-BoldItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: normal;
-    font-weight: 100;
-    font-display: swap;
-    src: local("Plex Serif Thin"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Thin.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Thin.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: normal;
-    font-weight: 200;
-    font-display: swap;
-    src: local("Plex Serif Extra Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-ExtraLight.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-ExtraLight.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local("Plex Serif Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Light.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Light.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Plex Serif Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Regular.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Regular.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: normal;
-    font-weight: 450;
-    font-display: swap;
-    src: local("Plex Serif Text"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Text.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Text.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local("Plex Serif Medium"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Medium.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Medium.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: local("Plex Serif Semi Bold"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-SemiBold.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-SemiBold.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Plex Serif Bold"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Bold.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Bold.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: italic;
-    font-weight: 100;
-    font-display: swap;
-    src: local("Plex Serif Thin Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-ThinItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-ThinItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: italic;
-    font-weight: 200;
-    font-display: swap;
-    src: local("Plex Serif Extra Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-ExtraLightItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-ExtraLightItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: italic;
-    font-weight: 300;
-    font-display: swap;
-    src: local("Plex Serif Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-LightItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-LightItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Plex Serif Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-Italic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: italic;
-    font-weight: 450;
-    font-display: swap;
-    src: local("Plex Serif Text Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-TextItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-TextItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: italic;
-    font-weight: 500;
-    font-display: swap;
-    src: local("Plex Serif Medium Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-MediumItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-MediumItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: italic;
-    font-weight: 600;
-    font-display: swap;
-    src: local("Plex Serif Semi Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-SemiBoldItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-SemiBoldItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Serif";
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Plex Serif Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-BoldItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexSerif-BoldItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: normal;
-    font-weight: 100;
-    font-display: swap;
-    src: local("Plex Mono Thin"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Thin.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Thin.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: normal;
-    font-weight: 200;
-    font-display: swap;
-    src: local("Plex Mono Extra Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-ExtraLight.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-ExtraLight.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local("Plex Mono Light"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Light.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Light.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Plex Mono Regular"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Regular.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Regular.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: normal;
-    font-weight: 450;
-    font-display: swap;
-    src: local("Plex Mono Text"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Text.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Text.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local("Plex Mono Medium"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Medium.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Medium.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: local("Plex Mono Semi Bold"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-SemiBold.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-SemiBold.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Plex Mono Bold"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Bold.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Bold.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: italic;
-    font-weight: 100;
-    font-display: swap;
-    src: local("Plex Mono Thin Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-ThinItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-ThinItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: italic;
-    font-weight: 200;
-    font-display: swap;
-    src: local("Plex Mono Extra Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-ExtraLightItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-ExtraLightItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: italic;
-    font-weight: 300;
-    font-display: swap;
-    src: local("Plex Mono Light Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-LightItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-LightItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Plex Mono Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Italic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-Italic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: italic;
-    font-weight: 450;
-    font-display: swap;
-    src: local("Plex Mono Text Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-TextItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-TextItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: italic;
-    font-weight: 500;
-    font-display: swap;
-    src: local("Plex Mono Medium Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-MediumItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-MediumItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: italic;
-    font-weight: 600;
-    font-display: swap;
-    src: local("Plex Mono Semi Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-SemiBoldItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-SemiBoldItalic.woff) format("woff");
-}
-
-@font-face {
-    font-family: "Plex Mono";
-    font-style: italic;
-    font-weight: 700;
-    font-display: swap;
-    src: local("Plex Mono Bold Italic"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-BoldItalic.woff2) format("woff2"), url(/__data/assets/git_bridge/0005/440879/main/fonts/IBMPlexMono-BoldItalic.woff) format("woff");
 }
 
 .alpha-type {
@@ -8266,19 +7754,19 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 @media (min-width: 768px) {
     .card__side-image.background--orange50 figure:after {
-        background-color: #f25d21;
+        background-color: #ff4e00;
     }
 }
 
 @media (max-width: 767px) {
     .card__side-image.background--orange50 figure {
-        background-color: #f25d21;
+        background-color: #ff4e00;
     }
 }
 
 .card__side-image.background--orange50 .card__side-image__text {
     color: #1e1e1e;
-    background-color: #f25d21;
+    background-color: #ff4e00;
 }
 
 .card__side-image.background--orange50 img {
@@ -11436,6 +10924,8 @@ article a:active {
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
+    /* to remove global-footer__link-ribbon */
+    /* to remove global-footer__link-ribbon */
 }
 
 .global-footer .global-footer__campuses a,
@@ -12356,12 +11846,8 @@ article a:active {
     max-width: 80rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
     color: #ffffff;
-    display: grid;
     padding-bottom: 2rem;
-    grid-template-rows: repeat(9, auto);
 }
 
 @media (min-width: 901px) {
@@ -12385,20 +11871,27 @@ article a:active {
     }
 }
 
+.global-footer .global-footer__content__row {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    grid-template-rows: repeat(9, auto);
+}
+
 @media (min-width: 768px) {
-    .global-footer .global-footer__content {
+    .global-footer .global-footer__content__row {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 901px) {
-    .global-footer .global-footer__content {
+    .global-footer .global-footer__content__row {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 900px) {
-    .global-footer .global-footer__content {
+    .global-footer .global-footer__content__row {
         grid-template-rows: repeat(4, auto);
     }
 }
@@ -12527,6 +12020,209 @@ article a:active {
 .global-footer .global-footer__content__section h2,
 .global-footer .global-footer__content__section h3 {
     font-weight: 400;
+}
+
+@media (min-width: 900px) {
+    .global-footer .global-footer__content__section--awards {
+        grid-column-end: span 24;
+    }
+}
+
+.global-footer .global-footer__content__section--links ul {
+    margin-top: 0.75rem;
+}
+
+@media (max-width: 899px) {
+    .global-footer .global-footer__content__section--links ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.global-footer .global-footer__content__section--links ul li {
+    list-style: none;
+    font-family: "ibm-plex-sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    font-weight: 450;
+    max-width: 55ch;
+}
+
+.global-footer .global-footer__content__section--links ul li i,
+.global-footer .global-footer__content__section--links ul li em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .global-footer .global-footer__content__section--links ul li {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .global-footer .global-footer__content__section--links ul li {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .global-footer .global-footer__content__section--links ul li {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .global-footer .global-footer__content__section--links ul li {
+        letter-spacing: -0.017em;
+    }
+}
+
+.global-footer .global-footer__content__section--links ul li b,
+.global-footer .global-footer__content__section--links ul li strong {
+    font-weight: 700;
+}
+
+.global-footer .global-footer__content__section--links ul li i,
+.global-footer .global-footer__content__section--links ul li em {
+    font-style: italic;
+}
+
+@media (max-width: 899px) {
+    .global-footer .global-footer__content__section--links ul li {
+        align-self: center;
+    }
+}
+
+.global-footer .global-footer__content__section--links ul li a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    background-image: none;
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+    position: relative;
+}
+
+@media (hover: hover) {
+    .global-footer .global-footer__content__section--links ul li a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.global-footer .global-footer__content__section--links ul li a:focus, .global-footer .global-footer__content__section--links ul li a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+.global-footer .global-footer__content__section--links ul li a:focus, .global-footer .global-footer__content__section--links ul li a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
+}
+
+.global-footer .global-footer__content__section--links ul li a:before {
+    background: #d61726;
+    bottom: -0.125rem;
+    content: '';
+    display: block;
+    height: 0.125rem;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .global-footer .global-footer__content__section--links ul li a:before {
+        transition: none;
+    }
+}
+
+.global-footer .global-footer__content__section--links ul li a:before {
+    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+}
+
+.global-footer .global-footer__content__section--links ul li a:focus {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+.global-footer .global-footer__content__section--links ul li a:visited {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .global-footer .global-footer__content__section--links ul li a:hover {
+        background-image: none;
+        border-bottom-color: #ffffff;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #ffffff;
+    }
+    .global-footer .global-footer__content__section--links ul li a:hover:before {
+        opacity: 1;
+        width: 100%;
+        transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
+    }
+}
+
+.global-footer .global-footer__content__section--links ul li a:active {
+    border-bottom-color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
 }
 
 @media (min-width: 900px) {
@@ -12760,12 +12456,7 @@ article a:active {
     .global-footer .global-footer__awards {
         margin-top: 0;
         justify-content: space-between;
-    }
-    .global-footer .global-footer__awards .global-footer__awards__promo {
-        flex-basis: 45%;
-    }
-    .global-footer .global-footer__awards li {
-        flex-basis: 25%;
+        display: flex;
     }
 }
 
@@ -12796,21 +12487,11 @@ article a:active {
 }
 
 .global-footer .global-footer__awards li .logo {
-    width: 10rem;
+    width: 8rem;
 }
 
-.global-footer .global-footer__awards li .logo--7rem {
-    width: 7rem;
-}
-
-.global-footer .global-footer__awards li .logo--ofsted {
-    width: 7rem;
-}
-
-@media (min-width: 901px) {
-    .global-footer .global-footer__awards li .logo--ofsted {
-        width: 4.9rem;
-    }
+.global-footer .global-footer__awards li .logo--4rem {
+    width: 4rem;
 }
 
 .global-footer .global-footer__link-ribbon {
@@ -13122,7 +12803,7 @@ article a:active {
     .global-footer .global-footer__useful-links {
         grid-column-end: span 16;
         grid-column-start: 1;
-        grid-row-start: 4;
+        grid-row-start: 1;
     }
 }
 
@@ -13228,7 +12909,7 @@ article a:active {
     .global-footer .footer-logo--uol {
         grid-column-end: span 8;
         grid-column-start: auto;
-        grid-row-start: 4;
+        grid-row-start: 1;
     }
 }
 
@@ -13284,12 +12965,11 @@ article a:active {
     .global-footer .copyright {
         grid-column-end: span 16;
         grid-column-start: 1;
-        grid-row-start: 5;
+        grid-row-start: 2;
     }
 }
 
 .global-footer .back-to-top[data-docked='true'] {
-    grid-row-start: 9;
     text-align: right;
 }
 
@@ -13297,7 +12977,6 @@ article a:active {
     .global-footer .back-to-top[data-docked='true'] {
         grid-column-end: span 8;
         grid-column-start: 17;
-        grid-row-start: 5;
     }
 }
 
@@ -31773,7 +31452,7 @@ main .home__news-events {
     display: flex;
     gap: 1rem;
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 0;
 }
 
 @media (min-width: 1024px) {
@@ -32487,6 +32166,236 @@ main .home__research .linked-heading__icons span:nth-child(1), main .home__resea
     main .home__research .wrap--research__content {
         padding-bottom: 7rem;
     }
+}
+
+main .campuses {
+    padding-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+    main .campuses {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .campuses {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    main .campuses {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1441px) {
+    main .campuses {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1023px) {
+    main .campuses {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 901px) {
+    main .campuses {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+main .campuses__content p {
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    font-family: "ff-meta-web-pro", sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    letter-spacing: -0.008em;
+}
+
+main .campuses__content p i,
+main .campuses__content p em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    main .campuses__content p {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    main .campuses__content p {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    main .campuses__content p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    main .campuses__content p {
+        letter-spacing: -0.017em;
+    }
+}
+
+main .campuses__links {
+    width: 100%;
+}
+
+main .campuses__links.campuses--stacked .campuses__links__cards {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+main .campuses__links .campuses__links__cards {
+    list-style: none;
+    margin-left: initial;
+    margin-bottom: initial;
+    max-width: inherit;
+}
+
+@media (min-width: 768px) {
+    main .campuses__links .campuses__links__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 1.5rem;
+    }
+}
+
+main .campuses__links .campuses__links__cards li {
+    margin-top: initial;
+}
+
+@media (max-width: 900px) {
+    main .campuses__links .campuses__links__cards li {
+        margin-bottom: 1rem;
+        max-width: initial;
+    }
+}
+
+main .campuses__links .campuses__links__cards li .campuses__links__anchor {
+    outline-offset: 0.25rem;
+    display: block;
+    border-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    main .campuses__links .campuses__links__cards li .campuses__links__anchor {
+        max-width: initial;
+    }
+}
+
+main .campuses__links .campuses__links__cards li .campuses__links__anchor:hover .campuses__links__card--image:after, main .campuses__links .campuses__links__cards li .campuses__links__anchor:focus .campuses__links__card--image:after {
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+main .campuses__links .campuses__links__cards li:nth-child(1) .campuses__links__card--label__heading-icon {
+    background: #d61726;
+}
+
+main .campuses__links .campuses__links__cards li:nth-child(2) .campuses__links__card--label__heading-icon {
+    background: #ff4e00;
+}
+
+main .campuses__links .campuses__links__cards li:nth-child(3) .campuses__links__card--label__heading-icon {
+    background: #009b77;
+}
+
+main .campuses__links .campuses__links__card {
+    position: relative;
+}
+
+main .campuses__links .campuses__links__card--image {
+    line-height: 0;
+}
+
+main .campuses__links .campuses__links__card--image::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent);
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+}
+
+main .campuses__links figure {
+    margin-top: 0;
+}
+
+main .campuses__links .campuses__links__card--label {
+    position: absolute;
+    background-color: #ffffff;
+    color: #0c0c0e;
+    bottom: 1.25rem;
+    left: 1.25rem;
+}
+
+main .campuses__links .campuses__links__card--label .campuses__links__card--label__heading {
+    display: inline-flex;
+    margin-bottom: initial;
+    text-wrap: wrap;
+    margin-top: 0;
+}
+
+main .campuses__links .campuses__links__card--label .campuses__links__card--label__heading-text {
+    padding: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    letter-spacing: -0.008em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    main .campuses__links .campuses__links__card--label .campuses__links__card--label__heading-text {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    main .campuses__links .campuses__links__card--label .campuses__links__card--label__heading-text {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    main .campuses__links .campuses__links__card--label .campuses__links__card--label__heading-text {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    main .campuses__links .campuses__links__card--label .campuses__links__card--label__heading-text {
+        letter-spacing: -0.017em;
+    }
+}
+
+main .campuses__links .campuses__links__card--label .campuses__links__card--label__heading-icon {
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    line-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .home-new-vi .breadcrumbs {

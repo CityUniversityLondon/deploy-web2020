@@ -731,27 +731,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./patterns/event-form/event-form */ "./src/patterns/event-form/event-form.js");
 /* harmony import */ var _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./patterns/feedback/feedback */ "./src/patterns/feedback/feedback.js");
 /* harmony import */ var _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./patterns/find-us/find-us */ "./src/patterns/find-us/find-us.js");
-/* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
-/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
-/* harmony import */ var _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/key-information/key-information--lifelong-learning */ "./src/patterns/key-information/key-information--lifelong-learning.js");
-/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
-/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
-/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
-/* harmony import */ var _patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/mouseover-gallery/mouseover-gallery */ "./src/patterns/mouseover-gallery/mouseover-gallery.js");
-/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
-/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
-/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
-/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
-/* harmony import */ var _how_to_apply_research__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./how-to-apply--research */ "./src/how-to-apply--research.js");
-/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
-/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
-/* harmony import */ var _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/banner-promo */ "./src/paint-layouts/home/home-vi-sections/banner-promo.js");
-/* harmony import */ var _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/play-button */ "./src/paint-layouts/home/home-vi-sections/play-button.js");
+/* harmony import */ var _patterns_find_us_find_us_v25__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./patterns/find-us/find-us-v25 */ "./src/patterns/find-us/find-us-v25.js");
+/* harmony import */ var _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./patterns/image-carousel/default-carousel/default-carousel */ "./src/patterns/image-carousel/default-carousel/default-carousel.js");
+/* harmony import */ var _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./patterns/animation/image-expand/image-expand */ "./src/patterns/animation/image-expand/image-expand.js");
+/* harmony import */ var _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./patterns/key-information/key-information--lifelong-learning */ "./src/patterns/key-information/key-information--lifelong-learning.js");
+/* harmony import */ var _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./patterns/link-finder/link-finder */ "./src/patterns/link-finder/link-finder.js");
+/* harmony import */ var _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./patterns/menu/menu */ "./src/patterns/menu/menu.js");
+/* harmony import */ var _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./patterns/modal/modal */ "./src/patterns/modal/modal.js");
+/* harmony import */ var _patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./patterns/mouseover-gallery/mouseover-gallery */ "./src/patterns/mouseover-gallery/mouseover-gallery.js");
+/* harmony import */ var _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./patterns/animation/number-animation/number-animation */ "./src/patterns/animation/number-animation/number-animation.js");
+/* harmony import */ var _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./patterns/paginated-list/paginated-list */ "./src/patterns/paginated-list/paginated-list.js");
+/* harmony import */ var _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./patterns/pagination/pagination */ "./src/patterns/pagination/pagination.js");
+/* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
+/* harmony import */ var _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./how-to-apply--research */ "./src/how-to-apply--research.js");
+/* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
+/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
+/* harmony import */ var _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/banner-promo */ "./src/paint-layouts/home/home-vi-sections/banner-promo.js");
+/* harmony import */ var _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/play-button */ "./src/paint-layouts/home/home-vi-sections/play-button.js");
 
 
 /**
@@ -794,12 +795,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
  // import video from './patterns/video/video';
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_25__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_20__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_31__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_24__["default"], // video,
-_patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_19__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_33__["default"], _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_32__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_find_us_find_us_v25__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__["default"], // video,
+_patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_20__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_34__["default"], _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_33__["default"]]);
 
 /***/ }),
 
@@ -2410,6 +2412,984 @@ function launchFeedback(elem) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchFeedback,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/find-us/find-us-v25.js":
+/*!*********************************************!*\
+  !*** ./src/patterns/find-us/find-us-v25.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+
+
+/**
+ * Find us, campus map page using Google map API
+ *
+ * @module patterns/find-us/find-us
+ * @author Walter Reyneke <walter.reyneke@city.ac.uk>
+ * @copyright City, University of London 2025
+ */
+
+const className = 'campus-map-v25';
+let lat, lng;
+let campusId;
+let campusOverlay;
+let campusZoom;
+let dataSrc;
+let campusLocConfig = {
+  498711: {
+    // clerkenwell
+    lat: '51.527761',
+    lng: '-0.103283',
+    campusZoom: 17,
+    dataSrc: '/feed/locations/campus-map-locations-v25-clerkenwell/_nocache',
+    overlay: [{
+      lat: 51.527261,
+      lng: -0.107649
+    }, {
+      lat: 51.527333,
+      lng: -0.106411
+    }, {
+      lat: 51.527737,
+      lng: -0.104968
+    }, {
+      lat: 51.527824,
+      lng: -0.104421
+    }, {
+      lat: 51.528418,
+      lng: -0.101159
+    }, {
+      lat: 51.52784,
+      lng: -0.100794
+    }, {
+      lat: 51.52784,
+      lng: -0.100794
+    }, {
+      lat: 51.52759,
+      lng: -0.101888
+    }, {
+      lat: 51.52768,
+      lng: -0.102484
+    }, {
+      lat: 51.527624,
+      lng: -0.102693
+    }, {
+      lat: 51.5272,
+      lng: -0.103048
+    }, {
+      lat: 51.526903,
+      lng: -0.104104
+    }, {
+      lat: 51.52771,
+      lng: -0.104635
+    }, {
+      lat: 51.526669,
+      lng: -0.105284
+    }, {
+      lat: 51.52725,
+      lng: -0.106421
+    }, {
+      lat: 51.526689,
+      lng: -0.107671
+    }]
+  },
+  763053: {
+    // finsbury
+    lat: '51.5208744',
+    lng: '-0.0852537',
+    campusZoom: 17,
+    dataSrc: '/feed/locations/campus-map-locations-v25-finsbury/_nocache',
+    overlay: [[{
+      lat: 51.520858774620955,
+      lng: -0.08556863723688905
+    }, {
+      lat: 51.52083653205823,
+      lng: -0.08531154647877388
+    }, {
+      lat: 51.520778361337925,
+      lng: -0.08532529531463161
+    }, {
+      lat: 51.52075440778178,
+      lng: -0.0851438198842833
+    }, {
+      lat: 51.520585883979244,
+      lng: -0.08521118813542727
+    }, {
+      lat: 51.52059786108497,
+      lng: -0.08538028971282675
+    }, {
+      lat: 51.52048665235475,
+      lng: -0.08540641209058407
+    }, {
+      lat: 51.52049092985349,
+      lng: -0.08547652721697489
+    }, {
+      lat: 51.52044901271319,
+      lng: -0.08548890077010746
+    }, {
+      lat: 51.5204592785169,
+      lng: -0.08565662701426627
+    }], [{
+      lat: 51.52226476474981,
+      lng: -0.09015529755665408
+    }, {
+      lat: 51.52224363127885,
+      lng: -0.08992989274911023
+    }, {
+      lat: 51.52185123063815,
+      lng: -0.08993395734466093
+    }, {
+      lat: 51.52186711537125,
+      lng: -0.09021479068592209
+    }, {
+      lat: 51.52193065682891,
+      lng: -0.09020628113292894
+    }, {
+      lat: 51.521966603858395,
+      lng: -0.09080856634806456
+    }, {
+      lat: 51.521966603858395,
+      lng: -0.09080856634806456
+    }, {
+      lat: 51.52219047244918,
+      lng: -0.09079029525013968
+    }, {
+      lat: 51.522260598763985,
+      lng: -0.09022127815580626
+    }]]
+  },
+  795583: {
+    // tooting
+    lat: '51.4262478',
+    lng: '-0.177115',
+    campusZoom: 16,
+    dataSrc: '/feed/locations/campus-map-locations-v25-tooting/_nocache',
+    overlay: [{
+      lat: 51.42871771131454,
+      lng: -0.17409794550102456
+    }, {
+      lat: 51.427333969551015,
+      lng: -0.17154881456144014
+    }, {
+      lat: 51.42719674940197,
+      lng: -0.17154883345598806
+    }, {
+      lat: 51.42652213570394,
+      lng: -0.17261262254587703
+    }, {
+      lat: 51.425973297007815,
+      lng: -0.17363968682340267
+    }, {
+      lat: 51.42566453304997,
+      lng: -0.1731445558491159
+    }, {
+      lat: 51.424075098238916,
+      lng: -0.1740433018916375
+    }, {
+      lat: 51.42472694955013,
+      lng: -0.17646397027100444
+    }, {
+      lat: 51.42497852622366,
+      lng: -0.1772525339184661
+    }, {
+      lat: 51.42565319025514,
+      lng: -0.1784445684661768
+    }, {
+      lat: 51.426545111724465,
+      lng: -0.17923317817964338
+    }, {
+      lat: 51.42771148002197,
+      lng: -0.17639052473001537
+    }, {
+      lat: 51.428054534331324,
+      lng: -0.17688569618860447
+    }, {
+      lat: 51.428260360024545,
+      lng: -0.1764455280204006
+    }, {
+      lat: 51.42773434010492,
+      lng: -0.17571194556875333
+    }]
+  }
+};
+let locationCounter = {
+  building: 0,
+  'student-service': 0,
+  library: 0,
+  'lecture-theatre': 0,
+  'residential-hall': 0
+}; // var to check if needing to remove the map search incase there are no locations inside the accordions
+
+let showSearch = false;
+
+function createMap(mapContainer) {
+  const getCampus = mapContainer.getAttribute('data-campus');
+  campusId = getCampus ? getCampus : '498711'; // set to Clerkenwell for default
+
+  lat = campusLocConfig[campusId]['lat'];
+  lng = campusLocConfig[campusId]['lng'];
+  campusOverlay = campusLocConfig[campusId]['overlay'];
+  campusZoom = campusLocConfig[campusId]['campusZoom'];
+  dataSrc = campusLocConfig[campusId]['dataSrc']; // == PROPERTIES ==
+
+  let
+  /**
+   * Create a LatLng object containing the coordinate for the center of the map
+   * @let {Object}
+   */
+  latlng = new google.maps.LatLng(lat, lng),
+
+  /**
+   * an object literal containing the properties we want to pass to the map
+   * @let {Object}
+   */
+  mapOptions = {
+    zoom: campusZoom,
+    key: 'AIzaSyBvg6r1x2ZRKPAsceVaKPlg6tO20QiBDpo',
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    streetViewControl: true,
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+    },
+    navigationControl: true
+  },
+
+  /**
+   * Call the constructor, thereby initializing the map  as soon as possible
+   * @let {Object}: Google maps Map object
+   */
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions),
+      searchBox = document.getElementById('map-search'),
+
+  /**
+   * initlaise infoWindow
+   * @let {Object}: Google maps InfoWindow object
+   */
+  infoWindow = new google.maps.InfoWindow({
+    maxWidth: 400
+  }),
+
+  /**
+   * cityLayers object literal containing skeleton options for City related things - parsing the xml file adds to this
+   * it is where we keep arrays of markers to use when clearing/setting things on the map
+   * @let {Object}:
+   */
+  cityLayers = {
+    // array to hold each google marker object - for each University location
+    bigMarkersArray: [],
+    //arrray to hold building google marker objects - they never got removed from map
+    bigBuildingsArray: [],
+    buildingsObj: {},
+    buildings: {
+      toggler: null,
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    },
+    libraries: {
+      toggler: document.getElementById('toggle-libraries'),
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    },
+    accommodation: {
+      toggler: null,
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    },
+    lectureTheatres: {
+      toggler: null,
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    },
+    studentCentre: {
+      toggler: document.getElementById('toggle-studentCentre'),
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    },
+    sports: {
+      toggler: null,
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    },
+    computerLabs: {
+      toggler: document.getElementById('toggle-computerLabs'),
+      markersArray: [],
+      zoomLevel: 17,
+      list: ''
+    }
+  }; // == METHODS ==
+
+  /**
+   * Removes the overlays from the map, but keeps them in the array
+   * @parameter {Array} markersArray: a collections of markers
+   * @return {Undefined}
+   */
+
+  function clearOverlays(markersArray) {
+    let i;
+
+    if (markersArray) {
+      for (i in markersArray) {
+        if (Object.prototype.hasOwnProperty.call(markersArray, i) && typeof markersArray[i] !== 'function') {
+          markersArray[i].setMap(null);
+        }
+      }
+    }
+  }
+  /**
+   * the hashChange handler - listens for hash changes and then does cool stuff
+   * @parameter {string} id of building: the window hashchange event
+   * @return {Undefined}
+   */
+
+
+  let marker;
+
+  function hashChange(id) {
+    // Trigger - to show relevant campus marker on initial load
+    if (id === '') {
+      id = campusId;
+    } //loop over  bigBuildingsArray to find marker
+
+
+    for (let building in cityLayers.buildingsObj) {
+      if (id === building) {
+        let found = cityLayers.buildingsObj[building]; // clears map from previous markers
+
+        if (marker) {
+          marker.setMap(null);
+        } // allocates new marker info to variable
+
+
+        marker = found; //open infoWindow for this marker
+        //clear all overlays first
+
+        clearOverlays(cityLayers.bigMarkersArray); //make marker visible
+
+        marker.setVisible(true); //set infoWindow content
+
+        infoWindow.setContent(marker.infoHtml); //open the infoWindow centered on the marker
+
+        infoWindow.open(map, marker); //pan map to marker position
+
+        map.panTo(marker.position); //add marker to map
+
+        marker.setMap(map); // checks if location is an campus, if so then it would activate the overlay for that campus
+
+        if (id in campusLocConfig) {
+          // seems like a small delay is needed sometimes to apply overlay
+          setTimeout(() => {
+            showOverlay(campusLocConfig[id]['overlay']);
+          }, '100');
+        } else {
+          // else as it is normal location, then removes overlay if present
+          initialMapOverlay.setMap(null);
+        }
+
+        break;
+      } else {
+        // else as it is normal location, then removes overlay if present
+        initialMapOverlay.setMap(null);
+      }
+    }
+  }
+  /**
+   * the updateHash called when a marker, infoWindow or marker link is clicked - updates hash
+   * @parameter {Object || String} caller: the marker, marker link or infoWindow firing the event
+   * @return {Undefined}
+   */
+
+
+  function updateHash(caller) {
+    let callerId = '';
+
+    if (!caller) {
+      return;
+    }
+
+    if (typeof caller === 'string') {
+      //a marker link was clicked
+      callerId = caller; // state[callerId] = 1;
+    } else if (Object.prototype.hasOwnProperty.call(caller, 'id')) {
+      //a marker was clicked
+      callerId = caller.id; //state[callerId] = 1;
+    } else {
+      //an infoWindow was closed
+      callerId = 0;
+    }
+
+    location.hash = callerId;
+    hashChange(callerId);
+  }
+  /**
+   *  creates individual markers, builds a corresponding filter item, binds a infoWindow to marker with html
+   * and populates accordions
+   * @parameter {Object} markerConfig: an object containing letious marker configuration options
+   * @return {Object} marker - google maps marker
+   */
+
+
+  function createMarker(markerConfig) {
+    let listId = document.getElementById(markerConfig.category),
+        // selects accordion category
+    listItem,
+        marker,
+        anchor,
+        html = ''; // build html for infoWindow
+    // check to see if there's custom URL first
+
+    if (markerConfig.urlCustom) {
+      html = '<div id="info-window" style="min-height: 60px;"><h3><a href="' + markerConfig.urlCustom + '">' + markerConfig.name + '</a></h3>';
+    } else {
+      // if has asset has a link
+      if (markerConfig.linkHref.length !== 0) {
+        html = '<div id="info-window" style="min-height: 60px;"><h3>' + markerConfig.name + '</h3>';
+      } else {
+        html = '<div id="info-window" style="min-height: 60px;"><h3>' + markerConfig.name + '</h3>';
+      }
+    } // calculates minutes label as singular or plurar
+
+
+    function minutesFormat() {
+      if (parseInt(markerConfig.walkingDistance) > 1) {
+        return ' minutes';
+      } else {
+        return ' minute';
+      }
+    } // add description and close div element
+    // html += markerConfig.description.replace(/\<h2/g, '<h4').replace(/\h2>/g, 'h4>')  + '</div>';
+
+
+    markerConfig.buildingPrefix ? html += '<p>Rooms beginning: ' + markerConfig.buildingPrefix + '</p>' : null;
+    html += '<p>';
+    markerConfig.roomNumber ? html += 'Room ' + markerConfig.roomNumber + '</br>' : null;
+    markerConfig.floor ? html += 'Floor ' + markerConfig.floor + '</br>' : null;
+    markerConfig.building ? html += markerConfig.building + '</br>' : null;
+    markerConfig.buildingAdditionalInfo ? html += markerConfig.buildingAdditionalInfo + '</br>' : null;
+    markerConfig.street1 ? html += markerConfig.street1 + '</br>' : null;
+    markerConfig.street2 ? html += markerConfig.street2 + '</br>' : null;
+    markerConfig.city ? html += markerConfig.city + '</br>' : null;
+    markerConfig.postcode ? html += markerConfig.postcode + '</br>' : null;
+    html += '</p>';
+    html += '<p>';
+    markerConfig.campus ? html += markerConfig.campus + '</br>' : null;
+    html += '</p>';
+    markerConfig.supports ? html += '<p>' + markerConfig.supports + '</p>' : null;
+    markerConfig.walkingDistance ? html += '<p>Walking distance to campus: </br>' + markerConfig.walkingDistance + minutesFormat(markerConfig.walkingDistance) + '</p>' : null;
+    markerConfig.entrance ? html += '<p>' + markerConfig.entrance + '</p>' : null;
+    markerConfig.accessibility ? html += '<p>' + markerConfig.accessibility + '</p>' : null; // Build opening hours from arrays
+
+    if (markerConfig.openingHours.length > 0) {
+      let daySlot = []; // array for days which has unique opening hours
+
+      let timeSlot = []; // array for different time slots
+
+      markerConfig.openingHours.forEach(function (item) {
+        let string = item.trim();
+        let day = string.slice(0, '3');
+        let hours = string.slice('3');
+        let match;
+
+        for (let i = 0; i < timeSlot.length; i++) {
+          // checks current days opening hours to see if it matches opening hours of an existing day already
+          if (hours === timeSlot[i]) {
+            daySlot[i] += ', ' + day; // remembers that it found a match
+
+            match = 1;
+          }
+        } // if no mathes are found then 'hours' are pushed into array
+
+
+        if (match !== 1) {
+          daySlot.push(day);
+          timeSlot.push(hours);
+        }
+      }); // Builds opening hours text
+
+      html += '<p>Opening hours: </br>';
+
+      for (let i = 0; i < timeSlot.length; i++) {
+        html += timeSlot[i] + ' (' + daySlot[i] + ')</br>';
+      }
+
+      html += '</p>';
+    }
+
+    html += '<p>';
+    markerConfig.tel ? html += 'Tel: ' + markerConfig.tel + '</br>' : null;
+    markerConfig.email ? html += 'Email: ' + markerConfig.email + '</br>' : null;
+    html += '</p>'; // create google maps marker
+
+    marker = new google.maps.Marker({
+      map: markerConfig.map,
+      position: markerConfig.point,
+      icon: markerConfig.icon,
+      animation: google.maps.Animation.DROP
+    }); // add a new property to the google maps marker object so we can id markers
+
+    marker.set('id', markerConfig.id); //add a new property of inHtml to populate infoWindow
+
+    marker.set('infoHtml', html); // attach event listener for marker click to handle infoWindow
+
+    google.maps.event.addListener(marker, 'click', function () {
+      return updateHash(marker);
+    }); // create list element
+
+    listItem = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('li', [{
+      label: 'id',
+      val: 'building-' + markerConfig.id
+    }, {
+      label: 'class',
+      val: 'building'
+    }]); // create a element with click handler to open infoWindow
+
+    anchor = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', [{
+      label: 'html',
+      val: '<span>' + markerConfig.name + '</span>'
+    }, {
+      label: 'href',
+      val: '#'
+    }]);
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      updateHash(e.target.parentElement.parentElement.getAttribute('id').replace('building-', '')); // closes locations panel and any open accordions, clears search
+
+      toggleLocationPanel('true');
+      closeAccordions();
+      clearSearchString();
+      return false;
+    }); //add li item to accordion category ul
+
+    listId ? listId.appendChild(listItem).appendChild(anchor) : null;
+
+    if (markerConfig.category in locationCounter) {
+      locationCounter[markerConfig.category] += 1;
+    }
+
+    return marker;
+  } //end fn.createMarker
+
+  /**
+   * parses locations xml and creates markers
+   * @parameter {Object} xml: xml returned from Ajax request
+   * @parameter {String} textStatus: standard ajax reposnse
+   * @parameter {Object} textStatus: standard ajax reposnse
+   * @return {?}
+   */
+
+
+  function parseXml(xml) {
+    let items = xml.getElementsByTagName('item');
+    let index = 0,
+        $self,
+        marker,
+        markerConfig = {},
+        searchTags = [],
+        searchIds = {};
+    Array.from(items).forEach(function (item) {
+      $self = item;
+      markerConfig.openingHours = [];
+      markerConfig.index = index + 1;
+      markerConfig.id = $self.getElementsByTagName('guid')[0].textContent;
+      markerConfig.name = $self.getElementsByTagName('title')[0].textContent;
+      markerConfig.linkHref = $self.getElementsByTagName('link')[0].textContent;
+      markerConfig.urlCustom = $self.getElementsByTagName('urlCustom')[0].textContent;
+      markerConfig.icon = '/?a=537733'; // default city marker
+
+      markerConfig.category = $self.getElementsByTagName('category')[0].textContent;
+      markerConfig.buildingPrefix = $self.getElementsByTagName('roomPrefix')[0].textContent;
+      markerConfig.roomNumber = $self.getElementsByTagName('roomNumber')[0].textContent;
+      markerConfig.entrance = $self.getElementsByTagName('entrance')[0].textContent;
+      markerConfig.floor = $self.getElementsByTagName('floor')[0].textContent;
+      markerConfig.building = $self.getElementsByTagName('building')[0].textContent;
+      markerConfig.buildingAdditionalInfo = $self.getElementsByTagName('buildingAdditionalInfo')[0].textContent;
+      markerConfig.campus = $self.getElementsByTagName('campus')[0].textContent;
+      markerConfig.street1 = $self.getElementsByTagName('street1')[0].textContent;
+      markerConfig.street2 = $self.getElementsByTagName('street2')[0].textContent;
+      markerConfig.city = $self.getElementsByTagName('city')[0].textContent;
+      markerConfig.postcode = $self.getElementsByTagName('postcode')[0].textContent;
+      markerConfig.country = $self.getElementsByTagName('country')[0].textContent;
+      markerConfig.tel = $self.getElementsByTagName('tel')[0].textContent;
+      markerConfig.email = $self.getElementsByTagName('email')[0].textContent;
+      markerConfig.accessibility = $self.getElementsByTagName('accessibility')[0].textContent;
+      markerConfig.walkingDistance = $self.getElementsByTagName('walkingDistance')[0].textContent;
+      markerConfig.supports = $self.getElementsByTagName('supports')[0].textContent;
+      markerConfig.geoLat = $self.getElementsByTagName('geoLat')[0].textContent;
+      markerConfig.geoLong = $self.getElementsByTagName('geoLong')[0].textContent;
+      $self.getElementsByTagName('ohMon')[0].textContent ? markerConfig.openingHours.push('Mon' + $self.getElementsByTagName('ohMon')[0].textContent) : null;
+      $self.getElementsByTagName('ohTue')[0].textContent ? markerConfig.openingHours.push('Tue' + $self.getElementsByTagName('ohTue')[0].textContent) : null;
+      $self.getElementsByTagName('ohWed')[0].textContent ? markerConfig.openingHours.push('Wed' + $self.getElementsByTagName('ohWed')[0].textContent) : null;
+      $self.getElementsByTagName('ohThu')[0].textContent ? markerConfig.openingHours.push('Thu' + $self.getElementsByTagName('ohThu')[0].textContent) : null;
+      $self.getElementsByTagName('ohFri')[0].textContent ? markerConfig.openingHours.push('Fri' + $self.getElementsByTagName('ohFri')[0].textContent) : null;
+      $self.getElementsByTagName('ohSat')[0].textContent ? markerConfig.openingHours.push('Sat' + $self.getElementsByTagName('ohSat')[0].textContent) : null;
+      $self.getElementsByTagName('ohSun')[0].textContent ? markerConfig.openingHours.push('Sun' + $self.getElementsByTagName('ohSun')[0].textContent) : null;
+      markerConfig.point = new google.maps.LatLng(parseFloat(markerConfig.geoLat), parseFloat(markerConfig.geoLong)); //call createmarker fn
+
+      marker = createMarker(markerConfig);
+
+      if (markerConfig.category !== 'buildings') {
+        //add returned marker to big array
+        cityLayers.bigMarkersArray.push(marker);
+      } else {
+        //add marker to buldings array
+        cityLayers.bigBuildingsArray.push(marker);
+      } //all markers go in here
+
+
+      cityLayers.buildingsObj[marker.id] = marker;
+      searchTags.push(Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', [{
+        label: 'content',
+        val: markerConfig.name
+      }, {
+        label: 'data-id',
+        val: markerConfig.id
+      }]));
+      searchIds[markerConfig.name] = markerConfig.id; //add returned marker to category array (if cat exisits)
+
+      if (cityLayers[markerConfig.category]) {
+        cityLayers[markerConfig.category].markersArray.push(marker);
+      } else {//not needed for now
+      }
+    }); //end location item iteration
+
+    function searchBoxInit() {
+      // listens for search queries
+      searchBox.addEventListener('keyup', function (e) {
+        // if key press down arrow
+        if (e.keyCode === parseInt('40')) {
+          searchItemFocus(e.keyCode);
+        } else {
+          // clears previous suggestions, and 'clear search button' if exists
+          clearsSearchSuggestions();
+          searchSuggestions();
+        }
+      });
+
+      function searchSuggestions() {
+        clearsSearchSuggestions();
+        let searchString = searchBox.value; // if a query is presesnt and finds a match it creates suggestions
+
+        if (searchString.length > 0) {
+          // creates HTML structure for suggestion list
+          let createListWrapper = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('div', [{
+            label: 'class',
+            val: 'query__suggestions__wrapper'
+          }]);
+          let createList = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('ul', [{
+            label: 'id',
+            val: 'query__suggestions'
+          }, {
+            label: 'data-show',
+            val: false
+          }, {
+            label: 'data-focus',
+            val: -1
+          }]);
+          searchBox.parentElement.appendChild(createListWrapper).appendChild(createList);
+          let list = document.getElementById('query__suggestions'); // adds search clear button
+
+          let clearSearchButton = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('button', [{
+            label: 'class',
+            val: 'campus-map-v25__controls__search__clear'
+          }, {
+            label: 'html',
+            val: '<span class="fa-sharp fa-solid fa-xmark icon "></span><span class="campus-map-v25__controls__search__clear__text">Clear query</span>'
+          }]); // adds click event to clear search button
+
+          clearSearchButton.addEventListener('click', function () {
+            clearSearchString();
+          });
+          searchBox.parentElement.appendChild(clearSearchButton);
+          /**
+           * creates list of anchors contaning building info below:
+           * @tag {HTMLelement} anchor containing building name and id
+           * @maxNumberSuggestions {viarable} to set max number of suggestions to show
+           */
+
+          let maxNumberSuggestions = 10;
+          let counter = 0; // Cycles through all the locations to see if they match with the search string,
+          // then builds a list containing the matches
+
+          Array.from(searchTags).forEach(function (tag) {
+            if (tag.textContent.toLowerCase().indexOf(searchString.toLowerCase()) > -1) {
+              if (counter < maxNumberSuggestions) {
+                let item = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('li', []);
+                let anchor = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('a', [{
+                  label: 'tabindex',
+                  val: -1
+                }, {
+                  label: 'data-id',
+                  val: tag.getAttribute('data-id')
+                }, {
+                  label: 'content',
+                  val: tag.textContent
+                }]);
+                anchor.addEventListener('click', function () {
+                  searchQueryIdFind(tag.getAttribute('data-id'), tag.textContent);
+                  searchBox.value = tag.textContent;
+                  updateHash(tag.getAttribute('data-id'));
+                });
+                anchor.addEventListener('keyup', function (e) {
+                  e.preventDefault();
+                  searchItemFocus(e.keyCode);
+                });
+                list.appendChild(item).appendChild(anchor);
+                counter += 1;
+              }
+
+              list.setAttribute('data-show', true);
+            }
+          });
+        } else {
+          clearSearchString();
+        }
+      } // Handles searchbox focus behaviour
+
+
+      searchBox.addEventListener('focusin', function () {
+        // closes all accordions and location dropdown
+        toggleLocationPanel('true');
+        closeAccordions(); // check if there's a search string and then runs suggestions
+
+        searchSuggestions();
+      });
+      /**
+       * goes find marker and show on map
+       * @id {string} string in number which is a unique identifier for each building i.e. 3252
+       */
+
+      function searchQueryIdFind(id) {
+        document.getElementById('query__suggestions').setAttribute('data-show', false);
+        hashChange(id);
+      }
+      /**
+       * Handles navigating search suggestions by keyboard
+       * @keyCode {number} keycode of keyboard key pressed
+       */
+
+
+      function searchItemFocus(keyCode) {
+        let collectionNum = document.getElementById('query__suggestions').querySelectorAll('li').length; // Down arrow pressed
+
+        if (keyCode === parseInt('40')) {
+          let focusState = parseInt(document.getElementById('query__suggestions').getAttribute('data-focus'));
+
+          if (focusState + 1 !== collectionNum) {
+            document.getElementById('query__suggestions').querySelectorAll('a')[focusState + 1].focus();
+            document.getElementById('query__suggestions').setAttribute('data-focus', focusState + 1);
+          }
+        } // Up arrow pressed
+        else if (keyCode === parseInt('38')) {
+          let focusState = parseInt(document.getElementById('query__suggestions').getAttribute('data-focus'));
+
+          if (focusState - 1 !== -1) {
+            document.getElementById('query__suggestions').querySelectorAll('a')[focusState - 1].focus();
+            document.getElementById('query__suggestions').setAttribute('data-focus', focusState - 1);
+          } else {
+            searchBox.focus();
+            document.getElementById('query__suggestions').setAttribute('data-focus', -1);
+          }
+        }
+      }
+    }
+
+    searchBoxInit(); //clear marker when infoWIndow closed
+
+    google.maps.event.addListener(infoWindow, 'closeclick', function () {
+      updateHash(infoWindow);
+    }); // map loading icon
+
+    mapContainer.classList.remove('loading');
+    Array.from(mapContainer.querySelectorAll('.loading-fa-icon')).forEach(function (i) {
+      i.remove();
+    }); // Bind an event to window.onhashchange that, when the history state changes,
+
+    window.addEventListener('hashchange', hashChange); // Since the event is only triggered when the hash changes, we need to trigger
+    // the event now, to handle the hash the page may have loaded with.
+
+    hashChange(location.hash.replace('#', '')); // cleans up empty accorions
+
+    for (let key in locationCounter) {
+      if (locationCounter[key] > 0) {
+        // selects empty accordion
+        document.getElementById('accordion-' + key).style.display = 'block';
+        showSearch = true;
+      }
+    }
+
+    if (showSearch === true) {
+      document.getElementById('map-controls').style.display = 'block';
+    }
+  } //end parse xml,
+  // Loads location data from 'dataSrc' -json containing location info
+
+
+  function loadXml() {
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+      if (xhttp.readyState === parseInt('4') && xhttp.status === parseInt('200')) {
+        parseXml(xhttp.responseXML);
+      }
+    };
+
+    xhttp.open('GET', dataSrc, true);
+    xhttp.send(null);
+  }
+  /**
+   * Initialises the map, shows loading icon whilst doing so
+   *
+   */
+
+
+  function init() {
+    mapContainer.classList.add('loading');
+    mapContainer.appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('i', [{
+      label: 'class',
+      val: 'fa fa-refresh fa-spin loading-fa-icon'
+    }]));
+    loadXml();
+  }
+  /**
+   * Toggles location panel open or close depending on it's status
+   * @status {string} being 'true' or 'false', passed from data-show attribute
+   */
+
+
+  function toggleLocationPanel(status) {
+    if (status === 'false') {
+      mapContainer.querySelector('.campus-map-v25__controls__locations__heading').setAttribute('data-show', true);
+      mapContainer.querySelector('.campus-map-v25__controls__locations').setAttribute('data-show', true);
+      mapContainer.querySelector('.campus-map-v25__controls__locations').focus();
+
+      if (document.getElementById('query__suggestions')) {
+        document.getElementById('query__suggestions').setAttribute('data-show', false);
+      }
+    } else {
+      mapContainer.querySelector('.campus-map-v25__controls__locations__heading').setAttribute('data-show', false);
+      mapContainer.querySelector('.campus-map-v25__controls__locations').setAttribute('data-show', false);
+    }
+  } // location panel behaviour
+
+
+  mapContainer.querySelector('.campus-map-v25__controls__locations__heading').addEventListener('click', function () {
+    let status = this.getAttribute('data-show');
+    toggleLocationPanel(status);
+  });
+  /**
+   * Accordion overrides - this closes location accordions, it also have an optional
+   * parameterater which closes all except the one. This would be when you want to close
+   * all except one being clicked on for example. This override was necessary
+   * as 6 individual accordions were used instead of 1 accordion having 6 sections,
+   * due to layout requirements
+   *
+   * @parameter {id} exception - id of accordion not to close
+   */
+
+  function closeAccordions(exception) {
+    Array.from(mapContainer.getElementsByClassName('accordion--location')).forEach(el => {
+      if (el.getAttribute('id') !== exception) {
+        el.querySelector('.accordion__heading').setAttribute('data-open', 'false');
+        el.querySelector('.accordion__heading button').setAttribute('aria-expanded', 'false');
+        el.querySelector('.accordion__body').setAttribute('data-closed', 'true');
+      }
+    });
+  } // adds click event to close all accordions apart one from being clicked
+
+
+  Array.from(mapContainer.getElementsByClassName('accordion--location')).forEach(el => {
+    el.addEventListener('click', function () {
+      // capture which accordion clicked on and closes all others
+      closeAccordions(el.getAttribute('id'));
+    });
+  });
+  /**
+   * Closes search suggestions and location dropdowns
+   * when clicking outside of them elements
+   */
+
+  document.addEventListener('click', function (evt) {
+    var mapControls = document.getElementById('map-controls'),
+        targetElement = evt.target; // clicked element
+
+    do {
+      if (targetElement === mapControls) {
+        // This is a click inside. Do nothing, just return.
+        return;
+      } // Go up the DOM
+
+
+      targetElement = targetElement.parentNode;
+    } while (targetElement); // This is a click outside
+    // closes location panel and location accorions, then clears / hides search suggestions
+
+
+    toggleLocationPanel('true');
+    closeAccordions();
+    clearsSearchSuggestions();
+  }); // Clears search string from location search
+
+  function clearSearchString() {
+    searchBox.value = '';
+    let clearSearch = document.querySelector('.campus-map-v25__controls__search__clear');
+    clearSearch ? clearSearch.remove() : null;
+  } // clears existing search suggestions
+
+
+  function clearsSearchSuggestions() {
+    let listWrapper = searchBox.parentElement.querySelector('.query__suggestions__wrapper');
+    let clearSearchButton = document.querySelector('.campus-map-v25__controls__search__clear');
+    listWrapper ? searchBox.parentElement.querySelector('.query__suggestions__wrapper').remove() : null;
+    clearSearchButton ? clearSearchButton.remove() : null;
+  } // Optional - to show all markers in the buildingsArray on initial load
+  //showOverlays(cityLayers.bigBuildingsArray);
+  // loads relevant campus map overlay on initial page load
+
+
+  var initialMapOverlay = new google.maps.Polygon({
+    map: map,
+    paths: campusOverlay,
+    strokeColor: '#FF0000',
+    strokeOpacity: 0.8,
+    strokeWeight: 0,
+    fillColor: '#FF0000',
+    fillOpacity: 0.2,
+    geodesic: true
+  }); // function to load specific campus overlay
+
+  function showOverlay(newCampusOverlay) {
+    initialMapOverlay.setMap(null);
+    initialMapOverlay = new google.maps.Polygon({
+      map: map,
+      paths: newCampusOverlay,
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 0,
+      fillColor: '#FF0000',
+      fillOpacity: 0.2,
+      geodesic: true
+    });
+  }
+
+  init();
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: createMap,
   launchQuery: `.${className}`
 });
 

@@ -668,7 +668,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-const externalSiteUrl = ['www.city.ac.uk'];
+const externalSiteUrl = ['www.citystgeorges.ac.uk'];
 
 function Finder__Results__Course(props) {
   const subtitle = props.details.listMetadata.type && props.details.listMetadata.type[0] || props.details.listMetadata.level && props.details.listMetadata.level[0] || null,
@@ -1562,8 +1562,11 @@ __webpack_require__.r(__webpack_exports__);
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-const baseUrl = 'https://www.city.ac.uk/web-services',
+const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
+      dxpBaseUrl = 'https://www.citystgeorges.ac.uk/web-services/dxp-fb',
       findRootUrl = '/funnelback-16-find',
+      dxpFindRootUrl = '/funnelback-dxp-find',
+      dxpSuggestRootUrl = '/funnelback-dxp-suggest',
       suggestRootUrl = '/funnelback-16-suggest',
       maximumSuggestions = 100,
       timeout = 30000;
@@ -1579,7 +1582,7 @@ const baseUrl = 'https://www.city.ac.uk/web-services',
  * @return {Promise} - A promise of search results.
  */
 
-function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters) {
+function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters, dxp) {
   const fixedParams = {};
   fixedParameters.forEach(param => {
     fixedParams[`${param.name}`] = param.value;
@@ -1597,12 +1600,12 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: baseUrl,
+    baseURL: dxp ? dxpBaseUrl : baseUrl,
     cancelToken: call.token,
     httpsAgent: new https__WEBPACK_IMPORTED_MODULE_1___default.a.Agent({
       keepAlive: true
     }),
-    url: findRootUrl,
+    url: dxp ? dxpFindRootUrl : findRootUrl,
     timeout: timeout,
     params: { ...fixedParams,
       ...fixedFacetParams,
@@ -1625,13 +1628,13 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
  * @return {Promise} - A promise of an array of suggestion strings.
  */
 
-function suggest(collection, partialQuery) {
+function suggest(collection, partialQuery, dxp) {
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: baseUrl,
+    baseURL: dxp ? dxpBaseUrl : baseUrl,
     cancelToken: call.token,
-    url: suggestRootUrl,
+    url: dxp ? dxpSuggestRootUrl : suggestRootUrl,
     timeout: timeout,
     params: {
       collection: collection,
@@ -2012,7 +2015,7 @@ __webpack_require__.r(__webpack_exports__);
 
  // FIXME for go live
 
-const siteUrl = 'city.ac.uk';
+const siteUrl = 'citystgeorges.ac.uk';
 
 function genericResult(result, type) {
   const thumbnail = result.listMetadata.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2472,7 +2475,7 @@ function Search__Query(props) {
 
       if (e.target.value) {
         // input is populated, ask for suggestions
-        const [suggestionsPromise, newCall] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["suggest"])(props.query.collection, e.target.value); // update our request cancel function for the new request
+        const [suggestionsPromise, newCall] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["suggest"])(props.query.collection, e.target.value, props.config.dxp ? props.config.dxp : false); // update our request cancel function for the new request
 
         setCall({
           cancel: () => {
@@ -2649,7 +2652,7 @@ function Search__OtherSites(props) {
     className: "search__othersites"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "search__othersites__heading"
-  }, "Results on other City sites"), props.collections.map((collection, i) => {
+  }, "Results on other City St George's sites"), props.collections.map((collection, i) => {
     if (!collection.updating && collection.response && collection.response.summary.totalMatching > 0) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search__othersites__site",
@@ -2785,7 +2788,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const siteUrl = 'city.ac.uk';
+const siteUrl = 'citystgeorges.ac.uk';
 const endKey = 'End',
       homeKey = 'Home',
       arrowLeft = 'ArrowLeft',
@@ -2798,7 +2801,7 @@ function genericResult(result, type, i) {
     className: "card__label"
   }, type),
         external = result.liveUrl.indexOf(siteUrl) < 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fas fa-sharp fa-external-link icon",
+    className: "ee fas fa-sharp fa-external-link icon",
     "aria-label": "(external link)"
   }));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -3121,7 +3124,7 @@ function Search__Results__BrowsePeople(props) {
     className: "cta-block__cta"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     className: "outline-cta--bright-square",
-    href: 'https://www.city.ac.uk/about/people/' + props.path + '?query=' + props.query
+    href: 'https://www.citystgeorges.ac.uk/about/people/' + props.path + '?query=' + props.query
   }, props.type.charAt(0).toUpperCase() + props.type.slice(1)));
 }
 
@@ -3251,8 +3254,8 @@ function InlineSearch(props) {
     call.cancel();
     suggestionsCall.cancel(); // make new, asynchronous requests to Funnelback
 
-    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters);
-    const [suggestionsRequest, suggestionsRequestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["suggest"])(query.collection, query.query); // save the requestTokens
+    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters, props.config.dxp ? props.config.dxp : false);
+    const [suggestionsRequest, suggestionsRequestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["suggest"])(query.collection, query.query, props.config.dxp ? props.config.dxp : false); // save the requestTokens
 
     setCall({
       cancel: () => {
@@ -3375,11 +3378,11 @@ function InlineSearch(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header-logo__responsive"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://city.ac.uk",
+    href: "https://www.citystgeorges.ac.uk",
     rel: "home"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "logo",
-    src: "https://www.city.ac.uk/__data/assets/file/0006/442248/city-university-london-responsive-white.svg",
+    src: "https://www.citystgeorges.ac.uk/__data/assets/file/0007/860452/city-st-georges-white-responsive-logo.svg",
     width: "180",
     alt: "City, University of London"
   })))), modalToggleButton), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -3563,7 +3566,7 @@ function Search(props) {
       query.interacted && props.element.querySelector('.search__results') && zenscroll__WEBPACK_IMPORTED_MODULE_7___default.a.center(props.element.querySelector('.search__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
       props.config.primary.collections.forEach((collection, i) => {
         fbResponses.primary[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(collection.collection, [], [], query.query, '', query.startRank, query.numRanks, [], []),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(collection.collection, [], [], query.query, '', query.startRank, query.numRanks, [], [], props.config.dxp ? props.config.dxp : false),
               newResponses = fbResponses;
         newResponses.primary[i].call = {
           cancel: () => {
@@ -3589,7 +3592,7 @@ function Search(props) {
       });
       props.config.finders.forEach((finder, i) => {
         fbResponses.finders[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(finder.collection, [], [], query.query, '', 1, finder.numRanks, [], []),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(finder.collection, [], [], query.query, '', 1, finder.numRanks, [], [], props.config.dxp ? props.config.dxp : false),
               newResponses = fbResponses;
         newResponses.finders[i].call = {
           cancel: () => {
@@ -3617,7 +3620,7 @@ function Search(props) {
       });
       props.config.nonpublic.forEach((nonpublic, i) => {
         fbResponses.nonpublic[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(nonpublic.collection, [], [], query.query, '', 1, 0, [], []),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(nonpublic.collection, [], [], query.query, '', 1, 0, [], [], props.config.dxp ? props.config.dxp : false),
               newResponses = fbResponses;
         newResponses.nonpublic[i].call = {
           cancel: () => {
