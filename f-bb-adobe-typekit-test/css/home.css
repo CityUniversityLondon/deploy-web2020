@@ -4143,7 +4143,7 @@ html {
     font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
     font-size: 16px;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     line-height: 1;
     text-rendering: optimizeLegibility;
 }
@@ -4221,7 +4221,7 @@ u {
 
 .sans {
     font-family: "ibm-plex-sans", sans-serif;
-    font-weight: 450;
+    font-weight: 400;
 }
 
 .sans b,
@@ -4236,7 +4236,7 @@ u {
 
 .serif {
     font-family: "ibm-plex-serif", serif;
-    font-weight: 450;
+    font-weight: 400;
 }
 
 .serif b,
@@ -4251,7 +4251,7 @@ u {
 
 .mono {
     font-family: "ibm-plex-mono", monospace;
-    font-weight: 450;
+    font-weight: 400;
 }
 
 .mono b,
@@ -4302,7 +4302,7 @@ u {
 }
 
 .weight-text {
-    font-weight: 450;
+    font-weight: 400;
 }
 
 .weight-book {
@@ -4357,7 +4357,7 @@ u {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
 }
 
@@ -4416,7 +4416,7 @@ pre {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     font-family: "ibm-plex-mono", monospace;
     letter-spacing: 0;
@@ -5048,7 +5048,7 @@ main blockquote {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
 }
 
@@ -5353,7 +5353,7 @@ main table {
     max-width: 100%;
     overflow-x: scroll;
     border-collapse: collapse;
-    font-weight: 450;
+    font-weight: 400;
 }
 
 main table tr th,
@@ -5729,7 +5729,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
 }
 
@@ -6053,7 +6053,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     display: flex;
     flex-direction: row;
@@ -6347,7 +6347,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card--event .card__anchor .card--event__label--shortdate span {
-    font-weight: 450;
+    font-weight: 400;
 }
 
 .card--event .card__anchor .card--event__label--shortdate:first-child {
@@ -6899,7 +6899,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     display: flex;
     flex-direction: row;
@@ -9957,7 +9957,7 @@ article a:active {
 }
 
 .card--event--home .card--event--home__date-label span {
-    font-weight: 450;
+    font-weight: 400;
     margin-left: auto;
     margin-right: auto;
 }
@@ -10771,7 +10771,7 @@ article a:active {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     margin-left: 1rem;
     margin-right: 1rem;
@@ -11603,7 +11603,7 @@ article a:active {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     margin-top: 0.75rem;
 }
@@ -12055,7 +12055,7 @@ article a:active {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
 }
 
@@ -12287,7 +12287,7 @@ article a:active {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     margin-top: 0.75rem;
     max-width: unset;
@@ -12562,7 +12562,7 @@ article a:active {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
 }
 
@@ -12822,7 +12822,7 @@ article a:active {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -14146,7 +14146,7 @@ article .link-copy {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     align-items: center;
     display: inline-flex;
@@ -15258,7 +15258,7 @@ article .link-copy {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     margin-top: 0.75rem;
     max-width: 55ch;
@@ -15651,7 +15651,7 @@ article .link-copy {
 .js .global-header__search .search--inline__icon {
     background-color: #ffffff;
     color: #696969;
-    font-weight: 450;
+    font-weight: 400;
     margin-bottom: 0.5rem;
     margin-top: 0.75rem;
 }
@@ -15673,7 +15673,7 @@ article .link-copy {
     background-color: #ffffff;
     display: flex;
     flex-grow: 1;
-    font-weight: 450;
+    font-weight: 400;
     padding: 0;
     position: relative;
 }
@@ -15969,7 +15969,7 @@ article .link-copy {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -16682,7 +16682,7 @@ article .link-copy {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     margin-top: 0.75rem;
     max-width: 55ch;
@@ -17073,7 +17073,7 @@ article .link-copy {
 }
 
 .search .search__query__suggestions li {
-    font-weight: 450;
+    font-weight: 400;
     margin-top: 0;
 }
 
@@ -17129,7 +17129,7 @@ article .link-copy {
      * ss04: 0/1 plain/dotted '0'
      */
     font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
-    font-weight: 450;
+    font-weight: 400;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -17341,7 +17341,7 @@ article .link-copy {
     letter-spacing: 0em;
     color: #d61726;
     display: block;
-    font-weight: 450;
+    font-weight: 400;
     padding-bottom: 1rem;
 }
 
@@ -17389,7 +17389,7 @@ article .link-copy {
     border-width: 0.125rem;
     bottom: 0.25rem;
     color: #0c0c0e;
-    font-weight: 450;
+    font-weight: 400;
     height: 3.25rem;
     position: relative;
     width: 100%;
@@ -17577,7 +17577,7 @@ article .link-copy {
         line-height: 1.625;
         letter-spacing: -0.005em;
         font-style: normal;
-        font-weight: 450;
+        font-weight: 400;
         max-width: 55ch;
         font-family: "ff-meta-web-pro", sans-serif;
         font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -17672,12 +17672,12 @@ article .link-copy {
         line-height: 1.625;
         letter-spacing: -0.005em;
         font-style: normal;
-        font-weight: 450;
+        font-weight: 400;
         max-width: 55ch;
         font-size: 0.889rem;
         line-height: 1.625;
         letter-spacing: 0em;
-        font-weight: 450;
+        font-weight: 400;
         max-width: unset;
     }
     .menu .menu__level3 li i,
@@ -18954,7 +18954,7 @@ article .link-copy {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -19282,7 +19282,7 @@ article .link-copy {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -19498,7 +19498,7 @@ article .link-copy {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     font-size: 1.125rem;
     line-height: 1.33333;
@@ -19602,7 +19602,7 @@ article .link-copy {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     font-family: "ff-meta-web-pro", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -20170,7 +20170,7 @@ article .link-copy {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     font-size: 0.889rem;
     line-height: 1.625;
@@ -20967,7 +20967,7 @@ article .link-copy {
         line-height: 1.625;
         letter-spacing: -0.005em;
         font-style: normal;
-        font-weight: 450;
+        font-weight: 400;
         max-width: 55ch;
         font-size: 0.889rem;
         line-height: 1.625;
@@ -21085,12 +21085,12 @@ article .link-copy {
         line-height: 1.625;
         letter-spacing: -0.005em;
         font-style: normal;
-        font-weight: 450;
+        font-weight: 400;
         max-width: 55ch;
         font-size: 0.889rem;
         line-height: 1.625;
         letter-spacing: 0em;
-        font-weight: 450;
+        font-weight: 400;
         max-width: unset;
     }
     .navigation--secondary .navigation__level5 li i,
@@ -23460,7 +23460,7 @@ a .link-decorator {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
     margin-top: 0;
     max-width: unset;
@@ -28282,7 +28282,7 @@ h3 .linked-heading__icons {
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
 }
 
@@ -28881,7 +28881,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor a .cta-like-anchor__text span:nth-c
     line-height: 1.625;
     letter-spacing: -0.005em;
     font-style: normal;
-    font-weight: 450;
+    font-weight: 400;
     max-width: 55ch;
 }
 
@@ -29156,7 +29156,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     letter-spacing: 0em;
     color: #d61726;
     display: block;
-    font-weight: 450;
+    font-weight: 400;
     padding-bottom: 1rem;
 }
 
@@ -29205,7 +29205,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     border-radius: 0.25rem;
     bottom: 0.25rem;
     color: #0c0c0e;
-    font-weight: 450;
+    font-weight: 400;
     height: 3.25rem;
     width: 100%;
     padding-left: 0.5rem;
@@ -29318,7 +29318,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     letter-spacing: -0.005em;
     display: flex;
     flex-grow: 1;
-    font-weight: 450;
+    font-weight: 400;
     padding: 0;
     position: relative;
 }
@@ -29552,7 +29552,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .search-box__query__suggestions li {
-    font-weight: 450;
+    font-weight: 400;
     margin-top: 0;
 }
 
