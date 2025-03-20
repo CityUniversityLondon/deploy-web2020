@@ -8191,10 +8191,36 @@ const className = 'picture[data-authorname], picture[data-sourcename]',
       openText = 'Show image credit',
       closeText = 'Hide image credit';
 /**
+ * Recursively checks the parent nodes of a given DOM node to determine if it belongs to a specific card type.
+ *
+ * @param {HTMLElement} node - The DOM node to start the search from.
+ * @returns {HTMLElement|null} The parent node of the given node that matches the specified card types, or null if no match is found.
+ */
+
+function walkDOMCheckClassName(node) {
+  const cardsType = ['card--pathway', 'card--news'];
+  const checkClassName = cardsType.some(e => node.parentElement.classList.contains(e));
+
+  if (node.tagName === 'BODY') {
+    return null;
+  }
+
+  if (checkClassName) {
+    return node.parentElement;
+  }
+
+  if (node.parentElement) {
+    return walkDOMCheckClassName(node.parentElement);
+  }
+
+  return null;
+}
+/**
  * Toggle the image credit open or closed.
  *
  * @param  {HTMLElement} wrapper - The image credit container
  */
+
 
 function toggleImageCredit(wrapper) {
   const button = wrapper.querySelector('button'),
@@ -8250,18 +8276,17 @@ function launchImageCredit(picture) {
         sourceUrl = picture.dataset.sourceurl,
         licenceText = picture.dataset.licencetype,
         licenceUrl = picture.dataset.licenceurl;
-  const linkRelatedCard = picture.parentElement.parentElement,
-        linkRelatedCardTagName = linkRelatedCard.tagName; // Pattern only launches if set to display and has either an author/source name
+  console.log('picture', picture); // Pattern only launches if set to display and has either an author/source name
 
   if (!display || !(authorText || sourceText)) {
     return;
   }
 
-  const wrapper = document.createElement('div'),
+  const wrapper = document.createElement('figure'),
         button = document.createElement('button'),
         spanIcon = document.createElement('span'),
         spanText = document.createElement('span'),
-        label = document.createElement('div'),
+        label = document.createElement('figcaption'),
         author = authorText ? createLabel(authorText, authorUrl) : null,
         source = sourceText ? createLabel(sourceText, sourceUrl) : null,
         licence = licenceText ? createLabel(licenceText, licenceUrl) : null;
@@ -8284,16 +8309,17 @@ function launchImageCredit(picture) {
   source && label.appendChild(source);
   licence ? licence.className = 'tooltip__label__licence' : null;
   licence && label.appendChild(licence);
-  wrapper.appendChild(label);
   wrapper.appendChild(button);
+  wrapper.appendChild(label);
+  let cardType = walkDOMCheckClassName(picture);
+  console.log('cardType', cardType);
 
-  switch (linkRelatedCardTagName) {
-    case 'A':
-      (author || source) && linkRelatedCard.parentElement.prepend(wrapper);
-      break;
-
-    default:
-      (author || source) && picture.appendChild(wrapper);
+  if (cardType) {
+    console.log('yes');
+    (author || source) && cardType.querySelector('a').parentElement.prepend(wrapper);
+  } else {
+    (author || source) && picture.appendChild(wrapper);
+    picture.querySelector('img').classList.add('tooltip__overlay');
   }
 }
 

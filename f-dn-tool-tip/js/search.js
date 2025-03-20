@@ -1107,6 +1107,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
+/* harmony import */ var _tools_finder_toolTip__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../tools/finder__toolTip */ "./src/patterns/finder/components/tools/finder__toolTip.js");
 
 
 /**
@@ -1114,6 +1115,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City, University of London 2020
  */
+
 
 
 
@@ -1125,6 +1127,13 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Finder__Results__News(props) {
+  const thumbnailSourceName = props.details.listMetadata.thumbnailSourceName && props.details.listMetadata.thumbnailSourceName[0] || false,
+        thumbnailSourceUrl = props.details.listMetadata.thumbnailSourceUrl && props.details.listMetadata.thumbnailSourceUrl[0] || false,
+        thumbnailAuthorName = props.details.listMetadata.thumbnailAuthorName && props.details.listMetadata.thumbnailAuthorName[0] || false,
+        thumbnailAuthorUrl = props.details.listMetadata.thumbnailAuthorUrl && props.details.listMetadata.thumbnailAuthorUrl[0] || false,
+        thumbnailLicenceType = props.details.listMetadata.thumbnailLicenceType && props.details.listMetadata.thumbnailLicenceType[0] || false,
+        thumbnailLicenceUrl = props.details.listMetadata.thumbnailLicenceUrl && props.details.listMetadata.thumbnailLicenceUrl[0] || false,
+        displayToolTip = props.details.listMetadata.thumbnailToolTip && Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(props.details.listMetadata.thumbnailToolTip[0]);
   const formattedDate = props.details.listMetadata.d && Object(_util__WEBPACK_IMPORTED_MODULE_2__["formatReactDate"])(new Date(props.details.listMetadata.d[0])),
         dateString = props.details.listMetadata.d && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "card__type"
@@ -1151,7 +1160,15 @@ function Finder__Results__News(props) {
   }) : null;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "card card--news"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tools_finder_toolTip__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    thumbnailSourceName: thumbnailSourceName,
+    thumbnailSourceUrl: thumbnailSourceUrl,
+    thumbnailAuthorName: thumbnailAuthorName,
+    thumbnailAuthorUrl: thumbnailAuthorUrl,
+    thumbnailLicenceType: thumbnailLicenceType,
+    thumbnailLicenceUrl: thumbnailLicenceUrl,
+    displayToolTip: displayToolTip
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: props.details.liveUrl,
     className: "card__anchor card__details"
   }, thumbnail, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1526,6 +1543,86 @@ const formatLabel = (label, value) => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (formatLabel);
+
+/***/ }),
+
+/***/ "./src/patterns/finder/components/tools/finder__toolTip.js":
+/*!*****************************************************************!*\
+  !*** ./src/patterns/finder/components/tools/finder__toolTip.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/finder/component/tools/finder__toolTip
+ * @author Web Development
+ * @copyright City, University of London 2020
+ */
+
+
+
+function Finder__ToolTip(props) {
+  const toggleLabel = () => setShow(!show);
+
+  const [show, setShow] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    thumbnailSourceName,
+    thumbnailSourceUrl,
+    thumbnailAuthorName,
+    thumbnailAuthorUrl,
+    thumbnailLicenseType,
+    thumbnailLicenseUrl,
+    displayToolTip
+  } = props;
+  const labelAuthor = thumbnailAuthorUrl && thumbnailAuthorName ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: thumbnailAuthorUrl
+  }, thumbnailAuthorName) : thumbnailAuthorName ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, thumbnailAuthorName) : null,
+        labelSource = thumbnailSourceUrl && thumbnailSourceName ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: thumbnailSourceUrl
+  }, thumbnailSourceName) : thumbnailSourceName ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, thumbnailSourceName) : null,
+        labelLicense = thumbnailLicenseUrl && thumbnailLicenseType ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: thumbnailLicenseUrl
+  }, thumbnailLicenseType) : thumbnailLicenseType ? thumbnailLicenseType : null;
+
+  if (displayToolTip && (thumbnailAuthorName || thumbnailSourceName)) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
+      className: "wrapper--tooltip__label",
+      "data-open": show
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "tooltip tooltip--image-credit",
+      type: "button",
+      "aria-expanded": show,
+      onClick: toggleLabel
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "tooltip__icon icon fa-sharp fa-light fa-subtitles"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "sr-only"
+    }, "Show image credit")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figcaption", {
+      className: "tooltip__label"
+    }, labelAuthor, " ", labelSource && '/ ', " ", labelSource, ' ', labelLicense));
+  } else {
+    return null;
+  }
+}
+
+Finder__ToolTip.propTypes = {
+  thumbnailSourceName: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailSourceUrl: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailAuthorName: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailAuthorUrl: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailLicenseType: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailLicenseUrl: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  displayToolTip: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+};
+/* harmony default export */ __webpack_exports__["default"] = (Finder__ToolTip);
 
 /***/ }),
 
