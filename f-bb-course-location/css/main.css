@@ -54246,7 +54246,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 
 @media (min-width: 769px) {
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block {
-        margin-left: 1rem;
         display: inline-block;
     }
 }
@@ -54259,6 +54258,147 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block .cta-block__cta {
         margin: 1.5rem auto;
     }
+}
+
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__details-item {
+    display: flex;
+    align-items: center;
+    border: 0.125rem solid #919191;
+    color: #1e1e1e;
+    background: #ffffff;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location .course--pgt__introduction__details-item-icon {
+    color: #d61726;
+}
+
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__details-item-icon {
+    margin-right: 0.5rem;
+    color: #919191;
+}
+
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt {
+    font-weight: 500;
+    font-size: 1.125rem;
+    margin-top: 0.5rem;
+}
+
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt a {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+    transition: background-size 0.2s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt a:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt a:focus, .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt a:active {
+    background-color: initial;
+    background-image: initial;
+    background-size: initial;
+    border-bottom-color: initial;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    color: initial;
+    cursor: pointer;
+    outline-color: initial;
+    outline-offset: 0;
+    outline-style: none;
+    outline-width: 0;
+    text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt a {
+        transition: none;
+    }
+}
+
+@media (hover: hover) {
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt a:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #cbcbcb 0%, #cbcbcb 100%);
+    }
+}
+
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt a:focus, .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt a:active {
+    outline-color: #ffffff;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
+}
+
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt a:visited {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt a:focus {
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #cbcbcb;
+}
+
+@media (hover: hover) {
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt a:hover {
+        border-bottom-color: #cbcbcb;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        color: #0c0c0e;
+    }
+}
+
+.course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt a:active {
+    background-color: #cbcbcb;
+    border-bottom-color: #cbcbcb;
+    border-bottom-style: solid;
+    border-bottom-width: 0.125rem;
+    color: #0c0c0e;
 }
 
 .course--pgt__section-wrapper--gray {
