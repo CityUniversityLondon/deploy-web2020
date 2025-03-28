@@ -8225,17 +8225,22 @@ function walkDOMCheckClassName(node) {
 function toggleImageCredit(wrapper) {
   const button = wrapper.querySelector('button'),
         buttonText = button.querySelector('.sr-only'),
-        label = wrapper.querySelector('.tooltip__label');
+        label = wrapper.querySelector('.tooltip__label'),
+        icon = button.querySelector('.tooltip__icon');
 
   if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(wrapper.dataset.open)) {
     wrapper.dataset.open = false;
     button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].expanded, 'false');
     buttonText.innerText = openText;
+    icon.classList.remove('fa-xmark');
+    icon.classList.add('fa-subtitles');
     button.focus();
   } else {
     wrapper.dataset.open = true;
     button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].expanded, 'true');
     buttonText.innerText = closeText;
+    icon.classList.remove('fa-subtitles');
+    icon.classList.add('fa-xmark');
     label.focus();
   }
 }
@@ -8275,8 +8280,7 @@ function launchImageCredit(picture) {
         sourceText = picture.dataset.sourcename,
         sourceUrl = picture.dataset.sourceurl,
         licenceText = picture.dataset.licencetype,
-        licenceUrl = picture.dataset.licenceurl;
-  console.log('picture', picture); // Pattern only launches if set to display and has either an author/source name
+        licenceUrl = picture.dataset.licenceurl; // Pattern only launches if set to display and has either an author/source name
 
   if (!display || !(authorText || sourceText)) {
     return;
@@ -8312,10 +8316,8 @@ function launchImageCredit(picture) {
   wrapper.appendChild(button);
   wrapper.appendChild(label);
   let cardType = walkDOMCheckClassName(picture);
-  console.log('cardType', cardType);
 
   if (cardType) {
-    console.log('yes');
     (author || source) && cardType.querySelector('a').parentElement.prepend(wrapper);
   } else {
     (author || source) && picture.appendChild(wrapper);

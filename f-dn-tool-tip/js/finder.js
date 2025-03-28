@@ -3633,7 +3633,7 @@ function Finder__ToolTip(props) {
       "aria-expanded": show,
       onClick: toggleLabel
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "tooltip__icon icon fa-sharp fa-light fa-subtitles"
+      className: `tooltip__icon icon fa-sharp fa-light fa-subtitles ${show ? 'fa-xmark' : 'fa-subtitles'}`
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       className: "sr-only"
     }, "Show image credit")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figcaption", {
