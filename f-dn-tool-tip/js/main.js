@@ -8276,11 +8276,9 @@ function createLabel(text, url) {
 function launchImageCredit(picture) {
   const display = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(picture.dataset.tooltipdisplay),
         authorText = picture.dataset.authorname,
-        authorUrl = picture.dataset.authorurl,
         sourceText = picture.dataset.sourcename,
         sourceUrl = picture.dataset.sourceurl,
-        licenceText = picture.dataset.licencetype,
-        licenceUrl = picture.dataset.licenceurl; // Pattern only launches if set to display and has either an author/source name
+        licenceText = picture.dataset.licencetype; // Pattern only launches if set to display and has either an author/source name
 
   if (!display || !(authorText || sourceText)) {
     return;
@@ -8291,9 +8289,9 @@ function launchImageCredit(picture) {
         spanIcon = document.createElement('span'),
         spanText = document.createElement('span'),
         label = document.createElement('figcaption'),
-        author = authorText ? createLabel(authorText, authorUrl) : null,
+        author = authorText ? createLabel(authorText) : null,
         source = sourceText ? createLabel(sourceText, sourceUrl) : null,
-        licence = licenceText ? createLabel(licenceText, licenceUrl) : null;
+        licence = licenceText ? createLabel(licenceText) : null;
   wrapper.className = 'wrapper--tooltip__label';
   wrapper.dataset.open = false;
   button.className = 'tooltip tooltip--image-credit';
@@ -8309,8 +8307,9 @@ function launchImageCredit(picture) {
   label.className = 'tooltip__label';
   label.setAttribute('tabindex', -1);
   author && label.appendChild(author);
-  author && source && label.appendChild(document.createTextNode(' / '));
+  author && source && label.appendChild(document.createTextNode(', '));
   source && label.appendChild(source);
+  source && licence && label.appendChild(document.createTextNode(' | '));
   licence ? licence.className = 'tooltip__label__licence' : null;
   licence && label.appendChild(licence);
   wrapper.appendChild(button);

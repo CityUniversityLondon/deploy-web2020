@@ -14336,6 +14336,7 @@ article a:active {
 }
 
 .wrapper--tooltip__label .tooltip__label {
+    display: inline-block;
     margin-left: 1rem;
     color: #ffffff;
     padding: 0 0.5rem;
@@ -14370,6 +14371,7 @@ article a:active {
 }
 
 .wrapper--tooltip__label .tooltip__label a {
+    display: inline;
     color: #ffffff;
     text-decoration: underline;
     text-decoration-thickness: 0.0625rem;
@@ -14395,10 +14397,6 @@ article a:active {
     opacity: initial;
     width: initial;
     height: initial;
-}
-
-.wrapper--tooltip__label .tooltip__label .tooltip__label__licence {
-    display: table;
 }
 
 .wrapper--tooltip__label .tooltip--image-credit {
