@@ -14341,20 +14341,20 @@ article a:active {
     color: #ffffff;
     padding: 0 0.5rem;
     border-left: solid 0.1875rem #ffffff;
-    font-size: 0.889rem;
+    font-size: 0.79rem;
     line-height: 1.625;
-    letter-spacing: 0em;
+    letter-spacing: 0.005em;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
     .wrapper--tooltip__label .tooltip__label {
-        letter-spacing: -0.005em;
+        letter-spacing: 0em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
     .wrapper--tooltip__label .tooltip__label {
-        letter-spacing: -0.01em;
+        letter-spacing: -0.007em;
     }
 }
 
