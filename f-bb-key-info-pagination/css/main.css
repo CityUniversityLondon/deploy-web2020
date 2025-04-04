@@ -58774,13 +58774,15 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (min-width: 900px) {
-    main > .lifelong-learning.shortcourse .key-information--lifelong-learning-group > ul > li {
+    main > .lifelong-learning.shortcourse .key-information--lifelong-learning-group > ul > li,
+    main > .lifelong-learning.shortcourse .key-information--lifelong-learning > ul > li {
         grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading' 'date date date date date date location location location location location location location location button button button button' 'explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation';
     }
 }
 
 @media (min-width: 768px) and (max-width: 899px) {
-    main > .lifelong-learning.shortcourse .key-information--lifelong-learning-group > ul > li {
+    main > .lifelong-learning.shortcourse .key-information--lifelong-learning-group > ul > li,
+    main > .lifelong-learning.shortcourse .key-information--lifelong-learning > ul > li {
         grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading' 'date date date date location location location location location location button button' 'explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation';
     }
 }
@@ -58850,7 +58852,8 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
         grid-column: 1 / span 24;
         grid-row: 3;
     }
-    main > .lifelong-learning .key-information--lifelong-learning-group {
+    main > .lifelong-learning .key-information--lifelong-learning-group,
+    main > .lifelong-learning .key-information--lifelong-learning {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -58858,18 +58861,23 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {
-    main > .lifelong-learning .key-information--lifelong-learning-group {
+    main > .lifelong-learning .key-information--lifelong-learning-group,
+    main > .lifelong-learning .key-information--lifelong-learning {
         grid-column-gap: 1rem;
     }
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
-    main > .lifelong-learning .key-information--lifelong-learning-group {
+    main > .lifelong-learning .key-information--lifelong-learning-group,
+    main > .lifelong-learning .key-information--lifelong-learning {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (max-width: 1023px) {
+    main > .lifelong-learning .key-information--lifelong-learning-group {
+        grid-column: 1 / -1;
+    }
     main > .lifelong-learning .lifelong-learning__tutors,
     main > .lifelong-learning .lifelong-learning__testimonials {
         margin-left: 1rem;
@@ -59090,7 +59098,8 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
         grid-column: 17 / span 8;
         grid-row: 2;
     }
-    main > .lifelong-learning .key-information--lifelong-learning-group {
+    main > .lifelong-learning .key-information--lifelong-learning-group,
+    main > .lifelong-learning .key-information--lifelong-learning {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
@@ -59098,18 +59107,23 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
-    main > .lifelong-learning .key-information--lifelong-learning-group {
+    main > .lifelong-learning .key-information--lifelong-learning-group,
+    main > .lifelong-learning .key-information--lifelong-learning {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main > .lifelong-learning .key-information--lifelong-learning-group {
+    main > .lifelong-learning .key-information--lifelong-learning-group,
+    main > .lifelong-learning .key-information--lifelong-learning {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
+    main > .lifelong-learning .key-information--lifelong-learning-group {
+        grid-column: 1 / -1;
+    }
     main > .lifelong-learning .lifelong-learning__tutors,
     main > .lifelong-learning .lifelong-learning__testimonials {
         grid-template-columns: repeat(24, 1fr);
@@ -59254,26 +59268,32 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
         grid-column: 13 / span 6;
         grid-row: 2;
     }
-    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning-group {
-        grid-template-columns: repeat(18, 1fr);
+    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning-group,
+    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning {
+        grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
-    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning-group {
+    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning-group,
+    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
-    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning-group {
+    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning-group,
+    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
+    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning-group {
+        grid-column: 1 / -1;
+    }
     main .navigation--secondary + .lifelong-learning .lifelong-learning__tutors,
     main .navigation--secondary + .lifelong-learning .lifelong-learning__testimonials {
         grid-template-columns: repeat(18, 1fr);
@@ -59496,6 +59516,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
+    grid-column: 1 / -1;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -59901,45 +59922,56 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     font-weight: 700;
 }
 
-.lifelong-learning .key-information--lifelong-learning-group {
+.lifelong-learning .key-information--lifelong-learning-group,
+.lifelong-learning .key-information--lifelong-learning {
     grid-template-rows: repeat(2, auto);
 }
 
 .lifelong-learning .key-information--lifelong-learning-group > h2,
-.lifelong-learning .key-information--lifelong-learning-group h3 {
+.lifelong-learning .key-information--lifelong-learning-group h3,
+.lifelong-learning .key-information--lifelong-learning > h2,
+.lifelong-learning .key-information--lifelong-learning h3 {
     color: #5d184a;
 }
 
-.lifelong-learning .key-information--lifelong-learning-group > h2 {
+.lifelong-learning .key-information--lifelong-learning-group > h2,
+.lifelong-learning .key-information--lifelong-learning > h2 {
     grid-column: 2 / -2;
 }
 
-.lifelong-learning .key-information--lifelong-learning-group > h3 {
+.lifelong-learning .key-information--lifelong-learning-group > h3,
+.lifelong-learning .key-information--lifelong-learning > h3 {
     grid-column: 1 / -1;
 }
 
-.lifelong-learning .key-information--lifelong-learning-group .key-information--lifelong-learning__icon {
+.lifelong-learning .key-information--lifelong-learning-group .key-information--lifelong-learning__icon,
+.lifelong-learning .key-information--lifelong-learning .key-information--lifelong-learning__icon {
     margin-right: 1rem;
 }
 
 .lifelong-learning .key-information--lifelong-learning-group > ul,
-.lifelong-learning .key-information--lifelong-learning-group > .pagination__wrapper {
+.lifelong-learning .key-information--lifelong-learning-group > .pagination__wrapper,
+.lifelong-learning .key-information--lifelong-learning > ul,
+.lifelong-learning .key-information--lifelong-learning > .pagination__wrapper {
     grid-column: 2 / -2;
     max-width: unset;
 }
 
-.lifelong-learning .key-information--lifelong-learning-group > .key-information--lifelong-learning__controls {
+.lifelong-learning .key-information--lifelong-learning-group > .key-information--lifelong-learning__controls,
+.lifelong-learning .key-information--lifelong-learning > .key-information--lifelong-learning__controls {
     grid-column: 2 / -2;
     justify-content: center;
 }
 
-.lifelong-learning .key-information--lifelong-learning-group > ul > li {
+.lifelong-learning .key-information--lifelong-learning-group > ul > li,
+.lifelong-learning .key-information--lifelong-learning > ul > li {
     background-color: #ffffff;
     border: 0.0625rem solid #d8d8d8;
     padding: 0 1rem 1rem 1rem;
 }
 
-.lifelong-learning .key-information--lifelong-learning-group > ul > li > ul {
+.lifelong-learning .key-information--lifelong-learning-group > ul > li > ul,
+.lifelong-learning .key-information--lifelong-learning > ul > li > ul {
     margin-left: 0;
     margin-right: 0;
 }
