@@ -5110,14 +5110,13 @@ function handleNextPrevClick(keyInformation, direction) {
  */
 
 
-function handleLoadMoreClick(keyInformation) {
-  const hiddenDates = Array.from(keyInformation.querySelectorAll(`.${className}__dates > [data-loadmorevisible="false"]`)),
-        loadMoreButton = keyInformation.querySelector(`.${className}__controls__loadmore`);
+function handleLoadMoreClick(startDateList) {
+  const hiddenDates = Array.from(startDateList.querySelectorAll(`.${className}__dates > [data-loadmorevisible="false"]`)),
+        loadMoreButton = startDateList.querySelector(`.${className}__controls__loadmore`);
 
   if (loadMoreBatch >= hiddenDates.length) {
     loadMoreButton.parentNode.removeChild(loadMoreButton);
-    const keyInfoWrapper = document.querySelector('.wrapper--key-information--lifelong-learning'),
-          registerInterestWrapper = document.createElement('div'),
+    const registerInterestWrapper = document.createElement('div'),
           registerInterest = document.createElement('div'),
           registerInterestPromptText = document.createElement('strong'),
           registerInterestPromptParagraph = document.createElement('p'),
@@ -5126,7 +5125,7 @@ function handleLoadMoreClick(keyInformation) {
           registerInterestCtaAnchor = document.createElement('a'),
           registerInterestCtaSpan = document.createElement('span');
     registerInterestWrapper.className = 'wrapper--key-information--lifelong-learning__register-interest', registerInterestWrapper.setAttribute('data-desktop-only', 'yes'), registerInterest.className = 'key-information--lifelong-learning__register-interest', registerInterestCtaBlock.className = 'cta-block key-information--lifelong-learning__register-interest', registerInterestCta.className = 'cta-block__cta', registerInterestCtaAnchor.setAttribute('href', 'https://forms.student-crm.com/Forms/view/04e49433-ebf1-4fae-8122-e768c03d5b2c'), registerInterestCtaAnchor.className = 'outline-cta--bright', registerInterestCtaSpan.appendChild(document.createTextNode('Register your interest')), registerInterestPromptText.appendChild(document.createTextNode('Want to find out more?')), registerInterestPromptParagraph.appendChild(registerInterestPromptText), registerInterest.appendChild(registerInterestPromptParagraph), registerInterest.appendChild(registerInterestCtaBlock), registerInterestCtaBlock.appendChild(registerInterestCta), registerInterestCta.appendChild(registerInterestCtaAnchor), registerInterestCtaAnchor.appendChild(registerInterestCtaSpan), registerInterestWrapper.appendChild(registerInterest);
-    keyInfoWrapper.appendChild(registerInterestWrapper);
+    startDateList.after(registerInterestWrapper);
   }
 
   hiddenDates.slice(0, loadMoreBatch).forEach(date => {
