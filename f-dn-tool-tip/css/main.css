@@ -33932,6 +33932,36 @@ img:has(~ .wrapper--tooltip__label[data-open='true']) {
     border-left: initial;
     border-right: initial;
     border-top: initial;
+    display: inline;
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-thickness: 0.0625rem;
+    text-underline-offset: 0.1875rem;
+    transition: text-decoration-thickness 0.2s ease-in-out;
+}
+
+.pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:visited {
+    color: #ffffff;
+}
+
+.pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:hover, .pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:active {
+    text-decoration-thickness: 0.125rem;
+}
+
+.pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:focus {
+    text-decoration-thickness: 0.125rem;
+    outline-color: #d61726;
+}
+
+.pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:before {
+    background: initial;
+    opacity: initial;
+    width: initial;
+    height: initial;
+}
+
+.pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:active, .pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:hover, .pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:focus {
+    background-color: initial;
 }
 
 .pathway .pathway__cards .card--pathway a .card--pathway__content {
