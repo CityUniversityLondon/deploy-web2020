@@ -7195,7 +7195,7 @@ __webpack_require__.r(__webpack_exports__);
  * Finder entry
  *
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -7224,7 +7224,7 @@ __webpack_require__.r(__webpack_exports__);
  * Matrix Wrapper
  *
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 /* harmony default export */ __webpack_exports__["default"] = ((() => {
@@ -7282,7 +7282,7 @@ __webpack_require__.r(__webpack_exports__);
  * Renderer
  *
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -7318,7 +7318,7 @@ __webpack_require__.r(__webpack_exports__);
  * Search box
  *
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 

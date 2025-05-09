@@ -2416,6 +2416,10 @@ readers do not read off random characters that represent icons */
     content: "\f14c";
 }
 
+.fa-subtitles::before {
+    content: "\e60f";
+}
+
 .fa-sun::before {
     content: "\f185";
 }
@@ -3402,6 +3406,10 @@ readers do not read off random characters that represent icons */
 
 .fad.fa-external-link-square::after, .fa-duotone.fa-external-link-square::after {
     content: "\f14c\f14c";
+}
+
+.fad.fa-subtitles::after, .fa-duotone.fa-subtitles::after {
+    content: "\e60f\e60f";
 }
 
 .fad.fa-sun::after, .fa-duotone.fa-sun::after {
@@ -7190,6 +7198,10 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card--module .card__details .card--module__code i,
 .card--module .card__details .card--module__code em {
     font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+.card--news {
+    position: relative;
 }
 
 .card--news .card__anchor {
@@ -21958,20 +21970,20 @@ figure figcaption a:active,
     margin-right: 0.25rem;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta {
     max-width: unset;
 }
 
 @media (max-width: 900px) {
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta {
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta {
         display: flex;
         flex-direction: column;
         margin-top: 2rem;
     }
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button {
     background: initial;
     border-radius: 0.25rem;
     border: none;
@@ -21990,34 +22002,34 @@ figure figcaption a:active,
     color: #ffffff;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:disabled,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:disabled {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:disabled,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:disabled {
     cursor: default;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a,
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button {
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a,
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button {
         transition: none;
     }
 }
 
 @media (max-width: 432px) {
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a,
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button {
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a,
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button {
         display: flex;
         justify-content: center;
         text-align: center;
     }
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a span,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button span {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a span,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button span {
     transition: transform 0.6s;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:after,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:after {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:after,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:after {
     content: "";
     font-family: 'Font Awesome 6 Pro';
     font-style: normal;
@@ -22031,83 +22043,83 @@ figure figcaption a:active,
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:after,
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:after {
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:after,
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:after {
         transition: none;
     }
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:focus, .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:focus, .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:active,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:focus,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:active {
     background-color: transparent;
     border: 0.125rem solid #d61726;
     color: #ffffff;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:focus span, .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active span,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus span,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active span {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:focus span, .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:active span,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:focus span,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:active span {
     transform: translateX(-0.75rem);
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:focus:after, .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active:after,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus:after,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active:after {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:focus:after, .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:active:after,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:focus:after,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:active:after {
     opacity: 1;
     transform: translateX(0.75rem);
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:hover,
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:hover {
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:hover,
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:hover {
         background-color: transparent;
         border: 0.125rem solid #d61726;
         color: #ffffff;
     }
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:hover span,
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:hover span {
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:hover span,
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:hover span {
         transform: translateX(-0.75rem);
     }
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:hover:after,
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:hover:after {
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:hover:after,
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:hover:after {
         opacity: 1;
         transform: translateX(0.75rem);
     }
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:disabled,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:disabled {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:disabled,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:disabled {
     opacity: 0.7;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:disabled span,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:disabled span {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:disabled span,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:disabled span {
     transform: none;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:disabled:after,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:disabled:after {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:disabled:after,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:disabled:after {
     opacity: 0;
     transform: none;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:visited,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:visited {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:visited,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:visited {
     border-color: #d61726;
     color: #ffffff;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:focus,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:focus,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:focus {
     background: #d61726;
     border-color: #d61726;
     color: #ffffff;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:focus:focus, .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:focus:active,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus:focus,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus:active {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:focus:focus, .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:focus:active,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:focus:focus,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:focus:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: solid;
@@ -22115,120 +22127,120 @@ figure figcaption a:active,
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:hover,
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:hover {
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:hover,
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:hover {
         background: #ffffff;
         border-color: #d61726;
         color: #d61726;
     }
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:active,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:active {
     border-color: #d61726;
     box-shadow: none;
     color: #d61726;
     background: transparent;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active:focus, .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active:active,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active:focus,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active:active {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:active:focus, .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:active:active,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:active:focus,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:active:active {
     outline-color: #0c0c0e;
     outline-offset: 0.1875rem;
     outline-style: solid;
     outline-width: 0.125rem;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:disabled,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:disabled {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:disabled,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:disabled {
     color: #ffffff;
     background: #d61726;
     border: 0.125rem solid #d61726;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a span,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button span {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a span,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button span {
     transition: none;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:visited,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:visited {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:visited,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:visited {
     border-color: #5d184a;
     color: #ffffff;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:after,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:after {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:after,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:after {
     content: '';
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:focus, .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:focus, .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:active,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:focus,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:active {
     background-color: #5d184a;
     border-color: #5d184a;
     color: #ffffff;
 }
 
 @media (hover: hover) {
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:hover,
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:hover {
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:hover,
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:hover {
         background-color: #340e2a;
         border-color: #340e2a;
         color: #ffffff;
     }
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:active,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:active {
     background-color: #340e2a;
     border-color: #340e2a;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:disabled,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:disabled {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:disabled,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:disabled {
     color: #ffffff;
     background: #5d184a;
     border-color: #5d184a;
 }
 
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:active span, .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:focus span, .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a:hover span,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:active span,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:focus span,
-.key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button:hover span {
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:active span, .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:focus span, .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:hover span,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:active span,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:focus span,
+.key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:hover span {
     transform: none;
 }
 
 @media (max-width: 900px) {
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta a,
-    .key-information--lifelong-learning .lifelong-learning__start-date__cta .cta-block__cta button {
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a,
+    .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button {
         justify-content: center;
     }
 }
 
-.key-information--lifelong-learning ul {
+.key-information--lifelong-learning-group ul {
     list-style-type: none;
     margin-left: 0;
     margin-top: 0;
 }
 
-.key-information--lifelong-learning > ul > li {
+.key-information--lifelong-learning-group > ul > li {
     display: grid;
     padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-    .key-information--lifelong-learning > ul > li {
+    .key-information--lifelong-learning-group > ul > li {
         border-bottom: 0.0625rem solid #a1a1a1;
     }
-    .key-information--lifelong-learning > ul > li:last-of-type {
+    .key-information--lifelong-learning-group > ul > li:last-of-type {
         border-bottom: none;
     }
 }
 
 @media (max-width: 432px) {
-    .key-information--lifelong-learning > ul > li {
+    .key-information--lifelong-learning-group > ul > li {
         background-color: #ffffff;
         border: 0.125rem solid #a1a1a1;
         padding: 1rem;
@@ -22240,7 +22252,7 @@ figure figcaption a:active,
 }
 
 @media (min-width: 433px) and (max-width: 768px) {
-    .key-information--lifelong-learning > ul > li {
+    .key-information--lifelong-learning-group > ul > li {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(4, auto);
@@ -22249,7 +22261,7 @@ figure figcaption a:active,
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
-    .key-information--lifelong-learning > ul > li {
+    .key-information--lifelong-learning-group > ul > li {
         grid-column-gap: 1rem;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(2, auto);
@@ -22258,7 +22270,7 @@ figure figcaption a:active,
 }
 
 @media (min-width: 901px) {
-    .key-information--lifelong-learning > ul > li {
+    .key-information--lifelong-learning-group > ul > li {
         grid-column-gap: 1.5rem;
         grid-template-columns: repeat(18, 1fr);
         grid-template-rows: repeat(2, auto);
@@ -22267,35 +22279,35 @@ figure figcaption a:active,
 }
 
 @media (min-width: 1281px) {
-    .key-information--lifelong-learning > ul > li {
+    .key-information--lifelong-learning-group > ul > li {
         grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading' 'date date date date date date location location location location location location location button button button button button' 'explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation';
     }
 }
 
-.key-information--lifelong-learning > ul > li > h3 {
+.key-information--lifelong-learning-group > ul > li > h3 {
     grid-area: heading;
 }
 
 @media (max-width: 767px) {
-    .key-information--lifelong-learning > ul > li > ul {
+    .key-information--lifelong-learning-group > ul > li > ul {
         margin-left: 2rem;
         margin-right: 2rem;
     }
 }
 
-.key-information--lifelong-learning > ul > li > ul:nth-of-type(1) {
+.key-information--lifelong-learning-group > ul > li > ul:nth-of-type(1) {
     grid-area: date;
 }
 
-.key-information--lifelong-learning > ul > li > ul:nth-of-type(2) {
+.key-information--lifelong-learning-group > ul > li > ul:nth-of-type(2) {
     grid-area: location;
 }
 
-.key-information--lifelong-learning > ul > li > ul:nth-of-type(3) {
+.key-information--lifelong-learning-group > ul > li > ul:nth-of-type(3) {
     grid-area: button;
 }
 
-.key-information--lifelong-learning > ul > li .lifelong-learning__start-date__fee-explanation {
+.key-information--lifelong-learning-group > ul > li .lifelong-learning__start-date__fee-explanation {
     grid-area: explanation;
 }
 
@@ -33697,12 +33709,18 @@ blockquote footer cite {
     font-size: 0.889rem;
     line-height: 1.625;
     letter-spacing: 0em;
-    background-color: #1e1e1e;
-    display: flex;
+    margin-top: initial;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 1;
+    width: 100%;
+}
+
+@media (min-width: 432px) and (max-width: 767px) {
+    .wrapper--tooltip__label {
+        display: none;
+    }
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -33734,117 +33752,67 @@ blockquote footer cite {
 }
 
 .wrapper--tooltip__label .tooltip__label {
+    display: inline-block;
+    margin-left: 1rem;
     color: #ffffff;
-    padding: 0.5rem;
+    padding: 0 0.5rem;
+    border-left: solid 0.1875rem #ffffff;
+    font-size: 0.79rem;
+    line-height: 1.625;
+    letter-spacing: 0.005em;
 }
 
-.wrapper--tooltip__label .tooltip__label:focus {
-    outline-color: #ffffff;
-    outline-offset: 0.1875rem;
-    outline-style: solid;
-    outline-width: 0.125rem;
-    outline-offset: -0.125rem;
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .wrapper--tooltip__label .tooltip__label {
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .wrapper--tooltip__label .tooltip__label {
+        letter-spacing: -0.007em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .wrapper--tooltip__label .tooltip__label {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .wrapper--tooltip__label .tooltip__label {
+        letter-spacing: -0.017em;
+    }
 }
 
 .wrapper--tooltip__label .tooltip__label a {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-    background-image: none;
-    border-bottom-color: #ffffff;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
+    display: inline;
     color: #ffffff;
-    position: relative;
-}
-
-@media (hover: hover) {
-    .wrapper--tooltip__label .tooltip__label a:hover {
-        background-color: initial;
-        background-image: initial;
-        background-size: initial;
-        border-bottom-color: initial;
-        border-bottom-style: none;
-        border-bottom-width: 0;
-        color: initial;
-        cursor: pointer;
-        outline-color: initial;
-        outline-offset: 0;
-        outline-style: none;
-        outline-width: 0;
-        text-decoration: none;
-    }
-}
-
-.wrapper--tooltip__label .tooltip__label a:focus, .wrapper--tooltip__label .tooltip__label a:active {
-    background-color: initial;
-    background-image: initial;
-    background-size: initial;
-    border-bottom-color: initial;
-    border-bottom-style: none;
-    border-bottom-width: 0;
-    color: initial;
-    cursor: pointer;
-    outline-color: initial;
-    outline-offset: 0;
-    outline-style: none;
-    outline-width: 0;
-    text-decoration: none;
-}
-
-.wrapper--tooltip__label .tooltip__label a:focus, .wrapper--tooltip__label .tooltip__label a:active {
-    outline-color: #ffffff;
-    outline-offset: 0.1875rem;
-    outline-style: solid;
-    outline-width: 0.125rem;
-}
-
-.wrapper--tooltip__label .tooltip__label a:before {
-    transition: opacity 0.2s ease-in-out, width 0.6s ease-in-out;
-}
-
-.wrapper--tooltip__label .tooltip__label a:focus {
-    border-bottom-color: #ffffff;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-thickness: 0.0625rem;
+    text-underline-offset: 0.1875rem;
+    transition: text-decoration-thickness 0.2s ease-in-out;
 }
 
 .wrapper--tooltip__label .tooltip__label a:visited {
-    border-bottom-color: #d8d8d8;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
-    color: #d8d8d8;
+    color: #ffffff;
 }
 
-@media (hover: hover) {
-    .wrapper--tooltip__label .tooltip__label a:hover {
-        background-image: none;
-        border-bottom-color: #ffffff;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        color: #ffffff;
-    }
+.wrapper--tooltip__label .tooltip__label a:hover, .wrapper--tooltip__label .tooltip__label a:active {
+    text-decoration-thickness: 0.125rem;
 }
 
-.wrapper--tooltip__label .tooltip__label a:active {
-    border-bottom-color: #ffffff;
-    border-bottom-style: solid;
-    border-bottom-width: 0.125rem;
+.wrapper--tooltip__label .tooltip__label a:focus {
+    text-decoration-thickness: 0.125rem;
+    outline-color: #d61726;
 }
 
-.wrapper--tooltip__label .tooltip__label .tooltip__label__licence {
-    display: table;
+.wrapper--tooltip__label .tooltip__label a:before {
+    background: initial;
+    opacity: initial;
+    width: initial;
+    height: initial;
 }
 
 .wrapper--tooltip__label .tooltip--image-credit {
@@ -33887,8 +33855,12 @@ blockquote footer cite {
 
 @media (hover: hover) {
     .wrapper--tooltip__label .tooltip--image-credit:hover {
-        background-color: #494949;
+        background-color: #d61726;
     }
+}
+
+.wrapper--tooltip__label .tooltip--image-credit:focus {
+    background-color: #d61726;
 }
 
 .wrapper--tooltip__label .tooltip--image-credit:active, .wrapper--tooltip__label .tooltip--image-credit:focus {
@@ -33896,11 +33868,107 @@ blockquote footer cite {
 }
 
 .wrapper--tooltip__label .tooltip--image-credit:active .icon, .wrapper--tooltip__label .tooltip--image-credit:focus .icon {
-    outline: 0.125rem dotted #ffffff;
+    outline: 0.125rem solid #ffffff;
 }
 
 .wrapper--tooltip__label .tooltip--image-credit .icon {
-    padding: 0.5rem;
+    min-width: 1.75rem;
+    padding: 0.25rem;
+    font-size: 1rem;
+}
+
+.tooltip__overlay {
+    -moz-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+img:has(~ .wrapper--tooltip__label[data-open='true']) {
+    -webkit-filter: brightness(0.2);
+    filter: brightness(0.2);
+}
+
+.card--news .wrapper--tooltip__label ~ .card__anchor img {
+    -moz-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card--news .wrapper--tooltip__label[data-open='true'] ~ .card__anchor img {
+    -webkit-filter: brightness(0.2);
+    filter: brightness(0.2);
+}
+
+.card--pathway .wrapper--tooltip__label ~ a img {
+    -moz-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.card--pathway .wrapper--tooltip__label[data-open='true'] ~ a img {
+    -webkit-filter: brightness(0.2);
+    filter: brightness(0.2);
+}
+
+.news__related-news .card--news .wrapper--tooltip__label {
+    margin: 0.1875rem;
+    width: calc(100% - 0.1875rem - 0.1875rem);
+}
+
+.finder__results .card--news .wrapper--tooltip__label {
+    margin: 0.25rem;
+    width: calc( 100% - 0.25rem - 0.25rem);
+}
+
+.pathway .pathway__cards .card--pathway {
+    position: relative;
+}
+
+.pathway .pathway__cards .card--pathway .wrapper--tooltip__label {
+    margin: initial;
+}
+
+.pathway .pathway__cards .card--pathway .wrapper--tooltip__label a {
+    border-left: initial;
+    border-right: initial;
+    border-top: initial;
+    background-color: initial;
+    display: inline;
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-thickness: 0.0625rem;
+    text-underline-offset: 0.1875rem;
+    transition: text-decoration-thickness 0.2s ease-in-out;
+}
+
+.pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:visited {
+    color: #ffffff;
+}
+
+.pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:hover, .pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:active {
+    text-decoration-thickness: 0.125rem;
+}
+
+.pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:focus {
+    text-decoration-thickness: 0.125rem;
+    outline-color: #d61726;
+}
+
+.pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:before {
+    background: initial;
+    opacity: initial;
+    width: initial;
+    height: initial;
+}
+
+.pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:active, .pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:hover, .pathway .pathway__cards .card--pathway .wrapper--tooltip__label a:focus {
+    background-color: initial;
+}
+
+@media (hover: hover) {
+    .pathway .pathway__cards .card--pathway a:hover .card--pathway__content {
+        background-color: #f2f2f2;
+    }
 }
 
 article .social-icon {
@@ -58914,12 +58982,14 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (min-width: 900px) {
+    main > .lifelong-learning.shortcourse .key-information--lifelong-learning-group > ul > li,
     main > .lifelong-learning.shortcourse .key-information--lifelong-learning > ul > li {
         grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading heading' 'date date date date date date location location location location location location location location button button button button' 'explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation';
     }
 }
 
 @media (min-width: 768px) and (max-width: 899px) {
+    main > .lifelong-learning.shortcourse .key-information--lifelong-learning-group > ul > li,
     main > .lifelong-learning.shortcourse .key-information--lifelong-learning > ul > li {
         grid-template-areas: 'heading heading heading heading heading heading heading heading heading heading heading heading' 'date date date date location location location location location location button button' 'explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation explanation';
     }
@@ -58990,6 +59060,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
         grid-column: 1 / span 24;
         grid-row: 3;
     }
+    main > .lifelong-learning .key-information--lifelong-learning-group,
     main > .lifelong-learning .key-information--lifelong-learning {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
@@ -58998,18 +59069,23 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (max-width: 1023px) and (min-width: 768px) {
+    main > .lifelong-learning .key-information--lifelong-learning-group,
     main > .lifelong-learning .key-information--lifelong-learning {
         grid-column-gap: 1rem;
     }
 }
 
 @media (max-width: 1023px) and (min-width: 901px) {
+    main > .lifelong-learning .key-information--lifelong-learning-group,
     main > .lifelong-learning .key-information--lifelong-learning {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (max-width: 1023px) {
+    main > .lifelong-learning .key-information--lifelong-learning-group {
+        grid-column: 1 / -1;
+    }
     main > .lifelong-learning .lifelong-learning__tutors,
     main > .lifelong-learning .lifelong-learning__testimonials {
         margin-left: 1rem;
@@ -59230,6 +59306,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
         grid-column: 17 / span 8;
         grid-row: 2;
     }
+    main > .lifelong-learning .key-information--lifelong-learning-group,
     main > .lifelong-learning .key-information--lifelong-learning {
         grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
@@ -59238,18 +59315,23 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
+    main > .lifelong-learning .key-information--lifelong-learning-group,
     main > .lifelong-learning .key-information--lifelong-learning {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
+    main > .lifelong-learning .key-information--lifelong-learning-group,
     main > .lifelong-learning .key-information--lifelong-learning {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
+    main > .lifelong-learning .key-information--lifelong-learning-group {
+        grid-column: 1 / -1;
+    }
     main > .lifelong-learning .lifelong-learning__tutors,
     main > .lifelong-learning .lifelong-learning__testimonials {
         grid-template-columns: repeat(24, 1fr);
@@ -59394,26 +59476,32 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
         grid-column: 13 / span 6;
         grid-row: 2;
     }
+    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning-group,
     main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning {
-        grid-template-columns: repeat(18, 1fr);
+        grid-template-columns: repeat(24, 1fr);
         grid-column-gap: 0;
         display: grid;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 768px) {
+    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning-group,
     main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 901px) {
+    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning-group,
     main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning {
         grid-column-gap: 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
+    main .navigation--secondary + .lifelong-learning .key-information--lifelong-learning-group {
+        grid-column: 1 / -1;
+    }
     main .navigation--secondary + .lifelong-learning .lifelong-learning__tutors,
     main .navigation--secondary + .lifelong-learning .lifelong-learning__testimonials {
         grid-template-columns: repeat(18, 1fr);
@@ -59636,6 +59724,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
+    grid-column: 1 / -1;
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
     display: grid;
@@ -60041,44 +60130,55 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     font-weight: 700;
 }
 
+.lifelong-learning .key-information--lifelong-learning-group,
 .lifelong-learning .key-information--lifelong-learning {
     grid-template-rows: repeat(2, auto);
 }
 
+.lifelong-learning .key-information--lifelong-learning-group > h2,
+.lifelong-learning .key-information--lifelong-learning-group h3,
 .lifelong-learning .key-information--lifelong-learning > h2,
 .lifelong-learning .key-information--lifelong-learning h3 {
     color: #5d184a;
 }
 
+.lifelong-learning .key-information--lifelong-learning-group > h2,
 .lifelong-learning .key-information--lifelong-learning > h2 {
     grid-column: 2 / -2;
 }
 
+.lifelong-learning .key-information--lifelong-learning-group > h3,
 .lifelong-learning .key-information--lifelong-learning > h3 {
     grid-column: 1 / -1;
 }
 
+.lifelong-learning .key-information--lifelong-learning-group .key-information--lifelong-learning__icon,
 .lifelong-learning .key-information--lifelong-learning .key-information--lifelong-learning__icon {
     margin-right: 1rem;
 }
 
+.lifelong-learning .key-information--lifelong-learning-group > ul,
+.lifelong-learning .key-information--lifelong-learning-group > .pagination__wrapper,
 .lifelong-learning .key-information--lifelong-learning > ul,
 .lifelong-learning .key-information--lifelong-learning > .pagination__wrapper {
     grid-column: 2 / -2;
     max-width: unset;
 }
 
+.lifelong-learning .key-information--lifelong-learning-group > .key-information--lifelong-learning__controls,
 .lifelong-learning .key-information--lifelong-learning > .key-information--lifelong-learning__controls {
     grid-column: 2 / -2;
     justify-content: center;
 }
 
+.lifelong-learning .key-information--lifelong-learning-group > ul > li,
 .lifelong-learning .key-information--lifelong-learning > ul > li {
     background-color: #ffffff;
     border: 0.0625rem solid #d8d8d8;
     padding: 0 1rem 1rem 1rem;
 }
 
+.lifelong-learning .key-information--lifelong-learning-group > ul > li > ul,
 .lifelong-learning .key-information--lifelong-learning > ul > li > ul {
     margin-left: 0;
     margin-right: 0;

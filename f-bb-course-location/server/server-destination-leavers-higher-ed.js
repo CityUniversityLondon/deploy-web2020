@@ -18761,7 +18761,7 @@ __webpack_require__.r(__webpack_exports__);
  * Destination Leavers higher education entry
  *
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -18796,7 +18796,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/wrapper--finder__filters--mobile
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -18935,7 +18935,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__filters
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -19088,7 +19088,7 @@ __webpack_require__.r(__webpack_exports__);
 /**<
  * @module patterns/finder/components/finder__select
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -19135,16 +19135,16 @@ function Finder__Select(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: `finder__filter finder__select ${currentValue && 'finder__select--selected'}`
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-      htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
+      htmlFor: `meta_${props.facet.meta}_and--${randomNumber}`
     }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-      name: `meta_${props.facet.meta}_sand`,
-      id: `meta_${props.facet.meta}_sand--${randomNumber}`,
+      name: `meta_${props.facet.meta}_and`,
+      id: `meta_${props.facet.meta}_and--${randomNumber}`,
       onChange: e => setFacet(e.target.value),
       value: currentValue
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
       value: "",
       id: `meta${props.facet.meta}all`,
-      name: `meta_${props.facet.meta}_sand--${randomNumber}`
+      name: `meta_${props.facet.meta}_and--${randomNumber}`
     }, props.facet.noSelection), props.facet.values.map((value, i) => {
       const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].allValues && props.responseFacet[0].allValues.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.toLowerCase());
 
@@ -19192,7 +19192,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__generic
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -19369,7 +19369,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__generic
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -19425,7 +19425,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__generic
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -19523,7 +19523,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__card
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -19568,7 +19568,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__generic
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -19617,7 +19617,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__generic
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -19666,7 +19666,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__generic
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -19715,7 +19715,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__generic
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -19765,7 +19765,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__results
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -19832,7 +19832,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__generic
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -19894,7 +19894,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/finder/finder
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -20100,7 +20100,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__checkbox
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -20128,8 +20128,8 @@ function Finder__Checkbox(props) {
       className: "finder__filter finder__checkbox"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "checkbox",
-      id: `meta_${props.facet.meta}_sand--${randomNumber}`,
-      name: `meta_${props.facet.meta}_sand`,
+      id: `meta_${props.facet.meta}_and--${randomNumber}`,
+      name: `meta_${props.facet.meta}_and`,
       value: props.facet.checkedValue,
       onChange: () => toggleFacet(),
       checked: toggleChecked
@@ -20141,7 +20141,7 @@ function Finder__Checkbox(props) {
       className: "fa fa-fw fas fa-check icon"
     }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       className: "finder__filters__label--always",
-      htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
+      htmlFor: `meta_${props.facet.meta}_and--${randomNumber}`
     }, props.facet.name, !toggleChecked && responseFacetValue && ' (' + responseFacetValue[0].count + ')'));
   } else {
     return null;
@@ -20178,7 +20178,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/filters/finder__reset
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -20242,7 +20242,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__sort
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -20315,7 +20315,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__tag
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -20359,7 +20359,7 @@ function Finder__Tag(props) {
   }, "Remove filter for "), props.facet.name, ":", ' ', props.facet.values.filter(value => value.data.toLowerCase() === props.query.facets[props.facet.meta].toLowerCase())[0].label));
   const ssrHiddenField = props.matrixState && props.query.facets[props.facet.meta] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "hidden",
-    name: `meta_${props.facet.meta}_sand`,
+    name: `meta_${props.facet.meta}_and`,
     value: props.query.facets[props.facet.meta]
   }) : null;
 
@@ -20414,7 +20414,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module funnelback
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -20453,11 +20453,11 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   paramsKeys.forEach(key => params[key] = parameters[key]);
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
-    fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value;
+    fixedFacetParams[`meta_${facet.meta}_and`] = facet.value;
   });
   const facetParams = {},
         facetKeys = Object.keys(facets);
-  facetKeys.forEach(key => facetParams[`meta_${key}_sand`] = facets[key]);
+  facetKeys.forEach(key => facetParams[`meta_${key}_and`] = facets[key]);
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
@@ -20541,7 +20541,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/finder/finder
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -20614,7 +20614,7 @@ function hyperLink(query, facet, pageNumber, numberRank) {
     if (/fixedParameters/.test(param[0])) {
       return encodeURIComponent(param[0].substring(16)) + '=' + encodeURIComponent(param[1]);
     } else if (/fixedFacets/.test(param[0])) {
-      return encodeURIComponent(`meta_${param[0].substring(12)}_sand`) + '=' + encodeURIComponent(param[1]);
+      return encodeURIComponent(`meta_${param[0].substring(12)}_and`) + '=' + encodeURIComponent(param[1]);
     } else if (/parameters/.test(param[0])) {
       return encodeURIComponent(param[0].substring(11)) + '=' + encodeURIComponent(param[1]);
     }
@@ -20636,7 +20636,7 @@ function hyperLink(query, facet, pageNumber, numberRank) {
         return encodeURIComponent('num_rank') + '=' + encodeURIComponent(param[1]);
 
       default:
-        return encodeURIComponent(`meta_${param[0]}_sand`) + '=' + encodeURIComponent(param[1]);
+        return encodeURIComponent(`meta_${param[0]}_and`) + '=' + encodeURIComponent(param[1]);
     }
   }).join('&');
 }
@@ -20671,9 +20671,9 @@ function replaceHistory(currQuery, currStartRank, currFacets, currParameters, cu
     currSort !== defaultSort && currSort !== '' ? params.set('sort', currSort) : params.delete('sort');
     facetLabels.forEach(facet => {
       if (currFacets[facet.meta]) {
-        params.set(`meta_${facet.meta}_sand`, currFacets[facet.meta]);
+        params.set(`meta_${facet.meta}_and`, currFacets[facet.meta]);
       } else {
-        params.delete(`meta_${facet.meta}_sand`);
+        params.delete(`meta_${facet.meta}_and`);
       }
     });
     facetLabels.forEach(facet => {
@@ -20748,8 +20748,8 @@ function getFacetParams(facets, params, matrixState) {
       const keys = Object.keys(params);
       const param = {};
 
-      if (keys.indexOf(`meta_${facet.meta}_sand`) !== -1) {
-        param[facet.meta] = params[`meta_${facet.meta}_sand`];
+      if (keys.indexOf(`meta_${facet.meta}_and`) !== -1) {
+        param[facet.meta] = params[`meta_${facet.meta}_and`];
       }
 
       return param;
@@ -20758,8 +20758,8 @@ function getFacetParams(facets, params, matrixState) {
     return facets.map(facet => {
       const param = {};
 
-      if (params.get(`meta_${facet.meta}_sand`)) {
-        param[facet.meta] = params.get(`meta_${facet.meta}_sand`);
+      if (params.get(`meta_${facet.meta}_and`)) {
+        param[facet.meta] = params.get(`meta_${facet.meta}_and`);
       }
 
       return param;
@@ -20785,7 +20785,7 @@ __webpack_require__.r(__webpack_exports__);
  * Matrix Wrapper
  *
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 /* harmony default export */ __webpack_exports__["default"] = ((() => {
@@ -20843,7 +20843,7 @@ __webpack_require__.r(__webpack_exports__);
  * Renderer
  *
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -20905,7 +20905,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module util
  * @author Web Development
- * @copyright City, University of London 2018-2020
+ * @copyright City St George's, University of London 2018-2020
  */
 
 
