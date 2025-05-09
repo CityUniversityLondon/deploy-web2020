@@ -2228,6 +2228,10 @@ readers do not read off random characters that represent icons */
     content: "\f013";
 }
 
+.fa-globe::before {
+    content: "\f0ac";
+}
+
 .fa-graduation-cap::before {
     content: "\f19d";
 }
@@ -3218,6 +3222,10 @@ readers do not read off random characters that represent icons */
 
 .fad.fa-cog::after, .fa-duotone.fa-cog::after {
     content: "\f013\f013";
+}
+
+.fad.fa-globe::after, .fa-duotone.fa-globe::after {
+    content: "\f0ac\f0ac";
 }
 
 .fad.fa-graduation-cap::after, .fa-duotone.fa-graduation-cap::after {
@@ -54345,12 +54353,11 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location .course--pgt__introduction__details-item-icon {
-    color: #d61726;
+    color: inherit;
 }
 
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__details-item-icon {
     margin-right: 0.5rem;
-    color: #919191;
 }
 
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location__alt {
