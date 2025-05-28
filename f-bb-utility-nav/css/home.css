@@ -13732,10 +13732,20 @@ article a:active {
     border-left-width: 5px;
     padding: 10px;
     border-bottom: 0;
-    margin-bottom: -1px;
     z-index: 2;
     position: relative;
     background: white;
+}
+
+.global-header__utility .global-header__utility__link-btn::after {
+    content: '';
+    background: white;
+    height: 2px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
 }
 
 .global-header__utility .global-header__utility__text {
