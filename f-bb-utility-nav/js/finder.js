@@ -3073,7 +3073,7 @@ function Finder__DidYouMean(props) {
     className: "finder__didyoumean__button",
     onClick: () => {
       const newQuery = props.query;
-      newQuery.query = props.response.spell.text.split(/\|/)[0].trim();
+      newQuery.query = props.response.spell.text.split(/\s/)[0].trim();
       newQuery.startRank = 1;
       newQuery.misspelling = null;
       newQuery.interacted = true;
@@ -3081,7 +3081,7 @@ function Finder__DidYouMean(props) {
       props.update.query(newQuery);
       props.update.results(!props.update.updateState);
     }
-  }, "\u201C", props.response.spell.text.split(/\|/)[0].trim(), "\u201D"), "?");
+  }, "\u201C", props.response.spell.text.split(/\s/)[0].trim(), "\u201D"), "?");
   return didyoumean;
 }
 
