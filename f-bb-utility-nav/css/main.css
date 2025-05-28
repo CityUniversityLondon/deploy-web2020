@@ -19814,6 +19814,13 @@ figure figcaption a:active,
     background: white;
 }
 
+.global-header__utility .global-header__utility__link-btn:focus:focus, .global-header__utility .global-header__utility__link-btn:focus:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
+}
+
 .global-header__utility .global-header__utility__link-btn::after {
     content: '';
     background: white;
