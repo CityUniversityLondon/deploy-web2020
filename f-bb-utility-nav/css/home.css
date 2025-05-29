@@ -13756,6 +13756,7 @@ article a:active {
 }
 
 .global-header__utility .global-header__utility__text {
+    color: #696969;
     margin: 0 5px;
 }
 
@@ -13780,6 +13781,11 @@ article a:active {
     margin-left: 0;
     margin-top: 0;
     max-width: unset;
+}
+
+.global-header__utility > ul > li a {
+    display: inline-block;
+    padding: 10px;
 }
 
 .global-header__utility > ul > li:not(:last-of-type) {
@@ -13922,6 +13928,7 @@ article a:active {
     background-color: #ffffff;
     z-index: 1;
     width: 150%;
+    box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
 }
 
 .global-header__utility__sub-menu li {
