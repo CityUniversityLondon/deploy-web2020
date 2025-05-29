@@ -2222,7 +2222,7 @@ function handleKeyboardNavigation(event, button, submenu) {
     const firstLink = submenu.querySelector('a');
     if (firstLink) firstLink.focus();
   } else if (event.key === 'Escape') {
-    // FIX: Allow Escape to close menu when focus is still on the parent button
+    // Allow Escape to close menu when focus is still on the parent button
     closeMenu(button.closest('.dd-menu'));
     button.focus();
   }
@@ -2239,14 +2239,13 @@ function handleSubmenuNavigation(event, submenu, button) {
     event.preventDefault();
     focusableItems[(currentIndex - 1 + focusableItems.length) % focusableItems.length].focus();
   } else if (event.key === 'Escape') {
-    // FIX: Close menu even if focus is on any submenu item
+    // Close menu even if focus is on any submenu item
     closeMenu(submenu.closest('.dd-menu'));
     button.focus();
   }
 }
 
 function launch(el) {
-  console.log('launced');
   const button = el.querySelector('.dd-menu__toggle');
   const submenu = el.querySelector('.dd-menu__sub');
   if (!button || !submenu) return;
@@ -2260,11 +2259,7 @@ function launch(el) {
   submenu.addEventListener('keydown', event => handleSubmenuNavigation(event, submenu, button));
 }
 
-const className = 'dd-menu'; // export default {
-//     launch,
-//     className,
-// };
-
+const className = 'dd-menu';
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launch,
   launchQuery: `.${className}`
