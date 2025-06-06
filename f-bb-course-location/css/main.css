@@ -19801,6 +19801,50 @@ figure figcaption a:active,
     display: none;
 }
 
+.global-header__utility .global-header__utility__sub-menu {
+    border: 1px solid #bebebe;
+    padding: 8px 12px;
+    border-left: 5px solid #d61726;
+}
+
+.global-header__utility .dd-menu--open .global-header__utility__link-btn {
+    border-color: #bebebe;
+    border-left-color: #d61726;
+}
+
+.global-header__utility .global-header__utility__link-btn {
+    border: 1px solid transparent;
+    border-left-width: 5px;
+    padding: 10px;
+    border-bottom: 0;
+    z-index: 2;
+    position: relative;
+    background: white;
+}
+
+.global-header__utility .global-header__utility__link-btn:focus:focus, .global-header__utility .global-header__utility__link-btn:focus:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
+}
+
+.global-header__utility .global-header__utility__link-btn::after {
+    content: '';
+    background: white;
+    height: 2px;
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+}
+
+.global-header__utility .global-header__utility__text {
+    color: #696969;
+    margin: 0 5px;
+}
+
 @media (min-width: 1024px) {
     .global-header__utility {
         display: block;
@@ -19812,17 +19856,29 @@ figure figcaption a:active,
     }
 }
 
-.global-header__utility ul {
+.global-header__utility > ul {
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     height: 100%;
     justify-content: flex-end;
-    list-style: none;
     margin-left: 0;
     margin-top: 0;
     max-width: unset;
+}
+
+.global-header__utility > ul > li a {
+    display: inline-block;
+    padding: 10px;
+}
+
+.global-header__utility > ul > li:not(:last-of-type) {
+    margin-right: 0.75rem;
+}
+
+.global-header__utility ul {
+    list-style: none;
 }
 
 .global-header__utility ul li {
@@ -19853,10 +19909,6 @@ figure figcaption a:active,
     .global-header__utility ul li {
         letter-spacing: -0.017em;
     }
-}
-
-.global-header__utility ul li:not(:last-of-type) {
-    margin-right: 0.75rem;
 }
 
 .global-header__utility ul li a {
@@ -19955,6 +20007,33 @@ figure figcaption a:active,
     .global-header__utility ul li a:hover .global-header__utility__icon {
         color: #1e1e1e;
     }
+}
+
+.global-header__utility__sub-menu {
+    background-color: #ffffff;
+    z-index: 1;
+    width: 150%;
+    box-shadow: 0 0.5rem 1.25rem 0 rgba(0, 0, 0, 0.3);
+}
+
+.global-header__utility__sub-menu li {
+    border-top: 1px solid #bebebe;
+}
+
+.global-header__utility__sub-menu li:first-child {
+    border-top: none;
+}
+
+.global-header__utility__sub-menu li:first-child a {
+    padding-bottom: 8px;
+    padding-top: 5px;
+}
+
+.global-header__utility__sub-menu li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0 5px 0;
 }
 
 @media (max-width: 1023px) {
@@ -26508,17 +26587,16 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     background-color: #e7ebed;
     border-top: 0.25rem solid #d61726;
     color: #0c0c0e;
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
+    padding-bottom: 1.25rem;
+    padding-top: 1.25rem;
 }
 
 .js .menu .menu__content .menu__utility ul {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     height: 100%;
-    justify-content: space-around;
     list-style: none;
     margin-left: 0;
     margin-top: 0;
@@ -26700,7 +26778,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .js .menu .menu__content .menu__utility ul li a .global-header__utility__icon {
     color: #494949;
-    margin-left: 0.25rem;
+    margin-left: 0.5rem;
     top: -0.125rem;
 }
 
@@ -46451,6 +46529,19 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
     justify-content: center;
 }
 
+.dd-menu {
+    position: relative;
+}
+
+.dd-menu__sub {
+    position: absolute;
+    display: none;
+}
+
+.dd-menu--open .dd-menu__sub {
+    display: block;
+}
+
 .generic {
     display: block;
 }
@@ -62596,6 +62687,16 @@ main .standard-content .content {
     }
 }
 
+.course--ug .course-info__wrapper .course-info.course-info--with-location .next-year {
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 1281px) {
+    .course--ug .course-info__wrapper .course-info.course-info--with-location {
+        display: block;
+    }
+}
+
 .course--ug .course-info__wrapper .course-info .course-info__year {
     justify-content: space-between;
     grid-column: 1/8;
@@ -62669,6 +62770,26 @@ main .standard-content .content {
 .course--ug .course-info__wrapper .course-info .course-info__video .cta-block li {
     margin-right: 0;
     margin-left: 1rem;
+}
+
+.course--ug .course-info__wrapper .course-info__details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.course--ug .course-info__wrapper .course-info__details-item {
+    display: flex;
+    align-items: center;
+    border: 0.125rem solid #919191;
+    color: #1e1e1e;
+    background: #ffffff;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.course--ug .course-info__wrapper .course-info__details-item .course-info__details-item-icon {
+    margin-right: 0.5rem;
 }
 
 .course--ug .promo-box__wrapper {

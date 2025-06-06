@@ -2079,6 +2079,8 @@ function hyperLink(query, facet, pageNumber, numberRank) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return replaceHistory; });
+/* harmony import */ var _url_params__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./url-params */ "./src/patterns/finder/logic/url-params.js");
+
 
 
 /**
@@ -2089,9 +2091,11 @@ __webpack_require__.r(__webpack_exports__);
  * @param {object[]} currFacets A map of facet meta labels to their values.
  * @param {*} facetLabels Array of facet definitions.
  */
+
 function replaceHistory(currQuery, currStartRank, currFacets, currParameters, currSort, facetLabels, defaultSort, hasMounted) {
   if (hasMounted) {
-    const params = new URLSearchParams(window.location.search);
+    const searchURLParams = new URLSearchParams(window.location.search);
+    const params = Object(_url_params__WEBPACK_IMPORTED_MODULE_0__["replaceAndDeleteKeys"])(searchURLParams, '_sand', '_and');
     currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
     currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
     currSort !== defaultSort && currSort !== '' ? params.set('sort', currSort) : params.delete('sort');
@@ -2120,15 +2124,39 @@ function replaceHistory(currQuery, currStartRank, currFacets, currParameters, cu
 /*!*************************************************!*\
   !*** ./src/patterns/finder/logic/url-params.js ***!
   \*************************************************/
-/*! exports provided: getNonFBParams, getFacetParams */
+/*! exports provided: replaceAndDeleteKeys, getNonFBParams, getFacetParams */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceAndDeleteKeys", function() { return replaceAndDeleteKeys; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNonFBParams", function() { return getNonFBParams; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFacetParams", function() { return getFacetParams; });
 
 
+/**
+ * Search and replace substring in Key on URLSearchParams
+ * remove when urls have been replace on Matrix
+ *
+ * @param {object} params URLSearchParams object for the current page.
+ * @param {string} target substring to replace
+ * @param {replacement} replacement substring to replace
+ * @return {object} - URLSearchParams object of new replace keys.
+ */
+function replaceAndDeleteKeys(params, target, replacement) {
+  const entries = Array.from(params.entries());
+
+  for (const [key, value] of entries) {
+    if (key.includes(target)) {
+      const newKey = key.replace(target, replacement);
+      params.set(newKey, value); // Add new key
+
+      params.delete(key); // Delete old key
+    }
+  }
+
+  return params;
+}
 /**
  * Retrieve non FB parameters from the URL parameters
  *
@@ -2136,14 +2164,17 @@ __webpack_require__.r(__webpack_exports__);
  * @param {object} params URLSearchParams object for the current page.
  * @return {object} - Map of facet meta labels to their current value from the URL.
  */
+
 function getNonFBParams(facets, params, matrixState) {
+  const updatedParams = params && replaceAndDeleteKeys(params, '_sand', '_and');
+
   if (matrixState) {
     return facets.map(facet => {
-      const keys = Object.keys(params);
+      const keys = Object.keys(updatedParams);
       const param = {};
 
       if (keys.indexOf(facet.meta) !== -1) {
-        param[facet.meta] = params[facet.meta];
+        param[facet.meta] = updatedParams[facet.meta];
       }
 
       return param;
@@ -2152,8 +2183,8 @@ function getNonFBParams(facets, params, matrixState) {
     return facets.filter(facet => facet.nonFBParam).map(facet => {
       const param = {};
 
-      if (params.get(facet.meta)) {
-        param[facet.meta] = params.get(facet.meta);
+      if (updatedParams.get(facet.meta)) {
+        param[facet.meta] = updatedParams.get(facet.meta);
       }
 
       return param;
@@ -2169,13 +2200,15 @@ function getNonFBParams(facets, params, matrixState) {
  */
 
 function getFacetParams(facets, params, matrixState) {
+  const updatedParams = params && replaceAndDeleteKeys(params, '_sand', '_and');
+
   if (matrixState) {
     return facets.map(facet => {
-      const keys = Object.keys(params);
+      const keys = Object.keys(updatedParams);
       const param = {};
 
       if (keys.indexOf(`meta_${facet.meta}_and`) !== -1) {
-        param[facet.meta] = params[`meta_${facet.meta}_and`];
+        param[facet.meta] = updatedParams[`meta_${facet.meta}_and`];
       }
 
       return param;
@@ -2184,8 +2217,8 @@ function getFacetParams(facets, params, matrixState) {
     return facets.map(facet => {
       const param = {};
 
-      if (params.get(`meta_${facet.meta}_and`)) {
-        param[facet.meta] = params.get(`meta_${facet.meta}_and`);
+      if (updatedParams.get(`meta_${facet.meta}_and`)) {
+        param[facet.meta] = updatedParams.get(`meta_${facet.meta}_and`);
       }
 
       return param;
