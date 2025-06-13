@@ -54430,7 +54430,9 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__details {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
+    gap: 0.5rem;
 }
 
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__details-item {
@@ -54440,7 +54442,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     color: #1e1e1e;
     background: #ffffff;
     padding: 0.5rem;
-    margin-right: 0.5rem;
 }
 
 .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__location .course--pgt__introduction__details-item-icon {
@@ -62674,12 +62675,6 @@ main .standard-content .content {
     grid-column: 2/-2;
 }
 
-@media (max-width: 1280px) {
-    .course--ug .course-info__wrapper .course-info {
-        grid-column: 1/-1;
-    }
-}
-
 @media (min-width: 1281px) {
     .course--ug .course-info__wrapper .course-info {
         display: flex;
@@ -62705,12 +62700,6 @@ main .standard-content .content {
 @media (max-width: 432px) {
     .course--ug .course-info__wrapper .course-info .course-info__year {
         display: block;
-    }
-}
-
-@media (max-width: 1280px) {
-    .course--ug .course-info__wrapper .course-info .course-info__year {
-        margin-bottom: 2rem;
     }
 }
 
@@ -62774,6 +62763,8 @@ main .standard-content .content {
 
 .course--ug .course-info__wrapper .course-info__details {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     align-items: center;
     margin-bottom: 1rem;
 }
@@ -62785,7 +62776,6 @@ main .standard-content .content {
     color: #1e1e1e;
     background: #ffffff;
     padding: 0.5rem;
-    margin-right: 0.5rem;
 }
 
 .course--ug .course-info__wrapper .course-info__details-item .course-info__details-item-icon {
