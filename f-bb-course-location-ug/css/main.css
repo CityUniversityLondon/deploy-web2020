@@ -54412,6 +54412,12 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 @media (min-width: 769px) {
+    .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video span + .cta-block {
+        margin-left: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
     .course--pgt .wrapper--course--pgt__introduction .course--pgt__introduction .course--pgt__introduction__ctas .course--pgt__introduction__ctas--video .cta-block {
         display: inline-block;
     }
