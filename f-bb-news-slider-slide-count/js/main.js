@@ -7871,7 +7871,7 @@ function launchSlider(slider) {
   // Might have use case for bigger screen which have capacity to have more than 1 item per slide.
 
   if (cardsPerRow > 1 && style !== 'responsive') {
-    // If cardsPerRow is set to more than 1, we set the style to responsive so it can handle the multiple items per slide.
+    // If cardsPerRow is set to more than 1, we set the style to responsive so it can handle multiple items per slide.
     style = 'responsive';
     cardsPerRow = 1;
     slider.dataset.style = style;
