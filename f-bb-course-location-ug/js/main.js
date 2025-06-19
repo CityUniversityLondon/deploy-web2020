@@ -5752,7 +5752,7 @@ function createMenuToggle(label, button, setMenu, veil) {
      * last in the DOM and is visible.
      */
     initialFocus: () => {
-      const open = Array.from(menu.querySelectorAll([`.${contentHeaderClassName} > span`, `.${currentClassName} > .${controlsClassName} > a`, `.${hierarchyClassName} > .${controlsClassName} > a`, `.${level1ClassName} > ul > li:first-of-type > .${controlsClassName} > a`, `.${currentPage} > a`].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_1__["isVisible"])(elem));
+      const open = Array.from(menu.querySelectorAll([`.${contentHeaderClassName} span`, `.${currentClassName} > .${controlsClassName} > a`, `.${hierarchyClassName} > .${controlsClassName} > a`, `.${level1ClassName} > ul > li:first-of-type > .${controlsClassName} > a`, `.${currentPage} > a`].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_1__["isVisible"])(elem));
       return open[open.length - 1];
     },
     onDeactivate: () => toggleMenu(button, setMenu, trap, veil),

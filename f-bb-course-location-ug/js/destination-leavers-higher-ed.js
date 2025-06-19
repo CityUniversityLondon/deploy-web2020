@@ -2166,20 +2166,19 @@ function replaceAndDeleteKeys(params, target, replacement) {
  */
 
 function getNonFBParams(facets, params, matrixState) {
-  const updatedParams = params && replaceAndDeleteKeys(params, '_sand', '_and');
-
   if (matrixState) {
     return facets.map(facet => {
-      const keys = Object.keys(updatedParams);
+      const keys = Object.keys(params);
       const param = {};
 
       if (keys.indexOf(facet.meta) !== -1) {
-        param[facet.meta] = updatedParams[facet.meta];
+        param[facet.meta] = params[facet.meta];
       }
 
       return param;
     }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
   } else {
+    const updatedParams = params && replaceAndDeleteKeys(params, '_sand', '_and');
     return facets.filter(facet => facet.nonFBParam).map(facet => {
       const param = {};
 
@@ -2200,20 +2199,19 @@ function getNonFBParams(facets, params, matrixState) {
  */
 
 function getFacetParams(facets, params, matrixState) {
-  const updatedParams = params && replaceAndDeleteKeys(params, '_sand', '_and');
-
   if (matrixState) {
     return facets.map(facet => {
-      const keys = Object.keys(updatedParams);
+      const keys = Object.keys(params);
       const param = {};
 
       if (keys.indexOf(`meta_${facet.meta}_and`) !== -1) {
-        param[facet.meta] = updatedParams[`meta_${facet.meta}_and`];
+        param[facet.meta] = params[`meta_${facet.meta}_and`];
       }
 
       return param;
     }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
   } else {
+    const updatedParams = params && replaceAndDeleteKeys(params, '_sand', '_and');
     return facets.map(facet => {
       const param = {};
 
