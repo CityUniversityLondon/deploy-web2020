@@ -745,14 +745,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
 /* harmony import */ var _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./how-to-apply--research */ "./src/how-to-apply--research.js");
 /* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
-/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
-/* harmony import */ var _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/banner-promo */ "./src/paint-layouts/home/home-vi-sections/banner-promo.js");
-/* harmony import */ var _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/play-button */ "./src/paint-layouts/home/home-vi-sections/play-button.js");
+/* harmony import */ var _patterns_dropdown_menu_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/dropdown-menu/dropdown-menu.js */ "./src/patterns/dropdown-menu/dropdown-menu.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
+/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
+/* harmony import */ var _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/banner-promo */ "./src/paint-layouts/home/home-vi-sections/banner-promo.js");
+/* harmony import */ var _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/play-button */ "./src/paint-layouts/home/home-vi-sections/play-button.js");
 
 
 /**
@@ -796,12 +797,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
  // import video from './patterns/video/video';
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_find_us_find_us_v25__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__["default"], // video,
-_patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_20__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_34__["default"], _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_33__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_dropdown_menu_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_find_us_find_us_v25__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_32__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_33__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__["default"], // video,
+_patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_20__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_35__["default"], _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_34__["default"]]);
 
 /***/ }),
 
@@ -2161,6 +2163,105 @@ function selectChange(e) {
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: prepareDropdown,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
+/***/ "./src/patterns/dropdown-menu/dropdown-menu.js":
+/*!*****************************************************!*\
+  !*** ./src/patterns/dropdown-menu/dropdown-menu.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+function toggleMenu(el, button) {
+  const container = el.closest('.dd-menu__container'); // Close all other dropdowns in the container
+
+  container.querySelectorAll('.dd-menu--open').forEach(item => {
+    if (item !== el) {
+      closeMenu(item);
+    }
+  }); // Toggle the clicked menu
+
+  const isOpen = el.classList.toggle('dd-menu--open');
+  button.setAttribute('aria-expanded', isOpen); // Find and update the screen reader text
+
+  const srText = button.querySelector('.dd-menu__toggle-state');
+
+  if (srText) {
+    srText.textContent = isOpen ? 'Close ' : 'Open ';
+  }
+}
+
+function closeMenu(el) {
+  if (!el) return; // Prevent errors if el is null
+
+  const button = el.querySelector('.dd-menu__toggle');
+  if (!button) return;
+  el.classList.remove('dd-menu--open');
+  button.setAttribute('aria-expanded', 'false');
+}
+
+function handleOutsideInteraction(event, el) {
+  if (!el.contains(event.target)) {
+    closeMenu(el);
+  }
+}
+
+function handleKeyboardNavigation(event, button, submenu) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    button.click();
+  } else if (event.key === 'ArrowDown') {
+    event.preventDefault();
+    const firstLink = submenu.querySelector('a');
+    if (firstLink) firstLink.focus();
+  } else if (event.key === 'Escape') {
+    // Allow Escape to close menu when focus is still on the parent button
+    closeMenu(button.closest('.dd-menu'));
+    button.focus();
+  }
+}
+
+function handleSubmenuNavigation(event, submenu, button) {
+  const focusableItems = Array.from(submenu.querySelectorAll('a'));
+  const currentIndex = focusableItems.indexOf(document.activeElement);
+
+  if (event.key === 'ArrowDown') {
+    event.preventDefault();
+    focusableItems[(currentIndex + 1) % focusableItems.length].focus();
+  } else if (event.key === 'ArrowUp') {
+    event.preventDefault();
+    focusableItems[(currentIndex - 1 + focusableItems.length) % focusableItems.length].focus();
+  } else if (event.key === 'Escape') {
+    // Close menu even if focus is on any submenu item
+    closeMenu(submenu.closest('.dd-menu'));
+    button.focus();
+  }
+}
+
+function launch(el) {
+  const button = el.querySelector('.dd-menu__toggle');
+  const submenu = el.querySelector('.dd-menu__sub');
+  if (!button || !submenu) return;
+  button.addEventListener('click', event => {
+    toggleMenu(el, button);
+    event.stopPropagation();
+  });
+  document.addEventListener('click', event => handleOutsideInteraction(event, el));
+  document.addEventListener('focusin', event => handleOutsideInteraction(event, el));
+  button.addEventListener('keydown', event => handleKeyboardNavigation(event, button, submenu));
+  submenu.addEventListener('keydown', event => handleSubmenuNavigation(event, submenu, button));
+}
+
+const className = 'dd-menu';
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launch,
   launchQuery: `.${className}`
 });
 
@@ -5651,7 +5752,7 @@ function createMenuToggle(label, button, setMenu, veil) {
      * last in the DOM and is visible.
      */
     initialFocus: () => {
-      const open = Array.from(menu.querySelectorAll([`.${contentHeaderClassName} > span`, `.${currentClassName} > .${controlsClassName} > a`, `.${hierarchyClassName} > .${controlsClassName} > a`, `.${level1ClassName} > ul > li:first-of-type > .${controlsClassName} > a`, `.${currentPage} > a`].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_1__["isVisible"])(elem));
+      const open = Array.from(menu.querySelectorAll([`.${contentHeaderClassName} span`, `.${currentClassName} > .${controlsClassName} > a`, `.${hierarchyClassName} > .${controlsClassName} > a`, `.${level1ClassName} > ul > li:first-of-type > .${controlsClassName} > a`, `.${currentPage} > a`].join(','))).filter(elem => Object(_util__WEBPACK_IMPORTED_MODULE_1__["isVisible"])(elem));
       return open[open.length - 1];
     },
     onDeactivate: () => toggleMenu(button, setMenu, trap, veil),
@@ -7765,9 +7866,16 @@ function move(e, slider, controlsWrapper) {
 
 
 function launchSlider(slider) {
-  const style = slider.dataset.style || defaultStyle,
-        cardsPerRow = parseInt(slider.dataset.cardsperrow) || defaultCardsPerRow; // CardsPerRow not currently in use. Tom's old code.
+  let style = slider.dataset.style || defaultStyle,
+      cardsPerRow = parseInt(slider.dataset.cardsperrow) || defaultCardsPerRow; // CardsPerRow not currently in use. Tom's old code.
   // Might have use case for bigger screen which have capacity to have more than 1 item per slide.
+
+  if (cardsPerRow > 1 && style !== 'responsive') {// If cardsPerRow is set to more than 1, we set the style to responsive so it can handle multiple items per slide.
+    // style = 'responsive';
+    // cardsPerRow = 1;
+    // slider.dataset.style = style;
+    // slider.dataset.cardsperrow = cardsPerRow;
+  }
 
   switch (style) {
     case 'arrows':
