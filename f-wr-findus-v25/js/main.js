@@ -229,7 +229,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module aria-attributes
  * @author Web Development
- * @copyright City, University of London 2018
+ * @copyright City St George's, University of London 2018
  */
 
 /**
@@ -401,7 +401,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/accordion/accordion
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 const className = 'cta-block__cta--no-modal';
 /**
@@ -448,7 +448,7 @@ __webpack_require__.r(__webpack_exports__);
  * Main entry
  *
  * @author Web Development
- * @copyright City, University of London 2018
+ * @copyright City St George's, University of London 2018
  */
 
 
@@ -611,7 +611,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module paint-layouts/home/home-vi-sections
  * @author Web Development
- * @copyright City, University of London
+ * @copyright City St George's, University of London
  */
 
 const className = 'home-banner__video';
@@ -745,14 +745,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./patterns/navigation/navigation-primary */ "./src/patterns/navigation/navigation-primary.js");
 /* harmony import */ var _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./how-to-apply--research */ "./src/how-to-apply--research.js");
 /* harmony import */ var _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./patterns/navigation/navigation-secondary */ "./src/patterns/navigation/navigation-secondary.js");
-/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
-/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
-/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
-/* harmony import */ var _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/banner-promo */ "./src/paint-layouts/home/home-vi-sections/banner-promo.js");
-/* harmony import */ var _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/play-button */ "./src/paint-layouts/home/home-vi-sections/play-button.js");
+/* harmony import */ var _patterns_dropdown_menu_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/dropdown-menu/dropdown-menu.js */ "./src/patterns/dropdown-menu/dropdown-menu.js");
+/* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
+/* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
+/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
+/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
+/* harmony import */ var _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/banner-promo */ "./src/paint-layouts/home/home-vi-sections/banner-promo.js");
+/* harmony import */ var _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/play-button */ "./src/paint-layouts/home/home-vi-sections/play-button.js");
 
 
 /**
@@ -762,8 +763,9 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns
  * @author Web Development
- * @copyright City, University of London 2018
+ * @copyright City St George's, University of London 2018
  */
+
 
 
 
@@ -800,8 +802,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_find_us_find_us_v25__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_32__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__["default"], // video,
-_patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_20__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_34__["default"], _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_33__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_dropdown_menu_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_find_us_find_us_v25__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_32__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_33__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__["default"], // video,
+_patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_20__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_35__["default"], _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_34__["default"]]);
 
 /***/ }),
 
@@ -827,7 +829,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/accordion/accordion
  * @author Web Development
- * @copyright City, University of London 2018-2019
+ * @copyright City St George's, University of London 2018-2019
  */
 
 
@@ -1109,7 +1111,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/addClass/addClass
  * @author Web Development
- * @copyright City, University of London 2023
+ * @copyright City St George's, University of London 2023
  */
 const className = 'add-class';
 /**
@@ -1168,7 +1170,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module paint-layouts/case-study-transition-effects/content-section
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
+ * @copyright City St George's, University of London 2019!
  */
 
 const className = 'content-fade-in';
@@ -1213,7 +1215,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module paint-layouts/case-study-transition-effects/leading-separator
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
+ * @copyright City St George's, University of London 2019!
  */
 
 const className = 'content-separator-container';
@@ -1282,7 +1284,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module paint-layouts/case-study-transition-effects/content-slideup
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
+ * @copyright City St George's, University of London 2019!
  */
 
 const className = 'content-slide-up';
@@ -1330,7 +1332,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module paint-layouts/case-study-transition-effects/banner-image
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019!
+ * @copyright City St George's, University of London 2019!
  */
 
 const className = 'image-expand';
@@ -1546,7 +1548,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/animation/svg path
  * @author adapted by Walter Reyneke <walter.reyneke@city.ac.uk> from CASS polaris
- * @copyright City, University of London 2019!
+ * @copyright City St George's, University of London 2019!
  */
 const className = 'animate-svg';
 /**
@@ -1609,7 +1611,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/back-to-top/back-to-top
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 const className = 'back-to-top',
@@ -1709,7 +1711,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/chart/chart
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 const className = 'chart--bar--horizontal';
 let collectionMaxValue;
@@ -1850,7 +1852,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/cms-editor-warning/cms-editor-warning
  * @author Web Development
- * @copyright City, University of London 2018
+ * @copyright City St George's, University of London 2018
  */
 
 const className = 'cms-editor',
@@ -1924,7 +1926,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/devcorate/devcorate
  * @author Web Development
- * @copyright City, University of London 2018
+ * @copyright City St George's, University of London 2018
  */
 
 /**
@@ -1963,7 +1965,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/dropdown-filter/dropdown-filter
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 const className = 'dropdown-filter';
 let dataGroupElement = '';
@@ -2166,6 +2168,105 @@ function selectChange(e) {
 
 /***/ }),
 
+/***/ "./src/patterns/dropdown-menu/dropdown-menu.js":
+/*!*****************************************************!*\
+  !*** ./src/patterns/dropdown-menu/dropdown-menu.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
+function toggleMenu(el, button) {
+  const container = el.closest('.dd-menu__container'); // Close all other dropdowns in the container
+
+  container.querySelectorAll('.dd-menu--open').forEach(item => {
+    if (item !== el) {
+      closeMenu(item);
+    }
+  }); // Toggle the clicked menu
+
+  const isOpen = el.classList.toggle('dd-menu--open');
+  button.setAttribute('aria-expanded', isOpen); // Find and update the screen reader text
+
+  const srText = button.querySelector('.dd-menu__toggle-state');
+
+  if (srText) {
+    srText.textContent = isOpen ? 'Close ' : 'Open ';
+  }
+}
+
+function closeMenu(el) {
+  if (!el) return; // Prevent errors if el is null
+
+  const button = el.querySelector('.dd-menu__toggle');
+  if (!button) return;
+  el.classList.remove('dd-menu--open');
+  button.setAttribute('aria-expanded', 'false');
+}
+
+function handleOutsideInteraction(event, el) {
+  if (!el.contains(event.target)) {
+    closeMenu(el);
+  }
+}
+
+function handleKeyboardNavigation(event, button, submenu) {
+  if (event.key === 'Enter' || event.key === ' ') {
+    event.preventDefault();
+    button.click();
+  } else if (event.key === 'ArrowDown') {
+    event.preventDefault();
+    const firstLink = submenu.querySelector('a');
+    if (firstLink) firstLink.focus();
+  } else if (event.key === 'Escape') {
+    // Allow Escape to close menu when focus is still on the parent button
+    closeMenu(button.closest('.dd-menu'));
+    button.focus();
+  }
+}
+
+function handleSubmenuNavigation(event, submenu, button) {
+  const focusableItems = Array.from(submenu.querySelectorAll('a'));
+  const currentIndex = focusableItems.indexOf(document.activeElement);
+
+  if (event.key === 'ArrowDown') {
+    event.preventDefault();
+    focusableItems[(currentIndex + 1) % focusableItems.length].focus();
+  } else if (event.key === 'ArrowUp') {
+    event.preventDefault();
+    focusableItems[(currentIndex - 1 + focusableItems.length) % focusableItems.length].focus();
+  } else if (event.key === 'Escape') {
+    // Close menu even if focus is on any submenu item
+    closeMenu(submenu.closest('.dd-menu'));
+    button.focus();
+  }
+}
+
+function launch(el) {
+  const button = el.querySelector('.dd-menu__toggle');
+  const submenu = el.querySelector('.dd-menu__sub');
+  if (!button || !submenu) return;
+  button.addEventListener('click', event => {
+    toggleMenu(el, button);
+    event.stopPropagation();
+  });
+  document.addEventListener('click', event => handleOutsideInteraction(event, el));
+  document.addEventListener('focusin', event => handleOutsideInteraction(event, el));
+  button.addEventListener('keydown', event => handleKeyboardNavigation(event, button, submenu));
+  submenu.addEventListener('keydown', event => handleSubmenuNavigation(event, submenu, button));
+}
+
+const className = 'dd-menu';
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launch,
+  launchQuery: `.${className}`
+});
+
+/***/ }),
+
 /***/ "./src/patterns/event-form/event-form.js":
 /*!***********************************************!*\
   !*** ./src/patterns/event-form/event-form.js ***!
@@ -2184,7 +2285,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/event-form/event-form
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -2323,7 +2424,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/feedback/feedback
  * @author Web Development
- * @copyright City, University of London 2018
+ * @copyright City St George's, University of London 2018
  */
 
 
@@ -2434,7 +2535,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/find-us/find-us
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2025
+ * @copyright City St George's, University of London 2025
  */
 
 const className = 'campus-map-v25';
@@ -3412,7 +3513,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/find-us/find-us
  * @author Walter Reyneke <walter.reyneke@city.ac.uk>
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 const className = 'campus-map';
@@ -4993,7 +5094,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/key-information/key-information--lifelong-learning
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 const className = 'key-information--lifelong-learning',
@@ -5110,14 +5211,13 @@ function handleNextPrevClick(keyInformation, direction) {
  */
 
 
-function handleLoadMoreClick(keyInformation) {
-  const hiddenDates = Array.from(keyInformation.querySelectorAll(`.${className}__dates > [data-loadmorevisible="false"]`)),
-        loadMoreButton = keyInformation.querySelector(`.${className}__controls__loadmore`);
+function handleLoadMoreClick(startDateList) {
+  const hiddenDates = Array.from(startDateList.querySelectorAll(`.${className}__dates > [data-loadmorevisible="false"]`)),
+        loadMoreButton = startDateList.querySelector(`.${className}__controls__loadmore`);
 
   if (loadMoreBatch >= hiddenDates.length) {
     loadMoreButton.parentNode.removeChild(loadMoreButton);
-    const keyInfoWrapper = document.querySelector('.wrapper--key-information--lifelong-learning'),
-          registerInterestWrapper = document.createElement('div'),
+    const registerInterestWrapper = document.createElement('div'),
           registerInterest = document.createElement('div'),
           registerInterestPromptText = document.createElement('strong'),
           registerInterestPromptParagraph = document.createElement('p'),
@@ -5126,7 +5226,7 @@ function handleLoadMoreClick(keyInformation) {
           registerInterestCtaAnchor = document.createElement('a'),
           registerInterestCtaSpan = document.createElement('span');
     registerInterestWrapper.className = 'wrapper--key-information--lifelong-learning__register-interest', registerInterestWrapper.setAttribute('data-desktop-only', 'yes'), registerInterest.className = 'key-information--lifelong-learning__register-interest', registerInterestCtaBlock.className = 'cta-block key-information--lifelong-learning__register-interest', registerInterestCta.className = 'cta-block__cta', registerInterestCtaAnchor.setAttribute('href', 'https://forms.student-crm.com/Forms/view/04e49433-ebf1-4fae-8122-e768c03d5b2c'), registerInterestCtaAnchor.className = 'outline-cta--bright', registerInterestCtaSpan.appendChild(document.createTextNode('Register your interest')), registerInterestPromptText.appendChild(document.createTextNode('Want to find out more?')), registerInterestPromptParagraph.appendChild(registerInterestPromptText), registerInterest.appendChild(registerInterestPromptParagraph), registerInterest.appendChild(registerInterestCtaBlock), registerInterestCtaBlock.appendChild(registerInterestCta), registerInterestCta.appendChild(registerInterestCtaAnchor), registerInterestCtaAnchor.appendChild(registerInterestCtaSpan), registerInterestWrapper.appendChild(registerInterest);
-    keyInfoWrapper.appendChild(registerInterestWrapper);
+    startDateList.after(registerInterestWrapper);
   }
 
   hiddenDates.slice(0, loadMoreBatch).forEach(date => {
@@ -5140,6 +5240,13 @@ function handleLoadMoreClick(keyInformation) {
 
   firstElement && firstElement.focus();
 }
+
+function init(keyInformation) {
+  const courses = keyInformation.querySelectorAll(`.${className}-group`);
+  courses.forEach(course => {
+    launchKeyInformation(course);
+  });
+}
 /**
  * Adds a slider and load more functionality to a short course key information section.
  *
@@ -5147,14 +5254,13 @@ function handleLoadMoreClick(keyInformation) {
  */
 
 
-function launchKeyInformation(keyInformation) {
-  const startDates = Array.from(keyInformation.querySelectorAll(`.${className}__dates > li`)),
-        startDateList = keyInformation.querySelector(`.${className}__dates`);
+function launchKeyInformation(startDateList) {
+  const startDates = Array.from(startDateList.querySelectorAll(':scope .key-information--lifelong-learning__dates > li'));
 
   if (startDates.length < 2) {
     return;
   } else {
-    keyInformation.classList.add(`${className}__dates--controllable`);
+    startDateList.classList.add(`${className}__dates--controllable`);
     startDateList.setAttribute('role', 'presentation');
   }
 
@@ -5175,14 +5281,14 @@ function launchKeyInformation(keyInformation) {
   nextButton.appendChild(nextButtonSpan);
   nextButton.setAttribute('type', 'button');
   nextButton.className = className + '__controls__next';
-  nextButton.addEventListener('click', () => handleNextPrevClick(keyInformation, 1), true);
+  nextButton.addEventListener('click', () => handleNextPrevClick(startDateList, 1), true);
   prevButtonSpan.appendChild(document.createTextNode('Previous start date'));
   prevButton.appendChild(prevButtonSpan);
   prevButton.setAttribute('type', 'button');
   prevButton.setAttribute('disabled', 'true');
   prevButton.className = className + '__controls__prev';
-  prevButton.addEventListener('click', () => handleNextPrevClick(keyInformation, -1), true);
-  keyInformation.addEventListener('keydown', e => {
+  prevButton.addEventListener('click', () => handleNextPrevClick(startDateList, -1), true);
+  startDateList.addEventListener('keydown', e => {
     switch (e.key) {
       case arrowLeft:
         prevButton.click();
@@ -5202,7 +5308,7 @@ function launchKeyInformation(keyInformation) {
     loadMoreButton.appendChild(loadMoreButtonSpan);
     loadMoreButton.setAttribute('type', 'button');
     loadMoreButton.className = className + '__controls__loadmore';
-    loadMoreButton.addEventListener('click', () => handleLoadMoreClick(keyInformation), true);
+    loadMoreButton.addEventListener('click', () => handleLoadMoreClick(startDateList), true);
   }
 
   currentPage.appendChild(document.createTextNode(1));
@@ -5232,11 +5338,11 @@ function launchKeyInformation(keyInformation) {
   controlsWrapper.className = className + '__controls';
   controlsWrapper.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_1__["default"].label, 'Course start dates navigation');
   prepareStartDates(startDates);
-  keyInformation.appendChild(controlsWrapper);
+  startDateList.appendChild(controlsWrapper);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  launchFn: launchKeyInformation,
+  launchFn: init,
   launchQuery: `.${className}`
 });
 
@@ -5259,7 +5365,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/link-finder/link-finder
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 const className = 'link-finder';
@@ -5396,7 +5502,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module menu-formatters
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -5552,7 +5658,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/menu/menu
  * @author Web Development
- * @copyright City, University of London 2018-2020
+ * @copyright City St George's, University of London 2018-2020
  */
 
 
@@ -5707,7 +5813,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/pagination/pagination
  * @author Web Development
- * @copyright City, University of London 2018
+ * @copyright City St George's, University of London 2018
  *
  */
 
@@ -6082,7 +6188,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/mouseover-gallery/mouseover-gallery
  * @author Web Development
- * @copyright City, University of London 2023
+ * @copyright City St George's, University of London 2023
  */
 const className = 'mouseover-gallery';
 /**
@@ -6172,7 +6278,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/navigation/navigation-primary
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -6473,7 +6579,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/navigation/navigation-secondary
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 const className = 'navigation',
@@ -6519,7 +6625,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/paginated-list/paginated-list
  * @author Web Development
- * @copyright City, University of London 2018
+ * @copyright City St George's, University of London 2018
  */
 
 
@@ -6664,7 +6770,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/pagination/pagination
  * @author Web Development
- * @copyright City, University of London 2018
+ * @copyright City St George's, University of London 2018
  */
 
 
@@ -6999,7 +7105,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/show-more/show-more
  * @author Web Development
- * @copyright City, University of London 2018-2019
+ * @copyright City St George's, University of London 2018-2019
  */
 
 
@@ -7117,7 +7223,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/slider/slider
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -7807,7 +7913,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/tabs/prepareAccordionTabs
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -7891,7 +7997,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/tabs/tabs
  * @author Web Development
- * @copyright City, University of London 2018-2019
+ * @copyright City St George's, University of London 2018-2019
  */
 
 
@@ -8183,7 +8289,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/tooltip/image-credit
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -8191,25 +8297,56 @@ const className = 'picture[data-authorname], picture[data-sourcename]',
       openText = 'Show image credit',
       closeText = 'Hide image credit';
 /**
+ * Recursively checks the parent nodes of a given DOM node to determine if it belongs to a specific card type.
+ *
+ * @param {HTMLElement} node - The DOM node to start the search from.
+ * @returns {HTMLElement|null} The parent node of the given node that matches the specified card types, or null if no match is found.
+ */
+
+function walkDOMCheckClassName(node) {
+  const cardsType = ['card--pathway', 'card--news'];
+  const checkClassName = cardsType.some(e => node.parentElement.classList.contains(e));
+
+  if (node.tagName === 'BODY') {
+    return null;
+  }
+
+  if (checkClassName) {
+    return node.parentElement;
+  }
+
+  if (node.parentElement) {
+    return walkDOMCheckClassName(node.parentElement);
+  }
+
+  return null;
+}
+/**
  * Toggle the image credit open or closed.
  *
  * @param  {HTMLElement} wrapper - The image credit container
  */
 
+
 function toggleImageCredit(wrapper) {
   const button = wrapper.querySelector('button'),
         buttonText = button.querySelector('.sr-only'),
-        label = wrapper.querySelector('.tooltip__label');
+        label = wrapper.querySelector('.tooltip__label'),
+        icon = button.querySelector('.tooltip__icon');
 
   if (Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(wrapper.dataset.open)) {
     wrapper.dataset.open = false;
     button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].expanded, 'false');
     buttonText.innerText = openText;
+    icon.classList.remove('fa-xmark');
+    icon.classList.add('fa-subtitles');
     button.focus();
   } else {
     wrapper.dataset.open = true;
     button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].expanded, 'true');
     buttonText.innerText = closeText;
+    icon.classList.remove('fa-subtitles');
+    icon.classList.add('fa-xmark');
     label.focus();
   }
 }
@@ -8245,31 +8382,29 @@ function createLabel(text, url) {
 function launchImageCredit(picture) {
   const display = Object(_util__WEBPACK_IMPORTED_MODULE_1__["toBool"])(picture.dataset.tooltipdisplay),
         authorText = picture.dataset.authorname,
-        authorUrl = picture.dataset.authorurl,
         sourceText = picture.dataset.sourcename,
         sourceUrl = picture.dataset.sourceurl,
-        licenceText = picture.dataset.licencetype,
-        licenceUrl = picture.dataset.licenceurl; // Pattern only launches if set to display and has either an author/source name
+        licenceText = picture.dataset.licencetype; // Pattern only launches if set to display and has either an author/source name
 
   if (!display || !(authorText || sourceText)) {
     return;
   }
 
-  const wrapper = document.createElement('div'),
+  const wrapper = document.createElement('figure'),
         button = document.createElement('button'),
         spanIcon = document.createElement('span'),
         spanText = document.createElement('span'),
-        label = document.createElement('div'),
-        author = authorText ? createLabel(authorText, authorUrl) : null,
+        label = document.createElement('figcaption'),
+        author = authorText ? createLabel(authorText) : null,
         source = sourceText ? createLabel(sourceText, sourceUrl) : null,
-        licence = licenceText ? createLabel(licenceText, licenceUrl) : null;
+        licence = licenceText ? createLabel(licenceText) : null;
   wrapper.className = 'wrapper--tooltip__label';
   wrapper.dataset.open = false;
   button.className = 'tooltip tooltip--image-credit';
   button.setAttribute('type', 'button');
   button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].expanded, false);
   button.addEventListener('click', () => toggleImageCredit(wrapper), true);
-  spanIcon.className = 'tooltip__icon icon fas fa-sharp fa-info-circle';
+  spanIcon.className = 'tooltip__icon icon fa-sharp fa-light fa-subtitles';
   spanIcon.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_0__["default"].hidden, true);
   spanText.className = 'sr-only';
   spanText.appendChild(document.createTextNode(openText));
@@ -8278,13 +8413,21 @@ function launchImageCredit(picture) {
   label.className = 'tooltip__label';
   label.setAttribute('tabindex', -1);
   author && label.appendChild(author);
-  author && source && label.appendChild(document.createTextNode(' / '));
+  author && source && label.appendChild(document.createTextNode(', '));
   source && label.appendChild(source);
+  source && licence && label.appendChild(document.createTextNode(' | '));
   licence ? licence.className = 'tooltip__label__licence' : null;
   licence && label.appendChild(licence);
-  wrapper.appendChild(label);
   wrapper.appendChild(button);
-  (author || source) && picture.appendChild(wrapper);
+  wrapper.appendChild(label);
+  let cardType = walkDOMCheckClassName(picture);
+
+  if (cardType) {
+    (author || source) && cardType.querySelector('a').parentElement.prepend(wrapper);
+  } else {
+    (author || source) && picture.appendChild(wrapper);
+    picture.querySelector('img').classList.add('tooltip__overlay');
+  }
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -8403,7 +8546,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module util
  * @author Web Development
- * @copyright City, University of London 2018-2020
+ * @copyright City St George's, University of London 2018-2020
  */
 
 

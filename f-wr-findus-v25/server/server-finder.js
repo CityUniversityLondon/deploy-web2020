@@ -20333,7 +20333,7 @@ __webpack_require__.r(__webpack_exports__);
  * Finder entry
  *
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -20365,7 +20365,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__accommodation
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -20467,7 +20467,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__bestbet
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -20530,7 +20530,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__card
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -20651,7 +20651,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__casestudy
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -20726,7 +20726,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__centre
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -20794,7 +20794,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__contact
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -20897,7 +20897,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__course
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -20910,7 +20910,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-const externalSiteUrl = ['www.city.ac.uk'];
+const externalSiteUrl = ['www.citystgeorges.ac.uk'];
 
 function Finder__Results__Course(props) {
   const subtitle = props.details.listMetadata.type && props.details.listMetadata.type[0] || props.details.listMetadata.level && props.details.listMetadata.level[0] || null,
@@ -21024,7 +21024,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__event
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -21124,7 +21124,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__funding
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -21206,7 +21206,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__generic
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -21270,7 +21270,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__module
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -21349,13 +21349,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
+/* harmony import */ var _tools_finder_toolTip__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../tools/finder__toolTip */ "./src/patterns/finder/components/tools/finder__toolTip.js");
 
 
 /**
  * @module patterns/finder/components/cards/finder__results__news
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
+
 
 
 
@@ -21367,6 +21369,13 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Finder__Results__News(props) {
+  const thumbnailSourceName = props.details.listMetadata.thumbnailSourceName && props.details.listMetadata.thumbnailSourceName[0] || false,
+        thumbnailSourceUrl = props.details.listMetadata.thumbnailSourceUrl && props.details.listMetadata.thumbnailSourceUrl[0] || false,
+        thumbnailAuthorName = props.details.listMetadata.thumbnailAuthorName && props.details.listMetadata.thumbnailAuthorName[0] || false,
+        thumbnailAuthorUrl = props.details.listMetadata.thumbnailAuthorUrl && props.details.listMetadata.thumbnailAuthorUrl[0] || false,
+        thumbnailLicenceType = props.details.listMetadata.thumbnailLicenceType && props.details.listMetadata.thumbnailLicenceType[0] || false,
+        thumbnailLicenceUrl = props.details.listMetadata.thumbnailLicenceUrl && props.details.listMetadata.thumbnailLicenceUrl[0] || false,
+        displayToolTip = props.details.listMetadata.thumbnailToolTip && Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(props.details.listMetadata.thumbnailToolTip[0]);
   const formattedDate = props.details.listMetadata.d && Object(_util__WEBPACK_IMPORTED_MODULE_2__["formatReactDate"])(new Date(props.details.listMetadata.d[0])),
         dateString = props.details.listMetadata.d && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "card__type"
@@ -21393,7 +21402,15 @@ function Finder__Results__News(props) {
   }) : null;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "card card--news"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tools_finder_toolTip__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    thumbnailSourceName: thumbnailSourceName,
+    thumbnailSourceUrl: thumbnailSourceUrl,
+    thumbnailAuthorName: thumbnailAuthorName,
+    thumbnailAuthorUrl: thumbnailAuthorUrl,
+    thumbnailLicenceType: thumbnailLicenceType,
+    thumbnailLicenceUrl: thumbnailLicenceUrl,
+    displayToolTip: displayToolTip
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: props.details.liveUrl,
     className: "card__anchor card__details"
   }, thumbnail, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -21430,7 +21447,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__profile
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -21513,7 +21530,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__results__summary
  * @author Web Development
- * @copyright City, University of London
+ * @copyright City St George's, University of London
  */
 
 
@@ -21567,7 +21584,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__research
  * @author Web Development
- * @copyright City, University of London 2021
+ * @copyright City St George's, University of London 2021
  */
 
  // import parse from 'html-react-parser';
@@ -21671,7 +21688,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__checkbox
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -21699,8 +21716,8 @@ function Finder__Checkbox(props) {
       className: "finder__filter finder__checkbox"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "checkbox",
-      id: `meta_${props.facet.meta}_sand--${randomNumber}`,
-      name: `meta_${props.facet.meta}_sand`,
+      id: `meta_${props.facet.meta}_and--${randomNumber}`,
+      name: `meta_${props.facet.meta}_and`,
       value: props.facet.checkedValue,
       onChange: () => toggleFacet(),
       checked: toggleChecked
@@ -21712,7 +21729,7 @@ function Finder__Checkbox(props) {
       className: "fa fa-fw fas fa-check icon"
     }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       className: "finder__filters__label--always",
-      htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
+      htmlFor: `meta_${props.facet.meta}_and--${randomNumber}`
     }, props.facet.name, !toggleChecked && responseFacetValue && ' (' + responseFacetValue[0].count + ')'));
   } else {
     return null;
@@ -21749,7 +21766,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__checkbox
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -21863,7 +21880,7 @@ __webpack_require__.r(__webpack_exports__);
 /**<
  * @module patterns/finder/components/finder__select
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -21920,16 +21937,16 @@ function Finder__Select(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: `finder__filter finder__select ${currentValue && 'finder__select--selected'}`
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-      htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
+      htmlFor: `meta_${props.facet.meta}_and--${randomNumber}`
     }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-      name: `meta_${props.facet.meta}_sand`,
-      id: `meta_${props.facet.meta}_sand--${randomNumber}`,
+      name: `meta_${props.facet.meta}_and`,
+      id: `meta_${props.facet.meta}_and--${randomNumber}`,
       onChange: e => setFacet(e.target.value),
       value: currentValue
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
       value: "",
       id: `meta${props.facet.meta}all--${randomNumber}`,
-      name: `meta_${props.facet.meta}_sand--${randomNumber}`
+      name: `meta_${props.facet.meta}_and--${randomNumber}`
     }, props.facet.noSelection), props.facet.values.map((value, i) => {
       const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].allValues && props.responseFacet[0].allValues.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.toLowerCase());
 
@@ -21987,7 +22004,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__filters
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -22202,7 +22219,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/wrapper--finder__filters--mobile
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -22336,7 +22353,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__checkbox
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -22376,7 +22393,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__checkbox
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -22456,7 +22473,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/filters/finder__reset
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -22520,7 +22537,7 @@ __webpack_require__.r(__webpack_exports__);
 /**<
  * @module patterns/finder/components/finder__select
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -22565,16 +22582,16 @@ function Finder__Select(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: `finder__filter finder__select ${currentValue && 'finder__select--selected'}`
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-      htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
+      htmlFor: `meta_${props.facet.meta}_and--${randomNumber}`
     }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-      name: `meta_${props.facet.meta}_sand`,
-      id: `meta_${props.facet.meta}_sand--${randomNumber}`,
+      name: `meta_${props.facet.meta}_and`,
+      id: `meta_${props.facet.meta}_and--${randomNumber}`,
       onChange: e => setFacet(e.target.value),
       value: currentValue
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
       value: "",
       id: `meta${props.facet.meta}all--${randomNumber}`,
-      name: `meta_${props.facet.meta}_sand--${randomNumber}`
+      name: `meta_${props.facet.meta}_and--${randomNumber}`
     }, props.facet.noSelection), props.facet.values.map((value, i) => {
       const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].allValues && props.responseFacet[0].allValues.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.toLowerCase());
 
@@ -22622,7 +22639,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__sort
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -22695,7 +22712,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__tag
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -22739,7 +22756,7 @@ function Finder__Tag(props) {
   }, "Remove filter for "), props.facet.name, ":", ' ', props.facet.values.filter(value => value.data.toLowerCase() === props.query.facets[props.facet.meta].toLowerCase())[0].label));
   const ssrHiddenField = props.matrixState && props.query.facets[props.facet.meta] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "hidden",
-    name: `meta_${props.facet.meta}_sand`,
+    name: `meta_${props.facet.meta}_and`,
     value: props.query.facets[props.facet.meta]
   }) : null;
 
@@ -22788,7 +22805,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__clear
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -22841,7 +22858,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__query
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -23128,7 +23145,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/results/finder__announcement
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -23181,7 +23198,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__didyoumean
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -23202,7 +23219,7 @@ function Finder__DidYouMean(props) {
     className: "finder__didyoumean__button",
     onClick: () => {
       const newQuery = props.query;
-      newQuery.query = props.response.spell.text.split(/\|/)[0].trim();
+      newQuery.query = props.response.spell.text.split(/\s/)[0].trim();
       newQuery.startRank = 1;
       newQuery.misspelling = null;
       newQuery.interacted = true;
@@ -23210,7 +23227,7 @@ function Finder__DidYouMean(props) {
       props.update.query(newQuery);
       props.update.results(!props.update.updateState);
     }
-  }, "\u201C", props.response.spell.text.split(/\|/)[0].trim(), "\u201D"), "?");
+  }, "\u201C", props.response.spell.text.split(/\s/)[0].trim(), "\u201D"), "?");
   return didyoumean;
 }
 
@@ -23243,7 +23260,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__pagination
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -23385,7 +23402,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__results
  * @author Web Development
- * @copyright City, University of London 2021
+ * @copyright City St George's, University of London 2021
  */
 
 
@@ -23599,7 +23616,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__results__summary
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -23706,6 +23723,86 @@ const formatLabel = (label, value) => {
 
 /***/ }),
 
+/***/ "./src/patterns/finder/components/tools/finder__toolTip.js":
+/*!*****************************************************************!*\
+  !*** ./src/patterns/finder/components/tools/finder__toolTip.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/finder/component/tools/finder__toolTip
+ * @author Web Development
+ * @copyright City St George's, University of London 2025
+ */
+
+
+
+function Finder__ToolTip(props) {
+  const toggleLabel = () => setShow(!show);
+
+  const [show, setShow] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    thumbnailSourceName,
+    thumbnailSourceUrl,
+    thumbnailAuthorName,
+    thumbnailAuthorUrl,
+    thumbnailLicenseType,
+    thumbnailLicenseUrl,
+    displayToolTip
+  } = props;
+  const labelAuthor = thumbnailAuthorUrl && thumbnailAuthorName ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: thumbnailAuthorUrl
+  }, thumbnailAuthorName) : thumbnailAuthorName ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, thumbnailAuthorName) : null,
+        labelSource = thumbnailSourceUrl && thumbnailSourceName ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: thumbnailSourceUrl
+  }, thumbnailSourceName) : thumbnailSourceName ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, thumbnailSourceName) : null,
+        labelLicense = thumbnailLicenseUrl && thumbnailLicenseType ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: thumbnailLicenseUrl
+  }, thumbnailLicenseType) : thumbnailLicenseType ? thumbnailLicenseType : null;
+
+  if (displayToolTip && (thumbnailAuthorName || thumbnailSourceName)) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
+      className: "wrapper--tooltip__label",
+      "data-open": show
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "tooltip tooltip--image-credit",
+      type: "button",
+      "aria-expanded": show,
+      onClick: toggleLabel
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: `tooltip__icon icon fa-sharp fa-light fa-subtitles ${show ? 'fa-xmark' : 'fa-subtitles'}`
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "sr-only"
+    }, "Show image credit")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figcaption", {
+      className: "tooltip__label"
+    }, labelAuthor, " ", labelSource && '/ ', " ", labelSource, ' ', labelLicense));
+  } else {
+    return null;
+  }
+}
+
+Finder__ToolTip.propTypes = {
+  thumbnailSourceName: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailSourceUrl: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailAuthorName: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailAuthorUrl: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailLicenseType: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailLicenseUrl: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  displayToolTip: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+};
+/* harmony default export */ __webpack_exports__["default"] = (Finder__ToolTip);
+
+/***/ }),
+
 /***/ "./src/patterns/finder/finder.js":
 /*!***************************************!*\
   !*** ./src/patterns/finder/finder.js ***!
@@ -23732,7 +23829,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/finder/finder
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -23825,7 +23922,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module funnelback
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -23834,8 +23931,8 @@ __webpack_require__.r(__webpack_exports__);
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-const baseUrl = 'https://www.city.ac.uk/web-services',
-      dxpBaseUrl = 'https://www.city.ac.uk/web-services/dxp-fb',
+const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
+      dxpBaseUrl = 'https://www.citystgeorges.ac.uk/web-services/dxp-fb',
       findRootUrl = '/funnelback-16-find',
       dxpFindRootUrl = '/funnelback-dxp-find',
       dxpSuggestRootUrl = '/funnelback-dxp-suggest',
@@ -23864,11 +23961,11 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   paramsKeys.forEach(key => params[key] = parameters[key]);
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
-    fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value;
+    fixedFacetParams[`meta_${facet.meta}_and`] = facet.value;
   });
   const facetParams = {},
         facetKeys = Object.keys(facets);
-  facetKeys.forEach(key => facetParams[`meta_${key}_sand`] = facets[key]);
+  facetKeys.forEach(key => facetParams[`meta_${key}_and`] = facets[key]);
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
@@ -23952,7 +24049,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/finder/finder
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -24025,7 +24122,7 @@ function hyperLink(query, facet, pageNumber, numberRank) {
     if (/fixedParameters/.test(param[0])) {
       return encodeURIComponent(param[0].substring(16)) + '=' + encodeURIComponent(param[1]);
     } else if (/fixedFacets/.test(param[0])) {
-      return encodeURIComponent(`meta_${param[0].substring(12)}_sand`) + '=' + encodeURIComponent(param[1]);
+      return encodeURIComponent(`meta_${param[0].substring(12)}_and`) + '=' + encodeURIComponent(param[1]);
     } else if (/parameters/.test(param[0])) {
       return encodeURIComponent(param[0].substring(11)) + '=' + encodeURIComponent(param[1]);
     }
@@ -24047,7 +24144,7 @@ function hyperLink(query, facet, pageNumber, numberRank) {
         return encodeURIComponent('num_rank') + '=' + encodeURIComponent(param[1]);
 
       default:
-        return encodeURIComponent(`meta_${param[0]}_sand`) + '=' + encodeURIComponent(param[1]);
+        return encodeURIComponent(`meta_${param[0]}_and`) + '=' + encodeURIComponent(param[1]);
     }
   }).join('&');
 }
@@ -24080,7 +24177,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/finder/finder
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -24236,6 +24333,8 @@ function useLogicWrapper(config, results, matrixQuery, element) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return replaceHistory; });
+/* harmony import */ var _url_params__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./url-params */ "./src/patterns/finder/logic/url-params.js");
+
 
 
 /**
@@ -24246,17 +24345,19 @@ __webpack_require__.r(__webpack_exports__);
  * @param {object[]} currFacets A map of facet meta labels to their values.
  * @param {*} facetLabels Array of facet definitions.
  */
+
 function replaceHistory(currQuery, currStartRank, currFacets, currParameters, currSort, facetLabels, defaultSort, hasMounted) {
   if (hasMounted) {
-    const params = new URLSearchParams(window.location.search);
+    const searchURLParams = new URLSearchParams(window.location.search);
+    const params = Object(_url_params__WEBPACK_IMPORTED_MODULE_0__["replaceAndDeleteKeys"])(searchURLParams, '_sand', '_and');
     currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
     currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
     currSort !== defaultSort && currSort !== '' ? params.set('sort', currSort) : params.delete('sort');
     facetLabels.forEach(facet => {
       if (currFacets[facet.meta]) {
-        params.set(`meta_${facet.meta}_sand`, currFacets[facet.meta]);
+        params.set(`meta_${facet.meta}_and`, currFacets[facet.meta]);
       } else {
-        params.delete(`meta_${facet.meta}_sand`);
+        params.delete(`meta_${facet.meta}_and`);
       }
     });
     facetLabels.forEach(facet => {
@@ -24277,15 +24378,39 @@ function replaceHistory(currQuery, currStartRank, currFacets, currParameters, cu
 /*!*************************************************!*\
   !*** ./src/patterns/finder/logic/url-params.js ***!
   \*************************************************/
-/*! exports provided: getNonFBParams, getFacetParams */
+/*! exports provided: replaceAndDeleteKeys, getNonFBParams, getFacetParams */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "replaceAndDeleteKeys", function() { return replaceAndDeleteKeys; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getNonFBParams", function() { return getNonFBParams; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getFacetParams", function() { return getFacetParams; });
 
 
+/**
+ * Search and replace substring in Key on URLSearchParams
+ * remove when urls have been replace on Matrix
+ *
+ * @param {object} params URLSearchParams object for the current page.
+ * @param {string} target substring to replace
+ * @param {replacement} replacement substring to replace
+ * @return {object} - URLSearchParams object of new replace keys.
+ */
+function replaceAndDeleteKeys(params, target, replacement) {
+  const entries = Array.from(params.entries());
+
+  for (const [key, value] of entries) {
+    if (key.includes(target)) {
+      const newKey = key.replace(target, replacement);
+      params.set(newKey, value); // Add new key
+
+      params.delete(key); // Delete old key
+    }
+  }
+
+  return params;
+}
 /**
  * Retrieve non FB parameters from the URL parameters
  *
@@ -24293,14 +24418,17 @@ __webpack_require__.r(__webpack_exports__);
  * @param {object} params URLSearchParams object for the current page.
  * @return {object} - Map of facet meta labels to their current value from the URL.
  */
+
 function getNonFBParams(facets, params, matrixState) {
+  const updatedParams = params && replaceAndDeleteKeys(params, '_sand', '_and');
+
   if (matrixState) {
     return facets.map(facet => {
-      const keys = Object.keys(params);
+      const keys = Object.keys(updatedParams);
       const param = {};
 
       if (keys.indexOf(facet.meta) !== -1) {
-        param[facet.meta] = params[facet.meta];
+        param[facet.meta] = updatedParams[facet.meta];
       }
 
       return param;
@@ -24309,8 +24437,8 @@ function getNonFBParams(facets, params, matrixState) {
     return facets.filter(facet => facet.nonFBParam).map(facet => {
       const param = {};
 
-      if (params.get(facet.meta)) {
-        param[facet.meta] = params.get(facet.meta);
+      if (updatedParams.get(facet.meta)) {
+        param[facet.meta] = updatedParams.get(facet.meta);
       }
 
       return param;
@@ -24326,13 +24454,15 @@ function getNonFBParams(facets, params, matrixState) {
  */
 
 function getFacetParams(facets, params, matrixState) {
+  const updatedParams = params && replaceAndDeleteKeys(params, '_sand', '_and');
+
   if (matrixState) {
     return facets.map(facet => {
-      const keys = Object.keys(params);
+      const keys = Object.keys(updatedParams);
       const param = {};
 
-      if (keys.indexOf(`meta_${facet.meta}_sand`) !== -1) {
-        param[facet.meta] = params[`meta_${facet.meta}_sand`];
+      if (keys.indexOf(`meta_${facet.meta}_and`) !== -1) {
+        param[facet.meta] = updatedParams[`meta_${facet.meta}_and`];
       }
 
       return param;
@@ -24341,8 +24471,8 @@ function getFacetParams(facets, params, matrixState) {
     return facets.map(facet => {
       const param = {};
 
-      if (params.get(`meta_${facet.meta}_sand`)) {
-        param[facet.meta] = params.get(`meta_${facet.meta}_sand`);
+      if (updatedParams.get(`meta_${facet.meta}_and`)) {
+        param[facet.meta] = updatedParams.get(`meta_${facet.meta}_and`);
       }
 
       return param;
@@ -24368,7 +24498,7 @@ __webpack_require__.r(__webpack_exports__);
  * Matrix Wrapper
  *
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 /* harmony default export */ __webpack_exports__["default"] = ((() => {
@@ -24426,7 +24556,7 @@ __webpack_require__.r(__webpack_exports__);
  * Renderer
  *
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -24488,7 +24618,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module util
  * @author Web Development
- * @copyright City, University of London 2018-2020
+ * @copyright City St George's, University of London 2018-2020
  */
 
 

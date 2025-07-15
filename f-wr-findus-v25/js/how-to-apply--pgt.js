@@ -178,7 +178,7 @@ __webpack_require__.r(__webpack_exports__);
  * How to apply PGT entry
  *
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -262,7 +262,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/how-to-apply/how-to-apply--pgt
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -1077,7 +1077,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module pgt-data
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 const timeout = 30000;
@@ -1143,7 +1143,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module util
  * @author Web Development
- * @copyright City, University of London 2018-2020
+ * @copyright City St George's, University of London 2018-2020
  */
 
 

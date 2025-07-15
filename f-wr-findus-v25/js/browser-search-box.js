@@ -176,7 +176,7 @@ __webpack_require__.r(__webpack_exports__);
  * Search box entry
  *
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -216,7 +216,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__clear
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -273,7 +273,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module funnelback
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -282,8 +282,8 @@ __webpack_require__.r(__webpack_exports__);
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-const baseUrl = 'https://www.city.ac.uk/web-services',
-      dxpBaseUrl = 'https://www.city.ac.uk/web-services/dxp-fb',
+const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
+      dxpBaseUrl = 'https://www.citystgeorges.ac.uk/web-services/dxp-fb',
       findRootUrl = '/funnelback-16-find',
       dxpFindRootUrl = '/funnelback-dxp-find',
       dxpSuggestRootUrl = '/funnelback-dxp-suggest',
@@ -312,11 +312,11 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   paramsKeys.forEach(key => params[key] = parameters[key]);
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
-    fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value;
+    fixedFacetParams[`meta_${facet.meta}_and`] = facet.value;
   });
   const facetParams = {},
         facetKeys = Object.keys(facets);
-  facetKeys.forEach(key => facetParams[`meta_${key}_sand`] = facets[key]);
+  facetKeys.forEach(key => facetParams[`meta_${key}_and`] = facets[key]);
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
@@ -399,7 +399,7 @@ __webpack_require__.r(__webpack_exports__);
 /**<
  * @module patterns/search-box/filter/select
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -427,16 +427,16 @@ function Select(props) {
     className: `search-box__filter search-box__select ${currentValue && 'search-box__select--selected'}`
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "sr-only",
-    htmlFor: `meta_${props.facet.meta}_sand--`
+    htmlFor: `meta_${props.facet.meta}_and--`
   }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    name: `meta_${props.facet.meta}_sand`,
-    id: `meta_${props.facet.meta}_sand--`,
+    name: `meta_${props.facet.meta}_and`,
+    id: `meta_${props.facet.meta}_and--`,
     onChange: e => setFacet(e.target.value),
     value: currentValue
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "",
     id: `meta${props.facet.meta}all`,
-    name: `meta_${props.facet.meta}_sand--`
+    name: `meta_${props.facet.meta}_and--`
   }, props.facet.noSelection), props.facet.values.map((value, i) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
       key: i,
@@ -476,7 +476,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__query
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -768,7 +768,7 @@ __webpack_require__.r(__webpack_exports__);
  * Search box
  *
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -833,7 +833,7 @@ function SearchBox(props) {
   };
   const level = props.config.facetLabels.filter(facet => facet.meta === 'level');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    action: "https://www.city.ac.uk/prospective-students/courses"
+    action: "https://www.citystgeorges.ac.uk/prospective-students/courses"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Search for a course"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_filter_select__WEBPACK_IMPORTED_MODULE_3__["default"], {
     key: level[0].meta,
     facet: level[0],
@@ -900,7 +900,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module util
  * @author Web Development
- * @copyright City, University of London 2018-2020
+ * @copyright City St George's, University of London 2018-2020
  */
 
 

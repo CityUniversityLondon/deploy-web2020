@@ -174,7 +174,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__accommodation
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -288,7 +288,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__card
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -409,7 +409,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__casestudy
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -484,7 +484,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__centre
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -552,7 +552,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__contact
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -655,7 +655,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__course
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -668,7 +668,7 @@ __webpack_require__.r(__webpack_exports__);
  * @return {object} - React component.
  */
 
-const externalSiteUrl = ['www.city.ac.uk'];
+const externalSiteUrl = ['www.citystgeorges.ac.uk'];
 
 function Finder__Results__Course(props) {
   const subtitle = props.details.listMetadata.type && props.details.listMetadata.type[0] || props.details.listMetadata.level && props.details.listMetadata.level[0] || null,
@@ -782,7 +782,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__event
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -882,7 +882,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__funding
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -964,7 +964,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__generic
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -1028,7 +1028,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__module
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -1107,13 +1107,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../util */ "./src/util.js");
+/* harmony import */ var _tools_finder_toolTip__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../tools/finder__toolTip */ "./src/patterns/finder/components/tools/finder__toolTip.js");
 
 
 /**
  * @module patterns/finder/components/cards/finder__results__news
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
+
 
 
 
@@ -1125,6 +1127,13 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 function Finder__Results__News(props) {
+  const thumbnailSourceName = props.details.listMetadata.thumbnailSourceName && props.details.listMetadata.thumbnailSourceName[0] || false,
+        thumbnailSourceUrl = props.details.listMetadata.thumbnailSourceUrl && props.details.listMetadata.thumbnailSourceUrl[0] || false,
+        thumbnailAuthorName = props.details.listMetadata.thumbnailAuthorName && props.details.listMetadata.thumbnailAuthorName[0] || false,
+        thumbnailAuthorUrl = props.details.listMetadata.thumbnailAuthorUrl && props.details.listMetadata.thumbnailAuthorUrl[0] || false,
+        thumbnailLicenceType = props.details.listMetadata.thumbnailLicenceType && props.details.listMetadata.thumbnailLicenceType[0] || false,
+        thumbnailLicenceUrl = props.details.listMetadata.thumbnailLicenceUrl && props.details.listMetadata.thumbnailLicenceUrl[0] || false,
+        displayToolTip = props.details.listMetadata.thumbnailToolTip && Object(_util__WEBPACK_IMPORTED_MODULE_2__["toBool"])(props.details.listMetadata.thumbnailToolTip[0]);
   const formattedDate = props.details.listMetadata.d && Object(_util__WEBPACK_IMPORTED_MODULE_2__["formatReactDate"])(new Date(props.details.listMetadata.d[0])),
         dateString = props.details.listMetadata.d && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "card__type"
@@ -1151,7 +1160,15 @@ function Finder__Results__News(props) {
   }) : null;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "card card--news"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tools_finder_toolTip__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    thumbnailSourceName: thumbnailSourceName,
+    thumbnailSourceUrl: thumbnailSourceUrl,
+    thumbnailAuthorName: thumbnailAuthorName,
+    thumbnailAuthorUrl: thumbnailAuthorUrl,
+    thumbnailLicenceType: thumbnailLicenceType,
+    thumbnailLicenceUrl: thumbnailLicenceUrl,
+    displayToolTip: displayToolTip
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: props.details.liveUrl,
     className: "card__anchor card__details"
   }, thumbnail, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1188,7 +1205,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__profile
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -1271,7 +1288,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/cards/finder__results__research
  * @author Web Development
- * @copyright City, University of London 2021
+ * @copyright City St George's, University of London 2021
  */
 
  // import parse from 'html-react-parser';
@@ -1376,7 +1393,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/finder/components/finder__pagination
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -1529,6 +1546,86 @@ const formatLabel = (label, value) => {
 
 /***/ }),
 
+/***/ "./src/patterns/finder/components/tools/finder__toolTip.js":
+/*!*****************************************************************!*\
+  !*** ./src/patterns/finder/components/tools/finder__toolTip.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * @module patterns/finder/component/tools/finder__toolTip
+ * @author Web Development
+ * @copyright City St George's, University of London 2025
+ */
+
+
+
+function Finder__ToolTip(props) {
+  const toggleLabel = () => setShow(!show);
+
+  const [show, setShow] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
+  const {
+    thumbnailSourceName,
+    thumbnailSourceUrl,
+    thumbnailAuthorName,
+    thumbnailAuthorUrl,
+    thumbnailLicenseType,
+    thumbnailLicenseUrl,
+    displayToolTip
+  } = props;
+  const labelAuthor = thumbnailAuthorUrl && thumbnailAuthorName ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: thumbnailAuthorUrl
+  }, thumbnailAuthorName) : thumbnailAuthorName ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, thumbnailAuthorName) : null,
+        labelSource = thumbnailSourceUrl && thumbnailSourceName ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: thumbnailSourceUrl
+  }, thumbnailSourceName) : thumbnailSourceName ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, thumbnailSourceName) : null,
+        labelLicense = thumbnailLicenseUrl && thumbnailLicenseType ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: thumbnailLicenseUrl
+  }, thumbnailLicenseType) : thumbnailLicenseType ? thumbnailLicenseType : null;
+
+  if (displayToolTip && (thumbnailAuthorName || thumbnailSourceName)) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
+      className: "wrapper--tooltip__label",
+      "data-open": show
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      className: "tooltip tooltip--image-credit",
+      type: "button",
+      "aria-expanded": show,
+      onClick: toggleLabel
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: `tooltip__icon icon fa-sharp fa-light fa-subtitles ${show ? 'fa-xmark' : 'fa-subtitles'}`
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "sr-only"
+    }, "Show image credit")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figcaption", {
+      className: "tooltip__label"
+    }, labelAuthor, " ", labelSource && '/ ', " ", labelSource, ' ', labelLicense));
+  } else {
+    return null;
+  }
+}
+
+Finder__ToolTip.propTypes = {
+  thumbnailSourceName: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailSourceUrl: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailAuthorName: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailAuthorUrl: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailLicenseType: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  thumbnailLicenseUrl: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string, prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool]),
+  displayToolTip: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool
+};
+/* harmony default export */ __webpack_exports__["default"] = (Finder__ToolTip);
+
+/***/ }),
+
 /***/ "./src/patterns/finder/funnelback.js":
 /*!*******************************************!*\
   !*** ./src/patterns/finder/funnelback.js ***!
@@ -1553,7 +1650,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module funnelback
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -1562,8 +1659,8 @@ __webpack_require__.r(__webpack_exports__);
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-const baseUrl = 'https://www.city.ac.uk/web-services',
-      dxpBaseUrl = 'https://www.city.ac.uk/web-services/dxp-fb',
+const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
+      dxpBaseUrl = 'https://www.citystgeorges.ac.uk/web-services/dxp-fb',
       findRootUrl = '/funnelback-16-find',
       dxpFindRootUrl = '/funnelback-dxp-find',
       dxpSuggestRootUrl = '/funnelback-dxp-suggest',
@@ -1592,11 +1689,11 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   paramsKeys.forEach(key => params[key] = parameters[key]);
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
-    fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value;
+    fixedFacetParams[`meta_${facet.meta}_and`] = facet.value;
   });
   const facetParams = {},
         facetKeys = Object.keys(facets);
-  facetKeys.forEach(key => facetParams[`meta_${key}_sand`] = facets[key]);
+  facetKeys.forEach(key => facetParams[`meta_${key}_and`] = facets[key]);
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
@@ -1718,7 +1815,7 @@ function hyperLink(query, facet, pageNumber, numberRank) {
     if (/fixedParameters/.test(param[0])) {
       return encodeURIComponent(param[0].substring(16)) + '=' + encodeURIComponent(param[1]);
     } else if (/fixedFacets/.test(param[0])) {
-      return encodeURIComponent(`meta_${param[0].substring(12)}_sand`) + '=' + encodeURIComponent(param[1]);
+      return encodeURIComponent(`meta_${param[0].substring(12)}_and`) + '=' + encodeURIComponent(param[1]);
     } else if (/parameters/.test(param[0])) {
       return encodeURIComponent(param[0].substring(11)) + '=' + encodeURIComponent(param[1]);
     }
@@ -1740,7 +1837,7 @@ function hyperLink(query, facet, pageNumber, numberRank) {
         return encodeURIComponent('num_rank') + '=' + encodeURIComponent(param[1]);
 
       default:
-        return encodeURIComponent(`meta_${param[0]}_sand`) + '=' + encodeURIComponent(param[1]);
+        return encodeURIComponent(`meta_${param[0]}_and`) + '=' + encodeURIComponent(param[1]);
     }
   }).join('&');
 }
@@ -1765,7 +1862,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/search/components/search--inline__clear
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -1816,7 +1913,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/search/components/search--inline__query
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -1948,7 +2045,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/search/components/search--inline__suggestions
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -2010,12 +2107,12 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/search/components/search--inline__topresults
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
  // FIXME for go live
 
-const siteUrl = 'city.ac.uk';
+const siteUrl = 'citystgeorges.ac.uk';
 
 function genericResult(result, type) {
   const thumbnail = result.listMetadata.thumbnail && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2128,7 +2225,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/search/components/search__clear
  * @author Web Development
- * @copyright City, University of London 2019
+ * @copyright City St George's, University of London 2019
  */
 
 
@@ -2178,7 +2275,7 @@ __webpack_require__.r(__webpack_exports__);
 /**<
  * @module patterns/search/components/main/query/search__collection
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -2243,7 +2340,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/search/components/search__query
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -2541,7 +2638,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/search/components/main/results/search__bestbets
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -2604,7 +2701,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/search/components/main/results/search__othersites
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
  // FIXME for go live
@@ -2652,7 +2749,7 @@ function Search__OtherSites(props) {
     className: "search__othersites"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "search__othersites__heading"
-  }, "Results on other City sites"), props.collections.map((collection, i) => {
+  }, "Results on other City St George's sites"), props.collections.map((collection, i) => {
     if (!collection.updating && collection.response && collection.response.summary.totalMatching > 0) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "search__othersites__site",
@@ -2716,7 +2813,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/search/components/main/results/search__peopletypes
  * @author Web Development
- * @copyright City, University of London 2021
+ * @copyright City St George's, University of London 2021
  */
 
 /**
@@ -2780,7 +2877,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/search/components/main/results/search__results
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -2788,7 +2885,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const siteUrl = 'city.ac.uk';
+const siteUrl = 'citystgeorges.ac.uk';
 const endKey = 'End',
       homeKey = 'Home',
       arrowLeft = 'ArrowLeft',
@@ -2801,7 +2898,7 @@ function genericResult(result, type, i) {
     className: "card__label"
   }, type),
         external = result.liveUrl.indexOf(siteUrl) < 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "fas fa-sharp fa-external-link icon",
+    className: "ee fas fa-sharp fa-external-link icon",
     "aria-label": "(external link)"
   }));
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -3108,7 +3205,7 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * @module patterns/search/components/main/results/search__results__browsepeople
  * @author Web Development
- * @copyright City, University of London 2021
+ * @copyright City St George's, University of London 2021
  */
 
 
@@ -3124,7 +3221,7 @@ function Search__Results__BrowsePeople(props) {
     className: "cta-block__cta"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     className: "outline-cta--bright-square",
-    href: 'https://www.city.ac.uk/about/people/' + props.path + '?query=' + props.query
+    href: 'https://www.citystgeorges.ac.uk/about/people/' + props.path + '?query=' + props.query
   }, props.type.charAt(0).toUpperCase() + props.type.slice(1)));
 }
 
@@ -3165,7 +3262,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/search/search--inline
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -3378,13 +3475,13 @@ function InlineSearch(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "header-logo__responsive"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://city.ac.uk",
+    href: "https://www.citystgeorges.ac.uk",
     rel: "home"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "logo",
-    src: "https://www.city.ac.uk/__data/assets/file/0006/442248/city-university-london-responsive-white.svg",
+    src: "https://www.citystgeorges.ac.uk/__data/assets/file/0007/860452/city-st-georges-white-responsive-logo.svg",
     width: "180",
-    alt: "City, University of London"
+    alt: "City St George's, University of London"
   })))), modalToggleButton), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "global-header__search__modal__body"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "What are you looking for?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
@@ -3433,7 +3530,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module patterns/search/search
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -3716,7 +3813,7 @@ __webpack_require__.r(__webpack_exports__);
  * Search entry
  *
  * @author Web Development
- * @copyright City, University of London 2020
+ * @copyright City St George's, University of London 2020
  */
 
 
@@ -3791,7 +3888,7 @@ __webpack_require__.r(__webpack_exports__);
  *
  * @module util
  * @author Web Development
- * @copyright City, University of London 2018-2020
+ * @copyright City St George's, University of London 2018-2020
  */
 
 

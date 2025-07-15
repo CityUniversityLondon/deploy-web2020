@@ -100,7 +100,7 @@
  * Service worker
  *
  * @author Web Development
- * @copyright City, University of London 2018
+ * @copyright City St George's, University of London 2018
  */
 const cacheName = 'city-web2020',
       urlsToCache = ['/__data/assets/git_bridge/0005/440879/main/js/main.js', '/__data/assets/git_bridge/0005/440879/main/css/main.css', '/', '/404'];
