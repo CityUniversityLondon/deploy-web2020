@@ -33548,35 +33548,7 @@ img:has(~ .wrapper--tooltip__label[data-open='true']) {
 [class*='whats-happening'] .wrapper--tooltip__label,
 .content-hub [class*='happening'] .wrapper--tooltip__label {
     right: initial;
-    top: 61px;
-}
-
-@media (max-width: 1279px) {
-    [class*='whats-happening'] .wrapper--tooltip__label,
-    .content-hub [class*='happening'] .wrapper--tooltip__label {
-        top: 55px;
-    }
-}
-
-@media (min-width: 1920px) {
-    [class*='whats-happening'] .wrapper--tooltip__label,
-    .content-hub [class*='happening'] .wrapper--tooltip__label {
-        top: 75px;
-    }
-}
-
-@media (min-width: 3840px) {
-    [class*='whats-happening'] .wrapper--tooltip__label,
-    .content-hub [class*='happening'] .wrapper--tooltip__label {
-        top: 155px;
-    }
-}
-
-@media (min-width: 7680px) {
-    [class*='whats-happening'] .wrapper--tooltip__label,
-    .content-hub [class*='happening'] .wrapper--tooltip__label {
-        top: 310px;
-    }
+    top: 3.4rem;
 }
 
 article .social-icon {
