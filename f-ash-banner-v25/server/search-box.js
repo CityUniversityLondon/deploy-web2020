@@ -18025,11 +18025,11 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   paramsKeys.forEach(key => params[key] = parameters[key]);
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
-    fixedFacetParams[`meta_${facet.meta}_and`] = facet.value;
+    collection === 'city~sp-web2020-profiles' ? fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value : fixedFacetParams[`meta_${facet.meta}_and`] = facet.value;
   });
   const facetParams = {},
         facetKeys = Object.keys(facets);
-  facetKeys.forEach(key => facetParams[`meta_${key}_and`] = facets[key]);
+  facetKeys.forEach(collection === 'city~sp-web2020-profiles' ? key => facetParams[`meta_${key}_sand`] = facets[key] : key => facetParams[`meta_${key}_and`] = facets[key]);
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
