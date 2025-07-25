@@ -1693,7 +1693,7 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   });
   const facetParams = {},
         facetKeys = Object.keys(facets);
-  collection === 'city~sp-web2020-profiles' ? facetKeys.forEach(key => facetParams[`meta_${key}_sand`] = facets[key]) : facetKeys.forEach(key => facetParams[`meta_${key}_and`] = facets[key]);
+  facetKeys.forEach(collection === 'city~sp-web2020-profiles' ? key => facetParams[`meta_${key}_sand`] = facets[key] : key => facetParams[`meta_${key}_and`] = facets[key]);
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
