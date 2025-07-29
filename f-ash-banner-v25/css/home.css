@@ -30764,6 +30764,20 @@ main .banner__video__button.play .button__img--play {
     height: 30rem;
 }
 
+.bner-v25 > .svg-two {
+    height: 50%;
+    width: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .bner-v25 > .svg-two {
+        display: none;
+    }
+}
+
 .bner-v25 .bner-v25__container {
     max-width: 55ch;
     grid-template-columns: repeat(24, 1fr);
@@ -30847,6 +30861,7 @@ main .banner__video__button.play .button__img--play {
     font-style: normal;
     font-weight: 400;
     max-width: 55ch;
+    font-family: "ff-meta-web-pro", sans-serif;
 }
 
 .bner-v25 .bner-v25__sub-title i,
@@ -30889,21 +30904,43 @@ main .banner__video__button.play .button__img--play {
 }
 
 .bner-v25 .bner-v25__sub-title {
-    max-width: 35ch;
     margin-top: 1rem;
+}
+
+@media (max-width: 1023px) {
+    .bner-v25 .bner-v25__sub-title {
+        max-width: 35ch;
+    }
 }
 
 .bner-v25 .bner-v25__title {
     text-transform: uppercase;
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 600;
     line-height: inherit;
+}
+
+@media (min-width: 1025px) {
+    .bner-v25 .bner-v25__title {
+        font-size: 6rem;
+    }
 }
 
 .bner-v25 .bner-v25__ctas li {
     display: inline-block;
     margin-right: 1rem;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 431px) {
+    .bner-v25 .bner-v25__ctas li {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+    }
+    .bner-v25 .bner-v25__ctas li a {
+        width: 100%;
+    }
 }
 
 .bner-v25 .bner-v25__ctas {
@@ -31067,12 +31104,12 @@ main .banner__video__button.play .button__img--play {
 
 .bner-v25 .bner-v25__col1 {
     position: relative;
-    margin-top: 4rem;
-    margin-left: 2rem;
+    margin-top: 2rem;
 }
 
 @media (min-width: 1024px) {
     .bner-v25 .bner-v25__col1 {
+        margin-top: 4rem;
         grid-column: 1/12;
     }
 }
@@ -31156,6 +31193,13 @@ main .banner__video__button.play .button__img--play {
     z-index: 1;
     max-width: 35ch;
     margin-bottom: 3.75rem;
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .bner-v25 .bner-v25__ksps {
+        display: block;
+    }
 }
 
 .bner-v25 .bner-v25__ksps h2 {
@@ -31344,6 +31388,10 @@ main .banner__video__button.play .button__img--play {
     outline-style: solid;
     outline-width: 0.125rem;
     outline-style: solid;
+}
+
+.bner-v25 + .search-box__cta__wrapper {
+    padding-bottom: 2rem;
 }
 
 .home-banner--promo {
