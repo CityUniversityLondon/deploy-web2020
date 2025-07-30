@@ -20450,7 +20450,8 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   const fixedParams = {};
   fixedParameters.forEach(param => {
     fixedParams[`${param.name}`] = param.value;
-  });
+  }); ///
+
   const params = {},
         paramsKeys = Object.keys(parameters);
   paramsKeys.forEach(key => params[key] = parameters[key]);
