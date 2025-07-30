@@ -30772,7 +30772,7 @@ main .banner__video__button.play .button__img--play {
     bottom: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .bner-v25 > .svg-two {
         display: none;
     }
@@ -30861,6 +30861,7 @@ main .banner__video__button.play .button__img--play {
     font-style: normal;
     font-weight: 400;
     max-width: 55ch;
+    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-family: "ff-meta-web-pro", sans-serif;
 }
 
@@ -30903,6 +30904,11 @@ main .banner__video__button.play .button__img--play {
     font-style: italic;
 }
 
+.bner-v25 .bner-v25__sub-title i,
+.bner-v25 .bner-v25__sub-title em {
+    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+}
+
 .bner-v25 .bner-v25__sub-title {
     margin-top: 1rem;
 }
@@ -30926,10 +30932,13 @@ main .banner__video__button.play .button__img--play {
     }
 }
 
+.bner-v25 .bner-v25__ctas {
+    margin-bottom: 1rem;
+}
+
 .bner-v25 .bner-v25__ctas li {
     display: inline-block;
     margin-right: 1rem;
-    margin-bottom: 1rem;
 }
 
 @media (max-width: 431px) {
