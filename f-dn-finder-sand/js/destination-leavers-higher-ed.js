@@ -1303,14 +1303,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _finder_funnelback__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../finder/funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/filters/filtersmobile */ "./src/patterns/destination-leavers-higher-ed/components/filters/filtersmobile.js");
-/* harmony import */ var _components_results_results__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/results/results */ "./src/patterns/destination-leavers-higher-ed/components/results/results.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _finder_logic_replace_history__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../finder/logic/replace-history */ "./src/patterns/finder/logic/replace-history.js");
-/* harmony import */ var _finder_logic_url_params__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../finder/logic/url-params */ "./src/patterns/finder/logic/url-params.js");
-/* harmony import */ var _finder_logic_has_mounted__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../finder/logic/has-mounted */ "./src/patterns/finder/logic/has-mounted.js");
+/* harmony import */ var _finder_logic_FB_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../finder/logic/FB-formatter */ "./src/patterns/finder/logic/FB-formatter.js");
+/* harmony import */ var _components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/filters/filtersmobile */ "./src/patterns/destination-leavers-higher-ed/components/filters/filtersmobile.js");
+/* harmony import */ var _components_results_results__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/results/results */ "./src/patterns/destination-leavers-higher-ed/components/results/results.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _finder_logic_replace_history__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../finder/logic/replace-history */ "./src/patterns/finder/logic/replace-history.js");
+/* harmony import */ var _finder_logic_url_params__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../finder/logic/url-params */ "./src/patterns/finder/logic/url-params.js");
+/* harmony import */ var _finder_logic_has_mounted__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../finder/logic/has-mounted */ "./src/patterns/finder/logic/has-mounted.js");
 
 
 /**
@@ -1332,8 +1333,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 const oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_6__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_7__["reduceMotion"])() ? 0 : oneSecond,
       screenOffsetRatio = 10;
 /**
  * Launch the universal Finder.
@@ -1346,7 +1348,7 @@ function DestinationLeaversHE(props) {
   /**
    * Check if react has mounted
    */
-  const hasMounted = Object(_finder_logic_has_mounted__WEBPACK_IMPORTED_MODULE_9__["default"])(); // check if we in Matrix
+  const hasMounted = Object(_finder_logic_has_mounted__WEBPACK_IMPORTED_MODULE_10__["default"])(); // check if we in Matrix
 
   const matrixState = !hasMounted && props.initialQuery;
   const params = matrixState ? props.initialQuery : new URLSearchParams(window.location.search),
@@ -1360,8 +1362,8 @@ function DestinationLeaversHE(props) {
   const initialQuery = {
     collection: props.config.collection,
     dxp: props.config.dxp ? props.config.dxp : false,
-    facets: props.config.facetLabels.length > 0 && params ? Object(_finder_logic_url_params__WEBPACK_IMPORTED_MODULE_8__["getFacetParams"])(props.config.facetLabels, params, matrixState) : {},
-    parameters: nonFBParams.length > 0 && params ? Object(_finder_logic_url_params__WEBPACK_IMPORTED_MODULE_8__["getNonFBParams"])(props.config.facetLabels, params, matrixState) : {},
+    facets: props.config.facetLabels.length > 0 && params ? Object(_finder_logic_url_params__WEBPACK_IMPORTED_MODULE_9__["getFacetParams"])(props.config.facetLabels, params, matrixState) : {},
+    parameters: nonFBParams.length > 0 && params ? Object(_finder_logic_url_params__WEBPACK_IMPORTED_MODULE_9__["getNonFBParams"])(props.config.facetLabels, params, matrixState) : {},
     fixedFacets: props.config.fixedFacets,
     fixedParameters: props.config.fixParameters ? props.config.fixParameters : [],
     interacted: false,
@@ -1406,10 +1408,10 @@ function DestinationLeaversHE(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     // preserve the state
-    Object(_finder_logic_replace_history__WEBPACK_IMPORTED_MODULE_7__["default"])(query.query, query.startRank, query.facets, query.parameters, query.sortType, props.config.facetLabels, props.config.sort[0].type, hasMounted); // indicate a request is in progress
+    Object(_finder_logic_replace_history__WEBPACK_IMPORTED_MODULE_8__["default"])(query.query, query.startRank, query.facets, query.parameters, query.sortType, props.config.facetLabels, props.config.sort[0].type, hasMounted); // indicate a request is in progress
 
     setUpdating(true);
-    query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_5___default.a.center(props.element.querySelector('.finder__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
+    query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_6___default.a.center(props.element.querySelector('.finder__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
     /**
      * cancel any request already in progress
      *
@@ -1428,7 +1430,7 @@ function DestinationLeaversHE(props) {
     // update the results and display them
 
     request.then(data => {
-      setResponse(data);
+      setResponse(Object(_finder_logic_FB_formatter__WEBPACK_IMPORTED_MODULE_3__["formatFBResponse"])(data));
       setUpdating(false);
 
       if (data.spell && data.summary.totalMatching === 0) {
@@ -1472,7 +1474,7 @@ function DestinationLeaversHE(props) {
     onSubmit: e => {
       e.preventDefault();
     }
-  }, props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, props.config.facetLabels.length > 0 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_filters_filtersmobile__WEBPACK_IMPORTED_MODULE_4__["default"], {
     config: props.config,
     query: query,
     response: funnelbackResponse,
@@ -1485,7 +1487,7 @@ function DestinationLeaversHE(props) {
     className: "wrapper--destination-leavers-HE__info-text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "If you do not see the course you are interested in, please contact the", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "/prospective-students/career-development/careers-team"
-  }, "careers department"), ' ', "at City for full details")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_results_results__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, "careers department"), ' ', "at City for full details")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_results_results__WEBPACK_IMPORTED_MODULE_5__["default"], {
     clear: clear,
     config: props.config,
     query: query,
@@ -1944,6 +1946,33 @@ function finderConfig(url) {
     url: url
   };
   return Object(_util_js__WEBPACK_IMPORTED_MODULE_2__["axiosRequest"])(config);
+}
+
+/***/ }),
+
+/***/ "./src/patterns/finder/logic/FB-formatter.js":
+/*!***************************************************!*\
+  !*** ./src/patterns/finder/logic/FB-formatter.js ***!
+  \***************************************************/
+/*! exports provided: formatFBResponse */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatFBResponse", function() { return formatFBResponse; });
+
+
+function formatFBResponse(json) {
+  const details = {};
+  details.query = json.question.originalQuery;
+  details.inputParameters = json.question.inputParameters;
+  details.spell = json.response.resultPacket.spell;
+  details.summary = json.response.resultPacket.resultsSummary;
+  details.bestBets = json.response.curator.exhibits;
+  details.results = json.response.resultPacket.results;
+  details.facets = json.response.facets;
+  details.extraSearches = json.extraSearches;
+  return details;
 }
 
 /***/ }),
