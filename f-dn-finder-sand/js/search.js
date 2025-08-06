@@ -3397,6 +3397,7 @@ function InlineSearch(props) {
       setUpdating(false);
     }).catch(() => {
       setResponse(initialResponse);
+      setUpdating(false);
     });
     suggestionsRequest.then(data => {
       if (data) {
