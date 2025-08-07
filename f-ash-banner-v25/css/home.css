@@ -30724,7 +30724,6 @@ main .banner__video__button.play .button__img--play {
     height: 100%;
     background-color: #d61726;
     background-size: cover;
-    background-color: green;
     overflow: hidden;
     color: #ffffff;
 }
