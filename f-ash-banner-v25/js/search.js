@@ -1659,12 +1659,9 @@ __webpack_require__.r(__webpack_exports__);
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
-      dxpBaseUrl = 'https://www.citystgeorges.ac.uk/web-services/dxp-fb',
-      findRootUrl = '/funnelback-16-find',
-      dxpFindRootUrl = '/funnelback-dxp-find',
-      dxpSuggestRootUrl = '/funnelback-dxp-suggest',
-      suggestRootUrl = '/funnelback-16-suggest',
+const baseUrl = 'https://city-search.funnelback.squiz.cloud/s',
+      findRootUrl = '/search.json',
+      suggestRootUrl = '/suggest.json',
       maximumSuggestions = 100,
       timeout = 30000;
 /**
@@ -1679,7 +1676,7 @@ const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
  * @return {Promise} - A promise of search results.
  */
 
-function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters, dxp) {
+function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters) {
   const fixedParams = {};
   fixedParameters.forEach(param => {
     fixedParams[`${param.name}`] = param.value;
@@ -1689,20 +1686,20 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   paramsKeys.forEach(key => params[key] = parameters[key]);
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
-    collection === 'city~sp-web2020-profiles' ? fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value : fixedFacetParams[`meta_${facet.meta}_and`] = facet.value;
+    fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value;
   });
   const facetParams = {},
         facetKeys = Object.keys(facets);
-  facetKeys.forEach(collection === 'city~sp-web2020-profiles' ? key => facetParams[`meta_${key}_sand`] = facets[key] : key => facetParams[`meta_${key}_and`] = facets[key]);
+  facetKeys.forEach(key => facetParams[`meta_${key}_sand`] = facets[key]);
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: dxp ? dxpBaseUrl : baseUrl,
+    baseURL: baseUrl,
     cancelToken: call.token,
     httpsAgent: new https__WEBPACK_IMPORTED_MODULE_1___default.a.Agent({
       keepAlive: true
     }),
-    url: dxp ? dxpFindRootUrl : findRootUrl,
+    url: findRootUrl,
     timeout: timeout,
     params: { ...fixedParams,
       ...fixedFacetParams,
@@ -1725,13 +1722,13 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
  * @return {Promise} - A promise of an array of suggestion strings.
  */
 
-function suggest(collection, partialQuery, dxp) {
+function suggest(collection, partialQuery) {
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: dxp ? dxpBaseUrl : baseUrl,
+    baseURL: baseUrl,
     cancelToken: call.token,
-    url: dxp ? dxpSuggestRootUrl : suggestRootUrl,
+    url: suggestRootUrl,
     timeout: timeout,
     params: {
       collection: collection,
@@ -1754,6 +1751,33 @@ function finderConfig(url) {
     url: url
   };
   return Object(_util_js__WEBPACK_IMPORTED_MODULE_2__["axiosRequest"])(config);
+}
+
+/***/ }),
+
+/***/ "./src/patterns/finder/logic/FB-formatter.js":
+/*!***************************************************!*\
+  !*** ./src/patterns/finder/logic/FB-formatter.js ***!
+  \***************************************************/
+/*! exports provided: formatFBResponse */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatFBResponse", function() { return formatFBResponse; });
+
+
+function formatFBResponse(json) {
+  const details = {};
+  details.query = json.question.originalQuery;
+  details.inputParameters = json.question.inputParameters;
+  details.spell = json.response.resultPacket.spell;
+  details.summary = json.response.resultPacket.resultsSummary;
+  details.bestBets = json.response.curator.exhibits;
+  details.results = json.response.resultPacket.results;
+  details.facets = json.response.facets;
+  details.extraSearches = json.extraSearches;
+  return details;
 }
 
 /***/ }),
@@ -1815,7 +1839,7 @@ function hyperLink(query, facet, pageNumber, numberRank) {
     if (/fixedParameters/.test(param[0])) {
       return encodeURIComponent(param[0].substring(16)) + '=' + encodeURIComponent(param[1]);
     } else if (/fixedFacets/.test(param[0])) {
-      return encodeURIComponent(`meta_${param[0].substring(12)}_and`) + '=' + encodeURIComponent(param[1]);
+      return encodeURIComponent(`meta_${param[0].substring(12)}_sand`) + '=' + encodeURIComponent(param[1]);
     } else if (/parameters/.test(param[0])) {
       return encodeURIComponent(param[0].substring(11)) + '=' + encodeURIComponent(param[1]);
     }
@@ -1837,7 +1861,7 @@ function hyperLink(query, facet, pageNumber, numberRank) {
         return encodeURIComponent('num_rank') + '=' + encodeURIComponent(param[1]);
 
       default:
-        return encodeURIComponent(`meta_${param[0]}_and`) + '=' + encodeURIComponent(param[1]);
+        return encodeURIComponent(`meta_${param[0]}_sand`) + '=' + encodeURIComponent(param[1]);
     }
   }).join('&');
 }
@@ -3248,11 +3272,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _finder_funnelback__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../finder/funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_inline_search_inline_query__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/inline/search--inline__query */ "./src/patterns/search/components/inline/search--inline__query.js");
-/* harmony import */ var _components_inline_search_inline_suggestions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/inline/search--inline__suggestions */ "./src/patterns/search/components/inline/search--inline__suggestions.js");
-/* harmony import */ var _components_inline_search_inline_topresults__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/inline/search--inline__topresults */ "./src/patterns/search/components/inline/search--inline__topresults.js");
+/* harmony import */ var _finder_logic_FB_formatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../finder/logic/FB-formatter */ "./src/patterns/finder/logic/FB-formatter.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_inline_search_inline_query__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/inline/search--inline__query */ "./src/patterns/search/components/inline/search--inline__query.js");
+/* harmony import */ var _components_inline_search_inline_suggestions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/inline/search--inline__suggestions */ "./src/patterns/search/components/inline/search--inline__suggestions.js");
+/* harmony import */ var _components_inline_search_inline_topresults__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/inline/search--inline__topresults */ "./src/patterns/search/components/inline/search--inline__topresults.js");
 
 
 /**
@@ -3264,6 +3289,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City St George's, University of London 2020
  */
+
 
 
 
@@ -3351,8 +3377,8 @@ function InlineSearch(props) {
     call.cancel();
     suggestionsCall.cancel(); // make new, asynchronous requests to Funnelback
 
-    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters, props.config.dxp ? props.config.dxp : false);
-    const [suggestionsRequest, suggestionsRequestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["suggest"])(query.collection, query.query, props.config.dxp ? props.config.dxp : false); // save the requestTokens
+    const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters);
+    const [suggestionsRequest, suggestionsRequestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_2__["suggest"])(query.collection, query.query); // save the requestTokens
 
     setCall({
       cancel: () => {
@@ -3367,10 +3393,11 @@ function InlineSearch(props) {
     // update the results and display them
 
     request.then(data => {
-      setResponse(data);
+      setResponse(Object(_finder_logic_FB_formatter__WEBPACK_IMPORTED_MODULE_3__["formatFBResponse"])(data));
       setUpdating(false);
     }).catch(() => {
       setResponse(initialResponse);
+      setUpdating(false);
     });
     suggestionsRequest.then(data => {
       if (data) {
@@ -3399,7 +3426,7 @@ function InlineSearch(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     if (!focusTrap.activate) {
-      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_3___default()(getmodal(), {
+      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_4___default()(getmodal(), {
         initialFocus: getmodal().querySelector('input'),
         onDeactivate: () => setDisplay(false),
         clickOutsideDeactivates: true
@@ -3451,17 +3478,17 @@ function InlineSearch(props) {
     className: iconClass,
     "aria-hidden": "true"
   }))),
-        inputField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_inline_search_inline_query__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        inputField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_inline_search_inline_query__WEBPACK_IMPORTED_MODULE_5__["default"], {
     config: props.config,
     query: query,
     update: updater,
     updating: updating
   }),
-        suggestionsList = suggestionsUpdating ? updateIndicator('suggestions') : suggestions && suggestions.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_inline_search_inline_suggestions__WEBPACK_IMPORTED_MODULE_5__["default"], {
+        suggestionsList = suggestionsUpdating ? updateIndicator('suggestions') : suggestions && suggestions.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_inline_search_inline_suggestions__WEBPACK_IMPORTED_MODULE_6__["default"], {
     query: query,
     suggestions: suggestions.slice(0, maximumSuggestions)
   }) : null,
-        topResults = updating ? updateIndicator('top results') : funnelbackResponse && funnelbackResponse.results.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_inline_search_inline_topresults__WEBPACK_IMPORTED_MODULE_6__["default"], {
+        topResults = updating ? updateIndicator('top results') : funnelbackResponse && funnelbackResponse.results.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_inline_search_inline_topresults__WEBPACK_IMPORTED_MODULE_7__["default"], {
     query: query,
     results: funnelbackResponse.results
   }) : null;
@@ -3510,17 +3537,18 @@ InlineSearch.propTypes = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _finder_funnelback__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../finder/funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _components_main_results_search_bestbets__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/main/results/search__bestbets */ "./src/patterns/search/components/main/results/search__bestbets.js");
-/* harmony import */ var _components_main_results_search_othersites__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/main/results/search__othersites */ "./src/patterns/search/components/main/results/search__othersites.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_main_query_search_query__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/main/query/search__query */ "./src/patterns/search/components/main/query/search__query.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _components_main_results_search_results__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/main/results/search__results */ "./src/patterns/search/components/main/results/search__results.js");
+/* harmony import */ var _finder_logic_FB_formatter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../finder/logic/FB-formatter */ "./src/patterns/finder/logic/FB-formatter.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _components_main_results_search_bestbets__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/main/results/search__bestbets */ "./src/patterns/search/components/main/results/search__bestbets.js");
+/* harmony import */ var _components_main_results_search_othersites__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/main/results/search__othersites */ "./src/patterns/search/components/main/results/search__othersites.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_main_query_search_query__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/main/query/search__query */ "./src/patterns/search/components/main/query/search__query.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_main_results_search_results__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/main/results/search__results */ "./src/patterns/search/components/main/results/search__results.js");
 
 
 /**
@@ -3541,8 +3569,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 const oneSecond = 1000,
-      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_1__["reduceMotion"])() ? 0 : oneSecond,
+      scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_2__["reduceMotion"])() ? 0 : oneSecond,
       screenOffsetRatio = 10;
 /**
  * Preserve the search state in the URL parameters.
@@ -3645,25 +3674,25 @@ function Search(props) {
     })
   }; // eslint-disable-next-line no-unused-vars
 
-  const [response, setResponse] = Object(react__WEBPACK_IMPORTED_MODULE_6__["useState"])(0); // State objects for the Funnelback query and response
+  const [response, setResponse] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(0); // State objects for the Funnelback query and response
 
-  const [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_6__["useState"])(initialQuery);
-  const [fbResponses, setFbResponses] = Object(react__WEBPACK_IMPORTED_MODULE_6__["useState"])(initialResponses); // useEffect doesn't deep inspect objects, so we need an additional, plain
+  const [query, setQuery] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(initialQuery);
+  const [fbResponses, setFbResponses] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(initialResponses); // useEffect doesn't deep inspect objects, so we need an additional, plain
   // state variable to indicate that the query state has changed and the
   // component should render
   // the value isn't important, it's just easy to toggle a bool back and forth
 
-  const [update, setUpdate] = Object(react__WEBPACK_IMPORTED_MODULE_6__["useState"])(false); // Retrieve Funnelback results
+  const [update, setUpdate] = Object(react__WEBPACK_IMPORTED_MODULE_7__["useState"])(false); // Retrieve Funnelback results
 
-  Object(react__WEBPACK_IMPORTED_MODULE_6__["useEffect"])(() => {
+  Object(react__WEBPACK_IMPORTED_MODULE_7__["useEffect"])(() => {
     // preserve the state
     replaceHistory(query.query, query.startRank, query.collection, props.config.primary.collections[0].collection);
 
     if (query.query.length > 0) {
-      query.interacted && props.element.querySelector('.search__results') && zenscroll__WEBPACK_IMPORTED_MODULE_7___default.a.center(props.element.querySelector('.search__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
+      query.interacted && props.element.querySelector('.search__results') && zenscroll__WEBPACK_IMPORTED_MODULE_8___default.a.center(props.element.querySelector('.search__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
       props.config.primary.collections.forEach((collection, i) => {
         fbResponses.primary[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(collection.collection, [], [], query.query, '', query.startRank, query.numRanks, [], [], props.config.dxp ? props.config.dxp : false),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(collection.collection, [], [], query.query, '', query.startRank, query.numRanks, [], []),
               newResponses = fbResponses;
         newResponses.primary[i].call = {
           cancel: () => {
@@ -3675,7 +3704,7 @@ function Search(props) {
         setResponse(Math.random());
         request.then(data => {
           const responses = fbResponses;
-          responses.primary[i].response = data;
+          responses.primary[i].response = Object(_finder_logic_FB_formatter__WEBPACK_IMPORTED_MODULE_1__["formatFBResponse"])(data);
           responses.primary[i].updating = false;
           setFbResponses(responses);
           setResponse(Math.random());
@@ -3689,7 +3718,7 @@ function Search(props) {
       });
       props.config.finders.forEach((finder, i) => {
         fbResponses.finders[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(finder.collection, [], [], query.query, '', 1, finder.numRanks, [], [], props.config.dxp ? props.config.dxp : false),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(finder.collection, [], [], query.query, '', 1, finder.numRanks, [], []),
               newResponses = fbResponses;
         newResponses.finders[i].call = {
           cancel: () => {
@@ -3701,12 +3730,12 @@ function Search(props) {
         setResponse(Math.random());
         request.then(data => {
           const responses = fbResponses;
-          responses.finders[i].response = data;
+          responses.finders[i].response = Object(_finder_logic_FB_formatter__WEBPACK_IMPORTED_MODULE_1__["formatFBResponse"])(data);
           responses.finders[i].updating = false;
           setFbResponses(responses);
           setResponse(Math.random());
         }).then(() => {
-          props.element.querySelector('.tabs__links') && query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_7___default.a.center(props.element.querySelector('.tabs__links'), scrollDuration);
+          props.element.querySelector('.tabs__links') && query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_8___default.a.center(props.element.querySelector('.tabs__links'), scrollDuration);
         }).catch(() => {
           const responses = fbResponses;
           responses.finders[i].response = initialResponse;
@@ -3717,7 +3746,7 @@ function Search(props) {
       });
       props.config.nonpublic.forEach((nonpublic, i) => {
         fbResponses.nonpublic[i].call.cancel();
-        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(nonpublic.collection, [], [], query.query, '', 1, 0, [], [], props.config.dxp ? props.config.dxp : false),
+        const [request, requestToken] = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_0__["find"])(nonpublic.collection, [], [], query.query, '', 1, 0, [], []),
               newResponses = fbResponses;
         newResponses.nonpublic[i].call = {
           cancel: () => {
@@ -3729,7 +3758,7 @@ function Search(props) {
         setResponse(Math.random());
         request.then(data => {
           const responses = fbResponses;
-          responses.nonpublic[i].response = data;
+          responses.nonpublic[i].response = Object(_finder_logic_FB_formatter__WEBPACK_IMPORTED_MODULE_1__["formatFBResponse"])(data);
           responses.nonpublic[i].updating = false;
           setFbResponses(responses);
           setResponse(Math.random());
@@ -3752,22 +3781,22 @@ function Search(props) {
     results: newUpdate => setUpdate(newUpdate),
     updateState: update
   };
-  const queryElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_main_query_search_query__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  const queryElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_main_query_search_query__WEBPACK_IMPORTED_MODULE_6__["default"], {
     config: props.config,
     query: query,
     update: updater,
     primary: fbResponses.primary.filter(collection => collection.collection === query.collection),
     updating: fbResponses.primary[0].updating
   });
-  const otherSites = query.query && !fbResponses.primary[0].updating && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_main_results_search_othersites__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  const otherSites = query.query && !fbResponses.primary[0].updating && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_main_results_search_othersites__WEBPACK_IMPORTED_MODULE_4__["default"], {
     query: query,
     collections: fbResponses.primary.filter(collection => collection.collection !== query.collection),
     nonpublic: fbResponses.nonpublic
   });
-  const bestBets = query.query && !fbResponses.primary[0].updating && fbResponses.primary[0].response && fbResponses.primary[0].response.bestBets && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_main_results_search_bestbets__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  const bestBets = query.query && !fbResponses.primary[0].updating && fbResponses.primary[0].response && fbResponses.primary[0].response.bestBets && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_main_results_search_bestbets__WEBPACK_IMPORTED_MODULE_3__["default"], {
     bestbets: fbResponses.primary[0].response.bestBets
   });
-  const results = query.query && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_main_results_search_results__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  const results = query.query && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_components_main_results_search_results__WEBPACK_IMPORTED_MODULE_9__["default"], {
     config: props.config,
     query: query,
     update: updater,
@@ -3775,7 +3804,7 @@ function Search(props) {
     finders: fbResponses.finders,
     element: props.element
   });
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("form", {
     className: "search-form",
     onSubmit: e => {
       e.preventDefault();
@@ -3784,8 +3813,8 @@ function Search(props) {
 }
 
 Search.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object,
-  element: prop_types__WEBPACK_IMPORTED_MODULE_4___default.a.object
+  config: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (Search);
 

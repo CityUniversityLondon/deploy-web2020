@@ -1570,8 +1570,8 @@ function Finder__Checkbox(props) {
       className: "finder__filter finder__checkbox"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
       type: "checkbox",
-      id: `meta_${props.facet.meta}_and--${randomNumber}`,
-      name: `meta_${props.facet.meta}_and`,
+      id: `meta_${props.facet.meta}_sand--${randomNumber}`,
+      name: `meta_${props.facet.meta}_sand`,
       value: props.facet.checkedValue,
       onChange: () => toggleFacet(),
       checked: toggleChecked
@@ -1583,7 +1583,7 @@ function Finder__Checkbox(props) {
       className: "fa fa-fw fas fa-check icon"
     }) : null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
       className: "finder__filters__label--always",
-      htmlFor: `meta_${props.facet.meta}_and--${randomNumber}`
+      htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
     }, props.facet.name, !toggleChecked && responseFacetValue && ' (' + responseFacetValue[0].count + ')'));
   } else {
     return null;
@@ -1801,16 +1801,16 @@ function Finder__Select(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: `finder__filter finder__select ${currentValue && 'finder__select--selected'}`
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-      htmlFor: `meta_${props.facet.meta}_and--${randomNumber}`
+      htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
     }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-      name: `meta_${props.facet.meta}_and`,
-      id: `meta_${props.facet.meta}_and--${randomNumber}`,
+      name: `meta_${props.facet.meta}_sand`,
+      id: `meta_${props.facet.meta}_sand--${randomNumber}`,
       onChange: e => setFacet(e.target.value),
       value: currentValue
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
       value: "",
       id: `meta${props.facet.meta}all--${randomNumber}`,
-      name: `meta_${props.facet.meta}_and--${randomNumber}`
+      name: `meta_${props.facet.meta}_sand--${randomNumber}`
     }, props.facet.noSelection), props.facet.values.map((value, i) => {
       const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].allValues && props.responseFacet[0].allValues.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.toLowerCase());
 
@@ -2444,16 +2444,16 @@ function Finder__Select(props) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: `finder__filter finder__select ${currentValue && 'finder__select--selected'}`
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-      htmlFor: `meta_${props.facet.meta}_and--${randomNumber}`
+      htmlFor: `meta_${props.facet.meta}_sand--${randomNumber}`
     }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-      name: `meta_${props.facet.meta}_and`,
-      id: `meta_${props.facet.meta}_and--${randomNumber}`,
+      name: `meta_${props.facet.meta}_sand`,
+      id: `meta_${props.facet.meta}_sand--${randomNumber}`,
       onChange: e => setFacet(e.target.value),
       value: currentValue
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
       value: "",
       id: `meta${props.facet.meta}all--${randomNumber}`,
-      name: `meta_${props.facet.meta}_and--${randomNumber}`
+      name: `meta_${props.facet.meta}_sand--${randomNumber}`
     }, props.facet.noSelection), props.facet.values.map((value, i) => {
       const responseFacetDetails = props.responseFacet[0] && props.responseFacet[0].allValues && props.responseFacet[0].allValues.filter(responseFacetValue => responseFacetValue.data.toLowerCase() === value.data.toLowerCase());
 
@@ -2622,7 +2622,7 @@ function Finder__Tag(props) {
   }, "Remove filter for "), props.facet.name, ":", ' ', props.facet.values.filter(value => value.data.toLowerCase() === props.query.facets[props.facet.meta].toLowerCase())[0].label));
   const ssrHiddenField = props.matrixState && props.query.facets[props.facet.meta] ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "hidden",
-    name: `meta_${props.facet.meta}_and`,
+    name: `meta_${props.facet.meta}_sand`,
     value: props.query.facets[props.facet.meta]
   }) : null;
 
@@ -3796,12 +3796,9 @@ __webpack_require__.r(__webpack_exports__);
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
-      dxpBaseUrl = 'https://www.citystgeorges.ac.uk/web-services/dxp-fb',
-      findRootUrl = '/funnelback-16-find',
-      dxpFindRootUrl = '/funnelback-dxp-find',
-      dxpSuggestRootUrl = '/funnelback-dxp-suggest',
-      suggestRootUrl = '/funnelback-16-suggest',
+const baseUrl = 'https://city-search.funnelback.squiz.cloud/s',
+      findRootUrl = '/search.json',
+      suggestRootUrl = '/suggest.json',
       maximumSuggestions = 100,
       timeout = 30000;
 /**
@@ -3816,7 +3813,7 @@ const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
  * @return {Promise} - A promise of search results.
  */
 
-function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters, dxp) {
+function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters) {
   const fixedParams = {};
   fixedParameters.forEach(param => {
     fixedParams[`${param.name}`] = param.value;
@@ -3826,20 +3823,20 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   paramsKeys.forEach(key => params[key] = parameters[key]);
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
-    collection === 'city~sp-web2020-profiles' ? fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value : fixedFacetParams[`meta_${facet.meta}_and`] = facet.value;
+    fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value;
   });
   const facetParams = {},
         facetKeys = Object.keys(facets);
-  facetKeys.forEach(collection === 'city~sp-web2020-profiles' ? key => facetParams[`meta_${key}_sand`] = facets[key] : key => facetParams[`meta_${key}_and`] = facets[key]);
+  facetKeys.forEach(key => facetParams[`meta_${key}_sand`] = facets[key]);
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: dxp ? dxpBaseUrl : baseUrl,
+    baseURL: baseUrl,
     cancelToken: call.token,
     httpsAgent: new https__WEBPACK_IMPORTED_MODULE_1___default.a.Agent({
       keepAlive: true
     }),
-    url: dxp ? dxpFindRootUrl : findRootUrl,
+    url: findRootUrl,
     timeout: timeout,
     params: { ...fixedParams,
       ...fixedFacetParams,
@@ -3862,13 +3859,13 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
  * @return {Promise} - A promise of an array of suggestion strings.
  */
 
-function suggest(collection, partialQuery, dxp) {
+function suggest(collection, partialQuery) {
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: dxp ? dxpBaseUrl : baseUrl,
+    baseURL: baseUrl,
     cancelToken: call.token,
-    url: dxp ? dxpSuggestRootUrl : suggestRootUrl,
+    url: suggestRootUrl,
     timeout: timeout,
     params: {
       collection: collection,
@@ -3891,6 +3888,33 @@ function finderConfig(url) {
     url: url
   };
   return Object(_util_js__WEBPACK_IMPORTED_MODULE_2__["axiosRequest"])(config);
+}
+
+/***/ }),
+
+/***/ "./src/patterns/finder/logic/FB-formatter.js":
+/*!***************************************************!*\
+  !*** ./src/patterns/finder/logic/FB-formatter.js ***!
+  \***************************************************/
+/*! exports provided: formatFBResponse */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatFBResponse", function() { return formatFBResponse; });
+
+
+function formatFBResponse(json) {
+  const details = {};
+  details.query = json.question.originalQuery;
+  details.inputParameters = json.question.inputParameters;
+  details.spell = json.response.resultPacket.spell;
+  details.summary = json.response.resultPacket.resultsSummary;
+  details.bestBets = json.response.curator.exhibits;
+  details.results = json.response.resultPacket.results;
+  details.facets = json.response.facets;
+  details.extraSearches = json.extraSearches;
+  return details;
 }
 
 /***/ }),
@@ -3987,7 +4011,7 @@ function hyperLink(query, facet, pageNumber, numberRank) {
     if (/fixedParameters/.test(param[0])) {
       return encodeURIComponent(param[0].substring(16)) + '=' + encodeURIComponent(param[1]);
     } else if (/fixedFacets/.test(param[0])) {
-      return encodeURIComponent(`meta_${param[0].substring(12)}_and`) + '=' + encodeURIComponent(param[1]);
+      return encodeURIComponent(`meta_${param[0].substring(12)}_sand`) + '=' + encodeURIComponent(param[1]);
     } else if (/parameters/.test(param[0])) {
       return encodeURIComponent(param[0].substring(11)) + '=' + encodeURIComponent(param[1]);
     }
@@ -4009,7 +4033,7 @@ function hyperLink(query, facet, pageNumber, numberRank) {
         return encodeURIComponent('num_rank') + '=' + encodeURIComponent(param[1]);
 
       default:
-        return encodeURIComponent(`meta_${param[0]}_and`) + '=' + encodeURIComponent(param[1]);
+        return encodeURIComponent(`meta_${param[0]}_sand`) + '=' + encodeURIComponent(param[1]);
     }
   }).join('&');
 }
@@ -4032,8 +4056,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _url_params__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./url-params */ "./src/patterns/finder/logic/url-params.js");
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../util */ "./src/util.js");
 /* harmony import */ var _funnelback__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
-/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _FB_formatter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FB-formatter */ "./src/patterns/finder/logic/FB-formatter.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_7__);
 
 
 /**
@@ -4044,6 +4069,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City St George's, University of London 2019
  */
+
 
 
 
@@ -4122,7 +4148,7 @@ function useLogicWrapper(config, results, matrixQuery, element) {
     Object(_replace_history__WEBPACK_IMPORTED_MODULE_2__["default"])(query.query, query.startRank, query.facets, query.parameters, query.sortType, config.facetLabels, config.sort[0].type, hasMounted); // indicate a request is in progress
 
     setUpdating(true);
-    query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_6___default.a.center(element.querySelector('.finder__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
+    query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_7___default.a.center(element.querySelector('.finder__results'), scrollDuration, -window.innerHeight / screenOffsetRatio);
     /**
      * cancel any request already in progress
      *
@@ -4131,7 +4157,7 @@ function useLogicWrapper(config, results, matrixQuery, element) {
 
     call.cancel(); // make a new, asynchronous request to Funnelback
 
-    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_5__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters, config.dxp ? config.dxp : false); // save the requestToken
+    const [request, requestToken] = Object(_funnelback__WEBPACK_IMPORTED_MODULE_5__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters); // save the requestToken
 
     setCall({
       cancel: () => {
@@ -4141,10 +4167,10 @@ function useLogicWrapper(config, results, matrixQuery, element) {
     // update the results and display them
 
     request.then(data => {
-      setResponse(data);
+      setResponse(Object(_FB_formatter__WEBPACK_IMPORTED_MODULE_6__["formatFBResponse"])(data));
       setUpdating(false);
     }).then(() => {
-      query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_6___default.a.center(element.querySelector('.finder__results h2'), scrollDuration);
+      query.interacted && zenscroll__WEBPACK_IMPORTED_MODULE_7___default.a.center(element.querySelector('.finder__results h2'), scrollDuration);
     }).catch(() => {
       setResponse(initialResponse);
       setUpdating(false);
@@ -4198,8 +4224,6 @@ function useLogicWrapper(config, results, matrixQuery, element) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return replaceHistory; });
-/* harmony import */ var _url_params__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./url-params */ "./src/patterns/finder/logic/url-params.js");
-
 
 
 /**
@@ -4210,19 +4234,17 @@ __webpack_require__.r(__webpack_exports__);
  * @param {object[]} currFacets A map of facet meta labels to their values.
  * @param {*} facetLabels Array of facet definitions.
  */
-
 function replaceHistory(currQuery, currStartRank, currFacets, currParameters, currSort, facetLabels, defaultSort, hasMounted) {
   if (hasMounted) {
-    const searchURLParams = new URLSearchParams(window.location.search);
-    const params = Object(_url_params__WEBPACK_IMPORTED_MODULE_0__["replaceAndDeleteKeys"])(searchURLParams, '_sand', '_and');
+    const params = new URLSearchParams(window.location.search);
     currQuery !== '' ? params.set('query', currQuery) : params.delete('query');
     currStartRank !== 1 ? params.set('start_rank', currStartRank) : params.delete('start_rank');
     currSort !== defaultSort && currSort !== '' ? params.set('sort', currSort) : params.delete('sort');
     facetLabels.forEach(facet => {
       if (currFacets[facet.meta]) {
-        params.set(`meta_${facet.meta}_and`, currFacets[facet.meta]);
+        params.set(`meta_${facet.meta}_sand`, currFacets[facet.meta]);
       } else {
-        params.delete(`meta_${facet.meta}_and`);
+        params.delete(`meta_${facet.meta}_sand`);
       }
     });
     facetLabels.forEach(facet => {
@@ -4297,12 +4319,11 @@ function getNonFBParams(facets, params, matrixState) {
       return param;
     }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
   } else {
-    const updatedParams = params && replaceAndDeleteKeys(params, '_sand', '_and');
     return facets.filter(facet => facet.nonFBParam).map(facet => {
       const param = {};
 
-      if (updatedParams.get(facet.meta)) {
-        param[facet.meta] = updatedParams.get(facet.meta);
+      if (params.get(facet.meta)) {
+        param[facet.meta] = params.get(facet.meta);
       }
 
       return param;
@@ -4323,19 +4344,18 @@ function getFacetParams(facets, params, matrixState) {
       const keys = Object.keys(params);
       const param = {};
 
-      if (keys.indexOf(`meta_${facet.meta}_and`) !== -1) {
-        param[facet.meta] = params[`meta_${facet.meta}_and`];
+      if (keys.indexOf(`meta_${facet.meta}_sand`) !== -1) {
+        param[facet.meta] = params[`meta_${facet.meta}_sand`];
       }
 
       return param;
     }).reduce((facetParams, facet) => Object.assign(facetParams, facet));
   } else {
-    const updatedParams = params && replaceAndDeleteKeys(params, '_sand', '_and');
     return facets.map(facet => {
       const param = {};
 
-      if (updatedParams.get(`meta_${facet.meta}_and`)) {
-        param[facet.meta] = updatedParams.get(`meta_${facet.meta}_and`);
+      if (params.get(`meta_${facet.meta}_sand`)) {
+        param[facet.meta] = params.get(`meta_${facet.meta}_sand`);
       }
 
       return param;

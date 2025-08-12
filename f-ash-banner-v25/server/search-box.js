@@ -17995,12 +17995,9 @@ __webpack_require__.r(__webpack_exports__);
  * LAUNCH: change web2020.city.ac.uk to www.city.ac.uk
  */
 
-const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
-      dxpBaseUrl = 'https://www.citystgeorges.ac.uk/web-services/dxp-fb',
-      findRootUrl = '/funnelback-16-find',
-      dxpFindRootUrl = '/funnelback-dxp-find',
-      dxpSuggestRootUrl = '/funnelback-dxp-suggest',
-      suggestRootUrl = '/funnelback-16-suggest',
+const baseUrl = 'https://city-search.funnelback.squiz.cloud/s',
+      findRootUrl = '/search.json',
+      suggestRootUrl = '/suggest.json',
       maximumSuggestions = 100,
       timeout = 30000;
 /**
@@ -18015,7 +18012,7 @@ const baseUrl = 'https://www.citystgeorges.ac.uk/web-services',
  * @return {Promise} - A promise of search results.
  */
 
-function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters, dxp) {
+function find(collection, fixedFacets, fixedParameters, query, sortType, startRank, numRank, facets, parameters) {
   const fixedParams = {};
   fixedParameters.forEach(param => {
     fixedParams[`${param.name}`] = param.value;
@@ -18025,20 +18022,20 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
   paramsKeys.forEach(key => params[key] = parameters[key]);
   const fixedFacetParams = {};
   fixedFacets.forEach(facet => {
-    collection === 'city~sp-web2020-profiles' ? fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value : fixedFacetParams[`meta_${facet.meta}_and`] = facet.value;
+    fixedFacetParams[`meta_${facet.meta}_sand`] = facet.value;
   });
   const facetParams = {},
         facetKeys = Object.keys(facets);
-  facetKeys.forEach(collection === 'city~sp-web2020-profiles' ? key => facetParams[`meta_${key}_sand`] = facets[key] : key => facetParams[`meta_${key}_and`] = facets[key]);
+  facetKeys.forEach(key => facetParams[`meta_${key}_sand`] = facets[key]);
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: dxp ? dxpBaseUrl : baseUrl,
+    baseURL: baseUrl,
     cancelToken: call.token,
     httpsAgent: new https__WEBPACK_IMPORTED_MODULE_1___default.a.Agent({
       keepAlive: true
     }),
-    url: dxp ? dxpFindRootUrl : findRootUrl,
+    url: findRootUrl,
     timeout: timeout,
     params: { ...fixedParams,
       ...fixedFacetParams,
@@ -18061,13 +18058,13 @@ function find(collection, fixedFacets, fixedParameters, query, sortType, startRa
  * @return {Promise} - A promise of an array of suggestion strings.
  */
 
-function suggest(collection, partialQuery, dxp) {
+function suggest(collection, partialQuery) {
   const CancelToken = axios__WEBPACK_IMPORTED_MODULE_0___default.a.CancelToken,
         call = CancelToken.source(),
         config = {
-    baseURL: dxp ? dxpBaseUrl : baseUrl,
+    baseURL: baseUrl,
     cancelToken: call.token,
-    url: dxp ? dxpSuggestRootUrl : suggestRootUrl,
+    url: suggestRootUrl,
     timeout: timeout,
     params: {
       collection: collection,
@@ -18140,16 +18137,16 @@ function Select(props) {
     className: `search-box__filter search-box__select ${currentValue && 'search-box__select--selected'}`
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "sr-only",
-    htmlFor: `meta_${props.facet.meta}_and--`
+    htmlFor: `meta_${props.facet.meta}_sand--`
   }, props.facet.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("select", {
-    name: `meta_${props.facet.meta}_and`,
-    id: `meta_${props.facet.meta}_and--`,
+    name: `meta_${props.facet.meta}_sand`,
+    id: `meta_${props.facet.meta}_sand--`,
     onChange: e => setFacet(e.target.value),
     value: currentValue
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
     value: "",
     id: `meta${props.facet.meta}all`,
-    name: `meta_${props.facet.meta}_and--`
+    name: `meta_${props.facet.meta}_sand--`
   }, props.facet.noSelection), props.facet.values.map((value, i) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("option", {
       key: i,
