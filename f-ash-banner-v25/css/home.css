@@ -30760,8 +30760,8 @@ main .banner__video__button.play .button__img--play {
 
 .bner-v25 .svg-two {
     top: 0;
-    width: 30rem;
-    height: 30rem;
+    width: 26rem;
+    height: 26rem;
 }
 
 .bner-v25 > .svg-two {
@@ -30924,12 +30924,6 @@ main .banner__video__button.play .button__img--play {
     font-size: 4rem;
     font-weight: 600;
     line-height: inherit;
-}
-
-@media (min-width: 1025px) {
-    .bner-v25 .bner-v25__title {
-        font-size: 6rem;
-    }
 }
 
 .bner-v25 .bner-v25__ctas {
