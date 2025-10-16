@@ -3314,33 +3314,43 @@ const getmodal = () => modal;
 
 
 function InlineSearch(props) {
-  console.log('testing');
+  console.log('testing 2');
   const [display, setDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({});
   const inputRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); // ADDED
 
   const maximumSuggestions = 10;
+  const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   const openSearch = () => {
+    // open immediately inside the gesture
     setDisplay(true);
-    requestAnimationFrame(() => {
-      const el = inputRef.current;
-      if (!el) return;
-      el.focus({
-        preventScroll: true
-      });
 
-      if (el.setSelectionRange) {
-        const len = el && el.value && typeof el.value === 'string' ? el.value.length : 0;
+    const focusInput = () => {
+      const el = inputRef && inputRef.current ? inputRef.current : getmodal() && getmodal().querySelector('input');
+      if (!el) return; // old-syntax safe caret nudge
 
-        try {
-          if (el && typeof el.setSelectionRange === 'function') {
-            el.setSelectionRange(len, len);
-          }
-        } catch (e) {// ignore
+      var len = el && el.value ? el.value.length : 0;
+
+      try {
+        if (el && typeof el.focus === 'function') el.focus({
+          preventScroll: true
+        });
+
+        if (el && typeof el.setSelectionRange === 'function') {
+          el.setSelectionRange(len, len);
         }
+      } catch (e) {
+        /* no-op */
       }
-    });
+    }; // If there’s a transition/animation, iOS needs a tiny delay
+
+
+    if (isIOS) {
+      setTimeout(focusInput, 250); // 200–300ms usually works
+    } else {
+      requestAnimationFrame(focusInput);
+    }
   };
 
   const initialQuery = {
