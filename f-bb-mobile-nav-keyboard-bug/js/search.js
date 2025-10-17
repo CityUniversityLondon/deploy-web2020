@@ -3349,7 +3349,7 @@ function InlineSearch(props) {
     if (isIOS) {
       setTimeout(focusInput, 1000); // 200–300ms usually works
     } else {
-      requestAnimationFrame(focusInput);
+      setTimeout(focusInput, 1000);
     }
   };
 
