@@ -3314,7 +3314,7 @@ const getmodal = () => modal;
 
 
 function InlineSearch(props) {
-  console.log('testing 3');
+  console.log('testing 3a');
   const [display, setDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({});
   const inputRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); // ADDED
@@ -3343,8 +3343,10 @@ function InlineSearch(props) {
         }
 
         setTimeout(() => {
+          el.focus();
           el.click();
           console.log('simulated click .');
+          console.log(el);
         }, 5000);
       } catch (e) {
         /* no-op */
