@@ -1950,26 +1950,21 @@ const escapeKey = 'Escape';
  * @return {object} - React component.
  */
 
-const InlineSearch__Query = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0__["forwardRef"])(function InlineSearch__Query(props, ref) {
+function InlineSearch__Query(props) {
   // save what they're typing
-  const [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.query.query);
-  const inputRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); // ref for the input field, so we can .focus() it
+  const [partialQuery, setPartialQuery] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.query.query); // ref for the input field, so we can .focus() it
 
   const stringLength = 16,
         stringOffset = -4,
         [inputId] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])('search--inline--' + props.query.collection + '--' + Math.random().toString(stringLength).slice(stringOffset));
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     setPartialQuery(props.query.query);
-  }, [props.query.query, props.updating]); // let textInput = null;
-  // function focusInput() {
-  //     textInput.focus();
-  // }
+  }, [props.query.query, props.updating]);
+  let textInput = null;
 
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useImperativeHandle"])(ref, () => inputRef.current);
-
-  const focusInput = () => {
-    if (inputRef.current) inputRef.current.focus();
-  }; // on clear, make a default request for results
+  function focusInput() {
+    textInput.focus();
+  } // on clear, make a default request for results
 
 
   const clearQuery = () => {
@@ -2009,11 +2004,10 @@ const InlineSearch__Query = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0
     autoComplete: "off",
     id: inputId,
     name: "query",
-    placeholder: props.config.placeholder // ref={(input) => {
-    //     textInput = input;
-    // }}
-    ,
-    ref: inputRef,
+    placeholder: props.config.placeholder,
+    ref: input => {
+      textInput = input;
+    },
     type: "text",
     required: true,
     value: partialQuery,
@@ -2045,7 +2039,8 @@ const InlineSearch__Query = /*#__PURE__*/Object(react__WEBPACK_IMPORTED_MODULE_0
   }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "search--inline__query__submit__text"
   }, "Search")))));
-});
+}
+
 InlineSearch__Query.propTypes = {
   config: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
   query: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
@@ -3314,53 +3309,9 @@ const getmodal = () => modal;
 
 
 function InlineSearch(props) {
-  console.log('testing 3a');
   const [display, setDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({});
-  const inputRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); // ADDED
-
   const maximumSuggestions = 10;
-  const isIOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
-
-  const openSearch = () => {
-    // open immediately inside the gesture
-    setDisplay(true);
-
-    const focusInput = () => {
-      console.log('focusing input');
-      const el = inputRef && inputRef.current ? inputRef.current : getmodal() && getmodal().querySelector('input');
-      if (!el) return; // old-syntax safe caret nudge
-
-      var len = el && el.value ? el.value.length : 0;
-
-      try {
-        if (el && typeof el.focus === 'function') el.focus({
-          preventScroll: true
-        });
-
-        if (el && typeof el.setSelectionRange === 'function') {
-          el.setSelectionRange(len, len);
-        }
-
-        setTimeout(() => {
-          el.focus();
-          el.click();
-          console.log('simulated click .');
-          console.log(el);
-        }, 5000);
-      } catch (e) {
-        /* no-op */
-      }
-    }; // If there’s a transition/animation, iOS needs a tiny delay
-
-
-    if (isIOS) {
-      setTimeout(focusInput, 1000); // 200–300ms usually works
-    } else {
-      setTimeout(focusInput, 1000);
-    }
-  };
-
   const initialQuery = {
     collection: props.config.collection,
     misspelling: null,
@@ -3476,7 +3427,8 @@ function InlineSearch(props) {
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     if (!focusTrap.activate) {
       setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_4___default()(getmodal(), {
-        initialFocus: () => inputRef.current || getmodal().querySelector('input'),
+        initialFocus: false,
+        returnFocusOnDeactivate: true,
         onDeactivate: () => setDisplay(false),
         clickOutsideDeactivates: true
       }));
@@ -3500,9 +3452,24 @@ function InlineSearch(props) {
     id: "search",
     "aria-expanded": display,
     "aria-label": ariaLabel,
-    onPointerDown: !display ? openSearch : undefined,
     onClick: () => {
-      setDisplay(!display);
+      console.log('search clicked');
+      const willOpen = !display;
+      setDisplay(willOpen);
+
+      if (willOpen) {
+        console.log('search opening');
+        requestAnimationFrame(() => {
+          const modalEl = getmodal();
+          if (!modalEl) return;
+          const input = modalEl.querySelector('input');
+
+          if (input && typeof input.focus === 'function') {
+            console.log('search focusing');
+            input.focus();
+          }
+        });
+      }
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "global-header__search__wrapper"
@@ -3529,7 +3496,6 @@ function InlineSearch(props) {
     "aria-hidden": "true"
   }))),
         inputField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_inline_search_inline_query__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    inputRef: inputRef,
     config: props.config,
     query: query,
     update: updater,
