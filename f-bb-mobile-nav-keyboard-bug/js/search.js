@@ -3314,7 +3314,7 @@ const getmodal = () => modal;
 
 
 function InlineSearch(props) {
-  console.log('testing 2');
+  console.log('testing 3');
   const [display, setDisplay] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   const [focusTrap, setFocusTrap] = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({});
   const inputRef = Object(react__WEBPACK_IMPORTED_MODULE_0__["useRef"])(null); // ADDED
@@ -3327,6 +3327,7 @@ function InlineSearch(props) {
     setDisplay(true);
 
     const focusInput = () => {
+      console.log('focusing input');
       const el = inputRef && inputRef.current ? inputRef.current : getmodal() && getmodal().querySelector('input');
       if (!el) return; // old-syntax safe caret nudge
 
@@ -3340,6 +3341,11 @@ function InlineSearch(props) {
         if (el && typeof el.setSelectionRange === 'function') {
           el.setSelectionRange(len, len);
         }
+
+        setTimeout(() => {
+          el.click();
+          console.log('simulated click .');
+        }, 5000);
       } catch (e) {
         /* no-op */
       }
