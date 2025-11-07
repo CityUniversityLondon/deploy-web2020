@@ -2162,9 +2162,6 @@ function Finder__Select(props) {
       currentDateMonth = currentDate.getUTCMonth() > 8 ? currentDate.getUTCMonth() + 1 : '0' + (currentDate.getUTCMonth() + 1),
       currentDateDay = currentDate.getUTCDate(),
       currentDateString = "".concat(currentYear).concat(currentDateMonth).concat(currentDateDay >= dateDayFormat ? currentDateDay : '0' + currentDateDay);
-  console.log('currentDate.getUTCMonth()', currentDate.getUTCMonth());
-  console.log('month', currentDateMonth);
-  console.log('currentDateString', currentDateString);
   var randomNumber = props.mobile ? 'mobile' : 'desktop',
       currentValue = props.query.facets[props.facet.meta] || ''; // reduce the facet configuration to an array of all possible values for
   // the facet
