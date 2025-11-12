@@ -13056,6 +13056,7 @@ article a:active {
 }
 
 .global-header {
+    background-color: #fffff1 !important;
     background-color: #ffffff;
     position: relative;
     z-index: 4;
