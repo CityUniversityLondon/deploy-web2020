@@ -28431,12 +28431,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function useDecodeHtml(html) {
-  return Object(react__WEBPACK_IMPORTED_MODULE_15__["useMemo"])(function () {
-    return Object(_util__WEBPACK_IMPORTED_MODULE_17__["decodeHtml"])(html);
-  }, [html]);
-}
-
 function formatShortDate(dateString) {
   var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
       date = new Date(dateString),
@@ -28500,7 +28494,7 @@ function Finder__Results__Event(props) {
     className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("h3", {
     className: "card__heading"
-  }, useDecodeHtml(props.details.title)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("p", {
+  }, props.details.title.replace('&amp;', '&')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("p", {
     className: "card__description"
   }, props.details.listMetadata.c && props.details.listMetadata.c[0]), eventLabel, location, audience)));
 }
