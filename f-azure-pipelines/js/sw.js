@@ -230,7 +230,7 @@ self.addEventListener('fetch', function (event) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/rof/src/github.com/CityUniversityLondon/web2020/service-worker/sw.js */"./service-worker/sw.js");
+module.exports = __webpack_require__(/*! /home/vsts/work/1/s/service-worker/sw.js */"./service-worker/sw.js");
 
 
 /***/ })
