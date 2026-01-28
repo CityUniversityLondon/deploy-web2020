@@ -51537,6 +51537,77 @@ main header .event__formassembly__form {
     color: #ffffff;
 }
 
+.landing--functional--sc .banner .banner__image {
+    position: relative;
+    overflow: hidden;
+}
+
+.landing--functional--sc .banner .banner__image:not(.banner__image--svg):after {
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(to top, #5d184a, transparent);
+}
+
+@media (max-width: 767px) {
+    .landing--functional--sc .banner .banner__overlay {
+        background-color: #5d184a;
+    }
+}
+
+.landing--functional--sc .banner .banner-text {
+    background-color: #5d184a;
+}
+
+.landing--functional--sc .banner .banner__label {
+    font-family: "ibm-plex-sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-weight: 400;
+}
+
+.landing--functional--sc .banner .banner__label i,
+.landing--functional--sc .banner .banner__label em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .landing--functional--sc .banner .banner__label {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .landing--functional--sc .banner .banner__label {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .landing--functional--sc .banner .banner__label {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .landing--functional--sc .banner .banner__label {
+        letter-spacing: -0.017em;
+    }
+}
+
 .landing--functional--sc .cta-block--wrap {
     grid-template-columns: repeat(18, 1fr);
     grid-column-gap: 0;
@@ -51577,15 +51648,28 @@ main header .event__formassembly__form {
 }
 
 .landing--functional--sc .cta-block--wrap .cta-block {
-    grid-column: 1 / -1;
+    grid-column: 1/-1;
     padding: 1rem 0;
     text-align: center;
+    max-width: inherit;
+    display: flex;
+    justify-content: space-between;
 }
 
-@media (min-width: 769px) {
+@media (max-width: 768px) {
     .landing--functional--sc .cta-block--wrap .cta-block {
-        display: flex;
-        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .landing--functional--sc .cta-block--wrap .cta-block .cta-block__cta {
+        margin: 0;
+    }
+}
+
+@media (min-width: 1025px) {
+    .landing--functional--sc .cta-block--wrap .cta-block {
+        grid-column: 2/-2;
     }
 }
 
