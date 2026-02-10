@@ -1130,7 +1130,7 @@ function Finder__Results__Event(props) {
     className: "card__details__text"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("h3", {
     className: "card__heading"
-  }, props.details.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("p", {
+  }, props.details.title.replace(/&amp;/g, '&')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("p", {
     className: "card__description"
   }, props.details.listMetadata.c && props.details.listMetadata.c[0]), eventLabel, location, audience)));
 }

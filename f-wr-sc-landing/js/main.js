@@ -6806,7 +6806,7 @@ var trap;
 function launchModal(modal) {
   var dialogArray = [];
   var dialogTopic = modal.getAttribute('data-topic');
-  Array.from(modal.children).forEach(function (list, i) {
+  Array.from(modal.children).forEach(function (list) {
     if (!list.dataset.modalcontent || list.dataset.modalcontent === 'true') {
       var wrapper = document.createElement('div'),
           listButton = document.createElement('button'),
@@ -6816,7 +6816,8 @@ function launchModal(modal) {
           listLabel = list.getAttribute('data-label'),
           customHeader = list.getAttribute('data-header'),
           format = list.getAttribute('data-keepformat'),
-          header = document.createElement('div');
+          header = document.createElement('div'),
+          dialogIndex = dialogArray.length;
       var title,
           keepFormat = Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(format),
           shortName = list.getAttribute('data-shortname'),
@@ -6843,14 +6844,14 @@ function launchModal(modal) {
       if (keepFormat) {
         list.insertBefore(listHeader, wrapper);
         listHeader.addEventListener('click', function () {
-          createDialog(modal, "".concat(i), dialogArray);
+          createDialog(modal, dialogIndex, dialogArray);
         });
       } else {
         listButtonSpan.textContent = listHeader.textContent;
         header.appendChild(listHeader);
         list.insertBefore(listButton, wrapper);
         listButton.addEventListener('click', function () {
-          createDialog(modal, "".concat(i), dialogArray);
+          createDialog(modal, dialogIndex, dialogArray);
         });
       }
 
@@ -6875,6 +6876,8 @@ function launchModal(modal) {
 
 
 function createDialog(parent, position, dialogArray) {
+  var item = dialogArray[position];
+  if (!item) return;
   var slider = Object(_util__WEBPACK_IMPORTED_MODULE_6__["toBool"])(parent.getAttribute('data-slider')),
       type = parent.dataset.type;
   var closeBtn = Object(_util__WEBPACK_IMPORTED_MODULE_6__["createHTMLElement"])('button', [{

@@ -55452,6 +55452,10 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     }
 }
 
+.course--pgt__awards__content__duration__method-of-study li .course--pgt__awards__content__duration__seperator:last-of-type {
+    display: none;
+}
+
 @media (min-width: 769px) {
     .js .wrapper--alumni-testimonials .card--testimonial .card__details .card--testimonial__quote {
         margin-top: 1rem;
