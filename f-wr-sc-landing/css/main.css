@@ -40664,10 +40664,6 @@ article .link-copy {
     main > .lifelong-learning .embedded-video .youtube-video {
         margin-top: 1.25rem;
     }
-    main > .lifelong-learning .embedded-video-details__heading:after {
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
 @media (min-width: 1024px) {
@@ -40778,23 +40774,6 @@ article .link-copy {
 .embedded-video .embedded-video-details__heading {
     margin-top: 0;
     width: 100%;
-}
-
-.embedded-video .embedded-video-details__heading:after {
-    background: #5d184a;
-    content: '';
-    display: block;
-    height: 0.25rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-    width: 6rem;
-}
-
-@media (max-width: 1023px) {
-    .embedded-video .embedded-video-details__heading:after {
-        margin-bottom: 1.25rem;
-        margin-top: 1.25rem;
-    }
 }
 
 .embedded-video .embedded-video-details__description {
@@ -51671,6 +51650,10 @@ main > .landing--functional--sc .cta-block--wrap .cta-block {
     main > .landing--functional--sc .cta-block--wrap .cta-block {
         grid-column: 2/-2;
     }
+}
+
+main > .landing--functional--sc .landing--functional__finder__links__heading {
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 1024px) {
