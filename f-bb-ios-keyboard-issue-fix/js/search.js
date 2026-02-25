@@ -4338,7 +4338,7 @@ function InlineSearch(props) {
       }
 
       setDisplay(true);
-      focusSearchInput(); // 👈 same here
+      focusSearchInput();
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
     className: "global-header__search__wrapper"
