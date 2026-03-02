@@ -43436,7 +43436,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .v26-finder__accordion__toggle {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     padding: 1rem 0;
     border-bottom: #cbcbcb;
 }
@@ -43450,6 +43449,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     background-color: #0c0c0e;
     border-radius: 50%;
     color: #ffffff;
+    margin-left: auto;
 }
 
 .v25-finder__filter {
@@ -43458,6 +43458,44 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .wrapper--v26-finder_filters--filters {
     padding: 0 1.25rem;
+}
+
+.v26-finder_filters__checkbox_wrap {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.v26-finder_filters__checkbox {
+    appearance: none;
+    position: relative;
+    min-width: 1rem;
+    min-height: 1rem;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #0c0c0e;
+    border-radius: 0.25rem;
+}
+
+.v26-finder_filters__checkbox::before {
+    content: '';
+    background-color: #d61726;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0.5rem;
+    height: 0.5rem;
+    opacity: 0;
+}
+
+.v26-finder_filters__checkbox:checked {
+    background-color: #0c0c0e;
+}
+
+.v26-finder_filters__checkbox:checked::before {
+    opacity: 1;
 }
 
 .standard-content__entry-requirement .dropdown-filter {
