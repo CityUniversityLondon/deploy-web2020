@@ -43400,15 +43400,15 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     background-color: #008569;
 }
 
-main > article .finder.v26-finder .finder__query {
+.v26-finder__query {
     grid-area: top;
 }
 
-main > article .finder.v26-finder .wrapper--finder__filters {
+.wrapper--v26-finder__filters {
     grid-area: left;
 }
 
-main > article .finder.v26-finder .finder__results {
+.v26-finder__results {
     grid-area: right;
 }
 
@@ -43424,16 +43424,16 @@ main > article .finder.v26-finder .finder__results {
     border-bottom: 1px solid #cbcbcb;
 }
 
-.finder__accordion .finder__accordion__content {
+.v26-finder__accordion__content {
     display: flex;
     flex-direction: column;
 }
 
-.finder__accordion .finder__accordion__content[data-closed='true'] {
+.v26-finder__accordion__content[data-closed='true'] {
     display: none;
 }
 
-.finder__accordion__toggle {
+.v26-finder__accordion__toggle {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -43452,11 +43452,11 @@ main > article .finder.v26-finder .finder__results {
     color: #ffffff;
 }
 
-.v26-finder .wrapper--finder__filters .finder__filters .finder__filter {
+.v25-finder__filter {
     width: 100%;
 }
 
-.v26-finder .wrapper--finder_filters--filters {
+.wrapper--v26-finder_filters--filters {
     padding: 0 1.25rem;
 }
 
