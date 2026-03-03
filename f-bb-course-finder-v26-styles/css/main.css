@@ -43408,8 +43408,20 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     grid-column: 1 / span 6;
 }
 
+@media (max-width: 1023px) {
+    .wrapper--v26-finder__filters {
+        grid-column: 1 / -1;
+    }
+}
+
 .v26-finder__results {
     grid-column: 7 / span 18;
+}
+
+@media (max-width: 1023px) {
+    .v26-finder__results {
+        grid-column: 1 / -1;
+    }
 }
 
 .v26-finder {
@@ -43545,6 +43557,16 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .v26-finder__clear-filter-tag span {
     margin-left: 0.25rem;
+}
+
+.v26-finder__filters__heading {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    .v26-finder__filters__heading {
+        display: block;
+    }
 }
 
 .standard-content__entry-requirement .dropdown-filter {
