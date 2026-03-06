@@ -9639,6 +9639,11 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     bottom: 0;
 }
 
+.card--v26-course {
+    border-bottom: solid #f2f2f2 0.125rem;
+    padding-bottom: 0.5rem;
+}
+
 .card--v26-course .card__heading {
     font-family: "ff-meta-web-pro", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
@@ -9813,34 +9818,40 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     color: #a1a1a1;
 }
 
-.card--v26-course .card--v26-course__duration-and-code {
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 0;
-    display: grid;
-    grid-column-gap: 0.5rem;
-    margin-top: 0.5rem;
+@media (min-width: 769px) {
+    .card--v26-course .card--v26-course__duration-and-code {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 0;
+        display: grid;
+        grid-column-gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) and (min-width: 768px) {
     .card--v26-course .card--v26-course__duration-and-code {
         grid-column-gap: 1rem;
     }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 769px) and (min-width: 901px) {
     .card--v26-course .card--v26-course__duration-and-code {
         grid-column-gap: 1.5rem;
     }
 }
 
-.card--v26-course .card--v26-course__duration-and-code .card__tag {
-    grid-column: span 1;
+@media (min-width: 769px) {
+    .card--v26-course .card--v26-course__duration-and-code .card__tag {
+        grid-column: span 1;
+    }
 }
 
-.card--v26-course .card--v26-course__location {
-    display: flex;
-    flex-wrap: nowrap;
-    column-gap: 0.5rem;
+@media (min-width: 769px) {
+    .card--v26-course .card--v26-course__location {
+        display: flex;
+        flex-wrap: nowrap;
+        column-gap: 0.5rem;
+    }
 }
 
 article a {
