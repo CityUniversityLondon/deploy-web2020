@@ -43703,6 +43703,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-left: 0.5rem;
 }
 
+.v26-finder__reset__text {
+    width: 100%;
+}
+
 .v26-finder__filters__reset--desktop {
     margin-left: auto;
 }
