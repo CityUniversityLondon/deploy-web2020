@@ -43621,6 +43621,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .wrapper--v26-finder__filters {
     grid-column: 1 / span 6;
+    padding: 1rem 0.75rem;
 }
 
 @media (max-width: 1279px) {
@@ -43632,11 +43633,16 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 @media (max-width: 1023px) {
     .wrapper--v26-finder__filters {
         grid-column: 1 / -1;
+        padding: 1rem 1rem 0 1rem;
+    }
+    .wrapper--v26-finder__filters[data-open='true'] {
+        padding: 3rem 3rem 2.75rem 3rem;
     }
 }
 
 .v26-finder__results {
     grid-column: 7 / span 18;
+    padding-top: 1rem;
 }
 
 @media (max-width: 1279px) {
@@ -43698,6 +43704,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     font-style: normal;
     font-weight: 600;
     margin-top: 1rem;
+    margin: 0 0 2rem 0;
+    display: block;
 }
 
 .v26-finder__query label i,
@@ -43753,20 +43761,82 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     background: #ffffff;
     padding: 5px;
     border: 1px solid #ffffff;
-    border-radius: 31px;
+    border-radius: 9999px;
     overflow: hidden;
+    width: 100%;
+    max-width: 40rem;
 }
 
 .v26-finder__query__input__wrapper input {
-    width: 100%;
+    font-family: "ibm-plex-sans", sans-serif;
+    /**
+     * IBM Plex OpenType stylistic sets:
+     *
+     * ss01: 0/1 double-storey/simple 'a'
+     * ss02: 0/1 double-storey/simple 'g'
+     * ss03: 0/1 plain/slashed '0'
+     * ss04: 0/1 plain/dotted '0'
+     */
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    width: calc(100% - 40px);
     border: none;
+    padding: 0.5rem 1rem;
 }
 
-.v26-finder__query__submit {
+.v26-finder__query__input__wrapper input i,
+.v26-finder__query__input__wrapper input em {
+    font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .v26-finder__query__input__wrapper input {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .v26-finder__query__input__wrapper input {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .v26-finder__query__input__wrapper input {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .v26-finder__query__input__wrapper input {
+        letter-spacing: -0.017em;
+    }
+}
+
+.v26-finder__query__input__wrapper input::placeholder {
+    font-style: italic;
+}
+
+.v26-finder__query__input__wrapper .v26-finder__query__submit {
     background: black;
     color: white;
     padding: 20px;
-    border-radius: 30px;
+    border-radius: 9999px;
+    margin-left: auto;
+}
+
+@media (max-width: 1023px) {
+    .v26-finder__query__input__wrapper .v26-finder__query__submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+    }
 }
 
 .v26-finder__query__submit__icon {
@@ -43840,23 +43910,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     width: 100%;
 }
 
-.wrapper--v26-finder__filters {
-    padding: 0 0.75rem;
-}
-
-@media (max-width: 1023px) {
-    .wrapper--v26-finder__filters {
-        padding: 1rem 1rem 0 1rem;
-    }
-    .wrapper--v26-finder__filters[data-open='true'] {
-        padding: 3rem 3rem 2.75rem 3rem;
-    }
-}
-
-.v26-finder__results__summary {
-    padding: 0 1rem;
-}
-
 .v26-finder_filters__checkbox_wrap {
     display: flex;
     align-items: center;
@@ -43906,30 +43959,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     opacity: 0.5;
 }
 
-.v26-finder__reset {
-    display: inline-flex;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: underline;
-}
-
-.v26-finder__reset .icon {
-    margin-left: 0.5rem;
-}
-
-.v26-finder__reset__text {
-    width: 100%;
-}
-
 .v26-finder__filters__reset--desktop {
     margin-left: auto;
-}
-
-@media (max-width: 1023px) {
-    .v26-finder__filters__reset--desktop .v26-finder__reset {
-        display: none;
-    }
 }
 
 .v26-finder__results__clear-filters {
@@ -43937,7 +43968,11 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     align-items: center;
     gap: 0.75rem;
     flex-wrap: wrap;
-    padding: 1rem 1rem 1rem 0;
+    padding: 1rem 1rem 0 0;
+}
+
+.v26-finder__results__clear-filters:empty {
+    display: none;
 }
 
 @media (max-width: 1023px) {
@@ -44011,14 +44046,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     width: 100%;
 }
 
-.wrapper--v26-finder__filters--mobile__apply button {
-    width: 100%;
+.wrapper--v26-finder__filters--mobile__apply .icon {
+    display: none;
 }
 
-@media (max-width: 1023px) {
-    .wrapper--v26-finder__filters[data-open='true'] > .v26-finder__reset {
-        display: none;
-    }
+.wrapper--v26-finder__filters--mobile__apply button {
+    width: 100%;
 }
 
 .wrapper--v26-finder__filters--mobile__filters__close {
@@ -44045,10 +44078,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     cursor: not-allowed;
 }
 
-.wrapper--v26-finder__filters__footer .v26-finder__reset .icon {
-    display: none;
-}
-
 @media (max-width: 1023px) {
     .wrapper--v26-finder__filters[data-open='true'] .wrapper--v26-finder__filters__footer {
         display: grid;
@@ -44058,6 +44087,65 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .wrapper--v26-finder__filters__header {
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width: 1023px) {
+    .v26-finder__results__summary {
+        padding: 0 1rem;
+    }
+}
+
+.v26-finder__results__summary__heading {
+    margin-top: 0;
+}
+
+/*===Reset/Clear fitlers button=====*/
+.v26-finder__reset {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.v26-finder__reset .icon {
+    margin-left: 0.5rem;
+}
+
+.v26-finder__reset .v26-finder__reset__text {
+    width: 100%;
+}
+
+@media (max-width: 1023px) {
+    .v26-finder__filters__reset--desktop .v26-finder__reset {
+        display: none;
+    }
+}
+
+.wrapper--v26-finder__filters__header .v26-finder__reset {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    .wrapper--v26-finder__filters__header .v26-finder__reset {
+        display: block;
+    }
+}
+
+@media (max-width: 1023px) {
+    .wrapper--v26-finder__filters[data-open='true'] .wrapper--v26-finder__filters__header .v26-finder__reset {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .wrapper--v26-finder__filters[data-open='true'] > .v26-finder__reset {
+        display: none;
+    }
+}
+
+.wrapper--v26-finder__filters__footer .v26-finder__reset .icon {
+    display: none;
 }
 
 .standard-content__entry-requirement .dropdown-filter {
