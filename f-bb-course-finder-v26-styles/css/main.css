@@ -43757,12 +43757,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .v26-finder__query__input__wrapper {
+    position: relative;
     display: flex;
     background: #ffffff;
     padding: 5px;
     border: 1px solid #ffffff;
     border-radius: 9999px;
-    overflow: hidden;
     width: 100%;
     max-width: 40rem;
 }
@@ -43784,6 +43784,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     width: calc(100% - 40px);
     border: none;
     padding: 0.5rem 1rem;
+    border-radius: 9999px 0 0 9999px;
 }
 
 .v26-finder__query__input__wrapper input i,
@@ -43839,6 +43840,17 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
+.v26-finder__query__input__wrapper .v26-finder__query__suggestions {
+    position: absolute;
+    padding: 1rem;
+    background-color: #0c0c0e;
+    width: 100%;
+    top: 100%;
+    margin: 0;
+    list-style: none;
+    max-width: none;
+}
+
 .v26-finder__query__submit__icon {
     display: none;
     color: #ffffff;
@@ -43859,6 +43871,25 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     .finder__query__submit__text {
         display: none;
     }
+}
+
+.v26-finder__clear {
+    display: flex;
+    color: #0c0c0e;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.75rem;
+}
+
+.v26-finder__clear .v26-finder__clear__text {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }
 
 .finder__accordion {
