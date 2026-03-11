@@ -43690,9 +43690,31 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .v26-finder__query {
-    background-color: #0c0c0e;
+    background-color: #1e1e1e;
     color: white;
-    padding: 50px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 901px) {
+    .v26-finder__query {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.v26-finder__query > div {
+    max-width: 80rem;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .v26-finder__query label {
