@@ -43994,7 +43994,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .v26-finder__results {
     grid-column: 7 / span 18;
-    padding-top: 1rem;
+    padding: 1rem 2rem;
 }
 
 @media (max-width: 1279px) {
@@ -44009,21 +44009,87 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
-.v26-finder {
+.v25-finder__header {
     grid-template-columns: repeat(24, 1fr);
     grid-column-gap: 0;
     display: grid;
+    padding: 3rem 1rem 1.5rem 1rem;
 }
 
 @media (min-width: 768px) {
-    .v26-finder {
+    .v25-finder__header {
         grid-column-gap: 1rem;
     }
 }
 
 @media (min-width: 901px) {
-    .v26-finder {
+    .v25-finder__header {
         grid-column-gap: 1.5rem;
+    }
+}
+
+.v25-finder__header .v26-finder__heading {
+    grid-column: 1 / span 12;
+    margin-top: 0;
+    margin-top: 0;
+}
+
+@media (max-width: 1023px) {
+    .v25-finder__header .v26-finder__heading {
+        grid-column: 1 / -1;
+    }
+}
+
+.v25-finder__header .v26-finder__description {
+    grid-column: 13 / span 12;
+}
+
+.v25-finder__header .v26-finder__description p {
+    margin-top: 0;
+}
+
+@media (max-width: 1023px) {
+    .v25-finder__header .v26-finder__description {
+        grid-column: 1 / -1;
+    }
+}
+
+.v26-finder__fullwidth__wrapper {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    display: flex;
+    justify-content: center;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.v26-finder__fullwidth__wrapper .v26-finder__fullwidth__inner {
+    max-width: 80rem;
+    width: 100%;
+}
+
+@media (min-width: 1024px) {
+    .v26-finder__fullwidth__wrapper .v26-finder__fullwidth__inner {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        max-width: 80rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .v26-finder__fullwidth__wrapper .v26-finder__fullwidth__inner {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 901px) {
+    .v26-finder__fullwidth__wrapper .v26-finder__fullwidth__inner {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 }
 
@@ -44052,91 +44118,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .v26-finder__query {
     background-color: #1e1e1e;
-    color: white;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    display: flex;
-    justify-content: center;
-}
-
-@media (min-width: 901px) {
-    .v26-finder__query {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
-
-.v26-finder__query > div {
-    max-width: 80rem;
-    width: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-
-.v26-finder__query label {
-    font-family: "ff-meta-web-pro", sans-serif;
-    font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-    font-size: 1.602rem;
-    line-height: 1.33333;
-    letter-spacing: -0.015em;
-    font-style: normal;
-    font-weight: 600;
-    margin-top: 1rem;
-    margin: 0 0 2rem 0;
-    display: block;
-}
-
-.v26-finder__query label i,
-.v26-finder__query label em {
-    font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
-}
-
-.v26-finder__query label b,
-.v26-finder__query label strong {
-    font-weight: inherit;
-}
-
-.v26-finder__query label i,
-.v26-finder__query label em {
-    font-style: italic;
-}
-
-.v26-finder__query label u {
-    text-decoration: none;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .v26-finder__query label {
-        letter-spacing: -0.016em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .v26-finder__query label {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .v26-finder__query label {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .v26-finder__query label {
-        letter-spacing: -0.017em;
-    }
-}
-
-.v26-finder__query label b,
-.v26-finder__query label strong {
-    font-weight: 600;
+    color: #ffffff;
+    padding: 1.5rem 1rem 3rem 1rem;
 }
 
 .v26-finder__query__input__wrapper {
