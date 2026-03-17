@@ -43971,6 +43971,24 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     grid-column: 1 / -1;
 }
 
+.v26-finder__main {
+    grid-template-columns: repeat(24, 1fr);
+    grid-column-gap: 0;
+    display: grid;
+}
+
+@media (min-width: 768px) {
+    .v26-finder__main {
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .v26-finder__main {
+        grid-column-gap: 1.5rem;
+    }
+}
+
 .wrapper--v26-finder__filters {
     grid-column: 1 / span 6;
     padding: 1rem 0.75rem;
@@ -44543,6 +44561,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .wrapper--v26-finder__filters__footer .v26-finder__reset .icon {
     display: none;
+}
+
+.wrapper--v26-finder_filters--filters .v26-finder__query__submit {
+    background-color: #0c0c0e;
+    color: #ffffff;
+    padding: 1rem 2rem;
 }
 
 .standard-content__entry-requirement .dropdown-filter {
