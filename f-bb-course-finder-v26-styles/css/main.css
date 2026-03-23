@@ -44236,6 +44236,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     z-index: 1;
 }
 
+.v26-finder__query__input__wrapper .v26-finder__query__suggestions.hide {
+    display: none;
+}
+
 .v26-finder__query__submit__icon {
     display: none;
     color: #ffffff;
