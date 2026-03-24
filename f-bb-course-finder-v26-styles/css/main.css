@@ -44251,13 +44251,13 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
-.finder__query__submit__text {
+.v26-finder__query__submit__text {
     display: block;
     color: #ffffff;
 }
 
 @media (max-width: 1023px) {
-    .finder__query__submit__text {
+    .v26-finder__query__submit__text {
         display: none;
     }
 }
