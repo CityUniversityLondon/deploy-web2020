@@ -44331,10 +44331,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .v26-finder_filters__checkbox_wrap {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.25rem;
+    position: relative;
+    margin-bottom: 0.5rem;
 }
 
 .v26-finder__accordion__count {
@@ -44343,40 +44341,70 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .v26-finder_filters__checkbox {
-    appearance: none;
-    position: relative;
-    min-width: 1rem;
-    min-height: 1rem;
-    padding: 0;
-    margin: 0;
-    border: 0.0625rem solid #0c0c0e;
-    border-radius: 0.25rem;
-    margin-top: 0.25rem;
-}
-
-.v26-finder_filters__checkbox::before {
-    content: '';
-    background-color: #d61726;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0.5rem;
-    height: 0.5rem;
-    opacity: 0;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    z-index: 1;
+    margin: 0;
+    appearance: none;
 }
 
-.v26-finder_filters__checkbox:checked {
-    background-color: #0c0c0e;
-}
-
-.v26-finder_filters__checkbox:checked::before {
-    opacity: 1;
+.v26-finder_filters__checkbox:focus {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 .v26-finder_filters__checkbox:disabled,
 .v26-finder_filters__checkbox:disabled + label {
-    opacity: 0.5;
+    opacity: 0.75;
+}
+
+.v26-finder_filters__label {
+    display: block;
+    padding-left: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.v26-finder_filters__label::before {
+    content: '';
+    border: 0.0625rem solid #494949;
+    border-radius: 0.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.v26-finder_filters__label:after {
+    font: var(--fa-font-solid);
+    content: "\f00c";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.v26-finder_filters__checkbox:checked ~ .v26-finder_filters__label::before {
+    background-color: #d61726;
+    border-color: #d61726;
+}
+
+.v26-finder_filters__checkbox:checked ~ .v26-finder_filters__label::after {
+    opacity: 1;
 }
 
 .v26-finder__filters__reset--desktop {
