@@ -9687,6 +9687,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     font-style: normal;
     font-weight: 600;
     margin-top: 1rem;
+    margin-top: 0;
 }
 
 .card--v26-course .card__heading i,
@@ -44349,7 +44350,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .v26-finder_filters__checkbox_wrap {
     position: relative;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .v26-finder__accordion__count {

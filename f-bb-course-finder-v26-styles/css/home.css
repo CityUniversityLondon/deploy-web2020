@@ -9669,6 +9669,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     font-style: normal;
     font-weight: 600;
     margin-top: 1rem;
+    margin-top: 0;
 }
 
 .card--v26-course .card__heading i,
