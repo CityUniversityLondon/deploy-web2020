@@ -1135,6 +1135,22 @@
     background-color: #008569;
 }
 
+.color--zinc30 {
+    color: #d4d4d8;
+}
+
+.background--zinc30 {
+    background-color: #d4d4d8;
+}
+
+.color--zinc60 {
+    color: #52525b;
+}
+
+.background--zinc60 {
+    background-color: #52525b;
+}
+
 .sr-only-focusable-within:active, .sr-only-focusable-within:focus, .sr-only-focusable-within:focus-within {
     clip: auto;
     height: auto;
@@ -9815,7 +9831,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card--v26-course .card__type {
-    color: #a1a1a1;
+    color: #52525b;
 }
 
 @media (min-width: 769px) {
