@@ -44361,6 +44361,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .v26-finder_filters__checkbox:disabled,
 .v26-finder_filters__checkbox:disabled + label {
+    cursor: not-allowed;
     opacity: 0.75;
 }
 
