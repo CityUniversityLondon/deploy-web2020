@@ -44171,7 +44171,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .v26-finder .v26-finder__results .v26-pagination__wrapper {
-    border-top: 0.0625rem solid #cbcbcb;
     max-width: unset;
 }
 
@@ -44180,8 +44179,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .v26-finder__query {
-    background-color: #1e1e1e;
-    color: #ffffff;
     padding: 1.5rem 1rem 3rem 1rem;
 }
 
@@ -44190,8 +44187,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     display: flex;
     background: #ffffff;
     padding: 0.25rem;
-    border: 0.0625rem solid #ffffff;
-    border-radius: 9999px;
+    border: 0.0625rem solid #494949;
     width: 100%;
     max-width: 40rem;
 }
@@ -44213,7 +44209,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     width: calc( 100% - 3rem);
     border: none;
     padding: 0.5rem 1rem;
-    border-radius: 9999px 0 0 9999px;
 }
 
 .v26-finder__query__input__wrapper input i,
@@ -44245,16 +44240,33 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     }
 }
 
+.v26-finder__query__input__wrapper input:focus {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
+}
+
 .v26-finder__query__input__wrapper input::placeholder {
     font-style: italic;
 }
 
 .v26-finder__query__input__wrapper .v26-finder__query__submit {
-    background: black;
+    background: #d61726;
     color: white;
     padding: 1rem;
-    border-radius: 9999px;
     margin-left: auto;
+}
+
+.v26-finder__query__input__wrapper .v26-finder__query__submit:hover {
+    background: #b91924;
+}
+
+.v26-finder__query__input__wrapper .v26-finder__query__submit:focus {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 @media (max-width: 1023px) {
@@ -44263,7 +44275,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
         align-items: center;
         justify-content: center;
         font-size: 1.5rem;
-        border-radius: 50%;
         height: 3rem;
         width: 3rem;
     }
