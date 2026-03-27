@@ -9677,7 +9677,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card--v26-course {
-    border-bottom: solid #f2f2f2 0.125rem;
+    border-bottom: solid #494949 0.0025rem;
     padding: 2.25rem 0;
 }
 
@@ -31324,6 +31324,11 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
+    .v26-pagination__wrapper .v26-pagination__controls .v26-pagination__controls__element {
+        min-width: 3rem;
+        justify-content: center;
+        text-align: center;
+    }
     .v26-pagination__wrapper .v26-pagination__controls .v26-pagination__controls__ellipsis {
         align-items: center;
         display: flex;
@@ -31382,6 +31387,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         padding-right: 0.5rem;
         align-self: center;
         border: solid 0.0625rem #0c0c0e;
+        font-weight: 800;
     }
     .v26-pagination__wrapper .v26-pagination__controls .v26-pagination__controls__ellipsis {
         display: none;
