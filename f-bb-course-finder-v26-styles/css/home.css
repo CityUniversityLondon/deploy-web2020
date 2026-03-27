@@ -4147,6 +4147,9 @@ main article {
     background-color: #ffffff;
     grid-column: 1/-1;
     height: max-content;
+}
+
+main article:not(.container--no-shadow) {
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
 }
 
