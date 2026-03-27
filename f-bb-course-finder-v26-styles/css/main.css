@@ -44079,48 +44079,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .v25-finder__header {
-    grid-template-columns: repeat(24, 1fr);
-    grid-column-gap: 0;
-    display: grid;
     padding: 3rem 1rem 1.5rem 1rem;
-}
-
-@media (min-width: 768px) {
-    .v25-finder__header {
-        grid-column-gap: 1rem;
-    }
-}
-
-@media (min-width: 901px) {
-    .v25-finder__header {
-        grid-column-gap: 1.5rem;
-    }
-}
-
-.v25-finder__header .v26-finder__heading {
-    grid-column: 1 / span 12;
-    margin-top: 0;
-    margin-top: 0;
-}
-
-@media (max-width: 1023px) {
-    .v25-finder__header .v26-finder__heading {
-        grid-column: 1 / -1;
-    }
-}
-
-.v25-finder__header .v26-finder__description {
-    grid-column: 13 / span 12;
-}
-
-.v25-finder__header .v26-finder__description p {
-    margin-top: 0;
-}
-
-@media (max-width: 1023px) {
-    .v25-finder__header .v26-finder__description {
-        grid-column: 1 / -1;
-    }
 }
 
 .v26-finder__fullwidth__wrapper {
