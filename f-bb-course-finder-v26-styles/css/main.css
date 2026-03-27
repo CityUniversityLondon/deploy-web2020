@@ -9717,6 +9717,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     }
 }
 
+.card--v26-course .card__tag a:focus {
+    color: #ffffff;
+    background-size: 100% 100%;
+    background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+}
+
 .card--v26-course .card__heading {
     font-size: 1.424rem;
     line-height: 1.33333;
@@ -9857,6 +9863,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     border-bottom-style: solid;
     border-bottom-width: 0.125rem;
     color: #ffffff;
+}
+
+.card--v26-course .card__heading a:focus {
+    color: #ffffff;
+    background-size: 100% 100%;
+    background-image: linear-gradient(120deg, #0c0c0e 0%, #0c0c0e 100%);
 }
 
 .card--v26-course .card__type {
