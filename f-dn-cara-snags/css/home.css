@@ -9910,7 +9910,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 .card--v26-course .icon .v26-course__school-icon {
     display: block;
     height: 0.875em;
-    width: 1em;
+    width: 1rem;
     background-color: #0c0c0e;
     -webkit-mask: url("https://www.citystgeorges.ac.uk/__data/assets/file/0010/974305/fa-shape-stripes.svg/_nocache") no-repeat center/contain;
     mask: url("https://www.citystgeorges.ac.uk/__data/assets/file/0010/974305/fa-shape-stripes.svg/_nocache") no-repeat center/contain;
