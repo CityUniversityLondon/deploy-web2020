@@ -26865,6 +26865,171 @@ div#CybotCookiebotDialogPoweredByText {
     color: #ffffff;
 }
 
+.outline-cta--bright-rounded-border {
+    background: initial;
+    border-radius: 0.25rem;
+    border: none;
+    color: initial;
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    position: relative;
+    transition: background-color 0.6s, transform 0.6s;
+    box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
+    background: transparent;
+    border: 0.125rem solid #0c0c0e;
+    color: #0c0c0e;
+    border-radius: 2rem;
+}
+
+.outline-cta--bright-rounded-border:disabled {
+    cursor: default;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .outline-cta--bright-rounded-border {
+        transition: none;
+    }
+}
+
+@media (max-width: 432px) {
+    .outline-cta--bright-rounded-border {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.outline-cta--bright-rounded-border span {
+    transition: transform 0.6s;
+}
+
+.outline-cta--bright-rounded-border:after {
+    content: "";
+    font-family: 'Font Awesome 6 Pro';
+    font-style: normal;
+    font-weight: normal;
+    opacity: 0;
+    position: absolute;
+    right: 1.5rem;
+    text-decoration: inherit;
+    transform: translateX(-0.75rem);
+    transition: background-color 0.6s, transform 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .outline-cta--bright-rounded-border:after {
+        transition: none;
+    }
+}
+
+.outline-cta--bright-rounded-border:focus, .outline-cta--bright-rounded-border:active {
+    background-color: transparent;
+    border: 0.125rem solid #d61726;
+    color: #ffffff;
+}
+
+.outline-cta--bright-rounded-border:focus span, .outline-cta--bright-rounded-border:active span {
+    transform: translateX(-0.75rem);
+}
+
+.outline-cta--bright-rounded-border:focus:after, .outline-cta--bright-rounded-border:active:after {
+    opacity: 1;
+    transform: translateX(0.75rem);
+}
+
+@media (hover: hover) {
+    .outline-cta--bright-rounded-border:hover {
+        background-color: transparent;
+        border: 0.125rem solid #d61726;
+        color: #ffffff;
+    }
+    .outline-cta--bright-rounded-border:hover span {
+        transform: translateX(-0.75rem);
+    }
+    .outline-cta--bright-rounded-border:hover:after {
+        opacity: 1;
+        transform: translateX(0.75rem);
+    }
+}
+
+.outline-cta--bright-rounded-border:disabled {
+    opacity: 0.7;
+}
+
+.outline-cta--bright-rounded-border:disabled span {
+    transform: none;
+}
+
+.outline-cta--bright-rounded-border:disabled:after {
+    opacity: 0;
+    transform: none;
+}
+
+.outline-cta--bright-rounded-border:visited {
+    border-color: #0c0c0e;
+    color: #0c0c0e;
+}
+
+.outline-cta--bright-rounded-border:focus {
+    background: #ffffff;
+    color: #0c0c0e;
+    border-color: #0c0c0e;
+}
+
+.outline-cta--bright-rounded-border:focus:focus, .outline-cta--bright-rounded-border:focus:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
+}
+
+@media (hover: hover) {
+    .outline-cta--bright-rounded-border:hover {
+        background: #0c0c0e;
+        border-color: #0c0c0e;
+        color: #ffffff;
+    }
+}
+
+.outline-cta--bright-rounded-border:active {
+    background: #0c0c0e;
+    border-color: #0c0c0e;
+    box-shadow: none;
+    color: #ffffff;
+}
+
+.outline-cta--bright-rounded-border:active:focus, .outline-cta--bright-rounded-border:active:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
+}
+
+.outline-cta--bright-rounded-border:disabled {
+    color: #0c0c0e;
+    background: transparent;
+    border: 0.125rem solid #0c0c0e;
+}
+
+.outline-cta--bright-rounded-border span {
+    transition: none;
+}
+
+.outline-cta--bright-rounded-border:after {
+    content: '';
+}
+
+.outline-cta--bright-rounded-border:active span, .outline-cta--bright-rounded-border:focus span {
+    transform: none;
+}
+
+@media (hover: hover) {
+    .outline-cta--bright-rounded-border:hover span {
+        transform: none;
+    }
+}
+
 .outline-cta--bright-square {
     background: initial;
     border-radius: 0.25rem;
