@@ -11897,6 +11897,10 @@ form:not([class]) .form__required-note--marker,
     color: #0c0c0e;
 }
 
+.background--purewhite .breadcrumbs {
+    background-color: #ffffff;
+}
+
 .breadcrumbs ol {
     display: flex;
     flex-wrap: wrap;
@@ -16409,6 +16413,10 @@ form:not([class]) .form__required-note--marker,
     .feedback {
         letter-spacing: -0.017em;
     }
+}
+
+.background--purewhite .feedback {
+    box-shadow: none;
 }
 
 @media (max-width: 1023px) {

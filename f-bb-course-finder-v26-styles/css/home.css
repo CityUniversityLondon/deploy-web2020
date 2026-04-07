@@ -23862,6 +23862,10 @@ a .link-decorator {
     }
 }
 
+.background--purewhite .feedback {
+    box-shadow: none;
+}
+
 @media (max-width: 1023px) {
     .feedback {
         margin-left: 1rem;
