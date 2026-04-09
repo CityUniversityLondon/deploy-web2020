@@ -9938,40 +9938,208 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background-color: #d61726;
 }
 
+.card--v26-course .icon .v26-course__location-icon--clerkenwell-moorgate {
+    background: linear-gradient(90deg, #d61726 50%, #ff4e00 50%);
+}
+
+.card--v26-course .icon .v26-course__location-icon--clerkenwell-online {
+    background: linear-gradient(90deg, #d61726 50%, #1e1e1e 50%);
+}
+
+.card--v26-course .icon .v26-course__location-icon--clerkenwell-tooting {
+    background: linear-gradient(90deg, #d61726 50%, #009b77 50%);
+}
+
 .card--v26-course .icon .v26-course__location-icon--moorgate {
     background-color: #ff4e00;
 }
 
-.card--v26-course .icon .v26-course__location-icon--tooting {
-    background-color: #009b77;
+.card--v26-course .icon .v26-course__location-icon--moorgate-clerkenwell {
+    background: linear-gradient(90deg, #ff4e00 50%, #d61726 50%);
+}
+
+.card--v26-course .icon .v26-course__location-icon--moorgate-online {
+    background: linear-gradient(90deg, #ff4e00 50%, #1e1e1e 50%);
+}
+
+.card--v26-course .icon .v26-course__location-icon--moorgate-tooting {
+    background: linear-gradient(90deg, #ff4e00 50%, #009b77 50%);
 }
 
 .card--v26-course .icon .v26-course__location-icon--online {
     background-color: #1e1e1e;
 }
 
-.card--v26-course .icon .v26-course__school-icon--spga {
-    background-color: #0023ef;
+.card--v26-course .icon .v26-course__location-icon--online-clerkenwell {
+    background: linear-gradient(90deg, #1e1e1e 50%, #d61726 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--scc {
-    background-color: #e60e67;
+.card--v26-course .icon .v26-course__location-icon--online-moorgate {
+    background: linear-gradient(90deg, #1e1e1e 50%, #ff4e00 50%);
+}
+
+.card--v26-course .icon .v26-course__location-icon--online-tooting {
+    background: linear-gradient(90deg, #1e1e1e 50%, #009b77 50%);
+}
+
+.card--v26-course .icon .v26-course__location-icon--tooting {
+    background-color: #009b77;
+}
+
+.card--v26-course .icon .v26-course__location-icon--tooting-clerkenwell {
+    background: linear-gradient(90deg, #009b77 50%, #d61726 50%);
+}
+
+.card--v26-course .icon .v26-course__location-icon--tooting-moorgate {
+    background: linear-gradient(90deg, #009b77 50%, #ff4e00 50%);
+}
+
+.card--v26-course .icon .v26-course__location-icon--tooting-online {
+    background: linear-gradient(90deg, #009b77 50%, #1e1e1e 50%);
 }
 
 .card--v26-course .icon .v26-course__school-icon--bayes {
     background-color: #ff4e00;
 }
 
-.card--v26-course .icon .v26-course__school-icon--shms {
+.card--v26-course .icon .v26-course__school-icon--bayes-socac {
+    background: linear-gradient(90deg, #ff4e00 50%, #e60e67 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--bayes-sohams {
+    background: linear-gradient(90deg, #ff4e00 50%, #009b77 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--bayes-sopaga {
+    background: linear-gradient(90deg, #ff4e00 50%, #0023ef 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--bayes-sossat {
+    background: linear-gradient(90deg, #ff4e00 50%, #10cf53 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--bayes-tcls {
+    background: linear-gradient(90deg, #ff4e00 50%, #9b25c4 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--socac {
+    background-color: #e60e67;
+}
+
+.card--v26-course .icon .v26-course__school-icon--socac-bayes {
+    background: linear-gradient(90deg, #e60e67 50%, #ff4e00 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--socac-sohams {
+    background: linear-gradient(90deg, #e60e67 50%, #009b77 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--socac-sopaga {
+    background: linear-gradient(90deg, #e60e67 50%, #0023ef 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--socac-sossat {
+    background: linear-gradient(90deg, #e60e67 50%, #10cf53 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--socac-tcls {
+    background: linear-gradient(90deg, #e60e67 50%, #9b25c4 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sohams {
     background-color: #009b77;
 }
 
-.card--v26-course .icon .v26-course__school-icon--sst {
+.card--v26-course .icon .v26-course__school-icon--sohams-bayes {
+    background: linear-gradient(90deg, #009b77 50%, #ff4e00 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sohams-socac {
+    background: linear-gradient(90deg, #009b77 50%, #e60e67 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sohams-sopaga {
+    background: linear-gradient(90deg, #009b77 50%, #0023ef 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sohams-sossat {
+    background: linear-gradient(90deg, #009b77 50%, #10cf53 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sohams-tcls {
+    background: linear-gradient(90deg, #009b77 50%, #9b25c4 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sopaga {
+    background-color: #0023ef;
+}
+
+.card--v26-course .icon .v26-course__school-icon--sopaga-bayes {
+    background: linear-gradient(90deg, #0023ef 50%, #ff4e00 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sopaga-socac {
+    background: linear-gradient(90deg, #0023ef 50%, #e60e67 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sopaga-sohams {
+    background: linear-gradient(90deg, #0023ef 50%, #009b77 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sopaga-sossat {
+    background: linear-gradient(90deg, #0023ef 50%, #10cf53 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sopaga-tcls {
+    background: linear-gradient(90deg, #0023ef 50%, #9b25c4 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sossat {
     background-color: #10cf53;
 }
 
-.card--v26-course .icon .v26-course__school-icon--law {
+.card--v26-course .icon .v26-course__school-icon--sossat-bayes {
+    background: linear-gradient(90deg, #10cf53 50%, #ff4e00 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sossat-socac {
+    background: linear-gradient(90deg, #10cf53 50%, #e60e67 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sossat-sohams {
+    background: linear-gradient(90deg, #10cf53 50%, #009b77 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sossat-sopaga {
+    background: linear-gradient(90deg, #10cf53 50%, #0023ef 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--sossat-tcls {
+    background: linear-gradient(90deg, #10cf53 50%, #9b25c4 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--tcls {
     background-color: #9b25c4;
+}
+
+.card--v26-course .icon .v26-course__school-icon--tcls-bayes {
+    background: linear-gradient(90deg, #9b25c4 50%, #ff4e00 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--tcls-socac {
+    background: linear-gradient(90deg, #9b25c4 50%, #e60e67 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--tcls-sohams {
+    background: linear-gradient(90deg, #9b25c4 50%, #009b77 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--tcls-sopaga {
+    background: linear-gradient(90deg, #9b25c4 50%, #0023ef 50%);
+}
+
+.card--v26-course .icon .v26-course__school-icon--tcls-sossat {
+    background: linear-gradient(90deg, #9b25c4 50%, #10cf53 50%);
 }
 
 article a {
