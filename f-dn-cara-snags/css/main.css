@@ -31678,9 +31678,8 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         border: solid 0.0625rem #0c0c0e;
         color: #0c0c0e;
         font-weight: 400;
-        color: #696969;
         cursor: default;
-        font-weight: 400;
+        opacity: 0.65;
     }
     .v26-pagination__wrapper .v26-pagination__controls span.v26-pagination__controls__button--next span,
     .v26-pagination__wrapper .v26-pagination__controls span.v26-pagination__controls__button--prev span {
