@@ -44603,6 +44603,16 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-bottom: 1rem;
 }
 
+.v26-finder_filters__checkbox_wrap:has([name='meta_clearing_sand']) {
+    background-color: #d4d4d8;
+    padding: 2rem 1.25rem;
+    margin-top: 1rem;
+}
+
+.v26-finder_filters__checkbox_wrap .v26-finder_filters__checkbox[name='meta_clearing_sand']:focus {
+    outline: initial;
+}
+
 .v26-finder__accordion__count {
     margin: 0 0.25rem;
     color: #d61726;
@@ -44638,6 +44648,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     padding-left: 2rem;
     font-size: 1rem;
     line-height: 1.5rem;
+    position: relative;
 }
 
 .v26-finder_filters__label::before {
@@ -44764,6 +44775,13 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     color: #ffffff;
     padding: 0.75rem 1rem;
     font-size: 1rem;
+}
+
+.wrapper--v26-finder__filters--mobile__toggle:focus:focus, .wrapper--v26-finder__filters--mobile__toggle:focus:active, .wrapper--v26-finder__filters--mobile__toggle:active:focus, .wrapper--v26-finder__filters--mobile__toggle:active:active {
+    outline-color: #0c0c0e;
+    outline-offset: 0.1875rem;
+    outline-style: solid;
+    outline-width: 0.125rem;
 }
 
 .wrapper--v26-finder__filters--mobile__toggle .icon {
