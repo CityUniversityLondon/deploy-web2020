@@ -44704,10 +44704,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     line-height: 1.625;
     letter-spacing: 0.005em;
     background-color: #d4d4d8;
-    padding: 0.5rem 0.5rem;
+    padding: 0 0.75rem;
     border: initial;
     box-shadow: initial;
     min-width: 2rem;
+    align-items: center;
+    height: 1.5rem;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
