@@ -44741,7 +44741,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 0.75rem 0;
+    padding: 0.75rem 0.1875rem;
+    margin-left: -0.1875rem;
     border-bottom: #cbcbcb;
 }
 
@@ -44750,6 +44751,10 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     outline-offset: 0.1875rem;
     outline-style: solid;
     outline-width: 0.125rem;
+}
+
+.v26-finder__accordion__toggle:focus {
+    outline-offset: 0;
 }
 
 .finder__accordion__toggle__icon {
