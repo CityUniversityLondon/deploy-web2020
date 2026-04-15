@@ -9924,12 +9924,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background: linear-gradient(90deg, #d61726 50%, #ff4e00 50%);
 }
 
-.card--v26-course .icon .v26-course__location-icon--clerkenwell-online {
-    background: linear-gradient(90deg, #d61726 50%, #1e1e1e 50%);
-}
-
 .card--v26-course .icon .v26-course__location-icon--clerkenwell-tooting {
     background: linear-gradient(90deg, #d61726 50%, #009b77 50%);
+}
+
+.card--v26-course .icon .v26-course__location-icon--clerkenwell-online {
+    background: linear-gradient(90deg, #d61726 50%, #1e1e1e 50%);
 }
 
 .card--v26-course .icon .v26-course__location-icon--moorgate {
@@ -9940,28 +9940,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background: linear-gradient(90deg, #ff4e00 50%, #d61726 50%);
 }
 
-.card--v26-course .icon .v26-course__location-icon--moorgate-online {
-    background: linear-gradient(90deg, #ff4e00 50%, #1e1e1e 50%);
-}
-
 .card--v26-course .icon .v26-course__location-icon--moorgate-tooting {
     background: linear-gradient(90deg, #ff4e00 50%, #009b77 50%);
 }
 
-.card--v26-course .icon .v26-course__location-icon--online {
-    background-color: #1e1e1e;
-}
-
-.card--v26-course .icon .v26-course__location-icon--online-clerkenwell {
-    background: linear-gradient(90deg, #1e1e1e 50%, #d61726 50%);
-}
-
-.card--v26-course .icon .v26-course__location-icon--online-moorgate {
-    background: linear-gradient(90deg, #1e1e1e 50%, #ff4e00 50%);
-}
-
-.card--v26-course .icon .v26-course__location-icon--online-tooting {
-    background: linear-gradient(90deg, #1e1e1e 50%, #009b77 50%);
+.card--v26-course .icon .v26-course__location-icon--moorgate-online {
+    background: linear-gradient(90deg, #ff4e00 50%, #1e1e1e 50%);
 }
 
 .card--v26-course .icon .v26-course__location-icon--tooting {
@@ -9980,147 +9964,163 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     background: linear-gradient(90deg, #009b77 50%, #1e1e1e 50%);
 }
 
+.card--v26-course .icon .v26-course__location-icon--online {
+    background-color: #1e1e1e;
+}
+
+.card--v26-course .icon .v26-course__location-icon--online-clerkenwell {
+    background: linear-gradient(90deg, #1e1e1e 50%, #d61726 50%);
+}
+
+.card--v26-course .icon .v26-course__location-icon--online-moorgate {
+    background: linear-gradient(90deg, #1e1e1e 50%, #ff4e00 50%);
+}
+
+.card--v26-course .icon .v26-course__location-icon--online-tooting {
+    background: linear-gradient(90deg, #1e1e1e 50%, #009b77 50%);
+}
+
 .card--v26-course .icon .v26-course__school-icon--bayes {
     background-color: #ff4e00;
 }
 
-.card--v26-course .icon .v26-course__school-icon--bayes-socac {
+.card--v26-course .icon .v26-course__school-icon--bayes-scc {
     background: linear-gradient(90deg, #ff4e00 50%, #e60e67 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--bayes-sohams {
+.card--v26-course .icon .v26-course__school-icon--bayes-shms {
     background: linear-gradient(90deg, #ff4e00 50%, #009b77 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--bayes-sopaga {
+.card--v26-course .icon .v26-course__school-icon--bayes-spga {
     background: linear-gradient(90deg, #ff4e00 50%, #0023ef 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--bayes-sossat {
+.card--v26-course .icon .v26-course__school-icon--bayes-stt {
     background: linear-gradient(90deg, #ff4e00 50%, #10cf53 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--bayes-tcls {
+.card--v26-course .icon .v26-course__school-icon--bayes-cls {
     background: linear-gradient(90deg, #ff4e00 50%, #9b25c4 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--socac {
+.card--v26-course .icon .v26-course__school-icon--scc {
     background-color: #e60e67;
 }
 
-.card--v26-course .icon .v26-course__school-icon--socac-bayes {
+.card--v26-course .icon .v26-course__school-icon--scc-bayes {
     background: linear-gradient(90deg, #e60e67 50%, #ff4e00 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--socac-sohams {
+.card--v26-course .icon .v26-course__school-icon--scc-shms {
     background: linear-gradient(90deg, #e60e67 50%, #009b77 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--socac-sopaga {
+.card--v26-course .icon .v26-course__school-icon--scc-spga {
     background: linear-gradient(90deg, #e60e67 50%, #0023ef 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--socac-sossat {
+.card--v26-course .icon .v26-course__school-icon--scc-stt {
     background: linear-gradient(90deg, #e60e67 50%, #10cf53 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--socac-tcls {
+.card--v26-course .icon .v26-course__school-icon--scc-cls {
     background: linear-gradient(90deg, #e60e67 50%, #9b25c4 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sohams {
+.card--v26-course .icon .v26-course__school-icon--shms {
     background-color: #009b77;
 }
 
-.card--v26-course .icon .v26-course__school-icon--sohams-bayes {
+.card--v26-course .icon .v26-course__school-icon--shms-bayes {
     background: linear-gradient(90deg, #009b77 50%, #ff4e00 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sohams-socac {
+.card--v26-course .icon .v26-course__school-icon--shms-scc {
     background: linear-gradient(90deg, #009b77 50%, #e60e67 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sohams-sopaga {
+.card--v26-course .icon .v26-course__school-icon--shms-spga {
     background: linear-gradient(90deg, #009b77 50%, #0023ef 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sohams-sossat {
+.card--v26-course .icon .v26-course__school-icon--shms-stt {
     background: linear-gradient(90deg, #009b77 50%, #10cf53 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sohams-tcls {
+.card--v26-course .icon .v26-course__school-icon--shms-cls {
     background: linear-gradient(90deg, #009b77 50%, #9b25c4 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sopaga {
+.card--v26-course .icon .v26-course__school-icon--spga {
     background-color: #0023ef;
 }
 
-.card--v26-course .icon .v26-course__school-icon--sopaga-bayes {
+.card--v26-course .icon .v26-course__school-icon--spga-bayes {
     background: linear-gradient(90deg, #0023ef 50%, #ff4e00 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sopaga-socac {
+.card--v26-course .icon .v26-course__school-icon--spga-scc {
     background: linear-gradient(90deg, #0023ef 50%, #e60e67 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sopaga-sohams {
+.card--v26-course .icon .v26-course__school-icon--spga-shms {
     background: linear-gradient(90deg, #0023ef 50%, #009b77 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sopaga-sossat {
+.card--v26-course .icon .v26-course__school-icon--spga-stt {
     background: linear-gradient(90deg, #0023ef 50%, #10cf53 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sopaga-tcls {
+.card--v26-course .icon .v26-course__school-icon--spga-cls {
     background: linear-gradient(90deg, #0023ef 50%, #9b25c4 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sossat {
+.card--v26-course .icon .v26-course__school-icon--stt {
     background-color: #10cf53;
 }
 
-.card--v26-course .icon .v26-course__school-icon--sossat-bayes {
+.card--v26-course .icon .v26-course__school-icon--stt-bayes {
     background: linear-gradient(90deg, #10cf53 50%, #ff4e00 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sossat-socac {
+.card--v26-course .icon .v26-course__school-icon--stt-scc {
     background: linear-gradient(90deg, #10cf53 50%, #e60e67 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sossat-sohams {
+.card--v26-course .icon .v26-course__school-icon--stt-shms {
     background: linear-gradient(90deg, #10cf53 50%, #009b77 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sossat-sopaga {
+.card--v26-course .icon .v26-course__school-icon--stt-spga {
     background: linear-gradient(90deg, #10cf53 50%, #0023ef 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--sossat-tcls {
+.card--v26-course .icon .v26-course__school-icon--stt-cls {
     background: linear-gradient(90deg, #10cf53 50%, #9b25c4 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--tcls {
+.card--v26-course .icon .v26-course__school-icon--cls {
     background-color: #9b25c4;
 }
 
-.card--v26-course .icon .v26-course__school-icon--tcls-bayes {
+.card--v26-course .icon .v26-course__school-icon--cls-bayes {
     background: linear-gradient(90deg, #9b25c4 50%, #ff4e00 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--tcls-socac {
+.card--v26-course .icon .v26-course__school-icon--cls-scc {
     background: linear-gradient(90deg, #9b25c4 50%, #e60e67 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--tcls-sohams {
+.card--v26-course .icon .v26-course__school-icon--cls-shms {
     background: linear-gradient(90deg, #9b25c4 50%, #009b77 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--tcls-sopaga {
+.card--v26-course .icon .v26-course__school-icon--cls-spga {
     background: linear-gradient(90deg, #9b25c4 50%, #0023ef 50%);
 }
 
-.card--v26-course .icon .v26-course__school-icon--tcls-sossat {
+.card--v26-course .icon .v26-course__school-icon--cls-stt {
     background: linear-gradient(90deg, #9b25c4 50%, #10cf53 50%);
 }
 
