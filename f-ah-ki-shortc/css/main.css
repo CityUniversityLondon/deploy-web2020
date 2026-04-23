@@ -21928,10 +21928,6 @@ figure figcaption a:active,
     grid-area: explanation;
 }
 
-.test-test {
-    background-color: red;
-}
-
 .ki-shortc__list__dates {
     display: grid;
     margin-top: 2rem;
@@ -59685,7 +59681,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 
 .lifelong-learning .wrapper--lifelong-learning__introduction,
 .lifelong-learning .wrapper--lifelong-learning__announcement {
-    background-color: red;
     color: #ffffff;
 }
 
@@ -60225,10 +60220,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 
 .lifelong-learning .ki-shortc__list .ki-shortc__list__head {
     color: #5d184a;
-}
-
-.lifelong-learning .ki-shortc--nodates {
-    margin-top: 2rem;
 }
 
 .lifelong-learning .lifelong-learning__start-date__cta {
