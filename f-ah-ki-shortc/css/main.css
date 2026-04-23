@@ -21928,6 +21928,10 @@ figure figcaption a:active,
     grid-area: explanation;
 }
 
+.test-test {
+    background-color: red;
+}
+
 .ki-shortc__list__dates {
     display: grid;
     margin-top: 2rem;
