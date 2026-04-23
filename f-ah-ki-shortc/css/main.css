@@ -59681,6 +59681,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 
 .lifelong-learning .wrapper--lifelong-learning__introduction,
 .lifelong-learning .wrapper--lifelong-learning__announcement {
+    background-color: #5d184a;
     color: #ffffff;
 }
 
