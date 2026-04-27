@@ -59766,6 +59766,10 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     grid-column: 1/-1;
 }
 
+.lifelong-learning time.ki__time:has(+ .ki__series-label) {
+    margin-right: 1rem;
+}
+
 .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
     grid-column: 1 / -1;
     grid-template-columns: repeat(18, 1fr);
@@ -60923,7 +60927,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     padding-right: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1.25rem;
-    background-image: url("https://www.city.ac.uk/__data/assets/file/0006/698784/grey-stripes.svg");
+    background-image: url("https://www.citystgeorges.ac.uk/__data/assets/file/0006/698784/grey-stripes.svg");
     background-size: 10%;
 }
 
@@ -60990,7 +60994,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     color: #0f5f64;
     padding: 0.25rem 0.75rem;
     border-radius: 0.25rem;
-    margin-left: 1rem;
     font-weight: 700;
 }
 
@@ -61015,12 +61018,6 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 @media (min-width: 7680px) {
     .ki__series-label {
         letter-spacing: -0.017em;
-    }
-}
-
-@media (max-width: 432px) {
-    .ki__series-label {
-        margin-left: 0;
     }
 }
 
