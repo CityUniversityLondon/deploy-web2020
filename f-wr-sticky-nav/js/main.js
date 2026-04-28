@@ -836,6 +836,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
 /* harmony import */ var _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/banner-promo */ "./src/paint-layouts/home/home-vi-sections/banner-promo.js");
 /* harmony import */ var _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/play-button */ "./src/paint-layouts/home/home-vi-sections/play-button.js");
+/* harmony import */ var _patterns_navigation_sticky_nav_sticky_nav__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./patterns/navigation/sticky-nav/sticky-nav */ "./src/patterns/navigation/sticky-nav/sticky-nav.js");
 
 
 /**
@@ -884,8 +885,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_dropdown_menu_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_find_us_find_us_v25__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_32__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_33__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__["default"], // video,
-_patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_20__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_35__["default"], _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_34__["default"]]);
+_patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_20__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_35__["default"], _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_34__["default"], _patterns_navigation_sticky_nav_sticky_nav__WEBPACK_IMPORTED_MODULE_36__["default"]]);
 
 /***/ }),
 
@@ -7664,6 +7666,251 @@ function launchSecondaryNavigation(navigation) {
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchSecondaryNavigation,
   launchQuery: ".".concat(classNameSpecific)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/navigation/sticky-nav/sticky-nav.js":
+/*!**********************************************************!*\
+  !*** ./src/patterns/navigation/sticky-nav/sticky-nav.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_array_some_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.some.js */ "./node_modules/core-js/modules/es.array.some.js");
+/* harmony import */ var core_js_modules_es_array_some_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_some_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.from.js */ "./node_modules/core-js/modules/es.array.from.js");
+/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/web.timers.js */ "./node_modules/core-js/modules/web.timers.js");
+/* harmony import */ var core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_8__);
+
+
+
+
+
+
+
+
+
+
+
+
+function launch(el) {
+  console.log('Sticky Nav pattern launched');
+  var scrollActiveLink = '';
+  /*
+  // Create the observer helper div and appended to the DOM
+  */
+
+  var observerHelper = document.createElement('div');
+  var stickNavHeight = el.offsetHeight;
+  var lastScrollPos = window.scrollY;
+  observerHelper.id = 'nav-sticky__helper';
+  el.parentNode.insertBefore(observerHelper, el);
+  /*
+  // Reference to the sticky nav sections
+  */
+
+  var contentSections = document.querySelectorAll('.sticky-nav__sec');
+  /*
+  // Observer to watching menu position and make it stick
+  */
+
+  function createObserverStickyNav(helperElStickyNav) {
+    var observer;
+    observer = new IntersectionObserver(handleIntersect_stickyMenu);
+    observer.observe(helperElStickyNav);
+  }
+
+  function handleIntersect_stickyMenu(entries) {
+    entries.forEach(function (entry) {
+      el.classList.toggle('nav-sticky__inner--stick', !entry.isIntersecting);
+    });
+  }
+
+  createObserverStickyNav(observerHelper);
+
+  if (window.location.hash) {
+    var currentHash = window.location.hash.substring(1);
+    var matchedHash = Array.from(contentSections).some(function (section) {
+      return section.id === currentHash;
+    });
+
+    if (matchedHash) {
+      scrollActiveLink = window.location.hash;
+      var elId = scrollActiveLink.replace('#', '');
+      var scrollToEl = document.getElementById(elId);
+      setTimeout(function () {
+        scrollToEl.scrollIntoView();
+        highlightNavMenuItem();
+      }, 700);
+    }
+  }
+  /*
+  // Observer to watching different content sections and highlight corresponding menu item
+  */
+
+
+  function handleIntersect_contentSections(entries) {
+    var scrollTop = window.scrollY;
+
+    if (!scrollActiveLink) {
+      entries.forEach(function (entry) {
+        if (scrollTop >= lastScrollPos) {
+          if (entry.isIntersecting) {
+            highlightNavMenuItem(entry.target);
+          }
+        } else {
+          if (!entry.isIntersecting) {
+            highlightNavMenuItem(entry.target.previousElementSibling);
+          }
+        }
+      });
+    }
+
+    lastScrollPos = scrollTop;
+  } // function setSectionObserver() {
+  // Can observe and unobserve the sections if needed.
+  // }
+
+
+  function createObserverContentSections() {
+    var observerContentSectionsOptions = {
+      root: null,
+      threshold: 0,
+      rootMargin: "-".concat(stickNavHeight, "px 0px -60% 0px")
+    };
+    var observerContentSections = new IntersectionObserver(handleIntersect_contentSections, observerContentSectionsOptions);
+    contentSections.forEach(function (area) {
+      observerContentSections.observe(area);
+    });
+  }
+
+  createObserverContentSections();
+  /*
+  // Observer to watchinging 1st menu item then add blur effect to start of nav
+  */
+
+  var stickyNavFirstItem = document.querySelector('.nav-sticky__item:first-child');
+  var observeStickyNavFirstItem = new IntersectionObserver(function (entries) {
+    var horizontalScrollWidth = document.querySelector('.nav-sticky__items').scrollWidth;
+    var stickyNavWidth = document.querySelector('.nav-sticky__items').offsetWidth;
+
+    if (stickyNavWidth < horizontalScrollWidth) {
+      entries.forEach(function (entry) {
+        document.querySelector('.nav-sticky').classList.toggle('nav-sticky--left', !entry.isIntersecting);
+      });
+    }
+  });
+  observeStickyNavFirstItem.observe(stickyNavFirstItem);
+  /*
+  // Observer to watchinging last menu item then add blur effect to end of nav
+  */
+
+  var stickyNavLastItem = document.querySelector('.nav-sticky__item:last-child');
+  var observeStickyNavLastItem = new IntersectionObserver(function (entries) {
+    var horizontalScrollWidth = document.querySelector('.nav-sticky__items').scrollWidth;
+    var stickyNavWidth = document.querySelector('.nav-sticky__items').offsetWidth;
+
+    if (stickyNavWidth < horizontalScrollWidth) {
+      entries.forEach(function (entry) {
+        document.querySelector('.nav-sticky').classList.toggle('nav-sticky--right', !entry.isIntersecting);
+      });
+    }
+  });
+  observeStickyNavLastItem.observe(stickyNavLastItem);
+  /*
+  // Functions below, ensuring the corresponding menu item is set to active that corelates 
+  // to the section of the page you are viewing. The 'active' menu item is triggered by either
+  // clicking on it, or scrolling to a new section
+  */
+
+  var stickyNavMenuItemLinks = document.querySelector('.nav-sticky').querySelectorAll('.nav-sticky__item__link');
+  var anchorLinksOnPage = document.querySelectorAll('a[href^="#"]');
+
+  function highlightNavMenuItem(elem) {
+    stickyNavMenuItemLinks.forEach(function (item) {
+      if (scrollActiveLink) {
+        if (item.getAttribute('href') === scrollActiveLink) {
+          item.classList.add('nav-sticky__item__link__active');
+          scrollNavItemToView(item, 700);
+        } else {
+          item.classList.remove('nav-sticky__item__link__active');
+        }
+      } else {
+        if (item.getAttribute('href') === '#' + elem.id && !scrollActiveLink) {
+          item.classList.add('nav-sticky__item__link__active');
+          scrollNavItemToView(item, 700);
+        } else {
+          item.classList.remove('nav-sticky__item__link__active');
+        }
+      }
+    });
+    setTimeout(function () {
+      //Once scrollend event has better support that could be used.
+      scrollActiveLink = '';
+    }, 700);
+  }
+
+  function scrollNavItemToView(item) {
+    var delay = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    var stickyNavItems = document.querySelector('.nav-sticky__items');
+    var stickyNavItemsWidth = stickyNavItems.offsetWidth;
+    setTimeout(function () {
+      stickyNavItems.scrollLeft = item.offsetLeft - stickyNavItemsWidth / 2 + item.offsetWidth / 2;
+    }, delay);
+  }
+
+  anchorLinksOnPage.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      // If clicked hash is already in the url remove so it gets added again to trigger the hashchange listener
+      var hrefValue = e.target.getAttribute('href');
+      scrollActiveLink = hrefValue;
+      highlightNavMenuItem(e.target);
+    });
+  });
+  /*
+  // Create Debug Area
+  // Useful to help see when a section will trigger the observer
+  // Some settings like height and top will need amend if rootMargin is changed
+  */
+  // function createDebugArea() {
+  //     const debugArea = document.createElement('div');
+  //     debugArea.id = 'debugArea';
+  //     const debugAreaStyles = {
+  //         'z-index': '1000',
+  //         'background-color': 'rgba(0,128,0,.5)',
+  //         position: 'fixed',
+  //         top: '69px',
+  //         left: '0',
+  //         width: '100vw',
+  //         height: 'calc(100vh - (69px + 60%))',
+  //         'pointer-events': 'none',
+  //     };
+  //     Object.assign(debugArea.style, debugAreaStyles);
+  //     document.body.appendChild(debugArea);
+  // }
+  // createDebugArea();
+}
+
+var className = 'nav-sticky__wrap';
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: launch,
+  launchQuery: ".".concat(className)
 });
 
 /***/ }),
