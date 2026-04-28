@@ -1135,6 +1135,30 @@
     background-color: #008569;
 }
 
+.color-purple05 {
+    background-color: #eceaf5;
+}
+
+.color-purple15 {
+    background-color: #c4add6;
+}
+
+.color-purple65 {
+    background-color: #631f62;
+}
+
+.color-teal05 {
+    background-color: #e6f4f5;
+}
+
+.color-teal25 {
+    background-color: #79c6c9;
+}
+
+.color-teal75 {
+    background-color: #0f5f64;
+}
+
 .sr-only-focusable-within:active, .sr-only-focusable-within:focus, .sr-only-focusable-within:focus-within {
     clip: auto;
     height: auto;
@@ -59955,6 +59979,15 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     grid-column: 1/-1;
 }
 
+.lifelong-learning time.ki__time:has(+ .ki__series-label) {
+    margin-right: 1rem;
+}
+
+.lifelong-learning .ki__heading-start {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
 .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
     grid-column: 1 / -1;
     grid-template-columns: repeat(18, 1fr);
@@ -61112,7 +61145,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     padding-right: 1.5rem;
     padding-top: 1rem;
     padding-bottom: 1.25rem;
-    background-image: url("https://www.city.ac.uk/__data/assets/file/0006/698784/grey-stripes.svg");
+    background-image: url("https://www.citystgeorges.ac.uk/__data/assets/file/0006/698784/grey-stripes.svg");
     background-size: 10%;
 }
 
@@ -61165,6 +61198,65 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 
 .lifelong-learning .text-highlight__body__intro {
     font-weight: 600;
+}
+
+.ki__series-label {
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    background: #e6f4f5;
+    border: 0.125rem solid #79c6c9;
+    color: #0f5f64;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .ki__series-label {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .ki__series-label {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .ki__series-label {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .ki__series-label {
+        letter-spacing: -0.017em;
+    }
+}
+
+.ki__series-label::before {
+    content: '';
+    width: 0.625rem;
+    height: 0.625rem;
+    background: #0f5f64;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.625rem;
+}
+
+.ki__series-label--alt {
+    background: #eceaf5;
+    border: 0.125rem solid #c4add6;
+    color: #631f62;
+}
+
+.ki__series-label--alt::before {
+    background: #631f62;
 }
 
 @media screen {

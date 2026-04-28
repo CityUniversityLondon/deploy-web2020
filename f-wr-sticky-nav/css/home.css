@@ -1135,6 +1135,30 @@
     background-color: #008569;
 }
 
+.color-purple05 {
+    background-color: #eceaf5;
+}
+
+.color-purple15 {
+    background-color: #c4add6;
+}
+
+.color-purple65 {
+    background-color: #631f62;
+}
+
+.color-teal05 {
+    background-color: #e6f4f5;
+}
+
+.color-teal25 {
+    background-color: #79c6c9;
+}
+
+.color-teal75 {
+    background-color: #0f5f64;
+}
+
 .sr-only-focusable-within:active, .sr-only-focusable-within:focus, .sr-only-focusable-within:focus-within {
     clip: auto;
     height: auto;
