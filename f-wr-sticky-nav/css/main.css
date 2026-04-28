@@ -46432,6 +46432,7 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
 
 .nav-sticky__wrap {
     position: relative;
+    display: flex;
 }
 
 .nav-sticky__wrap.nav-sticky__inner--stick {
@@ -46556,13 +46557,11 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
     white-space: nowrap;
     gap: 0.5rem;
     grid-column: 1/-1;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem;
     position: relative;
+    margin-top: 0;
     margin-left: -0.5rem;
-    padding-left: 0.5rem;
     margin-right: -0.5rem;
-    padding-right: 0.5rem;
     max-width: inherit;
 }
 
@@ -46580,7 +46579,7 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
 .nav-sticky .nav-sticky__item__link {
     padding: 0.5rem;
     background: #f2f2f2;
-    border-radius: 0.1rem;
+    border-radius: 0.1875rem;
     border-bottom: none;
     color: #494949;
     font-size: 0.79rem;
