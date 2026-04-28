@@ -59770,6 +59770,11 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     margin-right: 1rem;
 }
 
+.lifelong-learning .ki__heading-start {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
 .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest {
     grid-column: 1 / -1;
     grid-template-columns: repeat(18, 1fr);
