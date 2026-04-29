@@ -46440,7 +46440,7 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
     top: 0;
     left: 50%;
     transform: translate(-50%, 0%);
-    z-index: 1;
+    z-index: 2;
 }
 
 @media (max-width: 1023px) {
@@ -46482,7 +46482,7 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
 
 .nav-sticky__inner {
     background: #ffffff;
-    z-index: 1;
+    z-index: 2;
     max-width: 100%;
     width: 100%;
 }
@@ -46509,7 +46509,7 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 @media (max-width: 899px) {
@@ -46532,7 +46532,7 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 @media (max-width: 899px) {
