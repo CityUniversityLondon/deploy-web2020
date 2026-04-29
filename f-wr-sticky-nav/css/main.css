@@ -46624,7 +46624,7 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
     outline: none;
 }
 
-.nav-sticky__item__link__active {
+.nav-sticky__item__link--active {
     background: #d61726;
     color: #ffffff;
 }

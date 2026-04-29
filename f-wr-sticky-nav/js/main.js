@@ -7846,17 +7846,17 @@ function launch(el) {
     stickyNavMenuItemLinks.forEach(function (item) {
       if (scrollActiveLink) {
         if (item.getAttribute('href') === scrollActiveLink) {
-          item.classList.add('nav-sticky__item__link__active');
+          item.classList.add('nav-sticky__item__link--active');
           scrollNavItemToView(item, 700);
         } else {
-          item.classList.remove('nav-sticky__item__link__active');
+          item.classList.remove('nav-sticky__item__link--active');
         }
       } else {
         if (item.getAttribute('href') === '#' + elem.id && !scrollActiveLink) {
-          item.classList.add('nav-sticky__item__link__active');
+          item.classList.add('nav-sticky__item__link--active');
           scrollNavItemToView(item, 700);
         } else {
-          item.classList.remove('nav-sticky__item__link__active');
+          item.classList.remove('nav-sticky__item__link--active');
         }
       }
     });
