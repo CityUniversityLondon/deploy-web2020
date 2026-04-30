@@ -448,59 +448,59 @@
 }
 
 .color--purple5 {
-    color: #ede8f2;
+    color: #f8f0fd;
 }
 
 .background--purple5 {
-    background-color: #ede8f2;
+    background-color: #f8f0fd;
 }
 
 .color--purple10 {
-    color: #d6bcf6;
+    color: #f0e0fb;
 }
 
 .background--purple10 {
-    background-color: #d6bcf6;
+    background-color: #f0e0fb;
 }
 
 .color--purple20 {
-    color: #b382ec;
+    color: #e1c5f8;
 }
 
 .background--purple20 {
-    background-color: #b382ec;
+    background-color: #e1c5f8;
 }
 
 .color--purple30 {
-    color: #9a4ddb;
+    color: #d4a3f7;
 }
 
 .background--purple30 {
-    background-color: #9a4ddb;
+    background-color: #d4a3f7;
 }
 
 .color--purple40 {
-    color: #8e3bbb;
+    color: #c681f6;
 }
 
 .background--purple40 {
-    background-color: #8e3bbb;
+    background-color: #c681f6;
 }
 
 .color--purple50 {
-    color: #832c9e;
+    color: #be5ee7;
 }
 
 .background--purple50 {
-    background-color: #832c9e;
+    background-color: #be5ee7;
 }
 
 .color--purple60 {
-    color: #65218e;
+    color: #b246d9;
 }
 
 .background--purple60 {
-    background-color: #65218e;
+    background-color: #b246d9;
 }
 
 .color--purple70 {
@@ -512,27 +512,27 @@
 }
 
 .color--purple80 {
-    color: #3f1464;
+    color: #6b1b83;
 }
 
 .background--purple80 {
-    background-color: #3f1464;
+    background-color: #6b1b83;
 }
 
 .color--purple90 {
-    color: #2a0d43;
+    color: #491857;
 }
 
 .background--purple90 {
-    background-color: #2a0d43;
+    background-color: #491857;
 }
 
 .color--purple100 {
-    color: #190929;
+    color: #25152c;
 }
 
 .background--purple100 {
-    background-color: #190929;
+    background-color: #25152c;
 }
 
 .color--blue10 {
@@ -1197,12 +1197,12 @@
 }
 
 .wrapper--text-highlight .text-highlight {
-    background: #832c9e;
-    color: #ffffff;
+    background: #be5ee7;
+    color: #0c0c0e;
     font-weight: 500;
     display: inline;
     line-height: 2rem;
-    box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
+    box-shadow: 0.5rem 0 0 #be5ee7, -0.5rem 0 0 #be5ee7;
     box-decoration-break: clone;
 }
 
@@ -6573,7 +6573,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card--finder-promo.promo-area__wrap .promo-area.layout__left--full {
-    background: linear-gradient(20deg, #9a4ddb 20%, #a1a1a1, #710b11);
+    background: linear-gradient(20deg, #d4a3f7 20%, #a1a1a1, #710b11);
 }
 
 .card--finder-promo.promo-area__wrap .promo-area.layout__left--full .promo-area__content {
@@ -8417,19 +8417,19 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 @media (min-width: 768px) {
     .card__side-image.background--purple50 figure:after {
-        background-color: #832c9e;
+        background-color: #be5ee7;
     }
 }
 
 @media (max-width: 767px) {
     .card__side-image.background--purple50 figure {
-        background-color: #832c9e;
+        background-color: #be5ee7;
     }
 }
 
 .card__side-image.background--purple50 .card__side-image__text {
     color: #ffffff;
-    background-color: #832c9e;
+    background-color: #be5ee7;
 }
 
 .card__side-image.background--purple50 img {
@@ -8562,19 +8562,19 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 @media (min-width: 768px) {
     .card__side-image.background--purple80 figure:after {
-        background-color: #3f1464;
+        background-color: #6b1b83;
     }
 }
 
 @media (max-width: 767px) {
     .card__side-image.background--purple80 figure {
-        background-color: #3f1464;
+        background-color: #6b1b83;
     }
 }
 
 .card__side-image.background--purple80 .card__side-image__text {
     color: #ffffff;
-    background-color: #3f1464;
+    background-color: #6b1b83;
 }
 
 .card__side-image.background--purple80 img {
