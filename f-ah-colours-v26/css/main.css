@@ -864,43 +864,43 @@
 }
 
 .color--pink10 {
-    color: #ebb1da;
+    color: #fff0f7;
 }
 
 .background--pink10 {
-    background-color: #ebb1da;
+    background-color: #fff0f7;
 }
 
 .color--pink20 {
-    color: #df82c4;
+    color: #f9c9dc;
 }
 
 .background--pink20 {
-    background-color: #df82c4;
+    background-color: #f9c9dc;
 }
 
 .color--pink30 {
-    color: #d763b6;
+    color: #f49cc0;
 }
 
 .background--pink30 {
-    background-color: #d763b6;
+    background-color: #f49cc0;
 }
 
 .color--pink40 {
-    color: #cf44a7;
+    color: #ef5a99;
 }
 
 .background--pink40 {
-    background-color: #cf44a7;
+    background-color: #ef5a99;
 }
 
 .color--pink50 {
-    color: #bb3094;
+    color: #eb2b7e;
 }
 
 .background--pink50 {
-    background-color: #bb3094;
+    background-color: #eb2b7e;
 }
 
 .color--pink60 {
@@ -912,27 +912,27 @@
 }
 
 .color--pink70 {
-    color: #7c2062;
+    color: #b5034d;
 }
 
 .background--pink70 {
-    background-color: #7c2062;
+    background-color: #b5034d;
 }
 
 .color--pink80 {
-    color: #5d184a;
+    color: #820831;
 }
 
 .background--pink80 {
-    background-color: #5d184a;
+    background-color: #820831;
 }
 
 .color--pink90 {
-    color: #3e1031;
+    color: #56041e;
 }
 
 .background--pink90 {
-    background-color: #3e1031;
+    background-color: #56041e;
 }
 
 .color--pink95 {
@@ -944,11 +944,11 @@
 }
 
 .color--pink100 {
-    color: #250020;
+    color: #2e0616;
 }
 
 .background--pink100 {
-    background-color: #250020;
+    background-color: #2e0616;
 }
 
 .color--teal10 {
@@ -8145,19 +8145,19 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 @media (min-width: 768px) {
     .card__side-image.background--pink90 figure:after {
-        background-color: #3e1031;
+        background-color: #56041e;
     }
 }
 
 @media (max-width: 767px) {
     .card__side-image.background--pink90 figure {
-        background-color: #3e1031;
+        background-color: #56041e;
     }
 }
 
 .card__side-image.background--pink90 .card__side-image__text {
     color: #ffffff;
-    background-color: #3e1031;
+    background-color: #56041e;
 }
 
 .card__side-image.background--pink90 img {
@@ -9604,7 +9604,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     font-size: 1.802rem;
     line-height: 1.33333;
     letter-spacing: -0.016em;
-    color: #3e1031;
+    color: #56041e;
     display: inline;
     /**
                * Quotation mark line height equal to other lines, even though
@@ -14089,8 +14089,8 @@ form:not([class]) .form__required-note--marker,
     position: relative;
     transition: background-color 0.6s, transform 0.6s;
     box-shadow: 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.15);
-    background: #3e1031;
-    border: 0.125rem solid #3e1031;
+    background: #56041e;
+    border: 0.125rem solid #56041e;
     color: #ffffff;
 }
 
@@ -14179,13 +14179,13 @@ form:not([class]) .form__required-note--marker,
 }
 
 .basic-cta--lifelong-learning-primary:visited {
-    border-color: #3e1031;
+    border-color: #56041e;
     color: #ffffff;
 }
 
 .basic-cta--lifelong-learning-primary:focus {
-    background: #3e1031;
-    border-color: #3e1031;
+    background: #56041e;
+    border-color: #56041e;
     color: #ffffff;
 }
 
@@ -14199,15 +14199,15 @@ form:not([class]) .form__required-note--marker,
 @media (hover: hover) {
     .basic-cta--lifelong-learning-primary:hover {
         background: #ffffff;
-        border-color: #3e1031;
-        color: #3e1031;
+        border-color: #56041e;
+        color: #56041e;
     }
 }
 
 .basic-cta--lifelong-learning-primary:active {
-    border-color: #3e1031;
+    border-color: #56041e;
     box-shadow: none;
-    color: #3e1031;
+    color: #56041e;
     background: transparent;
 }
 
@@ -14220,8 +14220,8 @@ form:not([class]) .form__required-note--marker,
 
 .basic-cta--lifelong-learning-primary:disabled {
     color: #ffffff;
-    background: #3e1031;
-    border: 0.125rem solid #3e1031;
+    background: #56041e;
+    border: 0.125rem solid #56041e;
 }
 
 .basic-cta--lifelong-learning-secondary {
@@ -14238,8 +14238,8 @@ form:not([class]) .form__required-note--marker,
     background: #d61726;
     border: 0.125rem solid #d61726;
     color: #ffffff;
-    background-color: #3e1031;
-    border-color: #3e1031;
+    background-color: #56041e;
+    border-color: #56041e;
     color: #ffffff;
 }
 
@@ -14378,7 +14378,7 @@ form:not([class]) .form__required-note--marker,
 }
 
 .basic-cta--lifelong-learning-secondary:visited {
-    border-color: #3e1031;
+    border-color: #56041e;
     color: #ffffff;
 }
 
@@ -14387,28 +14387,28 @@ form:not([class]) .form__required-note--marker,
 }
 
 .basic-cta--lifelong-learning-secondary:focus, .basic-cta--lifelong-learning-secondary:active {
-    background-color: #3e1031;
-    border-color: #3e1031;
+    background-color: #56041e;
+    border-color: #56041e;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .basic-cta--lifelong-learning-secondary:hover {
-        background-color: #150611;
-        border-color: #150611;
+        background-color: #25020d;
+        border-color: #25020d;
         color: #ffffff;
     }
 }
 
 .basic-cta--lifelong-learning-secondary:active {
-    background-color: #150611;
-    border-color: #150611;
+    background-color: #25020d;
+    border-color: #25020d;
 }
 
 .basic-cta--lifelong-learning-secondary:disabled {
     color: #ffffff;
-    background: #3e1031;
-    border-color: #3e1031;
+    background: #56041e;
+    border-color: #56041e;
 }
 
 .basic-cta--lifelong-learning-secondary:active span, .basic-cta--lifelong-learning-secondary:focus span, .basic-cta--lifelong-learning-secondary:hover span {
@@ -15872,7 +15872,7 @@ form:not([class]) .form__required-note--marker,
 
 @media (hover: hover) {
     .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
-        background: #3e1031;
+        background: #56041e;
     }
     .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
         color: #ffffff;
@@ -15960,7 +15960,7 @@ form:not([class]) .form__required-note--marker,
 
 @media (hover: hover) {
     .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
-        background: #3e1031;
+        background: #56041e;
     }
     .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
         color: #ffffff;
@@ -16048,7 +16048,7 @@ form:not([class]) .form__required-note--marker,
 
 @media (hover: hover) {
     .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
-        background: #3e1031;
+        background: #56041e;
     }
     .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
         color: #ffffff;
@@ -16954,7 +16954,7 @@ figure figcaption a:active,
 }
 
 .course-footer.background--pink80 h2 {
-    border-bottom: 0.0625rem solid #7c2062;
+    border-bottom: 0.0625rem solid #b5034d;
 }
 
 .course-footer.background--pink80 a {
@@ -21353,7 +21353,7 @@ figure figcaption a:active,
 }
 
 .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:hover, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:active {
-    color: #3e1031;
+    color: #56041e;
     background-color: #ffffff;
 }
 
@@ -21638,8 +21638,8 @@ figure figcaption a:active,
     background: #d61726;
     border: 0.125rem solid #d61726;
     color: #ffffff;
-    background-color: #5d184a;
-    border-color: #5d184a;
+    background-color: #820831;
+    border-color: #820831;
     color: #ffffff;
 }
 
@@ -21807,7 +21807,7 @@ figure figcaption a:active,
 
 .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:visited,
 .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:visited {
-    border-color: #5d184a;
+    border-color: #820831;
     color: #ffffff;
 }
 
@@ -21819,31 +21819,31 @@ figure figcaption a:active,
 .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:focus, .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:active,
 .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:focus,
 .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:active {
-    background-color: #5d184a;
-    border-color: #5d184a;
+    background-color: #820831;
+    border-color: #820831;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:hover,
     .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:hover {
-        background-color: #340e2a;
-        border-color: #340e2a;
+        background-color: #52051f;
+        border-color: #52051f;
         color: #ffffff;
     }
 }
 
 .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:active,
 .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:active {
-    background-color: #340e2a;
-    border-color: #340e2a;
+    background-color: #52051f;
+    border-color: #52051f;
 }
 
 .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:disabled,
 .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta button:disabled {
     color: #ffffff;
-    background: #5d184a;
-    border-color: #5d184a;
+    background: #820831;
+    border-color: #820831;
 }
 
 .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:active span, .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:focus span, .key-information--lifelong-learning-group .lifelong-learning__start-date__cta .cta-block__cta a:hover span,
@@ -22024,8 +22024,8 @@ figure figcaption a:active,
     background: #d61726;
     border: 0.125rem solid #d61726;
     color: #ffffff;
-    background-color: #5d184a;
-    border-color: #5d184a;
+    background-color: #820831;
+    border-color: #820831;
     color: #ffffff;
     display: inline-block;
 }
@@ -22165,7 +22165,7 @@ figure figcaption a:active,
 }
 
 .ki-shortc__list__dates .ki-shortc__cta a:visited {
-    border-color: #5d184a;
+    border-color: #820831;
     color: #ffffff;
 }
 
@@ -22174,28 +22174,28 @@ figure figcaption a:active,
 }
 
 .ki-shortc__list__dates .ki-shortc__cta a:focus, .ki-shortc__list__dates .ki-shortc__cta a:active {
-    background-color: #5d184a;
-    border-color: #5d184a;
+    background-color: #820831;
+    border-color: #820831;
     color: #ffffff;
 }
 
 @media (hover: hover) {
     .ki-shortc__list__dates .ki-shortc__cta a:hover {
-        background-color: #340e2a;
-        border-color: #340e2a;
+        background-color: #52051f;
+        border-color: #52051f;
         color: #ffffff;
     }
 }
 
 .ki-shortc__list__dates .ki-shortc__cta a:active {
-    background-color: #340e2a;
-    border-color: #340e2a;
+    background-color: #52051f;
+    border-color: #52051f;
 }
 
 .ki-shortc__list__dates .ki-shortc__cta a:disabled {
     color: #ffffff;
-    background: #5d184a;
-    border-color: #5d184a;
+    background: #820831;
+    border-color: #820831;
 }
 
 .ki-shortc__list__dates .ki-shortc__cta a:active span, .ki-shortc__list__dates .ki-shortc__cta a:focus span, .ki-shortc__list__dates .ki-shortc__cta a:hover span {
@@ -28008,10 +28008,10 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         outline-width: 0;
         text-decoration: none;
         color: #ffffff;
-        border: 0.0625rem solid #3e1031;
-        border-bottom-color: #3e1031;
+        border: 0.0625rem solid #56041e;
+        border-bottom-color: #56041e;
         border-bottom-width: 0.0625rem;
-        background-color: #3e1031;
+        background-color: #56041e;
         background-image: none;
         background-size: initial;
     }
@@ -28030,9 +28030,9 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 
 .modal__buttons--calendar a:active {
-    background-color: #250020;
-    border: 0.0625rem solid #250020;
-    border-bottom-color: #250020;
+    background-color: #2e0616;
+    border: 0.0625rem solid #2e0616;
+    border-bottom-color: #2e0616;
     border-bottom-width: 0.0625rem;
     color: #ffffff;
 }
@@ -31436,7 +31436,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     text-decoration: none;
     background-color: transparent;
     transition: background-color 0.2s ease-in, transform 0.2s ease-in-out;
-    border: 0.0625rem solid #5d184a;
+    border: 0.0625rem solid #820831;
     color: #ffffff;
     display: block;
 }
@@ -31483,21 +31483,21 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 @media (hover: hover) {
     .pathway.background--pink90 .pathway__cards .card--pathway a:hover {
-        background-color: #5d184a;
+        background-color: #820831;
     }
 }
 
 .pathway.background--pink90 .pathway__cards .card--pathway a:active {
-    background-color: #5d184a;
+    background-color: #820831;
 }
 
 .pathway.background--pink90 .pathway__cards .card--pathway a:focus {
-    background-color: #5d184a;
+    background-color: #820831;
 }
 
 @media (max-width: 1024px) {
     .pathway.background--pink90 .pathway__cards .card--pathway a {
-        background-color: #5d184a;
+        background-color: #820831;
     }
 }
 
@@ -31570,7 +31570,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 
 .promo-box {
     background-color: #d61726;
-    background-image: linear-gradient(to right, #d61726, #5d184a);
+    background-image: linear-gradient(to right, #d61726, #820831);
     color: #ffffff;
     padding: 0 1.5rem 1rem;
 }
@@ -38201,7 +38201,7 @@ article .link-copy {
 }
 
 .js .tabs--grey-underline .tabs__links li button[aria-selected='true'] > span {
-    border-bottom-color: #5d184a;
+    border-bottom-color: #820831;
 }
 
 .js .tabs--grey-underline .tabs__panel__body .tabs .tabs__links {
@@ -38308,7 +38308,7 @@ article .link-copy {
 
 @media (min-width: 769px) {
     .timetable .timetable-heading {
-        border-left: 0.1875rem dotted #5d184a;
+        border-left: 0.1875rem dotted #820831;
         padding: 0;
     }
     .timetable .timetable-heading span {
@@ -38350,7 +38350,7 @@ article .link-copy {
 }
 
 .timetable .timetable-row:last-of-type .icon {
-    color: #5d184a;
+    color: #820831;
     margin-right: 0.25rem;
 }
 
@@ -38369,7 +38369,7 @@ article .link-copy {
 
 @media (min-width: 769px) {
     .timetable-terms .timetable-heading {
-        border-left: 0.1875rem dotted #5d184a;
+        border-left: 0.1875rem dotted #820831;
         padding: 0;
     }
     .timetable-terms .timetable-heading span {
@@ -38411,7 +38411,7 @@ article .link-copy {
 }
 
 .timetable-terms .timetable-row:last-of-type .icon {
-    color: #5d184a;
+    color: #820831;
     margin-right: 0.25rem;
 }
 
@@ -38423,7 +38423,7 @@ article .link-copy {
 }
 
 .timetable-terms .timetable-column:first-child {
-    border-top: 0.1875rem dotted #5d184a;
+    border-top: 0.1875rem dotted #820831;
 }
 
 @media (min-width: 769px) {
@@ -38852,7 +38852,7 @@ article .link-copy {
 
 @media (hover: hover) {
     .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
-        background: #3e1031;
+        background: #56041e;
     }
     .featured-profiles-block.background--gray2 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
         color: #ffffff;
@@ -38940,7 +38940,7 @@ article .link-copy {
 
 @media (hover: hover) {
     .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
-        background: #3e1031;
+        background: #56041e;
     }
     .featured-profiles-block.background--gray1 .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
         color: #ffffff;
@@ -39028,7 +39028,7 @@ article .link-copy {
 
 @media (hover: hover) {
     .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover {
-        background: #3e1031;
+        background: #56041e;
     }
     .featured-profiles-block.background--purewhite .wrapper--featured-profiles__profile a.featured-profiles__profile:hover .featured-profiles__profile__label h3 {
         color: #ffffff;
@@ -39296,7 +39296,7 @@ article .link-copy {
 }
 
 .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:hover, .carousel-gallery .swiper-buttons-wrap .swiper-slider-arrow:active {
-    color: #3e1031;
+    color: #56041e;
     background-color: #ffffff;
 }
 
@@ -39868,43 +39868,43 @@ article .link-copy {
 }
 
 .chart--pink path:nth-child(1):not(.segment-empty) {
-    stroke: #bb3094;
+    stroke: #eb2b7e;
 }
 
 .chart--pink path:nth-child(1)[segment-empty-first='true'] {
-    stroke: #250020;
+    stroke: #2e0616;
 }
 
 .chart--pink path:nth-child(1)[segment-empty-second='true'] {
-    stroke: #bb3094;
+    stroke: #eb2b7e;
 }
 
 .chart--pink .chart__legend__item:nth-child(1):not([segment-full]) .fa.fa-circle {
-    color: #bb3094;
+    color: #eb2b7e;
 }
 
 .chart--pink .chart__legend__item:nth-child(1)[segment-full='second'] .fa.fa-circle {
-    color: #250020;
+    color: #2e0616;
 }
 
 .chart--pink path:nth-child(2):not(.segment-empty) {
-    stroke: #250020;
+    stroke: #2e0616;
 }
 
 .chart--pink path:nth-child(2)[segment-empty-first='true'] {
-    stroke: #250020;
+    stroke: #2e0616;
 }
 
 .chart--pink path:nth-child(2)[segment-empty-second='true'] {
-    stroke: #bb3094;
+    stroke: #eb2b7e;
 }
 
 .chart--pink .chart__legend__item:nth-child(2):not([segment-full]) .fa.fa-circle {
-    color: #250020;
+    color: #2e0616;
 }
 
 .chart--pink .chart__legend__item:nth-child(2)[segment-full='second'] .fa.fa-circle {
-    color: #250020;
+    color: #2e0616;
 }
 
 .chart--pink path:nth-child(3):not(.segment-empty) {
@@ -39912,11 +39912,11 @@ article .link-copy {
 }
 
 .chart--pink path:nth-child(3)[segment-empty-first='true'] {
-    stroke: #250020;
+    stroke: #2e0616;
 }
 
 .chart--pink path:nth-child(3)[segment-empty-second='true'] {
-    stroke: #bb3094;
+    stroke: #eb2b7e;
 }
 
 .chart--pink .chart__legend__item:nth-child(3):not([segment-full]) .fa.fa-circle {
@@ -39924,27 +39924,27 @@ article .link-copy {
 }
 
 .chart--pink .chart__legend__item:nth-child(3)[segment-full='second'] .fa.fa-circle {
-    color: #250020;
+    color: #2e0616;
 }
 
 .chart--pink path:nth-child(4):not(.segment-empty) {
-    stroke: #7c2062;
+    stroke: #b5034d;
 }
 
 .chart--pink path:nth-child(4)[segment-empty-first='true'] {
-    stroke: #250020;
+    stroke: #2e0616;
 }
 
 .chart--pink path:nth-child(4)[segment-empty-second='true'] {
-    stroke: #bb3094;
+    stroke: #eb2b7e;
 }
 
 .chart--pink .chart__legend__item:nth-child(4):not([segment-full]) .fa.fa-circle {
-    color: #7c2062;
+    color: #b5034d;
 }
 
 .chart--pink .chart__legend__item:nth-child(4)[segment-full='second'] .fa.fa-circle {
-    color: #250020;
+    color: #2e0616;
 }
 
 .pie-chart-block .chart__legend__item:nth-child(3) .fa.fa-circle::before {
@@ -39960,11 +39960,11 @@ article .link-copy {
 }
 
 .chart--bar--horizontal.chart--pink .chart--bar--horizontal__value {
-    background: #bb3094;
+    background: #eb2b7e;
 }
 
 .chart--bar--horizontal.chart--pink .chart--bar--horizontal__collection {
-    background: #5d184a;
+    background: #820831;
 }
 
 .chart-row {
@@ -40946,7 +40946,7 @@ article .link-copy {
     height: 0px;
     border-top: 0.5rem solid transparent;
     border-bottom: 0.5rem solid transparent;
-    border-left: 0.5rem solid #bb3094;
+    border-left: 0.5rem solid #eb2b7e;
 }
 
 @media (max-width: 1439px) {
@@ -43880,7 +43880,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .find-us__header {
-    background: #5d184a;
+    background: #820831;
     text-align: center;
     color: #ffffff;
     padding: 1.75rem;
@@ -44324,7 +44324,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .find-us__header {
-    background: #5d184a;
+    background: #820831;
     text-align: center;
     color: #ffffff;
     padding: 1.75rem;
@@ -45619,7 +45619,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .destination-leaver .chart-row .chart path:nth-child(1) {
-    stroke: #d763b6;
+    stroke: #f49cc0;
 }
 
 .destination-leaver .chart-row .chart path:nth-child(2) {
@@ -45647,7 +45647,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .destination-leaver .chart-row .chart .chart__legend__item:nth-child(1) .fa.fa-circle {
-    color: #d763b6;
+    color: #f49cc0;
 }
 
 .destination-leaver .chart-row .chart .chart__legend__item:nth-child(2) .fa.fa-circle {
@@ -45925,25 +45925,25 @@ div#CybotCookiebotDialogPoweredByText {
 
 .sc-content--deep-magenta {
     color: #ffffff;
-    background-color: #3e1031;
+    background-color: #56041e;
 }
 
 .sc-content--deep-magenta.sc-content--link {
     color: #1e1e1e;
-    background-color: #3e10314d;
+    background-color: #56041e4d;
 }
 
 .sc-content--deep-magenta.sc-content--link .sc-content__heading {
     color: #ffffff;
-    background-color: #3e1031;
+    background-color: #56041e;
 }
 
 .sc-content--deep-magenta.sc-content--link a {
-    background-color: #3e1031;
+    background-color: #56041e;
 }
 
 .sc-content--deep-magenta.sc-content--link a:hover, .sc-content--deep-magenta.sc-content--link a:focus, .sc-content--deep-magenta.sc-content--link a:active {
-    background-image: linear-gradient(120deg, #3e1031 0%, #3e1031 100%);
+    background-image: linear-gradient(120deg, #56041e 0%, #56041e 100%);
 }
 
 .sc-content--deep-magenta.sc-content--link a .sc-content__heading {
@@ -45952,7 +45952,7 @@ div#CybotCookiebotDialogPoweredByText {
 
 .sc-content--deep-magenta.sc-content--link .sc-content__icon {
     color: #ffffff;
-    background-color: #3e1031;
+    background-color: #56041e;
 }
 
 .sc-content--teal {
@@ -48369,7 +48369,7 @@ main > .case-study--business .case-study--business__content {
 }
 
 .content-hub__block-two .careers-accordions .accordion__heading[data-open='true'] button {
-    background: #3e1031;
+    background: #56041e;
     color: #ffffff;
     border-color: #ffffff;
 }
@@ -48380,7 +48380,7 @@ main > .case-study--business .case-study--business__content {
 
 @media (hover: hover) {
     .content-hub__block-two .careers-accordions .accordion__heading[data-open='true'] button:hover {
-        background: #3e1031;
+        background: #56041e;
         color: #ffffff;
     }
 }
@@ -48395,7 +48395,7 @@ main > .case-study--business .case-study--business__content {
 }
 
 .content-hub__block-two .careers-accordions .accordion__body {
-    background: #3e1031;
+    background: #56041e;
     color: #ffffff;
 }
 
@@ -48415,7 +48415,7 @@ main > .case-study--business .case-study--business__content {
     text-decoration: none;
     background-color: transparent;
     transition: background-color 0.2s ease-in, transform 0.2s ease-in-out;
-    border: 0.0625rem solid #5d184a;
+    border: 0.0625rem solid #820831;
     color: #ffffff;
     display: block;
 }
@@ -48585,7 +48585,7 @@ main > .case-study--business .case-study--business__content {
 }
 
 .content-hub__block-two .careers-accordions .pathway .pathway__cards a.card--pathway__content--border {
-    border-top: 0.5rem solid #5d184a;
+    border-top: 0.5rem solid #820831;
     max-width: unset;
 }
 
@@ -51686,7 +51686,7 @@ main header .event__formassembly__form {
 }
 
 .landing--functional .wrapper--landing__contact .landing__contact .related-content li + li {
-    border-top-color: #7c2062;
+    border-top-color: #b5034d;
 }
 
 .landing--functional .wrapper--landing__contact .landing__contact__location .card--findus a:focus {
@@ -53021,7 +53021,7 @@ main > .landing--latest .wrapper--landing--latest__latest-content--events {
 .listing .wrapper--listing__content {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    background-color: #3e1031;
+    background-color: #56041e;
     color: #ffffff;
     margin-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -54090,17 +54090,17 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     left: 0;
     position: absolute;
     width: 100%;
-    background-image: linear-gradient(to top, #5d184a, transparent);
+    background-image: linear-gradient(to top, #820831, transparent);
 }
 
 @media (max-width: 767px) {
     .course--pgt .banner__overlay {
-        background-color: #5d184a;
+        background-color: #820831;
     }
 }
 
 .course--pgt .banner-text {
-    background-color: #5d184a;
+    background-color: #820831;
 }
 
 .course--pgt .banner__label {
@@ -54802,7 +54802,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .course--pgt__keyinfo .course--pgt__keyinfo__content span.label.color--pink80 {
-    color: #5d184a;
+    color: #820831;
     font-weight: 600;
 }
 
@@ -55333,7 +55333,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .course--pgt__related-courses h2.related-content__heading:after {
-    background-color: #3e1031;
+    background-color: #56041e;
     content: '';
     display: block;
     height: 0.25rem;
@@ -55377,7 +55377,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 
 .course--pgt__tabs .chart-heading {
     display: flex;
-    color: #3e1031;
+    color: #56041e;
 }
 
 .course--pgt__tabs .chart-heading .chart-heading__number {
@@ -55490,7 +55490,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .course--pgt .wrapper--tabs__panel__body__fees__qualification-type__method-of-study p.tabs__panel__body__domicile__fees {
-    color: #5d184a;
+    color: #820831;
     font-family: "ff-meta-web-pro", sans-serif;
     font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     font-size: 1.125rem;
@@ -56761,8 +56761,8 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .profile .profile__banner--honorary,
 .profile .profile__banner--alumni,
 .profile .profile__banner--ambassador {
-    background-color: #3e1031;
-    background: linear-gradient(55deg, #3e1031 70%, #270621 0%);
+    background-color: #56041e;
+    background: linear-gradient(55deg, #56041e 70%, #270621 0%);
 }
 
 @media (min-width: 376px) {
@@ -56770,7 +56770,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     .profile .profile__banner--honorary,
     .profile .profile__banner--alumni,
     .profile .profile__banner--ambassador {
-        background: linear-gradient(55deg, #3e1031 75%, #270621 0%);
+        background: linear-gradient(55deg, #56041e 75%, #270621 0%);
     }
 }
 
@@ -56779,7 +56779,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     .profile .profile__banner--honorary,
     .profile .profile__banner--alumni,
     .profile .profile__banner--ambassador {
-        background: linear-gradient(55deg, #3e1031 75%, #270621 0%);
+        background: linear-gradient(55deg, #56041e 75%, #270621 0%);
     }
 }
 
@@ -56788,7 +56788,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     .profile .profile__banner--honorary,
     .profile .profile__banner--alumni,
     .profile .profile__banner--ambassador {
-        background: linear-gradient(55deg, #3e1031 75%, #270621 0%);
+        background: linear-gradient(55deg, #56041e 75%, #270621 0%);
     }
 }
 
@@ -56797,7 +56797,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     .profile .profile__banner--honorary,
     .profile .profile__banner--alumni,
     .profile .profile__banner--ambassador {
-        background: linear-gradient(45deg, #3e1031 75%, #270621 0%);
+        background: linear-gradient(45deg, #56041e 75%, #270621 0%);
     }
 }
 
@@ -56806,7 +56806,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     .profile .profile__banner--honorary,
     .profile .profile__banner--alumni,
     .profile .profile__banner--ambassador {
-        background: linear-gradient(55deg, #3e1031 75%, #270621 0%);
+        background: linear-gradient(55deg, #56041e 75%, #270621 0%);
     }
 }
 
@@ -56815,7 +56815,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     .profile .profile__banner--honorary,
     .profile .profile__banner--alumni,
     .profile .profile__banner--ambassador {
-        background: linear-gradient(45deg, #3e1031 75%, #270621 0%);
+        background: linear-gradient(45deg, #56041e 75%, #270621 0%);
     }
 }
 
@@ -56824,7 +56824,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     .profile .profile__banner--honorary,
     .profile .profile__banner--alumni,
     .profile .profile__banner--ambassador {
-        background: linear-gradient(45deg, #3e1031 75%, #270621 0%);
+        background: linear-gradient(45deg, #56041e 75%, #270621 0%);
     }
 }
 
@@ -59617,17 +59617,17 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
     left: 0;
     position: absolute;
     width: 100%;
-    background-image: linear-gradient(to top, #5d184a, transparent);
+    background-image: linear-gradient(to top, #820831, transparent);
 }
 
 @media (max-width: 767px) {
     .lifelong-learning .banner__overlay {
-        background-color: #5d184a;
+        background-color: #820831;
     }
 }
 
 .lifelong-learning .banner-text {
-    background-color: #5d184a;
+    background-color: #820831;
 }
 
 .lifelong-learning .banner__label {
@@ -59705,7 +59705,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 
 .lifelong-learning .wrapper--lifelong-learning__introduction,
 .lifelong-learning .wrapper--lifelong-learning__announcement {
-    background-color: #5d184a;
+    background-color: #820831;
     color: #ffffff;
 }
 
@@ -59873,12 +59873,12 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a {
-    border: 0.125rem solid #3e1031;
-    color: #3e1031;
+    border: 0.125rem solid #56041e;
+    color: #56041e;
 }
 
 .lifelong-learning .wrapper--key-information--lifelong-learning__register-interest .key-information--lifelong-learning__register-interest .cta-block__cta a:hover {
-    background: #3e1031;
+    background: #56041e;
     color: #ffffff;
 }
 
@@ -60087,7 +60087,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning .lifelong-learning__selling-points__background {
-    background: linear-gradient(180deg, #5d184a 50%, #f2f2f2 50%);
+    background: linear-gradient(180deg, #820831 50%, #f2f2f2 50%);
     background-repeat: no-repeat;
     border-bottom: 0.125rem solid #d8d8d8;
     padding-bottom: 1.75rem;
@@ -60191,7 +60191,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .lifelong-learning .key-information--lifelong-learning-group h3,
 .lifelong-learning .key-information--lifelong-learning > h2,
 .lifelong-learning .key-information--lifelong-learning h3 {
-    color: #5d184a;
+    color: #820831;
 }
 
 .lifelong-learning .key-information--lifelong-learning-group > h2,
@@ -60253,7 +60253,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning .ki-shortc__list .ki-shortc__list__head {
-    color: #5d184a;
+    color: #820831;
 }
 
 .lifelong-learning .lifelong-learning__start-date__cta {
@@ -60296,7 +60296,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning .related-content__heading:after {
-    background-color: #5d184a;
+    background-color: #820831;
     content: '';
     display: block;
     height: 0.25rem;
@@ -60330,7 +60330,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 
 .lifelong-learning .lifelong-learning__tutors h2:after,
 .lifelong-learning .lifelong-learning__testimonials h2:after {
-    background-color: #5d184a;
+    background-color: #820831;
     content: '';
     display: block;
     height: 0.25rem;
@@ -60394,7 +60394,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .lifelong-learning .lifelong-learning__content .overview__subject-wrapper {
     margin-top: 1rem;
     padding: 1rem;
-    background-color: #3e1031;
+    background-color: #56041e;
     color: #ffffff;
 }
 
@@ -60603,7 +60603,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 .lifelong-learning .lifelong-learning__contact {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    background-color: #3e1031;
+    background-color: #56041e;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -60944,12 +60944,12 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning .text-highlight-block .text-highlight__preheading {
-    background: #5d184a;
+    background: #820831;
     color: #ffffff;
     font-weight: 400;
     display: inline;
     line-height: 2rem;
-    box-shadow: 0.5rem 0 0 #5d184a, -0.5rem 0 0 #5d184a;
+    box-shadow: 0.5rem 0 0 #820831, -0.5rem 0 0 #820831;
     box-decoration-break: clone;
 }
 
@@ -61331,7 +61331,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
         text-align: center;
     }
     .js .lifelong-learning__content > div:not(.tabs):not(.tabs--accordion) .tabs__panel__heading:after {
-        background-color: #5d184a;
+        background-color: #820831;
         content: '';
         display: block;
         height: 0.25rem;
@@ -61404,7 +61404,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
         text-align: center;
     }
     .js .lifelong-learning--bespoke .tabs .tabs__panel__heading:after {
-        background-color: #5d184a;
+        background-color: #820831;
         content: '';
         display: block;
         height: 0.25rem;
@@ -61576,7 +61576,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning .slide__controls__progress__active {
-    color: #3e1031;
+    color: #56041e;
 }
 
 @media (min-width: 769px) and (max-width: 900px) {
@@ -61661,12 +61661,12 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning .slide__controls__progress__active {
-    color: #3e1031;
+    color: #56041e;
 }
 
 .lifelong-learning .swiper-slider-arrow {
-    color: #3e1031;
-    border: 0.0625rem solid #3e1031;
+    color: #56041e;
+    border: 0.0625rem solid #56041e;
     padding: 0.75rem;
     font-weight: 400;
 }
@@ -61674,13 +61674,13 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 @media (hover: hover) {
     .lifelong-learning .swiper-slider-arrow:hover {
         color: #ffffff;
-        background: #3e1031;
+        background: #56041e;
     }
 }
 
 .lifelong-learning .swiper-slider-arrow:focus, .lifelong-learning .swiper-slider-arrow:active {
     color: #ffffff;
-    background: #3e1031;
+    background: #56041e;
 }
 
 .lifelong-learning .swiper-slider-arrow:focus:focus, .lifelong-learning .swiper-slider-arrow:focus:active, .lifelong-learning .swiper-slider-arrow:active:focus, .lifelong-learning .swiper-slider-arrow:active:active {
@@ -63406,7 +63406,7 @@ main .standard-content .content {
 }
 
 .course--ug__related-courses h2:after {
-    background-color: #5d184a;
+    background-color: #820831;
     content: '';
     display: block;
     height: 0.25rem;
@@ -63875,7 +63875,7 @@ main .standard-content .content {
     font-size: 1.602rem;
     line-height: 1.33333;
     letter-spacing: -0.015em;
-    color: #5d184a;
+    color: #820831;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
@@ -64485,7 +64485,7 @@ main .standard-content .content {
         text-align: center;
     }
     .js .course--ug .tabs .tabs__panel__heading:after {
-        background-color: #5d184a;
+        background-color: #820831;
         content: '';
         display: block;
         height: 0.25rem;
@@ -64702,7 +64702,7 @@ main .standard-content .content {
 }
 
 .course--ug__related-links .related-links--with-images {
-    background: #5d184a;
+    background: #820831;
     padding: 2rem;
 }
 
