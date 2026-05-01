@@ -951,46 +951,55 @@
     background-color: #2e0616;
 }
 
+.color-teal05 {
+    background-color: #e6f4f5;
+}
+
 .color--teal10 {
-    color: #b2e6eb;
+    color: #d8fbf1;
 }
 
 .background--teal10 {
-    background-color: #b2e6eb;
+    background-color: #d8fbf1;
 }
 
 .color--teal20 {
-    color: #7fd6df;
+    color: #a8f4df;
 }
 
 .background--teal20 {
-    background-color: #7fd6df;
+    background-color: #a8f4df;
+}
+
+.color-teal25 {
+    background-color: #79c6c9;
 }
 
 .color--teal30 {
-    color: #4cc5d2;
+    color: #73e7c5;
 }
 
 .background--teal30 {
-    background-color: #4cc5d2;
+    background-color: #73e7c5;
 }
 
 .color--teal40 {
-    color: #19b5c5;
+    color: #32d1a7;
 }
 
 .background--teal40 {
-    background-color: #19b5c5;
+    background-color: #32d1a7;
 }
 
 .color--teal50 {
-    color: #039cab;
+    color: #06ba94;
 }
 
 .background--teal50 {
-    background-color: #039cab;
+    background-color: #06ba94;
 }
 
+/* SHMS */
 .color--teal60 {
     color: #009b77;
 }
@@ -1000,35 +1009,39 @@
 }
 
 .color--teal70 {
-    color: #006973;
+    color: #007a5f;
 }
 
 .background--teal70 {
-    background-color: #006973;
+    background-color: #007a5f;
+}
+
+.color-teal75 {
+    background-color: #0f5f64;
 }
 
 .color--teal80 {
-    color: #005058;
+    color: #005b47;
 }
 
 .background--teal80 {
-    background-color: #005058;
+    background-color: #005b47;
 }
 
 .color--teal90 {
-    color: #00393f;
+    color: #023329;
 }
 
 .background--teal90 {
-    background-color: #00393f;
+    background-color: #023329;
 }
 
 .color--teal100 {
-    color: #002225;
+    color: #05211b;
 }
 
 .background--teal100 {
-    background-color: #002225;
+    background-color: #05211b;
 }
 
 .color--yellow10 {
@@ -1145,18 +1158,6 @@
 
 .color-purple65 {
     background-color: #631f62;
-}
-
-.color-teal05 {
-    background-color: #e6f4f5;
-}
-
-.color-teal25 {
-    background-color: #79c6c9;
-}
-
-.color-teal75 {
-    background-color: #0f5f64;
 }
 
 .sr-only-focusable-within:active, .sr-only-focusable-within:focus, .sr-only-focusable-within:focus-within {
@@ -8870,19 +8871,19 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 @media (min-width: 768px) {
     .card__side-image.background--teal90 figure:after {
-        background-color: #00393f;
+        background-color: #023329;
     }
 }
 
 @media (max-width: 767px) {
     .card__side-image.background--teal90 figure {
-        background-color: #00393f;
+        background-color: #023329;
     }
 }
 
 .card__side-image.background--teal90 .card__side-image__text {
     color: #ffffff;
-    background-color: #00393f;
+    background-color: #023329;
 }
 
 .card__side-image.background--teal90 img {
@@ -45623,7 +45624,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .destination-leaver .chart-row .chart path:nth-child(2) {
-    stroke: #002225;
+    stroke: #05211b;
 }
 
 .destination-leaver .chart-row .chart path:nth-child(3) {
@@ -45651,7 +45652,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .destination-leaver .chart-row .chart .chart__legend__item:nth-child(2) .fa.fa-circle {
-    color: #002225;
+    color: #05211b;
 }
 
 .destination-leaver .chart-row .chart .chart__legend__item:nth-child(3) .fa.fa-circle {
@@ -45956,17 +45957,17 @@ div#CybotCookiebotDialogPoweredByText {
 }
 
 .sc-content--teal {
-    color: #ffffff;
+    color: #0c0c0e;
     background-color: #009b77;
 }
 
 .sc-content--teal.sc-content--link {
     color: #1e1e1e;
-    background-color: #007e8b4d;
+    background-color: #009b774d;
 }
 
 .sc-content--teal.sc-content--link .sc-content__heading {
-    color: #ffffff;
+    color: #0c0c0e;
     background-color: #009b77;
 }
 
@@ -45979,11 +45980,11 @@ div#CybotCookiebotDialogPoweredByText {
 }
 
 .sc-content--teal.sc-content--link a .sc-content__heading {
-    border-bottom: 0.125rem solid #ffffff;
+    border-bottom: 0.125rem solid #0c0c0e;
 }
 
 .sc-content--teal.sc-content--link .sc-content__icon {
-    color: #ffffff;
+    color: #0c0c0e;
     background-color: #009b77;
 }
 
@@ -49230,8 +49231,8 @@ main > .case-study--business .case-study--business__content {
 
 .js .subject__course-list {
     padding: 2rem;
-    background-color: #b2e6eb;
-    border-top: 1rem solid #19b5c5;
+    background-color: #d8fbf1;
+    border-top: 1rem solid #32d1a7;
 }
 
 .js .subject__course-list .paginated-list {
@@ -60171,7 +60172,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning .lifelong-learning__selling-points__card:nth-child(2) .icon {
-    color: #039cab;
+    color: #06ba94;
 }
 
 .lifelong-learning .lifelong-learning__selling-points__card:nth-child(3) .icon {
