@@ -536,51 +536,51 @@
 }
 
 .color--blue10 {
-    color: #8ee1fe;
+    color: #ebf4ff;
 }
 
 .background--blue10 {
-    background-color: #8ee1fe;
+    background-color: #ebf4ff;
 }
 
 .color--blue20 {
-    color: #5fd8fe;
+    color: #cde1ff;
 }
 
 .background--blue20 {
-    background-color: #5fd8fe;
+    background-color: #cde1ff;
 }
 
 .color--blue30 {
-    color: #19c3fe;
+    color: #a4c4ff;
 }
 
 .background--blue30 {
-    background-color: #19c3fe;
+    background-color: #a4c4ff;
 }
 
 .color--blue40 {
-    color: #0194c7;
+    color: #7fa1ff;
 }
 
 .background--blue40 {
-    background-color: #0194c7;
+    background-color: #7fa1ff;
 }
 
 .color--blue50 {
-    color: #0177a0;
+    color: #4c79fe;
 }
 
 .background--blue50 {
-    background-color: #0177a0;
+    background-color: #4c79fe;
 }
 
 .color--blue60 {
-    color: #015a79;
+    color: #2648fc;
 }
 
 .background--blue60 {
-    background-color: #015a79;
+    background-color: #2648fc;
 }
 
 .color--blue70 {
@@ -592,27 +592,27 @@
 }
 
 .color--blue80 {
-    color: #11334c;
+    color: #0020a5;
 }
 
 .background--blue80 {
-    background-color: #11334c;
+    background-color: #0020a5;
 }
 
 .color--blue90 {
-    color: #00294a;
+    color: #00144a;
 }
 
 .background--blue90 {
-    background-color: #00294a;
+    background-color: #00144a;
 }
 
 .color--blue100 {
-    color: #001323;
+    color: #00091f;
 }
 
 .background--blue100 {
-    background-color: #001323;
+    background-color: #00091f;
 }
 
 .color--brown5 {
@@ -7112,19 +7112,19 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 @media (min-width: 768px) {
     .card__side-image.background--blue50 figure:after {
-        background-color: #0177a0;
+        background-color: #4c79fe;
     }
 }
 
 @media (max-width: 767px) {
     .card__side-image.background--blue50 figure {
-        background-color: #0177a0;
+        background-color: #4c79fe;
     }
 }
 
 .card__side-image.background--blue50 .card__side-image__text {
-    color: #ffffff;
-    background-color: #0177a0;
+    color: #1e1e1e;
+    background-color: #4c79fe;
 }
 
 .card__side-image.background--blue50 img {
@@ -7242,17 +7242,17 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card__side-image.background--blue50:not(.background--purewhite) a:link, .card__side-image.background--blue50:not(.background--purewhite) a:visited {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
+    color: #1e1e1e;
+    border-bottom-color: #1e1e1e;
     background-image: none;
 }
 
 .card__side-image.background--blue50:not(.background--purewhite) a:active, .card__side-image.background--blue50:not(.background--purewhite) a:focus, .card__side-image.background--blue50:not(.background--purewhite) a:hover {
-    color: #ffffff;
+    color: #1e1e1e;
     background-color: transparent;
     background-image: none;
-    border-bottom-color: #ffffff;
-    outline-color: #ffffff;
+    border-bottom-color: #1e1e1e;
+    outline-color: #1e1e1e;
 }
 
 @media (min-width: 768px) {
@@ -7402,19 +7402,19 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 @media (min-width: 768px) {
     .card__side-image.background--blue90 figure:after {
-        background-color: #00294a;
+        background-color: #00144a;
     }
 }
 
 @media (max-width: 767px) {
     .card__side-image.background--blue90 figure {
-        background-color: #00294a;
+        background-color: #00144a;
     }
 }
 
 .card__side-image.background--blue90 .card__side-image__text {
     color: #ffffff;
-    background-color: #00294a;
+    background-color: #00144a;
 }
 
 .card__side-image.background--blue90 img {
