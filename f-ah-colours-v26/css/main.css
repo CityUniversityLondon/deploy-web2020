@@ -447,6 +447,10 @@
     background-color: #250508;
 }
 
+.color-purple05 {
+    background-color: #eceaf5;
+}
+
 .color--purple5 {
     color: #f8f0fd;
 }
@@ -461,6 +465,10 @@
 
 .background--purple10 {
     background-color: #f0e0fb;
+}
+
+.color-purple15 {
+    background-color: #c4add6;
 }
 
 .color--purple20 {
@@ -501,6 +509,10 @@
 
 .background--purple60 {
     background-color: #b246d9;
+}
+
+.color-purple65 {
+    background-color: #631f62;
 }
 
 .color--purple70 {
@@ -1146,18 +1158,6 @@
 
 .background--spring-green {
     background-color: #008569;
-}
-
-.color-purple05 {
-    background-color: #eceaf5;
-}
-
-.color-purple15 {
-    background-color: #c4add6;
-}
-
-.color-purple65 {
-    background-color: #631f62;
 }
 
 .sr-only-focusable-within:active, .sr-only-focusable-within:focus, .sr-only-focusable-within:focus-within {
