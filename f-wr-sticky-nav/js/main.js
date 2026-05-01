@@ -7877,7 +7877,8 @@ function launch(el) {
 
   anchorLinksOnPage.forEach(function (item) {
     item.addEventListener('click', function (e) {
-      // If clicked hash is already in the url remove so it gets added again to trigger the hashchange listener
+      el.classList.contains('nav-sticky__inner--stick') ? null : el.classList.add('nav-sticky__inner--stick'); // If clicked hash is already in the url remove so it gets added again to trigger the hashchange listener
+
       var hrefValue = e.target.getAttribute('href');
       scrollActiveLink = hrefValue;
       highlightNavMenuItem(e.target);
