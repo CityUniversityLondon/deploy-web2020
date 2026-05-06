@@ -46580,7 +46580,6 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
 
 .nav-sticky__item__link {
     padding: 0.5rem;
-    background: #f2f2f2;
     border-radius: 0.1875rem;
     border-bottom: none;
     color: #494949;
@@ -46616,6 +46615,7 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
 .nav-sticky__item__link:hover {
     background: #a1a1a1;
     text-decoration: underline;
+    border-bottom: none;
 }
 
 .nav-sticky__item__link:focus, .nav-sticky__item__link:active {

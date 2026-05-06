@@ -7710,7 +7710,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function launch(el) {
-  console.log('Sticky Nav pattern launched');
+  console.log('Sticky Nav pattern launched v2');
   var scrollActiveLink = '';
   /*
   // Create the observer helper div and appended to the DOM
