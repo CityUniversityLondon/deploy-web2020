@@ -716,83 +716,83 @@
 }
 
 .color--green10 {
-    color: #cce1b4;
+    color: #d8fbf1;
 }
 
 .background--green10 {
-    background-color: #cce1b4;
+    background-color: #d8fbf1;
 }
 
 .color--green20 {
-    color: #b9d698;
+    color: #a8f4df;
 }
 
 .background--green20 {
-    background-color: #b9d698;
+    background-color: #a8f4df;
 }
 
 .color--green30 {
-    color: #a6ca7c;
+    color: #73e7c5;
 }
 
 .background--green30 {
-    background-color: #a6ca7c;
+    background-color: #73e7c5;
 }
 
 .color--green40 {
-    color: #93bf60;
+    color: #32d1a7;
 }
 
 .background--green40 {
-    background-color: #93bf60;
+    background-color: #32d1a7;
 }
 
 .color--green50 {
-    color: #10cf53;
+    color: #06ba94;
 }
 
 .background--green50 {
-    background-color: #10cf53;
+    background-color: #06ba94;
 }
 
 .color--green60 {
-    color: #427844;
+    color: #009b77;
 }
 
 .background--green60 {
-    background-color: #427844;
+    background-color: #009b77;
 }
 
 .color--green70 {
-    color: #286760;
+    color: #007a5f;
 }
 
 .background--green70 {
-    background-color: #286760;
+    background-color: #007a5f;
 }
 
 .color--green80 {
-    color: #305731;
+    color: #005b47;
 }
 
 .background--green80 {
-    background-color: #305731;
+    background-color: #005b47;
 }
 
 .color--green90 {
-    color: #274728;
+    color: #023329;
 }
 
 .background--green90 {
-    background-color: #274728;
+    background-color: #023329;
 }
 
 .color--green100 {
-    color: #1f3920;
+    color: #05211b;
 }
 
 .background--green100 {
-    background-color: #1f3920;
+    background-color: #05211b;
 }
 
 .color--orange10 {
@@ -7693,19 +7693,19 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 @media (min-width: 768px) {
     .card__side-image.background--green50 figure:after {
-        background-color: #10cf53;
+        background-color: #06ba94;
     }
 }
 
 @media (max-width: 767px) {
     .card__side-image.background--green50 figure {
-        background-color: #10cf53;
+        background-color: #06ba94;
     }
 }
 
 .card__side-image.background--green50 .card__side-image__text {
     color: #1e1e1e;
-    background-color: #10cf53;
+    background-color: #06ba94;
 }
 
 .card__side-image.background--green50 img {

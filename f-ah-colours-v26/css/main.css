@@ -716,83 +716,83 @@
 }
 
 .color--green10 {
-    color: #cce1b4;
+    color: #d8fbf1;
 }
 
 .background--green10 {
-    background-color: #cce1b4;
+    background-color: #d8fbf1;
 }
 
 .color--green20 {
-    color: #b9d698;
+    color: #a8f4df;
 }
 
 .background--green20 {
-    background-color: #b9d698;
+    background-color: #a8f4df;
 }
 
 .color--green30 {
-    color: #a6ca7c;
+    color: #73e7c5;
 }
 
 .background--green30 {
-    background-color: #a6ca7c;
+    background-color: #73e7c5;
 }
 
 .color--green40 {
-    color: #93bf60;
+    color: #32d1a7;
 }
 
 .background--green40 {
-    background-color: #93bf60;
+    background-color: #32d1a7;
 }
 
 .color--green50 {
-    color: #10cf53;
+    color: #06ba94;
 }
 
 .background--green50 {
-    background-color: #10cf53;
+    background-color: #06ba94;
 }
 
 .color--green60 {
-    color: #427844;
+    color: #009b77;
 }
 
 .background--green60 {
-    background-color: #427844;
+    background-color: #009b77;
 }
 
 .color--green70 {
-    color: #286760;
+    color: #007a5f;
 }
 
 .background--green70 {
-    background-color: #286760;
+    background-color: #007a5f;
 }
 
 .color--green80 {
-    color: #305731;
+    color: #005b47;
 }
 
 .background--green80 {
-    background-color: #305731;
+    background-color: #005b47;
 }
 
 .color--green90 {
-    color: #274728;
+    color: #023329;
 }
 
 .background--green90 {
-    background-color: #274728;
+    background-color: #023329;
 }
 
 .color--green100 {
-    color: #1f3920;
+    color: #05211b;
 }
 
 .background--green100 {
-    background-color: #1f3920;
+    background-color: #05211b;
 }
 
 .color--orange10 {
@@ -7711,19 +7711,19 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 @media (min-width: 768px) {
     .card__side-image.background--green50 figure:after {
-        background-color: #10cf53;
+        background-color: #06ba94;
     }
 }
 
 @media (max-width: 767px) {
     .card__side-image.background--green50 figure {
-        background-color: #10cf53;
+        background-color: #06ba94;
     }
 }
 
 .card__side-image.background--green50 .card__side-image__text {
     color: #1e1e1e;
-    background-color: #10cf53;
+    background-color: #06ba94;
 }
 
 .card__side-image.background--green50 img {
@@ -46022,25 +46022,25 @@ div#CybotCookiebotDialogPoweredByText {
 
 .sc-content--green {
     color: #1e1e1e;
-    background-color: #10cf53;
+    background-color: #06ba94;
 }
 
 .sc-content--green.sc-content--link {
     color: #1e1e1e;
-    background-color: #6c953c4d;
+    background-color: #06ba944d;
 }
 
 .sc-content--green.sc-content--link .sc-content__heading {
     color: #1e1e1e;
-    background-color: #10cf53;
+    background-color: #06ba94;
 }
 
 .sc-content--green.sc-content--link a {
-    background-color: #10cf53;
+    background-color: #06ba94;
 }
 
 .sc-content--green.sc-content--link a:hover, .sc-content--green.sc-content--link a:focus, .sc-content--green.sc-content--link a:active {
-    background-image: linear-gradient(120deg, #10cf53 0%, #10cf53 100%);
+    background-image: linear-gradient(120deg, #06ba94 0%, #06ba94 100%);
 }
 
 .sc-content--green.sc-content--link a .sc-content__heading {
@@ -46049,7 +46049,7 @@ div#CybotCookiebotDialogPoweredByText {
 
 .sc-content--green.sc-content--link .sc-content__icon {
     color: #1e1e1e;
-    background-color: #10cf53;
+    background-color: #06ba94;
 }
 
 .sc-content--blue {
@@ -60168,7 +60168,7 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
 }
 
 .lifelong-learning .lifelong-learning__selling-points__card:nth-child(1) .icon {
-    color: #10cf53;
+    color: #06ba94;
 }
 
 .lifelong-learning .lifelong-learning__selling-points__card:nth-child(2) .icon {
@@ -67459,8 +67459,8 @@ main .standard-content .content {
     background: #d61726;
     border: 0.125rem solid #d61726;
     color: #ffffff;
-    background-color: #10cf53;
-    border-color: #10cf53;
+    background-color: #06ba94;
+    border-color: #06ba94;
     color: #0c0c0e;
 }
 
@@ -67599,7 +67599,7 @@ main .standard-content .content {
 }
 
 .sst .banner__standfirst-cta:visited {
-    border-color: #10cf53;
+    border-color: #06ba94;
     color: #0c0c0e;
 }
 
@@ -67608,28 +67608,28 @@ main .standard-content .content {
 }
 
 .sst .banner__standfirst-cta:focus, .sst .banner__standfirst-cta:active {
-    background-color: #10cf53;
-    border-color: #10cf53;
+    background-color: #06ba94;
+    border-color: #06ba94;
     color: #0c0c0e;
 }
 
 @media (hover: hover) {
     .sst .banner__standfirst-cta:hover {
-        background-color: #0ca040;
-        border-color: #0ca040;
+        background-color: #04896d;
+        border-color: #04896d;
         color: #0c0c0e;
     }
 }
 
 .sst .banner__standfirst-cta:active {
-    background-color: #0ca040;
-    border-color: #0ca040;
+    background-color: #04896d;
+    border-color: #04896d;
 }
 
 .sst .banner__standfirst-cta:disabled {
     color: #0c0c0e;
-    background: #10cf53;
-    border-color: #10cf53;
+    background: #06ba94;
+    border-color: #06ba94;
 }
 
 .sst .banner__standfirst-cta:active span, .sst .banner__standfirst-cta:focus span, .sst .banner__standfirst-cta:hover span {
@@ -67641,7 +67641,7 @@ main .standard-content .content {
 }
 
 .sst .school__content__links--right {
-    background-color: #10cf53;
+    background-color: #06ba94;
 }
 
 .sst .school__content__links--right h2 {
@@ -67759,20 +67759,20 @@ main .standard-content .content {
 }
 
 .sst .school__content__links--left:hover .linked-heading__text:before {
-    background: #10cf53;
+    background: #06ba94;
 }
 
 .sst .school__content__links--left .linked-heading__icons {
-    background: #10cf53;
+    background: #06ba94;
     color: #0c0c0e;
 }
 
 .sst .school__statistic h2:after {
-    border-bottom-color: #10cf53;
+    border-bottom-color: #06ba94;
 }
 
 .sst .promo-area__wrap .promo-area .promo-area__content {
-    background: #10cf53;
+    background: #06ba94;
     color: #0c0c0e;
 }
 
