@@ -7697,9 +7697,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/web.timers.js */ "./node_modules/core-js/modules/web.timers.js");
 /* harmony import */ var core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var core_js_modules_es_object_assign_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.object.assign.js */ "./node_modules/core-js/modules/es.object.assign.js");
-/* harmony import */ var core_js_modules_es_object_assign_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_assign_js__WEBPACK_IMPORTED_MODULE_9__);
-
 
 
 
@@ -7892,24 +7889,25 @@ function launch(el) {
   // Some settings like height and top will need amend if rootMargin is changed
   */
 
+  /*
   function createDebugArea() {
-    var debugArea = document.createElement('div');
-    debugArea.id = 'debugArea';
-    var debugAreaStyles = {
-      'z-index': '1000',
-      'background-color': 'rgba(0,128,0,.5)',
-      position: 'fixed',
-      top: '69px',
-      left: '0',
-      width: '100vw',
-      height: 'calc(100vh - (69px + 60%))',
-      'pointer-events': 'none'
-    };
-    Object.assign(debugArea.style, debugAreaStyles);
-    document.body.appendChild(debugArea);
+      const debugArea = document.createElement('div');
+      debugArea.id = 'debugArea';
+      const debugAreaStyles = {
+          'z-index': '1000',
+          'background-color': 'rgba(0,128,0,.5)',
+          position: 'fixed',
+          top: '69px',
+          left: '0',
+          width: '100vw',
+          height: 'calc(100vh - (69px + 60%))',
+          'pointer-events': 'none',
+      };
+      Object.assign(debugArea.style, debugAreaStyles);
+      document.body.appendChild(debugArea);
   }
-
-  createDebugArea();
+   createDebugArea();
+  */
 }
 
 var className = 'nav-sticky__wrap';
