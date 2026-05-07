@@ -7697,6 +7697,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/web.timers.js */ "./node_modules/core-js/modules/web.timers.js");
 /* harmony import */ var core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_timers_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_9__);
+
 
 
 
@@ -7844,14 +7847,14 @@ function launch(el) {
   function highlightNavMenuItem(elem) {
     stickyNavMenuItemLinks.forEach(function (item) {
       if (scrollActiveLink) {
-        if (item.getAttribute('href') === scrollActiveLink) {
+        if ('#' + item.getAttribute('href').split('#')[1] === scrollActiveLink) {
           item.classList.add('nav-sticky__item__link--active');
           scrollNavItemToView(item, 700);
         } else {
           item.classList.remove('nav-sticky__item__link--active');
         }
       } else {
-        if (item.getAttribute('href') === '#' + elem.id && !scrollActiveLink) {
+        if (item.getAttribute('href').split('#')[1] === elem.id && !scrollActiveLink) {
           item.classList.add('nav-sticky__item__link--active');
           scrollNavItemToView(item, 700);
         } else {
