@@ -46435,10 +46435,11 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
     display: flex;
     width: 100%;
     max-width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 .nav-sticky__inner {
-    background: #ffffff;
     z-index: 2;
     max-width: 100%;
     width: 100%;
@@ -46491,6 +46492,32 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
     .nav-sticky__inner--stick {
         max-width: 7680px;
     }
+}
+
+.nav-sticky__inner--stick .nav-sticky__inner:before {
+    background-color: #0c0c0e;
+}
+
+.nav-sticky__inner--stick .nav-sticky--left:before {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(3, 3, 3, 0.9) 60%);
+}
+
+.nav-sticky__inner--stick .nav-sticky--right:after {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 60%);
+}
+
+.nav-sticky__inner--stick .nav-sticky__item:focus-within {
+    outline: 0.1875rem solid #ffffff;
+    outline-offset: 0.25rem;
+    color: #ffffff;
+}
+
+.nav-sticky__inner--stick .nav-sticky__item__link {
+    color: #ffffff;
+}
+
+.nav-sticky__inner--stick .nav-sticky__item__link:visited {
+    color: #ffffff;
 }
 
 .nav-sticky__helper {
@@ -46554,7 +46581,7 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
     flex-direction: row;
     align-items: flex-start;
     list-style: none;
-    overflow-x: auto;
+    overflow: auto;
     scroll-behavior: smooth;
     white-space: nowrap;
     gap: 0.5rem;
@@ -46612,6 +46639,10 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
     }
 }
 
+.nav-sticky__item__link:visited {
+    color: #494949;
+}
+
 .nav-sticky__item__link:hover {
     background: #a1a1a1;
     text-decoration: underline;
@@ -46619,13 +46650,18 @@ main .campuses__links .campuses__links__card--label .campuses__links__card--labe
 }
 
 .nav-sticky__item__link:focus, .nav-sticky__item__link:active {
-    background: color-brand-primary;
+    background: #d61726;
     color: #ffffff;
     outline: none;
+    border-bottom: none;
 }
 
 .nav-sticky__item__link--active {
     background: #d61726;
+    color: #ffffff;
+}
+
+.nav-sticky__item__link--active:visited {
     color: #ffffff;
 }
 
