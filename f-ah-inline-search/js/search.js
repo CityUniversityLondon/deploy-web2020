@@ -3968,45 +3968,55 @@ Search__Results__BrowsePeople.propTypes = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_object_freeze_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.freeze.js */ "./node_modules/core-js/modules/es.object.freeze.js");
 /* harmony import */ var core_js_modules_es_object_freeze_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_freeze_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.promise.js */ "./node_modules/core-js/modules/es.promise.js");
-/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_promise_finally_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.promise.finally.js */ "./node_modules/core-js/modules/es.promise.finally.js");
-/* harmony import */ var core_js_modules_es_promise_finally_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_finally_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.array.slice.js */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_es_array_is_array_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.array.is-array.js */ "./node_modules/core-js/modules/es.array.is-array.js");
-/* harmony import */ var core_js_modules_es_array_is_array_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_is_array_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
-/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator.js */ "./node_modules/core-js/modules/es.symbol.iterator.js");
-/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
-/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
-/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! core-js/modules/es.array.from.js */ "./node_modules/core-js/modules/es.array.from.js");
-/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_16__);
-/* harmony import */ var _finder_funnelback__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../finder/funnelback */ "./src/patterns/finder/funnelback.js");
-/* harmony import */ var _finder_logic_FB_formatter__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../finder/logic/FB-formatter */ "./src/patterns/finder/logic/FB-formatter.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
-/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_19__);
-/* harmony import */ var _components_inline_search_inline_query__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/inline/search--inline__query */ "./src/patterns/search/components/inline/search--inline__query.js");
-/* harmony import */ var _components_inline_search_inline_suggestions__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./components/inline/search--inline__suggestions */ "./src/patterns/search/components/inline/search--inline__suggestions.js");
-/* harmony import */ var _components_inline_search_inline_topresults__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/inline/search--inline__topresults */ "./src/patterns/search/components/inline/search--inline__topresults.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.slice.js */ "./node_modules/core-js/modules/es.array.slice.js");
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_array_is_array_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.is-array.js */ "./node_modules/core-js/modules/es.array.is-array.js");
+/* harmony import */ var core_js_modules_es_array_is_array_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_is_array_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator.js */ "./node_modules/core-js/modules/es.symbol.iterator.js");
+/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! core-js/modules/es.array.from.js */ "./node_modules/core-js/modules/es.array.from.js");
+/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _finder_funnelback__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../finder/funnelback */ "./src/patterns/finder/funnelback.js");
+/* harmony import */ var _finder_logic_FB_formatter__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../finder/logic/FB-formatter */ "./src/patterns/finder/logic/FB-formatter.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/index.js");
+/* harmony import */ var focus_trap__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(focus_trap__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _components_inline_search_inline_query__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/inline/search--inline__query */ "./src/patterns/search/components/inline/search--inline__query.js");
+/* harmony import */ var _components_inline_search_inline_suggestions__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/inline/search--inline__suggestions */ "./src/patterns/search/components/inline/search--inline__suggestions.js");
+/* harmony import */ var _components_inline_search_inline_topresults__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./components/inline/search--inline__topresults */ "./src/patterns/search/components/inline/search--inline__topresults.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -4020,22 +4030,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**
  * Inline search form.
@@ -4054,19 +4048,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var maximumSuggestions = 10;
-var initialResponse = Object.freeze({
-  bestBets: [],
-  facets: [],
-  results: [],
-  spell: null,
-  summary: {
-    currEnd: 0,
-    currStart: 0,
-    numRanks: 0,
-    totalMatching: 0
-  }
-});
+var modal = null;
+
+var getmodal = function getmodal() {
+  return modal;
+};
 /**
  * Launch the inline search.
  *
@@ -4074,13 +4060,59 @@ var initialResponse = Object.freeze({
  * @return {object} The React component to render.
  */
 
+
 function InlineSearch(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_15__["useState"])(false),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_13__["useState"])(false),
       _useState2 = _slicedToArray(_useState, 2),
       display = _useState2[0],
       setDisplay = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_15__["useState"])({
+  var focusTrap = Object(react__WEBPACK_IMPORTED_MODULE_13__["useRef"])(null);
+  var openButtonRef = Object(react__WEBPACK_IMPORTED_MODULE_13__["useRef"])(null);
+  var modalButtonRef = Object(react__WEBPACK_IMPORTED_MODULE_13__["useRef"])(null);
+  var lastTriggerRef = Object(react__WEBPACK_IMPORTED_MODULE_13__["useRef"])(null);
+
+  var focusSearchInput = function focusSearchInput() {
+    var modal = getmodal();
+    var input = modal ? modal.querySelector('input[name="query"], input') : null;
+
+    if (input) {
+      input.focus({
+        preventScroll: true
+      });
+    }
+  };
+
+  var closeModal = function closeModal() {
+    // Needed to safely close the modal on IOS and make sure input isn't still in focus.
+    // deactivate trap first (prevents it re-focusing input)
+    if (focusTrap && typeof focusTrap.deactivate === 'function') {
+      try {
+        focusTrap.deactivate({
+          returnFocus: false
+        });
+      } catch (err) {
+        focusTrap.deactivate();
+      }
+    }
+
+    var target = lastTriggerRef.current || openButtonRef.current || modalButtonRef.current;
+
+    if (target && typeof target.focus === 'function') {
+      target.focus();
+    }
+
+    var el = document.activeElement;
+
+    if (el && typeof el.blur === 'function') {
+      el.blur();
+    }
+
+    setDisplay(false);
+  };
+
+  var maximumSuggestions = 10;
+  var initialQuery = {
     collection: props.config.collection,
     misspelling: null,
     numRanks: props.config.numRanks,
@@ -4090,151 +4122,133 @@ function InlineSearch(props) {
     fixedFacets: [],
     fixedParameters: [],
     parameters: []
-  }),
+  };
+  /**
+   * Dummy, empty Funnelback response object for initial state.
+   */
+
+  var initialResponse = Object.freeze({
+    bestBets: [],
+    facets: [],
+    results: [],
+    spell: null,
+    summary: {
+      currEnd: 0,
+      currStart: 0,
+      numRanks: 0,
+      totalMatching: 0
+    }
+  });
+  var initialSuggestions = []; // State objects for the Funnelback query and response
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_13__["useState"])(initialQuery),
       _useState4 = _slicedToArray(_useState3, 2),
       query = _useState4[0],
       setQuery = _useState4[1];
 
-  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_15__["useState"])(initialResponse),
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_13__["useState"])(initialResponse),
       _useState6 = _slicedToArray(_useState5, 2),
       funnelbackResponse = _useState6[0],
       setResponse = _useState6[1];
 
-  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_15__["useState"])([]),
+  var _useState7 = Object(react__WEBPACK_IMPORTED_MODULE_13__["useState"])(initialSuggestions),
       _useState8 = _slicedToArray(_useState7, 2),
       suggestions = _useState8[0],
-      setSuggestions = _useState8[1];
+      setSuggestions = _useState8[1]; // Boolean to indicate when a query is in progress
 
-  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_15__["useState"])(false),
+
+  var _useState9 = Object(react__WEBPACK_IMPORTED_MODULE_13__["useState"])(false),
       _useState10 = _slicedToArray(_useState9, 2),
       updating = _useState10[0],
-      setUpdating = _useState10[1];
+      setUpdating = _useState10[1]; // Boolean to indicate when a query is in progress
 
-  var _useState11 = Object(react__WEBPACK_IMPORTED_MODULE_15__["useState"])(false),
+
+  var _useState11 = Object(react__WEBPACK_IMPORTED_MODULE_13__["useState"])(false),
       _useState12 = _slicedToArray(_useState11, 2),
       suggestionsUpdating = _useState12[0],
-      setSuggestionsUpdating = _useState12[1];
+      setSuggestionsUpdating = _useState12[1]; // Request token from the Funnelback request object, so we can cancel if
+  // another request is triggered by the user
 
-  var _useState13 = Object(react__WEBPACK_IMPORTED_MODULE_15__["useState"])(false),
+
+  var _useState13 = Object(react__WEBPACK_IMPORTED_MODULE_13__["useState"])({
+    cancel: function cancel() {}
+  }),
       _useState14 = _slicedToArray(_useState13, 2),
-      update = _useState14[0],
-      setUpdate = _useState14[1];
+      call = _useState14[0],
+      setCall = _useState14[1]; // useEffect doesn't deep inspect objects, so we need an additional, plain
+  // state variable to indicate that the query state has changed and the
+  // component should render
+  // the value isn't important, it's just easy to toggle a bool back and forth
 
-  var modalRef = Object(react__WEBPACK_IMPORTED_MODULE_15__["useRef"])(null);
-  var focusTrapRef = Object(react__WEBPACK_IMPORTED_MODULE_15__["useRef"])(null);
-  var openButtonRef = Object(react__WEBPACK_IMPORTED_MODULE_15__["useRef"])(null);
-  var modalButtonRef = Object(react__WEBPACK_IMPORTED_MODULE_15__["useRef"])(null);
-  var lastTriggerRef = Object(react__WEBPACK_IMPORTED_MODULE_15__["useRef"])(null);
-  var requestTokenRef = Object(react__WEBPACK_IMPORTED_MODULE_15__["useRef"])(null);
-  var suggestionsRequestTokenRef = Object(react__WEBPACK_IMPORTED_MODULE_15__["useRef"])(null);
-  var focusSearchInput = Object(react__WEBPACK_IMPORTED_MODULE_15__["useCallback"])(function () {
-    var input = modalRef.current ? modalRef.current.querySelector('input[name="query"], input') : null;
 
-    if (input) {
-      input.focus({
-        preventScroll: true
-      });
-    }
-  }, []);
-  var closeModal = Object(react__WEBPACK_IMPORTED_MODULE_15__["useCallback"])(function () {
-    if (focusTrapRef.current && typeof focusTrapRef.current.deactivate === 'function') {
-      try {
-        focusTrapRef.current.deactivate({
-          returnFocus: false
-        });
-      } catch (err) {
-        focusTrapRef.current.deactivate();
-      }
-    }
+  var _useState15 = Object(react__WEBPACK_IMPORTED_MODULE_13__["useState"])(false),
+      _useState16 = _slicedToArray(_useState15, 2),
+      update = _useState16[0],
+      setUpdate = _useState16[1]; // Request token from the Funnelback request object, so we can cancel if
+  // another request is triggered by the user
 
-    var activeElement = document.activeElement;
 
-    if (activeElement && typeof activeElement.blur === 'function') {
-      activeElement.blur();
-    }
+  var _useState17 = Object(react__WEBPACK_IMPORTED_MODULE_13__["useState"])({
+    cancel: function cancel() {}
+  }),
+      _useState18 = _slicedToArray(_useState17, 2),
+      suggestionsCall = _useState18[0],
+      setSuggestionsCall = _useState18[1]; // Retrieve Funnelback results
 
-    var target = lastTriggerRef.current || openButtonRef.current || modalButtonRef.current;
 
-    if (target && typeof target.focus === 'function') {
-      target.focus();
-    }
-
-    setDisplay(false);
-  }, []);
-  Object(react__WEBPACK_IMPORTED_MODULE_15__["useEffect"])(function () {
+  Object(react__WEBPACK_IMPORTED_MODULE_13__["useEffect"])(function () {
+    // indicate a request is in progress
     setUpdating(true);
     setSuggestionsUpdating(true);
+    /**
+     * cancel any requests already in progress
+     *
+     * async requests can return out of order
+     */
 
-    if (requestTokenRef.current) {
-      requestTokenRef.current.cancel();
-    }
+    call.cancel();
+    suggestionsCall.cancel(); // make new, asynchronous requests to Funnelback
 
-    if (suggestionsRequestTokenRef.current) {
-      suggestionsRequestTokenRef.current.cancel();
-    }
-
-    var _find = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_17__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters),
+    var _find = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_15__["find"])(query.collection, query.fixedFacets, query.fixedParameters, query.query, query.sortType, query.startRank, query.numRanks, query.facets, query.parameters),
         _find2 = _slicedToArray(_find, 2),
         request = _find2[0],
         requestToken = _find2[1];
 
-    var _suggest = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_17__["suggest"])(query.collection, query.query),
+    var _suggest = Object(_finder_funnelback__WEBPACK_IMPORTED_MODULE_15__["suggest"])(query.collection, query.query),
         _suggest2 = _slicedToArray(_suggest, 2),
         suggestionsRequest = _suggest2[0],
-        suggestionsRequestToken = _suggest2[1];
+        suggestionsRequestToken = _suggest2[1]; // save the requestTokens
 
-    requestTokenRef.current = requestToken;
-    suggestionsRequestTokenRef.current = suggestionsRequestToken;
+
+    setCall({
+      cancel: function cancel() {
+        requestToken.cancel();
+      }
+    });
+    setSuggestionsCall({
+      cancel: function cancel() {
+        suggestionsRequestToken.cancel();
+      }
+    }); // when the response from Funnelback arrives,
+    // update the results and display them
+
     request.then(function (data) {
-      setResponse(Object(_finder_logic_FB_formatter__WEBPACK_IMPORTED_MODULE_18__["formatFBResponse"])(data));
+      setResponse(Object(_finder_logic_FB_formatter__WEBPACK_IMPORTED_MODULE_16__["formatFBResponse"])(data));
+      setUpdating(false);
     })["catch"](function () {
       setResponse(initialResponse);
-    })["finally"](function () {
       setUpdating(false);
     });
     suggestionsRequest.then(function (data) {
-      setSuggestions(data || []);
-    })["catch"](function () {
-      setSuggestions([]);
-    })["finally"](function () {
-      setSuggestionsUpdating(false);
-    });
-    return function () {
-      requestToken.cancel();
-      suggestionsRequestToken.cancel();
-    };
-  }, [update, query]);
-  Object(react__WEBPACK_IMPORTED_MODULE_15__["useEffect"])(function () {
-    var modalElement = modalRef.current;
-
-    if (!modalElement) {
-      return undefined;
-    }
-
-    if (!focusTrapRef.current) {
-      focusTrapRef.current = focus_trap__WEBPACK_IMPORTED_MODULE_19___default()(modalElement, {
-        initialFocus: false,
-        allowOutsideClick: true,
-        clickOutsideDeactivates: true,
-        onDeactivate: closeModal
-      });
-    }
-
-    if (display) {
-      focusTrapRef.current.activate();
-      requestAnimationFrame(focusSearchInput);
-    } else {
-      try {
-        focusTrapRef.current.deactivate({
-          returnFocus: false
-        });
-      } catch (err) {
-        focusTrapRef.current.deactivate();
+      if (data) {
+        setSuggestions(data);
+        setSuggestionsUpdating(false);
       }
-    }
+    })["catch"](function () {
+      setSuggestions(initialSuggestions);
+    }); // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [update]); // update props so child components can update the query
 
-    return undefined;
-  }, [display, closeModal, focusSearchInput]);
   var updater = {
     query: function query(newQuery) {
       return setQuery(newQuery);
@@ -4246,120 +4260,143 @@ function InlineSearch(props) {
   };
 
   var updateIndicator = function updateIndicator(what) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("p", {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("p", {
       className: "search--inline__results__updating search--inline__results__updating--".concat(what.replace(/ /g, '')),
       "aria-live": "polite"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("span", {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("span", {
       className: "fas fa-sharp fa-spinner fa-pulse icon",
       "aria-hidden": "true"
-    }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("span", null, "Updating ", what, "\u2026"));
-  };
+    }), ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("span", null, "Updating ", what, "\u2026"));
+  }; // trap tab focus when the filters are open
 
-  var openModal = function openModal(trigger) {
-    lastTriggerRef.current = trigger;
-    setDisplay(true);
-  };
 
-  var handleToggle = function handleToggle(event) {
-    lastTriggerRef.current = event.currentTarget;
+  Object(react__WEBPACK_IMPORTED_MODULE_13__["useEffect"])(function () {
+    var modalElement = getmodal();
 
-    if (display) {
-      closeModal();
+    if (!modalElement) {
       return;
     }
 
-    openModal(event.currentTarget);
-  };
+    if (!focusTrap.current) {
+      focusTrap.current = focus_trap__WEBPACK_IMPORTED_MODULE_17___default()(modalElement, {
+        initialFocus: false,
+        allowOutsideClick: true,
+        clickOutsideDeactivates: true,
+        onDeactivate: function onDeactivate() {
+          return closeModal();
+        }
+      });
+    }
 
-  var iconClass = "global-header__search__icon far fa-sharp fa-fw ".concat(display ? 'fa-xmark' : 'fa-search');
-  var ariaLabel = display ? 'Close search' : 'Open search';
-  var veil = display && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+    if (display) {
+      focusTrap.current.activate();
+    } else {
+      focusTrap.current.deactivate();
+    }
+  }, [display]);
+  var iconClass = "global-header__search__icon far fa-sharp fa-fw ".concat(display ? 'fa-xmark' : 'fa-search'),
+      ariaLabel = "".concat(display ? 'Close search' : 'Open search'),
+      veil = display && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
     className: "veil--search",
     "data-on": "true"
-  });
-  var toggleButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("button", {
+  }),
+      toggleButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("button", {
     ref: openButtonRef,
     className: "global-header__search__button",
     type: "button",
     id: "search",
     "aria-expanded": display,
     "aria-label": ariaLabel,
-    onClick: handleToggle
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+    onClick: function onClick(e) {
+      lastTriggerRef.current = e.currentTarget;
+
+      if (display) {
+        closeModal();
+        return;
+      }
+
+      setDisplay(true);
+      focusSearchInput();
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
     className: "global-header__search__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("span", {
     className: "global-header__search__text"
-  }, display ? 'Close' : 'Search'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("span", {
+  }, display ? 'Close' : 'Search'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("span", {
     className: iconClass,
     "aria-hidden": "true"
-  })));
-  var modalToggleButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("button", {
+  }))),
+      modalToggleButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("button", {
     ref: modalButtonRef,
     className: "global-header__search__button",
     type: "button",
     id: "modal-search",
     "aria-expanded": display,
-    "aria-label": ariaLabel,
-    onClick: handleToggle
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+    onClick: function onClick(e) {
+      lastTriggerRef.current = e.currentTarget;
+
+      if (display) {
+        closeModal();
+        return;
+      }
+
+      setDisplay(true);
+      focusSearchInput();
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
     className: "global-header__search__wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("span", {
     className: "global-header__search__text"
-  }, display ? 'Close' : 'Search'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("span", {
+  }, display ? 'Close' : 'Search'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("span", {
     className: iconClass,
     "aria-hidden": "true"
-  })));
-  var inputField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_components_inline_search_inline_query__WEBPACK_IMPORTED_MODULE_20__["default"], {
+  }))),
+      inputField = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_components_inline_search_inline_query__WEBPACK_IMPORTED_MODULE_18__["default"], {
     config: props.config,
     query: query,
     update: updater,
     updating: updating
-  });
-  var suggestionsList = suggestionsUpdating ? updateIndicator('suggestions') : suggestions && suggestions.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_components_inline_search_inline_suggestions__WEBPACK_IMPORTED_MODULE_21__["default"], {
+  }),
+      suggestionsList = suggestionsUpdating ? updateIndicator('suggestions') : suggestions && suggestions.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_components_inline_search_inline_suggestions__WEBPACK_IMPORTED_MODULE_19__["default"], {
     query: query,
     suggestions: suggestions.slice(0, maximumSuggestions)
-  }) : null;
-  var topResults = updating ? updateIndicator('top results') : funnelbackResponse && funnelbackResponse.results.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(_components_inline_search_inline_topresults__WEBPACK_IMPORTED_MODULE_22__["default"], {
+  }) : null,
+      topResults = updating ? updateIndicator('top results') : funnelbackResponse && funnelbackResponse.results.length > 0 ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(_components_inline_search_inline_topresults__WEBPACK_IMPORTED_MODULE_20__["default"], {
     query: query,
     results: funnelbackResponse.results
   }) : null;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_15___default.a.Fragment, null, toggleButton, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_13___default.a.Fragment, null, toggleButton, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
     className: "global-header__search__modal",
-    ref: modalRef,
-    role: "dialog",
-    "aria-modal": "true",
-    "aria-labelledby": "inline-search-title"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+    ref: function ref(modalRef) {
+      return modal = modalRef;
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
     className: "global-header__search__modal__header"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
     className: "header-logo header-logo--city"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
     className: "header-logo__responsive"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("a", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("a", {
     href: "https://www.citystgeorges.ac.uk",
     rel: "home"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("img", {
     className: "logo",
     src: "https://www.citystgeorges.ac.uk/__data/assets/file/0007/860452/city-st-georges-white-responsive-logo.svg",
     width: "180",
     alt: "City St George's, University of London"
-  })))), modalToggleButton), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+  })))), modalToggleButton), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
     className: "global-header__search__modal__body"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("h2", {
-    id: "inline-search-title"
-  }, "What are you looking for?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("form", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("h2", null, "What are you looking for?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("form", {
     action: "/search",
     method: "get"
-  }, inputField), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_15___default.a.createElement("div", {
+  }, inputField), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
     className: "global-header__search__modal__body__results"
   }, suggestionsList, topResults))), veil);
 }
 
 InlineSearch.propTypes = {
-  config: prop_types__WEBPACK_IMPORTED_MODULE_16___default.a.shape({
-    collection: prop_types__WEBPACK_IMPORTED_MODULE_16___default.a.string.isRequired,
-    numRanks: prop_types__WEBPACK_IMPORTED_MODULE_16___default.a.number.isRequired
-  }).isRequired
+  config: prop_types__WEBPACK_IMPORTED_MODULE_14___default.a.object,
+  element: prop_types__WEBPACK_IMPORTED_MODULE_14___default.a.object
 };
 /* harmony default export */ __webpack_exports__["default"] = (InlineSearch);
 
