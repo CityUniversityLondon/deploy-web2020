@@ -31740,6 +31740,15 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
         display: flex;
         justify-content: center;
     }
+}
+
+@media screen and (max-width: 767px) {
+    .v26-pagination__wrapper .v26-pagination__controls .v26-pagination__controls__ellipsis {
+        min-width: 1.75rem;
+    }
+}
+
+@media screen {
     .v26-pagination__wrapper .v26-pagination__controls .v26-pagination__controls__ellipsis span {
         display: inline-block;
         padding-bottom: 0.125rem;
@@ -31862,7 +31871,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
     .v26-pagination__wrapper .v26-pagination__controls .v26-pagination__controls__button--next .v26-pagination__controls__icon,
     .v26-pagination__wrapper .v26-pagination__controls .v26-pagination__controls__button--prev .v26-pagination__controls__icon {
         margin-top: 3px;
