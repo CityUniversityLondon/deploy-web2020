@@ -44852,7 +44852,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .v26-finder_filters__checkbox_wrap:has([name='meta_clearing_sand']) {
-    background-color: #d4d4d8;
+    background-color: #ede8f2;
+    border-left: 0.25rem solid #9b25c4;
     padding: 2rem 1.25rem;
     margin-top: 1rem;
 }
@@ -45008,13 +45009,16 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     border: initial;
 }
 
-.v26-finder__filters__heading {
-    display: none;
-}
-
-@media (max-width: 1023px) {
+@media (min-width: 1025px) {
     .v26-finder__filters__heading {
-        display: block;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
     }
 }
 
