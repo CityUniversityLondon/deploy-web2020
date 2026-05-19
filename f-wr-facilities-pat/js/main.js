@@ -910,13 +910,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
 /* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
-/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_7__);
-
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
@@ -934,8 +931,7 @@ __webpack_require__.r(__webpack_exports__);
  * @author Web Development
  * @copyright City St George's, University of London 2018-2019
  */
-var className = 'accordion--gallery',
-    headingClassName = 'accordion__heading';
+
 /**
  * Respond to button clicks - open if closed, close if open.
  *
@@ -947,7 +943,6 @@ var className = 'accordion--gallery',
  * @param {HTMLElement[]} headings - All headings in this accordion.
  * @param {boolean} [toggleOpen] - Should other accordion sections close? Default to false.
  */
-
 function setImageState(accordionImages, headingId) {
   accordionImages.forEach(function (image) {
     var imageId = image.getAttribute('data-id');
@@ -980,13 +975,17 @@ function setImageState(accordionImages, headingId) {
  */
 
 
-function launchAccordionGallery(accordion) {
-  var headings = Array.from(accordion.parentNode.querySelectorAll("#".concat(accordion.id, " > .").concat(headingClassName)));
-  var accordionImages = Array.from(accordion.parentNode.querySelectorAll('.accordion-gallery__images ul > li'));
+var className = 'accordion--gallery',
+    headingClassName = 'accordion__heading';
+
+function launchAccordionGallery(wrap) {
+  console.log('launching accordion gallery');
+  var headings = Array.from(wrap.querySelectorAll(".accordion  > .".concat(headingClassName)));
+  var accordionImages = Array.from(wrap.querySelectorAll('.accordion--gallery__images ul > li'));
+  accordionImages[0].dataset.active = 'true';
   headings.forEach(function (heading) {
     var headingState = heading.getAttribute('data-open');
     var headingId = heading.id;
-    console.log(headingState, headingId);
     headingState === 'true' ? setImageState(accordionImages, headingId) : null;
     heading.addEventListener('click', function () {
       setImageState(accordionImages, headingId);

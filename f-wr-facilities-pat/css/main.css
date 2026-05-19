@@ -10613,12 +10613,86 @@ form:not([class]) .form__required-note--marker,
     top: 2.5rem;
 }
 
-.accordion-gallery__images ul {
+.accordion--gallery__images ul {
+    position: relative;
+    overflow: hidden;
+}
+
+.accordion--gallery__images li {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.accordion--gallery__images li[data-active='true'] {
+    height: auto;
+    opacity: 1;
+}
+
+.accordion--gallery {
+    display: flex;
+    flex-direction: row;
+}
+
+.accordion--gallery > div {
+    flex: 1;
+}
+
+@media (max-width: 767px) {
+    .accordion--gallery {
+        display: none;
+    }
+}
+
+.js .accordion--gallery__container {
+    padding: 1rem;
+}
+
+.js .accordion--gallery__container .accordion__heading[data-open='true'] + .accordion__body {
     position: relative;
 }
 
-.accordion-gallery__images li[data-active='true'] {
-    border: thin solid lime;
+.js .accordion--gallery__container .accordion__heading[data-open='true'] + .accordion__body:after {
+    content: '';
+    height: 2rem;
+    width: 5rem;
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    bottom: 0.125rem;
+}
+
+@media (min-width: 768px) {
+    .js .accordion--gallery__container .carousel-gallery-default {
+        display: none;
+    }
+}
+
+.no-js .accordion--gallery__container,
+.js .accordion--gallery__container {
+    background: #494949;
+    color: #ffffff;
+}
+
+.no-js .accordion--gallery__container .accordion__heading button,
+.js .accordion--gallery__container .accordion__heading button {
+    color: #ffffff;
+}
+
+.no-js .accordion--gallery__container .accordion__heading[data-open='true'] button,
+.js .accordion--gallery__container .accordion__heading[data-open='true'] button {
+    background: initial;
+}
+
+.no-js .accordion--gallery__container .accordion__heading[data-open='true'] + .accordion__body:after,
+.js .accordion--gallery__container .accordion__heading[data-open='true'] + .accordion__body:after {
+    background: #790b21;
+}
+
+.no-js .accordion--gallery__container .accordion__body,
+.js .accordion--gallery__container .accordion__body {
+    background: initial;
 }
 
 .back-to-top {
