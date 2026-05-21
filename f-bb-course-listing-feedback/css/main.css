@@ -31874,7 +31874,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 @media screen and (max-width: 767px) {
     .v26-pagination__wrapper .v26-pagination__controls .v26-pagination__controls__button--next .v26-pagination__controls__icon,
     .v26-pagination__wrapper .v26-pagination__controls .v26-pagination__controls__button--prev .v26-pagination__controls__icon {
-        margin-top: 3px;
+        margin-top: 0.188rem;
         /* Visual shim to compensate for icon whitespace */
         display: inline-block;
     }
