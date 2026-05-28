@@ -10129,14 +10129,12 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
         display: flex;
         justify-content: space-between;
         flex-direction: row-reverse;
+        column-gap: 0.75rem;
     }
 }
 
 .card--v26-course__label--clearing {
     margin-top: initial;
-    font-size: 0.889rem;
-    line-height: 1.625;
-    letter-spacing: 0em;
     background-color: #9b25c4;
     font-weight: 700;
     padding-left: 0.75rem;
@@ -10148,32 +10146,42 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     height: fit-content;
 }
 
-@media (min-width: 1280px) and (max-width: 1919px) {
+@media (max-width: 1023px) {
     .card--v26-course__label--clearing {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .card--v26-course__label--clearing {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .card--v26-course__label--clearing {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .card--v26-course__label--clearing {
-        letter-spacing: -0.017em;
+        margin-bottom: 0.5rem;
     }
 }
 
 .card--v26-course__label--clearing p {
     margin-top: initial;
+    font-family: "ff-meta-web-pro", sans-serif;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--v26-course__label--clearing p {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--v26-course__label--clearing p {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--v26-course__label--clearing p {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--v26-course__label--clearing p {
+        letter-spacing: -0.017em;
+    }
 }
 
 article a {
