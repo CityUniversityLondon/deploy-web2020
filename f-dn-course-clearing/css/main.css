@@ -44942,12 +44942,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     margin-top: 1rem;
 }
 
-@media (max-width: 1023px) {
-    .v26-finder_filters__checkbox_wrap:has([name='meta_clearing_sand']) {
-        padding-top: initial;
-    }
-}
-
 .v26-finder_filters__checkbox_wrap .v26-finder_filters__checkbox[name='meta_clearing_sand']:not(:checked) + .v26-finder_filters__label::before {
     background-color: #ffffff;
 }
