@@ -9678,7 +9678,14 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 .card--v26-course {
     border-bottom: solid #494949 0.0025rem;
-    padding: 2.25rem 0;
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+}
+
+@media (max-width: 1023px) {
+    .card--v26-course:first-child {
+        padding-top: initial;
+    }
 }
 
 .card--v26-course.card {
@@ -44603,7 +44610,15 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 
 .v25-finder__header {
-    padding: 3rem 1rem 1.5rem 1rem;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 1023px) {
+    .v25-finder__header {
+        padding-top: 1.5rem;
+    }
 }
 
 .v26-finder__fullwidth__wrapper {
@@ -44669,6 +44684,12 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .v26-finder__query {
     padding: 1.5rem 1rem 3rem 1rem;
+}
+
+@media (max-width: 1023px) {
+    .v26-finder__query {
+        padding: 1.5rem 1rem 1.5rem 1rem;
+    }
 }
 
 .v26-finder__query__input__wrapper {
@@ -44914,8 +44935,17 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 .v26-finder_filters__checkbox_wrap:has([name='meta_clearing_sand']) {
     background-color: #ede8f2;
     border-left: 0.25rem solid #9b25c4;
-    padding: 2rem 1.25rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
     margin-top: 1rem;
+}
+
+@media (max-width: 1023px) {
+    .v26-finder_filters__checkbox_wrap:has([name='meta_clearing_sand']) {
+        padding-top: initial;
+    }
 }
 
 .v26-finder_filters__checkbox_wrap .v26-finder_filters__checkbox[name='meta_clearing_sand']:not(:checked) + .v26-finder_filters__label::before {

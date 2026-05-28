@@ -9660,7 +9660,14 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 
 .card--v26-course {
     border-bottom: solid #494949 0.0025rem;
-    padding: 2.25rem 0;
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+}
+
+@media (max-width: 1023px) {
+    .card--v26-course:first-child {
+        padding-top: initial;
+    }
 }
 
 .card--v26-course.card {
