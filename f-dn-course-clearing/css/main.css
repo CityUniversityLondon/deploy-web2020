@@ -44939,7 +44939,6 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
     padding-bottom: 2rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-    margin-top: 1rem;
 }
 
 .v26-finder_filters__checkbox_wrap .v26-finder_filters__checkbox[name='meta_clearing_sand']:not(:checked) + .v26-finder_filters__label::before {
