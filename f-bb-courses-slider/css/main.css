@@ -33701,8 +33701,7 @@ blockquote footer cite {
 @media (min-width: 900px) {
     .slider-v26 .slider__body {
         width: 110%;
-        transform: translateX(-10%);
-        margin: auto;
+        margin: auto 0 auto -10%;
     }
 }
 
