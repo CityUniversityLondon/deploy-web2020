@@ -33698,7 +33698,7 @@ blockquote footer cite {
     background-color: #d8d8d8;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 900px) {
     .slider-v26 .slider__body {
         width: 110%;
         transform: translateX(-10%);
@@ -33718,7 +33718,7 @@ blockquote footer cite {
     right: 0;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 900px) {
     .slider-v26 .embla__slide {
         display: grid;
         grid-template-columns: 50% 50%;
