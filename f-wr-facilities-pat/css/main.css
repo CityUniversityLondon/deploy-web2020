@@ -10424,9 +10424,6 @@ form:not([class]) .form__required-note--marker,
         background-color: #f2f2f2;
         padding: 1rem;
     }
-    .js .accordion-v26.accordion-v26--dark > .accordion__heading {
-        border-bottom: 0.0625rem solid #e5e5e5;
-    }
     .js .accordion-v26.accordion-v26--dark > .accordion__heading:focus {
         outline: 0.125rem dotted #0c0c0e;
     }
@@ -10448,6 +10445,9 @@ form:not([class]) .form__required-note--marker,
     }
     .js .accordion-v26.accordion-v26--dark > .accordion__heading button:active {
         outline: 0.125rem dotted #0c0c0e;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading button div {
+        border-bottom: 0.0625rem solid #e5e5e5;
     }
     .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] button {
         border-top: 0.125rem dotted #0c0c0e;
@@ -10481,9 +10481,6 @@ form:not([class]) .form__required-note--marker,
         border-style: dotted;
         border-color: #0c0c0e;
     }
-    .js .accordion-v26.accordion-v26--light > .accordion__heading {
-        border-bottom: 0.0625rem solid #e5e5e5;
-    }
     .js .accordion-v26.accordion-v26--light > .accordion__heading:focus {
         outline: 0.125rem dotted #0c0c0e;
     }
@@ -10497,16 +10494,21 @@ form:not([class]) .form__required-note--marker,
     .js .accordion-v26.accordion-v26--light > .accordion__heading button:active {
         outline: 0.125rem dotted #ffffff;
     }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading button div {
+        border-bottom: 0.0625rem solid #e5e5e5;
+    }
     .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] button {
         background: initial;
         border-top: 0.125rem dotted #ffffff;
         border-left: 0.125rem dotted #ffffff;
         border-right: 0.125rem dotted #ffffff;
+        border-bottom: none;
     }
     .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] button:focus, .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] button:active {
         border-top: 0.125rem dotted #ffffff;
         border-left: 0.125rem dotted #ffffff;
         border-right: 0.125rem dotted #ffffff;
+        border-bottom: none;
     }
     .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body {
         border-left: 0.125rem dotted #ffffff;
@@ -10516,13 +10518,14 @@ form:not([class]) .form__required-note--marker,
     .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body:focus, .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body:active {
         border-style: dotted;
     }
-    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body:after {
+    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body .wrapper--accordion__body__content:after {
         background: #790b21;
     }
     .js .accordion-v26.accordion-v26--light > .accordion__heading + .accordion__body {
         background: initial;
     }
     .js .accordion-v26 > .accordion__heading {
+        border-bottom: 0;
         margin-top: 0;
     }
     .js .accordion-v26 > .accordion__heading:focus {
@@ -10539,7 +10542,10 @@ form:not([class]) .form__required-note--marker,
         letter-spacing: -0.008em;
         width: 100%;
         text-align: left;
-        padding: 1rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0;
         outline: 0.125rem solid transparent;
     }
 }
@@ -10575,6 +10581,7 @@ form:not([class]) .form__required-note--marker,
         grid-column-gap: 1rem;
         grid-row-gap: 1rem;
         grid-column-gap: 0;
+        padding-bottom: 1rem;
     }
     .js .accordion-v26 > .accordion__heading button .accordion__heading__indicator {
         align-self: center;
@@ -10600,40 +10607,29 @@ form:not([class]) .form__required-note--marker,
     .js .accordion-v26 > .accordion__heading button:focus {
         border: 0;
     }
-    .js .accordion-v26 > .accordion__heading[data-open='true'] button {
-        border-bottom: none;
-    }
-    .js .accordion-v26 > .accordion__heading[data-open='true'] button .accordion__heading__indicator::before {
-        transform: rotate(180deg);
-    }
-    .js .accordion-v26 > .accordion__heading[data-open='true'] + .accordion__body {
-        position: relative;
-    }
-    .js .accordion-v26 > .accordion__heading[data-open='true'] + .accordion__body:after {
-        content: '';
-        height: 0.125rem;
-        width: 100%;
-        position: absolute;
-        display: inline-block;
-        left: 0;
-        bottom: 0.125rem;
-    }
     .js .accordion-v26 > .accordion__heading:first-of-type {
         margin-top: 1rem;
     }
     .js .accordion-v26 > .accordion__heading[data-open='true'] {
         margin-top: 1rem;
-        border-bottom: 0;
     }
     .js .accordion-v26 > .accordion__heading[data-open='true']:focus, .js .accordion-v26 > .accordion__heading[data-open='true']:active {
         outline: 0;
     }
     .js .accordion-v26 > .accordion__heading[data-open='true'] button {
-        padding: 0;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 0;
+        border-bottom: none;
     }
     .js .accordion-v26 > .accordion__heading[data-open='true'] button .accordion__heading__text,
     .js .accordion-v26 > .accordion__heading[data-open='true'] button .accordion__heading__indicator {
-        padding: 1rem;
+        padding: 0;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] button .accordion__heading__indicator::before {
+        content: "\f078";
+        transform: rotate(180deg);
     }
 }
 
@@ -10646,6 +10642,9 @@ form:not([class]) .form__required-note--marker,
 @media screen {
     .js .accordion-v26 > .accordion__heading[data-open='true'] button:focus, .js .accordion-v26 > .accordion__heading[data-open='true'] button:active {
         outline: 0;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] button div {
+        border-bottom: none;
     }
     .js .accordion-v26 > .accordion__heading[data-open='true'] + .accordion__body {
         border-top: 0;
@@ -10676,6 +10675,20 @@ form:not([class]) .form__required-note--marker,
     }
     .js .accordion-v26 > .accordion__heading + .accordion__body[data-closed='true'] {
         display: none;
+    }
+    .js .accordion-v26 > .accordion__heading + .accordion__body .wrapper--accordion__body__content {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+    .js .accordion-v26 > .accordion__heading + .accordion__body .wrapper--accordion__body__content:after {
+        content: '';
+        height: 0.0625rem;
+        width: 100%;
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        bottom: 0.125rem;
     }
 }
 
@@ -10873,6 +10886,21 @@ form:not([class]) .form__required-note--marker,
     top: 2.5rem;
 }
 
+.accordion--gallery {
+    display: flex;
+    flex-direction: row;
+}
+
+.accordion--gallery > div {
+    flex: 1;
+}
+
+@media (max-width: 767px) {
+    .accordion--gallery {
+        display: none;
+    }
+}
+
 .accordion--gallery__images ul {
     position: relative;
     overflow: hidden;
@@ -10910,44 +10938,82 @@ form:not([class]) .form__required-note--marker,
     width: 100%;
 }
 
-.accordion--gallery__heading {
-    padding-left: 1rem;
-    font-weight: 200;
-}
-
-.accordion--gallery {
-    display: flex;
-    flex-direction: row;
-}
-
-.accordion--gallery > div {
-    flex: 1;
-}
-
-@media (max-width: 767px) {
-    .accordion--gallery {
-        display: none;
-    }
-}
-
-.js .accordion--gallery__container {
-    padding: 1rem;
-}
-
-@media (min-width: 768px) {
-    .js .accordion--gallery__container .carousel-gallery-default {
-        display: none;
-    }
-}
-
-.accordion--gallery__container {
+.courses-v26--ug__facilities {
     background: #494949;
     color: #ffffff;
 }
 
-.accordion--gallery__container .accordion__body {
-    background: initial;
-    border-color: #ffffff;
+.courses-v26--ug__facilities__heading {
+    padding-left: 1rem;
+    font-weight: 200;
+}
+
+.courses-v26--ug__facilities__container {
+    padding: 1rem;
+}
+
+.courses-v26--ug__facilities__container .accordion-v26[data-count='1'] .accordion__heading {
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    letter-spacing: -0.008em;
+    padding-left: 1rem;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .courses-v26--ug__facilities__container .accordion-v26[data-count='1'] .accordion__heading {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .courses-v26--ug__facilities__container .accordion-v26[data-count='1'] .accordion__heading {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .courses-v26--ug__facilities__container .accordion-v26[data-count='1'] .accordion__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .courses-v26--ug__facilities__container .accordion-v26[data-count='1'] .accordion__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 768px) {
+    .js .courses-v26--ug__facilities .carousel-gallery-default {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .courses-v26--ug__facilities__video {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .courses-v26--ug__facilities__video__intro {
+        padding: 2rem 0;
+    }
+    .courses-v26--ug__facilities__video__intro p {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .embedded-video {
+        padding-top: 0;
+    }
+}
+
+.courses-v26--ug__facilities[data-type='video'] .courses-v26--ug__facilities__heading {
+    padding-left: 0;
 }
 
 .back-to-top {

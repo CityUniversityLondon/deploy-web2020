@@ -1338,9 +1338,8 @@ function launchAccordion(accordion) {
         zenscroll__WEBPACK_IMPORTED_MODULE_13___default.a.to(heading, scrollDuration);
       };
     }
-  }
+  } //accordion.classList.remove('accordion');
 
-  accordion.classList.remove('accordion');
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
