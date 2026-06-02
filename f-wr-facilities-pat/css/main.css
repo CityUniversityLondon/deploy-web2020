@@ -10419,6 +10419,266 @@ form:not([class]) .form__required-note--marker,
     }
 }
 
+@media screen {
+    .js .accordion-v26 > .accordion__body {
+        background-color: #f2f2f2;
+        padding: 1rem;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading {
+        border-bottom: 0.0625rem solid #e5e5e5;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading:focus {
+        outline: 0.125rem dotted #0c0c0e;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading button {
+        color: #0c0c0e;
+    }
+}
+
+@media screen and (hover: hover) {
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading button:hover {
+        background: #f2f2f2;
+        color: #006bbd;
+    }
+}
+
+@media screen {
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading button:focus {
+        outline: 0.125rem dotted #0c0c0e;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading button:active {
+        outline: 0.125rem dotted #0c0c0e;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] button {
+        border-top: 0.125rem dotted #0c0c0e;
+        border-left: 0.125rem dotted #0c0c0e;
+        border-right: 0.125rem dotted #0c0c0e;
+        border-bottom: 0.0625rem solid #d8d8d8;
+        color: #0c0c0e;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] button:focus, .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] button:active {
+        border-top: 0.125rem dotted #0c0c0e;
+        border-left: 0.125rem dotted #0c0c0e;
+        border-right: 0.125rem dotted #0c0c0e;
+        border-bottom: 0.0625rem solid #d8d8d8;
+    }
+}
+
+@media screen and (hover: hover) {
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] button:hover {
+        background: #f2f2f2;
+        color: #0c0c0e;
+    }
+}
+
+@media screen {
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] + .accordion__body {
+        border-left: 0.125rem dotted #0c0c0e;
+        border-right: 0.125rem dotted #0c0c0e;
+        border-bottom: 0.125rem dotted #0c0c0e;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] + .accordion__body:focus, .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] + .accordion__body:active {
+        border-style: dotted;
+        border-color: #0c0c0e;
+    }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading {
+        border-bottom: 0.0625rem solid #e5e5e5;
+    }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading:focus {
+        outline: 0.125rem dotted #0c0c0e;
+    }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading button {
+        color: #ffffff;
+        border-color: #ffffff;
+    }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading button:focus {
+        outline: 0.125rem dotted #ffffff;
+    }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading button:active {
+        outline: 0.125rem dotted #ffffff;
+    }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] button {
+        background: initial;
+        border-top: 0.125rem dotted #ffffff;
+        border-left: 0.125rem dotted #ffffff;
+        border-right: 0.125rem dotted #ffffff;
+    }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] button:focus, .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] button:active {
+        border-top: 0.125rem dotted #ffffff;
+        border-left: 0.125rem dotted #ffffff;
+        border-right: 0.125rem dotted #ffffff;
+    }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body {
+        border-left: 0.125rem dotted #ffffff;
+        border-right: 0.125rem dotted #ffffff;
+        border-bottom: 0.125rem dotted #ffffff;
+    }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body:focus, .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body:active {
+        border-style: dotted;
+    }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body:after {
+        background: #790b21;
+    }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading + .accordion__body {
+        background: initial;
+    }
+    .js .accordion-v26 > .accordion__heading {
+        margin-top: 0;
+    }
+    .js .accordion-v26 > .accordion__heading:focus {
+        border: 0;
+    }
+    .js .accordion-v26 > .accordion__heading:active {
+        border: 0;
+        border-bottom: 0.0625rem solid transparent;
+        outline: 0;
+    }
+    .js .accordion-v26 > .accordion__heading button {
+        font-size: 1.125rem;
+        line-height: 1.33333;
+        letter-spacing: -0.008em;
+        width: 100%;
+        text-align: left;
+        padding: 1rem;
+        outline: 0.125rem solid transparent;
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+    .js .accordion-v26 > .accordion__heading button {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 3839px) {
+    .js .accordion-v26 > .accordion__heading button {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media screen and (min-width: 3840px) and (max-width: 7679px) {
+    .js .accordion-v26 > .accordion__heading button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media screen and (min-width: 7680px) {
+    .js .accordion-v26 > .accordion__heading button {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media screen {
+    .js .accordion-v26 > .accordion__heading button div {
+        display: grid;
+        grid-template-columns: 9fr 1fr;
+        grid-column-gap: 1rem;
+        grid-row-gap: 1rem;
+        grid-column-gap: 0;
+    }
+    .js .accordion-v26 > .accordion__heading button .accordion__heading__indicator {
+        align-self: center;
+        text-align: right;
+        height: 100%;
+    }
+    .js .accordion-v26 > .accordion__heading button .accordion__heading__indicator:before {
+        content: "\f078";
+        transition: transform 0.5s ease-in-out;
+        display: inline-block;
+        text-decoration: none;
+    }
+}
+
+@media screen and (hover: hover) {
+    .js .accordion-v26 > .accordion__heading button:hover {
+        text-decoration: underline;
+        outline: 0.125rem solid transparent;
+    }
+}
+
+@media screen {
+    .js .accordion-v26 > .accordion__heading button:focus {
+        border: 0;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] button {
+        border-bottom: none;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] button .accordion__heading__indicator::before {
+        transform: rotate(180deg);
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] + .accordion__body {
+        position: relative;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] + .accordion__body:after {
+        content: '';
+        height: 0.125rem;
+        width: 100%;
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        bottom: 0.125rem;
+    }
+    .js .accordion-v26 > .accordion__heading:first-of-type {
+        margin-top: 1rem;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] {
+        margin-top: 1rem;
+        border-bottom: 0;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true']:focus, .js .accordion-v26 > .accordion__heading[data-open='true']:active {
+        outline: 0;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] button {
+        padding: 0;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] button .accordion__heading__text,
+    .js .accordion-v26 > .accordion__heading[data-open='true'] button .accordion__heading__indicator {
+        padding: 1rem;
+    }
+}
+
+@media screen and (hover: hover) {
+    .js .accordion-v26 > .accordion__heading[data-open='true'] button .accordion__heading__text:hover {
+        text-decoration: underline;
+    }
+}
+
+@media screen {
+    .js .accordion-v26 > .accordion__heading[data-open='true'] button:focus, .js .accordion-v26 > .accordion__heading[data-open='true'] button:active {
+        outline: 0;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] + .accordion__body {
+        border-top: 0;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] + .accordion__body p {
+        margin: 1rem 0;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] + .accordion__body > :first-child {
+        margin-top: 0;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] + .accordion__body > :last-child {
+        margin-bottom: 0;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] + .accordion__body:first-child {
+        margin-top: 0;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] button {
+        background: #f2f2f2;
+    }
+    .js .accordion-v26 > .accordion__heading[data-open='true'] + .accordion__body {
+        margin-bottom: 1rem;
+    }
+    .js .accordion-v26 > .accordion__heading + .accordion__body {
+        overflow-y: hidden;
+        transition-duration: 0.2s;
+        transition-property: height;
+        transition-timing-function: ease-in-out;
+    }
+    .js .accordion-v26 > .accordion__heading + .accordion__body[data-closed='true'] {
+        display: none;
+    }
+}
+
 .accordion.accordion--timeline .timeline__content {
     position: relative;
 }
@@ -10616,6 +10876,7 @@ form:not([class]) .form__required-note--marker,
 .accordion--gallery__images ul {
     position: relative;
     overflow: hidden;
+    height: 100%;
 }
 
 .accordion--gallery__images li {
@@ -10623,11 +10884,35 @@ form:not([class]) .form__required-note--marker,
     height: 0;
     margin: 0;
     transition: opacity 1s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    display: block;
 }
 
 .accordion--gallery__images li[data-active='true'] {
-    height: auto;
+    height: 100%;
     opacity: 1;
+}
+
+.accordion--gallery__images .youtube-video {
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+}
+
+.accordion--gallery__images .youtube-video iframe {
+    height: 100%;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.accordion--gallery__heading {
+    padding-left: 1rem;
+    font-weight: 200;
 }
 
 .accordion--gallery {
@@ -10649,50 +10934,20 @@ form:not([class]) .form__required-note--marker,
     padding: 1rem;
 }
 
-.js .accordion--gallery__container .accordion__heading[data-open='true'] + .accordion__body {
-    position: relative;
-}
-
-.js .accordion--gallery__container .accordion__heading[data-open='true'] + .accordion__body:after {
-    content: '';
-    height: 2rem;
-    width: 5rem;
-    position: absolute;
-    display: inline-block;
-    left: 0;
-    bottom: 0.125rem;
-}
-
 @media (min-width: 768px) {
     .js .accordion--gallery__container .carousel-gallery-default {
         display: none;
     }
 }
 
-.no-js .accordion--gallery__container,
-.js .accordion--gallery__container {
+.accordion--gallery__container {
     background: #494949;
     color: #ffffff;
 }
 
-.no-js .accordion--gallery__container .accordion__heading button,
-.js .accordion--gallery__container .accordion__heading button {
-    color: #ffffff;
-}
-
-.no-js .accordion--gallery__container .accordion__heading[data-open='true'] button,
-.js .accordion--gallery__container .accordion__heading[data-open='true'] button {
+.accordion--gallery__container .accordion__body {
     background: initial;
-}
-
-.no-js .accordion--gallery__container .accordion__heading[data-open='true'] + .accordion__body:after,
-.js .accordion--gallery__container .accordion__heading[data-open='true'] + .accordion__body:after {
-    background: #790b21;
-}
-
-.no-js .accordion--gallery__container .accordion__body,
-.js .accordion--gallery__container .accordion__body {
-    background: initial;
+    border-color: #ffffff;
 }
 
 .back-to-top {

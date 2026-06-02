@@ -1077,6 +1077,8 @@ var className = 'accordion',
     tenthOfASecond = 100,
     scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_11__["reduceMotion"])() ? 0 : oneSecond,
     scrollTo = true;
+var scrollToHeading; // used to disable automatic scrolling to the heading when opening an accordion
+
 /**
  * Sets a heading and the button nested within to be open or closed.
  *
@@ -1197,10 +1199,16 @@ function buttonClick(button, headings, toggleOpen) {
 
     if (scrollTo && !(Object(_util__WEBPACK_IMPORTED_MODULE_11__["verticallyInWindow"])(heading) && Object(_util__WEBPACK_IMPORTED_MODULE_11__["verticallyInWindow"])(accordionSection))) {
       zenscroll__WEBPACK_IMPORTED_MODULE_13___default.a.to(heading, scrollDuration);
-    } // updates URL hash with accordion heading, when accordion opens
+    }
 
-
-    window.location.hash = event.currentTarget.parentElement.id;
+    if (scrollToHeading) {
+      // updates URL hash with accordion heading, when accordion opens
+      window.location.hash = event.currentTarget.parentElement.id;
+    } else {
+      // updates URL hash, without scrolling to the heading, when accordion opens
+      // currently needed disabling on new course pages
+      history.pushState(null, null, "#".concat(event.currentTarget.parentElement.id));
+    }
   }
 }
 /**
@@ -1254,6 +1262,8 @@ function launchAccordion(accordion) {
       allowSingle = Object(_util__WEBPACK_IMPORTED_MODULE_11__["toBool"])(accordion.dataset.allowsingle),
       headings = Array.from(accordion.parentNode.querySelectorAll("#".concat(accordion.id, " > .").concat(headingClassName))),
       body = Array.from(accordion.parentNode.querySelectorAll("#".concat(accordion.id, " > .").concat(bodyClassName)));
+  var getScrollToHeading = accordion.dataset.scrolltoheading;
+  getScrollToHeading === 'false' ? scrollToHeading = false : scrollToHeading = true;
   var idLinked = false;
 
   if (!(allowSingle || headings.length > 1)) {
@@ -1329,6 +1339,8 @@ function launchAccordion(accordion) {
       };
     }
   }
+
+  accordion.classList.remove('accordion');
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
