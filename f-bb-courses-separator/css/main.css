@@ -37684,6 +37684,29 @@ article .link-copy {
     }
 }
 
+.separator {
+    border: 0;
+    margin: 2rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.separator:before {
+    color: #d61726;
+    font-size: 1.5rem;
+    order: 1;
+}
+
+.separator:after {
+    width: 100%;
+    content: '';
+    height: 1px;
+    background-color: #cbcbcb;
+    order: 2;
+}
+
 .tabs .tabs__links li:only-child {
     display: none;
 }
