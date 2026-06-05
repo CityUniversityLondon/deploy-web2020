@@ -10428,35 +10428,78 @@ form:not([class]) .form__required-note--marker,
         outline: 0.125rem dotted #0c0c0e;
     }
     .js .accordion-v26.accordion-v26--dark > .accordion__heading button {
+        color: #ffffff;
+        border-color: #ffffff;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading button:focus {
+        outline: 0.125rem dotted #ffffff;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading button:active {
+        outline: 0.125rem dotted #ffffff;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading button div {
+        border-bottom: 0.0625rem solid #e5e5e5;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] button {
+        background: initial;
+        border-top: 0.125rem dotted #ffffff;
+        border-left: 0.125rem dotted #ffffff;
+        border-right: 0.125rem dotted #ffffff;
+        border-bottom: none;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] button:focus, .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] button:active {
+        border-top: 0.125rem dotted #ffffff;
+        border-left: 0.125rem dotted #ffffff;
+        border-right: 0.125rem dotted #ffffff;
+        border-bottom: none;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] + .accordion__body {
+        border-left: 0.125rem dotted #ffffff;
+        border-right: 0.125rem dotted #ffffff;
+        border-bottom: 0.125rem dotted #ffffff;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] + .accordion__body:focus, .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] + .accordion__body:active {
+        border-style: dotted;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] + .accordion__body .wrapper--accordion__body__content:after {
+        background: #790b21;
+    }
+    .js .accordion-v26.accordion-v26--dark > .accordion__heading + .accordion__body {
+        background: initial;
+    }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading:focus {
+        outline: 0.125rem dotted #0c0c0e;
+    }
+    .js .accordion-v26.accordion-v26--light > .accordion__heading button {
         color: #0c0c0e;
     }
 }
 
 @media screen and (hover: hover) {
-    .js .accordion-v26.accordion-v26--dark > .accordion__heading button:hover {
+    .js .accordion-v26.accordion-v26--light > .accordion__heading button:hover {
         background: #f2f2f2;
         color: #006bbd;
     }
 }
 
 @media screen {
-    .js .accordion-v26.accordion-v26--dark > .accordion__heading button:focus {
+    .js .accordion-v26.accordion-v26--light > .accordion__heading button:focus {
         outline: 0.125rem dotted #0c0c0e;
     }
-    .js .accordion-v26.accordion-v26--dark > .accordion__heading button:active {
+    .js .accordion-v26.accordion-v26--light > .accordion__heading button:active {
         outline: 0.125rem dotted #0c0c0e;
     }
-    .js .accordion-v26.accordion-v26--dark > .accordion__heading button div {
+    .js .accordion-v26.accordion-v26--light > .accordion__heading button div {
         border-bottom: 0.0625rem solid #e5e5e5;
     }
-    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] button {
+    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] button {
         border-top: 0.125rem dotted #0c0c0e;
         border-left: 0.125rem dotted #0c0c0e;
         border-right: 0.125rem dotted #0c0c0e;
         border-bottom: 0.0625rem solid #d8d8d8;
         color: #0c0c0e;
     }
-    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] button:focus, .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] button:active {
+    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] button:focus, .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] button:active {
         border-top: 0.125rem dotted #0c0c0e;
         border-left: 0.125rem dotted #0c0c0e;
         border-right: 0.125rem dotted #0c0c0e;
@@ -10465,64 +10508,21 @@ form:not([class]) .form__required-note--marker,
 }
 
 @media screen and (hover: hover) {
-    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] button:hover {
+    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] button:hover {
         background: #f2f2f2;
         color: #0c0c0e;
     }
 }
 
 @media screen {
-    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] + .accordion__body {
+    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body {
         border-left: 0.125rem dotted #0c0c0e;
         border-right: 0.125rem dotted #0c0c0e;
         border-bottom: 0.125rem dotted #0c0c0e;
     }
-    .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] + .accordion__body:focus, .js .accordion-v26.accordion-v26--dark > .accordion__heading[data-open='true'] + .accordion__body:active {
-        border-style: dotted;
-        border-color: #0c0c0e;
-    }
-    .js .accordion-v26.accordion-v26--light > .accordion__heading:focus {
-        outline: 0.125rem dotted #0c0c0e;
-    }
-    .js .accordion-v26.accordion-v26--light > .accordion__heading button {
-        color: #ffffff;
-        border-color: #ffffff;
-    }
-    .js .accordion-v26.accordion-v26--light > .accordion__heading button:focus {
-        outline: 0.125rem dotted #ffffff;
-    }
-    .js .accordion-v26.accordion-v26--light > .accordion__heading button:active {
-        outline: 0.125rem dotted #ffffff;
-    }
-    .js .accordion-v26.accordion-v26--light > .accordion__heading button div {
-        border-bottom: 0.0625rem solid #e5e5e5;
-    }
-    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] button {
-        background: initial;
-        border-top: 0.125rem dotted #ffffff;
-        border-left: 0.125rem dotted #ffffff;
-        border-right: 0.125rem dotted #ffffff;
-        border-bottom: none;
-    }
-    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] button:focus, .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] button:active {
-        border-top: 0.125rem dotted #ffffff;
-        border-left: 0.125rem dotted #ffffff;
-        border-right: 0.125rem dotted #ffffff;
-        border-bottom: none;
-    }
-    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body {
-        border-left: 0.125rem dotted #ffffff;
-        border-right: 0.125rem dotted #ffffff;
-        border-bottom: 0.125rem dotted #ffffff;
-    }
     .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body:focus, .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body:active {
         border-style: dotted;
-    }
-    .js .accordion-v26.accordion-v26--light > .accordion__heading[data-open='true'] + .accordion__body .wrapper--accordion__body__content:after {
-        background: #790b21;
-    }
-    .js .accordion-v26.accordion-v26--light > .accordion__heading + .accordion__body {
-        background: initial;
+        border-color: #0c0c0e;
     }
     .js .accordion-v26 > .accordion__heading {
         border-bottom: 0;
