@@ -2590,7 +2590,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("data:font/woff2;base64,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") format("woff2"), url("/fonts/fa-brands-400.ttf") format("truetype");
+  src: url("../fonts/fa-brands-400.woff2") format("woff2"), url("../fonts/fa-brands-400.ttf") format("truetype");
 }
 .fab,
 .fa-brands {
@@ -2709,7 +2709,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("/fonts/fa-duotone-900.woff2") format("woff2"), url("/fonts/fa-duotone-900.ttf") format("truetype");
+  src: url("../fonts/fa-duotone-900.woff2") format("woff2"), url("../fonts/fa-duotone-900.ttf") format("truetype");
 }
 .fad,
 .fa-duotone {
@@ -3578,7 +3578,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("/fonts/fa-solid-900.woff2") format("woff2"), url("/fonts/fa-solid-900.ttf") format("truetype");
+  src: url("../fonts/fa-solid-900.woff2") format("woff2"), url("../fonts/fa-solid-900.ttf") format("truetype");
 }
 .fas,
 .fa-solid {
@@ -3601,7 +3601,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/fonts/fa-regular-400.woff2") format("woff2"), url("/fonts/fa-regular-400.ttf") format("truetype");
+  src: url("../fonts/fa-regular-400.woff2") format("woff2"), url("../fonts/fa-regular-400.ttf") format("truetype");
 }
 .far,
 .fa-regular {
@@ -3624,7 +3624,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 300;
   font-display: block;
-  src: url("/fonts/fa-light-300.woff2") format("woff2"), url("/fonts/fa-light-300.ttf") format("truetype");
+  src: url("../fonts/fa-light-300.woff2") format("woff2"), url("../fonts/fa-light-300.ttf") format("truetype");
 }
 .fal,
 .fa-light {
@@ -3647,7 +3647,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 100;
   font-display: block;
-  src: url("/fonts/fa-thin-100.woff2") format("woff2"), url("/fonts/fa-thin-100.ttf") format("truetype");
+  src: url("../fonts/fa-thin-100.woff2") format("woff2"), url("../fonts/fa-thin-100.ttf") format("truetype");
 }
 .fat,
 .fa-thin {
@@ -3671,7 +3671,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("/fonts/fa-sharp-solid-900.woff2") format("woff2"), url("/fonts/fa-sharp-solid-900.ttf") format("truetype");
+  src: url("../fonts/fa-sharp-solid-900.woff2") format("woff2"), url("../fonts/fa-sharp-solid-900.ttf") format("truetype");
 }
 .fass,
 .fa-solid {
@@ -3695,7 +3695,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("/fonts/fa-sharp-regular-400.woff2") format("woff2"), url("/fonts/fa-sharp-regular-400.ttf") format("truetype");
+  src: url("../fonts/fa-sharp-regular-400.woff2") format("woff2"), url("../fonts/fa-sharp-regular-400.ttf") format("truetype");
 }
 .fasr,
 .fa-regular {
@@ -3719,7 +3719,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 300;
   font-display: block;
-  src: url("/fonts/fa-sharp-light-300.woff2") format("woff2"), url("/fonts/fa-sharp-light-300.ttf") format("truetype");
+  src: url("../fonts/fa-sharp-light-300.woff2") format("woff2"), url("../fonts/fa-sharp-light-300.ttf") format("truetype");
 }
 .fasl,
 .fa-light {
@@ -3742,7 +3742,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 100;
   font-display: block;
-  src: url("/fonts/fa-sharp-thin-100.woff2") format("woff2"), url("/fonts/fa-sharp-thin-100.ttf") format("truetype");
+  src: url("../fonts/fa-sharp-thin-100.woff2") format("woff2"), url("../fonts/fa-sharp-thin-100.ttf") format("truetype");
 }
 .fast,
 .fa-thin {
