@@ -39798,11 +39798,6 @@ article .link-copy {
   }
 }
 
-@media (min-width: 768px) {
-  .wrapper--finder__filters--mobile__toggle {
-    display: none;
-  }
-}
 .wrapper--finder__filters--mobile__toggle {
   font-size: 1.266rem;
   line-height: 1.3333333333;
@@ -39906,6 +39901,11 @@ article .link-copy {
     border-style: solid;
     border-width: 0.0625rem;
     color: #ffffff;
+  }
+}
+@media (min-width: 768px) {
+  .wrapper--finder__filters--mobile__toggle {
+    display: none;
   }
 }
 .wrapper--finder__filters--mobile__toggle {
