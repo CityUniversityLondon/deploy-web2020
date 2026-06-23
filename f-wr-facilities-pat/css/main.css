@@ -11500,8 +11500,21 @@ form:not([class]) .form__required-note--marker,
     font-weight: 200;
 }
 
-.courses-v26--ug__facilities__container {
-    padding: 1rem;
+@media (max-width: 767px) {
+    .courses-v26--ug__facilities__heading {
+        display: none;
+    }
+}
+
+.courses-v26--ug__facilities .carousel-gallery h3,
+.courses-v26--ug__facilities .carousel-gallery h4 {
+    font-weight: 200;
+}
+
+@media (min-width: 768px) {
+    .courses-v26--ug__facilities__container {
+        padding: 1rem;
+    }
 }
 
 .courses-v26--ug__facilities__container .accordion-v26[data-count='1'] .accordion__heading {
@@ -22260,6 +22273,25 @@ figure figcaption a:active,
 .carousel-gallery {
     overflow: hidden;
     position: relative;
+    display: grid;
+    grid-template-areas: 'heading heading heading arrows' 'main main main main' 'thumbnails thumbnails thumbnails thumbnails';
+}
+
+.carousel-gallery h3 {
+    grid-area: heading;
+}
+
+.carousel-gallery .swiper-wrapper {
+    grid-area: main;
+}
+
+.carousel-gallery .swiper-buttons-wrap {
+    grid-area: arrows;
+    justify-self: end;
+}
+
+.carousel-gallery .galleria-thumbnails-wrap {
+    grid-area: thumbnails;
 }
 
 .carousel-gallery h2,
@@ -22268,6 +22300,16 @@ figure figcaption a:active,
     margin-top: 0;
     padding-bottom: 0.5rem;
     color: #ffffff;
+    align-content: center;
+    margin-bottom: 0.75rem;
+}
+
+@media (min-width: 900px) {
+    .carousel-gallery h2,
+    .carousel-gallery h3,
+    .carousel-gallery h4 {
+        margin-bottom: 1rem;
+    }
 }
 
 .carousel-gallery .swiper-slide {
@@ -22425,13 +22467,15 @@ figure figcaption a:active,
 .carousel-gallery .swiper-buttons-wrap {
     bottom: 0.5rem;
     right: 0.5rem;
+    position: initial;
+    padding: 0.5rem;
+    justify-content: flex-end;
+    margin-bottom: 0.75rem;
 }
 
-@media (max-width: 899px) {
+@media (min-width: 900px) {
     .carousel-gallery .swiper-buttons-wrap {
-        position: initial;
-        padding: 0.5rem;
-        justify-content: flex-end;
+        margin-bottom: 1rem;
     }
 }
 
@@ -22440,6 +22484,7 @@ figure figcaption a:active,
     border: 0.0625rem solid #ffffff;
     padding: 0.75rem;
     font-weight: 400;
+    border-radius: 50%;
 }
 
 @media (hover: hover) {
@@ -40641,6 +40686,25 @@ article .link-copy {
 .carousel-gallery {
     overflow: hidden;
     position: relative;
+    display: grid;
+    grid-template-areas: 'heading heading heading arrows' 'main main main main' 'thumbnails thumbnails thumbnails thumbnails';
+}
+
+.carousel-gallery h3 {
+    grid-area: heading;
+}
+
+.carousel-gallery .swiper-wrapper {
+    grid-area: main;
+}
+
+.carousel-gallery .swiper-buttons-wrap {
+    grid-area: arrows;
+    justify-self: end;
+}
+
+.carousel-gallery .galleria-thumbnails-wrap {
+    grid-area: thumbnails;
 }
 
 .carousel-gallery h2,
@@ -40649,6 +40713,16 @@ article .link-copy {
     margin-top: 0;
     padding-bottom: 0.5rem;
     color: #ffffff;
+    align-content: center;
+    margin-bottom: 0.75rem;
+}
+
+@media (min-width: 900px) {
+    .carousel-gallery h2,
+    .carousel-gallery h3,
+    .carousel-gallery h4 {
+        margin-bottom: 1rem;
+    }
 }
 
 .carousel-gallery .swiper-slide {
@@ -40806,13 +40880,15 @@ article .link-copy {
 .carousel-gallery .swiper-buttons-wrap {
     bottom: 0.5rem;
     right: 0.5rem;
+    position: initial;
+    padding: 0.5rem;
+    justify-content: flex-end;
+    margin-bottom: 0.75rem;
 }
 
-@media (max-width: 899px) {
+@media (min-width: 900px) {
     .carousel-gallery .swiper-buttons-wrap {
-        position: initial;
-        padding: 0.5rem;
-        justify-content: flex-end;
+        margin-bottom: 1rem;
     }
 }
 
@@ -40821,6 +40897,7 @@ article .link-copy {
     border: 0.0625rem solid #ffffff;
     padding: 0.75rem;
     font-weight: 400;
+    border-radius: 50%;
 }
 
 @media (hover: hover) {
