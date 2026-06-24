@@ -1175,6 +1175,17 @@
   background-color: #0f5f64;
 }
 
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 .sr-only-focusable-within:active, .sr-only-focusable-within:focus, .sr-only-focusable-within:focus-within {
   clip: auto;
   height: auto;
@@ -17913,7 +17924,7 @@ article .link-copy {
 }
 .navigation--primary .navigation--primary__level1 .navigation__button:first-child:after {
   content: "\f078";
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 7 Pro";
   display: inline-flex;
   color: #d61726;
   font-size: 0.79rem;

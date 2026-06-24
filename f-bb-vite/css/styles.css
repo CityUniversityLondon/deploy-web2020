@@ -2942,6 +2942,17 @@
   background-color: #0f5f64;
 }
 
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 .sr-only-focusable-within:active, .sr-only-focusable-within:focus, .sr-only-focusable-within:focus-within {
   clip: auto;
   height: auto;
@@ -27280,7 +27291,7 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
 }
 .navigation--primary .navigation--primary__level1 .navigation__button:first-child:after {
   content: "\f078";
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 7 Pro";
   display: inline-flex;
   color: #d61726;
   font-size: 0.79rem;
@@ -37079,7 +37090,7 @@ article .link-copy {
   transition: background-color 0.3s ease-in-out;
 }
 .wrapper--logo li a .linked-image:after {
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 7 Pro";
   font-weight: 400;
   content: "\f14c";
   position: absolute;
@@ -38193,7 +38204,7 @@ article .link-copy {
 .embedded-video.embedded-video--autoplay .embedded-video--autoplay__controller-btn .embedded-video--autoplay__controller-btn__icon {
   color: #0c0c0e;
   font-weight: 300;
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 7 Pro";
   font-size: 1.802rem;
   line-height: 1.3333333333;
   letter-spacing: -0.016em;
@@ -41642,7 +41653,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 .campus-map__controls__search__wrap:before {
   content: "\f002";
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 7 Pro";
   font-weight: 500;
   position: absolute;
   color: #a1a1a1;
@@ -41823,7 +41834,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
   display: block;
 }
 .campus-map__controls__locations__heading__wrap .campus-map__controls__locations__heading:after {
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 7 Pro";
   font-weight: 900;
   right: 0;
   color: #b91924;
@@ -42043,7 +42054,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 }
 .campus-map-v25__controls__search__wrap:before {
   content: "\f002";
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 7 Pro";
   font-weight: 500;
   position: absolute;
   color: #a1a1a1;
@@ -42224,7 +42235,7 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
   display: block;
 }
 .campus-map-v25__controls__locations__heading__wrap .campus-map-v25__controls__locations__heading:after {
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 7 Pro";
   font-weight: 900;
   right: 0;
   color: #b91924;
@@ -47064,7 +47075,7 @@ main > .error {
   transition: background-color 0.3s ease-in-out;
 }
 .event__sponsors li a .linked-image:after {
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 7 Pro";
   font-weight: 400;
   content: "\f14c";
   position: absolute;
