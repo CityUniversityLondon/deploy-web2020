@@ -11438,6 +11438,61 @@ form:not([class]) .form__required-note--marker,
     top: 2.5rem;
 }
 
+@media (max-width: 767px) {
+    .accordion--gallery__container {
+        display: none;
+    }
+}
+
+.accordion--gallery__container[data-count='1'] {
+    display: initial;
+}
+
+.accordion--gallery__container[data-count='1'] + .carousel-gallery-default {
+    display: none;
+}
+
+.accordion--gallery__container[data-count='1'] .accordion__heading {
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    letter-spacing: -0.008em;
+    padding-left: 1rem;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .accordion--gallery__container[data-count='1'] .accordion__heading {
+        letter-spacing: -0.011em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .accordion--gallery__container[data-count='1'] .accordion__heading {
+        letter-spacing: -0.014em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .accordion--gallery__container[data-count='1'] .accordion__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .accordion--gallery__container[data-count='1'] .accordion__heading {
+        letter-spacing: -0.017em;
+    }
+}
+
+.js .accordion--gallery__container + .carousel-gallery-default {
+    background: #52525b;
+}
+
+@media (min-width: 768px) {
+    .js .accordion--gallery__container + .carousel-gallery-default {
+        display: none;
+    }
+}
+
 .accordion--gallery {
     display: flex;
     flex-direction: row;
@@ -11445,12 +11500,6 @@ form:not([class]) .form__required-note--marker,
 
 .accordion--gallery > div {
     flex: 1;
-}
-
-@media (max-width: 767px) {
-    .accordion--gallery {
-        display: none;
-    }
 }
 
 .accordion--gallery__images ul {
@@ -11491,21 +11540,17 @@ form:not([class]) .form__required-note--marker,
 }
 
 .courses-v26--ug__facilities {
-    background: #494949;
+    background: #52525b;
     color: #ffffff;
 }
 
-.courses-v26--ug__facilities__heading {
+.courses-v26--ug__facilities__heading,
+.accordion--gallery__heading {
     padding-left: 1rem;
     font-weight: 200;
 }
 
-@media (max-width: 767px) {
-    .courses-v26--ug__facilities__heading {
-        display: none;
-    }
-}
-
+.courses-v26--ug__facilities .carousel-gallery h2,
 .courses-v26--ug__facilities .carousel-gallery h3,
 .courses-v26--ug__facilities .carousel-gallery h4 {
     font-weight: 200;
@@ -11514,43 +11559,6 @@ form:not([class]) .form__required-note--marker,
 @media (min-width: 768px) {
     .courses-v26--ug__facilities__container {
         padding: 1rem;
-    }
-}
-
-.courses-v26--ug__facilities__container .accordion-v26[data-count='1'] .accordion__heading {
-    font-size: 1.125rem;
-    line-height: 1.33333;
-    letter-spacing: -0.008em;
-    padding-left: 1rem;
-}
-
-@media (min-width: 1280px) and (max-width: 1919px) {
-    .courses-v26--ug__facilities__container .accordion-v26[data-count='1'] .accordion__heading {
-        letter-spacing: -0.011em;
-    }
-}
-
-@media (min-width: 1920px) and (max-width: 3839px) {
-    .courses-v26--ug__facilities__container .accordion-v26[data-count='1'] .accordion__heading {
-        letter-spacing: -0.014em;
-    }
-}
-
-@media (min-width: 3840px) and (max-width: 7679px) {
-    .courses-v26--ug__facilities__container .accordion-v26[data-count='1'] .accordion__heading {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 7680px) {
-    .courses-v26--ug__facilities__container .accordion-v26[data-count='1'] .accordion__heading {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 768px) {
-    .js .courses-v26--ug__facilities .carousel-gallery-default {
-        display: none;
     }
 }
 
