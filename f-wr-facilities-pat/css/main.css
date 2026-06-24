@@ -11445,7 +11445,7 @@ form:not([class]) .form__required-note--marker,
 }
 
 .accordion--gallery__container[data-count='1'] {
-    display: initial;
+    display: block;
 }
 
 .accordion--gallery__container[data-count='1'] + .carousel-gallery-default {
@@ -11480,6 +11480,19 @@ form:not([class]) .form__required-note--marker,
 @media (min-width: 7680px) {
     .accordion--gallery__container[data-count='1'] .accordion__heading {
         letter-spacing: -0.017em;
+    }
+}
+
+@media (max-width: 767px) {
+    .accordion--gallery__container[data-count='1'] .accordion--gallery {
+        flex-direction: column;
+    }
+    .accordion--gallery__container[data-count='1'] .accordion--gallery__images ul,
+    .accordion--gallery__container[data-count='1'] .accordion--gallery__heading,
+    .accordion--gallery__container[data-count='1'] .accordion__heading,
+    .accordion--gallery__container[data-count='1'] .accordion__body {
+        margin-left: 0;
+        padding-left: 0;
     }
 }
 
@@ -11556,9 +11569,13 @@ form:not([class]) .form__required-note--marker,
     font-weight: 200;
 }
 
-@media (min-width: 768px) {
-    .courses-v26--ug__facilities__container {
-        padding: 1rem;
+.accordion--gallery__container {
+    padding: 1rem;
+}
+
+@media (max-width: 767px) {
+    .accordion--gallery__container:not([data-count='1']) {
+        padding: 0;
     }
 }
 
@@ -11583,6 +11600,10 @@ form:not([class]) .form__required-note--marker,
     .embedded-video {
         padding-top: 0;
     }
+}
+
+.courses-v26--ug__facilities[data-type='video'] .courses-v26--ug__facilities__container {
+    padding: 1rem;
 }
 
 .courses-v26--ug__facilities[data-type='video'] .courses-v26--ug__facilities__heading {
