@@ -11610,6 +11610,10 @@ form:not([class]) .form__required-note--marker,
     padding-left: 0;
 }
 
+.courses-v26--ug__facilities[data-type='video'] figcaption {
+    color: #ffffff;
+}
+
 .back-to-top {
     font-size: 0.889rem;
     line-height: 1.625;
