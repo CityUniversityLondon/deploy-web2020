@@ -2992,14 +2992,17 @@
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .wrapper--text-highlight {
   max-width: 40ch;
 }
 
 html {
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 
 body {
@@ -19296,7 +19299,8 @@ figure figcaption a:active,
 .swiper-slide {
   width: 100%;
   width: calc(100% / var(--n));
-  user-select: none;
+  -webkit-user-select: none;
+          user-select: none;
   pointer-events: none;
 }
 @media (min-width: 901px) {
@@ -19961,7 +19965,8 @@ figure figcaption a:active,
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .infographic[data-theme=blue50] .infographic__panel[data-theme-background=true] .infographic__description__text__highlight {
   background: #832c9e;
@@ -19970,7 +19975,8 @@ figure figcaption a:active,
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .infographic[data-theme=purple50] .infographic__panel .infographic__description__text__highlight {
   background: #832c9e;
@@ -19979,7 +19985,8 @@ figure figcaption a:active,
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .infographic[data-theme=purple50] .infographic__panel[data-theme-background=true] .infographic__description__text__highlight {
   background: #0177a0;
@@ -19988,7 +19995,8 @@ figure figcaption a:active,
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .infographic[data-theme=red50] .infographic__panel .infographic__description__text__highlight {
   background: #d61726;
@@ -19997,7 +20005,8 @@ figure figcaption a:active,
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #d61726, -0.5rem 0 0 #d61726;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .infographic[data-theme=red50] .infographic__panel[data-theme-background=true] .infographic__description__text__highlight {
   background: #832c9e;
@@ -20006,7 +20015,8 @@ figure figcaption a:active,
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .infographic .infographic__panel[data-type=image] {
   text-align: center;
@@ -26744,6 +26754,14 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
   overflow-y: hidden;
 }
 .navigation--primary .navigation--primary__menu__content {
+  column-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, auto);
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
   max-width: 80rem;
@@ -26769,16 +26787,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     margin-left: auto;
     margin-right: auto;
   }
-}
-.navigation--primary .navigation--primary__menu__content {
-  column-gap: 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: repeat(2, auto);
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
 }
 .navigation--primary .navigation--primary__menu__content .navigation__current {
   display: flex;
@@ -31691,33 +31699,24 @@ blockquote footer cite {
 }
 
 .tooltip__overlay {
-  -moz-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 img:has(~ .wrapper--tooltip__label[data-open=true]) {
-  -webkit-filter: brightness(0.2);
   filter: brightness(0.2);
 }
 
 .card--news .wrapper--tooltip__label ~ .card__anchor img {
-  -moz-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card--news .wrapper--tooltip__label[data-open=true] ~ .card__anchor img {
-  -webkit-filter: brightness(0.2);
   filter: brightness(0.2);
 }
 
 .card--pathway .wrapper--tooltip__label ~ a img {
-  -moz-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card--pathway .wrapper--tooltip__label[data-open=true] ~ a img {
-  -webkit-filter: brightness(0.2);
   filter: brightness(0.2);
 }
 
@@ -38575,7 +38574,8 @@ article .link-copy {
   padding-top: 1rem;
 }
 .finder__checkbox input {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   height: 0;
   left: 0;
   position: absolute;
@@ -41067,7 +41067,8 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
   height: 1.5rem;
   z-index: 1;
   margin: 0;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 .v26-finder_filters__checkbox:focus {
   outline-color: #0c0c0e;
@@ -56813,7 +56814,8 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #5d184a, -0.5rem 0 0 #5d184a;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .lifelong-learning .text-highlight-block .text-highlight__heading {
   margin: 0;
@@ -56825,7 +56827,8 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
   margin-bottom: 0.5rem;
   padding: 0.25rem 0;
   font-weight: 400;
