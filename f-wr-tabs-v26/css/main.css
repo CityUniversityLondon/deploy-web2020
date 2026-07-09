@@ -39313,22 +39313,22 @@ article .link-copy {
     }
 }
 
-.tabs .tabs__links li:only-child {
+.tabs:not(.tabs-v26) .tabs__links li:only-child {
     display: none;
 }
 
 @media print {
-    .js .tabs > .tabs__links,
+    .js .tabs:not(.tabs-v26) > .tabs__links,
     .js .tabs--accordion > .accordion {
         display: none;
     }
-    .js .tabs .tabs__panel[hidden] {
+    .js .tabs:not(.tabs-v26) .tabs__panel[hidden] {
         display: block;
     }
 }
 
 @media screen {
-    .js .tabs .tabs__links {
+    .js .tabs:not(.tabs-v26) .tabs__links {
         align-items: stretch;
         bottom: -0.4rem;
         display: flex;
@@ -39343,7 +39343,7 @@ article .link-copy {
         overflow-x: hidden;
         position: relative;
     }
-    .js .tabs .tabs__links li {
+    .js .tabs:not(.tabs-v26) .tabs__links li {
         margin-bottom: 0;
         margin-top: 0;
         max-width: unset;
@@ -39352,10 +39352,10 @@ article .link-copy {
         display: flex;
         align-items: flex-end;
     }
-    .js .tabs .tabs__links li:last-of-type {
+    .js .tabs:not(.tabs-v26) .tabs__links li:last-of-type {
         margin-right: 0;
     }
-    .js .tabs .tabs__links li button {
+    .js .tabs:not(.tabs-v26) .tabs__links li button {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -39406,7 +39406,7 @@ article .link-copy {
 }
 
 @media screen and (hover: hover) {
-    .js .tabs .tabs__links li button:hover {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -39424,7 +39424,7 @@ article .link-copy {
 }
 
 @media screen {
-    .js .tabs .tabs__links li button:focus, .js .tabs .tabs__links li button:active {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:focus, .js .tabs:not(.tabs-v26) .tabs__links li button:active {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -39442,28 +39442,28 @@ article .link-copy {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-    .js .tabs .tabs__links li button {
+    .js .tabs:not(.tabs-v26) .tabs__links li button {
         transition: none;
     }
 }
 
 @media screen and (hover: hover) {
-    .js .tabs .tabs__links li button:hover {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:hover {
         background-size: 100% 100%;
         background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
     }
 }
 
 @media screen {
-    .js .tabs .tabs__links li button span {
+    .js .tabs:not(.tabs-v26) .tabs__links li button span {
         border-bottom-color: #006bbd;
         border-bottom-style: solid;
         border-bottom-width: 0.125rem;
     }
-    .js .tabs .tabs__links li button:focus {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:focus {
         color: #006bbd;
     }
-    .js .tabs .tabs__links li button:focus span {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:focus span {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
         outline-style: dotted;
@@ -39472,20 +39472,20 @@ article .link-copy {
 }
 
 @media screen and (hover: hover) {
-    .js .tabs .tabs__links li button:hover {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:hover {
         color: #ffffff;
     }
-    .js .tabs .tabs__links li button:hover span {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:hover span {
         outline: none;
     }
 }
 
 @media screen {
-    .js .tabs .tabs__links li button:active {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:active {
         background-color: #006bbd;
         color: #ffffff;
     }
-    .js .tabs .tabs__links li button:active span {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:active span {
         outline-color: #ffffff;
         outline-offset: 0.1875rem;
         outline-style: dotted;
@@ -39494,7 +39494,7 @@ article .link-copy {
 }
 
 @media screen and (hover: hover) {
-    .js .tabs .tabs__links li button:hover {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:hover {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -39512,7 +39512,7 @@ article .link-copy {
 }
 
 @media screen {
-    .js .tabs .tabs__links li button:focus, .js .tabs .tabs__links li button:active {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:focus, .js .tabs:not(.tabs-v26) .tabs__links li button:active {
         background-color: initial;
         background-image: initial;
         background-size: initial;
@@ -39527,7 +39527,7 @@ article .link-copy {
         outline-width: 0;
         text-decoration: none;
     }
-    .js .tabs .tabs__links li button > span {
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span {
         font-family: "ff-meta-web-pro", sans-serif;
         font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
         font-size: 1rem;
@@ -39550,63 +39550,63 @@ article .link-copy {
         padding-right: 0.5rem;
         padding-top: 0.5rem;
     }
-    .js .tabs .tabs__links li button > span i,
-    .js .tabs .tabs__links li button > span em {
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span i,
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span em {
         font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
     }
-    .js .tabs .tabs__links li button > span b,
-    .js .tabs .tabs__links li button > span strong {
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span b,
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span strong {
         font-weight: inherit;
     }
-    .js .tabs .tabs__links li button > span i,
-    .js .tabs .tabs__links li button > span em {
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span i,
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span em {
         font-style: italic;
     }
-    .js .tabs .tabs__links li button > span u {
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span u {
         text-decoration: none;
     }
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
-    .js .tabs .tabs__links li button > span {
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span {
         letter-spacing: -0.008em;
     }
 }
 
 @media screen and (min-width: 1920px) and (max-width: 3839px) {
-    .js .tabs .tabs__links li button > span {
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span {
         letter-spacing: -0.013em;
     }
 }
 
 @media screen and (min-width: 3840px) and (max-width: 7679px) {
-    .js .tabs .tabs__links li button > span {
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span {
         letter-spacing: -0.017em;
     }
 }
 
 @media screen and (min-width: 7680px) {
-    .js .tabs .tabs__links li button > span {
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span {
         letter-spacing: -0.017em;
     }
 }
 
 @media screen {
-    .js .tabs .tabs__links li button > span b,
-    .js .tabs .tabs__links li button > span strong {
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span b,
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span strong {
         font-weight: 600;
     }
 }
 
 @media screen and (min-width: 901px) {
-    .js .tabs .tabs__links li button > span {
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span {
         padding-left: 0.75rem;
         padding-right: 0.75rem;
     }
 }
 
 @media screen {
-    .js .tabs .tabs__links li button > span::before {
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span::before {
         animation: slide-right-out 0.2s ease 0s both normal;
         background-color: #d8d8d8;
         bottom: 0;
@@ -39623,14 +39623,14 @@ article .link-copy {
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
-    .js .tabs .tabs__links li button > span::before {
+    .js .tabs:not(.tabs-v26) .tabs__links li button > span::before {
         animation: none;
         transition: none;
     }
 }
 
 @media screen and (hover: hover) {
-    .js .tabs .tabs__links li button[aria-selected='false']:hover > span::before {
+    .js .tabs:not(.tabs-v26) .tabs__links li button[aria-selected='false']:hover > span::before {
         animation: slide-left-in 0.2s ease 0s both normal;
         opacity: 1;
         transform: translateX(-105%);
@@ -39639,24 +39639,24 @@ article .link-copy {
 }
 
 @media screen and (hover: hover) and (prefers-reduced-motion: reduce) {
-    .js .tabs .tabs__links li button[aria-selected='false']:hover > span::before {
+    .js .tabs:not(.tabs-v26) .tabs__links li button[aria-selected='false']:hover > span::before {
         animation: none;
         transition: none;
     }
 }
 
 @media screen {
-    .js .tabs .tabs__links li button[aria-selected='true'] {
+    .js .tabs:not(.tabs-v26) .tabs__links li button[aria-selected='true'] {
         font-weight: 700;
     }
-    .js .tabs .tabs__links li button[aria-selected='true'] > span {
+    .js .tabs:not(.tabs-v26) .tabs__links li button[aria-selected='true'] > span {
         border-bottom-color: #d61726;
         color: #0c0c0e;
     }
 }
 
 @media screen and (hover: hover) {
-    .js .tabs .tabs__links li button:hover {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:hover {
         background: none;
         border-bottom-color: transparent;
         border-bottom-style: dotted;
@@ -39668,7 +39668,7 @@ article .link-copy {
 }
 
 @media screen {
-    .js .tabs .tabs__links li button:focus {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:focus {
         background: #f2f2f2;
         border-color: #0c0c0e;
         border-style: dotted;
@@ -39676,20 +39676,20 @@ article .link-copy {
         color: #696969;
         padding: 0;
     }
-    .js .tabs .tabs__links li button:focus span {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:focus span {
         outline: none;
     }
-    .js .tabs .tabs__links li button:active {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:active {
         background: #f2f2f2;
         border-color: #0c0c0e;
         border-style: dotted;
         border-width: 0.125rem;
         color: #0c0c0e;
     }
-    .js .tabs .tabs__links li button:active span {
+    .js .tabs:not(.tabs-v26) .tabs__links li button:active span {
         outline-width: 0;
     }
-    .js .tabs .tabs__panel {
+    .js .tabs:not(.tabs-v26) .tabs__panel {
         padding: 0.75rem 0.5rem 0.5rem 0.5rem;
         background: #f2f2f2;
         border-top: 0.125rem solid #d8d8d8;
@@ -39697,32 +39697,32 @@ article .link-copy {
 }
 
 @media screen and (min-width: 768px) {
-    .js .tabs .tabs__panel {
+    .js .tabs:not(.tabs-v26) .tabs__panel {
         border: 0.125rem solid #d8d8d8;
     }
 }
 
 @media screen {
-    .js .tabs .tabs__panel:focus {
+    .js .tabs:not(.tabs-v26) .tabs__panel:focus {
         outline-color: #0c0c0e;
         outline-offset: 0.1875rem;
         outline-style: solid;
         outline-width: 0.125rem;
         outline-offset: 0;
     }
-    .js .tabs .tabs__panel__content {
+    .js .tabs:not(.tabs-v26) .tabs__panel__content {
         padding: 2rem 0;
     }
 }
 
 @media screen and (max-width: 767px) {
-    .js .tabs .tabs__panel__content {
+    .js .tabs:not(.tabs-v26) .tabs__panel__content {
         padding-bottom: 1rem;
     }
 }
 
 @media screen {
-    .js .tabs .tabs__panel__heading {
+    .js .tabs:not(.tabs-v26) .tabs__panel__heading {
         margin-top: 0;
     }
 }
@@ -39812,7 +39812,7 @@ article .link-copy {
     .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__text {
         color: #1e1e1e;
     }
-    .js .tabs--accordion > .tabs {
+    .js .tabs--accordion > .tabs:not(.tabs-v26) {
         display: none;
     }
 }
@@ -39821,13 +39821,13 @@ article .link-copy {
     .js .tabs--accordion > .accordion {
         display: none;
     }
-    .js .tabs--accordion > .tabs {
+    .js .tabs--accordion > .tabs:not(.tabs-v26) {
         display: block;
     }
 }
 
 @media screen and (min-width: 769px) and (min-width: 769px) {
-    .js .tabs--accordion > .tabs .accordion--nested {
+    .js .tabs--accordion > .tabs:not(.tabs-v26) .accordion--nested {
         display: block;
     }
 }
@@ -39840,31 +39840,31 @@ article .link-copy {
     border-bottom-color: #5d184a;
 }
 
-.js .tabs--grey-underline .tabs__panel__body .tabs .tabs__links {
+.js .tabs--grey-underline .tabs__panel__body .tabs:not(.tabs-v26) .tabs__links {
     justify-content: left;
 }
 
-.js .tabs--grey-underline .tabs__panel__body .tabs .tabs__links li button > span {
+.js .tabs--grey-underline .tabs__panel__body .tabs:not(.tabs-v26) .tabs__links li button > span {
     border-bottom-color: #d8d8d8;
 }
 
-.js .tabs--grey-underline .tabs__panel__body .tabs .tabs__links li button > span:before {
+.js .tabs--grey-underline .tabs__panel__body .tabs:not(.tabs-v26) .tabs__links li button > span:before {
     background-color: #bebebe;
 }
 
-.js .tabs--grey-underline .tabs__panel__body .tabs .tabs__links li button[aria-selected='true'] > span {
+.js .tabs--grey-underline .tabs__panel__body .tabs:not(.tabs-v26) .tabs__links li button[aria-selected='true'] > span {
     border-bottom-color: #d61726;
 }
 
-.js .tabs--grey-underline .tabs__panel__body .tabs .tabs__panel {
+.js .tabs--grey-underline .tabs__panel__body .tabs:not(.tabs-v26) .tabs__panel {
     background: #f2f2f2;
 }
 
 @media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li {
+    main .navigation--secondary + .standard-content .tabs:not(.tabs-v26) .tabs__links li {
         margin-right: 0.5rem;
     }
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+    main .navigation--secondary + .standard-content .tabs:not(.tabs-v26) .tabs__links li button > span {
         font-size: 0.79rem;
         line-height: 1.625;
         letter-spacing: 0.005em;
@@ -39874,31 +39874,31 @@ article .link-copy {
 }
 
 @media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 1280px) and (max-width: 1919px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+    main .navigation--secondary + .standard-content .tabs:not(.tabs-v26) .tabs__links li button > span {
         letter-spacing: 0em;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 1920px) and (max-width: 3839px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+    main .navigation--secondary + .standard-content .tabs:not(.tabs-v26) .tabs__links li button > span {
         letter-spacing: -0.007em;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 3840px) and (max-width: 7679px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+    main .navigation--secondary + .standard-content .tabs:not(.tabs-v26) .tabs__links li button > span {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 7680px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+    main .navigation--secondary + .standard-content .tabs:not(.tabs-v26) .tabs__links li button > span {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+    main .navigation--secondary + .standard-content .tabs:not(.tabs-v26) .tabs__links li button > span {
         font-size: 0.889rem;
         line-height: 1.625;
         letter-spacing: 0em;
@@ -39906,25 +39906,592 @@ article .link-copy {
 }
 
 @media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 1280px) and (max-width: 1919px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+    main .navigation--secondary + .standard-content .tabs:not(.tabs-v26) .tabs__links li button > span {
         letter-spacing: -0.005em;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 1920px) and (max-width: 3839px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+    main .navigation--secondary + .standard-content .tabs:not(.tabs-v26) .tabs__links li button > span {
         letter-spacing: -0.01em;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 3840px) and (max-width: 7679px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+    main .navigation--secondary + .standard-content .tabs:not(.tabs-v26) .tabs__links li button > span {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 7680px) {
-    main .navigation--secondary + .standard-content .tabs .tabs__links li button > span {
+    main .navigation--secondary + .standard-content .tabs:not(.tabs-v26) .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
+}
+
+.tabs-v26 .tabs__links li:only-child {
+    display: none;
+}
+
+@media print {
+    .js .tabs-v26 > .tabs__links,
+    .js .tabs--accordion > .accordion {
+        display: none;
+    }
+    .js .tabs-v26 .tabs__panel[hidden] {
+        display: block;
+    }
+}
+
+@media screen {
+    .js .tabs-v26 .tabs__links {
+        align-items: stretch;
+        bottom: 0rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: inherit;
+        list-style-type: none;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-top: 1rem;
+        max-width: unset;
+        overflow: visible;
+        position: relative;
+    }
+    .js .tabs-v26 .tabs__links li {
+        margin-bottom: 0;
+        margin-top: 0;
+        max-width: unset;
+        text-align: center;
+        margin-right: 0.75rem;
+        display: flex;
+        align-items: flex-end;
+    }
+    .js .tabs-v26 .tabs__links li:last-of-type {
+        margin-right: 0;
+    }
+    .js .tabs-v26 .tabs__links li button {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        transition: background-size 0.2s ease-in-out;
+        background-repeat: no-repeat;
+        background-size: 100% 0;
+        background-position: 0 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+        color: #006bbd;
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+        background-image: none;
+        /*
+        border-bottom-color: transparent;
+        border-bottom-style: $border-style-dotted;
+        border-bottom-width: $border-width-default;
+        border-color: transparent;
+        border-style: $border-style-dotted;
+        border-width: $border-width-default;
+        */
+        border: 0.0625rem solid #0c0c0e;
+        color: #0c0c0e;
+        display: block;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        transition: none;
+        width: 100%;
+        /*
+        &:active {
+            background: $color-red50;
+            color: $color-purewhite; 
+            border: $border-width-hairline $border-style-solid $color-red50;
+            outline-width: $border-width-thick;
+            outline-style: $border-style-solid;
+            outline-color: $color-nearblack;
+            outline-offset: $border-width-thick;
+
+            span {
+                outline-width: 0;
+            }
+        }
+            */
+    }
+}
+
+@media screen and (hover: hover) {
+    .js .tabs-v26 .tabs__links li button:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media screen {
+    .js .tabs-v26 .tabs__links li button:focus, .js .tabs-v26 .tabs__links li button:active {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .js .tabs-v26 .tabs__links li button {
+        transition: none;
+    }
+}
+
+@media screen and (hover: hover) {
+    .js .tabs-v26 .tabs__links li button:hover {
+        background-size: 100% 100%;
+        background-image: linear-gradient(120deg, #006bbd 0%, #006bbd 100%);
+    }
+}
+
+@media screen {
+    .js .tabs-v26 .tabs__links li button span {
+        border-bottom-color: #006bbd;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+    }
+    .js .tabs-v26 .tabs__links li button:focus {
+        color: #006bbd;
+    }
+    .js .tabs-v26 .tabs__links li button:focus span {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+}
+
+@media screen and (hover: hover) {
+    .js .tabs-v26 .tabs__links li button:hover {
+        color: #ffffff;
+    }
+    .js .tabs-v26 .tabs__links li button:hover span {
+        outline: none;
+    }
+}
+
+@media screen {
+    .js .tabs-v26 .tabs__links li button:active {
+        background-color: #006bbd;
+        color: #ffffff;
+    }
+    .js .tabs-v26 .tabs__links li button:active span {
+        outline-color: #ffffff;
+        outline-offset: 0.1875rem;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+}
+
+@media screen and (hover: hover) {
+    .js .tabs-v26 .tabs__links li button:hover {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+}
+
+@media screen {
+    .js .tabs-v26 .tabs__links li button:focus, .js .tabs-v26 .tabs__links li button:active {
+        background-color: initial;
+        background-image: initial;
+        background-size: initial;
+        border-bottom-color: initial;
+        border-bottom-style: none;
+        border-bottom-width: 0;
+        color: initial;
+        cursor: pointer;
+        outline-color: initial;
+        outline-offset: 0;
+        outline-style: none;
+        outline-width: 0;
+        text-decoration: none;
+    }
+    .js .tabs-v26 .tabs__links li button > span {
+        font-family: "ff-meta-web-pro", sans-serif;
+        font-feature-settings: 'ss01' 1, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+        font-size: 1rem;
+        line-height: 1.625;
+        letter-spacing: -0.005em;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.33333;
+        margin-top: 1rem;
+        font-weight: 400;
+        align-items: flex-end;
+        border-bottom-color: transparent;
+        border-bottom-style: solid;
+        display: flex;
+        height: 100%;
+        line-height: 1.625;
+        margin-top: 0;
+        padding: 0.5rem;
+    }
+    .js .tabs-v26 .tabs__links li button > span i,
+    .js .tabs-v26 .tabs__links li button > span em {
+        font-feature-settings: 'ss01' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'liga' 1;
+    }
+    .js .tabs-v26 .tabs__links li button > span b,
+    .js .tabs-v26 .tabs__links li button > span strong {
+        font-weight: inherit;
+    }
+    .js .tabs-v26 .tabs__links li button > span i,
+    .js .tabs-v26 .tabs__links li button > span em {
+        font-style: italic;
+    }
+    .js .tabs-v26 .tabs__links li button > span u {
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+    .js .tabs-v26 .tabs__links li button > span {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media screen and (min-width: 1920px) and (max-width: 3839px) {
+    .js .tabs-v26 .tabs__links li button > span {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media screen and (min-width: 3840px) and (max-width: 7679px) {
+    .js .tabs-v26 .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media screen and (min-width: 7680px) {
+    .js .tabs-v26 .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media screen {
+    .js .tabs-v26 .tabs__links li button > span b,
+    .js .tabs-v26 .tabs__links li button > span strong {
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .js .tabs-v26 .tabs__links li button > span {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+@media screen {
+    .js .tabs-v26 .tabs__links li button[aria-selected='true'] {
+        background: #d61726;
+        color: #ffffff;
+        border-color: #d61726;
+    }
+    .js .tabs-v26 .tabs__links li button[aria-selected='true'] > span {
+        color: #ffffff;
+    }
+}
+
+@media screen and (hover: hover) {
+    .js .tabs-v26 .tabs__links li button:hover {
+        /*
+                border-bottom-color: transparent;
+                border-bottom-style: $border-style-dotted;
+                border-bottom-width: $border-width-default;
+                border-color: transparent;
+                border-style: $border-style-dotted;
+                border-width: $border-width-default;
+                */
+        border: 0.0625rem solid #d61726;
+    }
+}
+
+@media screen {
+    .js .tabs-v26 .tabs__links li button:focus, .js .tabs-v26 .tabs__links li button:active {
+        background: #d61726;
+        color: #ffffff;
+        border: 0.0625rem solid #d61726;
+        outline-width: 0.1875rem;
+        outline-style: solid;
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+    }
+    .js .tabs-v26 .tabs__links li button:focus span, .js .tabs-v26 .tabs__links li button:active span {
+        outline: none;
+    }
+    .js .tabs-v26 .tabs__panel {
+        padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+    }
+    .js .tabs-v26 .tabs__panel:focus {
+        outline-color: #0c0c0e;
+        outline-offset: 0.1875rem;
+        outline-style: solid;
+        outline-width: 0.125rem;
+        outline-offset: 0;
+    }
+    .js .tabs-v26 .tabs__panel__content {
+        padding: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .js .tabs-v26 .tabs__panel__content {
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen {
+    .js .tabs-v26 .tabs__panel__heading {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .js .tabs--accordion > .accordion {
+        display: block;
+    }
+    .js .tabs--accordion > .accordion .accordion__heading {
+        border-bottom-color: #f2f2f2;
+        border-bottom-style: solid;
+        border-bottom-width: 0.125rem;
+        outline-color: transparent;
+        outline-style: dotted;
+        outline-width: 0.125rem;
+    }
+    .js .tabs--accordion > .accordion .accordion__heading:active {
+        border-bottom-color: #f2f2f2;
+        text-decoration: underline;
+    }
+    .js .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
+        background: #d61726;
+        color: #ffffff;
+        text-decoration: underline;
+    }
+    .js .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__indicator {
+        padding: 1rem 0.89rem;
+    }
+    .js .tabs--accordion > .accordion .accordion__heading[data-open='false']:focus button {
+        outline-color: #0c0c0e;
+    }
+    .js .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__text {
+        background: transparent;
+        color: #1e1e1e;
+    }
+    .js .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__indicator {
+        background: #d61726;
+        color: #ffffff;
+    }
+    .js .tabs--accordion > .accordion .accordion__heading button {
+        padding: 0;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) and (hover: hover) {
+    .js .tabs--accordion > .accordion .accordion__heading button:hover {
+        background: #d61726;
+        color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .js .tabs--accordion > .accordion .accordion__heading button .accordion__heading__text {
+        padding: 1rem;
+    }
+    .js .tabs--accordion > .accordion .accordion__heading button .accordion__heading__indicator {
+        align-self: normal;
+        padding: 1rem;
+        text-align: center;
+        text-decoration: underline;
+        background: #d61726;
+        color: #ffffff;
+    }
+    .js .tabs--accordion > .accordion .accordion .accordion__heading button .accordion__heading__text,
+    .js .tabs--accordion > .accordion .accordion .accordion__heading button .accordion__heading__indicator {
+        background: transparent;
+        color: #006bbd;
+    }
+    .js .tabs--accordion > .accordion .accordion .accordion__heading[data-open='false'] {
+        border-bottom-color: #e5e5e5;
+        border-bottom-style: solid;
+        border-bottom-width: 0.0625rem;
+    }
+    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__indicator,
+    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
+        background: #d61726;
+        color: #ffffff;
+    }
+    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__indicator {
+        background: #d61726;
+        color: #ffffff;
+    }
+    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__text {
+        color: #1e1e1e;
+    }
+    .js .tabs--accordion > .tabs-v26 {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .js .tabs--accordion > .accordion {
+        display: none;
+    }
+    .js .tabs--accordion > .tabs-v26 {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 769px) and (min-width: 769px) {
+    .js .tabs--accordion > .tabs-v26 .accordion--nested {
+        display: block;
+    }
+}
+
+.js .tabs--grey-underline .tabs__links li button > span {
+    border-bottom-color: #f2f2f2;
+}
+
+.js .tabs--grey-underline .tabs__links li button[aria-selected='true'] > span {
+    border-bottom-color: #5d184a;
+}
+
+.js .tabs--grey-underline .tabs__panel__body .tabs-v26 .tabs__links {
+    justify-content: left;
+}
+
+.js .tabs--grey-underline .tabs__panel__body .tabs-v26 .tabs__links li button > span {
+    border-bottom-color: #d8d8d8;
+}
+
+.js .tabs--grey-underline .tabs__panel__body .tabs-v26 .tabs__links li button[aria-selected='true'] > span {
+    border-bottom-color: #d61726;
+}
+
+.js .tabs--grey-underline .tabs__panel__body .tabs-v26 .tabs__panel {
+    background: inherit;
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) {
+    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li {
+        margin-right: 0.5rem;
+    }
+    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
+        font-size: 0.79rem;
+        line-height: 1.625;
+        letter-spacing: 0.005em;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 1280px) and (max-width: 1919px) {
+    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 1920px) and (max-width: 3839px) {
+    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
+        letter-spacing: -0.007em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 3840px) and (max-width: 7679px) {
+    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 7680px) {
+    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) {
+    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
+        font-size: 0.889rem;
+        line-height: 1.625;
+        letter-spacing: 0em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 1280px) and (max-width: 1919px) {
+    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 1920px) and (max-width: 3839px) {
+    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 3840px) and (max-width: 7679px) {
+    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 7680px) {
+    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
         letter-spacing: -0.017em;
     }
 }
