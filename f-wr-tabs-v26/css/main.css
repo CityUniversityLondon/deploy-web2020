@@ -39935,7 +39935,7 @@ article .link-copy {
 
 @media print {
     .js .tabs-v26 > .tabs__links,
-    .js .tabs--accordion > .accordion {
+    .js .tabs--accordion > .accordion-v26 {
         display: none;
     }
     .js .tabs-v26 .tabs__panel[hidden] {
@@ -40035,7 +40035,7 @@ article .link-copy {
                 outline-width: 0;
             }
         }
-            */
+        */
     }
 }
 
@@ -40302,85 +40302,53 @@ article .link-copy {
 }
 
 @media screen and (max-width: 768px) {
-    .js .tabs--accordion > .accordion {
+    .js .tabs--accordion > .accordion-v26 {
         display: block;
     }
-    .js .tabs--accordion > .accordion .accordion__heading {
-        border-bottom-color: #f2f2f2;
-        border-bottom-style: solid;
-        border-bottom-width: 0.125rem;
-        outline-color: transparent;
-        outline-style: dotted;
-        outline-width: 0.125rem;
+    .js .tabs--accordion > .accordion-v26 .accordion__heading {
+        /*
+            border-bottom-color: $color-gray1;
+            border-bottom-style: $border-style-solid;
+            border-bottom-width: $border-width-default;
+            outline-color: transparent;
+            outline-style: $border-style-dotted;
+            outline-width: $border-width-default;
+            */
     }
-    .js .tabs--accordion > .accordion .accordion__heading:active {
-        border-bottom-color: #f2f2f2;
-        text-decoration: underline;
-    }
-    .js .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
-        background: #d61726;
-        color: #ffffff;
-        text-decoration: underline;
-    }
-    .js .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__indicator {
-        padding: 1rem 0.89rem;
-    }
-    .js .tabs--accordion > .accordion .accordion__heading[data-open='false']:focus button {
-        outline-color: #0c0c0e;
-    }
-    .js .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__text {
-        background: transparent;
-        color: #1e1e1e;
-    }
-    .js .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__indicator {
-        background: #d61726;
-        color: #ffffff;
-    }
-    .js .tabs--accordion > .accordion .accordion__heading button {
-        padding: 0;
-        display: block;
+    .js .tabs--accordion > .accordion-v26 .accordion__heading[data-open='false'] button .accordion__heading__text {
+        /*
+                        background: transparent;
+                        color: $color-gray10;
+                        */
     }
 }
 
 @media screen and (max-width: 768px) and (hover: hover) {
-    .js .tabs--accordion > .accordion .accordion__heading button:hover {
+    .js .tabs--accordion > .accordion-v26 .accordion__heading button:hover {
         background: #d61726;
-        color: #ffffff;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .js .tabs--accordion > .accordion .accordion__heading button .accordion__heading__text {
-        padding: 1rem;
+    .js .tabs--accordion > .accordion-v26 .accordion__heading button .accordion__heading__indicator {
+        /*
+                    align-self: normal;
+                    padding: $measure--basic;
+                    text-align: center;
+                    text-decoration: underline;
+                    */
     }
-    .js .tabs--accordion > .accordion .accordion__heading button .accordion__heading__indicator {
-        align-self: normal;
-        padding: 1rem;
-        text-align: center;
-        text-decoration: underline;
-        background: #d61726;
-        color: #ffffff;
-    }
-    .js .tabs--accordion > .accordion .accordion .accordion__heading button .accordion__heading__text,
-    .js .tabs--accordion > .accordion .accordion .accordion__heading button .accordion__heading__indicator {
+    .js .tabs--accordion > .accordion-v26 .accordion-v26 .accordion__heading button .accordion__heading__text,
+    .js .tabs--accordion > .accordion-v26 .accordion-v26 .accordion__heading button .accordion__heading__indicator {
         background: transparent;
         color: #006bbd;
     }
-    .js .tabs--accordion > .accordion .accordion .accordion__heading[data-open='false'] {
+    .js .tabs--accordion > .accordion-v26 .accordion-v26 .accordion__heading[data-open='false'] {
         border-bottom-color: #e5e5e5;
         border-bottom-style: solid;
         border-bottom-width: 0.0625rem;
     }
-    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__indicator,
-    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='true'] button .accordion__heading__text {
-        background: #d61726;
-        color: #ffffff;
-    }
-    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__indicator {
-        background: #d61726;
-        color: #ffffff;
-    }
-    .js .tabs--accordion .tabs--accordion > .accordion .accordion__heading[data-open='false'] button .accordion__heading__text {
+    .js .tabs--accordion .tabs--accordion > .accordion-v26 .accordion__heading[data-open='false'] button .accordion__heading__text {
         color: #1e1e1e;
     }
     .js .tabs--accordion > .tabs-v26 {
@@ -40389,7 +40357,7 @@ article .link-copy {
 }
 
 @media screen and (min-width: 769px) {
-    .js .tabs--accordion > .accordion {
+    .js .tabs--accordion > .accordion-v26 {
         display: none;
     }
     .js .tabs--accordion > .tabs-v26 {
@@ -40403,99 +40371,64 @@ article .link-copy {
     }
 }
 
-.js .tabs--grey-underline .tabs__links li button > span {
-    border-bottom-color: #f2f2f2;
-}
-
-.js .tabs--grey-underline .tabs__links li button[aria-selected='true'] > span {
-    border-bottom-color: #5d184a;
-}
-
-.js .tabs--grey-underline .tabs__panel__body .tabs-v26 .tabs__links {
-    justify-content: left;
-}
-
-.js .tabs--grey-underline .tabs__panel__body .tabs-v26 .tabs__links li button > span {
-    border-bottom-color: #d8d8d8;
-}
-
-.js .tabs--grey-underline .tabs__panel__body .tabs-v26 .tabs__links li button[aria-selected='true'] > span {
-    border-bottom-color: #d61726;
-}
-
-.js .tabs--grey-underline .tabs__panel__body .tabs-v26 .tabs__panel {
-    background: inherit;
-}
-
-@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) {
-    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li {
-        margin-right: 0.5rem;
+/*
+// tabs variation with grey underline
+.js .tabs--grey-underline {
+    .tabs__links li button > span {
+        border-bottom-color: $color-gray1;
     }
-    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
-        font-size: 0.79rem;
-        line-height: 1.625;
-        letter-spacing: 0.005em;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+    .tabs__links li button[aria-selected='true'] > span {
+        border-bottom-color: $color-pink80;
+    }
+
+    .tabs__panel__body .tabs-v26 {
+        // nested tabs
+        .tabs__links {
+            justify-content: left;
+
+            li button > span {
+                border-bottom-color: $color-gray3;
+            }
+
+            li button[aria-selected='true'] > span {
+                border-bottom-color: $color-red50;
+            }
+        }
+
+        .tabs__panel {
+            background: inherit;
+        }
     }
 }
+*/
+/*
+// Desktop specific layout if secondary navigation is present for standard pages
+main {
+    @include media('>=small') {
+        .navigation--secondary {
+            & + .standard-content {
 
-@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 1280px) and (max-width: 1919px) {
-    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
-        letter-spacing: 0em;
+                @include media('>=small', '<desktop') {
+                    .tabs-v26 .tabs__links li {
+                        margin-right: $measure--half;
+                        button > span {
+                            @include extrasmalltype();
+                            padding-left: $measure--half;
+                            padding-right: $measure--half;
+                        }
+                    }
+                }
+
+                @include media('>=desktop', '<large') {
+                    .tabs-v26 .tabs__links li button > span {
+                        @include smalltype();
+                    }
+                }
+            }
+        }
     }
 }
-
-@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 1920px) and (max-width: 3839px) {
-    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
-        letter-spacing: -0.007em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 3840px) and (max-width: 7679px) {
-    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1024px) and (max-width: 1279px) and (min-width: 7680px) {
-    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) {
-    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
-        font-size: 0.889rem;
-        line-height: 1.625;
-        letter-spacing: 0em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 1280px) and (max-width: 1919px) {
-    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
-        letter-spacing: -0.005em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 1920px) and (max-width: 3839px) {
-    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
-        letter-spacing: -0.01em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 3840px) and (max-width: 7679px) {
-    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
-        letter-spacing: -0.017em;
-    }
-}
-
-@media (min-width: 1024px) and (min-width: 1280px) and (max-width: 1439px) and (min-width: 7680px) {
-    main .navigation--secondary + .standard-content .tabs-v26 .tabs__links li button > span {
-        letter-spacing: -0.017em;
-    }
-}
-
+*/
 .timetable {
     padding-bottom: 1.5rem;
     margin-top: 1.5rem;
