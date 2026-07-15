@@ -1,4 +1,244 @@
 @charset "UTF-8";
+.width--quarter {
+  width: 0.25rem;
+}
+
+.height--quarter {
+  height: 0.25rem;
+}
+
+.width--half {
+  width: 0.5rem;
+}
+
+.height--half {
+  height: 0.5rem;
+}
+
+.width--threequarters {
+  width: 0.75rem;
+}
+
+.height--threequarters {
+  height: 0.75rem;
+}
+
+.width--basic {
+  width: 1rem;
+}
+
+.height--basic {
+  height: 1rem;
+}
+
+.width--small1 {
+  width: 1.25rem;
+}
+
+.height--small1 {
+  height: 1.25rem;
+}
+
+.width--small2 {
+  width: 1.5rem;
+}
+
+.height--small2 {
+  height: 1.5rem;
+}
+
+.width--small3 {
+  width: 1.75rem;
+}
+
+.height--small3 {
+  height: 1.75rem;
+}
+
+.width--small4 {
+  width: 2rem;
+}
+
+.height--small4 {
+  height: 2rem;
+}
+
+.width--small5 {
+  width: 2.25rem;
+}
+
+.height--small5 {
+  height: 2.25rem;
+}
+
+.width--medium1 {
+  width: 2.5rem;
+}
+
+.height--medium1 {
+  height: 2.5rem;
+}
+
+.width--medium2 {
+  width: 2.75rem;
+}
+
+.height--medium2 {
+  height: 2.75rem;
+}
+
+.width--medium3 {
+  width: 3rem;
+}
+
+.height--medium3 {
+  height: 3rem;
+}
+
+.width--medium4 {
+  width: 3.25rem;
+}
+
+.height--medium4 {
+  height: 3.25rem;
+}
+
+.width--medium5 {
+  width: 3.5rem;
+}
+
+.height--medium5 {
+  height: 3.5rem;
+}
+
+.width--medium6 {
+  width: 3.75rem;
+}
+
+.height--medium6 {
+  height: 3.75rem;
+}
+
+.width--medium7 {
+  width: 4rem;
+}
+
+.height--medium7 {
+  height: 4rem;
+}
+
+.width--medium8 {
+  width: 4.25rem;
+}
+
+.height--medium8 {
+  height: 4.25rem;
+}
+
+.width--medium9 {
+  width: 4.5rem;
+}
+
+.height--medium9 {
+  height: 4.5rem;
+}
+
+.width--medium10 {
+  width: 4.75rem;
+}
+
+.height--medium10 {
+  height: 4.75rem;
+}
+
+.width--medium11 {
+  width: 5rem;
+}
+
+.height--medium11 {
+  height: 5rem;
+}
+
+.width--large1 {
+  width: 5.5rem;
+}
+
+.height--large1 {
+  height: 5.5rem;
+}
+
+.width--large2 {
+  width: 6rem;
+}
+
+.height--large2 {
+  height: 6rem;
+}
+
+.width--large3 {
+  width: 6.5rem;
+}
+
+.height--large3 {
+  height: 6.5rem;
+}
+
+.width--large4 {
+  width: 7rem;
+}
+
+.height--large4 {
+  height: 7rem;
+}
+
+.width--large5 {
+  width: 7.5rem;
+}
+
+.height--large5 {
+  height: 7.5rem;
+}
+
+.width--huge1 {
+  width: 8rem;
+}
+
+.height--huge1 {
+  height: 8rem;
+}
+
+.width--huge2 {
+  width: 8.5rem;
+}
+
+.height--huge2 {
+  height: 8.5rem;
+}
+
+.width--huge3 {
+  width: 9rem;
+}
+
+.height--huge3 {
+  height: 9rem;
+}
+
+.width--huge4 {
+  width: 9.5rem;
+}
+
+.height--huge4 {
+  height: 9.5rem;
+}
+
+.width--huge5 {
+  width: 10rem;
+}
+
+.height--huge5 {
+  height: 10rem;
+}
+
 /*!
  * Font Awesome Pro 7.2.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license (Commercial License)
@@ -1318,7 +1558,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("../fonts/fa-solid-900.woff2");
+  src: url("/fonts/fa-solid-900.woff2");
 }
 .fas {
   --fa-family: var(--fa-family-classic);
@@ -1354,7 +1594,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../fonts/fa-regular-400.woff2");
+  src: url("/fonts/fa-regular-400.woff2");
 }
 .far {
   --fa-family: var(--fa-family-classic);
@@ -1390,7 +1630,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: block;
-  src: url("../fonts/fa-light-300.woff2");
+  src: url("/fonts/fa-light-300.woff2");
 }
 .fal {
   --fa-family: var(--fa-family-classic);
@@ -1426,7 +1666,7 @@
   font-style: normal;
   font-weight: 100;
   font-display: block;
-  src: url("../fonts/fa-thin-100.woff2");
+  src: url("/fonts/fa-thin-100.woff2");
 }
 .fat {
   --fa-family: var(--fa-family-classic);
@@ -1458,7 +1698,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../fonts/fa-brands-400.woff2");
+  src: url("data:font/woff2;base64,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");
 }
 .fab,
 .fa-brands,
@@ -1584,7 +1824,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("../fonts/fa-duotone-900.woff2");
+  src: url("/fonts/fa-duotone-900.woff2");
 }
 .fad,
 .fa-duotone {
@@ -1649,7 +1889,7 @@
   font-style: normal;
   font-weight: 900;
   font-display: block;
-  src: url("../fonts/fa-sharp-solid-900.woff2");
+  src: url("/fonts/fa-sharp-solid-900.woff2");
 }
 .fass {
   --fa-family: var(--fa-family-sharp);
@@ -1683,7 +1923,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: block;
-  src: url("../fonts/fa-sharp-regular-400.woff2");
+  src: url("/fonts/fa-sharp-regular-400.woff2");
 }
 .fasr {
   --fa-family: var(--fa-family-sharp);
@@ -1717,7 +1957,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: block;
-  src: url("../fonts/fa-sharp-light-300.woff2");
+  src: url("/fonts/fa-sharp-light-300.woff2");
 }
 .fasl {
   --fa-family: var(--fa-family-sharp);
@@ -1751,7 +1991,7 @@
   font-style: normal;
   font-weight: 100;
   font-display: block;
-  src: url("../fonts/fa-sharp-thin-100.woff2");
+  src: url("/fonts/fa-sharp-thin-100.woff2");
 }
 .fast {
   --fa-family: var(--fa-family-sharp);
@@ -1764,246 +2004,6 @@
 
 .fa-thin {
   --fa-style: 100;
-}
-
-.width--quarter {
-  width: 0.25rem;
-}
-
-.height--quarter {
-  height: 0.25rem;
-}
-
-.width--half {
-  width: 0.5rem;
-}
-
-.height--half {
-  height: 0.5rem;
-}
-
-.width--threequarters {
-  width: 0.75rem;
-}
-
-.height--threequarters {
-  height: 0.75rem;
-}
-
-.width--basic {
-  width: 1rem;
-}
-
-.height--basic {
-  height: 1rem;
-}
-
-.width--small1 {
-  width: 1.25rem;
-}
-
-.height--small1 {
-  height: 1.25rem;
-}
-
-.width--small2 {
-  width: 1.5rem;
-}
-
-.height--small2 {
-  height: 1.5rem;
-}
-
-.width--small3 {
-  width: 1.75rem;
-}
-
-.height--small3 {
-  height: 1.75rem;
-}
-
-.width--small4 {
-  width: 2rem;
-}
-
-.height--small4 {
-  height: 2rem;
-}
-
-.width--small5 {
-  width: 2.25rem;
-}
-
-.height--small5 {
-  height: 2.25rem;
-}
-
-.width--medium1 {
-  width: 2.5rem;
-}
-
-.height--medium1 {
-  height: 2.5rem;
-}
-
-.width--medium2 {
-  width: 2.75rem;
-}
-
-.height--medium2 {
-  height: 2.75rem;
-}
-
-.width--medium3 {
-  width: 3rem;
-}
-
-.height--medium3 {
-  height: 3rem;
-}
-
-.width--medium4 {
-  width: 3.25rem;
-}
-
-.height--medium4 {
-  height: 3.25rem;
-}
-
-.width--medium5 {
-  width: 3.5rem;
-}
-
-.height--medium5 {
-  height: 3.5rem;
-}
-
-.width--medium6 {
-  width: 3.75rem;
-}
-
-.height--medium6 {
-  height: 3.75rem;
-}
-
-.width--medium7 {
-  width: 4rem;
-}
-
-.height--medium7 {
-  height: 4rem;
-}
-
-.width--medium8 {
-  width: 4.25rem;
-}
-
-.height--medium8 {
-  height: 4.25rem;
-}
-
-.width--medium9 {
-  width: 4.5rem;
-}
-
-.height--medium9 {
-  height: 4.5rem;
-}
-
-.width--medium10 {
-  width: 4.75rem;
-}
-
-.height--medium10 {
-  height: 4.75rem;
-}
-
-.width--medium11 {
-  width: 5rem;
-}
-
-.height--medium11 {
-  height: 5rem;
-}
-
-.width--large1 {
-  width: 5.5rem;
-}
-
-.height--large1 {
-  height: 5.5rem;
-}
-
-.width--large2 {
-  width: 6rem;
-}
-
-.height--large2 {
-  height: 6rem;
-}
-
-.width--large3 {
-  width: 6.5rem;
-}
-
-.height--large3 {
-  height: 6.5rem;
-}
-
-.width--large4 {
-  width: 7rem;
-}
-
-.height--large4 {
-  height: 7rem;
-}
-
-.width--large5 {
-  width: 7.5rem;
-}
-
-.height--large5 {
-  height: 7.5rem;
-}
-
-.width--huge1 {
-  width: 8rem;
-}
-
-.height--huge1 {
-  height: 8rem;
-}
-
-.width--huge2 {
-  width: 8.5rem;
-}
-
-.height--huge2 {
-  height: 8.5rem;
-}
-
-.width--huge3 {
-  width: 9rem;
-}
-
-.height--huge3 {
-  height: 9rem;
-}
-
-.width--huge4 {
-  width: 9.5rem;
-}
-
-.height--huge4 {
-  height: 9.5rem;
-}
-
-.width--huge5 {
-  width: 10rem;
-}
-
-.height--huge5 {
-  height: 10rem;
 }
 
 .color--gray1 {
@@ -4487,14 +4487,17 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .wrapper--text-highlight {
   max-width: 40ch;
 }
 
 html {
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 
 body {
@@ -4637,23 +4640,6 @@ Example HTML:
   display: grid;
 }
 
-/* Provide a full-width heading area, where the bottom border is applied to give
-the impression for a full-width underline on larger screens. As this extends beyond the regular grid,
-the standard grid wrapper mixin is applied to the child element with class
-'full-width-heading'.
-
-Example HTML:
-<div class="wrapper--course--pgt__profiles__heading">
-    <div class="course--pgt__profiles__heading full-width-heading">
-        <h2>Our academics</h2>
-    </div>
-</div>
-
-Assign mixin:
-.wrapper--course--pgt__profiles__heading {
-    @include full-width-heading();
-}
-*/
 html {
   background-color: #f2f2f2;
   color: #1e1e1e;
@@ -7935,7 +7921,8 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 .wrapper--text-highlight {
@@ -15400,7 +15387,8 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 .wrapper--text-highlight {
@@ -22947,7 +22935,8 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 .wrapper--text-highlight {
@@ -33427,7 +33416,8 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 .wrapper--text-highlight {
@@ -55261,7 +55251,8 @@ figure figcaption a:active,
 .swiper-slide {
   width: 100%;
   width: calc(100% / var(--n));
-  user-select: none;
+  -webkit-user-select: none;
+          user-select: none;
   pointer-events: none;
 }
 @media (min-width: 901px) {
@@ -57908,7 +57899,8 @@ figure figcaption a:active,
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .infographic[data-theme=blue50] .infographic__panel[data-theme-background=true] .infographic__description__text__highlight {
   background: #832c9e;
@@ -57917,7 +57909,8 @@ figure figcaption a:active,
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .infographic[data-theme=purple50] .infographic__panel .infographic__description__text__highlight {
   background: #832c9e;
@@ -57926,7 +57919,8 @@ figure figcaption a:active,
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .infographic[data-theme=purple50] .infographic__panel[data-theme-background=true] .infographic__description__text__highlight {
   background: #0177a0;
@@ -57935,7 +57929,8 @@ figure figcaption a:active,
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #0177a0, -0.5rem 0 0 #0177a0;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .infographic[data-theme=red50] .infographic__panel .infographic__description__text__highlight {
   background: #d61726;
@@ -57944,7 +57939,8 @@ figure figcaption a:active,
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #d61726, -0.5rem 0 0 #d61726;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .infographic[data-theme=red50] .infographic__panel[data-theme-background=true] .infographic__description__text__highlight {
   background: #832c9e;
@@ -57953,7 +57949,8 @@ figure figcaption a:active,
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .infographic .infographic__panel[data-type=image] {
   text-align: center;
@@ -64691,6 +64688,14 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
   overflow-y: hidden;
 }
 .navigation--primary .navigation--primary__menu__content {
+  column-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, auto);
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
   max-width: 80rem;
@@ -64716,16 +64721,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
     margin-left: auto;
     margin-right: auto;
   }
-}
-.navigation--primary .navigation--primary__menu__content {
-  column-gap: 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: repeat(2, auto);
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
 }
 .navigation--primary .navigation--primary__menu__content .navigation__current {
   display: flex;
@@ -69638,33 +69633,24 @@ blockquote footer cite {
 }
 
 .tooltip__overlay {
-  -moz-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 img:has(~ .wrapper--tooltip__label[data-open=true]) {
-  -webkit-filter: brightness(0.2);
   filter: brightness(0.2);
 }
 
 .card--news .wrapper--tooltip__label ~ .card__anchor img {
-  -moz-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card--news .wrapper--tooltip__label[data-open=true] ~ .card__anchor img {
-  -webkit-filter: brightness(0.2);
   filter: brightness(0.2);
 }
 
 .card--pathway .wrapper--tooltip__label ~ a img {
-  -moz-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card--pathway .wrapper--tooltip__label[data-open=true] ~ a img {
-  -webkit-filter: brightness(0.2);
   filter: brightness(0.2);
 }
 
@@ -75665,7 +75651,8 @@ article .link-copy {
   padding-top: 1rem;
 }
 .finder__checkbox input {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   height: 0;
   left: 0;
   position: absolute;
@@ -80728,7 +80715,8 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 .wrapper--text-highlight {
@@ -85240,7 +85228,8 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 .wrapper--text-highlight {
@@ -85288,7 +85277,8 @@ iframe[src*=issuu], iframe[src*=prezi] {
   height: 1.5rem;
   z-index: 1;
   margin: 0;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .v26-finder_filters__checkbox:focus {
@@ -96581,7 +96571,8 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 .wrapper--text-highlight {
@@ -101652,7 +101643,8 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 .wrapper--text-highlight {
@@ -102646,6 +102638,23 @@ main > .login footer p {
   text-align: center;
 }
 
+/* Provide a full-width heading area, where the bottom border is applied to give
+the impression for a full-width underline on larger screens. As this extends beyond the regular grid,
+the standard grid wrapper mixin is applied to the child element with class
+'full-width-heading'.
+
+Example HTML:
+<div class="wrapper--course--pgt__profiles__heading">
+    <div class="course--pgt__profiles__heading full-width-heading">
+        <h2>Our academics</h2>
+    </div>
+</div>
+
+Assign mixin:
+.wrapper--course--pgt__profiles__heading {
+    @include full-width-heading();
+}
+*/
 main > .news {
   grid-column: 1/-1;
 }
@@ -109421,7 +109430,8 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #5d184a, -0.5rem 0 0 #5d184a;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .lifelong-learning .text-highlight-block .text-highlight__heading {
   margin: 0;
@@ -109433,7 +109443,8 @@ main > .news .news__contact .card--contact .card__details .card__tag .icon {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
   margin-bottom: 0.5rem;
   padding: 0.25rem 0;
   font-weight: 400;

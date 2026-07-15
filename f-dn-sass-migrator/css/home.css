@@ -2711,14 +2711,17 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 .wrapper--text-highlight {
   max-width: 40ch;
 }
 
 html {
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 
 body {
@@ -6124,7 +6127,8 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 .wrapper--text-highlight {
@@ -13589,7 +13593,8 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 .wrapper--text-highlight {
@@ -21136,7 +21141,8 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 .wrapper--text-highlight {
@@ -31616,7 +31622,8 @@ iframe[src*=issuu], iframe[src*=prezi] {
   display: inline;
   line-height: 2rem;
   box-shadow: 0.5rem 0 0 #832c9e, -0.5rem 0 0 #832c9e;
-  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
 }
 
 .wrapper--text-highlight {
@@ -40877,33 +40884,24 @@ article a:active {
 }
 
 .tooltip__overlay {
-  -moz-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 img:has(~ .wrapper--tooltip__label[data-open=true]) {
-  -webkit-filter: brightness(0.2);
   filter: brightness(0.2);
 }
 
 .card--news .wrapper--tooltip__label ~ .card__anchor img {
-  -moz-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card--news .wrapper--tooltip__label[data-open=true] ~ .card__anchor img {
-  -webkit-filter: brightness(0.2);
   filter: brightness(0.2);
 }
 
 .card--pathway .wrapper--tooltip__label ~ a img {
-  -moz-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: filter 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .card--pathway .wrapper--tooltip__label[data-open=true] ~ a img {
-  -webkit-filter: brightness(0.2);
   filter: brightness(0.2);
 }
 
@@ -46904,6 +46902,14 @@ article .link-copy {
   overflow-y: hidden;
 }
 .navigation--primary .navigation--primary__menu__content {
+  column-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, auto);
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
   max-width: 80rem;
@@ -46929,16 +46935,6 @@ article .link-copy {
     margin-left: auto;
     margin-right: auto;
   }
-}
-.navigation--primary .navigation--primary__menu__content {
-  column-gap: 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: repeat(2, auto);
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: 1rem;
 }
 .navigation--primary .navigation--primary__menu__content .navigation__current {
   display: flex;
@@ -55233,7 +55229,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 .search-box__select select:focus {
@@ -55757,10 +55752,6 @@ ul.cta-like-anchor-inline li.cta-like-anchor .cta-like-anchor__text {
   display: inline-block;
   height: 1.75rem;
   position: absolute;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg);
   width: 0.0625rem;
 }
