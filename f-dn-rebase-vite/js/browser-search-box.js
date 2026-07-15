@@ -165,7 +165,7 @@ function Query(props) {
         setPartialQuery(e.target.value);
         call.cancel();
         if (e.target.value) {
-          const [suggestionsPromise, newCall] = suggest("city-university~sp-web2020-courses", e.target.value, props.config.dxp ? props.config.dxp : false);
+          const [suggestionsPromise, newCall] = suggest(props.query.collection, e.target.value, props.config.dxp ? props.config.dxp : false);
           setCall({
             cancel: () => {
               newCall.cancel();
@@ -220,17 +220,17 @@ function Select(props) {
     className: `search-box__filter search-box__select ${currentValue && "search-box__select--selected"}`,
     children: [/* @__PURE__ */ jsxRuntimeExports.jsx("label", {
       className: "sr-only",
-      htmlFor: `meta_${props.facet.meta}_sand--`,
+      htmlFor: `f±${props.facet.facetName}|${props.facet.meta}[]`,
       children: props.facet.name
     }), /* @__PURE__ */ jsxRuntimeExports.jsxs("select", {
-      name: `meta_${props.facet.meta}_sand`,
-      id: `meta_${props.facet.meta}_sand--`,
+      name: `f±${props.facet.facetName}|${props.facet.meta}[]`,
+      id: `f±${props.facet.facetName}|${props.facet.meta}[]`,
       onChange: (e) => setFacet(e.target.value),
       value: currentValue,
       children: [/* @__PURE__ */ jsxRuntimeExports.jsx("option", {
         value: "",
-        id: `meta${props.facet.meta}all`,
-        name: `meta_${props.facet.meta}_sand--`,
+        id: `f±${props.facet.facetName}|${props.facet.meta}all`,
+        name: `f±${props.facet.facetName}|${props.facet.meta}_all`,
         children: props.facet.noSelection
       }), props.facet.values.map((value, i) => {
         return /* @__PURE__ */ jsxRuntimeExports.jsx("option", {

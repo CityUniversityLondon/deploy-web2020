@@ -775,16 +775,16 @@ function Finder__Results__BestBet(props) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("li", {
     className: "card card--bestbet",
     children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", {
-      href: props.details.liveUrl,
+      href: props.details.displayUrl,
       className: "card__anchor card__details",
       children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", {
         className: "card__details__text",
         children: [/* @__PURE__ */ jsxRuntimeExports.jsx("h3", {
           className: "card__heading",
-          children: props.details.title
+          children: props.details.titleHtml
         }), /* @__PURE__ */ jsxRuntimeExports.jsx("p", {
           className: "card__description",
-          children: props.details.description
+          children: props.details.descriptionHtml
         })]
       })
     })
