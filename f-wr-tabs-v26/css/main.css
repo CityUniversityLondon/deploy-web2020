@@ -40257,7 +40257,8 @@ article .link-copy {
                 border-style: $border-style-dotted;
                 border-width: $border-width-default;
                 */
-        border: 0.0625rem solid #d61726;
+        border: 0.0625rem solid #0c0c0e;
+        background: #f2f2f2;
     }
 }
 
