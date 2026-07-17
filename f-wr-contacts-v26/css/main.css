@@ -6255,8 +6255,8 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     font-size: 1.266rem;
 }
 
-.finder__results .card--contact .card__details,
-.search__results .card--contact .card__details {
+.finder__results .card--contact-v26 .card__details,
+.search__results .card--contact-v26 .card__details {
     border-color: #f2f2f2;
     border-style: solid;
     border-width: 0.0625rem;
@@ -6264,27 +6264,27 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 @media (max-width: 900px) {
-    .finder__results .card--contact .card__details,
-    .search__results .card--contact .card__details {
+    .finder__results .card--contact-v26 .card__details,
+    .search__results .card--contact-v26 .card__details {
         background-color: #f2f2f2;
     }
 }
 
-.finder__results .card--contact .card__details .card__details__text,
-.search__results .card--contact .card__details .card__details__text {
+.finder__results .card--contact-v26 .card__details .card__details__text,
+.search__results .card--contact-v26 .card__details .card__details__text {
     padding-bottom: 1rem;
 }
 
-.finder__results .card--contact .card__details .card__type,
-.search__results .card--contact .card__details .card__type {
+.finder__results .card--contact-v26 .card__details .card__type,
+.search__results .card--contact-v26 .card__details .card__type {
     color: #d61726;
 }
 
-.card--contact .card__details .card__tag .icon {
+.card--contact-v26 .card__details .card__tag .icon {
     color: #d61726;
 }
 
-.card--contact .wrapper--card--contact__address {
+.card--contact-v26 .wrapper--card--contact__address {
     font-family: "ibm-plex-sans", sans-serif;
     /**
      * IBM Plex OpenType stylistic sets:
@@ -6307,73 +6307,74 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     margin-top: 0.75rem;
 }
 
-.card--contact .wrapper--card--contact__address i,
-.card--contact .wrapper--card--contact__address em {
+.card--contact-v26 .wrapper--card--contact__address i,
+.card--contact-v26 .wrapper--card--contact__address em {
     font-feature-settings: 'ss01' 0, 'ss02' 1, 'ss03' 1, 'ss04' 0, 'lnum' 1, 'onum' 0, 'pnum' 1, 'tnum' 0, 'frac' 0, 'liga' 1;
 }
 
 @media (min-width: 1280px) and (max-width: 1919px) {
-    .card--contact .wrapper--card--contact__address {
+    .card--contact-v26 .wrapper--card--contact__address {
         letter-spacing: -0.008em;
     }
 }
 
 @media (min-width: 1920px) and (max-width: 3839px) {
-    .card--contact .wrapper--card--contact__address {
+    .card--contact-v26 .wrapper--card--contact__address {
         letter-spacing: -0.013em;
     }
 }
 
 @media (min-width: 3840px) and (max-width: 7679px) {
-    .card--contact .wrapper--card--contact__address {
+    .card--contact-v26 .wrapper--card--contact__address {
         letter-spacing: -0.017em;
     }
 }
 
 @media (min-width: 7680px) {
-    .card--contact .wrapper--card--contact__address {
+    .card--contact-v26 .wrapper--card--contact__address {
         letter-spacing: -0.017em;
     }
 }
 
-.card--contact .wrapper--card--contact__address b,
-.card--contact .wrapper--card--contact__address strong {
+.card--contact-v26 .wrapper--card--contact__address b,
+.card--contact-v26 .wrapper--card--contact__address strong {
     font-weight: 700;
 }
 
-.card--contact .wrapper--card--contact__address i,
-.card--contact .wrapper--card--contact__address em {
+.card--contact-v26 .wrapper--card--contact__address i,
+.card--contact-v26 .wrapper--card--contact__address em {
     font-style: italic;
 }
 
-.card--contact .wrapper--card--contact__address address .card--contact__addressline {
+.card--contact-v26 .wrapper--card--contact__address address .card--contact__addressline {
     display: block;
 }
 
-.related-content .card.card--contact {
+.related-content .card.card--contact-v26 {
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 1.5rem;
+    background: lime;
 }
 
-.related-content .card.card--contact + .card--contact {
+.related-content .card.card--contact-v26 + .card--contact-v26 {
     border-top-style: solid;
     border-top-color: #0c0c0e;
     border-top-width: 0.0625rem;
     padding-top: 1.5rem;
 }
 
-.related-content .card.card--contact .card__details .card__details__text {
+.related-content .card.card--contact-v26 .card__details .card__details__text {
     padding-bottom: 1rem;
     padding-top: inherit;
     padding-left: 0;
 }
 
-.related-content .card.card--contact .card__tag + .card__tag {
+.related-content .card.card--contact-v26 .card__tag + .card__tag {
     margin-top: 0.5rem;
 }
 
-.card--contact__content .icon {
+.card--contact-v26__content .icon {
     font-size: 1.266rem;
 }
 
