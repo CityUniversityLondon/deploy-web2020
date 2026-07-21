@@ -6354,6 +6354,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 1.5rem;
+    border: thin solid lime;
 }
 
 .related-content .card.card--contact-v26 + .card--contact-v26 {
