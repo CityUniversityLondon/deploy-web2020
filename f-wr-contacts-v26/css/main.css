@@ -6354,20 +6354,42 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 1.5rem;
-    background: pink;
 }
 
 .related-content .card.card--contact-v26 + .card--contact-v26 {
     border-top-style: solid;
     border-top-color: #0c0c0e;
     border-top-width: 0.0625rem;
-    padding-top: 1.5rem;
+}
+
+.related-content .card.card--contact-v26 .card__details figure {
+    margin: 0;
+}
+
+.related-content .card.card--contact-v26 .card__details picture {
+    display: block;
+    line-height: 0;
 }
 
 .related-content .card.card--contact-v26 .card__details .card__details__text {
     padding-bottom: 1rem;
-    padding-top: inherit;
-    padding-left: 0;
+    padding: 0;
+    position: relative;
+    top: -2rem;
+}
+
+.related-content .card.card--contact-v26 .card__heading {
+    display: block;
+    width: 93%;
+    margin-top: 0;
+    background: #ffffff;
+    padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.related-content .card.card--contact-v26 .wrapper--card--contact-v26__content {
+    background: #ffffff;
+    overflow: hidden;
+    padding: 0 1rem 1rem 1rem;
 }
 
 .related-content .card.card--contact-v26 .card__tag + .card__tag {
