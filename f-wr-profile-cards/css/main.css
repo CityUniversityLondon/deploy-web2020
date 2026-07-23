@@ -7003,7 +7003,7 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     display: flex;
     flex-direction: row;
     border: 0.0625rem solid #e5e5e5;
-    padding: 1rem;
+    padding: 0.75rem;
     border-radius: 0.25rem;
 }
 
