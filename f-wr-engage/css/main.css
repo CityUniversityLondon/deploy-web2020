@@ -6742,21 +6742,33 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card--event-v26 .card--event-v26__date-label {
+.card--event-v26 .card--event-v26__date-label__wrap {
+    left: 0.75rem;
+    bottom: 0.75rem;
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    background-color: #d61726;
+    padding: 0.5rem 0.75rem;
+    color: #ffffff;
+}
+
+.card--event-v26 .card--event-v26__date-devider {
+    text-align: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    align-self: center;
+    display: flex;
+}
+
+.card--event-v26 .card--event-v26__date-label {
     font-size: 1.125rem;
     line-height: 1.33333;
     letter-spacing: -0.008em;
     align-self: flex-start;
-    background-color: #d61726;
-    color: #ffffff;
     display: inline-block;
     font-weight: 700;
-    left: 0;
-    bottom: 0;
     margin-top: 0;
-    position: absolute;
-    padding: 0.5rem 1rem;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -6814,9 +6826,63 @@ iframe[src*='issuu'], iframe[src*='prezi'] {
 }
 
 .card--event-v26 .card--event-v26__date-label span {
-    font-weight: 400;
+    font-weight: 500;
     margin-left: auto;
     margin-right: auto;
+    font-size: 1rem;
+    line-height: 1.625;
+    letter-spacing: -0.005em;
+    font-size: 0.889rem;
+    line-height: 1.625;
+    letter-spacing: 0em;
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--event-v26 .card--event-v26__date-label span {
+        letter-spacing: -0.008em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--event-v26 .card--event-v26__date-label span {
+        letter-spacing: -0.013em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--event-v26 .card--event-v26__date-label span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--event-v26 .card--event-v26__date-label span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1919px) {
+    .card--event-v26 .card--event-v26__date-label span {
+        letter-spacing: -0.005em;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 3839px) {
+    .card--event-v26 .card--event-v26__date-label span {
+        letter-spacing: -0.01em;
+    }
+}
+
+@media (min-width: 3840px) and (max-width: 7679px) {
+    .card--event-v26 .card--event-v26__date-label span {
+        letter-spacing: -0.017em;
+    }
+}
+
+@media (min-width: 7680px) {
+    .card--event-v26 .card--event-v26__date-label span {
+        letter-spacing: -0.017em;
+    }
 }
 
 .card--event-v26 .card--event-v26__text {
