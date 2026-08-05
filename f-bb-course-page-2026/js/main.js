@@ -2034,6 +2034,12 @@ var scrollPos = 2;
  */
 
 function initBacktoTop(backToTop) {
+  var initialiseBackToTop = document.querySelector('article').getAttribute('data-backtotop');
+
+  if (initialiseBackToTop === 'disabled') {
+    return;
+  }
+
   var backToTopAnchor = backToTop.querySelectorAll('a')[0];
   window.addEventListener('load', function () {
     backToTop.querySelector('.back-to-top__button__arrow').appendChild(Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('span', [{
