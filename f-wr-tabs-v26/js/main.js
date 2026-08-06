@@ -9318,11 +9318,9 @@ var className = 'tabs',
  */
 
 function accordionize(tabs) {
-  console.log('accordionize executed');
   var wrapper = document.createElement('div'),
       accordion = document.createElement('div');
   var tabVersion = tabs.getAttribute('data-version');
-  console.log('tabVersion:', tabVersion);
   accordion.className = tabVersion === 'v26' ? 'accordion accordion-v26 accordion-v26--light' : 'accordion';
   wrapper.className = 'tabs--accordion';
   accordion.id = "accordion".concat(tabs.dataset.assetid);
