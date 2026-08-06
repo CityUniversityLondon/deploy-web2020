@@ -979,7 +979,6 @@ var className = 'accordion--gallery',
     headingClassName = 'accordion__heading';
 
 function launchAccordionGallery(wrap) {
-  console.log('launching accordion gallery');
   var headings = Array.from(wrap.querySelectorAll(".accordion  > .".concat(headingClassName)));
   var accordionImages = Array.from(wrap.querySelectorAll('.accordion--gallery__images ul > li'));
   accordionImages[0].dataset.active = 'true';
