@@ -71561,3 +71561,22 @@ main .standard-content .content {
         background: #9e111c;
     }
 }
+
+.courses-v26 .dropdown-filter__wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.courses-v26 .dropdown-filter {
+    margin-top: 0;
+}
+
+.courses-v26 .dropdown-filter__select {
+    margin-top: 0;
+    position: inherit;
+}
+
+.courses-v26 .dropdown-filter__label {
+    align-self: center;
+    margin-top: 0;
+}
