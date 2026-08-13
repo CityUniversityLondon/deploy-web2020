@@ -3036,6 +3036,134 @@ function setupArrows(emblaNode, emblaApi) {
 
 /***/ }),
 
+/***/ "./src/patterns/embla-slider/dots.js":
+/*!*******************************************!*\
+  !*** ./src/patterns/embla-slider/dots.js ***!
+  \*******************************************/
+/*! exports provided: setupDots */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setupDots", function() { return setupDots; });
+/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.map.js */ "./node_modules/core-js/modules/es.array.map.js");
+/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+
+
+function createDotsMarkup(emblaNode) {
+  var dotsNode = document.createElement('div');
+  dotsNode.className = 'embla__dots';
+  dotsNode.setAttribute('data-carousel-dots', '');
+  dotsNode.setAttribute('data-carousel-generated-dots', '');
+  emblaNode.appendChild(dotsNode);
+  return dotsNode;
+}
+
+function createDotButtons(emblaApi, dotsNode) {
+  dotsNode.innerHTML = '';
+  var dotButtons = emblaApi.scrollSnapList().map(function (_, index) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'embla__dot';
+    button.setAttribute('aria-label', "Go to slide ".concat(index + 1));
+    dotsNode.appendChild(button);
+    return button;
+  });
+  return dotButtons;
+}
+
+function addDotBehaviour(emblaApi, dotsNode) {
+  var dotButtons = [];
+  var clickHandlers = [];
+
+  var updateSelectedDot = function updateSelectedDot() {
+    var selectedIndex = emblaApi.selectedScrollSnap();
+    dotButtons.forEach(function (dotButton, index) {
+      var isSelected = index === selectedIndex;
+      dotButton.classList.toggle('embla__dot--selected', isSelected);
+
+      if (isSelected) {
+        dotButton.setAttribute('aria-current', 'true');
+      } else {
+        dotButton.removeAttribute('aria-current');
+      }
+    });
+  };
+
+  var removeClickHandlers = function removeClickHandlers() {
+    dotButtons.forEach(function (dotButton, index) {
+      if (!clickHandlers[index]) {
+        return;
+      }
+
+      dotButton.removeEventListener('click', clickHandlers[index]);
+    });
+  };
+
+  var setupDots = function setupDots() {
+    removeClickHandlers();
+    dotButtons = createDotButtons(emblaApi, dotsNode);
+    clickHandlers = dotButtons.map(function (_, index) {
+      return function () {
+        emblaApi.scrollTo(index);
+      };
+    });
+    dotButtons.forEach(function (dotButton, index) {
+      dotButton.addEventListener('click', clickHandlers[index]);
+    });
+    updateSelectedDot();
+  };
+
+  setupDots();
+  emblaApi.on('select', updateSelectedDot).on('reInit', setupDots);
+  return function () {
+    removeClickHandlers();
+    dotButtons.forEach(function (dotButton) {
+      dotButton.classList.remove('embla__dot--selected');
+      dotButton.removeAttribute('aria-current');
+    });
+  };
+}
+
+function setupDots(emblaNode, emblaApi) {
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  var _options$create = options.create,
+      create = _options$create === void 0 ? false : _options$create;
+  var dotsNode = emblaNode.querySelector('[data-carousel-dots]');
+  var generatedDots = false;
+
+  if (!dotsNode && create) {
+    dotsNode = createDotsMarkup(emblaNode);
+    generatedDots = true;
+  }
+
+  if (!dotsNode) {
+    return function () {};
+  }
+
+  var removeDotBehaviour = addDotBehaviour(emblaApi, dotsNode);
+  return function () {
+    removeDotBehaviour();
+
+    if (generatedDots) {
+      dotsNode.remove();
+    }
+  };
+}
+
+/***/ }),
+
 /***/ "./src/patterns/embla-slider/embla-slider.js":
 /*!***************************************************!*\
   !*** ./src/patterns/embla-slider/embla-slider.js ***!
@@ -3067,6 +3195,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _responsive__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./responsive */ "./src/patterns/embla-slider/responsive.js");
 /* harmony import */ var _arrows__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./arrows */ "./src/patterns/embla-slider/arrows.js");
 /* harmony import */ var _thumbs__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./thumbs */ "./src/patterns/embla-slider/thumbs.js");
+/* harmony import */ var _dots__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./dots */ "./src/patterns/embla-slider/dots.js");
 
 
 
@@ -3237,6 +3366,7 @@ Existing thumbnail markup can also be supplied inside a shared
 
 
 
+
 var className = 'embla';
 
 function setupAccessibility(emblaApi) {
@@ -3296,10 +3426,14 @@ function launch(emblaNode) {
   var removeThumbs = Object(_thumbs__WEBPACK_IMPORTED_MODULE_13__["setupThumbs"])(emblaNode, mainSlider, {
     create: Object(_options__WEBPACK_IMPORTED_MODULE_10__["getDataValue"])(emblaNode, 'carouselCreateThumbs', false)
   });
+  var removeDotsremoveThumbs = Object(_dots__WEBPACK_IMPORTED_MODULE_14__["setupDots"])(emblaNode, mainSlider, {
+    create: Object(_options__WEBPACK_IMPORTED_MODULE_10__["getDataValue"])(emblaNode, 'carouselCreateDots', false)
+  });
   var removeAccessibility = setupAccessibility(mainSlider);
   mainSlider.on('destroy', function () {
     removeArrows();
     removeThumbs();
+    removeDotsremoveThumbs();
     removeAccessibility();
   });
 }
