@@ -39967,6 +39967,7 @@ article .link-copy {
         margin-right: 0.75rem;
         display: flex;
         align-items: flex-end;
+        flex: 1;
     }
     .js .tabs-v26 .tabs__links li:last-of-type {
         margin-right: 0;
@@ -40005,14 +40006,6 @@ article .link-copy {
         outline-width: 0;
         text-decoration: none;
         background-image: none;
-        /*
-        border-bottom-color: transparent;
-        border-bottom-style: $border-style-dotted;
-        border-bottom-width: $border-width-default;
-        border-color: transparent;
-        border-style: $border-style-dotted;
-        border-width: $border-width-default;
-        */
         border: 0.0625rem solid #0c0c0e;
         color: #0c0c0e;
         display: block;
@@ -40021,21 +40014,6 @@ article .link-copy {
         position: relative;
         transition: none;
         width: 100%;
-        /*
-        &:active {
-            background: $color-red50;
-            color: $color-purewhite; 
-            border: $border-width-hairline $border-style-solid $color-red50;
-            outline-width: $border-width-thick;
-            outline-style: $border-style-solid;
-            outline-color: $color-nearblack;
-            outline-offset: $border-width-thick;
-
-            span {
-                outline-width: 0;
-            }
-        }
-        */
     }
 }
 
@@ -40180,6 +40158,7 @@ article .link-copy {
         line-height: 1.625;
         margin-top: 0;
         padding: 0.5rem;
+        justify-content: center;
     }
     .js .tabs-v26 .tabs__links li button > span i,
     .js .tabs-v26 .tabs__links li button > span em {
@@ -40249,14 +40228,6 @@ article .link-copy {
 
 @media screen and (hover: hover) {
     .js .tabs-v26 .tabs__links li button:hover {
-        /*
-                border-bottom-color: transparent;
-                border-bottom-style: $border-style-dotted;
-                border-bottom-width: $border-width-default;
-                border-color: transparent;
-                border-style: $border-style-dotted;
-                border-width: $border-width-default;
-                */
         border: 0.0625rem solid #0c0c0e;
         background: #f2f2f2;
     }
@@ -40306,22 +40277,6 @@ article .link-copy {
     .js .tabs--accordion > .accordion-v26 {
         display: block;
     }
-    .js .tabs--accordion > .accordion-v26 .accordion__heading {
-        /*
-            border-bottom-color: $color-gray1;
-            border-bottom-style: $border-style-solid;
-            border-bottom-width: $border-width-default;
-            outline-color: transparent;
-            outline-style: $border-style-dotted;
-            outline-width: $border-width-default;
-            */
-    }
-    .js .tabs--accordion > .accordion-v26 .accordion__heading[data-open='false'] button .accordion__heading__text {
-        /*
-                        background: transparent;
-                        color: $color-gray10;
-                        */
-    }
 }
 
 @media screen and (max-width: 768px) and (hover: hover) {
@@ -40331,14 +40286,6 @@ article .link-copy {
 }
 
 @media screen and (max-width: 768px) {
-    .js .tabs--accordion > .accordion-v26 .accordion__heading button .accordion__heading__indicator {
-        /*
-                    align-self: normal;
-                    padding: $measure--basic;
-                    text-align: center;
-                    text-decoration: underline;
-                    */
-    }
     .js .tabs--accordion > .accordion-v26 .accordion-v26 .accordion__heading button .accordion__heading__text,
     .js .tabs--accordion > .accordion-v26 .accordion-v26 .accordion__heading button .accordion__heading__indicator {
         background: transparent;
@@ -40372,64 +40319,6 @@ article .link-copy {
     }
 }
 
-/*
-// tabs variation with grey underline
-.js .tabs--grey-underline {
-    .tabs__links li button > span {
-        border-bottom-color: $color-gray1;
-    }
-    .tabs__links li button[aria-selected='true'] > span {
-        border-bottom-color: $color-pink80;
-    }
-
-    .tabs__panel__body .tabs-v26 {
-        // nested tabs
-        .tabs__links {
-            justify-content: left;
-
-            li button > span {
-                border-bottom-color: $color-gray3;
-            }
-
-            li button[aria-selected='true'] > span {
-                border-bottom-color: $color-red50;
-            }
-        }
-
-        .tabs__panel {
-            background: inherit;
-        }
-    }
-}
-*/
-/*
-// Desktop specific layout if secondary navigation is present for standard pages
-main {
-    @include media('>=small') {
-        .navigation--secondary {
-            & + .standard-content {
-
-                @include media('>=small', '<desktop') {
-                    .tabs-v26 .tabs__links li {
-                        margin-right: $measure--half;
-                        button > span {
-                            @include extrasmalltype();
-                            padding-left: $measure--half;
-                            padding-right: $measure--half;
-                        }
-                    }
-                }
-
-                @include media('>=desktop', '<large') {
-                    .tabs-v26 .tabs__links li button > span {
-                        @include smalltype();
-                    }
-                }
-            }
-        }
-    }
-}
-*/
 .timetable {
     padding-bottom: 1.5rem;
     margin-top: 1.5rem;
