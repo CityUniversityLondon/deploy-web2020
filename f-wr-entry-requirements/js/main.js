@@ -2557,7 +2557,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
  */
 var className = 'dropdown-filter';
 var dataGroupElement = '';
-var showAll = '';
+var showAll = '',
+    version = '',
+    id = '';
 /**
  * Entry function: loops through and hides list items, sets up event listener on
  * child select box
@@ -2566,11 +2568,17 @@ var showAll = '';
  */
 
 function prepareDropdown(element) {
-  var version = element.dataset.version;
-  var listItems; // Only get direct children
+  version = element.dataset.version;
+  id = element.dataset.id;
+  var listItems;
+
+  if (version && !id) {
+    console.log("Dropdown filter pattern with version ".concat(version, " is missing a data-id attribute."));
+  } // Only get direct children
+
 
   if (version === 'v26') {
-    listItems = document.querySelectorAll('ul.data-group[data-version="v26"] > li');
+    listItems = document.querySelectorAll("ul.data-group[data-version=\"v26\"][data-id=\"".concat(id, "\"] > li"));
   } else {
     listItems = element.querySelectorAll('ul.data-group > li');
   }
@@ -2581,11 +2589,11 @@ function prepareDropdown(element) {
 
   hideListItems(listItems, firstItemVisible, showAll); // Insert the select box to toggle items
 
-  insertSelect(listItems, element, firstItemVisible, version); // Display list items on select change
+  insertSelect(listItems, element, firstItemVisible); // Display list items on select change
 
   var select = element.querySelector('.dropdown-filter__select');
   select.addEventListener('change', function (e) {
-    return selectChange(e, version);
+    return selectChange(e);
   });
 }
 /**
@@ -2629,9 +2637,9 @@ function hideListItems(items, firstItemVisible, showAll) {
  */
 
 
-function insertSelect(items, parentElement, firstItemVisible, version) {
+function insertSelect(items, parentElement, firstItemVisible) {
   if (version === 'v26') {
-    dataGroupElement = document.querySelector('ul.data-group[data-version="v26"]');
+    dataGroupElement = document.querySelector("ul.data-group[data-version=\"v26\"][data-id=\"".concat(id, "\"]"));
   } else {
     dataGroupElement = parentElement.querySelector('ul.data-group');
   }
@@ -2756,15 +2764,15 @@ function insertSelect(items, parentElement, firstItemVisible, version) {
  */
 
 
-function selectChange(e, version) {
+function selectChange(e) {
   // Get list items grouping
   var dropdownFilter = e.target.closest('.dropdown-filter');
   var dataGroup, listItems;
 
   if (version === 'v26') {
-    dataGroup = document.querySelector('.data-group[data-version="v26"]'); // Get direct children list items
+    dataGroup = document.querySelector(".data-group[data-version=\"v26\"][data-id=\"".concat(id, "\"]")); // Get direct children list items
 
-    listItems = dataGroup.querySelectorAll('ul.data-group[data-version="v26"] > li');
+    listItems = dataGroup.querySelectorAll("ul.data-group[data-version=\"v26\"][data-id=\"".concat(id, "\"] > li"));
   } else {
     dataGroup = dropdownFilter.querySelector('.data-group'); // Get direct children list items
 
