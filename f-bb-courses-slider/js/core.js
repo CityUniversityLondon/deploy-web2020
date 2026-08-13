@@ -6215,27 +6215,6 @@ $({ target: 'Number', stat: true }, {
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es.number.is-nan.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/core-js/modules/es.number.is-nan.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
-
-// `Number.isNaN` method
-// https://tc39.es/ecma262/#sec-number.isnan
-$({ target: 'Number', stat: true }, {
-  isNaN: function isNaN(number) {
-    // eslint-disable-next-line no-self-compare -- NaN check
-    return number != number;
-  }
-});
-
-
-/***/ }),
-
 /***/ "./node_modules/core-js/modules/es.number.parse-int.js":
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/modules/es.number.parse-int.js ***!

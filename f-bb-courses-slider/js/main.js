@@ -2797,80 +2797,16 @@ var className = 'dd-menu';
 
 /***/ }),
 
-/***/ "./src/patterns/embla-slider/EmblaCarouselArrowButtons.js":
-/*!****************************************************************!*\
-  !*** ./src/patterns/embla-slider/EmblaCarouselArrowButtons.js ***!
-  \****************************************************************/
-/*! exports provided: addPrevNextBtnsClickHandlers */
+/***/ "./src/patterns/embla-slider/dots.js":
+/*!*******************************************!*\
+  !*** ./src/patterns/embla-slider/dots.js ***!
+  \*******************************************/
+/*! exports provided: setupDots */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addPrevNextBtnsClickHandlers", function() { return addPrevNextBtnsClickHandlers; });
-
-
-var addTogglePrevNextBtnsActive = function addTogglePrevNextBtnsActive(emblaApi, prevBtn, nextBtn) {
-  var btnsWrapper = prevBtn.closest('.profile-slider__btns');
-
-  var togglePrevNextBtnsState = function togglePrevNextBtnsState() {
-    var canPrev = emblaApi.canScrollPrev();
-    var canNext = emblaApi.canScrollNext(); // Enable/disable individual buttons
-
-    if (canPrev) prevBtn.removeAttribute('disabled');else prevBtn.setAttribute('disabled', 'disabled');
-    if (canNext) nextBtn.removeAttribute('disabled');else nextBtn.setAttribute('disabled', 'disabled'); // Toggle disabled class on container if both are disabled
-
-    if (btnsWrapper) {
-      if (!canPrev && !canNext) {
-        btnsWrapper.classList.add('profile-slider__btns--disabled');
-      } else {
-        btnsWrapper.classList.remove('profile-slider__btns--disabled');
-      }
-    }
-  };
-
-  emblaApi.on('select', togglePrevNextBtnsState).on('init', togglePrevNextBtnsState).on('reInit', togglePrevNextBtnsState);
-  return function () {
-    prevBtn.removeAttribute('disabled');
-    nextBtn.removeAttribute('disabled');
-
-    if (btnsWrapper) {
-      btnsWrapper.classList.remove('profile-slider__btns--disabled');
-    }
-  };
-};
-
-var addPrevNextBtnsClickHandlers = function addPrevNextBtnsClickHandlers(emblaApi, prevBtn, nextBtn) {
-  var scrollPrev = function scrollPrev() {
-    return emblaApi.scrollPrev();
-  };
-
-  var scrollNext = function scrollNext() {
-    return emblaApi.scrollNext();
-  };
-
-  prevBtn.addEventListener('click', scrollPrev, false);
-  nextBtn.addEventListener('click', scrollNext, false);
-  var removeTogglePrevNextBtnsActive = addTogglePrevNextBtnsActive(emblaApi, prevBtn, nextBtn);
-  return function () {
-    removeTogglePrevNextBtnsActive();
-    prevBtn.removeEventListener('click', scrollPrev, false);
-    nextBtn.removeEventListener('click', scrollNext, false);
-  };
-};
-
-/***/ }),
-
-/***/ "./src/patterns/embla-slider/EmblaCarouselThumbsButton.js":
-/*!****************************************************************!*\
-  !*** ./src/patterns/embla-slider/EmblaCarouselThumbsButton.js ***!
-  \****************************************************************/
-/*! exports provided: addThumbButtonClickHandlers, addToggleThumbButtonsActive */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addThumbButtonClickHandlers", function() { return addThumbButtonClickHandlers; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "addToggleThumbButtonsActive", function() { return addToggleThumbButtonsActive; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setupDots", function() { return setupDots; });
 /* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.map.js */ "./node_modules/core-js/modules/es.array.map.js");
 /* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
@@ -2885,31 +2821,107 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var addThumbButtonClickHandlers = function addThumbButtonClickHandlers(emblaApiMain, emblaApiThumb) {
-  var slidesThumbs = emblaApiThumb.slideNodes();
-  var scrollToIndex = slidesThumbs.map(function (_, index) {
-    return function () {
-      return emblaApiMain.scrollTo(index);
-    };
-  });
-  slidesThumbs.forEach(function (slideNode, index) {
-    slideNode.addEventListener('click', scrollToIndex[index], false);
-  });
-};
-var addToggleThumbButtonsActive = function addToggleThumbButtonsActive(emblaApiMain, emblaApiThumb) {
-  var slidesThumbs = emblaApiThumb.slideNodes();
 
-  var toggleThumbBtnsState = function toggleThumbBtnsState() {
-    emblaApiThumb.scrollTo(emblaApiMain.selectedScrollSnap());
-    var previous = emblaApiMain.previousScrollSnap();
-    var selected = emblaApiMain.selectedScrollSnap();
-    slidesThumbs[previous].classList.remove('embla-thumbs__slide--selected');
-    slidesThumbs[selected].classList.add('embla-thumbs__slide--selected');
+function createDotsMarkup(emblaNode) {
+  var dotsNode = document.createElement('div');
+  dotsNode.className = 'embla__dots';
+  dotsNode.setAttribute('data-carousel-dots', '');
+  dotsNode.setAttribute('data-carousel-generated-dots', '');
+  emblaNode.appendChild(dotsNode);
+  return dotsNode;
+}
+
+function createDotButtons(emblaApi, dotsNode) {
+  dotsNode.innerHTML = '';
+  var dotButtons = emblaApi.scrollSnapList().map(function (_, index) {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'embla__dot';
+    button.setAttribute('aria-label', "Go to slide ".concat(index + 1));
+    dotsNode.appendChild(button);
+    return button;
+  });
+  return dotButtons;
+}
+
+function addDotBehaviour(emblaApi, dotsNode) {
+  var dotButtons = [];
+  var clickHandlers = [];
+
+  var updateSelectedDot = function updateSelectedDot() {
+    var selectedIndex = emblaApi.selectedScrollSnap();
+    dotButtons.forEach(function (dotButton, index) {
+      var isSelected = index === selectedIndex;
+      dotButton.classList.toggle('embla__dot--selected', isSelected);
+
+      if (isSelected) {
+        dotButton.setAttribute('aria-current', 'true');
+      } else {
+        dotButton.removeAttribute('aria-current');
+      }
+    });
   };
 
-  emblaApiMain.on('select', toggleThumbBtnsState);
-  toggleThumbBtnsState();
-};
+  var removeClickHandlers = function removeClickHandlers() {
+    dotButtons.forEach(function (dotButton, index) {
+      if (!clickHandlers[index]) {
+        return;
+      }
+
+      dotButton.removeEventListener('click', clickHandlers[index]);
+    });
+  };
+
+  var setupDots = function setupDots() {
+    removeClickHandlers();
+    dotButtons = createDotButtons(emblaApi, dotsNode);
+    clickHandlers = dotButtons.map(function (_, index) {
+      return function () {
+        emblaApi.scrollTo(index);
+      };
+    });
+    dotButtons.forEach(function (dotButton, index) {
+      dotButton.addEventListener('click', clickHandlers[index]);
+    });
+    updateSelectedDot();
+  };
+
+  setupDots();
+  emblaApi.on('select', updateSelectedDot).on('reInit', setupDots);
+  return function () {
+    removeClickHandlers();
+    dotButtons.forEach(function (dotButton) {
+      dotButton.classList.remove('embla__dot--selected');
+      dotButton.removeAttribute('aria-current');
+    });
+  };
+}
+
+function setupDots(emblaNode, emblaApi) {
+  var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  var _options$create = options.create,
+      create = _options$create === void 0 ? false : _options$create;
+  var dotsNode = emblaNode.querySelector('[data-carousel-dots]');
+  var generatedDots = false;
+
+  if (!dotsNode && create) {
+    dotsNode = createDotsMarkup(emblaNode);
+    generatedDots = true;
+  }
+
+  if (!dotsNode) {
+    return function () {};
+  }
+
+  var removeDotBehaviour = addDotBehaviour(emblaApi, dotsNode);
+  return function () {
+    removeDotBehaviour();
+
+    if (generatedDots) {
+      dotsNode.remove();
+    }
+  };
+}
 
 /***/ }),
 
@@ -2922,32 +2934,29 @@ var addToggleThumbButtonsActive = function addToggleThumbButtonsActive(emblaApiM
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_number_is_nan_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.number.is-nan.js */ "./node_modules/core-js/modules/es.number.is-nan.js");
-/* harmony import */ var core_js_modules_es_number_is_nan_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_is_nan_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.number.constructor.js */ "./node_modules/core-js/modules/es.number.constructor.js");
-/* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
-/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_es_set_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.set.js */ "./node_modules/core-js/modules/es.set.js");
-/* harmony import */ var core_js_modules_es_set_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_set_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
-/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var embla_carousel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! embla-carousel */ "./node_modules/embla-carousel/esm/embla-carousel.esm.js");
-/* harmony import */ var embla_carousel_class_names__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! embla-carousel-class-names */ "./node_modules/embla-carousel-class-names/esm/embla-carousel-class-names.esm.js");
-/* harmony import */ var _EmblaCarouselArrowButtons__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./EmblaCarouselArrowButtons */ "./src/patterns/embla-slider/EmblaCarouselArrowButtons.js");
-/* harmony import */ var _EmblaCarouselThumbsButton__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./EmblaCarouselThumbsButton */ "./src/patterns/embla-slider/EmblaCarouselThumbsButton.js");
-
-
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_set_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.set.js */ "./node_modules/core-js/modules/es.set.js");
+/* harmony import */ var core_js_modules_es_set_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_set_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
+/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var embla_carousel__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! embla-carousel */ "./node_modules/embla-carousel/esm/embla-carousel.esm.js");
+/* harmony import */ var embla_carousel_class_names__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! embla-carousel-class-names */ "./node_modules/embla-carousel-class-names/esm/embla-carousel-class-names.esm.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module './options'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module './responsive'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module './arrows'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module './thumbs'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _dots__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./dots */ "./src/patterns/embla-slider/dots.js");
 
 
 
@@ -2960,8 +2969,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /*
-Markup structure required for Embla slider:
-Add your own classes to customise styling, but keep the embla__* classes.
+Keep the required .embla__* classes because they are used by the
+carousel JavaScript and Sass. Additional project-specific classes can
+be added alongside them.
 
 <div class="embla">
   <div class="embla__btns">
@@ -2984,108 +2994,209 @@ Add your own classes to customise styling, but keep the embla__* classes.
     </div>
   </div>
 </div>
+
+------------------
+**Embla Options**
+------------------
+
+data-slides-to-scroll
+Number of slides moved per navigation action.
+Default: 1
+
+data-align
+Slide alignment within the viewport.
+Typical values: "start", "center", "end"
+Default: "start"
+
+data-loop
+Whether the carousel loops continuously.
+Values: "true" or "false"
+Default: "false"
+
+data-in-view-threshold
+Percentage of a slide that must be visible before it is considered
+in view.
+Default: 0.9
+
+---------------------------
+**Responsive slide sizing**
+---------------------------
+
+data-slide-size
+Base slide width.
+Example: "100%", "80%", "25rem"
+
+data-slide-size-{breakpoint}
+Overrides the slide width from the named Sass breakpoint upwards.
+
+Examples:
+data-slide-size-mobile="75%"
+data-slide-size-tablet="50%"
+data-slide-size-desktop="33.333%"
+
+Responsive values use the breakpoint names defined in the Sass
+$breakpoints map:
+
+tiny
+mobile
+tablet
+between
+small
+desktop
+large
+1080p
+4K
+8K
+
+Breakpoint values cascade. For example, a tablet value continues to be
+used until another breakpoint-specific value overrides it.
+
+-----------------------------
+**Responsive slide spacing**
+-----------------------------
+data-slide-spacing
+Base gap between slides.
+Example: "1rem", "24px"
+
+data-slide-spacing-{breakpoint}
+Overrides the spacing from the named Sass breakpoint upwards.
+
+Examples:
+data-slide-spacing-tablet="1.5rem"
+data-slide-spacing-desktop="2rem"
+
+--------------------------
+**Disabling the carousel**
+--------------------------
+
+data-disable-from
+Disables Embla from the named breakpoint upwards.
+
+Example:
+data-disable-from="desktop"
+
+When inactive, the carousel is displayed using the fallback grid
+styles defined in carousel.scss.
+
+data-inactive-columns
+Number of grid columns used when the carousel is inactive.
+
+Example:
+data-inactive-columns="3"
+
+Default: 3
+
+--------------------
+**Arrow navigation**
+--------------------
+
+Arrows can be included manually using:
+
+<div class="embla__btns"> <button class="embla__btn embla__prev"></button> <button class="embla__btn embla__next"></button> </div>
+
+Alternatively, omit the arrow markup and use:
+
+data-carousel-create-arrows="true"
+
+If neither existing arrows nor generated arrows are requested, the
+carousel will initialise without arrow navigation.
+
+------------------------
+**Thumbnail navigation**
+------------------------
+
+To generate thumbnail navigation automatically, use:
+
+data-carousel-create-thumbs="true"
+
+Each main slide can provide its thumbnail image using:
+
+data-carousel-thumb-src="/images/example-thumb.jpg"
+
+Generated thumbnails are inserted after the main .embla element.
+
+Existing thumbnail markup can also be supplied inside a shared
+[data-carousel-container] wrapper using:
+
+<div class="embla-thumbs" data-carousel-thumbs> <div class="embla-thumbs__viewport"> <div class="embla-thumbs__container"> <button type="button" class="embla-thumbs__slide"></button> </div> </div> </div>
+
 */
+
+
+
 
 
 
 
 var className = 'embla';
 
-function getDataValue(node, key, fallback) {
-  //Helper function to get config data attribute values and set defaults.
-  var value = node.dataset[key];
+function setupAccessibility(emblaApi) {
+  var updateSlides = function updateSlides() {
+    var slidesInView = new Set(emblaApi.slidesInView());
+    var selectedIndex = emblaApi.selectedScrollSnap();
+    emblaApi.slideNodes().forEach(function (slide, index) {
+      slide.setAttribute('aria-hidden', slidesInView.has(index) ? 'false' : 'true');
+      slide.setAttribute('tabindex', index === selectedIndex ? '0' : '-1');
+    });
+  };
 
-  if (value === undefined) {
-    return fallback;
-  }
+  emblaApi.on('init', updateSlides).on('reInit', updateSlides).on('slidesInView', updateSlides).on('select', updateSlides);
+  return function () {
+    emblaApi.slideNodes().forEach(function (slide) {
+      slide.removeAttribute('aria-hidden');
+      slide.removeAttribute('tabindex');
+    });
+  };
+}
 
-  if (value === 'true') return true;
-  if (value === 'false') return false;
-
-  if (!Number.isNaN(Number(value)) && value.trim() !== '') {
-    return Number(value);
-  }
-
-  return value;
+function createClassNamesPlugin() {
+  return Object(embla_carousel_class_names__WEBPACK_IMPORTED_MODULE_9__["default"])({
+    selected: 'embla__slide--is-selected',
+    inView: 'embla__slide--is-in-view',
+    snapped: 'embla__slide--is-snapped'
+  });
 }
 
 function launch(emblaNode) {
-  var DEFAULT_IN_VIEW_THRESHOLD = 0.9;
-  var container = emblaNode.closest('[data-carousel-container]');
-  var emblaSlides = emblaNode.querySelectorAll('.embla__slide');
-  var thumbsNode = null;
-
-  if (container) {
-    // Check if there's a thumbnav
-    thumbsNode = container.querySelector('[data-carousel-thumbs]');
-  }
-
-  var createThumbs = getDataValue(emblaNode, 'carouselCreateThumbs', false);
-
-  if (createThumbs) {
-    thumbsNode = document.createElement('div');
-    thumbsNode.className = 'embla-thumbs';
-    thumbsNode.setAttribute('data-carousel-thumbs', '');
-    thumbsNode.innerHTML = "\n            <div class=\"embla-thumbs__viewport\">\n                <div class=\"embla-thumbs__container\"></div>\n            </div>\n        ";
-    var thumbsContainer = thumbsNode.querySelector('.embla-thumbs__container');
-    emblaSlides.forEach(function (slide, index) {
-      var thumbSrc = slide.getAttribute('data-carousel-thumb-src');
-      var thumbSlide = document.createElement('div');
-      thumbSlide.className = 'embla-thumbs__slide';
-
-      if (index === 0) {
-        thumbSlide.classList.add('embla-thumbs__slide--selected');
-      }
-
-      if (thumbSrc) {
-        thumbSlide.innerHTML = "\n                    <img src=\"".concat(thumbSrc, "\" alt=\"\">\n                ");
-      }
-
-      thumbsContainer.appendChild(thumbSlide);
-    }); // Insert thumbs directly after emblaNode
-
-    emblaNode.insertAdjacentElement('afterend', thumbsNode);
-  } //Set options up so they can be controlled by data attributes on the slider
-
-
-  var OPTIONS = {
-    slidesToScroll: getDataValue(emblaNode, 'slidesToScroll', 1),
-    align: getDataValue(emblaNode, 'align', 'start'),
-    loop: getDataValue(emblaNode, 'loop', false),
-    inViewThreshold: getDataValue(emblaNode, 'inViewThreshold', DEFAULT_IN_VIEW_THRESHOLD)
-  };
-  var emblaClassNames = Object(embla_carousel_class_names__WEBPACK_IMPORTED_MODULE_11__["default"])({
-    selected: 'embla__slide--is-selected',
-    inView: 'embla__slide--is-in-view',
-    snap: 'embla__slide--is-snapped'
-  });
   var viewportNode = emblaNode.querySelector('.embla__viewport');
-  var prevBtn = emblaNode.querySelector('.embla__prev');
-  var nextBtn = emblaNode.querySelector('.embla__next');
-  var mainSlider = Object(embla_carousel__WEBPACK_IMPORTED_MODULE_10__["default"])(viewportNode, OPTIONS, [emblaClassNames]);
-  var removePrevNextBtnsClickHandlers = Object(_EmblaCarouselArrowButtons__WEBPACK_IMPORTED_MODULE_12__["addPrevNextBtnsClickHandlers"])(mainSlider, prevBtn, nextBtn);
 
-  var slidesInView = function slidesInView() {
-    var inView = new Set(mainSlider.slidesInView());
-    var selected = mainSlider.selectedScrollSnap();
-    mainSlider.slideNodes().forEach(function (slide, idx) {
-      slide.setAttribute('aria-hidden', inView.has(idx) ? 'false' : 'true');
-      slide.setAttribute('tabindex', idx === selected ? '0' : '-1');
-    });
-  };
-
-  mainSlider.on('init', slidesInView).on('reInit', slidesInView).on('slidesInView', slidesInView);
-  mainSlider.on('destroy', removePrevNextBtnsClickHandlers);
-
-  if (thumbsNode) {
-    var thumbsViewport = thumbsNode.querySelector('.embla-thumbs__viewport');
-    var sldierThumbs = Object(embla_carousel__WEBPACK_IMPORTED_MODULE_10__["default"])(thumbsViewport, {
-      containScroll: 'keepSnaps',
-      dragFree: true
-    });
-    Object(_EmblaCarouselThumbsButton__WEBPACK_IMPORTED_MODULE_13__["addThumbButtonClickHandlers"])(mainSlider, sldierThumbs);
-    Object(_EmblaCarouselThumbsButton__WEBPACK_IMPORTED_MODULE_13__["addToggleThumbButtonsActive"])(mainSlider, sldierThumbs);
+  if (!viewportNode) {
+    return;
   }
+  /*
+   * Apply values such as:
+   *
+   * data-slide-size="100%"
+   * data-slide-size-tablet="50%"
+   * data-slide-spacing="1rem"
+   */
+
+
+  !(function webpackMissingModule() { var e = new Error("Cannot find module './responsive'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(emblaNode);
+  var options = !(function webpackMissingModule() { var e = new Error("Cannot find module './options'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(emblaNode);
+  var breakpoints = !(function webpackMissingModule() { var e = new Error("Cannot find module './responsive'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(emblaNode);
+
+  if (Object.keys(breakpoints).length > 0) {
+    options.breakpoints = breakpoints;
+  }
+
+  var mainSlider = Object(embla_carousel__WEBPACK_IMPORTED_MODULE_8__["default"])(viewportNode, options, [createClassNamesPlugin()]);
+  var removeArrows = !(function webpackMissingModule() { var e = new Error("Cannot find module './arrows'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(emblaNode, mainSlider, {
+    create: !(function webpackMissingModule() { var e = new Error("Cannot find module './options'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(emblaNode, 'carouselCreateArrows', false)
+  });
+  var removeThumbs = !(function webpackMissingModule() { var e = new Error("Cannot find module './thumbs'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(emblaNode, mainSlider, {
+    create: !(function webpackMissingModule() { var e = new Error("Cannot find module './options'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(emblaNode, 'carouselCreateThumbs', false)
+  });
+  var removeDotsremoveThumbs = Object(_dots__WEBPACK_IMPORTED_MODULE_11__["setupDots"])(emblaNode, mainSlider, {
+    create: !(function webpackMissingModule() { var e = new Error("Cannot find module './options'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(emblaNode, 'carouselCreateDots', false)
+  });
+  var removeAccessibility = setupAccessibility(mainSlider);
+  mainSlider.on('destroy', function () {
+    removeArrows();
+    removeThumbs();
+    removeDotsremoveThumbs();
+    removeAccessibility();
+  });
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
