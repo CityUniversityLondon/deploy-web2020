@@ -2645,6 +2645,11 @@ function insertSelect(items, parentElement, firstItemVisible, version) {
   labelEl.setAttribute('for', labelFor);
   parentElement.dataset.labelShow === 'false' ? labelEl.className = 'sr-only' : null;
   selectBox.className = 'dropdown-filter__select';
+
+  if (version === 'v26') {
+    selectBox.classList.add('dropdown', 'dropdown--pill');
+  }
+
   selectBox.setAttribute('id', labelFor);
   selectBox.setAttribute('name', labelFor);
   selectWrapper.append(labelEl, selectBox); // Add default select text if filter doesn't have show all enabled
