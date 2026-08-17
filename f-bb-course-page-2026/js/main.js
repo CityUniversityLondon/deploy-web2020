@@ -2566,18 +2566,27 @@ var showAll = '';
  */
 
 function prepareDropdown(element) {
-  // Only get direct children
-  var listItems = element.querySelectorAll('ul.data-group > li'),
-      firstItemVisible = element.dataset.firstItemShow; // Check if all items should be displayed on load
+  var version = element.dataset.version;
+  var listItems; // Only get direct children
+
+  if (version === 'v26') {
+    listItems = document.querySelectorAll('ul.data-group[data-version="v26"] > li');
+  } else {
+    listItems = element.querySelectorAll('ul.data-group > li');
+  }
+
+  var firstItemVisible = element.dataset.firstItemShow; // Check if all items should be displayed on load
 
   showAll = element.dataset.displayAll; // Hide list items
 
   hideListItems(listItems, firstItemVisible, showAll); // Insert the select box to toggle items
 
-  insertSelect(listItems, element, firstItemVisible, showAll); // Display list items on select change
+  insertSelect(listItems, element, firstItemVisible, version); // Display list items on select change
 
   var select = element.querySelector('.dropdown-filter__select');
-  select.addEventListener('change', selectChange);
+  select.addEventListener('change', function (e) {
+    return selectChange(e, version);
+  });
 }
 /**
  * Hide list items: both functions require all list items to be hidden.
@@ -2620,8 +2629,13 @@ function hideListItems(items, firstItemVisible, showAll) {
  */
 
 
-function insertSelect(items, parentElement, firstItemVisible) {
-  dataGroupElement = parentElement.querySelector('ul.data-group');
+function insertSelect(items, parentElement, firstItemVisible, version) {
+  if (version === 'v26') {
+    dataGroupElement = document.querySelector('ul.data-group[data-version="v26"]');
+  } else {
+    dataGroupElement = parentElement.querySelector('ul.data-group');
+  }
+
   var selectBox = document.createElement('select'),
       selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select'),
       labelFor = parentElement.dataset.labelFor,
@@ -2631,6 +2645,11 @@ function insertSelect(items, parentElement, firstItemVisible) {
   labelEl.setAttribute('for', labelFor);
   parentElement.dataset.labelShow === 'false' ? labelEl.className = 'sr-only' : null;
   selectBox.className = 'dropdown-filter__select';
+
+  if (version === 'v26') {
+    selectBox.classList.add('dropdown', 'dropdown--pill');
+  }
+
   selectBox.setAttribute('id', labelFor);
   selectBox.setAttribute('name', labelFor);
   selectWrapper.append(labelEl, selectBox); // Add default select text if filter doesn't have show all enabled
@@ -2737,12 +2756,20 @@ function insertSelect(items, parentElement, firstItemVisible) {
  */
 
 
-function selectChange(e) {
+function selectChange(e, version) {
   // Get list items grouping
-  var dropdownFilter = e.target.closest('.dropdown-filter'),
-      dataGroup = dropdownFilter.querySelector('.data-group'); // Get direct children list items
+  var dropdownFilter = e.target.closest('.dropdown-filter');
+  var dataGroup, listItems;
 
-  var listItems = dataGroup.querySelectorAll('ul.data-group > li');
+  if (version === 'v26') {
+    dataGroup = document.querySelector('.data-group[data-version="v26"]'); // Get direct children list items
+
+    listItems = dataGroup.querySelectorAll('ul.data-group[data-version="v26"] > li');
+  } else {
+    dataGroup = dropdownFilter.querySelector('.data-group'); // Get direct children list items
+
+    listItems = dataGroup.querySelectorAll('ul.data-group > li');
+  }
 
   var _iterator3 = _createForOfIteratorHelper(listItems),
       _step3;
