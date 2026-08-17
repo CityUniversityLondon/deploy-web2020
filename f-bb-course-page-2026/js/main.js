@@ -2556,36 +2556,57 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
  * @copyright City St George's, University of London 2019
  */
 var className = 'dropdown-filter';
-var dataGroupElement = '';
-var showAll = '';
+var showAll = '',
+    version = '',
+    id = '';
 /**
  * Entry function: loops through and hides list items, sets up event listener on
  * child select box
+ *
+ * This pattern covers the original dropdown filter pattern, as well as the v26 version used on the new course pages.
+ * The original version's HTML structure differs where the entire pattern, the select box, and the list items are all contained within a single div.
+ * The v26 version has the select box in a separate div from the list items, which are contained in a ul with a data-group class.
+ * The v26 version also has a data-version attribute on the ul to differentiate it from other ul elements on the page.
  *
  * @param {HTMLElement} element: the dropdown div containing all elements
  */
 
 function prepareDropdown(element) {
-  var version = element.dataset.version;
-  var listItems; // Only get direct children
+  version = element.dataset.version;
+  id = element.dataset.id;
+
+  if (version && !id) {
+    console.log("Dropdown filter pattern with version ".concat(version, " is missing a data-id attribute."));
+  }
+
+  var dataGroups, listItems; // Only get direct children. Note: the tabs pattern clones its panel
+  // content (accordionize in prepareAccordionTabs.js) to build the mobile
+  // accordion version *before* this runs, so the same data-id can exist
+  // on more than one <ul> at this point. Treat the first as canonical for
+  // building the select's options (so countries aren't listed twice), but
+  // keep every copy in sync so both the desktop and mobile markup work.
 
   if (version === 'v26') {
-    listItems = document.querySelectorAll('ul.data-group[data-version="v26"] > li');
+    dataGroups = Array.from(document.querySelectorAll("ul.data-group[data-version=\"v26\"][data-id=\"".concat(id, "\"]")));
+    listItems = dataGroups[0].querySelectorAll(':scope > li');
   } else {
+    dataGroups = [element.querySelector('ul.data-group')];
     listItems = element.querySelectorAll('ul.data-group > li');
   }
 
   var firstItemVisible = element.dataset.firstItemShow; // Check if all items should be displayed on load
 
-  showAll = element.dataset.displayAll; // Hide list items
+  showAll = element.dataset.displayAll; // Hide list items in every copy of the group
 
-  hideListItems(listItems, firstItemVisible, showAll); // Insert the select box to toggle items
+  dataGroups.forEach(function (group) {
+    return hideListItems(group.querySelectorAll(':scope > li'), firstItemVisible, showAll);
+  }); // Insert the select box to toggle items
 
-  insertSelect(listItems, element, firstItemVisible, version); // Display list items on select change
+  insertSelect(listItems, dataGroups[0], element, firstItemVisible); // Display list items on select change
 
   var select = element.querySelector('.dropdown-filter__select');
   select.addEventListener('change', function (e) {
-    return selectChange(e, version);
+    return selectChange(e);
   });
 }
 /**
@@ -2624,18 +2645,13 @@ function hideListItems(items, firstItemVisible, showAll) {
  * Insert select: build and add the select box to source
  *
  * @param {HTMLElements} items - The list of content for the select options.
+ * @param {HTMLElement} dataGroupElement - The canonical data-group list to reorder/build options from.
  * @param {HTMLElement} parentElement - The element where we need to insert the select.
  * @param {boolean} firstItemVisible - Whether first item should be visible on load.
  */
 
 
-function insertSelect(items, parentElement, firstItemVisible, version) {
-  if (version === 'v26') {
-    dataGroupElement = document.querySelector('ul.data-group[data-version="v26"]');
-  } else {
-    dataGroupElement = parentElement.querySelector('ul.data-group');
-  }
-
+function insertSelect(items, dataGroupElement, parentElement, firstItemVisible) {
   var selectBox = document.createElement('select'),
       selectWrapper = parentElement.querySelector('.wrapper--dropdown-filter__select'),
       labelFor = parentElement.dataset.labelFor,
@@ -2756,77 +2772,64 @@ function insertSelect(items, parentElement, firstItemVisible, version) {
  */
 
 
-function selectChange(e, version) {
-  // Get list items grouping
+function selectChange(e) {
+  // Derive this instance's version/id from the select's own form, rather
+  // than the shared module-level values, in case another `.dropdown-filter`
+  // on the page has since overwritten them during setup.
   var dropdownFilter = e.target.closest('.dropdown-filter');
-  var dataGroup, listItems;
+  var localVersion = dropdownFilter.dataset.version;
+  var localId = dropdownFilter.dataset.id; // Get every copy of the group (the tabs pattern clones panel content
+  // into a mobile accordion copy, so the same data-id can exist on more
+  // than one <ul>). Apply the show/hide to all of them so desktop and
+  // mobile stay in sync regardless of which is currently visible.
 
-  if (version === 'v26') {
-    dataGroup = document.querySelector('.data-group[data-version="v26"]'); // Get direct children list items
+  var dataGroups;
 
-    listItems = dataGroup.querySelectorAll('ul.data-group[data-version="v26"] > li');
+  if (localVersion === 'v26') {
+    dataGroups = Array.from(document.querySelectorAll("ul.data-group[data-version=\"v26\"][data-id=\"".concat(localId, "\"]")));
   } else {
-    dataGroup = dropdownFilter.querySelector('.data-group'); // Get direct children list items
-
-    listItems = dataGroup.querySelectorAll('ul.data-group > li');
+    dataGroups = [dropdownFilter.querySelector('.data-group')];
   }
 
-  var _iterator3 = _createForOfIteratorHelper(listItems),
-      _step3;
+  dataGroups.forEach(function (dataGroup) {
+    // Get the list item corresponding to the select value chosen
+    var targetListItem = dataGroup.querySelector('li.data-group__item[data-value="' + e.target.value + '"]'); // Get not selected list items
 
-  try {
-    for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-      var listItem = _step3.value;
-      listItem.removeAttribute('data-hidden');
-    } // Hide all items before displaying chosen item
+    var otherListItems = dataGroup.querySelectorAll('li.data-group__item:not([data-value="' + e.target.value + '"])'); // Show/hide content based on pattern's configuration options
 
-  } catch (err) {
-    _iterator3.e(err);
-  } finally {
-    _iterator3.f();
-  }
+    if (e.target.value !== 'show-all' && e.target.selectedIndex !== 0) {
+      targetListItem.removeAttribute('data-hidden');
 
-  showAll = 'false';
-  hideListItems(listItems, showAll); // Get the list item corresponding to the select value chosen
+      var _iterator3 = _createForOfIteratorHelper(otherListItems),
+          _step3;
 
-  var targetListItem = dataGroup.querySelector('li.data-group__item[data-value=' + e.target.value + ']'); // Get not selected list items
-
-  var otherListItems = dataGroup.querySelectorAll('li.data-group__item:not([data-value=' + e.target.value + '])'); // Show/hide content based on pattern's configuration options
-
-  if (e.target.value !== 'show-all' && e.srcElement.selectedIndex !== 0) {
-    targetListItem.removeAttribute('data-hidden');
-
-    var _iterator4 = _createForOfIteratorHelper(otherListItems),
-        _step4;
-
-    try {
-      for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-        var o = _step4.value;
-        o.setAttribute('data-hidden', 'true');
+      try {
+        for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+          var o = _step3.value;
+          o.setAttribute('data-hidden', 'true');
+        }
+      } catch (err) {
+        _iterator3.e(err);
+      } finally {
+        _iterator3.f();
       }
-    } catch (err) {
-      _iterator4.e(err);
-    } finally {
-      _iterator4.f();
-    }
-  } else if (e.target.value !== 'show-all' && e.srcElement.selectedIndex === 0) {
-    var _iterator5 = _createForOfIteratorHelper(otherListItems),
-        _step5;
+    } else if (e.target.value !== 'show-all' && e.target.selectedIndex === 0) {
+      var _iterator4 = _createForOfIteratorHelper(otherListItems),
+          _step4;
 
-    try {
-      for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
-        var _o = _step5.value;
+      try {
+        for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+          var _o = _step4.value;
 
-        _o.setAttribute('data-hidden', 'true');
+          _o.setAttribute('data-hidden', 'true');
+        }
+      } catch (err) {
+        _iterator4.e(err);
+      } finally {
+        _iterator4.f();
       }
-    } catch (err) {
-      _iterator5.e(err);
-    } finally {
-      _iterator5.f();
     }
-
-    return;
-  }
+  });
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
