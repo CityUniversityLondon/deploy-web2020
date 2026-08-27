@@ -4068,9 +4068,51 @@ function InlineSearch(props) {
       setDisplay = _useState2[1];
 
   var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_13__["useState"])({}),
-      _useState4 = _slicedToArray(_useState3, 2),
-      focusTrap = _useState4[0],
-      setFocusTrap = _useState4[1];
+      _useState4 = _slicedToArray(_useState3, 1),
+      focusTrap = _useState4[0];
+
+  var openButtonRef = Object(react__WEBPACK_IMPORTED_MODULE_13__["useRef"])(null);
+  var modalButtonRef = Object(react__WEBPACK_IMPORTED_MODULE_13__["useRef"])(null);
+  var lastTriggerRef = Object(react__WEBPACK_IMPORTED_MODULE_13__["useRef"])(null);
+
+  var focusSearchInput = function focusSearchInput() {
+    var modal = getmodal();
+    var input = modal ? modal.querySelector('input[name="query"], input') : null;
+
+    if (input) {
+      input.focus({
+        preventScroll: true
+      });
+    }
+  };
+
+  var closeModal = function closeModal() {
+    // Needed to safely close the modal on IOS and make sure input ins't still in focus.
+    // deactivate trap first (prevents it re-focusing input)
+    if (focusTrap && typeof focusTrap.deactivate === 'function') {
+      try {
+        focusTrap.deactivate({
+          returnFocus: false
+        });
+      } catch (err) {
+        focusTrap.deactivate();
+      }
+    }
+
+    var target = lastTriggerRef.current || openButtonRef.current || modalButtonRef.current;
+
+    if (target && typeof target.focus === 'function') {
+      target.focus();
+    }
+
+    var el = document.activeElement;
+
+    if (el && typeof el.blur === 'function') {
+      el.blur();
+    }
+
+    setDisplay(false);
+  };
 
   var maximumSuggestions = 10;
   var initialQuery = {
@@ -4233,13 +4275,14 @@ function InlineSearch(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_13__["useEffect"])(function () {
     if (!focusTrap.activate) {
-      setFocusTrap(focus_trap__WEBPACK_IMPORTED_MODULE_17___default()(getmodal(), {
-        initialFocus: getmodal().querySelector('input'),
+      focus_trap__WEBPACK_IMPORTED_MODULE_17___default()(getmodal(), {
+        initialFocus: false,
+        allowOutsideClick: true,
+        clickOutsideDeactivates: true,
         onDeactivate: function onDeactivate() {
-          return setDisplay(false);
-        },
-        clickOutsideDeactivates: true
-      }));
+          return closeModal();
+        }
+      });
     }
 
     if (display) {
@@ -4255,13 +4298,22 @@ function InlineSearch(props) {
     "data-on": "true"
   }),
       toggleButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("button", {
+    ref: openButtonRef,
     className: "global-header__search__button",
     type: "button",
     id: "search",
     "aria-expanded": display,
     "aria-label": ariaLabel,
-    onClick: function onClick() {
-      setDisplay(!display);
+    onClick: function onClick(e) {
+      lastTriggerRef.current = e.currentTarget;
+
+      if (display) {
+        closeModal();
+        return;
+      }
+
+      setDisplay(true);
+      focusSearchInput();
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
     className: "global-header__search__wrapper"
@@ -4272,12 +4324,21 @@ function InlineSearch(props) {
     "aria-hidden": "true"
   }))),
       modalToggleButton = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("button", {
+    ref: modalButtonRef,
     className: "global-header__search__button",
     type: "button",
     id: "modal-search",
     "aria-expanded": display,
-    onClick: function onClick() {
-      setDisplay(!display);
+    onClick: function onClick(e) {
+      lastTriggerRef.current = e.currentTarget;
+
+      if (display) {
+        closeModal();
+        return;
+      }
+
+      setDisplay(true);
+      focusSearchInput();
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_13___default.a.createElement("div", {
     className: "global-header__search__wrapper"
