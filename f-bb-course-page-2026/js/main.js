@@ -1084,8 +1084,6 @@ var className = 'accordion',
     tenthOfASecond = 100,
     scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_11__["reduceMotion"])() ? 0 : oneSecond,
     scrollTo = true;
-var scrollToHeading; // used to disable automatic scrolling to the heading when opening an accordion
-
 /**
  * Sets a heading and the button nested within to be open or closed.
  *
@@ -1151,10 +1149,12 @@ function cleanupTransition(section) {
  * @param {HTMLButtonElement} button - The button that was clicked.
  * @param {HTMLElement[]} headings - All headings in this accordion.
  * @param {boolean} [toggleOpen] - Should other accordion sections close? Default to false.
+ * @param {boolean} [scrollToHeading] - Should the heading be scrolled into view? Default to false.
  */
 
 
 function buttonClick(button, headings, toggleOpen) {
+  var scrollToHeading = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
   var heading = button.parentNode,
       accordionSection = heading.nextElementSibling;
   /**
@@ -1263,6 +1263,8 @@ function buttonFromHeading(heading) {
 
 
 function launchAccordion(accordion) {
+  var scrollToHeading; // used to disable automatic scrolling to the heading when opening an accordion
+
   var viewportWidth = window.innerWidth;
   var toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_11__["toBool"])(accordion.dataset.toggleopen),
       defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_11__["toBool"])(accordion.dataset.defaultopen),
@@ -1305,7 +1307,7 @@ function launchAccordion(accordion) {
     setSection(heading, false);
     heading.nextElementSibling.dataset.closed = 'true';
     button.addEventListener('click', function () {
-      return buttonClick(button, headings, toggleOpen);
+      return buttonClick(button, headings, toggleOpen, scrollToHeading);
     }, true);
   });
   /* Show first item of accordion, if accordion is set to default open,
