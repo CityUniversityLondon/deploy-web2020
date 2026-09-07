@@ -2514,6 +2514,7 @@ function launchDialog(modal) {
   Array.from(modal.children).forEach(function (list) {
     var listOpenDialogButton = document.createElement('button'),
         listOpenDialogButtonSpan = document.createElement('span'),
+        listOpenDialogButtonCredits = document.createElement('span'),
         listLabel = list.getAttribute('data-label'),
         customHeader = list.getAttribute('data-header'),
         //format = list.getAttribute('data-keepformat'),
@@ -2553,8 +2554,14 @@ function launchDialog(modal) {
     listOpenDialogButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'Open dialog');
     listOpenDialogButtonSpan.classList.add('inline-text');
     listOpenDialogButton.appendChild(listOpenDialogButtonSpan);
-    listOpenDialogButtonSpan.textContent = listHeader.textContent;
-    listHeader.remove(); //Dialog module deatils wrapper
+    listOpenDialogButtonSpan.textContent = listHeader.childNodes[0].textContent;
+    listHeader.remove(); //open dialog button credits
+
+    if (listModuleCredits) {
+      listOpenDialogButtonCredits.classList.add('courses-v26__modules__credits');
+      listOpenDialogButtonCredits.textContent = listModuleCredits;
+    } //Dialog module deatils wrapper
+
 
     var dialogModuleDetails = document.createElement('div');
     dialogModuleDetails.classList.add('courses-v26__modules-details'); //Dialog Topic
@@ -2595,7 +2602,13 @@ function launchDialog(modal) {
 
 
     dialog.append(closeDialogForm, hr, listContent);
-    list.append(listOpenDialogButton, dialog);
+    list.appendChild(listOpenDialogButton);
+
+    if (moduleCredits) {
+      list.appendChild(listOpenDialogButtonCredits);
+    }
+
+    list.appendChild(dialog);
   });
 }
 
