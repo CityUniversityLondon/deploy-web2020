@@ -2497,7 +2497,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
 /* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
 
 
 
@@ -2517,9 +2520,9 @@ function launchDialog(modal) {
         listOpenDialogButtonCredits = document.createElement('span'),
         listLabel = list.getAttribute('data-label'),
         customHeader = list.getAttribute('data-header'),
-        //format = list.getAttribute('data-keepformat'),
-    listModuleCode = list.getAttribute('data-moduleCode'),
+        listModuleCode = list.getAttribute('data-moduleCode'),
         listModuleCredits = list.getAttribute('data-moduleCredits'),
+        listModuleCourseLoopURL = list.getAttribute('data-module-course-loop-url'),
         dialogTopicP = document.createElement('p'),
         hr = document.createElement('hr');
     var listHeader = list.firstElementChild,
@@ -2527,9 +2530,8 @@ function launchDialog(modal) {
     var dialog = document.createElement('dialog');
     dialog.classList.add('side-modal');
     var title,
-        // keepFormat = toBool(format),
-    // shortName = list.getAttribute('data-shortname'),
-    label = listLabel || false,
+        shortName = list.getAttribute('data-shortname'),
+        label = listLabel || false,
         moduleCode = listModuleCode ? "Module Code: ".concat(listModuleCode) : false,
         moduleCredits = listModuleCredits ? "Credits: ".concat(listModuleCredits) : false;
     var closeDialogButton = document.createElement('button'),
@@ -2551,7 +2553,7 @@ function launchDialog(modal) {
     });
     listOpenDialogButton.classList.add('modal__button');
     listOpenDialogButton.setAttribute('type', 'button');
-    listOpenDialogButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_5__["default"].label, 'Open dialog');
+    listOpenDialogButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].label, 'Open dialog');
     listOpenDialogButtonSpan.classList.add('inline-text');
     listOpenDialogButton.appendChild(listOpenDialogButtonSpan);
     listOpenDialogButtonSpan.textContent = listHeader.childNodes[0].textContent;
@@ -2601,7 +2603,24 @@ function launchDialog(modal) {
     } //dialog content append
 
 
-    dialog.append(closeDialogForm, hr, listContent);
+    dialog.append(closeDialogForm, hr, listContent); //Dialog module course loop url
+
+    if (listModuleCourseLoopURL) {
+      var moduleCourseLoopURL = document.createElement('a');
+      var moduleCourseLoopURLtextSpan = document.createElement('span');
+      var moduleCourseLoopTextIconSpan = document.createElement('span');
+      moduleCourseLoopTextIconSpan.classList.add('fa-thin', 'fa-arrow-right');
+      moduleCourseLoopURL.classList.add('primary-cta--bright', 'courses-v26__modules-course-loop-url');
+      moduleCourseLoopURLtextSpan.classList.add('courses-v26__modules-course-loop-url__text');
+      moduleCourseLoopURL.setAttribute('href', listModuleCourseLoopURL);
+      moduleCourseLoopURL.setAttribute('target', '_blank');
+      moduleCourseLoopURL.setAttribute('rel', 'noopener noreferrer');
+      moduleCourseLoopURLtextSpan.textContent = "View ".concat(moduleCode, " - ").concat(shortName ? shortName : listHeader.innerText);
+      moduleCourseLoopURL.appendChild(moduleCourseLoopTextIconSpan);
+      moduleCourseLoopURL.appendChild(moduleCourseLoopURLtextSpan);
+      dialog.appendChild(moduleCourseLoopURL);
+    }
+
     list.appendChild(listOpenDialogButton);
 
     if (moduleCredits) {
