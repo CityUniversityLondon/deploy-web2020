@@ -2523,6 +2523,7 @@ function launchDialog(modal) {
         listModuleCode = list.getAttribute('data-moduleCode'),
         listModuleCredits = list.getAttribute('data-moduleCredits'),
         listModuleCourseLoopURL = list.getAttribute('data-module-course-loop-url'),
+        listModuleYearLabel = list.getAttribute('data-module-year-label'),
         dialogTopicP = document.createElement('p'),
         hr = document.createElement('hr');
     var listHeader = list.firstElementChild,
@@ -2532,6 +2533,7 @@ function launchDialog(modal) {
     var title,
         shortName = list.getAttribute('data-shortname'),
         label = listLabel || false,
+        yearLabel = listModuleYearLabel ? listModuleYearLabel : false,
         moduleCode = listModuleCode ? "Module Code: ".concat(listModuleCode) : false,
         moduleCredits = listModuleCredits ? "Credits: ".concat(listModuleCredits) : false;
     var closeDialogButton = document.createElement('button'),
@@ -2578,6 +2580,13 @@ function launchDialog(modal) {
       title = customHeader;
     } else {
       title = listHeader.innerText;
+    }
+
+    if (yearLabel) {
+      var yearLabelSpan = document.createElement('span');
+      yearLabelSpan.classList.add('courses-v26__modules-details__year-label');
+      yearLabelSpan.textContent = yearLabel;
+      dialog.appendChild(yearLabelSpan);
     }
 
     var dialogHeading = document.createElement('h3');
