@@ -10530,8 +10530,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
 /* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
+/* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -10550,6 +10552,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
+
 var className = 'tabs',
     panelClassName = className + '__panel',
     contentClassName = panelClassName + '__content',
@@ -10560,35 +10563,9 @@ var className = 'tabs',
     arrowUp = 'ArrowUp',
     arrowRight = 'ArrowRight',
     arrowDown = 'ArrowDown',
-    scrollTo = true;
-/**
- * Get the current height of the sticky nav, if one is present on the page.
- *
- * @returns {number} Height in pixels, or 0 if no sticky nav is present.
- */
-
-function getStickyNavOffset() {
-  var stickyNav = document.querySelector('.nav-sticky__wrap');
-  return stickyNav ? stickyNav.offsetHeight : 0;
-}
-/**
- * Scroll directly to a position that puts elem just below the sticky nav,
- * in a single scroll motion. Replaces zenscroll for this purpose
- *
- * @param {HTMLElement} elem - Element to scroll to.
- */
-
-
-function scrollWithOffset(elem) {
-  var offset = getStickyNavOffset();
-  var extraOffsetPadding = 10; // Optional extra padding to ensure the element is not flush against the sticky nav
-
-  var targetY = elem.getBoundingClientRect().top + window.pageYOffset - offset - extraOffsetPadding;
-  window.scrollTo({
-    top: targetY,
-    behavior: Object(_util__WEBPACK_IMPORTED_MODULE_6__["reduceMotion"])() ? 'auto' : 'smooth'
-  });
-}
+    oneSecond = 1000,
+    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_7__["reduceMotion"])() ? 0 : oneSecond,
+    scrollTo = false;
 /**
  * Set the attributes of a tab to be selected or not selected.
  *
@@ -10598,14 +10575,13 @@ function scrollWithOffset(elem) {
  * @param {boolean} selected - Set the element to be selected?
  */
 
-
 function toggleButton(button, selected) {
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].selected, selected);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].selected, selected);
 
   if (selected) {
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].current, true);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].current, true);
   } else {
-    button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].current);
+    button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].current);
   }
 }
 /**
@@ -10642,18 +10618,14 @@ function selectTab(newTab) {
    * Move focus to the section and optionally scroll it into view.
    */
 
-  newTab.focus(); //scrollTo && scroll.to(tabs, scrollDuration);
-
-  scrollTo && scrollWithOffset(tabs);
+  newTab.focus();
+  scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_6___default.a.to(tabs, scrollDuration);
   /**
    * Updates URL to include selected tab's ID address
    */
-  // WR - commented out below (window.location.hash), as it triggers a scroll and bypasses zen scroll which was triggered above by scroll.to, therefor,
-  // using history.pushState to update the URL without triggering a scroll, then additionally using scrollWithOffset
-  // to scroll to the selected tab, where its easier to add scroll offset for sticky navs.
-  //window.location.hash = newTab.id;
+  //window.location.hash = newTab.dataset.hash; 
 
-  history.pushState(null, null, "#".concat(newTab.id));
+  window.location.hash = newTab.id;
 }
 /**
  * Respond to event changing tab selection.
@@ -10676,7 +10648,7 @@ function selectTabEvent(e, newTab) {
 
 
 function keyEvents(e, tabs) {
-  var currentTab = tabs.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_7__["default"].selected, "=\"true\"]")),
+  var currentTab = tabs.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].selected, "=\"true\"]")),
       currentTabLI = currentTab.parentNode;
   var newTab = null;
 
@@ -10807,7 +10779,7 @@ function launchTabs(tabs) {
     /**
      * don't make one tab into a tabbed section, makes no sense
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_6__["removeClass"])(tabs, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_7__["removeClass"])(tabs, className, false);
     return;
   }
 
@@ -10837,9 +10809,9 @@ function launchTabs(tabs) {
       // determines if the tabs pattern is 'tabs only' or tabs turning into accordions on smaller viewports
       var isTabAccordion;
       var viewportWidth = window.innerWidth;
-      tabs.parentElement.className === 'tabs--accordion' ? isTabAccordion = true : isTabAccordion = false; // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
+      tabs.parentElement.className == 'tabs--accordion' ? isTabAccordion = true : isTabAccordion = false; // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
 
-      if (isTabAccordion && Object(_util__WEBPACK_IMPORTED_MODULE_6__["screenWidth"])('tablet') < viewportWidth) {
+      if (isTabAccordion && Object(_util__WEBPACK_IMPORTED_MODULE_7__["screenWidth"])('tablet') < viewportWidth) {
         // Wait for DOM to load before accessing selected tab
         window.onload = function () {
           selectTab(button);
