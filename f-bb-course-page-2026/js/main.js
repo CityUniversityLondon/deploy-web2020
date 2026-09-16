@@ -10461,7 +10461,13 @@ function accordionize(tabs) {
   var wrapper = document.createElement('div'),
       accordion = document.createElement('div');
   var tabVersion = tabs.getAttribute('data-version');
+  var getScrollToHeading = tabs.getAttribute('data-scrolltoheading');
   accordion.className = tabVersion === 'v26' ? 'accordion accordion-v26 accordion-v26--light' : 'accordion';
+
+  if (getScrollToHeading === 'false') {
+    accordion.dataset.scrolltoheading = 'false';
+  }
+
   wrapper.className = 'tabs--accordion';
   accordion.id = "accordion".concat(tabs.dataset.assetid);
   accordion.dataset.allowsingle = 'false';
@@ -10564,8 +10570,7 @@ var className = 'tabs',
     arrowRight = 'ArrowRight',
     arrowDown = 'ArrowDown',
     oneSecond = 1000,
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_7__["reduceMotion"])() ? 0 : oneSecond,
-    scrollTo = false;
+    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_7__["reduceMotion"])() ? 0 : oneSecond;
 /**
  * Set the attributes of a tab to be selected or not selected.
  *
@@ -10588,10 +10593,11 @@ function toggleButton(button, selected) {
  * Change the selection to the requested tab.
  *
  * @param {HTMLAnchorElement} newTab - The selected tab.
+ * @param {boolean} scrollToHeading - Whether to scroll to the heading when opening a tab.
  */
 
 
-function selectTab(newTab) {
+function selectTab(newTab, scrollToHeading) {
   var tabs = newTab.closest(".".concat(className)),
       controls = tabs.querySelector(".".concat(linksClassName)),
       linkItems = Array.from(controls.querySelectorAll('li')),
@@ -10614,30 +10620,37 @@ function selectTab(newTab) {
 
   toggleButton(newTab, true);
   tabs.querySelector(newTab.dataset.hash).removeAttribute('hidden');
-  /**
-   * Move focus to the section and optionally scroll it into view.
-   */
 
-  newTab.focus();
-  scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_6___default.a.to(tabs, scrollDuration);
-  /**
-   * Updates URL to include selected tab's ID address
-   */
-  //window.location.hash = newTab.dataset.hash; 
+  if (scrollToHeading) {
+    /**
+     * Move focus to the section and optionally scroll it into view.
+     */
+    newTab.focus();
+    zenscroll__WEBPACK_IMPORTED_MODULE_6___default.a.to(tabs, scrollDuration);
+    /**
+     * Updates URL to include selected tab's ID address
+     */
+    //window.location.hash = newTab.dataset.hash;
 
-  window.location.hash = newTab.id;
+    window.location.hash = newTab.id;
+  } else {
+    // updates URL hash, without scrolling to the heading, when tab opens
+    // currently needed disabling on new course pages
+    history.pushState(null, null, "#".concat(newTab.id));
+  }
 }
 /**
  * Respond to event changing tab selection.
  *
  * @param {Event} e - The initiating event.
  * @param {HTMLAnchorElement} newTab - The selected tab.
+ * @param {boolean} scrollToHeading - Whether to scroll to the heading when opening a tab.
  */
 
 
-function selectTabEvent(e, newTab) {
+function selectTabEvent(e, newTab, scrollToHeading) {
   e.preventDefault();
-  selectTab(newTab);
+  selectTab(newTab, scrollToHeading);
 }
 /**
  * Respond to cursor key events inside the tabbed section.
@@ -10707,10 +10720,11 @@ function keyEvents(e, tabs) {
  * Set attributes and listeners for the tabbed section controls.
  *
  * @param {HTMLLIElement[]} linkItems - An array of list items containing the tab anchors.
+ * @param {boolean} scrollToHeading - Whether to scroll to the heading when opening a tab.
  */
 
 
-function prepareLinks(linkItems) {
+function prepareLinks(linkItems, scrollToHeading) {
   linkItems.forEach(function (linkItem) {
     var link = linkItem.firstElementChild,
         button = document.createElement('button');
@@ -10722,7 +10736,7 @@ function prepareLinks(linkItems) {
     linkItem.replaceChild(button, link);
     toggleButton(button, false);
     button.addEventListener('click', function (e) {
-      return selectTabEvent(e, button);
+      return selectTabEvent(e, button, scrollToHeading);
     }, true);
   });
 }
@@ -10769,6 +10783,10 @@ function preparePanels(panels) {
 
 
 function launchTabs(tabs) {
+  var scrollToHeading; // used to disable automatic scrolling to the heading when opening a tab
+
+  var getScrollToHeading = tabs.dataset.scrolltoheading;
+  getScrollToHeading === 'false' ? scrollToHeading = false : scrollToHeading = true;
   var controls = tabs.querySelector(".".concat(linksClassName)),
       linkItems = Array.from(controls.querySelectorAll('li')),
       panels = Array.from(tabs.childNodes).filter(function (node) {
@@ -10785,7 +10803,7 @@ function launchTabs(tabs) {
 
   controls.setAttribute('role', 'tablist');
   preparePanels(panels);
-  prepareLinks(linkItems);
+  prepareLinks(linkItems, scrollToHeading);
   toggleButton(linkItems[0].firstElementChild, true);
   panels[0].removeAttribute('hidden');
   /**
@@ -10809,7 +10827,7 @@ function launchTabs(tabs) {
       // determines if the tabs pattern is 'tabs only' or tabs turning into accordions on smaller viewports
       var isTabAccordion;
       var viewportWidth = window.innerWidth;
-      tabs.parentElement.className == 'tabs--accordion' ? isTabAccordion = true : isTabAccordion = false; // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
+      tabs.parentElement.className === 'tabs--accordion' ? isTabAccordion = true : isTabAccordion = false; // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
 
       if (isTabAccordion && Object(_util__WEBPACK_IMPORTED_MODULE_7__["screenWidth"])('tablet') < viewportWidth) {
         // Wait for DOM to load before accessing selected tab
