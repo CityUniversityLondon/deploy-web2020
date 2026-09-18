@@ -2497,9 +2497,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
 /* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
-/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.array.filter.js */ "./node_modules/core-js/modules/es.array.filter.js");
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
+
+
+
 
 
 
@@ -2515,128 +2527,148 @@ var className = 'dialog-model';
 function launchDialog(modal) {
   var dialogTopic = modal.getAttribute('data-topic');
   Array.from(modal.children).forEach(function (list) {
-    var listOpenDialogButton = document.createElement('button'),
-        listOpenDialogButtonSpan = document.createElement('span'),
-        listOpenDialogButtonCredits = document.createElement('span'),
-        listLabel = list.getAttribute('data-label'),
-        customHeader = list.getAttribute('data-header'),
-        listModuleCode = list.getAttribute('data-moduleCode'),
-        listModuleCredits = list.getAttribute('data-moduleCredits'),
-        listModuleCourseLoopURL = list.getAttribute('data-module-course-loop-url'),
-        listModuleYearLabel = list.getAttribute('data-module-year-label'),
-        dialogTopicP = document.createElement('p'),
-        hr = document.createElement('hr');
-    var listHeader = list.firstElementChild,
-        listContent = list.lastElementChild;
-    var dialog = document.createElement('dialog');
-    dialog.classList.add('side-modal');
-    var title,
-        shortName = list.getAttribute('data-shortname'),
-        label = listLabel || false,
-        yearLabel = listModuleYearLabel ? listModuleYearLabel : false,
-        moduleCode = listModuleCode ? "Module Code: ".concat(listModuleCode) : false,
-        moduleCredits = listModuleCredits ? "Credits: ".concat(listModuleCredits) : false;
-    var closeDialogButton = document.createElement('button'),
-        closeDialogButtonSpan = document.createElement('span'),
-        closeDialogButtonSpanText = document.createElement('span'),
-        closeDialogForm = document.createElement('form'); //dialog close button
+    if (!list.dataset.modalcontent || list.dataset.modalcontent === 'true') {
+      var listOpenDialogButton = document.createElement('button'),
+          listOpenDialogButtonSpan = document.createElement('span'),
+          listOpenDialogButtonCredits = document.createElement('span'),
+          listLabel = list.getAttribute('data-label'),
+          customHeader = list.getAttribute('data-header'),
+          listModuleCode = list.getAttribute('data-moduleCode'),
+          listModuleCredits = list.getAttribute('data-moduleCredits'),
+          listModuleCourseLoopURL = list.getAttribute('data-module-course-loop-url'),
+          listModuleYearLabel = list.getAttribute('data-module-year-label'),
+          dialogTopicP = document.createElement('p'),
+          hr = document.createElement('hr');
+      var listHeader = list.firstElementChild,
+          listContent = list.lastElementChild;
+      var dialog = document.createElement('dialog');
+      dialog.classList.add('side-modal');
+      var title,
+          shortName = list.getAttribute('data-shortname'),
+          label = listLabel || false,
+          yearLabel = listModuleYearLabel ? listModuleYearLabel : false,
+          moduleCode = listModuleCode ? "Module Code: ".concat(listModuleCode) : false,
+          moduleCredits = listModuleCredits ? "Credits: ".concat(listModuleCredits) : false;
+      var closeDialogButton = document.createElement('button'),
+          closeDialogButtonSpan = document.createElement('span'),
+          closeDialogButtonSpanText = document.createElement('span'),
+          closeDialogForm = document.createElement('form'); //dialog close button
 
-    closeDialogForm.setAttribute('method', 'dialog');
-    closeDialogButton.classList.add('side-modal__modal__close-btn');
-    closeDialogButtonSpan.classList.add('fa-solid', 'fa-xmark');
-    closeDialogButtonSpanText.classList.add('sr-only');
-    closeDialogButtonSpanText.textContent = 'close';
-    closeDialogButton.addEventListener('close', function () {});
-    closeDialogButton.append(closeDialogButtonSpanText, closeDialogButtonSpan);
-    closeDialogForm.appendChild(closeDialogButton); //open dialog button
+      closeDialogForm.setAttribute('method', 'dialog');
+      closeDialogButton.classList.add('side-modal__modal__close-btn');
+      closeDialogButtonSpan.classList.add('fa-solid', 'fa-xmark');
+      closeDialogButtonSpanText.classList.add('sr-only');
+      closeDialogButtonSpanText.textContent = 'close';
+      closeDialogButton.addEventListener('close', function () {});
+      closeDialogButton.append(closeDialogButtonSpanText, closeDialogButtonSpan);
+      closeDialogForm.appendChild(closeDialogButton); //open dialog button
 
-    listOpenDialogButton.addEventListener('click', function () {
-      dialog.showModal();
-    });
-    listOpenDialogButton.classList.add('modal__button');
-    listOpenDialogButton.setAttribute('type', 'button');
-    listOpenDialogButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_6__["default"].label, 'Open dialog');
-    listOpenDialogButtonSpan.classList.add('inline-text');
-    listOpenDialogButton.appendChild(listOpenDialogButtonSpan);
-    listOpenDialogButtonSpan.textContent = listHeader.childNodes[0].textContent;
-    listHeader.remove(); //open dialog button credits
+      listOpenDialogButton.addEventListener('click', function () {
+        dialog.showModal();
+      });
+      listOpenDialogButton.classList.add('modal__button');
+      listOpenDialogButton.setAttribute('type', 'button');
+      listOpenDialogButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_10__["default"].label, 'Open dialog');
+      listOpenDialogButtonSpan.classList.add('inline-text');
+      listOpenDialogButton.appendChild(listOpenDialogButtonSpan);
+      listOpenDialogButtonSpan.textContent = listHeader.childNodes[0].textContent;
+      listHeader.remove(); //open dialog button credits
 
-    if (listModuleCredits) {
-      listOpenDialogButtonCredits.classList.add('courses-v26__modules__credits');
-      listOpenDialogButtonCredits.textContent = listModuleCredits;
-    } //Dialog module deatils wrapper
-
-
-    var dialogModuleDetails = document.createElement('div');
-    dialogModuleDetails.classList.add('courses-v26__modules-details'); //Dialog Topic
-
-    if (dialogTopic) {
-      dialogTopicP.textContent = dialogTopic;
-      dialog.appendChild(dialogTopicP);
-    } //Dialog Heading
+      if (listModuleCredits) {
+        listOpenDialogButtonCredits.classList.add('courses-v26__modules__credits');
+        listOpenDialogButtonCredits.textContent = listModuleCredits;
+      } //Dialog module deatils wrapper
 
 
-    if (customHeader) {
-      title = customHeader;
-    } else {
-      title = listHeader.innerText;
-    }
+      var dialogModuleDetails = document.createElement('div');
+      dialogModuleDetails.classList.add('courses-v26__modules-details'); //Dialog Topic
 
-    if (yearLabel) {
-      var yearLabelSpan = document.createElement('span');
-      yearLabelSpan.classList.add('courses-v26__modules-details__year-label');
-      yearLabelSpan.textContent = yearLabel;
-      dialog.appendChild(yearLabelSpan);
-    }
+      if (dialogTopic) {
+        dialogTopicP.textContent = dialogTopic;
+        dialog.appendChild(dialogTopicP);
+      } //Dialog Heading
 
-    var dialogHeading = document.createElement('h3');
-    dialogHeading.textContent = title;
-    dialog.appendChild(dialogHeading); //Dailog Core label
 
-    if (label || moduleCode || moduleCredits) {
-      var coreLabelSpan = document.createElement('span');
-      var moduleCreditCode = document.createElement('span');
-
-      if (moduleCode && moduleCredits) {
-        moduleCreditCode.append(moduleCode, ' | ', moduleCredits);
-      } else if (moduleCode) {
-        moduleCreditCode.appendChild(moduleCode);
-      } else if (moduleCredits) {
-        moduleCreditCode.appendChild(moduleCredits);
+      if (customHeader) {
+        title = customHeader;
+      } else {
+        title = listHeader.innerText;
       }
 
-      coreLabelSpan.classList.add('courses-v26__modules-details__core-label');
-      coreLabelSpan.textContent = label;
-      dialogModuleDetails.append(coreLabelSpan, moduleCreditCode);
-      dialog.appendChild(dialogModuleDetails);
-    } //dialog content append
+      if (yearLabel) {
+        var yearLabelSpan = document.createElement('span');
+        yearLabelSpan.classList.add('courses-v26__modules-details__year-label');
+        yearLabelSpan.textContent = yearLabel;
+        dialog.appendChild(yearLabelSpan);
+      }
+
+      var dialogHeading = document.createElement('h3');
+      dialogHeading.textContent = title;
+      dialog.appendChild(dialogHeading); //Dailog Core label
+
+      if (label || moduleCode || moduleCredits) {
+        var coreLabelSpan = document.createElement('span');
+        var moduleCreditCode = document.createElement('span');
+
+        if (moduleCode && moduleCredits) {
+          moduleCreditCode.append(moduleCode, ' | ', moduleCredits);
+        } else if (moduleCode) {
+          moduleCreditCode.appendChild(moduleCode);
+        } else if (moduleCredits) {
+          moduleCreditCode.appendChild(moduleCredits);
+        }
+
+        coreLabelSpan.classList.add('courses-v26__modules-details__core-label');
+        var arrayOfLabels = label.split(';');
+        var arrayOfLabelsFiltered = arrayOfLabels.filter(Boolean);
+
+        if (arrayOfLabelsFiltered.length > 1) {
+          console.log('arrayOfLabelsFiltered', arrayOfLabelsFiltered);
+          var labelList = document.createElement('div');
+          labelList.classList.add('courses-v26__modules-details__core-label-list');
+          arrayOfLabelsFiltered.forEach(function (labelItem) {
+            var labelListItemSpan = document.createElement('span');
+            labelListItemSpan.classList.add('courses-v26__modules-details__core-label');
+            labelListItemSpan.textContent = labelItem.trim();
+            labelList.appendChild(labelListItemSpan);
+          });
+          dialogModuleDetails.appendChild(labelList);
+        } else {
+          coreLabelSpan.textContent = label;
+          dialogModuleDetails.appendChild(coreLabelSpan);
+        }
+
+        dialogModuleDetails.append(moduleCreditCode);
+        dialog.appendChild(dialogModuleDetails);
+      } //dialog content append
 
 
-    dialog.append(closeDialogForm, hr, listContent); //Dialog module course loop url
+      dialog.append(closeDialogForm, hr, listContent); //Dialog module course loop url
 
-    if (listModuleCourseLoopURL) {
-      var moduleCourseLoopURL = document.createElement('a');
-      var moduleCourseLoopURLtextSpan = document.createElement('span');
-      var moduleCourseLoopTextIconSpan = document.createElement('span');
-      moduleCourseLoopTextIconSpan.classList.add('fa-thin', 'fa-arrow-right');
-      moduleCourseLoopURL.classList.add('primary-cta--bright', 'courses-v26__modules-course-loop-url');
-      moduleCourseLoopURLtextSpan.classList.add('courses-v26__modules-course-loop-url__text');
-      moduleCourseLoopURL.setAttribute('href', listModuleCourseLoopURL);
-      moduleCourseLoopURL.setAttribute('target', '_blank');
-      moduleCourseLoopURL.setAttribute('rel', 'noopener noreferrer');
-      moduleCourseLoopURLtextSpan.textContent = "View ".concat(moduleCode, " - ").concat(shortName ? shortName : listHeader.innerText);
-      moduleCourseLoopURL.appendChild(moduleCourseLoopTextIconSpan);
-      moduleCourseLoopURL.appendChild(moduleCourseLoopURLtextSpan);
-      dialog.appendChild(moduleCourseLoopURL);
+      if (listModuleCourseLoopURL) {
+        var moduleCourseLoopURL = document.createElement('a');
+        var moduleCourseLoopURLtextSpan = document.createElement('span');
+        var moduleCourseLoopTextIconSpan = document.createElement('span');
+        moduleCourseLoopTextIconSpan.classList.add('fa-thin', 'fa-arrow-right');
+        moduleCourseLoopURL.classList.add('primary-cta--bright', 'courses-v26__modules-course-loop-url');
+        moduleCourseLoopURLtextSpan.classList.add('courses-v26__modules-course-loop-url__text');
+        moduleCourseLoopURL.setAttribute('href', listModuleCourseLoopURL);
+        moduleCourseLoopURL.setAttribute('target', '_blank');
+        moduleCourseLoopURL.setAttribute('rel', 'noopener noreferrer');
+        moduleCourseLoopURLtextSpan.textContent = "View ".concat(moduleCode, " - ").concat(shortName ? shortName : listHeader.innerText);
+        moduleCourseLoopURL.appendChild(moduleCourseLoopTextIconSpan);
+        moduleCourseLoopURL.appendChild(moduleCourseLoopURLtextSpan);
+        dialog.appendChild(moduleCourseLoopURL);
+      }
+
+      list.appendChild(listOpenDialogButton);
+
+      if (moduleCredits) {
+        list.appendChild(listOpenDialogButtonCredits);
+      }
+
+      list.appendChild(dialog);
     }
-
-    list.appendChild(listOpenDialogButton);
-
-    if (moduleCredits) {
-      list.appendChild(listOpenDialogButtonCredits);
-    }
-
-    list.appendChild(dialog);
   });
 }
 
