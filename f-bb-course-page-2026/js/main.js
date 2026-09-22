@@ -10903,9 +10903,12 @@ __webpack_require__.r(__webpack_exports__);
  * - Any element with data-toggle-group="GROUP" and data-toggle-value="a b c"
  *   is shown when the select's value matches one of the listed values,
  *   hidden otherwise. Elements can live anywhere in the DOM.
+ * - By default, panels are hidden while nothing is selected (value is "").
+ *   Add data-toggle-show-all to the select to show every panel in the group
+ *   instead while nothing is selected.
  *
  * =Example markup=
- * <select data-toggle-source="content">
+ * <select data-toggle-source="content" data-toggle-show-all>
  *  <option value="">-- choose --</option>
  *   <option value="a">Content A</option>
  *   <option value="b">Content B</option>
@@ -10961,10 +10964,11 @@ function update(select) {
   if (!group) return;
   var value = select.value;
   syncSelects(group, value, select);
+  var showAllWhenEmpty = select.hasAttribute('data-toggle-show-all');
   var panels = document.querySelectorAll("[data-toggle-group=\"".concat(CSS.escape(group), "\"]"));
   panels.forEach(function (panel) {
     var values = (panel.dataset.toggleValue || '').trim().split(/\s+/);
-    var show = value !== '' && values.indexOf(value) !== -1;
+    var show = value === '' ? showAllWhenEmpty : values.indexOf(value) !== -1;
     panel.hidden = !show;
   });
 }
