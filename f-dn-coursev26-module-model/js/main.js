@@ -2623,7 +2623,6 @@ function launchDialog(modal) {
         var arrayOfLabelsFiltered = arrayOfLabels.filter(Boolean);
 
         if (arrayOfLabelsFiltered.length > 1) {
-          console.log('arrayOfLabelsFiltered', arrayOfLabelsFiltered);
           var labelList = document.createElement('div');
           labelList.classList.add('courses-v26__modules-details__core-label-list');
           arrayOfLabelsFiltered.forEach(function (labelItem) {
@@ -10597,6 +10596,227 @@ function launchSlider(slider) {
 
 /***/ }),
 
+/***/ "./src/patterns/tabs/hideTabViaSelect.js":
+/*!***********************************************!*\
+  !*** ./src/patterns/tabs/hideTabViaSelect.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return hideTabViaSelect; });
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.filter.js */ "./node_modules/core-js/modules/es.array.filter.js");
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.map.js */ "./node_modules/core-js/modules/es.array.map.js");
+/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_array_is_array_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.array.is-array.js */ "./node_modules/core-js/modules/es.array.is-array.js");
+/* harmony import */ var core_js_modules_es_array_is_array_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_is_array_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_set_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.set.js */ "./node_modules/core-js/modules/es.set.js");
+/* harmony import */ var core_js_modules_es_set_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_set_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! core-js/modules/es.array.includes.js */ "./node_modules/core-js/modules/es.array.includes.js");
+/* harmony import */ var core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_includes_js__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! core-js/modules/es.string.includes.js */ "./node_modules/core-js/modules/es.string.includes.js");
+/* harmony import */ var core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_includes_js__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var core_js_modules_es_array_some_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! core-js/modules/es.array.some.js */ "./node_modules/core-js/modules/es.array.some.js");
+/* harmony import */ var core_js_modules_es_array_some_js__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_some_js__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator.js */ "./node_modules/core-js/modules/es.symbol.iterator.js");
+/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_18__);
+/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! core-js/modules/es.array.from.js */ "./node_modules/core-js/modules/es.array.from.js");
+/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_19__);
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! core-js/modules/es.array.slice.js */ "./node_modules/core-js/modules/es.array.slice.js");
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_20__);
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _tabs__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./tabs */ "./src/patterns/tabs/tabs.js");
+
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * This a add on for course v26 tabs. To enable the ability to hide a tab when a select option is chosen,
+ * the select element use the selected option to hide the corresponding tab via the data-hide-tab attribute.
+ *
+ * @module patterns/tabs/tabs
+ * @author Web Development
+ * @copyright City St George's, University of London 2018-2019
+ */
+
+function hideTabViaSelect(tabsList, tabs) {
+  if (!tabs || !tabsList) return;
+  var selectFirstOptionValues = tabs.querySelector('.tabs__links');
+  if (!selectFirstOptionValues) return;
+  var hideOptions = selectFirstOptionValues.dataset.hideTabSelectOptions;
+  if (!hideOptions) return;
+  var selectFirstElValue = hideOptions.split(';').map(function (value) {
+    return value.trim();
+  }).filter(Boolean);
+  var selectLabelText = selectFirstOptionValues.dataset.hideTabLabel || '';
+  var arrayOfFilterLI = Array.isArray(tabsList) ? tabsList.filter(function (element) {
+    return element && element.dataset && element.dataset.coursev26YearTabButton;
+  }) : [];
+
+  var arrayDataBtnName = _toConsumableArray(new Set(arrayOfFilterLI.map(function (el) {
+    return el.dataset.coursev26YearTabButton;
+  }).filter(Boolean)));
+
+  var arrayFullList = _toConsumableArray(new Set([].concat(_toConsumableArray(selectFirstElValue), _toConsumableArray(arrayDataBtnName))));
+
+  var firstTabBtn = tabs.querySelector('.tabs__links li:first-child button');
+  if (!firstTabBtn) return;
+  var KeyInfoClass = '.course-hero__left'; //location to append key info module select
+  //Create wrapper and select input to be use within key info
+
+  var infoWrapper = document.createElement('div');
+  infoWrapper.classList.add('info__module-year-select__wrapper');
+  var infoLabel = document.createElement('label');
+  infoLabel.setAttribute('for', 'info__module-year-select');
+  infoLabel.textContent = selectLabelText;
+  infoWrapper.appendChild(infoLabel);
+  var infoSelect = document.createElement('select');
+  infoSelect.setAttribute('name', 'info__module-year-select');
+  infoSelect.setAttribute('id', 'info__module-year-select');
+  infoSelect.classList.add('course-v26__module-year-select', 'dropdown', 'dropdown--pill'); //create wrapper and select input for course structure
+
+  var wrapper = document.createElement('div');
+  wrapper.classList.add('module-year-select__wrapper');
+  var label = document.createElement('label');
+  label.setAttribute('for', 'module-year-select');
+  label.textContent = selectLabelText;
+  wrapper.appendChild(label);
+  var select = document.createElement('select');
+  select.setAttribute('name', 'module-year-select');
+  select.setAttribute('id', 'module-year-select');
+  select.classList.add('course-v26__module-year-select', 'dropdown', 'dropdown--pill');
+  var arrayOfSelects = [select, infoSelect];
+  arrayFullList.forEach(function (value) {
+    arrayOfSelects.forEach(function (selectElement) {
+      var option = document.createElement('option');
+      option.value = value;
+      option.textContent = value;
+      selectElement.appendChild(option);
+    });
+  });
+  arrayOfSelects.forEach(function (select) {
+    select.addEventListener('change', function (e) {
+      var target = e.target;
+      if (!target) return;
+      arrayOfSelects.forEach(function (otherSelect) {
+        if (otherSelect !== target) {
+          otherSelect.value = target.value;
+        }
+      });
+      var value = target.value;
+      var valueIsInArray = arrayDataBtnName.includes(value); //reset tabs to default selection
+
+      arrayDataBtnName.forEach(function (el) {
+        var tab = tabs.querySelector(".tabs__links li[data-coursev26-year-tab-button=\"".concat(el, "\"]"));
+
+        if (tab) {
+          tab.hidden = true;
+        }
+      });
+
+      if (!valueIsInArray) {
+        //reset back to first tab and panel selected
+        Object(_tabs__WEBPACK_IMPORTED_MODULE_22__["selectTabEvent"])(e, firstTabBtn);
+        return;
+      }
+
+      var liBTN = tabs.querySelector(".tabs__links li[data-coursev26-year-tab-button=\"".concat(value, "\"]"));
+      if (!liBTN) return;
+      var btn = liBTN.querySelector('button');
+      if (!btn) return;
+      var removeCurrentValueFromArray = arrayDataBtnName.filter(function (el) {
+        return el !== value;
+      }); //Check if specify hidden tab is active
+
+      var anyBTNActive = removeCurrentValueFromArray.some(function (el) {
+        var tabButton = tabs.querySelector(".tabs__links li[data-coursev26-year-tab-button=\"".concat(el, "\"] button"));
+        if (!tabButton) return false;
+        return tabButton.getAttribute('aria-selected') === 'true';
+      });
+
+      if (btn.getAttribute('aria-selected') === 'false' && anyBTNActive) {
+        Object(_tabs__WEBPACK_IMPORTED_MODULE_22__["selectTabEvent"])(e, firstTabBtn);
+      }
+
+      liBTN.hidden = false;
+    });
+  }); //event handler to hide and show tabs depending on value
+
+  arrayDataBtnName.forEach(function (name) {
+    var section = tabs.querySelector(".tabs__links li[data-coursev26-year-tab-button=\"".concat(name, "\"]"));
+
+    if (section) {
+      section.hidden = true;
+    }
+  });
+  infoWrapper.appendChild(infoSelect);
+  wrapper.appendChild(select);
+  tabs.prepend(wrapper);
+  var keyInfoRoot = document.querySelector(KeyInfoClass);
+  if (!keyInfoRoot) return;
+  keyInfoRoot.appendChild(infoWrapper);
+}
+
+/***/ }),
+
 /***/ "./src/patterns/tabs/prepareAccordionTabs.js":
 /*!***************************************************!*\
   !*** ./src/patterns/tabs/prepareAccordionTabs.js ***!
@@ -10712,11 +10932,13 @@ function prepareAccordionTabs(tabs) {
 /*!***********************************!*\
   !*** ./src/patterns/tabs/tabs.js ***!
   \***********************************/
-/*! exports provided: default */
+/*! exports provided: toggleButton, selectTabEvent, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toggleButton", function() { return toggleButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectTabEvent", function() { return selectTabEvent; });
 /* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.from.js */ "./node_modules/core-js/modules/es.array.from.js");
 /* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
@@ -10731,8 +10953,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! zenscroll */ "./node_modules/zenscroll/zenscroll.js");
 /* harmony import */ var zenscroll__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(zenscroll__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../util */ "./src/util.js");
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var _hideTabViaSelect__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./hideTabViaSelect */ "./src/patterns/tabs/hideTabViaSelect.js");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../util */ "./src/util.js");
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
 
 
 
@@ -10752,6 +10975,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var className = 'tabs',
     panelClassName = className + '__panel',
     contentClassName = panelClassName + '__content',
@@ -10763,7 +10987,7 @@ var className = 'tabs',
     arrowRight = 'ArrowRight',
     arrowDown = 'ArrowDown',
     oneSecond = 1000,
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_7__["reduceMotion"])() ? 0 : oneSecond,
+    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_8__["reduceMotion"])() ? 0 : oneSecond,
     scrollTo = false;
 /**
  * Set the attributes of a tab to be selected or not selected.
@@ -10775,12 +10999,12 @@ var className = 'tabs',
  */
 
 function toggleButton(button, selected) {
-  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].selected, selected);
+  button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].selected, selected);
 
   if (selected) {
-    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].current, true);
+    button.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].current, true);
   } else {
-    button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].current);
+    button.removeAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].current);
   }
 }
 /**
@@ -10788,7 +11012,6 @@ function toggleButton(button, selected) {
  *
  * @param {HTMLAnchorElement} newTab - The selected tab.
  */
-
 
 function selectTab(newTab) {
   var tabs = newTab.closest(".".concat(className)),
@@ -10822,7 +11045,7 @@ function selectTab(newTab) {
   /**
    * Updates URL to include selected tab's ID address
    */
-  //window.location.hash = newTab.dataset.hash; 
+  //window.location.hash = newTab.dataset.hash;
 
   window.location.hash = newTab.id;
 }
@@ -10845,9 +11068,8 @@ function selectTabEvent(e, newTab) {
  * @param {HTMLElement} tabs - The controls for the tabbed section.
  */
 
-
 function keyEvents(e, tabs) {
-  var currentTab = tabs.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_8__["default"].selected, "=\"true\"]")),
+  var currentTab = tabs.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].selected, "=\"true\"]")),
       currentTabLI = currentTab.parentNode;
   var newTab = null;
 
@@ -10973,12 +11195,13 @@ function launchTabs(tabs) {
       panels = Array.from(tabs.childNodes).filter(function (node) {
     return node.className && node.className === panelClassName;
   });
+  var tabHideWithSelect = tabs.querySelector('[data-hide-tab]');
 
   if (linkItems.length === 1) {
     /**
      * don't make one tab into a tabbed section, makes no sense
      */
-    Object(_util__WEBPACK_IMPORTED_MODULE_7__["removeClass"])(tabs, className, false);
+    Object(_util__WEBPACK_IMPORTED_MODULE_8__["removeClass"])(tabs, className, false);
     return;
   }
 
@@ -11008,9 +11231,9 @@ function launchTabs(tabs) {
       // determines if the tabs pattern is 'tabs only' or tabs turning into accordions on smaller viewports
       var isTabAccordion;
       var viewportWidth = window.innerWidth;
-      tabs.parentElement.className == 'tabs--accordion' ? isTabAccordion = true : isTabAccordion = false; // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
+      tabs.parentElement.className === 'tabs--accordion' ? isTabAccordion = true : isTabAccordion = false; // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
 
-      if (isTabAccordion && Object(_util__WEBPACK_IMPORTED_MODULE_7__["screenWidth"])('tablet') < viewportWidth) {
+      if (isTabAccordion && Object(_util__WEBPACK_IMPORTED_MODULE_8__["screenWidth"])('tablet') < viewportWidth) {
         // Wait for DOM to load before accessing selected tab
         window.onload = function () {
           selectTab(button);
@@ -11023,6 +11246,11 @@ function launchTabs(tabs) {
         };
       }
     }
+  } //Check if tab has data-hide-tab attribute, if so call hideTabViaSelect function to hide the tab when select option is chosen
+
+
+  if (tabHideWithSelect && tabHideWithSelect.dataset.hideTab === 'true') {
+    Object(_hideTabViaSelect__WEBPACK_IMPORTED_MODULE_7__["default"])(linkItems, tabs);
   }
 }
 
