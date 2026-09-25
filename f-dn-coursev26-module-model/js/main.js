@@ -10742,7 +10742,15 @@ function hideTabViaSelect(tabsList, tabs) {
   var select = document.createElement('select');
   select.setAttribute('name', 'module-year-select');
   select.setAttribute('id', 'module-year-select');
-  select.classList.add('course-v26__module-year-select', 'dropdown', 'dropdown--pill');
+  select.classList.add('course-v26__module-year-select', 'dropdown', 'dropdown--pill'); //key Info option
+
+  var keyInfoOption = document.createElement('option');
+  keyInfoOption.textContent = 'Choose your study mode';
+  keyInfoOption.value = '';
+  keyInfoOption.disabled = true;
+  keyInfoOption.selected = true;
+  infoSelect.appendChild(keyInfoOption);
+  infoSelect.value = keyInfoOption.value;
   var arrayOfSelects = [select, infoSelect];
   arrayFullList.forEach(function (value) {
     arrayOfSelects.forEach(function (selectElement) {
