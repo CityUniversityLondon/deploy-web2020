@@ -830,17 +830,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _patterns_dropdown_menu_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./patterns/dropdown-menu/dropdown-menu.js */ "./src/patterns/dropdown-menu/dropdown-menu.js");
 /* harmony import */ var _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./patterns/show-more/show-more */ "./src/patterns/show-more/show-more.js");
 /* harmony import */ var _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./patterns/slider/slider */ "./src/patterns/slider/slider.js");
-/* harmony import */ var _patterns_embla_slider_embla_slider_js__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/embla-slider/embla-slider.js */ "./src/patterns/embla-slider/embla-slider.js");
-/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
-/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
-/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
-/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
-/* harmony import */ var _patterns_video_video_v26__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./patterns/video/video-v26 */ "./src/patterns/video/video-v26.js");
-/* harmony import */ var _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/banner-promo */ "./src/paint-layouts/home/home-vi-sections/banner-promo.js");
-/* harmony import */ var _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/play-button */ "./src/paint-layouts/home/home-vi-sections/play-button.js");
-/* harmony import */ var _patterns_navigation_sticky_nav_sticky_nav__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./patterns/navigation/sticky-nav/sticky-nav */ "./src/patterns/navigation/sticky-nav/sticky-nav.js");
-/* harmony import */ var _patterns_accordion_accordion_gallery_v26_js__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./patterns/accordion/accordion-gallery-v26.js */ "./src/patterns/accordion/accordion-gallery-v26.js");
-/* harmony import */ var _patterns_dialog_model_dialog_model_js__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./patterns/dialog-model/dialog-model.js */ "./src/patterns/dialog-model/dialog-model.js");
+/* harmony import */ var _patterns_toggle_content_toggle_content__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./patterns/toggle-content/toggle-content */ "./src/patterns/toggle-content/toggle-content.js");
+/* harmony import */ var _patterns_embla_slider_embla_slider_js__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./patterns/embla-slider/embla-slider.js */ "./src/patterns/embla-slider/embla-slider.js");
+/* harmony import */ var _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./patterns/animation/svg-path-animation/svg-path-animation */ "./src/patterns/animation/svg-path-animation/svg-path-animation.js");
+/* harmony import */ var _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./patterns/tabs/tabs */ "./src/patterns/tabs/tabs.js");
+/* harmony import */ var _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./patterns/tooltip/image-credit/image-credit */ "./src/patterns/tooltip/image-credit/image-credit.js");
+/* harmony import */ var _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./patterns/tooltip/social-share/social-share */ "./src/patterns/tooltip/social-share/social-share.js");
+/* harmony import */ var _patterns_video_video_v26__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./patterns/video/video-v26 */ "./src/patterns/video/video-v26.js");
+/* harmony import */ var _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/banner-promo */ "./src/paint-layouts/home/home-vi-sections/banner-promo.js");
+/* harmony import */ var _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ./paint-layouts/home/home-vi-sections/play-button */ "./src/paint-layouts/home/home-vi-sections/play-button.js");
+/* harmony import */ var _patterns_navigation_sticky_nav_sticky_nav__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./patterns/navigation/sticky-nav/sticky-nav */ "./src/patterns/navigation/sticky-nav/sticky-nav.js");
+/* harmony import */ var _patterns_accordion_accordion_gallery_v26_js__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./patterns/accordion/accordion-gallery-v26.js */ "./src/patterns/accordion/accordion-gallery-v26.js");
+/* harmony import */ var _patterns_dialog_model_dialog_model_js__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ./patterns/dialog-model/dialog-model.js */ "./src/patterns/dialog-model/dialog-model.js");
 
 
 /**
@@ -886,6 +887,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
  // import video from './patterns/video/video';
 
 
@@ -894,8 +896,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_dropdown_menu_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_32__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_embla_slider_embla_slider_js__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_find_us_find_us_v25__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_33__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_34__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__["default"], // video,
-_patterns_video_video_v26__WEBPACK_IMPORTED_MODULE_35__["default"], _patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_20__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_37__["default"], _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_36__["default"], _patterns_navigation_sticky_nav_sticky_nav__WEBPACK_IMPORTED_MODULE_38__["default"], _patterns_accordion_accordion_gallery_v26_js__WEBPACK_IMPORTED_MODULE_39__["default"], _patterns_dialog_model_dialog_model_js__WEBPACK_IMPORTED_MODULE_40__["default"]]);
+/* harmony default export */ __webpack_exports__["default"] = ([_patterns_accordion_accordion__WEBPACK_IMPORTED_MODULE_0__["default"], _patterns_add_class_add_class__WEBPACK_IMPORTED_MODULE_1__["default"], _patterns_charts_charts__WEBPACK_IMPORTED_MODULE_4__["default"], _patterns_cms_editor_warning_cms_editor_warning__WEBPACK_IMPORTED_MODULE_5__["default"], _patterns_feedback_feedback__WEBPACK_IMPORTED_MODULE_11__["default"], _patterns_menu_menu__WEBPACK_IMPORTED_MODULE_18__["default"], _patterns_navigation_navigation_primary__WEBPACK_IMPORTED_MODULE_24__["default"], _patterns_navigation_navigation_secondary__WEBPACK_IMPORTED_MODULE_26__["default"], _patterns_dropdown_menu_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_27__["default"], _patterns_paginated_list_paginated_list__WEBPACK_IMPORTED_MODULE_22__["default"], _patterns_pagination_pagination__WEBPACK_IMPORTED_MODULE_23__["default"], _patterns_tabs_tabs__WEBPACK_IMPORTED_MODULE_33__["default"], _patterns_link_finder_link_finder__WEBPACK_IMPORTED_MODULE_17__["default"], _patterns_animation_content_separator_content_separator__WEBPACK_IMPORTED_MODULE_7__["default"], _patterns_animation_image_expand_image_expand__WEBPACK_IMPORTED_MODULE_15__["default"], _patterns_animation_content_fade_in_content_fade_in__WEBPACK_IMPORTED_MODULE_6__["default"], _patterns_animation_content_slide_up_content_slide_up__WEBPACK_IMPORTED_MODULE_8__["default"], _patterns_event_form_event_form__WEBPACK_IMPORTED_MODULE_10__["default"], _patterns_modal_modal__WEBPACK_IMPORTED_MODULE_19__["default"], _patterns_slider_slider__WEBPACK_IMPORTED_MODULE_29__["default"], _patterns_embla_slider_embla_slider_js__WEBPACK_IMPORTED_MODULE_31__["default"], _patterns_image_carousel_image_carousel__WEBPACK_IMPORTED_MODULE_3__["default"], _patterns_key_information_key_information_lifelong_learning__WEBPACK_IMPORTED_MODULE_16__["default"], _patterns_animation_number_animation_number_animation__WEBPACK_IMPORTED_MODULE_21__["default"], _patterns_show_more_show_more__WEBPACK_IMPORTED_MODULE_28__["default"], _patterns_image_carousel_default_carousel_default_carousel__WEBPACK_IMPORTED_MODULE_14__["default"], _patterns_animation_svg_path_animation_svg_path_animation__WEBPACK_IMPORTED_MODULE_32__["default"], _patterns_back_to_top_back_to_top__WEBPACK_IMPORTED_MODULE_2__["default"], _patterns_dropdown_filter_dropdown_filter__WEBPACK_IMPORTED_MODULE_9__["default"], _patterns_find_us_find_us__WEBPACK_IMPORTED_MODULE_12__["default"], _patterns_find_us_find_us_v25__WEBPACK_IMPORTED_MODULE_13__["default"], _patterns_tooltip_image_credit_image_credit__WEBPACK_IMPORTED_MODULE_34__["default"], _patterns_tooltip_social_share_social_share__WEBPACK_IMPORTED_MODULE_35__["default"], _how_to_apply_research__WEBPACK_IMPORTED_MODULE_25__["default"], // video,
+_patterns_video_video_v26__WEBPACK_IMPORTED_MODULE_36__["default"], _patterns_mouseover_gallery_mouseover_gallery__WEBPACK_IMPORTED_MODULE_20__["default"], _paint_layouts_home_home_vi_sections_play_button__WEBPACK_IMPORTED_MODULE_38__["default"], _paint_layouts_home_home_vi_sections_banner_promo__WEBPACK_IMPORTED_MODULE_37__["default"], _patterns_navigation_sticky_nav_sticky_nav__WEBPACK_IMPORTED_MODULE_39__["default"], _patterns_accordion_accordion_gallery_v26_js__WEBPACK_IMPORTED_MODULE_40__["default"], _patterns_toggle_content_toggle_content__WEBPACK_IMPORTED_MODULE_30__["default"], _patterns_dialog_model_dialog_model_js__WEBPACK_IMPORTED_MODULE_41__["default"]]);
 
 /***/ }),
 
@@ -1084,8 +1086,6 @@ var className = 'accordion',
     tenthOfASecond = 100,
     scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_11__["reduceMotion"])() ? 0 : oneSecond,
     scrollTo = true;
-var scrollToHeading; // used to disable automatic scrolling to the heading when opening an accordion
-
 /**
  * Sets a heading and the button nested within to be open or closed.
  *
@@ -1151,10 +1151,12 @@ function cleanupTransition(section) {
  * @param {HTMLButtonElement} button - The button that was clicked.
  * @param {HTMLElement[]} headings - All headings in this accordion.
  * @param {boolean} [toggleOpen] - Should other accordion sections close? Default to false.
+ * @param {boolean} [scrollToHeading] - Should the heading be scrolled into view? Default to false.
  */
 
 
 function buttonClick(button, headings, toggleOpen) {
+  var scrollToHeading = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
   var heading = button.parentNode,
       accordionSection = heading.nextElementSibling;
   /**
@@ -1263,6 +1265,8 @@ function buttonFromHeading(heading) {
 
 
 function launchAccordion(accordion) {
+  var scrollToHeading; // used to disable automatic scrolling to the heading when opening an accordion
+
   var viewportWidth = window.innerWidth;
   var toggleOpen = Object(_util__WEBPACK_IMPORTED_MODULE_11__["toBool"])(accordion.dataset.toggleopen),
       defaultOpen = Object(_util__WEBPACK_IMPORTED_MODULE_11__["toBool"])(accordion.dataset.defaultopen),
@@ -1305,7 +1309,7 @@ function launchAccordion(accordion) {
     setSection(heading, false);
     heading.nextElementSibling.dataset.closed = 'true';
     button.addEventListener('click', function () {
-      return buttonClick(button, headings, toggleOpen);
+      return buttonClick(button, headings, toggleOpen, scrollToHeading);
     }, true);
   });
   /* Show first item of accordion, if accordion is set to default open,
@@ -10893,7 +10897,13 @@ function accordionize(tabs) {
   var wrapper = document.createElement('div'),
       accordion = document.createElement('div');
   var tabVersion = tabs.getAttribute('data-version');
+  var getScrollToHeading = tabs.getAttribute('data-scrolltoheading');
   accordion.className = tabVersion === 'v26' ? 'accordion accordion-v26 accordion-v26--light' : 'accordion';
+
+  if (getScrollToHeading === 'false') {
+    accordion.dataset.scrolltoheading = 'false';
+  }
+
   wrapper.className = 'tabs--accordion';
   accordion.id = "accordion".concat(tabs.dataset.assetid);
   accordion.dataset.allowsingle = 'false';
@@ -10945,13 +10955,12 @@ function prepareAccordionTabs(tabs) {
 /*!***********************************!*\
   !*** ./src/patterns/tabs/tabs.js ***!
   \***********************************/
-/*! exports provided: toggleButton, selectTabEvent, default */
+/*! exports provided: toggleButton, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toggleButton", function() { return toggleButton; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectTabEvent", function() { return selectTabEvent; });
 /* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.from.js */ "./node_modules/core-js/modules/es.array.from.js");
 /* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
@@ -11000,8 +11009,7 @@ var className = 'tabs',
     arrowRight = 'ArrowRight',
     arrowDown = 'ArrowDown',
     oneSecond = 1000,
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_8__["reduceMotion"])() ? 0 : oneSecond,
-    scrollTo = false;
+    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_8__["reduceMotion"])() ? 0 : oneSecond;
 /**
  * Set the attributes of a tab to be selected or not selected.
  *
@@ -11024,9 +11032,10 @@ function toggleButton(button, selected) {
  * Change the selection to the requested tab.
  *
  * @param {HTMLAnchorElement} newTab - The selected tab.
+ * @param {boolean} scrollToHeading - Whether to scroll to the heading when opening a tab.
  */
 
-function selectTab(newTab) {
+function selectTab(newTab, scrollToHeading) {
   var tabs = newTab.closest(".".concat(className)),
       controls = tabs.querySelector(".".concat(linksClassName)),
       linkItems = Array.from(controls.querySelectorAll('li')),
@@ -11049,30 +11058,37 @@ function selectTab(newTab) {
 
   toggleButton(newTab, true);
   tabs.querySelector(newTab.dataset.hash).removeAttribute('hidden');
-  /**
-   * Move focus to the section and optionally scroll it into view.
-   */
 
-  newTab.focus();
-  scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_6___default.a.to(tabs, scrollDuration);
-  /**
-   * Updates URL to include selected tab's ID address
-   */
-  //window.location.hash = newTab.dataset.hash;
+  if (scrollToHeading) {
+    /**
+     * Move focus to the section and optionally scroll it into view.
+     */
+    newTab.focus();
+    zenscroll__WEBPACK_IMPORTED_MODULE_6___default.a.to(tabs, scrollDuration);
+    /**
+     * Updates URL to include selected tab's ID address
+     */
+    //window.location.hash = newTab.dataset.hash;
 
-  window.location.hash = newTab.id;
+    window.location.hash = newTab.id;
+  } else {
+    // updates URL hash, without scrolling to the heading, when tab opens
+    // currently needed disabling on new course pages
+    history.pushState(null, null, "#".concat(newTab.id));
+  }
 }
 /**
  * Respond to event changing tab selection.
  *
  * @param {Event} e - The initiating event.
  * @param {HTMLAnchorElement} newTab - The selected tab.
+ * @param {boolean} scrollToHeading - Whether to scroll to the heading when opening a tab.
  */
 
 
-function selectTabEvent(e, newTab) {
+function selectTabEvent(e, newTab, scrollToHeading) {
   e.preventDefault();
-  selectTab(newTab);
+  selectTab(newTab, scrollToHeading);
 }
 /**
  * Respond to cursor key events inside the tabbed section.
@@ -11080,6 +11096,7 @@ function selectTabEvent(e, newTab) {
  * @param {Event} e - The initiating keydown event.
  * @param {HTMLElement} tabs - The controls for the tabbed section.
  */
+
 
 function keyEvents(e, tabs) {
   var currentTab = tabs.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].selected, "=\"true\"]")),
@@ -11141,10 +11158,11 @@ function keyEvents(e, tabs) {
  * Set attributes and listeners for the tabbed section controls.
  *
  * @param {HTMLLIElement[]} linkItems - An array of list items containing the tab anchors.
+ * @param {boolean} scrollToHeading - Whether to scroll to the heading when opening a tab.
  */
 
 
-function prepareLinks(linkItems) {
+function prepareLinks(linkItems, scrollToHeading) {
   linkItems.forEach(function (linkItem) {
     var link = linkItem.firstElementChild,
         button = document.createElement('button');
@@ -11156,7 +11174,7 @@ function prepareLinks(linkItems) {
     linkItem.replaceChild(button, link);
     toggleButton(button, false);
     button.addEventListener('click', function (e) {
-      return selectTabEvent(e, button);
+      return selectTabEvent(e, button, scrollToHeading);
     }, true);
   });
 }
@@ -11203,6 +11221,10 @@ function preparePanels(panels) {
 
 
 function launchTabs(tabs) {
+  var scrollToHeading; // used to disable automatic scrolling to the heading when opening a tab
+
+  var getScrollToHeading = tabs.dataset.scrolltoheading;
+  getScrollToHeading === 'false' ? scrollToHeading = false : scrollToHeading = true;
   var controls = tabs.querySelector(".".concat(linksClassName)),
       linkItems = Array.from(controls.querySelectorAll('li')),
       panels = Array.from(tabs.childNodes).filter(function (node) {
@@ -11220,7 +11242,7 @@ function launchTabs(tabs) {
 
   controls.setAttribute('role', 'tablist');
   preparePanels(panels);
-  prepareLinks(linkItems);
+  prepareLinks(linkItems, scrollToHeading);
   toggleButton(linkItems[0].firstElementChild, true);
   panels[0].removeAttribute('hidden');
   /**
@@ -11270,6 +11292,148 @@ function launchTabs(tabs) {
 /* harmony default export */ __webpack_exports__["default"] = ({
   launchFn: launchTabs,
   launchQuery: ".".concat(className)
+});
+
+/***/ }),
+
+/***/ "./src/patterns/toggle-content/toggle-content.js":
+/*!*******************************************************!*\
+  !*** ./src/patterns/toggle-content/toggle-content.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.from.js */ "./node_modules/core-js/modules/es.array.from.js");
+/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_array_some_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.array.some.js */ "./node_modules/core-js/modules/es.array.some.js");
+/* harmony import */ var core_js_modules_es_array_some_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_some_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.array.index-of.js */ "./node_modules/core-js/modules/es.array.index-of.js");
+/* harmony import */ var core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_9__);
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Toggle content
+ *
+ * - <select data-toggle-source="GROUP"> sets the group. More than one select
+ *   can share a group; changing any one updates the others to match (when
+ *   they have an option for that value) and re-renders the panels.
+ * - Any element with data-toggle-group="GROUP" and data-toggle-value="a b c"
+ *   is shown when the select's value matches one of the listed values,
+ *   hidden otherwise. Elements can live anywhere in the DOM.
+ * - By default, panels are hidden while nothing is selected (value is "").
+ *   Add data-toggle-show-all to the select to show every panel in the group
+ *   instead while nothing is selected.
+ *
+ * =Example markup=
+ * <select data-toggle-source="content" data-toggle-show-all>
+ *  <option value="">-- choose --</option>
+ *   <option value="a">Content A</option>
+ *   <option value="b">Content B</option>
+ * </select>
+ * <div class="panel" data-toggle-group="content" data-toggle-value="a">
+ *  <h1>Content A</h1>
+ *  </div>
+ *
+ * @module patterns/toggle-content/toggle-content
+ * @author Web Development
+ * @copyright City St George's, University of London 2018-2026
+ */
+var launchQuery = 'select[data-toggle-source]';
+/**
+ * Get every toggle-source select belonging to a group.
+ *
+ * @param {string} group - The toggle group name.
+ * @returns {HTMLSelectElement[]} The selects driving that group.
+ */
+
+function selectsFor(group) {
+  return Array.from(document.querySelectorAll("select[data-toggle-source=\"".concat(CSS.escape(group), "\"]")));
+}
+/**
+ * Point the other selects in the group at the given value, where they have
+ * a matching option.
+ *
+ * @param {string} group - The toggle group name.
+ * @param {string} value - The value to sync to.
+ * @param {HTMLSelectElement} source - The select that changed (skipped).
+ */
+
+
+function syncSelects(group, value, source) {
+  selectsFor(group).forEach(function (select) {
+    if (select === source || select.value === value) return;
+    var hasOption = Array.from(select.options).some(function (option) {
+      return option.value === value;
+    });
+    if (hasOption) select.value = value;
+  });
+}
+/**
+ * Show or hide the panels belonging to a select's toggle group, based on
+ * its current value, and keep any sibling selects in step.
+ *
+ * @param {HTMLSelectElement} select - The select containing the toggle group.
+ */
+
+
+function update(select) {
+  var group = select.dataset.toggleSource;
+  if (!group) return;
+  var value = select.value;
+  syncSelects(group, value, select);
+  var showAllWhenEmpty = select.hasAttribute('data-toggle-show-all');
+  var panels = document.querySelectorAll("[data-toggle-group=\"".concat(CSS.escape(group), "\"]"));
+  panels.forEach(function (panel) {
+    var values = (panel.dataset.toggleValue || '').trim().split(/\s+/);
+    var show = value === '' ? showAllWhenEmpty : values.indexOf(value) !== -1;
+    panel.hidden = !show;
+  });
+}
+/**
+ * Set the initial state for a toggle-source select (handles pre-selected
+ * values) and wire up its change handler.
+ *
+ * @param {HTMLSelectElement} select - The select driving the toggle group.
+ */
+
+
+function toggleContent(select) {
+  update(select);
+  select.addEventListener('change', function () {
+    return update(select);
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  launchFn: toggleContent,
+  launchQuery: launchQuery
 });
 
 /***/ }),
