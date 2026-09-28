@@ -2497,17 +2497,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
 /* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.array.filter.js */ "./node_modules/core-js/modules/es.array.filter.js");
-/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
-/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.array.filter.js */ "./node_modules/core-js/modules/es.array.filter.js");
+/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.array.map.js */ "./node_modules/core-js/modules/es.array.map.js");
+/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _aria_attributes__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../aria-attributes */ "./src/aria-attributes.js");
+
 
 
 
@@ -2568,10 +2571,10 @@ function launchDialog(modal) {
       });
       listOpenDialogButton.classList.add('modal__button');
       listOpenDialogButton.setAttribute('type', 'button');
-      listOpenDialogButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_10__["default"].label, 'Open dialog');
+      listOpenDialogButton.setAttribute(_aria_attributes__WEBPACK_IMPORTED_MODULE_11__["default"].label, 'Open dialog');
       listOpenDialogButtonSpan.classList.add('inline-text');
       listOpenDialogButton.appendChild(listOpenDialogButtonSpan);
-      listOpenDialogButtonSpan.textContent = listHeader.childNodes[0].textContent;
+      listOpenDialogButtonSpan.textContent = listHeader.textContent.trim();
       listHeader.remove(); //open dialog button credits
 
       if (listModuleCredits) {
@@ -2613,31 +2616,38 @@ function launchDialog(modal) {
         if (moduleCode && moduleCredits) {
           moduleCreditCode.append(moduleCode, ' | ', moduleCredits);
         } else if (moduleCode) {
-          moduleCreditCode.appendChild(moduleCode);
+          moduleCreditCode.append(moduleCode);
         } else if (moduleCredits) {
-          moduleCreditCode.appendChild(moduleCredits);
+          moduleCreditCode.append(moduleCredits);
         }
 
         coreLabelSpan.classList.add('courses-v26__modules-details__core-label');
-        var arrayOfLabels = label.split(';');
-        var arrayOfLabelsFiltered = arrayOfLabels.filter(Boolean);
 
-        if (arrayOfLabelsFiltered.length > 1) {
-          var labelList = document.createElement('div');
-          labelList.classList.add('courses-v26__modules-details__core-label-list');
-          arrayOfLabelsFiltered.forEach(function (labelItem) {
-            var labelListItemSpan = document.createElement('span');
-            labelListItemSpan.classList.add('courses-v26__modules-details__core-label');
-            labelListItemSpan.textContent = labelItem.trim();
-            labelList.appendChild(labelListItemSpan);
-          });
-          dialogModuleDetails.appendChild(labelList);
-        } else {
-          coreLabelSpan.textContent = label;
-          dialogModuleDetails.appendChild(coreLabelSpan);
+        if (label) {
+          var arrayOfLabels = label.split(';').map(function (labelItem) {
+            return labelItem.trim();
+          }).filter(Boolean);
+
+          if (arrayOfLabels.length > 1) {
+            var labelList = document.createElement('div');
+            labelList.classList.add('courses-v26__modules-details__core-label-list');
+            arrayOfLabels.forEach(function (labelItem) {
+              var labelListItemSpan = document.createElement('span');
+              labelListItemSpan.classList.add('courses-v26__modules-details__core-label');
+              labelListItemSpan.textContent = labelItem;
+              labelList.appendChild(labelListItemSpan);
+            });
+            dialogModuleDetails.appendChild(labelList);
+          } else if (arrayOfLabels.length === 1) {
+            coreLabelSpan.textContent = arrayOfLabels[0];
+            dialogModuleDetails.appendChild(coreLabelSpan);
+          }
         }
 
-        dialogModuleDetails.append(moduleCreditCode);
+        if (moduleCreditCode.childNodes.length) {
+          dialogModuleDetails.append(moduleCreditCode);
+        }
+
         dialog.appendChild(dialogModuleDetails);
       } //dialog content append
 
@@ -10702,11 +10712,11 @@ function hideTabViaSelect(tabsList, tabs) {
   }).filter(Boolean);
   var selectLabelText = selectFirstOptionValues.dataset.hideTabLabel || '';
   var arrayOfFilterLI = Array.isArray(tabsList) ? tabsList.filter(function (element) {
-    return element && element.dataset && element.dataset.coursev26YearTabButton;
+    return element && element.dataset && element.dataset.hideTabButton;
   }) : [];
 
   var arrayDataBtnName = _toConsumableArray(new Set(arrayOfFilterLI.map(function (el) {
-    return el.dataset.coursev26YearTabButton;
+    return el.dataset.hideTabButton;
   }).filter(Boolean)));
 
   var arrayFullList = _toConsumableArray(new Set([].concat(_toConsumableArray(selectFirstElValue), _toConsumableArray(arrayDataBtnName))));
@@ -10717,14 +10727,14 @@ function hideTabViaSelect(tabsList, tabs) {
   //Create wrapper and select input to be use within key info
 
   var infoWrapper = document.createElement('div');
-  infoWrapper.classList.add('info__module-year-select__wrapper');
+  infoWrapper.classList.add('key-info__module-year-select__wrapper');
   var infoLabel = document.createElement('label');
-  infoLabel.setAttribute('for', 'info__module-year-select');
+  infoLabel.setAttribute('for', 'key-info__module-year-select');
   infoLabel.textContent = selectLabelText;
   infoWrapper.appendChild(infoLabel);
   var infoSelect = document.createElement('select');
-  infoSelect.setAttribute('name', 'info__module-year-select');
-  infoSelect.setAttribute('id', 'info__module-year-select');
+  infoSelect.setAttribute('name', 'key-info__module-year-select');
+  infoSelect.setAttribute('id', 'key-info__module-year-select');
   infoSelect.classList.add('course-v26__module-year-select', 'dropdown', 'dropdown--pill'); //create wrapper and select input for course structure
 
   var wrapper = document.createElement('div');
@@ -10766,13 +10776,13 @@ function hideTabViaSelect(tabsList, tabs) {
       var value = target.value; //reset tabs to default selection
 
       arrayDataBtnName.forEach(function (el) {
-        var tab = tabs.querySelector(".tabs__links li[data-coursev26-year-tab-button=\"".concat(el, "\"]"));
+        var tab = tabs.querySelector(".tabs__links li[data-hide-tab-button=\"".concat(el, "\"]"));
 
         if (tab) {
           tab.hidden = true;
         }
       });
-      var liBTN = tabs.querySelector(".tabs__links li[data-coursev26-year-tab-button=\"".concat(value, "\"]"));
+      var liBTN = tabs.querySelector(".tabs__links li[data-hide-tab-button=\"".concat(value, "\"]"));
       if (!liBTN) return;
       var btn = liBTN.querySelector('button');
       if (!btn) return;
@@ -10781,7 +10791,7 @@ function hideTabViaSelect(tabsList, tabs) {
       }); //Check if specify hidden tab is active
 
       var anyBTNActive = removeCurrentValueFromArray.some(function (el) {
-        var tabButton = tabs.querySelector(".tabs__links li[data-coursev26-year-tab-button=\"".concat(el, "\"] button"));
+        var tabButton = tabs.querySelector(".tabs__links li[data-hide-tab-button=\"".concat(el, "\"] button"));
         if (!tabButton) return false;
         return tabButton.getAttribute('aria-selected') === 'true';
       });
@@ -10795,7 +10805,7 @@ function hideTabViaSelect(tabsList, tabs) {
   }); //event handler to hide and show tabs depending on value
 
   arrayDataBtnName.forEach(function (name) {
-    var section = tabs.querySelector(".tabs__links li[data-coursev26-year-tab-button=\"".concat(name, "\"]"));
+    var section = tabs.querySelector(".tabs__links li[data-hide-tab-button=\"".concat(name, "\"]"));
 
     if (section) {
       section.hidden = true;
