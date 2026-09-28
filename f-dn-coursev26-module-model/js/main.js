@@ -10705,6 +10705,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
  * @copyright City St George's, University of London 2018-2019
  */
 
+/**
+ *
+ * @param {Array} tabsList - An Array of HTML li from tabs links
+ * @param {HTMLElement} tabs - An element with the tabs class
+ * @returns
+ */
+
 function hideTabViaSelect(tabsList, tabs) {
   if (!tabs || !tabsList) return;
   var selectFirstOptionValues = tabs.querySelector('.tabs__links');
@@ -10727,7 +10734,7 @@ function hideTabViaSelect(tabsList, tabs) {
 
   var firstTabBtn = tabs.querySelector('.tabs__links li:first-child button');
   if (!firstTabBtn) return;
-  var KeyInfoClass = '.course-hero__left'; //location to append key info module select
+  var KeyInfoClass = '.course-hero__left'; //Class name used to append key info module select
   //Create wrapper and select input to be use within key info
 
   var infoWrapper = document.createElement('div');
@@ -10739,7 +10746,7 @@ function hideTabViaSelect(tabsList, tabs) {
   var infoSelect = document.createElement('select');
   infoSelect.setAttribute('name', 'key-info__module-year-select');
   infoSelect.setAttribute('id', 'key-info__module-year-select');
-  infoSelect.classList.add('course-v26__module-year-select', 'dropdown', 'dropdown--pill'); //create wrapper and select input for course structure
+  infoSelect.classList.add('course-v26__module-year-select', 'dropdown', 'dropdown--wide', 'dropdown--pill'); //create wrapper and select input for course structure
 
   var wrapper = document.createElement('div');
   wrapper.classList.add('module-year-select__wrapper');
@@ -10767,7 +10774,8 @@ function hideTabViaSelect(tabsList, tabs) {
       option.textContent = value;
       selectElement.appendChild(option);
     });
-  });
+  }); //event handler to hide and show tabs depending on value on all selects
+
   arrayOfSelects.forEach(function (select) {
     select.addEventListener('change', function (e) {
       var target = e.target;
@@ -10815,7 +10823,7 @@ function hideTabViaSelect(tabsList, tabs) {
 
       liBTN.hidden = false;
     });
-  }); //event handler to hide and show tabs depending on value
+  }); //First load set hidden to all sections from all available data-hide-tab-button
 
   arrayDataBtnName.forEach(function (name) {
     var section = tabs.querySelector(".tabs__links li[data-hide-tab-button=\"".concat(name, "\"]"));
@@ -10823,7 +10831,8 @@ function hideTabViaSelect(tabsList, tabs) {
     if (section) {
       section.hidden = true;
     }
-  });
+  }); //Append built selects to HTML
+
   infoWrapper.appendChild(infoSelect);
   wrapper.appendChild(select);
   tabs.prepend(wrapper);
@@ -10955,12 +10964,13 @@ function prepareAccordionTabs(tabs) {
 /*!***********************************!*\
   !*** ./src/patterns/tabs/tabs.js ***!
   \***********************************/
-/*! exports provided: toggleButton, default */
+/*! exports provided: toggleButton, selectTabEvent, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "toggleButton", function() { return toggleButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "selectTabEvent", function() { return selectTabEvent; });
 /* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.from.js */ "./node_modules/core-js/modules/es.array.from.js");
 /* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
@@ -11096,7 +11106,6 @@ function selectTabEvent(e, newTab, scrollToHeading) {
  * @param {Event} e - The initiating keydown event.
  * @param {HTMLElement} tabs - The controls for the tabbed section.
  */
-
 
 function keyEvents(e, tabs) {
   var currentTab = tabs.querySelector("[".concat(_aria_attributes__WEBPACK_IMPORTED_MODULE_9__["default"].selected, "=\"true\"]")),
