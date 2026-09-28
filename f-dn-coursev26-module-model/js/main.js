@@ -10767,6 +10767,7 @@ function hideTabViaSelect(tabsList, tabs) {
   arrayOfSelects.forEach(function (select) {
     select.addEventListener('change', function (e) {
       var target = e.target;
+      var currentActiveTab = tabs.querySelector('.tabs__links li button[aria-selected="true"]');
       if (!target) return;
       arrayOfSelects.forEach(function (otherSelect) {
         if (otherSelect !== target) {
@@ -10783,7 +10784,15 @@ function hideTabViaSelect(tabsList, tabs) {
         }
       });
       var liBTN = tabs.querySelector(".tabs__links li[data-hide-tab-button=\"".concat(value, "\"]"));
-      if (!liBTN) return;
+
+      if (!liBTN) {
+        if (currentActiveTab.parentElement.hidden) {
+          Object(_tabs__WEBPACK_IMPORTED_MODULE_20__["selectTabEvent"])(e, firstTabBtn);
+        }
+
+        return;
+      }
+
       var btn = liBTN.querySelector('button');
       if (!btn) return;
       var removeCurrentValueFromArray = arrayDataBtnName.filter(function (el) {
