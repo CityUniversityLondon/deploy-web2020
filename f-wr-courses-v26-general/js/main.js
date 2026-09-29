@@ -10461,7 +10461,13 @@ function accordionize(tabs) {
   var wrapper = document.createElement('div'),
       accordion = document.createElement('div');
   var tabVersion = tabs.getAttribute('data-version');
+  var getScrollToHeading = tabs.getAttribute('data-scrolltoheading');
   accordion.className = tabVersion === 'v26' ? 'accordion accordion-v26 accordion-v26--light' : 'accordion';
+
+  if (getScrollToHeading === 'false') {
+    accordion.dataset.scrolltoheading = 'false';
+  }
+
   wrapper.className = 'tabs--accordion';
   accordion.id = "accordion".concat(tabs.dataset.assetid);
   accordion.dataset.allowsingle = 'false';
@@ -10564,8 +10570,7 @@ var className = 'tabs',
     arrowRight = 'ArrowRight',
     arrowDown = 'ArrowDown',
     oneSecond = 1000,
-    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_7__["reduceMotion"])() ? 0 : oneSecond,
-    scrollTo = false;
+    scrollDuration = Object(_util__WEBPACK_IMPORTED_MODULE_7__["reduceMotion"])() ? 0 : oneSecond;
 /**
  * Set the attributes of a tab to be selected or not selected.
  *
@@ -10588,10 +10593,11 @@ function toggleButton(button, selected) {
  * Change the selection to the requested tab.
  *
  * @param {HTMLAnchorElement} newTab - The selected tab.
+ * @param {boolean} scrollToHeading - Whether to scroll to the heading when opening a tab.
  */
 
 
-function selectTab(newTab) {
+function selectTab(newTab, scrollToHeading) {
   var tabs = newTab.closest(".".concat(className)),
       controls = tabs.querySelector(".".concat(linksClassName)),
       linkItems = Array.from(controls.querySelectorAll('li')),
@@ -10614,30 +10620,37 @@ function selectTab(newTab) {
 
   toggleButton(newTab, true);
   tabs.querySelector(newTab.dataset.hash).removeAttribute('hidden');
-  /**
-   * Move focus to the section and optionally scroll it into view.
-   */
 
-  newTab.focus();
-  scrollTo && zenscroll__WEBPACK_IMPORTED_MODULE_6___default.a.to(tabs, scrollDuration);
-  /**
-   * Updates URL to include selected tab's ID address
-   */
-  //window.location.hash = newTab.dataset.hash; 
+  if (scrollToHeading) {
+    /**
+     * Move focus to the section and optionally scroll it into view.
+     */
+    newTab.focus();
+    zenscroll__WEBPACK_IMPORTED_MODULE_6___default.a.to(tabs, scrollDuration);
+    /**
+     * Updates URL to include selected tab's ID address
+     */
+    //window.location.hash = newTab.dataset.hash;
 
-  window.location.hash = newTab.id;
+    window.location.hash = newTab.id;
+  } else {
+    // updates URL hash, without scrolling to the heading, when tab opens
+    // currently needed disabling on new course pages
+    history.pushState(null, null, "#".concat(newTab.id));
+  }
 }
 /**
  * Respond to event changing tab selection.
  *
  * @param {Event} e - The initiating event.
  * @param {HTMLAnchorElement} newTab - The selected tab.
+ * @param {boolean} scrollToHeading - Whether to scroll to the heading when opening a tab.
  */
 
 
-function selectTabEvent(e, newTab) {
+function selectTabEvent(e, newTab, scrollToHeading) {
   e.preventDefault();
-  selectTab(newTab);
+  selectTab(newTab, scrollToHeading);
 }
 /**
  * Respond to cursor key events inside the tabbed section.
@@ -10707,10 +10720,11 @@ function keyEvents(e, tabs) {
  * Set attributes and listeners for the tabbed section controls.
  *
  * @param {HTMLLIElement[]} linkItems - An array of list items containing the tab anchors.
+ * @param {boolean} scrollToHeading - Whether to scroll to the heading when opening a tab.
  */
 
 
-function prepareLinks(linkItems) {
+function prepareLinks(linkItems, scrollToHeading) {
   linkItems.forEach(function (linkItem) {
     var link = linkItem.firstElementChild,
         button = document.createElement('button');
@@ -10722,7 +10736,7 @@ function prepareLinks(linkItems) {
     linkItem.replaceChild(button, link);
     toggleButton(button, false);
     button.addEventListener('click', function (e) {
-      return selectTabEvent(e, button);
+      return selectTabEvent(e, button, scrollToHeading);
     }, true);
   });
 }
@@ -10769,6 +10783,10 @@ function preparePanels(panels) {
 
 
 function launchTabs(tabs) {
+  var scrollToHeading; // used to disable automatic scrolling to the heading when opening a tab
+
+  var getScrollToHeading = tabs.dataset.scrolltoheading;
+  getScrollToHeading === 'false' ? scrollToHeading = false : scrollToHeading = true;
   var controls = tabs.querySelector(".".concat(linksClassName)),
       linkItems = Array.from(controls.querySelectorAll('li')),
       panels = Array.from(tabs.childNodes).filter(function (node) {
@@ -10785,7 +10803,7 @@ function launchTabs(tabs) {
 
   controls.setAttribute('role', 'tablist');
   preparePanels(panels);
-  prepareLinks(linkItems);
+  prepareLinks(linkItems, scrollToHeading);
   toggleButton(linkItems[0].firstElementChild, true);
   panels[0].removeAttribute('hidden');
   /**
@@ -10809,7 +10827,7 @@ function launchTabs(tabs) {
       // determines if the tabs pattern is 'tabs only' or tabs turning into accordions on smaller viewports
       var isTabAccordion;
       var viewportWidth = window.innerWidth;
-      tabs.parentElement.className == 'tabs--accordion' ? isTabAccordion = true : isTabAccordion = false; // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
+      tabs.parentElement.className === 'tabs--accordion' ? isTabAccordion = true : isTabAccordion = false; // condition 1, when hash in URL is of a 'tab /accordion'. On bigger viewports tabs are present.
 
       if (isTabAccordion && Object(_util__WEBPACK_IMPORTED_MODULE_7__["screenWidth"])('tablet') < viewportWidth) {
         // Wait for DOM to load before accessing selected tab
@@ -10843,20 +10861,29 @@ function launchTabs(tabs) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
-/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
-/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.array.index-of.js */ "./node_modules/core-js/modules/es.array.index-of.js");
-/* harmony import */ var core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.from.js */ "./node_modules/core-js/modules/es.array.from.js");
+/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_array_some_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.array.some.js */ "./node_modules/core-js/modules/es.array.some.js");
+/* harmony import */ var core_js_modules_es_array_some_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_some_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
+/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.array.index-of.js */ "./node_modules/core-js/modules/es.array.index-of.js");
+/* harmony import */ var core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_index_of_js__WEBPACK_IMPORTED_MODULE_9__);
+
+
+
 
 
 
@@ -10870,13 +10897,18 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Toggle content
  *
- * - <select data-toggle-source="GROUP"> sets the group.
+ * - <select data-toggle-source="GROUP"> sets the group. More than one select
+ *   can share a group; changing any one updates the others to match (when
+ *   they have an option for that value) and re-renders the panels.
  * - Any element with data-toggle-group="GROUP" and data-toggle-value="a b c"
  *   is shown when the select's value matches one of the listed values,
  *   hidden otherwise. Elements can live anywhere in the DOM.
+ * - By default, panels are hidden while nothing is selected (value is "").
+ *   Add data-toggle-show-all to the select to show every panel in the group
+ *   instead while nothing is selected.
  *
  * =Example markup=
- * <select data-toggle-source="content">
+ * <select data-toggle-source="content" data-toggle-show-all>
  *  <option value="">-- choose --</option>
  *   <option value="a">Content A</option>
  *   <option value="b">Content B</option>
@@ -10891,20 +10923,52 @@ __webpack_require__.r(__webpack_exports__);
  */
 var launchQuery = 'select[data-toggle-source]';
 /**
+ * Get every toggle-source select belonging to a group.
+ *
+ * @param {string} group - The toggle group name.
+ * @returns {HTMLSelectElement[]} The selects driving that group.
+ */
+
+function selectsFor(group) {
+  return Array.from(document.querySelectorAll("select[data-toggle-source=\"".concat(CSS.escape(group), "\"]")));
+}
+/**
+ * Point the other selects in the group at the given value, where they have
+ * a matching option.
+ *
+ * @param {string} group - The toggle group name.
+ * @param {string} value - The value to sync to.
+ * @param {HTMLSelectElement} source - The select that changed (skipped).
+ */
+
+
+function syncSelects(group, value, source) {
+  selectsFor(group).forEach(function (select) {
+    if (select === source || select.value === value) return;
+    var hasOption = Array.from(select.options).some(function (option) {
+      return option.value === value;
+    });
+    if (hasOption) select.value = value;
+  });
+}
+/**
  * Show or hide the panels belonging to a select's toggle group, based on
- * its current value.
+ * its current value, and keep any sibling selects in step.
  *
  * @param {HTMLSelectElement} select - The select containing the toggle group.
  */
+
 
 function update(select) {
   var group = select.dataset.toggleSource;
   if (!group) return;
   var value = select.value;
+  syncSelects(group, value, select);
+  var showAllWhenEmpty = select.hasAttribute('data-toggle-show-all');
   var panels = document.querySelectorAll("[data-toggle-group=\"".concat(CSS.escape(group), "\"]"));
   panels.forEach(function (panel) {
     var values = (panel.dataset.toggleValue || '').trim().split(/\s+/);
-    var show = value !== '' && values.indexOf(value) !== -1;
+    var show = value === '' ? showAllWhenEmpty : values.indexOf(value) !== -1;
     panel.hidden = !show;
   });
 }
