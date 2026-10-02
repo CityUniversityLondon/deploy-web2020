@@ -952,13 +952,21 @@ __webpack_require__.r(__webpack_exports__);
  * @param {boolean} [toggleOpen] - Should other accordion sections close? Default to false.
  */
 function setImageState(accordionImages, headingId) {
+  var foundActiveImage = false;
   accordionImages.forEach(function (image) {
     var imageId = image.getAttribute('data-id');
 
     if (headingId === imageId) {
       image.dataset.active = 'true';
+      foundActiveImage = true;
     } else {
       image.dataset.active = 'false';
+    } // if no image is found with the heading ID, default to the first image in the list
+    // this is to prevent a blank image from being displayed when the page loads with a hash that doesn't match any of the images
+
+
+    if (!foundActiveImage) {
+      accordionImages[0].dataset.active = 'true';
     }
   });
 }
