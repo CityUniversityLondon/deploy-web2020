@@ -961,14 +961,13 @@ function setImageState(accordionImages, headingId) {
       foundActiveImage = true;
     } else {
       image.dataset.active = 'false';
-    } // if no image is found with the heading ID, default to the first image in the list
-    // this is to prevent a blank image from being displayed when the page loads with a hash that doesn't match any of the images
-
-
-    if (!foundActiveImage) {
-      accordionImages[0].dataset.active = 'true';
     }
-  });
+  }); // if no image is found with the heading ID, default to the first image in the list
+  // this is to prevent a blank image from being displayed when the page loads with a hash that doesn't match any of the images
+
+  if (!foundActiveImage) {
+    accordionImages[0].dataset.active = 'true';
+  }
 }
 /**
  * Transform an element with the accordion class into an accordion.
