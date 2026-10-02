@@ -10704,7 +10704,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
  */
 
 function hideTabViaSelect(tabsList, tabs) {
-  console.log('hideTabViaSelect', tabsList, tabs.parentElement);
   if (!tabs || !tabsList) return;
   var selectValueToIgnore = 'Full time'; //Use this grouping value to skip hidden attribute being apply
 
