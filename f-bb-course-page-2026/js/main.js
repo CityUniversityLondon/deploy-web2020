@@ -2895,7 +2895,7 @@ function insertSelect(items, dataGroupElement, parentElement, firstItemVisible) 
   selectBox.setAttribute('name', labelFor);
   selectWrapper.append(labelEl, selectBox); // Add default select text if filter doesn't have show all enabled
 
-  if (parentElement.dataset.displayAll === 'false') {
+  if (parentElement.dataset.displayAll === 'false' && parentElement.dataset.hidePlaceholder !== 'true') {
     var noSelection = document.createElement('option');
     noSelection.text = parentElement.getAttribute('data-text');
     noSelection.setAttribute('value', 'no-selection');
@@ -2950,6 +2950,14 @@ function insertSelect(items, dataGroupElement, parentElement, firstItemVisible) 
     showAllOption.dataset.name = "All ".concat(parentElement.dataset.units);
     showAllOption.dataset.value = 'show-all';
     items.splice(0, 0, showAllOption);
+  } // Optionally move the preferred item to the top.
+
+
+  if (parentElement.dataset.firstItemTop === 'true' && defaultItemOverride) {
+    var originalPosition = items.indexOf(defaultItemOverride);
+    items.splice(originalPosition, 1);
+    var firstPosition = parentElement.dataset.displayAll === 'true' ? 1 : 0;
+    items.splice(firstPosition, 0, defaultItemOverride);
   } // Remove item with dataset.first='true' from original position in array
 
 
@@ -2970,22 +2978,32 @@ function insertSelect(items, dataGroupElement, parentElement, firstItemVisible) 
     option.value = dataValue;
     option.text = dataName;
     selectBox.appendChild(option);
-  }); // Set first item in list as selected
+  }); // Set the preferred item as selected.
 
   if (firstItemVisible === 'true' && showAll === 'false') {
     var options = parentElement.querySelectorAll('option');
 
     if (defaultItemOverride) {
-      if (lastItemOverride) {
-        // Last item override exists
-        if (parentElement.dataset.alphabetical === 'true') {
-          options[defaultItemOverridePosition].setAttribute('selected', 'selected');
+      if (parentElement.dataset.firstItemTop === 'true') {
+        // New behaviour: select by value after reordering.
+        var selectedValue = defaultItemOverride.dataset.value;
+        Array.from(selectBox.options).forEach(function (option) {
+          var isSelected = option.value === selectedValue;
+          option.selected = isSelected;
+          option.defaultSelected = isSelected;
+        });
+      } else {
+        if (lastItemOverride) {
+          // Last item override exists
+          if (parentElement.dataset.alphabetical === 'true') {
+            options[defaultItemOverridePosition].setAttribute('selected', 'selected');
+          } else {
+            options[defaultItemOverridePosition + 1].setAttribute('selected', 'selected');
+          }
         } else {
+          // Default show & no last item override
           options[defaultItemOverridePosition + 1].setAttribute('selected', 'selected');
         }
-      } else {
-        // Default show & no last item override
-        options[defaultItemOverridePosition + 1].setAttribute('selected', 'selected');
       }
     }
   }
@@ -3022,7 +3040,7 @@ function selectChange(e) {
 
     var otherListItems = dataGroup.querySelectorAll('li.data-group__item:not([data-value="' + e.target.value + '"])'); // Show/hide content based on pattern's configuration options
 
-    if (e.target.value !== 'show-all' && e.target.selectedIndex !== 0) {
+    if (e.target.value !== 'show-all' && e.target.value !== 'no-selection') {
       targetListItem.removeAttribute('data-hidden');
 
       var _iterator3 = _createForOfIteratorHelper(otherListItems),
@@ -3038,7 +3056,7 @@ function selectChange(e) {
       } finally {
         _iterator3.f();
       }
-    } else if (e.target.value !== 'show-all' && e.target.selectedIndex === 0) {
+    } else if (e.target.value === 'no-selection') {
       var _iterator4 = _createForOfIteratorHelper(otherListItems),
           _step4;
 
