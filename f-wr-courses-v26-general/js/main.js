@@ -10939,17 +10939,12 @@ function accordionize(tabs) {
       accordion = document.createElement('div');
   var tabVersion = tabs.getAttribute('data-version');
   var accordionTheme = tabs.getAttribute('data-theme');
-  var accordionStyle = tabs.getAttribute('data-style'); //const scrollToHeading = tabs.getAttribute('data-scrolltoheading');
-
-  var getScrollToHeading = tabs.getAttribute('data-scrolltoheading');
+  var accordionStyle = tabs.getAttribute('data-style');
+  var scrollToHeading = tabs.getAttribute('data-scrolltoheading');
   accordion.className = tabVersion === 'v26' ? 'accordion accordion-v26' : 'accordion';
   accordionTheme ? accordion.classList.add("accordion-v26--".concat(accordionTheme)) : accordion.classList.add('accordion-v26--light');
-  accordionStyle ? accordion.setAttribute('data-style', "".concat(accordionStyle)) : accordion.setAttribute('data-style', 'extended'); //scrollToHeading ? accordion.setAttribute('data-scrolltoheading', `${scrollToHeading}`) : '';
-
-  if (getScrollToHeading === 'false') {
-    accordion.dataset.scrolltoheading = 'false';
-  }
-
+  accordionStyle ? accordion.setAttribute('data-style', "".concat(accordionStyle)) : accordion.setAttribute('data-style', 'extended');
+  scrollToHeading ? accordion.setAttribute('data-scrolltoheading', "".concat(scrollToHeading)) : '';
   wrapper.className = 'tabs--accordion';
   accordion.id = "accordion".concat(tabs.dataset.assetid);
   accordion.dataset.allowsingle = 'false';
