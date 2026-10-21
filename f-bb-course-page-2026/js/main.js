@@ -8995,7 +8995,9 @@ function launch(el) {
 
   function handleIntersect_stickyMenu(entries) {
     entries.forEach(function (entry) {
-      el.classList.toggle('nav-sticky__inner--stick', !entry.isIntersecting);
+      // ensure menu only stick when scrolling past the helper
+      var scrolledPast = entry.boundingClientRect.top < 0;
+      el.classList.toggle('nav-sticky__inner--stick', !entry.isIntersecting && scrolledPast);
     });
   }
 
