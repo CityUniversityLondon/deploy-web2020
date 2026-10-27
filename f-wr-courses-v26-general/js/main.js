@@ -11760,10 +11760,9 @@ var className = 'js-emb-vid-v26';
 
 function prepareVideo(video) {
   var coverImage = video.querySelector('.cover-image__container');
-  var playButton = video.querySelector('.cover-image__button');
   var insertVideoHere = video.querySelector('.youtube-video__wrapper');
   var youtubeVideoId = video.getAttribute('data-youtube-id');
-  playButton.addEventListener('click', function () {
+  insertVideoHere.addEventListener('click', function () {
     coverImage.remove();
     var youtubeVideo = Object(_util__WEBPACK_IMPORTED_MODULE_0__["createHTMLElement"])('iframe', [{
       label: 'src',
