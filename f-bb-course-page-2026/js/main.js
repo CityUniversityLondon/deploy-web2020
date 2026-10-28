@@ -3540,6 +3540,7 @@ Example: "100%", "80%", "25rem"
 
 data-slide-size-{breakpoint}
 Overrides the slide width from the named Sass breakpoint upwards.
+Slide width values responds to the breakpoint as a 'min-width' 
 
 Examples:
 data-slide-size-mobile="75%"
