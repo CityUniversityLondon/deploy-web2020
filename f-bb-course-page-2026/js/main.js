@@ -2892,8 +2892,13 @@ function insertSelect(items, dataGroupElement, parentElement, firstItemVisible) 
   }
 
   selectBox.setAttribute('id', labelFor);
-  selectBox.setAttribute('name', labelFor);
-  selectWrapper.append(labelEl, selectBox); // Add default select text if filter doesn't have show all enabled
+  selectBox.setAttribute('name', labelFor); // v26 can have its label outside the form in the template, so skip an empty one
+
+  if (version !== 'v26' || labelValue) {
+    selectWrapper.append(labelEl);
+  }
+
+  selectWrapper.append(selectBox); // Add default select text if filter doesn't have show all enabled
 
   if (parentElement.dataset.displayAll === 'false' && parentElement.dataset.hidePlaceholder !== 'true') {
     var noSelection = document.createElement('option');
@@ -10768,8 +10773,9 @@ function hideTabViaSelect(tabsList, tabs) {
   infoSelect.classList.add('course-v26__module-year-select', 'dropdown', 'dropdown--wide', 'dropdown--pill'); //create wrapper and select input for course structure
 
   var wrapper = document.createElement('div');
-  wrapper.classList.add('module-year-select__wrapper');
+  wrapper.classList.add('dropdown__wrapper');
   var label = document.createElement('label');
+  label.classList.add('dropdown__label');
   label.setAttribute('for', 'module-year-select');
   label.textContent = selectLabelText;
   wrapper.appendChild(label);
