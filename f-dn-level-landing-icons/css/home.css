@@ -1997,6 +1997,16 @@ readers do not read off random characters that represent icons */
     --fa--fa: "\f518\f518";
 }
 
+.fa-book-open-cover {
+    --fa: "\e0c0";
+    --fa--fa: "\e0c0\e0c0";
+}
+
+.fa-book-open-alt {
+    --fa: "\e0c0";
+    --fa--fa: "\e0c0\e0c0";
+}
+
 .fa-book-open-reader {
     --fa: "\f5da";
     --fa--fa: "\f5da\f5da";
@@ -2085,6 +2095,11 @@ readers do not read off random characters that represent icons */
 .fa-calendar {
     --fa: "\f133";
     --fa--fa: "\f133\f133";
+}
+
+.fa-calendar-day {
+    --fa: "\f783";
+    --fa--fa: "\f783\f783";
 }
 
 .fa-calendar-days {
@@ -3253,6 +3268,14 @@ readers do not read off random characters that represent icons */
     content: "\f518\f518";
 }
 
+.fad.fa-book-open-cover::after, .fa-duotone.fa-book-open-cover::after {
+    content: "\e0c0\e0c0";
+}
+
+.fad.fa-book-open-alt::after, .fa-duotone.fa-book-open-alt::after {
+    content: "\e0c0\e0c0";
+}
+
 .fad.fa-book-open-reader::after, .fa-duotone.fa-book-open-reader::after {
     content: "\f5da\f5da";
 }
@@ -3323,6 +3346,10 @@ readers do not read off random characters that represent icons */
 
 .fad.fa-calendar::after, .fa-duotone.fa-calendar::after {
     content: "\f133\f133";
+}
+
+.fad.fa-calendar-day::after, .fa-duotone.fa-calendar-day::after {
+    content: "\f783\f783";
 }
 
 .fad.fa-calendar-days::after, .fa-duotone.fa-calendar-days::after {
