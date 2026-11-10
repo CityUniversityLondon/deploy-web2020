@@ -10660,7 +10660,7 @@ __webpack_require__.r(__webpack_exports__);
  * Sticky CTA
  *
  * @module patterns/sticky-cta/sticky-cta
- * @author Ben Butler <ben.butler@designseeds.co.uk>
+ * @author Web Development
  * @copyright City St George's, University of London 2026
  */
 var className = 'sticky-cta',
