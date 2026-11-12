@@ -1135,6 +1135,14 @@
     background-color: #008569;
 }
 
+.color--zinc10 {
+    color: #f4f4f5;
+}
+
+.background--zinc10 {
+    background-color: #f4f4f5;
+}
+
 .color--zinc20 {
     color: #e4e4e7;
 }
