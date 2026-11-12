@@ -45247,10 +45247,11 @@ main > article .finder .finder__results__list.finder__results__list--three-up {
 
 .v26-finder_filters__checkbox_wrap {
     position: relative;
+    margin-bottom: 1rem;
 }
 
-.v26-finder_filters__checkbox_wrap:not(:last-child) {
-    margin-bottom: 1rem;
+.v26-finder_filters__checkbox_wrap:last-of-type:not(:only-of-type) {
+    margin-bottom: initial;
 }
 
 .v26-finder_filters__checkbox_wrap:has([name='meta_clearing_sand']) {
