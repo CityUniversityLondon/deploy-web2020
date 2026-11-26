@@ -2590,7 +2590,7 @@ function launchDialog(modal) {
 
       if (listModuleCredits) {
         listOpenDialogButtonCredits.classList.add('courses-v26__modules__credits');
-        listOpenDialogButtonCredits.textContent = listModuleCredits;
+        listOpenDialogButtonCredits.textContent = listModuleCredits + ' credits';
       } //Dialog module deatils wrapper
 
 
