@@ -3391,7 +3391,10 @@ function addDotBehaviour(emblaApi, dotsNode) {
 
   var setupDots = function setupDots() {
     removeClickHandlers();
-    dotButtons = createDotButtons(emblaApi, dotsNode);
+    dotButtons = createDotButtons(emblaApi, dotsNode); // Hide dots when everything fits (only one snap = nothing to scroll to).
+    // Re-runs on reInit, which Embla triggers on resize, so it stays responsive.
+
+    dotsNode.classList.toggle('embla__dots--disabled', dotButtons.length <= 1);
     clickHandlers = dotButtons.map(function (_, index) {
       return function () {
         emblaApi.scrollTo(index);
@@ -3407,6 +3410,7 @@ function addDotBehaviour(emblaApi, dotsNode) {
   emblaApi.on('select', updateSelectedDot).on('reInit', setupDots);
   return function () {
     removeClickHandlers();
+    dotsNode.classList.remove('embla__dots--disabled');
     dotButtons.forEach(function (dotButton) {
       dotButton.classList.remove('embla__dot--selected');
       dotButton.removeAttribute('aria-current');
